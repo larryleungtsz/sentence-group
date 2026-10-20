@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-pepsi-zero-size-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 2,
+    "text": "単品の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "孤零零一碟＝單點的，因為盤邊沒有套餐配菜；見到單獨一碟就想起「單點的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 20,
+        "top": 72,
+        "width": 24,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

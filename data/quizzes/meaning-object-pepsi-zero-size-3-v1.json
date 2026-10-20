@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-pepsi-zero-size-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 3,
+    "text": "ペプシゼロは"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "ZERO 黑銀百事罐＝百事零，因為罐身大印 ZERO；見到 ZERO 標就想起「百事零」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 48,
+        "top": 52,
+        "width": 12,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

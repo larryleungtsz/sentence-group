@@ -1,0 +1,83 @@
+{
+  "quiz_id": "sequence-pepsi-zero-size-v1",
+  "objective": "sequence_training",
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "先程の",
+          "hotspot": {
+            "left": 7,
+            "top": 59,
+            "width": 13,
+            "height": 31,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "単品の",
+          "hotspot": {
+            "left": 20,
+            "top": 72,
+            "width": 24,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "ペプシゼロは",
+          "hotspot": {
+            "left": 48,
+            "top": 52,
+            "width": 12,
+            "height": 36,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "サイズ",
+          "hotspot": {
+            "left": 75,
+            "top": 32,
+            "width": 22,
+            "height": 46,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "いかがされますか",
+          "hotspot": {
+            "left": 32,
+            "top": 12,
+            "width": 28,
+            "height": 48,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "Mサイズで",
+          "hotspot": {
+            "left": 61,
+            "top": 56,
+            "width": 14,
+            "height": 34,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

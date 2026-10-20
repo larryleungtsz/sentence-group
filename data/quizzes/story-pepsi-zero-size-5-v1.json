@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-pepsi-zero-size-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 5,
+    "text": "いかがされますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一輛戴住口罩嘅車停穩，車頂企住一個衣著誇張、額頭冒汗嘅歌手專心唱。周圍沙粒懸浮打轉。車旁有個店員掌心向上、微微傾頭等你開口——正正係「要怎樣呢」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

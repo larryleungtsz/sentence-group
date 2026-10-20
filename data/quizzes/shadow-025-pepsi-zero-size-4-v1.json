@@ -1,0 +1,25 @@
+{
+  "quiz_id": "shadow-025-pepsi-zero-size-4-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 4,
+    "text": "サイズ"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
+      "start_sec": 3.2,
+      "rate": 0.25,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

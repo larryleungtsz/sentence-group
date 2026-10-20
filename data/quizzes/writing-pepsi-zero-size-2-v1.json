@@ -1,0 +1,23 @@
+{
+  "quiz_id": "writing-pepsi-zero-size-2-v1",
+  "objective": "writing_shadowing",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 2,
+    "text": "単品の"
+  },
+  "slides": [
+    {
+      "type": "writing",
+      "instruction": "請抄寫。",
+      "target": "単品の",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

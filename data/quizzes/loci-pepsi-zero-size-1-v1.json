@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-pepsi-zero-size-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 1,
+    "text": "先程の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "櫃面近身左緣放著一杯仍冒熱氣、剛放下的紙杯。請在圖中點這隻杯所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 7,
+        "top": 59,
+        "width": 13,
+        "height": 31,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

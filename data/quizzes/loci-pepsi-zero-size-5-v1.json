@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-pepsi-zero-size-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 5,
+    "text": "いかがされますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "對面櫃位有一位雙掌攤開、微笑等你答的店員。請在圖中點這位店員所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 32,
+        "top": 12,
+        "width": 28,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

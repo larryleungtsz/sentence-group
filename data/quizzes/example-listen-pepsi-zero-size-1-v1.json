@@ -1,0 +1,23 @@
+{
+  "quiz_id": "example-listen-pepsi-zero-size-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 1,
+    "text": "先程の"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sakki-no.mp3",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

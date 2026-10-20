@@ -12,11 +12,15 @@ const chunkRows = JSON.parse(fs.readFileSync('/tmp/chunk-quizzes-raw.json', 'utf
 const sentenceRows = JSON.parse(fs.readFileSync('/tmp/sentence-quizzes-raw.json', 'utf8'));
 
 function stripPrefix(s) {
-  return s.replace(/^QUIZ[ _]?JSON<br\s*\/?>/i, '').trim();
+  return s
+    .replace(/^QUIZ(?:\\_)?[ _]?JSON<br\s*\/?>/i, '')
+    .replace(/^QUIZ_JSON<br\s*\/?>/i, '')
+    .trim();
 }
 
 function unescapeNotion(s) {
   return s
+    .replace(/\\_/g, '_')
     .replace(/\\\{/g, '{')
     .replace(/\\\}/g, '}')
     .replace(/\\\[/g, '[')
@@ -25,6 +29,10 @@ function unescapeNotion(s) {
 
 function fixMarkdownCorruption(s) {
   // Always unwrap clean [url](url) → url (inside JSON string values)
+  // Notion MCP view-mode wraps JSON URL strings as markdown links; unwrap mechanically.
+  s = s.replace(/"\[https:\/\//g, '"https://');
+  s = s.replace(/\]\(https?:\/\/[^"]*\)"/g, '"');
+
   let out = s.replace(/\[(https?:\/\/[^\]\s]+)\]\(\1\)/g, '$1');
   out = out.replace(/https\[:\]\/\//g, 'https://');
   out = out.replace(/"(https?:\/\/)\[(raw\.githubusercontent\.com)/g, '"$1$2');

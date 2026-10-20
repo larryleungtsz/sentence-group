@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-pepsi-zero-size-1-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 1,
+    "text": "先程の"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
+      "start_sec": 0.05,
+      "end_sec": 0.68,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "Ibw0yLy8h20",
+      "start_sec": 310,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "Ibw0yLy8h20",
+      "start_sec": 329,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "S_6uLFKrxdI",
+      "start_sec": 841,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

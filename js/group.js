@@ -261,10 +261,4 @@
     nextQuiz();
   });
 
-  document.getElementById('reset-btn').addEventListener('click', () => {
-    if (confirm('清除本地進度（v2）？')) {
-      Progress.resetAll();
-      location.reload();
-    }
-  });
 })();

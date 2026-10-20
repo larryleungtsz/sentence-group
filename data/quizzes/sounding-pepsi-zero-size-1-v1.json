@@ -1,0 +1,34 @@
+{
+  "quiz_id": "sounding-pepsi-zero-size-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 1,
+    "text": "先程の"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
+      "start_sec": 0.05,
+      "end_sec": 0.68,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "沙造嘅硬盾(沙堅)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3%22,%22start_sec%22:0.05,%22end_sec%22:0.68,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E6%B2%99%E9%80%A0%E5%98%85%E7%A1%AC%E7%9B%BE(%E6%B2%99%E5%A0%85)>) ≈ sakki",
+        "少少燒焦嘅馬毛公仔(Horse Doll燶) ≈ no",
+        "一句串：沙造嘅硬盾(沙堅) → 少少燒焦嘅馬毛公仔(Horse Doll燶)。"
+      ],
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

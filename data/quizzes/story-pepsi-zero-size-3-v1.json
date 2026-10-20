@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-pepsi-zero-size-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 3,
+    "text": "ペプシゼロは"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "地上擺住一個袋同一對靴。有人從袋靴旁伸出手，一枚一枚掟硬幣向前。一隻拎住筲箕嘅青蛙穩穩接住，叮噹作響。箕旁靠住一罐黑銀百事，罐身大印 ZERO——正正係「百事零」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

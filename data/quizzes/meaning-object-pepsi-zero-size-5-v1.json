@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-pepsi-zero-size-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 5,
+    "text": "いかがされますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "掌心向上等答的店員＝要怎樣呢，因為姿勢在請你決定；見到請選手勢就想起「要怎樣呢」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 32,
+        "top": 12,
+        "width": 28,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

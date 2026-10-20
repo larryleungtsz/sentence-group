@@ -7,6 +7,7 @@
       "sentence_added_at": "2026-10-19T00:00:00+08:00",
       "sentence_added_at_note": "provisional — edit when real add time is known",
       "notion_palace_url": "https://app.notion.com/p/3da3b2a729568157b8dec574af947e53",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
       "chunk_order_note": "Chunks join in this array order. At most one chunk in dense stages T01–T03. Next chunk may start T01 only when the previous chunk’s T1 becomes ready (24h after finishing T03).",
       "chunks": [
         {
@@ -21,24 +22,83 @@
           "id": 2,
           "text": "お決まりに",
           "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/3da3b2a729568178ad9edd3b22264efe",
           "quizzes_ready": true
         },
         {
           "id": 3,
           "text": "なりましたら",
           "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
-          "quizzes_ready": true
+          "quizzes_ready": true,
+          "notion_url": "https://app.notion.com/p/3da3b2a72956812d9769c2d6782ce628"
         },
         {
           "id": 4,
           "text": "お呼び",
           "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
-          "quizzes_ready": true
+          "quizzes_ready": true,
+          "notion_url": "https://app.notion.com/p/3da3b2a7295681848097e382d40ed6b6"
         },
         {
           "id": 5,
           "text": "ください",
           "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "quizzes_ready": true,
+          "notion_url": "https://app.notion.com/p/3da3b2a7295681bd8552dd2a0ffbf434"
+        }
+      ]
+    },
+    {
+      "slug": "pepsi-zero-size",
+      "title": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "sentence_added_at": "2026-10-20T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — palace created ~2026-10-20; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/3ff3b2a729568158942be81eeb184641",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of gochumon. Missing youglish for chunks 3 and 5 in Notion (not exported).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "先程の",
+          "chunk_added_at": "2026-10-20T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/3ff3b2a7295681c18c61ca43416fcbbc",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "単品の",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/3ff3b2a7295681edbdbdf97129bd4f5b",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "ペプシゼロは",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1; youglish missing in Notion",
+          "notion_url": "https://app.notion.com/p/3ff3b2a7295681a69dc5e257c49cda8c",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "サイズ",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/3ff3b2a729568109af15c1f582e40ac5",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "いかがされますか",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1; youglish missing in Notion",
+          "notion_url": "https://app.notion.com/p/3ff3b2a729568111868ed6361ef182fa",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "Mサイズで",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 5 reaches T1",
+          "notion_url": "https://app.notion.com/p/3ff3b2a7295681ff87c3eff190e94b5f",
           "quizzes_ready": true
         }
       ]

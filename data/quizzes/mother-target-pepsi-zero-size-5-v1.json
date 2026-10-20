@@ -1,0 +1,31 @@
+{
+  "quiz_id": "mother-target-pepsi-zero-size-5-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 5,
+    "text": "いかがされますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "要怎樣呢"
+    },
+    {
+      "type": "select_text",
+      "correct": "いかがされますか",
+      "distractors": [
+        "先程の",
+        "単品の",
+        "ペプシゼロは",
+        "サイズ",
+        "Mサイズで"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

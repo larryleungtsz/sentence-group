@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-pepsi-zero-size-2-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 2,
+    "text": "単品の"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "單點的。How to pronounce this word?",
+      "gloss": "單點的",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

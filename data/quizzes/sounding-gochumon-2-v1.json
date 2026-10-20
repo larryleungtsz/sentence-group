@@ -21,7 +21,7 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "好惡嘅鎖匙(惡Key) ≈ o-ki",
+        "好惡嘅鎖匙(惡Key)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3%22,%22start_sec%22:0.67,%22end_sec%22:1.69,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E5%A5%BD%E6%83%A1%E5%98%85%E9%8E%96%E5%8C%99(%E6%83%A1Key)>) ≈ o-ki",
         "馬脷(馬脷) ≈ mari",
         "鏈(鏈) ≈ ni",
         "一句串：好惡嘅鎖匙(惡Key) 用條鏈(鏈) 拖住隻馬嘅脷(馬脷)。"

@@ -21,7 +21,7 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "割(割) ≈ go",
+        "割(割)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3%22,%22start_sec%22:0.05,%22end_sec%22:0.67,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E5%89%B2(%E5%89%B2)>) ≈ go",
         "豬(豬) ≈ chū",
         "電腦屏幕(Mon) ≈ mon",
         "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"

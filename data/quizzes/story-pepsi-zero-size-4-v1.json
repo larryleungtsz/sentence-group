@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-pepsi-zero-size-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 4,
+    "text": "サイズ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一頭豬專心側躺晒住太陽，皮色慢慢加深。佢蹭近杯壁停住，目光對準杯上 S／M／L 刻度貼紙，好似認真量自己——正正係「尺寸」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

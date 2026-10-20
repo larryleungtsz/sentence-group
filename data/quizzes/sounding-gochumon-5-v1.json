@@ -21,7 +21,7 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "天氣涼快(Cool) ≈ ku",
+        "天氣涼快(Cool)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3%22,%22start_sec%22:3.54,%22end_sec%22:4.36,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E5%A4%A9%E6%B0%A3%E6%B6%BC%E5%BF%AB(Cool)>) ≈ ku",
         "人形太陽被人撻低(撻曬) ≈ dasai",
         "一句串：天氣 Cool(Cool)，撻低個曬(撻曬)。"
       ],

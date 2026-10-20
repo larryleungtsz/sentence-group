@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-pepsi-zero-size-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 1,
+    "text": "先程の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一面沙造嘅硬盾穩穩立住。一隻少少燶咗嘅馬毛公仔被人推過，焦味淡淡，撞埋盾面之後滾向檯邊。公仔停喺一隻啱啱放下、杯沿仲燙手嘅空杯旁——餘溫仲喺度，正正係「剛才的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

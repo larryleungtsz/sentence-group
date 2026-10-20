@@ -1,0 +1,39 @@
+{
+  "quiz_id": "sounding-pepsi-zero-size-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 6,
+    "text": "Mサイズで"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
+      "start_sec": 4.95,
+      "end_sec": 7.15,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "衛生巾(M巾)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3%22,%22start_sec%22:4.95,%22end_sec%22:7.15,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E8%A1%9B%E7%94%9F%E5%B7%BE(M%E5%B7%BE)>) ≈ emu",
+        "晒到暈低嘅豬(曬豬dead) ≈ saizu-de",
+        "一句串：M巾(M巾) → 曬豬dead(曬豬dead)。"
+      ],
+      "distractors": [
+        "流汗、衣著誇張嘅歌手(熱gaga) ≈ ikaga",
+        "沙塵暴式懸浮沙(沙Lev) ≈ sare",
+        "戴住口罩嘅車(mask car) ≈ masu-ka",
+        "一句串：熱gaga(熱gaga) 企喺 mask car(mask car) 上唱，周圍沙Lev(沙Lev)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

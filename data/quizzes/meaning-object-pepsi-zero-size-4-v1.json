@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-pepsi-zero-size-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 4,
+    "text": "サイズ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "杯壁刻度貼紙＝尺寸，因為貼紙標明大細級距；見到 S／M／L 就想起「尺寸」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 75,
+        "top": 32,
+        "width": 22,
+        "height": 46,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

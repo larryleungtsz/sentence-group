@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-pepsi-zero-size-5-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 5,
+    "text": "いかがされますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "要怎樣呢。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspot": {
+        "left": 32,
+        "top": 12,
+        "width": 28,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-pepsi-zero-size-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+  "chunk": {
+    "id": 2,
+    "text": "単品の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一粒仙丹從托盤邊滾出，其中一邊已經輕微燶黑，慢慢停喺碟心，邊緣仲有焦味。人望住嗰碟——旁邊空空，冇套餐拼盤，淨係孤零零一碟。正正係「單點的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
