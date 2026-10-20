@@ -1,0 +1,25 @@
+{
+  "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
+  "objective": "target_to_mnemonic_image",
+  "level": 2,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "ご注文"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

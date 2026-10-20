@@ -1,0 +1,21 @@
+{
+  "groups": [
+    {
+      "slug": "gochumon",
+      "title": "ご注文お決まりになりましたらお呼びください",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "sentence_added_at": "2026-10-19T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/3da3b2a729568157b8dec574af947e53",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "ご注文",
+          "chunk_added_at": "2026-10-19T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — edit when real add time is known",
+          "notion_url": "https://app.notion.com/p/3da3b2a7295681f9a129d4723d200a7a"
+        }
+      ]
+    }
+  ]
+}

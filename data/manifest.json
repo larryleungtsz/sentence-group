@@ -1,0 +1,159 @@
+{
+  "generated_at": "2026-10-20T15:20:00+08:00",
+  "quizzes": [
+    {
+      "quiz_id": "loci-gochumon-1-v1",
+      "file": "data/quizzes/loci-gochumon-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956817da22ac2168180085f"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-1-v1",
+      "file": "data/quizzes/meaning-object-gochumon-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568135978fdac9a6fbb62b"
+    },
+    {
+      "quiz_id": "sounding-gochumon-1-v1",
+      "file": "data/quizzes/sounding-gochumon-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956815abd87d1521f4582f2"
+    },
+    {
+      "quiz_id": "story-gochumon-1-v1",
+      "file": "data/quizzes/story-gochumon-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810a92cff60589221bd7"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-1-v1",
+      "file": "data/quizzes/shadow-05-gochumon-1-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810caac0d0d2197f510a"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-1-v1",
+      "file": "data/quizzes/shadow-025-gochumon-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681789134d79d66891e2f"
+    },
+    {
+      "quiz_id": "writing-gochumon-1-v1",
+      "file": "data/quizzes/writing-gochumon-1-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956811b8e2af951d40bf243"
+    },
+    {
+      "quiz_id": "youglish-gochumon-1-v1",
+      "file": "data/quizzes/youglish-gochumon-1-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956817bb127feadf70f09bd"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f88048dbf8ecec3897"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956812d800fe0cccec6d224"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568192b8caea2d73dfde1f"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956811eb57bc9222e4d8ce9"
+    },
+    {
+      "quiz_id": "sequence-gochumon-okimari-narimashitara-oyobi-kudasai-v1",
+      "file": "data/quizzes/sequence-gochumon-okimari-narimashitara-oyobi-kudasai-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956818fb5a3e7186f39cf4b"
+    },
+    {
+      "quiz_id": "whole-listen-gochumon-v1",
+      "file": "data/quizzes/whole-listen-gochumon-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568159bd59cfc46e49e141"
+    }
+  ]
+}

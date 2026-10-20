@@ -1,0 +1,220 @@
+{
+  "generated_at": "2026-10-20T15:20:00+08:00",
+  "timezone": "Asia/Hong_Kong",
+  "assumed_now": "2026-10-20T15:20:00+08:00",
+  "provisional_added_at": "2026-10-19T00:00:00+08:00",
+  "counts": {
+    "playable": 14,
+    "broken": 0,
+    "chunk_playable": 12,
+    "sentence_playable": 2
+  },
+  "playable_quiz_ids": [
+    "loci-gochumon-1-v1",
+    "meaning-object-gochumon-1-v1",
+    "sounding-gochumon-1-v1",
+    "story-gochumon-1-v1",
+    "shadow-05-gochumon-1-v1",
+    "shadow-025-gochumon-1-v1",
+    "writing-gochumon-1-v1",
+    "youglish-gochumon-1-v1",
+    "gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1",
+    "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
+    "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
+    "mother-target-gochumon-okimari-oyobi-kudasai-1-v1",
+    "sequence-gochumon-okimari-narimashitara-oyobi-kudasai-v1",
+    "whole-listen-gochumon-v1"
+  ],
+  "broken": [],
+  "gochumon": {
+    "chunk_1_stage_times": {
+      "T01": "19/10/2026 24:00 HKT",
+      "T02": "19/10/2026 01:00 HKT",
+      "T03": "19/10/2026 04:00 HKT",
+      "T1": "20/10/2026 04:00 HKT",
+      "T2": "21/10/2026 16:00 HKT",
+      "T3": "23/10/2026 22:00 HKT",
+      "T4": "27/10/2026 07:00 HKT",
+      "T5": "01/11/2026 08:30 HKT"
+    },
+    "sentence_stage_times": {
+      "T+3": "22/10/2026 24:00 HKT",
+      "T+6": "25/10/2026 24:00 HKT"
+    },
+    "stages_reached_now": [
+      "T01",
+      "T02",
+      "T03",
+      "T1"
+    ],
+    "next_chunk_stage": "T2",
+    "next_chunk_stage_at": "21/10/2026 16:00 HKT",
+    "due_now": [
+      {
+        "quiz_id": "loci-gochumon-1-v1",
+        "objective": "loci_description_tap",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "meaning-object-gochumon-1-v1",
+        "objective": "meaning_object_select_and_tap",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "sounding-gochumon-1-v1",
+        "objective": "pronunciation_sounding_select",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "story-gochumon-1-v1",
+        "objective": "story_select_image",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "shadow-05-gochumon-1-v1",
+        "objective": "tone_shadowing_05",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "latest_due": "T03"
+      },
+      {
+        "quiz_id": "shadow-025-gochumon-1-v1",
+        "objective": "word_shadowing_025",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "writing-gochumon-1-v1",
+        "objective": "writing_shadowing",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "latest_due": "T03"
+      },
+      {
+        "quiz_id": "youglish-gochumon-1-v1",
+        "objective": "youglish_listen",
+        "level": 1,
+        "kind": "chunk",
+        "due_stages": [
+          "T01",
+          "T02",
+          "T03"
+        ],
+        "latest_due": "T03"
+      },
+      {
+        "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1",
+        "objective": "gloss_to_palace_tap",
+        "level": 2,
+        "kind": "chunk",
+        "due_stages": [
+          "T02",
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
+        "objective": "target_to_mnemonic_image",
+        "level": 2,
+        "kind": "chunk",
+        "due_stages": [
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
+        "objective": "mother_language_pronounce",
+        "level": 3,
+        "kind": "chunk",
+        "due_stages": [
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      },
+      {
+        "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-1-v1",
+        "objective": "mother_to_target_language",
+        "level": 3,
+        "kind": "chunk",
+        "due_stages": [
+          "T03",
+          "T1"
+        ],
+        "latest_due": "T1"
+      }
+    ],
+    "due_now_count": 12,
+    "not_yet_due": [
+      {
+        "quiz_id": "sequence-gochumon-okimari-narimashitara-oyobi-kudasai-v1",
+        "objective": "sequence_training",
+        "next_stage": "T+3",
+        "next_at": "22/10/2026 24:00 HKT"
+      },
+      {
+        "quiz_id": "whole-listen-gochumon-v1",
+        "objective": "whole_sentence_listening",
+        "next_stage": "T+3",
+        "next_at": "22/10/2026 24:00 HKT"
+      }
+    ]
+  },
+  "notes": [
+    "chunk_added_at / sentence_added_at are provisional (2026-10-19T00:00:00+08:00).",
+    "Markdown-autolink corruption in Notion Quiz JSON was mechanically repaired (URL unwrap / duplicate strip) for playable exports; hotspots unchanged.",
+    "As of assumed now, T01–T1 reached; T2 = Oct 21 16:00 HKT. Sentence T+3 = Oct 22 00:00 HKT — not due."
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "quiz_id": "sounding-gochumon-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 0.05,
+      "end_sec": 0.67,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "割(割) ≈ go",
+        "豬(豬) ≈ chū",
+        "電腦屏幕(Mon) ≈ mon",
+        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
+      ],
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

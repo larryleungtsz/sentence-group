@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "您的點餐。How to pronounce this word?",
+      "gloss": "您的點餐",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

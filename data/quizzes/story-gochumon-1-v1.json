@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-gochumon-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "托盤上扁放住一本打開嘅點餐單，標題清楚寫住「注文」。一隻豬蹄裏緊攥住把鐮刀，另一邊拖住一塊電腦屏幕。豬把屏幕啪一聲疊喺單上面，舉起鐮刀對準「注文」兩字，當割屏幕咁用力劃落。刀鋒擦過屏幕又壓住單頁，整本點餐單震得發抖——呢度正正係「您的點餐」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
