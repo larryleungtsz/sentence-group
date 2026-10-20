@@ -1,0 +1,28 @@
+{
+  "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-3-v1",
+  "objective": "target_to_mnemonic_image",
+  "level": 2,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 3,
+    "text": "なりましたら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "なりましたら"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

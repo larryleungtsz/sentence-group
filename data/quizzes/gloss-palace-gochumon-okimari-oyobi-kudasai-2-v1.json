@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "決定的話。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspot": {
+        "left": 24,
+        "top": 74,
+        "width": 20,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

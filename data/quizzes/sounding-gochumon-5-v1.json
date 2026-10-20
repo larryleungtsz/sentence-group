@@ -1,0 +1,38 @@
+{
+  "quiz_id": "sounding-gochumon-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 5,
+    "text": "ください"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 3.54,
+      "end_sec": 4.36,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "天氣涼快(Cool) ≈ ku",
+        "人形太陽被人撻低(撻曬) ≈ dasai",
+        "一句串：天氣 Cool(Cool)，撻低個曬(撻曬)。"
+      ],
+      "distractors": [
+        "鵝(goose) ≈ o",
+        "油膩嬰兒(油B) ≈ yobi",
+        "一句串：油膩嬰兒(油B) 食緊鵝(goose)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

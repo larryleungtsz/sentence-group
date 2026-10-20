@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-gochumon-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 5,
+    "text": "ください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鞠躬請求的服務員 = 請，因為深鞠躬＋前伸的手是明確在請求對方。看見這鞠躬請求姿就想起「請」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspot": {
+        "left": 58,
+        "top": 36,
+        "width": 7,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

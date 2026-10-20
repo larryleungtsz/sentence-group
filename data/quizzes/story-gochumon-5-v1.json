@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-gochumon-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 5,
+    "text": "ください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "天氣忽然 Cool 得發抖。一個人形太陽（曬）被人柔道式一撻摔低，趴喺地。旁邊服務員深深鞠躬、雙手前伸——呢個請求姿，正正係「請」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

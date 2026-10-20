@@ -21,25 +21,25 @@
           "id": 2,
           "text": "お決まりに",
           "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
-          "quizzes_ready": false
+          "quizzes_ready": true
         },
         {
           "id": 3,
           "text": "なりましたら",
           "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
-          "quizzes_ready": false
+          "quizzes_ready": true
         },
         {
           "id": 4,
           "text": "お呼び",
           "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
-          "quizzes_ready": false
+          "quizzes_ready": true
         },
         {
           "id": 5,
           "text": "ください",
           "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
-          "quizzes_ready": false
+          "quizzes_ready": true
         }
       ]
     }

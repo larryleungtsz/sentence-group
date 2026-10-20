@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-2-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "決定的話"
+    },
+    {
+      "type": "select_text",
+      "correct": "お決まりに",
+      "distractors": [
+        "ご注文",
+        "なりましたら",
+        "お呼び",
+        "ください"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

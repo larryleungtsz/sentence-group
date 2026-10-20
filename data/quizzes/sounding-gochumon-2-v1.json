@@ -1,0 +1,40 @@
+{
+  "quiz_id": "sounding-gochumon-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 0.67,
+      "end_sec": 1.69,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "好惡嘅鎖匙(惡Key) ≈ o-ki",
+        "馬脷(馬脷) ≈ mari",
+        "鏈(鏈) ≈ ni",
+        "一句串：好惡嘅鎖匙(惡Key) 用條鏈(鏈) 拖住隻馬嘅脷(馬脷)。"
+      ],
+      "distractors": [
+        "割(割) ≈ go",
+        "豬(豬) ≈ chū",
+        "電腦屏幕(Mon) ≈ mon",
+        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

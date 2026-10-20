@@ -12,7 +12,7 @@ const chunkRows = JSON.parse(fs.readFileSync('/tmp/chunk-quizzes-raw.json', 'utf
 const sentenceRows = JSON.parse(fs.readFileSync('/tmp/sentence-quizzes-raw.json', 'utf8'));
 
 function stripPrefix(s) {
-  return s.replace(/^QUIZ_JSON<br\s*\/?>/i, '').trim();
+  return s.replace(/^QUIZ[ _]?JSON<br\s*\/?>/i, '').trim();
 }
 
 function unescapeNotion(s) {
@@ -130,7 +130,7 @@ playable.sort((a, b) => {
 
 fs.writeFileSync(
   path.join(ROOT, 'data/manifest.json'),
-  JSON.stringify({ generated_at: '2026-10-20T15:20:00+08:00', quizzes: playable }, null, 2) + '\n'
+  JSON.stringify({ generated_at: new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Hong_Kong' }).replace(' ', 'T') + '+08:00', quizzes: playable }, null, 2) + '\n'
 );
 fs.writeFileSync('/tmp/export-meta.json', JSON.stringify({ playable, broken }, null, 2));
 console.log(JSON.stringify({

@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-gochumon-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 3,
+    "text": "なりましたら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "牆上掛住盞圓燈，仲係黃。一個戴住面膜嘅人伸出酸酸嘅嗱脷，對準石罅用力一打。嗱脷撞進罅隙嗰下，燈啪一聲由黃切成綠——狀態變咗，條件達成，呢度正正係「成為了的話」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

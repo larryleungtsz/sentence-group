@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-gochumon-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 4,
+    "text": "お呼び"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "舉手招店員的客人 = 呼叫，因為客人舉起的手就是在叫人過來。看見舉手招呼就想起「呼叫」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspot": {
+        "left": 70,
+        "top": 28,
+        "width": 14,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

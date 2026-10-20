@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-gochumon-2-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "托盤右側靜置一份中央蓋着大紅「決定済」印的文件。請在圖中點這份文件所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspot": {
+        "left": 24,
+        "top": 74,
+        "width": 20,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

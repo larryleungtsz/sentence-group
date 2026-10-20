@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-gochumon-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 3,
+    "text": "なりましたら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "立柱指示燈上，圓燈剛從黃切到綠、定格在轉綠瞬間。請在圖中點這組指示燈所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspot": {
+        "left": 44,
+        "top": 18,
+        "width": 12,
+        "height": 16,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

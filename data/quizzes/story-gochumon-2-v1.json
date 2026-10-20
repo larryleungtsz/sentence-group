@@ -1,0 +1,27 @@
+{
+  "quiz_id": "story-gochumon-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "文件靜放喺度，中央一個大紅「決定済」印。一把面相好惡嘅鎖匙尾端扣住條鏈，鏈另一頭拖住一條馬脷。鎖匙一甩，馬脷啪一聲砸落紅印上面，好似再蓋多一記印。紅印唔褪色，文件定死喺度——呢度正正係「決定的話」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

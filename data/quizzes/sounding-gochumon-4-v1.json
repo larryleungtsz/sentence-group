@@ -1,0 +1,39 @@
+{
+  "quiz_id": "sounding-gochumon-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 4,
+    "text": "お呼び"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 2.92,
+      "end_sec": 3.54,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "鵝(goose) ≈ o",
+        "油膩嬰兒(油B) ≈ yobi",
+        "一句串：油膩嬰兒(油B) 食緊鵝(goose)。"
+      ],
+      "distractors": [
+        "酸脷(嗱脷) ≈ nari",
+        "面膜(mask) ≈ mashi",
+        "打罅(打罅) ≈ tara",
+        "一句串：戴面膜(mask)嘅人 用嗱脷(嗱脷) 打罅(打罅)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

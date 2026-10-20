@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-4-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 4,
+    "text": "お呼び"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "呼叫。How to pronounce this word?",
+      "gloss": "呼叫",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
