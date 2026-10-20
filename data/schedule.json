@@ -144,5 +144,5 @@
       "T+30"
     ]
   },
-  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; sentence: always 3d). Stage labels here only decide which objectives appear; added_at is unused. 核對 PDF 實際 Yes 位置後可改 objective→stages 對照。"
+  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; sentence: always 3d). Chunk admission: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused."
 }

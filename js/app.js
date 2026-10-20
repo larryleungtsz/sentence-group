@@ -13,6 +13,11 @@
   const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
 
   for (const group of groupsData.groups || []) {
+    const chunks = group.chunks || [];
+    const getChunkState = (chunkId) =>
+      Progress.getChunk(group.slug, chunkId);
+    const admitted = Schedule.admittedChunkIds(chunks, getChunkState, nowMs);
+
     const quizzes = (manifest.quizzes || []).filter(
       (q) => q.sentence === group.sentence
     );
@@ -28,12 +33,17 @@
             ? Progress.getChunk(group.slug, meta.chunk_id)
             : null,
         sentenceState:
-          meta.kind === 'sentence' ? Progress.getSentence(group.slug) : null,
+          meta.kind === 'sentence'
+            ? Progress.getSentence(group.slug)
+            : null,
         completedStages: prog.completedStages,
         now: nowMs,
+        admitted:
+          meta.kind === 'chunk' ? admitted.has(meta.chunk_id) : true,
       });
       if (stages.length) dueCount++;
     }
+    const readyChunks = chunks.filter((c) => c.quizzes_ready !== false).length;
     const a = document.createElement('a');
     a.className = 'group-card';
     a.href = 'group.html?slug=' + encodeURIComponent(group.slug);
@@ -43,9 +53,13 @@
       '</div>' +
       '<div class="group-card-meta">到期 ' +
       dueCount +
-      ' 題 · ' +
-      (group.chunks || []).length +
-      ' chunks · 完成後間隔</div>';
+      ' 題 · 已加入 ' +
+      admitted.size +
+      '/' +
+      chunks.length +
+      ' chunks（有題 ' +
+      readyChunks +
+      '）· 最多 1 個密集</div>';
     list.appendChild(a);
   }
 

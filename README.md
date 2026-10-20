@@ -10,12 +10,12 @@ Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `
 index.html          首頁：列出 Sentence Groups
 group.html?slug=…   練習頁（可用 ?now=ISO 測試）
 css/app.css
-js/schedule.js      完成後間隔 / 到期判斷
+js/schedule.js      完成後間隔 / 到期判斷 / chunk 加入閘
 js/progress.js      localStorage v2 進度
 js/quiz-runner.js   渲染與評分
 js/app.js / group.js
 data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
-data/groups.json    Sentence Group + chunk（added_at 僅備註，唔驅動 SRS）
+data/groups.json    Sentence Group + chunks（陣列次序＝加入次序）
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
 ```
@@ -25,7 +25,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-3. 若是新 Sentence / Chunk：可更新 `data/groups.json` 備註欄；**SRS 唔再靠 added_at**。
+3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
 ## SRS（完成後間隔）
@@ -48,6 +48,18 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 邊個 objective 喺邊個 stage 出現：睇 `schedule.json` → `chunk_schedule`。
 
+### Chunk 加入閘（密集階段）
+
+`groups.json` 入面 `chunks` **陣列次序**就係加入次序（例如：ご注文 → お決まりに → なりましたら → お呼び → ください）。
+
+- **密集階段** = T01 / T02 / T03（`stageIndex` 0–2）。任何時候最多 **1** 個 chunk 處於密集。
+- 第一個 chunk 永遠可以開始 T01。
+- 當前一個 chunk **完成 T03** 後等 24 小時 → 其 **T1 ready**；**同一刻**下一個 chunk 先可以開始 T01。
+- 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。
+- 判斷：`hasUnlockedThroughT1(prev)` = 前一個 `stageIndex > 3`，或 `stageIndex === 3` 且 T1 已 ready。
+
+而家只有 chunk 1「ご注文」有 Quiz JSON；2–5 已預留 `text`，等匯出後設 `quizzes_ready: true`。
+
 ### Sentence（每個 Sentence Group 一條線）
 
 `sentence_schedule` 入面嘅 label 按順序當 stage 0, 1, 2…（例如 T+3 → T+6）。  
@@ -55,7 +67,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 ### 出題順序
 
-1. 到期 Level 1（按 chunk id）
+1. 到期 Level 1（按 chunk id／加入次序）
 2. 到期 Level 2（按 chunk id）
 3. 到期 Level 3（按 chunk id）
 4. 到期 Sentence quizzes

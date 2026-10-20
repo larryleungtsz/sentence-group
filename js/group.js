@@ -31,10 +31,17 @@
   const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
   const nowIso = new Date(nowMs).toISOString();
 
+  const chunks = group.chunks || [];
+  const getChunkState = (chunkId) => Progress.getChunk(slug, chunkId);
+
+  function admittedSet() {
+    return Schedule.admittedChunkIds(chunks, getChunkState, nowMs);
+  }
+
   const groupQuizzes = (manifest.quizzes || []).filter((q) => {
     if (q.kind === 'sentence') return q.sentence === group.sentence;
     return (
-      (group.chunks || []).some((c) => c.id === q.chunk_id) &&
+      chunks.some((c) => c.id === q.chunk_id) &&
       q.sentence === group.sentence
     );
   });
@@ -42,13 +49,13 @@
   function dueForMeta(meta) {
     const prog = Progress.getQuiz(meta.quiz_id);
     const kind = meta.kind;
+    const admitted =
+      kind === 'chunk' ? admittedSet().has(meta.chunk_id) : true;
     const chunkState =
-      kind === 'chunk'
-        ? Progress.getChunk(slug, meta.chunk_id)
-        : null;
+      kind === 'chunk' ? Progress.getChunk(slug, meta.chunk_id) : null;
     const sentenceState =
       kind === 'sentence' ? Progress.getSentence(slug) : null;
-    const stages = Schedule.dueStages({
+    return Schedule.dueStages({
       objective: meta.objective,
       kind,
       schedule,
@@ -56,8 +63,8 @@
       sentenceState,
       completedStages: prog.completedStages,
       now: nowMs,
+      admitted,
     });
-    return stages;
   }
 
   function buildDueQueue() {
@@ -68,7 +75,7 @@
         due.push({ meta, dueStages: stages });
       }
     }
-    // L1 → L2 → L3 → sentence; within level by chunk_id
+    // L1 → L2 → L3 → sentence; within level by chunk_id (join order)
     due.sort((a, b) => {
       const ka = a.meta.kind === 'sentence' ? 1 : 0;
       const kb = b.meta.kind === 'sentence' ? 1 : 0;
@@ -101,9 +108,54 @@
     );
   }
 
+  function admissionHint() {
+    const parts = [];
+    const admitted = admittedSet();
+    for (let i = 0; i < chunks.length; i++) {
+      const c = chunks[i];
+      if (admitted.has(c.id)) continue;
+      if (i === 0) continue;
+      const prev = chunks[i - 1];
+      const prevSt = getChunkState(prev.id);
+      if (Schedule.isChunkInDense(prevSt)) {
+        const labels = Schedule.chunkStageLabels();
+        const lab = labels[prevSt.stageIndex] || '?';
+        parts.push(
+          'chunk' +
+            c.id +
+            '（' +
+            (c.text || '') +
+            '）等 chunk' +
+            prev.id +
+            ' 完成密集 ' +
+            lab +
+            '→T1'
+        );
+      } else if ((prevSt.stageIndex | 0) === Schedule.T1_STAGE_INDEX) {
+        const t = Schedule.chunkStageReadyAt(prevSt);
+        if (t != null) {
+          parts.push(
+            'chunk' +
+              c.id +
+              '（' +
+              (c.text || '') +
+              '）等 chunk' +
+              prev.id +
+              ' T1 @ ' +
+              Schedule.formatHKT(t)
+          );
+        }
+      }
+      break; // only hint the next gated chunk
+    }
+    return parts.length ? ' · 加入閘：' + parts.join('；') : '';
+  }
+
   function nextUnlockHint() {
     const parts = [];
-    for (const c of group.chunks || []) {
+    const admitted = admittedSet();
+    for (const c of chunks) {
+      if (!admitted.has(c.id)) continue;
       const st = Progress.getChunk(slug, c.id);
       if (Schedule.isChunkStageReady(st, nowMs)) continue;
       const t = Schedule.chunkStageReadyAt(st);
@@ -122,12 +174,14 @@
         parts.push('sentence ' + lab + ' @ ' + Schedule.formatHKT(t));
       }
     }
-    return parts.length ? ' · 下次：' + parts.join('；') : '';
+    const gate = admissionHint();
+    return (parts.length ? ' · 下次：' + parts.join('；') : '') + gate;
   }
 
   let queue = buildDueQueue();
 
   function updateMeta(remaining) {
+    const adm = Array.from(admittedSet()).sort((a, b) => a - b);
     metaEl.textContent =
       '而家：' +
       Schedule.formatHKT(nowMs) +
@@ -135,7 +189,9 @@
       remaining +
       ' 題' +
       (remaining === 0 ? nextUnlockHint() : '') +
-      ' · SRS＝完成後間隔（唔用 added_at）';
+      ' · 已加入 chunk：' +
+      (adm.length ? adm.join(',') : '—') +
+      ' · SRS＝完成後間隔；最多 1 個密集 T01–T03';
   }
   updateMeta(queue.length);
 
@@ -143,11 +199,16 @@
     queueEl.innerHTML = '';
     queue.forEach((item, i) => {
       const li = document.createElement('li');
+      const chunkBit =
+        item.meta.kind === 'chunk'
+          ? ' c' + item.meta.chunk_id
+          : '';
       li.textContent =
         i +
         1 +
         '. L' +
         (item.meta.level ?? 'S') +
+        chunkBit +
         ' ' +
         item.meta.objective +
         ' [' +

@@ -4,6 +4,11 @@
   const DAY_MS = 24 * HOUR_MS;
   const SENTENCE_WAIT_MS = 3 * DAY_MS;
 
+  /** Dense stages: T01, T02, T03 (indices 0–2). At most one chunk in dense at a time. */
+  const DENSE_MAX_INDEX = 2;
+  /** T1 stage index (after T03). Next chunk may start T01 when previous unlocks T1. */
+  const T1_STAGE_INDEX = 3;
+
   /** Ordered chunk stage labels: T01, T02, T03, T1 … T19. */
   function chunkStageLabels() {
     const labels = ['T01', 'T02', 'T03'];
@@ -62,6 +67,48 @@
     return new Date(state.lastCompletedAt).getTime() + chunkWaitAfterStage(si - 1);
   }
 
+  /** True while stageIndex is still T01 / T02 / T03 (dense window). */
+  function isChunkInDense(chunkState) {
+    const si = (chunkState || defaultChunkState()).stageIndex | 0;
+    return si >= 0 && si <= DENSE_MAX_INDEX;
+  }
+
+  /**
+   * Previous chunk has unlocked through T1: finished T03 and either already past T1,
+   * or currently at T1 with the 24h wait elapsed (T1 ready).
+   */
+  function hasUnlockedThroughT1(chunkState, now) {
+    const state = chunkState || defaultChunkState();
+    const si = state.stageIndex | 0;
+    if (si > T1_STAGE_INDEX) return true;
+    if (si < T1_STAGE_INDEX) return false;
+    return isChunkStageReady(state, now);
+  }
+
+  /**
+   * Chunks array is join order. Chunk i is admitted iff i===0 or previous has
+   * unlocked through T1. Ensures at most one chunk in dense T01–T03.
+   * getChunkState(chunkId) → progress state for that chunk.
+   */
+  function isChunkAdmitted(chunks, chunkId, getChunkState, now) {
+    const list = chunks || [];
+    const idx = list.findIndex((c) => c.id === chunkId);
+    if (idx < 0) return false;
+    if (idx === 0) return true;
+    const prev = list[idx - 1];
+    const prevState = getChunkState(prev.id);
+    return hasUnlockedThroughT1(prevState, now);
+  }
+
+  /** Set of admitted chunk ids for a group at `now`. */
+  function admittedChunkIds(chunks, getChunkState, now) {
+    const out = new Set();
+    for (const c of chunks || []) {
+      if (isChunkAdmitted(chunks, c.id, getChunkState, now)) out.add(c.id);
+    }
+    return out;
+  }
+
   function isSentenceStageReady(sentenceState, now) {
     const state = sentenceState || defaultSentenceState();
     const si = state.stageIndex | 0;
@@ -109,6 +156,7 @@
   /**
    * Due stage labels for one quiz under completion-based unlock.
    * Only the timeline's current stage can be due (once ready and not yet marked on quiz).
+   * Pass admitted=false to suppress chunk dues for a chunk not yet admitted.
    */
   function dueStages({
     objective,
@@ -118,6 +166,7 @@
     sentenceState,
     completedStages,
     now,
+    admitted,
   }) {
     const done = new Set(completedStages || []);
     if (kind === 'sentence') {
@@ -132,6 +181,8 @@
       if (done.has(label)) return [];
       return [label];
     }
+
+    if (admitted === false) return [];
 
     const labels = chunkStageLabels();
     const state = chunkState || defaultChunkState();
@@ -171,6 +222,10 @@
     defaultSentenceState,
     isChunkStageReady,
     chunkStageReadyAt,
+    isChunkInDense,
+    hasUnlockedThroughT1,
+    isChunkAdmitted,
+    admittedChunkIds,
     isSentenceStageReady,
     sentenceStageReadyAt,
     sentenceStageLabels,
@@ -180,5 +235,7 @@
     HOUR_MS,
     DAY_MS,
     SENTENCE_WAIT_MS,
+    DENSE_MAX_INDEX,
+    T1_STAGE_INDEX,
   };
 })(window);
