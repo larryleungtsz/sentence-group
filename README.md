@@ -2,21 +2,22 @@
 
 靜態 HTML + JS，可部署到 GitHub Pages。時區：Asia/Hong_Kong。
 
+Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `added_at` 計到期）。
+
 ## 檔案結構
 
 ```
 index.html          首頁：列出 Sentence Groups
-group.html?slug=…   練習頁
+group.html?slug=…   練習頁（可用 ?now=ISO 測試）
 css/app.css
-js/schedule.js      時間線 / 到期判斷
-js/progress.js      localStorage 進度
+js/schedule.js      完成後間隔 / 到期判斷
+js/progress.js      localStorage v2 進度
 js/quiz-runner.js   渲染與評分
 js/app.js / group.js
-data/schedule.json  chunk_schedule + sentence_schedule（權威）
-data/groups.json    Sentence Group + chunk + added_at
-data/manifest.json  可玩 quiz 清單（GitHub Pages 無目錄列表，必須維護）
+data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
+data/groups.json    Sentence Group + chunk（added_at 僅備註，唔驅動 SRS）
+data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
-data/export-report.json 匯出報告
 ```
 
 ## 如何加入新 Quiz JSON
@@ -24,24 +25,40 @@ data/export-report.json 匯出報告
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-3. 若是新 Sentence / Chunk：更新 `data/groups.json` 的 `sentence_added_at` / `chunk_added_at`。
+3. 若是新 Sentence / Chunk：可更新 `data/groups.json` 備註欄；**SRS 唔再靠 added_at**。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
-Notion 匯出時若 Quiz JSON 被 markdown 連結弄壞，可用 `scripts/export-quizzes.mjs` 做機械修復（只處理 URL 重複／`[url](url)`），修復唔到會寫入 `data/broken/*.raw.txt` 並唔加入 manifest。
+## SRS（完成後間隔）
 
-## 時間表
+進度 key：`website-manager-progress-v2`（舊 v1 自動忽略）。
 
-- **Chunk**：每個 chunk 一條線 — T01=加入，T02=+1h，T03=+3h，T1=+24h，之後每次間隔 ×1.5 日。邊個 objective 喺邊個 T 出現睇 `schedule.json` → `chunk_schedule`。
-- **Sentence**：加入後 T+3 起每 3 日，睇 `sentence_schedule`。
+### Chunk（每個 chunk 一條時間線）
 
-## 出題順序
+記該 chunk 上次「做完所有當時到期嘅 Chunk Quiz」嘅時間 `lastCompletedAt`，同 `stageIndex`。
+
+| 完成後 | 等待 | 下一 stage |
+|--------|------|------------|
+| （從未完成） | 即時 | T01 |
+| 做完 T01 全部到期題 | 1 小時 | T02 |
+| 做完 T02 | 3 小時 | T03 |
+| 做完 T03 | 24 小時 | T1 |
+| 做完 T1 | 1.5 日 | T2 |
+| 做完 T2 | 2.25 日 | T3 |
+| 之後每次 | 上次間隔 × 1.5 | T4, T5, … |
+
+邊個 objective 喺邊個 stage 出現：睇 `schedule.json` → `chunk_schedule`。
+
+### Sentence（每個 Sentence Group 一條線）
+
+`sentence_schedule` 入面嘅 label 按順序當 stage 0, 1, 2…（例如 T+3 → T+6）。  
+第一次（從未完成）即時出第一個 stage；每次做完所有當時到期嘅 Sentence Quiz 後等 **3 日** 先出下一個。
+
+### 出題順序
 
 1. 到期 Level 1（按 chunk id）
 2. 到期 Level 2（按 chunk id）
 3. 到期 Level 3（按 chunk id）
 4. 到期 Sentence quizzes
-
-進度記喺 `localStorage` key `website-manager-progress-v1`。通過一題會標記當次所有到期 stage 為已完成。
 
 ## 本地預覽
 
@@ -51,4 +68,4 @@ python3 -m http.server 8080
 # 開 http://localhost:8080/
 ```
 
-練習頁可用 `?now=2026-10-20T15:20:00+08:00` 固定「而家」方便測試。
+練習頁可用 `?now=2026-10-20T20:00:00+08:00` 固定「而家」方便測試。

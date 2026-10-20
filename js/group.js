@@ -27,43 +27,48 @@
   }
 
   titleEl.textContent = group.title || group.sentence;
-  const now = Date.now();
-  // Allow ?now= ISO override for testing
   const nowParam = params.get('now');
-  const nowMs = nowParam ? new Date(nowParam).getTime() : now;
-
-  const chunkTimes = {};
-  (group.chunks || []).forEach((c) => {
-    chunkTimes[c.id] = Schedule.chunkStageTimes(c.chunk_added_at);
-  });
-  const sentenceTimes = Schedule.sentenceStageTimes(group.sentence_added_at);
+  const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
+  const nowIso = new Date(nowMs).toISOString();
 
   const groupQuizzes = (manifest.quizzes || []).filter((q) => {
     if (q.kind === 'sentence') return q.sentence === group.sentence;
-    return (group.chunks || []).some((c) => c.id === q.chunk_id) && q.sentence === group.sentence;
+    return (
+      (group.chunks || []).some((c) => c.id === q.chunk_id) &&
+      q.sentence === group.sentence
+    );
   });
+
+  function dueForMeta(meta) {
+    const prog = Progress.getQuiz(meta.quiz_id);
+    const kind = meta.kind;
+    const chunkState =
+      kind === 'chunk'
+        ? Progress.getChunk(slug, meta.chunk_id)
+        : null;
+    const sentenceState =
+      kind === 'sentence' ? Progress.getSentence(slug) : null;
+    const stages = Schedule.dueStages({
+      objective: meta.objective,
+      kind,
+      schedule,
+      chunkState,
+      sentenceState,
+      completedStages: prog.completedStages,
+      now: nowMs,
+    });
+    return stages;
+  }
 
   function buildDueQueue() {
     const due = [];
     for (const meta of groupQuizzes) {
-      const prog = Progress.get(meta.quiz_id);
-      const kind = meta.kind;
-      const stageTimes =
-        kind === 'sentence' ? sentenceTimes : chunkTimes[meta.chunk_id];
-      if (!stageTimes) continue;
-      const stages = Schedule.dueStages({
-        objective: meta.objective,
-        kind,
-        schedule,
-        stageTimes,
-        completedStages: prog.completedStages,
-        now: nowMs,
-      });
+      const stages = dueForMeta(meta);
       if (stages.length) {
-        due.push({ meta, dueStages: stages, stageTimes });
+        due.push({ meta, dueStages: stages });
       }
     }
-    // Sort: Level 1 → 2 → 3 → sentence; within level by chunk_id; then objective/quiz_id
+    // L1 → L2 → L3 → sentence; within level by chunk_id
     due.sort((a, b) => {
       const ka = a.meta.kind === 'sentence' ? 1 : 0;
       const kb = b.meta.kind === 'sentence' ? 1 : 0;
@@ -84,29 +89,88 @@
     return due;
   }
 
+  function chunkHasDue(chunkId) {
+    return groupQuizzes.some(
+      (m) => m.kind === 'chunk' && m.chunk_id === chunkId && dueForMeta(m).length
+    );
+  }
+
+  function sentenceHasDue() {
+    return groupQuizzes.some(
+      (m) => m.kind === 'sentence' && dueForMeta(m).length
+    );
+  }
+
+  function nextUnlockHint() {
+    const parts = [];
+    for (const c of group.chunks || []) {
+      const st = Progress.getChunk(slug, c.id);
+      if (Schedule.isChunkStageReady(st, nowMs)) continue;
+      const t = Schedule.chunkStageReadyAt(st);
+      if (t != null) {
+        const labels = Schedule.chunkStageLabels();
+        const lab = labels[st.stageIndex] || '?';
+        parts.push('chunk' + c.id + ' ' + lab + ' @ ' + Schedule.formatHKT(t));
+      }
+    }
+    const ss = Progress.getSentence(slug);
+    if (!Schedule.isSentenceStageReady(ss, nowMs)) {
+      const t = Schedule.sentenceStageReadyAt(ss);
+      if (t != null) {
+        const labels = Schedule.sentenceStageLabels(schedule);
+        const lab = labels[ss.stageIndex] || '?';
+        parts.push('sentence ' + lab + ' @ ' + Schedule.formatHKT(t));
+      }
+    }
+    return parts.length ? ' · 下次：' + parts.join('；') : '';
+  }
+
   let queue = buildDueQueue();
-  metaEl.textContent =
-    '而家：' +
-    Schedule.formatHKT(nowMs) +
-    ' · 到期 ' +
-    queue.length +
-    ' 題' +
-    (group.sentence_added_at_note ? ' · （加入時間為暫定）' : '');
+
+  function updateMeta(remaining) {
+    metaEl.textContent =
+      '而家：' +
+      Schedule.formatHKT(nowMs) +
+      ' · 到期 ' +
+      remaining +
+      ' 題' +
+      (remaining === 0 ? nextUnlockHint() : '') +
+      ' · SRS＝完成後間隔（唔用 added_at）';
+  }
+  updateMeta(queue.length);
 
   function renderQueue() {
     queueEl.innerHTML = '';
     queue.forEach((item, i) => {
-      const li = el('li', null, (i + 1) + '. L' + (item.meta.level ?? 'S') + ' ' + item.meta.objective + ' [' + item.dueStages.join(',') + ']');
+      const li = document.createElement('li');
+      li.textContent =
+        i +
+        1 +
+        '. L' +
+        (item.meta.level ?? 'S') +
+        ' ' +
+        item.meta.objective +
+        ' [' +
+        item.dueStages.join(',') +
+        ']';
       queueEl.appendChild(li);
     });
   }
-  function el(tag, cls, text) {
-    const n = document.createElement(tag);
-    if (cls) n.className = cls;
-    if (text != null) n.textContent = text;
-    return n;
-  }
   renderQueue();
+
+  function afterPass(item) {
+    Progress.markPassed(item.meta.quiz_id, item.dueStages, nowIso);
+
+    if (item.meta.kind === 'chunk') {
+      if (!chunkHasDue(item.meta.chunk_id)) {
+        Progress.advanceChunk(slug, item.meta.chunk_id, nowIso);
+      }
+    } else if (item.meta.kind === 'sentence') {
+      if (!sentenceHasDue()) {
+        Progress.advanceSentence(slug, nowIso);
+      }
+    }
+  }
 
   async function nextQuiz() {
     doneEl.hidden = true;
@@ -114,20 +178,18 @@
     if (!queue.length) {
       runnerEl.hidden = true;
       doneEl.hidden = false;
-      doneEl.textContent = '今次練習完成';
+      doneEl.textContent = '今次練習完成' + nextUnlockHint();
+      updateMeta(0);
       return;
     }
     const item = queue[0];
     const quiz = await (await fetch(item.meta.file)).json();
     QuizRunner.run(quiz, runnerEl, {
       onPass() {
-        const stages = item.dueStages;
-        // Mark all currently due stages for this appearance as completed
-        Progress.markPassed(item.meta.quiz_id, stages, new Date(nowMs).toISOString());
+        afterPass(item);
         queue.shift();
         renderQueue();
-        metaEl.textContent =
-          '而家：' + Schedule.formatHKT(nowMs) + ' · 剩餘 ' + queue.length + ' 題';
+        updateMeta(queue.length);
         nextQuiz();
       },
     });
@@ -139,7 +201,7 @@
   });
 
   document.getElementById('reset-btn').addEventListener('click', () => {
-    if (confirm('清除本地進度？')) {
+    if (confirm('清除本地進度（v2）？')) {
       Progress.resetAll();
       location.reload();
     }

@@ -8,28 +8,27 @@
   const groupsData = await groupsRes.json();
   const manifest = await manifestRes.json();
   const schedule = await scheduleRes.json();
-  const nowMs = Date.now();
+  const params = new URLSearchParams(location.search);
+  const nowParam = params.get('now');
+  const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
 
   for (const group of groupsData.groups || []) {
-    const chunkTimes = {};
-    (group.chunks || []).forEach((c) => {
-      chunkTimes[c.id] = Schedule.chunkStageTimes(c.chunk_added_at);
-    });
-    const sentenceTimes = Schedule.sentenceStageTimes(group.sentence_added_at);
     const quizzes = (manifest.quizzes || []).filter(
       (q) => q.sentence === group.sentence
     );
     let dueCount = 0;
     for (const meta of quizzes) {
-      const prog = Progress.get(meta.quiz_id);
-      const stageTimes =
-        meta.kind === 'sentence' ? sentenceTimes : chunkTimes[meta.chunk_id];
-      if (!stageTimes) continue;
+      const prog = Progress.getQuiz(meta.quiz_id);
       const stages = Schedule.dueStages({
         objective: meta.objective,
         kind: meta.kind,
         schedule,
-        stageTimes,
+        chunkState:
+          meta.kind === 'chunk'
+            ? Progress.getChunk(group.slug, meta.chunk_id)
+            : null,
+        sentenceState:
+          meta.kind === 'sentence' ? Progress.getSentence(group.slug) : null,
         completedStages: prog.completedStages,
         now: nowMs,
       });
@@ -46,7 +45,7 @@
       dueCount +
       ' 題 · ' +
       (group.chunks || []).length +
-      ' chunks</div>';
+      ' chunks · 完成後間隔</div>';
     list.appendChild(a);
   }
 
