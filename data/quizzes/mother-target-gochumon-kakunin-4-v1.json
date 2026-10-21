@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-gochumon-kakunin-4-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 4,
+    "text": "お間違い"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "弄錯"
+    },
+    {
+      "type": "select_text",
+      "correct": "お間違い",
+      "distractors": [
+        "ご注文",
+        "確認",
+        "させていただきます",
+        "ないでしょうか"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

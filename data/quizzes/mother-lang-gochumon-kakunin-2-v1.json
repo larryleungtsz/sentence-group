@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-gochumon-kakunin-2-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 2,
+    "text": "確認"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "確認。How to pronounce this word?",
+      "gloss": "確認",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

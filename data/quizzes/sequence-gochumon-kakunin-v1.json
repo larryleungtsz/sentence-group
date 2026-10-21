@@ -1,0 +1,72 @@
+{
+  "quiz_id": "sequence-gochumon-kakunin-v1",
+  "objective": "sequence_training",
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "ご注文",
+          "hotspot": {
+            "left": 18,
+            "top": 52,
+            "width": 32,
+            "height": 36,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "確認",
+          "hotspot": {
+            "left": 38,
+            "top": 55,
+            "width": 12,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "させていただきます",
+          "hotspot": {
+            "left": 30,
+            "top": 8,
+            "width": 26,
+            "height": 48,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "お間違い",
+          "hotspot": {
+            "left": 66,
+            "top": 52,
+            "width": 16,
+            "height": 32,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "ないでしょうか",
+          "hotspot": {
+            "left": 55,
+            "top": 10,
+            "width": 30,
+            "height": 48,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

@@ -114,8 +114,15 @@
     for (let i = 0; i < chunks.length; i++) {
       const c = chunks[i];
       if (admitted.has(c.id)) continue;
-      if (i === 0) continue;
-      const prev = chunks[i - 1];
+      if (Schedule.isAlreadyIntroduced(c)) continue;
+      let prev = null;
+      for (let j = i - 1; j >= 0; j--) {
+        if (!Schedule.isAlreadyIntroduced(chunks[j])) {
+          prev = chunks[j];
+          break;
+        }
+      }
+      if (!prev) continue;
       const prevSt = getChunkState(prev.id);
       if (Schedule.isChunkInDense(prevSt)) {
         const labels = Schedule.chunkStageLabels();
@@ -191,7 +198,7 @@
       (remaining === 0 ? nextUnlockHint() : '') +
       ' · 已加入 chunk：' +
       (adm.length ? adm.join(',') : '—') +
-      ' · SRS＝完成後間隔；最多 1 個密集 T01–T03';
+      ' · SRS＝完成後間隔；最多 1 個新 chunk 密集 T01–T03（已引入唔計）';
   }
   updateMeta(queue.length);
 

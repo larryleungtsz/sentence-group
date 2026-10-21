@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-gochumon-kakunin-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 5,
+    "text": "ないでしょうか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
+      "start_sec": 3.17,
+      "end_sec": 4.5,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "ないでしょうか→奶爹索car",
+        "一句串：奶爹索car（舔腳＋聞髒車）。"
+      ],
+      "distractors": [
+        "お間違い→鵝抹刺街",
+        "一句串：鵝抹刺街。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

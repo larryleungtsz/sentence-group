@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-gochumon-kakunin-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 5,
+    "text": "ないでしょうか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——空掌攤開、頭微側、眉揚起停住。視線落在空掌；掌心空＝沒有…吧。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspot": {
+        "left": 55,
+        "top": 10,
+        "width": 30,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

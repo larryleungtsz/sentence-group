@@ -1,0 +1,23 @@
+{
+  "quiz_id": "example-listen-gochumon-kakunin-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 3,
+    "text": "させていただきます"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sasete-itadakimasu.mp3",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-gochumon-kakunin-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 3,
+    "text": "させていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "對面櫃位有一位雙手持單的女店員。請在圖中點這位店員所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspot": {
+        "left": 30,
+        "top": 8,
+        "width": 26,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

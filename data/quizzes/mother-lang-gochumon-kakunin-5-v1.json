@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-gochumon-kakunin-5-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 5,
+    "text": "ないでしょうか"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "沒有…吧。How to pronounce this word?",
+      "gloss": "沒有…吧",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

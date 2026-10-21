@@ -59,7 +59,7 @@
       chunks.length +
       ' chunks（有題 ' +
       readyChunks +
-      '）· 最多 1 個密集</div>';
+      '）· 最多 1 個新 chunk 密集（已引入唔計）</div>';
     list.appendChild(a);
   }
 

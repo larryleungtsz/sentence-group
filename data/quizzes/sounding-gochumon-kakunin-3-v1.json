@@ -1,0 +1,40 @@
+{
+  "quiz_id": "sounding-gochumon-kakunin-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 3,
+    "text": "させていただきます"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
+      "start_sec": 0.91,
+      "end_sec": 2.58,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "させて→殺蛇Dead",
+        "いただ→2蛋蛋",
+        "きます→key抹",
+        "一句串：殺蛇Dead尾上放2蛋蛋，key抹地上血紅油漆。"
+      ],
+      "distractors": [
+        "Ka→card",
+        "kun→冠（皇冠）",
+        "Nin→鏈",
+        "一句串：card頭頂戴皇冠，頸上纏鏈。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

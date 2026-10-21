@@ -86,18 +86,37 @@
   }
 
   /**
-   * Chunks array is join order. Chunk i is admitted iff i===0 or previous has
-   * unlocked through T1. Ensures at most one chunk in dense T01–T03.
+   * Chunk already introduced in a prior group (or marked shared): does not
+   * occupy the dense T01–T03 slot and does not gate the next *new* chunk.
+   */
+  function isAlreadyIntroduced(chunk) {
+    return !!(
+      chunk &&
+      (chunk.already_introduced === true || chunk.shared_with_prior_group)
+    );
+  }
+
+  /**
+   * Chunks array is join order. At most one *non*-already_introduced chunk in
+   * dense T01–T03 per group.
+   * - already_introduced chunks are always admitted (may still show new quizzes)
+   *   and are skipped when looking for the dense predecessor.
+   * - A new chunk is admitted when the nearest previous non-already_introduced
+   *   chunk has unlocked through T1 (or there is none → admit immediately).
    * getChunkState(chunkId) → progress state for that chunk.
    */
   function isChunkAdmitted(chunks, chunkId, getChunkState, now) {
     const list = chunks || [];
     const idx = list.findIndex((c) => c.id === chunkId);
     if (idx < 0) return false;
-    if (idx === 0) return true;
-    const prev = list[idx - 1];
-    const prevState = getChunkState(prev.id);
-    return hasUnlockedThroughT1(prevState, now);
+    const self = list[idx];
+    if (isAlreadyIntroduced(self)) return true;
+    for (let j = idx - 1; j >= 0; j--) {
+      if (isAlreadyIntroduced(list[j])) continue;
+      return hasUnlockedThroughT1(getChunkState(list[j].id), now);
+    }
+    // No prior dense-relevant chunk (all previous already_introduced / none)
+    return true;
   }
 
   /** Set of admitted chunk ids for a group at `now`. */
@@ -223,6 +242,7 @@
     isChunkStageReady,
     chunkStageReadyAt,
     isChunkInDense,
+    isAlreadyIntroduced,
     hasUnlockedThroughT1,
     isChunkAdmitted,
     admittedChunkIds,

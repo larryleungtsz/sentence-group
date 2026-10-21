@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-gochumon-kakunin-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 5,
+    "text": "ないでしょうか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個中年奶爹蹲低，專心舔自己隻腳，另一邊鼻尖湊近一架髒車慢慢嗅。舔完一輪抬眼——對面男店員空掌向上攤開、眉微揚停住望你。掌心空空——正正係「沒有…吧」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

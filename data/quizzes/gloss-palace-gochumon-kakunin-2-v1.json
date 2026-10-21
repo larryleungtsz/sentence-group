@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-gochumon-kakunin-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 2,
+    "text": "確認"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "確認。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspot": {
+        "left": 38,
+        "top": 55,
+        "width": 12,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-gochumon-kakunin-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近身托盤上放著一本標題寫着「注文」的打開點餐單。請在圖中點這張單所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspot": {
+        "left": 18,
+        "top": 52,
+        "width": 32,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

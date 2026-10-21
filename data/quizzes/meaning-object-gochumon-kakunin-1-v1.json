@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-gochumon-kakunin-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "打開的點餐單（寫着注文）= 您的點餐，因為單上已寫着「注文」及客人落下的菜。看見寫滿／標着注文的單就想起「您的點餐」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspot": {
+        "left": 18,
+        "top": 52,
+        "width": 32,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

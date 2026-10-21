@@ -49,6 +49,56 @@
       ]
     },
     {
+      "slug": "gochumon-kakunin",
+      "title": "ご注文確認させていただきます。お間違いないでしょうか",
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "sentence_added_at": "2026-10-21T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — palace created ~2026-10-21; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/3ff3b2a7295680538dd2c2bf9b1e23dd",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "chunk_order_note": "Dense gate per group. Chunks with already_introduced=true (ご注文 shared from gochumon) do not occupy the dense T01–T03 slot and do not gate the next new chunk — so 確認 can start T01 immediately. Only new (non-duplicate) quizzes for reused chunks are exported.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "ご注文",
+          "already_introduced": true,
+          "shared_with_prior_group": "gochumon",
+          "chunk_added_at_note": "already introduced in gochumon — does not occupy dense; new-sentence quizzes only if not duplicate",
+          "notion_url": "https://app.notion.com/p/3da3b2a7295681f9a129d4723d200a7a",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "確認",
+          "chunk_added_at": "2026-10-21T00:00:00+08:00",
+          "chunk_added_at_note": "first new chunk — may start T01 immediately because chunk 1 is already_introduced",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681bea08bd8a04b0151bc",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "させていただきます",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681e49389cb3715f83224",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "お間違い",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a729568140b105c37600ec31c8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ないでしょうか",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681689876e17b3165ce98",
+          "quizzes_ready": true
+        }
+      ]
+    },
+    {
       "slug": "pepsi-zero-size",
       "title": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",

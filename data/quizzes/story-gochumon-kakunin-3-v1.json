@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-gochumon-kakunin-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+  "chunk": {
+    "id": 3,
+    "text": "させていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一條受傷嘅蛇眼畫交叉躺住，尾上穩穩托住兩隻可愛蛋。一把鎖匙喺旁專心抹走地上血紅油漆，紅痕慢慢變淡。抹乾淨後抬眼——對面女店員微鞠躬，雙手捧單停喺胸前等你准許——正正係「請讓我…」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

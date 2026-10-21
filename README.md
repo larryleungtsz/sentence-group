@@ -50,15 +50,13 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 ### Chunk 加入閘（密集階段）
 
-`groups.json` 入面 `chunks` **陣列次序**就係加入次序（例如：ご注文 → お決まりに → なりましたら → お呼び → ください）。
+`groups.json` 入面 `chunks` **陣列次序**就係加入次序。
 
-- **密集階段** = T01 / T02 / T03（`stageIndex` 0–2）。任何時候最多 **1** 個 chunk 處於密集。
-- 第一個 chunk 永遠可以開始 T01。
-- 當前一個 chunk **完成 T03** 後等 24 小時 → 其 **T1 ready**；**同一刻**下一個 chunk 先可以開始 T01。
-- 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。
-- 判斷：`hasUnlockedThroughT1(prev)` = 前一個 `stageIndex > 3`，或 `stageIndex === 3` 且 T1 已 ready。
-
-而家只有 chunk 1「ご注文」有 Quiz JSON；2–5 已預留 `text`，等匯出後設 `quizzes_ready: true`。
+- **密集階段** = T01 / T02 / T03（`stageIndex` 0–2）。每個 Sentence Group 同時最多 **1** 個**新** chunk 處於密集。
+- 標記 `already_introduced: true`（或 `shared_with_prior_group`）嘅 chunk：已喺其他 group 出現過，**唔佔**密集位，亦**唔**要等佢到 T1 先開下一個新 chunk。例：`gochumon-kakunin` 嘅「ご注文」已引入 → 「確認」可即時 T01。
+- 下一個**新** chunk：等最近一個非 already_introduced 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。
+- 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。already_introduced 永遠 admitted（若有**未重複**嘅新題仍會出）。
+- 重用 chunk 只匯出 **尚未存在** 嘅 quiz（唔複製 gochumon 已有嘅 quiz_id）。
 
 ### Sentence（每個 Sentence Group 一條線）
 

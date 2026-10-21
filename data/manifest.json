@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T06:17:28+08:00",
+  "generated_at": "2026-10-21T18:50:33+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-gochumon-1-v1",
@@ -13,17 +13,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681c7b90cf137e4ca454e"
     },
     {
-      "quiz_id": "example-listen-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/example-listen-pepsi-zero-size-1-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681579e47d9ef9c929538"
-    },
-    {
       "quiz_id": "loci-gochumon-1-v1",
       "file": "data/quizzes/loci-gochumon-1-v1.json",
       "objective": "loci_description_tap",
@@ -33,17 +22,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956817da22ac2168180085f"
-    },
-    {
-      "quiz_id": "loci-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/loci-pepsi-zero-size-1-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568110974ad74968208751"
     },
     {
       "quiz_id": "meaning-object-gochumon-1-v1",
@@ -57,17 +35,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568135978fdac9a6fbb62b"
     },
     {
-      "quiz_id": "meaning-object-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/meaning-object-pepsi-zero-size-1-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956819d94bce2bb282540cc"
-    },
-    {
       "quiz_id": "sounding-gochumon-1-v1",
       "file": "data/quizzes/sounding-gochumon-1-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -77,17 +44,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956815abd87d1521f4582f2"
-    },
-    {
-      "quiz_id": "sounding-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/sounding-pepsi-zero-size-1-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568148a7a8d421707dab8f"
     },
     {
       "quiz_id": "story-gochumon-1-v1",
@@ -101,17 +57,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956810a92cff60589221bd7"
     },
     {
-      "quiz_id": "story-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-1-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f48c3ccedbc5d1762a"
-    },
-    {
       "quiz_id": "shadow-05-gochumon-1-v1",
       "file": "data/quizzes/shadow-05-gochumon-1-v1.json",
       "objective": "tone_shadowing_05",
@@ -121,17 +66,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956810caac0d0d2197f510a"
-    },
-    {
-      "quiz_id": "shadow-05-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/shadow-05-pepsi-zero-size-1-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f7a684d348d24daa2c"
     },
     {
       "quiz_id": "shadow-025-gochumon-1-v1",
@@ -145,17 +79,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681789134d79d66891e2f"
     },
     {
-      "quiz_id": "shadow-025-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/shadow-025-pepsi-zero-size-1-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568186a07bc635f28ff2a6"
-    },
-    {
       "quiz_id": "writing-gochumon-1-v1",
       "file": "data/quizzes/writing-gochumon-1-v1.json",
       "objective": "writing_shadowing",
@@ -165,17 +88,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956811b8e2af951d40bf243"
-    },
-    {
-      "quiz_id": "writing-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/writing-pepsi-zero-size-1-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568191b2b5d51987744188"
     },
     {
       "quiz_id": "youglish-gochumon-1-v1",
@@ -189,17 +101,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956817bb127feadf70f09bd"
     },
     {
-      "quiz_id": "youglish-pepsi-zero-size-1-v1",
-      "file": "data/quizzes/youglish-pepsi-zero-size-1-v1.json",
-      "objective": "youglish_listen",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681aaa43bce0c724b96dd"
-    },
-    {
       "quiz_id": "example-listen-gochumon-2-v1",
       "file": "data/quizzes/example-listen-gochumon-2-v1.json",
       "objective": "example_sentences_listening",
@@ -209,17 +110,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681c79129e837702f7ee1"
-    },
-    {
-      "quiz_id": "example-listen-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/example-listen-pepsi-zero-size-2-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568104a6a3f92ee1850e01"
     },
     {
       "quiz_id": "loci-gochumon-2-v1",
@@ -233,17 +123,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681109942c95db2de9cfa"
     },
     {
-      "quiz_id": "loci-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/loci-pepsi-zero-size-2-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a78354cfc06021cf16"
-    },
-    {
       "quiz_id": "meaning-object-gochumon-2-v1",
       "file": "data/quizzes/meaning-object-gochumon-2-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -253,17 +132,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681d6b648d9c150a37b01"
-    },
-    {
-      "quiz_id": "meaning-object-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/meaning-object-pepsi-zero-size-2-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956810d82b3f9a3878067cb"
     },
     {
       "quiz_id": "sounding-gochumon-2-v1",
@@ -277,17 +145,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681568f31fbce4faee1cf"
     },
     {
-      "quiz_id": "sounding-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/sounding-pepsi-zero-size-2-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568191b9e7cf1c51977006"
-    },
-    {
       "quiz_id": "story-gochumon-2-v1",
       "file": "data/quizzes/story-gochumon-2-v1.json",
       "objective": "story_select_image",
@@ -297,17 +154,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568104802ee5f353a051c9"
-    },
-    {
-      "quiz_id": "story-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-2-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956819388e9ed3c339aedf9"
     },
     {
       "quiz_id": "shadow-05-gochumon-2-v1",
@@ -321,17 +167,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681209cf2cbf0f6235946"
     },
     {
-      "quiz_id": "shadow-05-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/shadow-05-pepsi-zero-size-2-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681189e4bddc28e2f978e"
-    },
-    {
       "quiz_id": "shadow-025-gochumon-2-v1",
       "file": "data/quizzes/shadow-025-gochumon-2-v1.json",
       "objective": "word_shadowing_025",
@@ -341,17 +176,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681558908e9a81a43d974"
-    },
-    {
-      "quiz_id": "shadow-025-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/shadow-025-pepsi-zero-size-2-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681abbed4c099ac3df3b4"
     },
     {
       "quiz_id": "writing-okimari-ni-2-v1",
@@ -365,17 +189,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681258249e3d49ed0c454"
     },
     {
-      "quiz_id": "writing-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/writing-pepsi-zero-size-2-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956811fb2b4f930594c8862"
-    },
-    {
       "quiz_id": "youglish-gochumon-2-v1",
       "file": "data/quizzes/youglish-gochumon-2-v1.json",
       "objective": "youglish_listen",
@@ -385,17 +198,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681cd8d3adc9c77e1bb2f"
-    },
-    {
-      "quiz_id": "youglish-pepsi-zero-size-2-v1",
-      "file": "data/quizzes/youglish-pepsi-zero-size-2-v1.json",
-      "objective": "youglish_listen",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f59e9ee0df60be3860"
     },
     {
       "quiz_id": "example-listen-gochumon-3-v1",
@@ -409,17 +211,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681a4a626dcee599266f1"
     },
     {
-      "quiz_id": "example-listen-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/example-listen-pepsi-zero-size-3-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a3adf4dbce5d0e15f1"
-    },
-    {
       "quiz_id": "loci-gochumon-3-v1",
       "file": "data/quizzes/loci-gochumon-3-v1.json",
       "objective": "loci_description_tap",
@@ -429,17 +220,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681be9531cf69530f6369"
-    },
-    {
-      "quiz_id": "loci-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/loci-pepsi-zero-size-3-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956818d8b03e7a845e3db47"
     },
     {
       "quiz_id": "meaning-object-gochumon-3-v1",
@@ -453,17 +233,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568152a323dfa28f1e8796"
     },
     {
-      "quiz_id": "meaning-object-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/meaning-object-pepsi-zero-size-3-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956812bb7b2c2a836254664"
-    },
-    {
       "quiz_id": "sounding-gochumon-3-v1",
       "file": "data/quizzes/sounding-gochumon-3-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -473,17 +242,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568131a5b1c6815f75982c"
-    },
-    {
-      "quiz_id": "sounding-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/sounding-pepsi-zero-size-3-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956817d8ef2cd6c5555ba90"
     },
     {
       "quiz_id": "story-gochumon-3-v1",
@@ -497,17 +255,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681fc9ae5dc74479ff51a"
     },
     {
-      "quiz_id": "story-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-3-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681c6ba49f41252d45783"
-    },
-    {
       "quiz_id": "shadow-05-gochumon-3-v1",
       "file": "data/quizzes/shadow-05-gochumon-3-v1.json",
       "objective": "tone_shadowing_05",
@@ -517,17 +264,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568180af36d82137b23124"
-    },
-    {
-      "quiz_id": "shadow-05-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/shadow-05-pepsi-zero-size-3-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568164a2bded02b62fd87a"
     },
     {
       "quiz_id": "shadow-025-gochumon-3-v1",
@@ -541,17 +277,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568112a473c8605108a695"
     },
     {
-      "quiz_id": "shadow-025-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/shadow-025-pepsi-zero-size-3-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681beb871c238d0610e3d"
-    },
-    {
       "quiz_id": "writing-narimashitara-3-v1",
       "file": "data/quizzes/writing-narimashitara-3-v1.json",
       "objective": "writing_shadowing",
@@ -561,17 +286,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681b7b422e3388f464543"
-    },
-    {
-      "quiz_id": "writing-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/writing-pepsi-zero-size-3-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956813c8fbae57ef09e27e2"
     },
     {
       "quiz_id": "youglish-gochumon-3-v1",
@@ -596,17 +310,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568120888acbb1df87d537"
     },
     {
-      "quiz_id": "example-listen-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/example-listen-pepsi-zero-size-4-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956810bbf12f03dfe9d38ea"
-    },
-    {
       "quiz_id": "loci-gochumon-4-v1",
       "file": "data/quizzes/loci-gochumon-4-v1.json",
       "objective": "loci_description_tap",
@@ -616,17 +319,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681088f1ee4e72f89d8d9"
-    },
-    {
-      "quiz_id": "loci-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/loci-pepsi-zero-size-4-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681d6a305eae2fa86a996"
     },
     {
       "quiz_id": "meaning-object-gochumon-4-v1",
@@ -640,17 +332,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568185aea9d7b3e0f13a6e"
     },
     {
-      "quiz_id": "meaning-object-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/meaning-object-pepsi-zero-size-4-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681b4ad68d359d1622529"
-    },
-    {
       "quiz_id": "sounding-gochumon-4-v1",
       "file": "data/quizzes/sounding-gochumon-4-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -660,17 +341,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681c2a26ee3ffa3b678a8"
-    },
-    {
-      "quiz_id": "sounding-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/sounding-pepsi-zero-size-4-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956818899d0ef7434c930af"
     },
     {
       "quiz_id": "story-gochumon-4-v1",
@@ -684,17 +354,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681669330e2102ed91b3d"
     },
     {
-      "quiz_id": "story-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-4-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681de8d9fc399faf1b551"
-    },
-    {
       "quiz_id": "shadow-05-gochumon-4-v1",
       "file": "data/quizzes/shadow-05-gochumon-4-v1.json",
       "objective": "tone_shadowing_05",
@@ -704,17 +363,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681029bc5c20cf405f30e"
-    },
-    {
-      "quiz_id": "shadow-05-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/shadow-05-pepsi-zero-size-4-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956810a8f08e1fb391c0218"
     },
     {
       "quiz_id": "shadow-025-gochumon-4-v1",
@@ -728,17 +376,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681428255f52a4a9cb63f"
     },
     {
-      "quiz_id": "shadow-025-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/shadow-025-pepsi-zero-size-4-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681fca614c3c2a647781b"
-    },
-    {
       "quiz_id": "writing-oyobi-4-v1",
       "file": "data/quizzes/writing-oyobi-4-v1.json",
       "objective": "writing_shadowing",
@@ -748,17 +385,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568101ba41cd2ba05d30a7"
-    },
-    {
-      "quiz_id": "writing-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/writing-pepsi-zero-size-4-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f29608eeb3a26b85ce"
     },
     {
       "quiz_id": "youglish-gochumon-4-v1",
@@ -772,17 +398,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956816c97b1ee8283a05885"
     },
     {
-      "quiz_id": "youglish-pepsi-zero-size-4-v1",
-      "file": "data/quizzes/youglish-pepsi-zero-size-4-v1.json",
-      "objective": "youglish_listen",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956816f91a4f64bd310cf2c"
-    },
-    {
       "quiz_id": "example-listen-gochumon-5-v1",
       "file": "data/quizzes/example-listen-gochumon-5-v1.json",
       "objective": "example_sentences_listening",
@@ -792,17 +407,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681f39e57e205a0189ad8"
-    },
-    {
-      "quiz_id": "example-listen-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/example-listen-pepsi-zero-size-5-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf9380e698df1cb87c"
     },
     {
       "quiz_id": "loci-gochumon-5-v1",
@@ -816,17 +420,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681288dd2d32590348625"
     },
     {
-      "quiz_id": "loci-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/loci-pepsi-zero-size-5-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681289fc1f42bb0fd5de6"
-    },
-    {
       "quiz_id": "meaning-object-gochumon-5-v1",
       "file": "data/quizzes/meaning-object-gochumon-5-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -836,17 +429,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681f58ec8c78fde879e33"
-    },
-    {
-      "quiz_id": "meaning-object-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/meaning-object-pepsi-zero-size-5-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956814da907d06c4729b8eb"
     },
     {
       "quiz_id": "sounding-gochumon-5-v1",
@@ -860,17 +442,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568160bab9e2ddbb7201f3"
     },
     {
-      "quiz_id": "sounding-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/sounding-pepsi-zero-size-5-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956817fbcaaf160c7de9b52"
-    },
-    {
       "quiz_id": "story-gochumon-5-v1",
       "file": "data/quizzes/story-gochumon-5-v1.json",
       "objective": "story_select_image",
@@ -880,17 +451,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681709277cc9dbb88473e"
-    },
-    {
-      "quiz_id": "story-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-5-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a59945e84b60acd6c8"
     },
     {
       "quiz_id": "shadow-05-gochumon-5-v1",
@@ -904,17 +464,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568162af9ad642635b5258"
     },
     {
-      "quiz_id": "shadow-05-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/shadow-05-pepsi-zero-size-5-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956813c8a45db2640e309da"
-    },
-    {
       "quiz_id": "shadow-025-gochumon-5-v1",
       "file": "data/quizzes/shadow-025-gochumon-5-v1.json",
       "objective": "word_shadowing_025",
@@ -924,17 +473,6 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568136a0f2c2d9502de1b2"
-    },
-    {
-      "quiz_id": "shadow-025-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/shadow-025-pepsi-zero-size-5-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956810080d8e0738ca899fa"
     },
     {
       "quiz_id": "writing-kudasai-5-v1",
@@ -948,17 +486,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956810daf97d014630ccf19"
     },
     {
-      "quiz_id": "writing-pepsi-zero-size-5-v1",
-      "file": "data/quizzes/writing-pepsi-zero-size-5-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a2bedfc7c1ef34ef1c"
-    },
-    {
       "quiz_id": "youglish-gochumon-5-v1",
       "file": "data/quizzes/youglish-gochumon-5-v1.json",
       "objective": "youglish_listen",
@@ -968,6 +495,1359 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956815f9abeee518bc431cb"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f88048dbf8ecec3897"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956812d800fe0cccec6d224"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-2-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681ea8c12da6eabc7eff7"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-2-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-2-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681539659f8dbf2d60a47"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-3-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681e8ad0aefeecadbc16e"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-3-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-3-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956819a8463ed06001f3992"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-4-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681e9b3c4cebcb6aae835"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-4-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-4-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568154a60eca4d36725711"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-5-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f18883ec1ab0ab48c1"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-5-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-5-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf90e8e2331b731ade"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568192b8caea2d73dfde1f"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-1-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956811eb57bc9222e4d8ce9"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-2-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-2-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf9cb5eef3d45dba3f"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-2-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-2-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956817fa56bd1ecc629d3b2"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-3-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-3-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956813f8953fa9f9ff0b03b"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-3-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-3-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956816a8811fefd86359837"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-4-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-4-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568125bdadca216dc43f7a"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-4-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-4-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681338059d3400effaf21"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-5-v1",
+      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-5-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568156bdbbfc2d92c53f2e"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-5-v1",
+      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-5-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568127b471cdd2b969164c"
+    },
+    {
+      "quiz_id": "loci-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/loci-gochumon-kakunin-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a729568139849be581b38c9e82"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/meaning-object-gochumon-kakunin-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681bca39af6082a16a331"
+    },
+    {
+      "quiz_id": "sounding-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/sounding-gochumon-kakunin-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681f18b54f180306d2321"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/shadow-05-gochumon-kakunin-1-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681aaaddae77ecc2361f8"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/shadow-025-gochumon-kakunin-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568196a0e3c7c1374677f0"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/example-listen-gochumon-kakunin-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956819aabf3c0210999ab0c"
+    },
+    {
+      "quiz_id": "loci-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/loci-gochumon-kakunin-2-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a7295681b8a384ce3b925d09f3"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/meaning-object-gochumon-kakunin-2-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681398720c21bee8f34a1"
+    },
+    {
+      "quiz_id": "sounding-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/sounding-gochumon-kakunin-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681a1a3a8fab8e9c7195b"
+    },
+    {
+      "quiz_id": "story-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/story-gochumon-kakunin-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a72956812487e3cb51e883c62c"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/shadow-05-gochumon-kakunin-2-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956815398efe0bb5c59b065"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/shadow-025-gochumon-kakunin-2-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681ddaf59ff1bd871fcda"
+    },
+    {
+      "quiz_id": "writing-kakunin-2-v1",
+      "file": "data/quizzes/writing-kakunin-2-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568109aee0db927acdc503"
+    },
+    {
+      "quiz_id": "youglish-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/youglish-gochumon-kakunin-2-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681549ef6f21182e7b197"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/example-listen-gochumon-kakunin-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681188450f381dba6ba77"
+    },
+    {
+      "quiz_id": "loci-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/loci-gochumon-kakunin-3-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a7295681e28d7ced96ecf27012"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/meaning-object-gochumon-kakunin-3-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681938fb1f4481e5c8315"
+    },
+    {
+      "quiz_id": "sounding-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/sounding-gochumon-kakunin-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956817c8706deb6272d0c35"
+    },
+    {
+      "quiz_id": "story-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/story-gochumon-kakunin-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a72956818c8189c9b1f055bc68"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/shadow-05-gochumon-kakunin-3-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681768f68fa6f87892487"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/shadow-025-gochumon-kakunin-3-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681ef8d2ecb15b321ce52"
+    },
+    {
+      "quiz_id": "writing-sasete-itadakimasu-3-v1",
+      "file": "data/quizzes/writing-sasete-itadakimasu-3-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681e3b38adf534fca0839"
+    },
+    {
+      "quiz_id": "youglish-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/youglish-gochumon-kakunin-3-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681d3a7e7c2ef583eedcb"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/example-listen-gochumon-kakunin-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956816baeebfdc9e956d721"
+    },
+    {
+      "quiz_id": "loci-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/loci-gochumon-kakunin-4-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a729568108954bd96c4b539563"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/meaning-object-gochumon-kakunin-4-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681a7a1d8ec6023cca020"
+    },
+    {
+      "quiz_id": "sounding-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/sounding-gochumon-kakunin-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568135a1a7c502557e64c4"
+    },
+    {
+      "quiz_id": "story-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/story-gochumon-kakunin-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a729568171a704d18d452895c8"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/shadow-05-gochumon-kakunin-4-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956814fbeeafafcfff504ac"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/shadow-025-gochumon-kakunin-4-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568124a702c627359d0870"
+    },
+    {
+      "quiz_id": "writing-omachigai-4-v1",
+      "file": "data/quizzes/writing-omachigai-4-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681419109e1f009e9f7ef"
+    },
+    {
+      "quiz_id": "youglish-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/youglish-gochumon-kakunin-4-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956818c967ef68137cfc52f"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/example-listen-gochumon-kakunin-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568199a2e6fa04671a9a31"
+    },
+    {
+      "quiz_id": "loci-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/loci-gochumon-kakunin-5-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4003b2a7295681098cd1efb179ea3b5a"
+    },
+    {
+      "quiz_id": "meaning-object-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/meaning-object-gochumon-kakunin-5-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568129922fded84fcc1f48"
+    },
+    {
+      "quiz_id": "sounding-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/sounding-gochumon-kakunin-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681c4abfcd19b84c726d3"
+    },
+    {
+      "quiz_id": "story-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/story-gochumon-kakunin-5-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681e58084ef0f929ae16e"
+    },
+    {
+      "quiz_id": "shadow-05-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/shadow-05-gochumon-kakunin-5-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681559173f4110593e32c"
+    },
+    {
+      "quiz_id": "shadow-025-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/shadow-025-gochumon-kakunin-5-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681a4893bf5805697b21e"
+    },
+    {
+      "quiz_id": "writing-naideshouka-5-v1",
+      "file": "data/quizzes/writing-naideshouka-5-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681709690f99d4386775d"
+    },
+    {
+      "quiz_id": "youglish-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/youglish-gochumon-kakunin-5-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568179b2afefb946b88046"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-kakunin-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568133b1add9ccb2f6f3b6"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-kakunin-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681b8b9d7d88aae012fba"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-kakunin-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956819585c0d66567e8f3b1"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-kakunin-2-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681e8a1f1c45d6818b5a7"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-kakunin-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681489d0cec8a47661810"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-kakunin-3-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681d98259fbd148be533e"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-kakunin-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681a3b138f09410c9a14b"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-kakunin-4-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956810cb266f170f39d3b00"
+    },
+    {
+      "quiz_id": "gloss-palace-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/gloss-palace-gochumon-kakunin-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568192837bfab9ae03f540"
+    },
+    {
+      "quiz_id": "target-mnemonic-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/target-mnemonic-gochumon-kakunin-5-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568119b258e14e1f31a409"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-kakunin-1-v1",
+      "file": "data/quizzes/mother-target-gochumon-kakunin-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956814c927bec2cb356d5e5"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/mother-lang-gochumon-kakunin-2-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568125bdc9d7eea56d4076"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-kakunin-2-v1",
+      "file": "data/quizzes/mother-target-gochumon-kakunin-2-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568199890def639795b2b1"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/mother-lang-gochumon-kakunin-3-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681368a7deab66c853c00"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-kakunin-3-v1",
+      "file": "data/quizzes/mother-target-gochumon-kakunin-3-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681b790a7e45dcd2425f6"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/mother-lang-gochumon-kakunin-4-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681bca04bcd212562f1a7"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-kakunin-4-v1",
+      "file": "data/quizzes/mother-target-gochumon-kakunin-4-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681daa2daf628b20c14ee"
+    },
+    {
+      "quiz_id": "mother-lang-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/mother-lang-gochumon-kakunin-5-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681218863da551703e22d"
+    },
+    {
+      "quiz_id": "mother-target-gochumon-kakunin-5-v1",
+      "file": "data/quizzes/mother-target-gochumon-kakunin-5-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a72956819398b0c3a4b5ad35ce"
+    },
+    {
+      "quiz_id": "example-listen-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/example-listen-pepsi-zero-size-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681579e47d9ef9c929538"
+    },
+    {
+      "quiz_id": "loci-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/loci-pepsi-zero-size-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568110974ad74968208751"
+    },
+    {
+      "quiz_id": "meaning-object-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/meaning-object-pepsi-zero-size-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956819d94bce2bb282540cc"
+    },
+    {
+      "quiz_id": "sounding-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/sounding-pepsi-zero-size-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568148a7a8d421707dab8f"
+    },
+    {
+      "quiz_id": "story-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/story-pepsi-zero-size-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f48c3ccedbc5d1762a"
+    },
+    {
+      "quiz_id": "shadow-05-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/shadow-05-pepsi-zero-size-1-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f7a684d348d24daa2c"
+    },
+    {
+      "quiz_id": "shadow-025-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/shadow-025-pepsi-zero-size-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568186a07bc635f28ff2a6"
+    },
+    {
+      "quiz_id": "writing-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/writing-pepsi-zero-size-1-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568191b2b5d51987744188"
+    },
+    {
+      "quiz_id": "youglish-pepsi-zero-size-1-v1",
+      "file": "data/quizzes/youglish-pepsi-zero-size-1-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681aaa43bce0c724b96dd"
+    },
+    {
+      "quiz_id": "example-listen-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/example-listen-pepsi-zero-size-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568104a6a3f92ee1850e01"
+    },
+    {
+      "quiz_id": "loci-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/loci-pepsi-zero-size-2-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a78354cfc06021cf16"
+    },
+    {
+      "quiz_id": "meaning-object-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/meaning-object-pepsi-zero-size-2-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810d82b3f9a3878067cb"
+    },
+    {
+      "quiz_id": "sounding-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/sounding-pepsi-zero-size-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568191b9e7cf1c51977006"
+    },
+    {
+      "quiz_id": "story-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/story-pepsi-zero-size-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956819388e9ed3c339aedf9"
+    },
+    {
+      "quiz_id": "shadow-05-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/shadow-05-pepsi-zero-size-2-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681189e4bddc28e2f978e"
+    },
+    {
+      "quiz_id": "shadow-025-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/shadow-025-pepsi-zero-size-2-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681abbed4c099ac3df3b4"
+    },
+    {
+      "quiz_id": "writing-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/writing-pepsi-zero-size-2-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956811fb2b4f930594c8862"
+    },
+    {
+      "quiz_id": "youglish-pepsi-zero-size-2-v1",
+      "file": "data/quizzes/youglish-pepsi-zero-size-2-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f59e9ee0df60be3860"
+    },
+    {
+      "quiz_id": "example-listen-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/example-listen-pepsi-zero-size-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a3adf4dbce5d0e15f1"
+    },
+    {
+      "quiz_id": "loci-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/loci-pepsi-zero-size-3-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956818d8b03e7a845e3db47"
+    },
+    {
+      "quiz_id": "meaning-object-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/meaning-object-pepsi-zero-size-3-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956812bb7b2c2a836254664"
+    },
+    {
+      "quiz_id": "sounding-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/sounding-pepsi-zero-size-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956817d8ef2cd6c5555ba90"
+    },
+    {
+      "quiz_id": "story-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/story-pepsi-zero-size-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681c6ba49f41252d45783"
+    },
+    {
+      "quiz_id": "shadow-05-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/shadow-05-pepsi-zero-size-3-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a729568164a2bded02b62fd87a"
+    },
+    {
+      "quiz_id": "shadow-025-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/shadow-025-pepsi-zero-size-3-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681beb871c238d0610e3d"
+    },
+    {
+      "quiz_id": "writing-pepsi-zero-size-3-v1",
+      "file": "data/quizzes/writing-pepsi-zero-size-3-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956813c8fbae57ef09e27e2"
+    },
+    {
+      "quiz_id": "example-listen-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/example-listen-pepsi-zero-size-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810bbf12f03dfe9d38ea"
+    },
+    {
+      "quiz_id": "loci-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/loci-pepsi-zero-size-4-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681d6a305eae2fa86a996"
+    },
+    {
+      "quiz_id": "meaning-object-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/meaning-object-pepsi-zero-size-4-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681b4ad68d359d1622529"
+    },
+    {
+      "quiz_id": "sounding-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/sounding-pepsi-zero-size-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956818899d0ef7434c930af"
+    },
+    {
+      "quiz_id": "story-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/story-pepsi-zero-size-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681de8d9fc399faf1b551"
+    },
+    {
+      "quiz_id": "shadow-05-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/shadow-05-pepsi-zero-size-4-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810a8f08e1fb391c0218"
+    },
+    {
+      "quiz_id": "shadow-025-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/shadow-025-pepsi-zero-size-4-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681fca614c3c2a647781b"
+    },
+    {
+      "quiz_id": "writing-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/writing-pepsi-zero-size-4-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f29608eeb3a26b85ce"
+    },
+    {
+      "quiz_id": "youglish-pepsi-zero-size-4-v1",
+      "file": "data/quizzes/youglish-pepsi-zero-size-4-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956816f91a4f64bd310cf2c"
+    },
+    {
+      "quiz_id": "example-listen-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/example-listen-pepsi-zero-size-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf9380e698df1cb87c"
+    },
+    {
+      "quiz_id": "loci-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/loci-pepsi-zero-size-5-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681289fc1f42bb0fd5de6"
+    },
+    {
+      "quiz_id": "meaning-object-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/meaning-object-pepsi-zero-size-5-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956814da907d06c4729b8eb"
+    },
+    {
+      "quiz_id": "sounding-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/sounding-pepsi-zero-size-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956817fbcaaf160c7de9b52"
+    },
+    {
+      "quiz_id": "story-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/story-pepsi-zero-size-5-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a59945e84b60acd6c8"
+    },
+    {
+      "quiz_id": "shadow-05-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/shadow-05-pepsi-zero-size-5-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956813c8a45db2640e309da"
+    },
+    {
+      "quiz_id": "shadow-025-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/shadow-025-pepsi-zero-size-5-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956810080d8e0738ca899fa"
+    },
+    {
+      "quiz_id": "writing-pepsi-zero-size-5-v1",
+      "file": "data/quizzes/writing-pepsi-zero-size-5-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/3ff3b2a7295681a2bedfc7c1ef34ef1c"
     },
     {
       "quiz_id": "example-listen-pepsi-zero-size-6-v1",
@@ -1069,17 +1949,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568165becacd295caafd38"
     },
     {
-      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1",
-      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-1-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f88048dbf8ecec3897"
-    },
-    {
       "quiz_id": "gloss-palace-pepsi-zero-size-1-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-1-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1089,17 +1958,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681a78c96fa469147e2a0"
-    },
-    {
-      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1",
-      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-1-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956812d800fe0cccec6d224"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-1-v1",
@@ -1113,17 +1971,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956818091c7c0475626ed82"
     },
     {
-      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-2-v1",
-      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-2-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681ea8c12da6eabc7eff7"
-    },
-    {
       "quiz_id": "gloss-palace-pepsi-zero-size-2-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-2-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1133,17 +1980,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681808359fa488fc51681"
-    },
-    {
-      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-2-v1",
-      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-2-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681539659f8dbf2d60a47"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-2-v1",
@@ -1157,17 +1993,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681b28e77c816ffea3d0d"
     },
     {
-      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-3-v1",
-      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-3-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681e8ad0aefeecadbc16e"
-    },
-    {
       "quiz_id": "gloss-palace-pepsi-zero-size-3-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-3-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1177,17 +2002,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681bdaad8f8218076e4d6"
-    },
-    {
-      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-3-v1",
-      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-3-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956819a8463ed06001f3992"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-3-v1",
@@ -1201,17 +2015,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568192afcaf640acab9dbc"
     },
     {
-      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-4-v1",
-      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-4-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681e9b3c4cebcb6aae835"
-    },
-    {
       "quiz_id": "gloss-palace-pepsi-zero-size-4-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-4-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1221,17 +2024,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681a29a45f99780d7938c"
-    },
-    {
-      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-4-v1",
-      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-4-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568154a60eca4d36725711"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-4-v1",
@@ -1245,17 +2037,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681649dfbd615ff603729"
     },
     {
-      "quiz_id": "gloss-palace-gochumon-okimari-oyobi-kudasai-5-v1",
-      "file": "data/quizzes/gloss-palace-gochumon-okimari-oyobi-kudasai-5-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681f18883ec1ab0ab48c1"
-    },
-    {
       "quiz_id": "gloss-palace-pepsi-zero-size-5-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-5-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1265,17 +2046,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681419375feceb0c6d449"
-    },
-    {
-      "quiz_id": "target-mnemonic-gochumon-okimari-oyobi-kudasai-5-v1",
-      "file": "data/quizzes/target-mnemonic-gochumon-okimari-oyobi-kudasai-5-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf90e8e2331b731ade"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-5-v1",
@@ -1311,17 +2081,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568171948efefdcd060925"
     },
     {
-      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1",
-      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-1-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568192b8caea2d73dfde1f"
-    },
-    {
       "quiz_id": "mother-lang-pepsi-zero-size-1-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-1-v1.json",
       "objective": "mother_language_pronounce",
@@ -1331,17 +2090,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956810b9b62edf8302464a2"
-    },
-    {
-      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-1-v1",
-      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-1-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 1,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956811eb57bc9222e4d8ce9"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-1-v1",
@@ -1355,17 +2103,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568190bd6fd0197de63504"
     },
     {
-      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-2-v1",
-      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-2-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681bf9cb5eef3d45dba3f"
-    },
-    {
       "quiz_id": "mother-lang-pepsi-zero-size-2-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-2-v1.json",
       "objective": "mother_language_pronounce",
@@ -1375,17 +2112,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681e4ab2ee7a4cff7180e"
-    },
-    {
-      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-2-v1",
-      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-2-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 2,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956817fa56bd1ecc629d3b2"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-2-v1",
@@ -1399,17 +2125,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681bba8d2c91613941cd0"
     },
     {
-      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-3-v1",
-      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-3-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956813f8953fa9f9ff0b03b"
-    },
-    {
       "quiz_id": "mother-lang-pepsi-zero-size-3-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-3-v1.json",
       "objective": "mother_language_pronounce",
@@ -1419,17 +2134,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681529914dd8dcc5ba78d"
-    },
-    {
-      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-3-v1",
-      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-3-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 3,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956816a8811fefd86359837"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-3-v1",
@@ -1443,17 +2147,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a729568185b527ebe3a774a94f"
     },
     {
-      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-4-v1",
-      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-4-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568125bdadca216dc43f7a"
-    },
-    {
       "quiz_id": "mother-lang-pepsi-zero-size-4-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-4-v1.json",
       "objective": "mother_language_pronounce",
@@ -1463,17 +2156,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956811eb206ed4288b35c17"
-    },
-    {
-      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-4-v1",
-      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-4-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 4,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a7295681338059d3400effaf21"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-4-v1",
@@ -1487,17 +2169,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956811f9d59dc5ca912bdd6"
     },
     {
-      "quiz_id": "mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-5-v1",
-      "file": "data/quizzes/mother-lang-gochumon-okimari-ni-narimashitara-oyobi-kudasai-5-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568156bdbbfc2d92c53f2e"
-    },
-    {
       "quiz_id": "mother-lang-pepsi-zero-size-5-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-5-v1.json",
       "objective": "mother_language_pronounce",
@@ -1507,17 +2178,6 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568132b4d7efaaa1fe8c0c"
-    },
-    {
-      "quiz_id": "mother-target-gochumon-okimari-oyobi-kudasai-5-v1",
-      "file": "data/quizzes/mother-target-gochumon-okimari-oyobi-kudasai-5-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "chunk_id": 5,
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "markdown_fixed": false,
-      "notion_url": "https://app.notion.com/p/3ff3b2a729568127b471cdd2b969164c"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-5-v1",
@@ -1564,17 +2224,6 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a72956818fb5a3e7186f39cf4b"
     },
     {
-      "quiz_id": "sequence-pepsi-zero-size-v1",
-      "file": "data/quizzes/sequence-pepsi-zero-size-v1.json",
-      "objective": "sequence_training",
-      "level": null,
-      "kind": "sentence",
-      "chunk_id": null,
-      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
-      "markdown_fixed": true,
-      "notion_url": "https://app.notion.com/p/3ff3b2a72956814e96ecebbdd099331b"
-    },
-    {
       "quiz_id": "whole-listen-gochumon-v1",
       "file": "data/quizzes/whole-listen-gochumon-v1.json",
       "objective": "whole_sentence_listening",
@@ -1584,6 +2233,39 @@
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a729568159bd59cfc46e49e141"
+    },
+    {
+      "quiz_id": "sequence-gochumon-kakunin-v1",
+      "file": "data/quizzes/sequence-gochumon-kakunin-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a7295681ff86d7c4abab86cec1"
+    },
+    {
+      "quiz_id": "whole-listen-gochumon-kakunin-v1",
+      "file": "data/quizzes/whole-listen-gochumon-kakunin-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4003b2a729568196a4a4ffdfe1670360"
+    },
+    {
+      "quiz_id": "sequence-pepsi-zero-size-v1",
+      "file": "data/quizzes/sequence-pepsi-zero-size-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/p/3ff3b2a72956814e96ecebbdd099331b"
     },
     {
       "quiz_id": "whole-listen-pepsi-zero-size-v1",
