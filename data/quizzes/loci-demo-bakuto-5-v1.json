@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-demo-bakuto-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 5,
+    "text": "好きだけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "胸前拉碟位有人把碟拉近胸前。請在圖中點這隻碟所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "hotspot": {
+        "left": 54,
+        "top": 62,
+        "width": 22,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

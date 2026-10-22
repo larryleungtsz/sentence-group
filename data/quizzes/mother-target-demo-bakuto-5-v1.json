@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-demo-bakuto-5-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 5,
+    "text": "好きだけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "喜歡啦／是喜歡的"
+    },
+    {
+      "type": "select_text",
+      "correct": "好きだけど",
+      "distractors": [
+        "でも",
+        "麦芽糖が",
+        "多め",
+        "自分は"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

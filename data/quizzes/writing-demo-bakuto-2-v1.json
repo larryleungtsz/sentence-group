@@ -1,0 +1,23 @@
+{
+  "quiz_id": "writing-demo-bakuto-2-v1",
+  "objective": "writing_shadowing",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 2,
+    "text": "麦芽糖が"
+  },
+  "slides": [
+    {
+      "type": "writing",
+      "instruction": "請抄寫。",
+      "target": "麦芽糖が",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

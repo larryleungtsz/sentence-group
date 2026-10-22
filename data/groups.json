@@ -214,6 +214,54 @@
           "quizzes_ready": true
         }
       ]
+    },
+    {
+      "slug": "demo-bakuto",
+      "title": "でも麦芽糖が多め。自分は好きだけど。",
+      "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+      "sentence_added_at": "2026-10-22T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — GATE2 ~2026-10-21; quizzes Q1–Q15 written 2026-10-22; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4003b2a7295680d5b264ed37398c4662",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. All 5 chunks have full quiz sets including YouGlish (body-stored JSON).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "でも",
+          "chunk_added_at": "2026-10-22T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4003b2a729568149a416d79803ded6d2",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "麦芽糖が",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a729568140ada3f8e769bcd8e0",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "多め",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a729568133af9ff637d3bf8231",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "自分は",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a72956818f8979e7ad733655e7",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "好きだけど",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681f383c1fab1086fe198",
+          "quizzes_ready": true
+        }
+      ]
     }
   ]
 }

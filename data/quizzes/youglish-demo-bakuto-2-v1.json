@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-demo-bakuto-2-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 2,
+    "text": "麦芽糖が"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
+      "start_sec": 0.3,
+      "end_sec": 1.3,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "QUsN7fG6bvk",
+      "start_sec": 173,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "RSGzCQIv9JM",
+      "start_sec": 867,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "gAYX_M4j6Ro",
+      "start_sec": 391,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

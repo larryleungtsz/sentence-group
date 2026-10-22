@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-demo-bakuto-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 2,
+    "text": "麦芽糖が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "麥芽糖。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "hotspot": {
+        "left": 14,
+        "top": 26,
+        "width": 18,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

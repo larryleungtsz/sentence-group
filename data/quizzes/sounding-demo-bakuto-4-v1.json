@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-demo-bakuto-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 4,
+    "text": "自分は"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
+      "start_sec": 2.2,
+      "end_sec": 2.7,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "jibun-wa→字搬蛙",
+        "一句串：青蛙搬住一個巨大漢字方塊。"
+      ],
+      "distractors": [
+        "ōme→痾咩",
+        "一句串：馬桶入面有隻羊（痾咩）。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

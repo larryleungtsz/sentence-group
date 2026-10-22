@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-demo-bakuto-1-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 1,
+    "text": "でも"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "不過。How to pronounce this word?",
+      "gloss": "不過",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

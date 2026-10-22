@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-demo-bakuto-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 4,
+    "text": "自分は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位胸口位有食指剛按在自己胸口。請在圖中點這隻食指／胸口所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "hotspot": {
+        "left": 56,
+        "top": 38,
+        "width": 12,
+        "height": 16,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

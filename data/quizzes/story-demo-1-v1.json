@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-demo-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 1,
+    "text": "でも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "甜品店近身桌面，豆香淡淡。中年華人男人（爹）雙手按住石磨，一下一下磨豆，豆粉細細落下。話頭正講到一半，一隻掌沿橫切過桌面，乾淨利落地把話題撥到另一邊。石磨停住半圈，爹指節還按著磨柄，抬眼愣了一下——視線釘在那道橫切的掌沿：轉折＝不過。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

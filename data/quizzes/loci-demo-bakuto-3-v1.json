@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-demo-bakuto-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 3,
+    "text": "多め"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "罐後量杯液面剛越過刻度線一截。請在圖中點這隻量杯所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "hotspot": {
+        "left": 32,
+        "top": 52,
+        "width": 12,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

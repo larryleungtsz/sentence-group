@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-jibunwa-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 4,
+    "text": "自分は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位胸口位。青蛙雙手托住一個巨大漢字方塊，一步一步往前搬，方塊幾乎擋滿視線。食指剛按在自己胸口正中，停住。青蛙繃著使勁，目光卻釘在指尖與胸口——指自己＝我自己。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

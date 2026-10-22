@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-demo-bakuto-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 5,
+    "text": "好きだけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——碟子貼近胸口、嘴角揚起、目光落在碟上。視線釘在拉近的碟；拉近＝喜歡啦／是喜歡的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "hotspot": {
+        "left": 54,
+        "top": 62,
+        "width": 22,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

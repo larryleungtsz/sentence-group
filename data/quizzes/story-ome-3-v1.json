@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-ome-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 3,
+    "text": "多め"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "罐後量杯旁，馬桶蓋開著。馬桶入面蹲住一隻羊，正用力（痾咩），水面微微晃。量杯液面同時緩緩上升，剛越過刻度線一截，停住。羊繃著專注，目光卻釘在高出的那截液面上——偏過＝偏多。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

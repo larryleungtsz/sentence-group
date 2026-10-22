@@ -1,0 +1,23 @@
+{
+  "quiz_id": "example-listen-demo-bakuto-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 4,
+    "text": "自分は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-jibun-wa.mp3",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

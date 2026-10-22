@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-bakugato-ga-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 2,
+    "text": "麦芽糖が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "甜品店桌面，罐旁勺尖微亮。卡通屋企（格糖家）一手拎住 Bag，頭上戴住 Head bangle 當保護罩，糖粒從四面撞來、啪啪彈開。勺尖緩緩垂下一絲琥珀色糖漿，罐標「麦芽糖」剛好入鏡；糖漿絲擦過 Head bangle 邊緣。屋企繃著擋攻擊，目光卻鎖在那絲糖漿與標籤上——糖漿本體＝麥芽糖。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-demo-bakuto-5-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "chunk": {
+    "id": 5,
+    "text": "好きだけど"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "喜歡啦／是喜歡的。How to pronounce this word?",
+      "gloss": "喜歡啦／是喜歡的",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
