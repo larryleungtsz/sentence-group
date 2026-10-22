@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-mitame-irotsuya-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 4,
+    "text": "いいから"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——大拇指剛豎起、旁邊箭頭同時指向下一幕停住。視線釘在拇指與箭頭；好＋因此＝好所以。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 82,
+        "top": 34,
+        "width": 16,
+        "height": 46,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

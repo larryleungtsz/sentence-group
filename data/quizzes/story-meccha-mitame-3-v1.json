@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-meccha-mitame-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 3,
+    "text": "めっちゃ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤右刻度錶旁。一盅 matcha 綠茶剛放下，茶面還顫。指針同時緩緩頂破最右紅線「MAX」，針尖貼住上限停住。視線在茶盅與過頂指針之間——衝破上限＝超／非常。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kuchiniautte-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

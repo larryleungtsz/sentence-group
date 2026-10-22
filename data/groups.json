@@ -333,6 +333,77 @@
           "quizzes_ready": true
         }
       ]
+    },
+    {
+      "slug": "mitame-irotsuya",
+      "title": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+      "sentence_added_at": "2026-10-23T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-23; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4003b2a729568093bcdffbba9d1fcb9b",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. 「めっちゃ」already_introduced from chashu-shittori — does not occupy dense; new-sentence quizzes (mitame-irotsuya-*-3 / story-meccha-mitame-3) exported.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "見た目の",
+          "chunk_added_at": "2026-10-23T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first new chunk may start T01 immediately",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681a48dc4feee22920439",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "色つやが",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a72956811b9abcfc7395255ad8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "めっちゃ",
+          "already_introduced": true,
+          "shared_with_prior_group": "chashu-shittori",
+          "chunk_added_at_note": "already introduced in chashu-shittori — does not occupy dense; new-sentence quizzes only",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681079745fc8b62a04098",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "いいから",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior non-already_introduced (chunk 2) reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681a2af8eef5afca3a975",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "食べなくても",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a729568153b7c2c81c04c09341",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "自分の",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 5 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681e5a6fcf6e14ea3e12e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "口に合うって",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 6 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681f7a438e03883a71122",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "分かる",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 7 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a72956814488bcc3f927df4881",
+          "quizzes_ready": true
+        }
+      ]
     }
   ]
 }

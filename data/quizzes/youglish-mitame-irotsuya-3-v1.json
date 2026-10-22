@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-mitame-irotsuya-3-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 3,
+    "text": "めっちゃ"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
+      "start_sec": 1.7,
+      "end_sec": 2.2,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "qa7ReuDiupY",
+      "start_sec": 917,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "ZqvQgX5gvoM",
+      "start_sec": 283,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "e8YLHttXgBk",
+      "start_sec": 109,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

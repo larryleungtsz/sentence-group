@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-mitame-irotsuya-3-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 3,
+    "text": "めっちゃ"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "超／非常。How to pronounce this word?",
+      "gloss": "超／非常",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "example-listen-mitame-irotsuya-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 2,
+    "text": "色つやが"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-irotsuya-ga.mp3",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

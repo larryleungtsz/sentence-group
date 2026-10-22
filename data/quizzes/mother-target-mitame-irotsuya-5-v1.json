@@ -1,0 +1,33 @@
+{
+  "quiz_id": "mother-target-mitame-irotsuya-5-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 5,
+    "text": "食べなくても"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "即使不吃也"
+    },
+    {
+      "type": "select_text",
+      "correct": "食べなくても",
+      "distractors": [
+        "見た目の",
+        "色つやが",
+        "めっちゃ",
+        "いいから",
+        "自分の",
+        "口に合うって",
+        "分かる"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-irotsuyaga-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 2,
+    "text": "色つやが"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤心肉面。一隻兩條長腳嘅豬低頭啃住一間屋，嘴邊還有屋簷碎屑。同一束光剛掃過肉面，油亮色澤一閃停住——視線釘在那層油光；被點名的光澤＝主題色澤。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/irotsuyaga-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

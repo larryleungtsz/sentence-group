@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-mitame-irotsuya-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 1,
+    "text": "見た目の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——雙眼剛釘在盤子表面、手停在半空未碰。視線釘在那層外觀；只看外表＝外表的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/mitameno-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/irotsuyaga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/wakaru-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 42,
+        "top": 40,
+        "width": 20,
+        "height": 12,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

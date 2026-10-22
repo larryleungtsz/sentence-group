@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-wakaru-8-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 8,
+    "text": "分かる"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "桌尾霧燈位。有人喺由屋伸出嘅路上做足球鏟地滑，鞋底擦過路面。眼前霧氣同時剛散開一寸，燈泡亮起——視線釘在散開的霧與燈；明白＝知道。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/wakaru-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/mitameno-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/irotsuyaga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

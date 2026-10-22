@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-mitame-irotsuya-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 4,
+    "text": "いいから"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "錶旁有大拇指剛豎起、旁邊箭頭同時指向下一幕。請在圖中點這豎拇／箭嘴所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 82,
+        "top": 34,
+        "width": 16,
+        "height": 46,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

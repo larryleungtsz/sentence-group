@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-tabenakute-mo-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 5,
+    "text": "食べなくても"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤前筷架半空。著泰旗衫嘅熊正鎖住一個磨緊豆嘅中年男人，鎖扣扣實。筷子同時停在半空未夾，旁邊勾亮起——視線釘在未動的筷尖與勾；不吃卻仍＝即使不吃也。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kuchiniautte-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/wakaru-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/mitameno-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-mitame-irotsuya-v1",
+  "objective": "sequence_training",
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "見た目の",
+          "hotspot": {
+            "left": 42,
+            "top": 40,
+            "width": 20,
+            "height": 12,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "色つやが",
+          "hotspot": {
+            "left": 30,
+            "top": 52,
+            "width": 32,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "めっちゃ",
+          "hotspot": {
+            "left": 66,
+            "top": 46,
+            "width": 18,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "いいから",
+          "hotspot": {
+            "left": 82,
+            "top": 34,
+            "width": 16,
+            "height": 46,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "食べなくても",
+          "hotspot": {
+            "left": 42,
+            "top": 30,
+            "width": 34,
+            "height": 12,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "自分の",
+          "hotspot": {
+            "left": 1,
+            "top": 40,
+            "width": 20,
+            "height": 24,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "口に合うって",
+          "hotspot": {
+            "left": 8,
+            "top": 2,
+            "width": 28,
+            "height": 32,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "分かる",
+          "hotspot": {
+            "left": 52,
+            "top": 6,
+            "width": 18,
+            "height": 26,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-mitame-irotsuya-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 5,
+    "text": "食べなくても"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——筷尖停在半空未夾、旁邊勾同時亮起停住。視線釘在未動的筷尖與勾；不吃卻仍＝即使不吃也。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 42,
+        "top": 30,
+        "width": 34,
+        "height": 12,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

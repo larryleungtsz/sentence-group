@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-mitame-irotsuya-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 1,
+    "text": "見た目の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近身盤心表面有雙眼剛釘住盤面、雙手平放未伸向食物。請在圖中點這雙眼所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 42,
+        "top": 40,
+        "width": 20,
+        "height": 12,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

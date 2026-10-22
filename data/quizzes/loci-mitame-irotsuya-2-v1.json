@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-mitame-irotsuya-2-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 2,
+    "text": "色つやが"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤心肉面有一束光剛掃過、油亮色澤一閃。請在圖中點這盤肉／高光所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "hotspot": {
+        "left": 30,
+        "top": 52,
+        "width": 32,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

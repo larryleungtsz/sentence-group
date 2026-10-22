@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-mitame-irotsuya-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 4,
+    "text": "いいから"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
+      "start_sec": 2.2,
+      "end_sec": 3.1,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "ii-kara→椅芥辣",
+        "一句串：一張用黃芥末砌成嘅椅。"
+      ],
+      "distractors": [
+        "meccha→matcha",
+        "一句串：一盅綠茶／matcha。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

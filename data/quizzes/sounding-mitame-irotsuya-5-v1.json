@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-mitame-irotsuya-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 5,
+    "text": "食べなくても"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
+      "start_sec": 3.1,
+      "end_sec": 4.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "tabenakute-mo→thai bear lock 爹磨",
+        "一句串：著泰旗衫嘅熊鎖住磨緊豆嘅中年男人。"
+      ],
+      "distractors": [
+        "ii-kara→椅芥辣",
+        "一句串：一張用黃芥末砌成嘅椅。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

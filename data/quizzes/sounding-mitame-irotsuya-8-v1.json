@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-mitame-irotsuya-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "chunk": {
+    "id": 8,
+    "text": "分かる"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
+      "start_sec": 5.6,
+      "end_sec": 6.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "wakaru→滑家路",
+        "一句串：有人喺由屋伸出嘅路上做足球鏟地滑。"
+      ],
+      "distractors": [
+        "kuchi-ni-au-tte→拳刺裂握爹",
+        "一句串：中年男人握住女人有刺、微裂嘅拳頭。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
