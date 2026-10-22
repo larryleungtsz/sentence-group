@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-amai-chashu-3-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 3,
+    "text": "そんなに"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 1.22,
+      "end_sec": 2.15,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "ZJYhm1aJwQE",
+      "start_sec": 1286,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "oyBaX2ekjkE",
+      "start_sec": 235,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "Tc2--M7NQrA",
+      "start_sec": 661,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

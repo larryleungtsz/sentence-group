@@ -152,6 +152,68 @@
           "quizzes_ready": true
         }
       ]
+    },
+    {
+      "slug": "amai-chashu",
+      "title": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+      "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+      "sentence_added_at": "2026-10-22T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — GATE2 ~2026-10-21; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4003b2a729568032943be3f7902d4007",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. All 7 chunks have full quiz sets including YouGlish (body-stored JSON).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "甘い",
+          "chunk_added_at": "2026-10-22T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681a58d47ff7a17355324",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "叉焼が",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a72956813d8296d08a13be7daa",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "そんなに",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681d6ac0af2e452eb9f89",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "好きじゃない",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681bc92f2e4d8cb7c55fb",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "人には",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681a28a3bd894acc3900c",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "ちょっと",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 5 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a729568139a539d37d0fff4e8e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "物足りないかも",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 6 reaches T1",
+          "notion_url": "https://app.notion.com/p/4003b2a7295681238567ca457e25641a",
+          "quizzes_ready": true
+        }
+      ]
     }
   ]
 }

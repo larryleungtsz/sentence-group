@@ -1,0 +1,25 @@
+{
+  "quiz_id": "shadow-025-amai-chashu-4-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 4,
+    "text": "好きじゃない"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 2.15,
+      "rate": 0.25,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

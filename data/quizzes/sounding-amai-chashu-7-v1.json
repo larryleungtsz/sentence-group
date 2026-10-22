@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sounding-amai-chashu-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 7,
+    "text": "物足りないかも"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 4.91,
+      "end_sec": 6.53,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "monotari→Mon攞蛋脷",
+        "nai-kamo→奶家毛",
+        "一句串：Monitor攞住蛋脷；舔毛屋表面（奶家毛）。"
+      ],
+      "distractors": [
+        "chotto→座多",
+        "一句串：好多張椅（座多）。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

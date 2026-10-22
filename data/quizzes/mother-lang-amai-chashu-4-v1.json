@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-amai-chashu-4-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 4,
+    "text": "好きじゃない"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "不喜歡。How to pronounce this word?",
+      "gloss": "不喜歡",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

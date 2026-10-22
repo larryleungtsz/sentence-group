@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-amai-chashu-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 4,
+    "text": "好きじゃない"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——碟子被推開、眉皺、視線移開。視線落在推開的碟與側轉的臉；推開＝不喜歡。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukijanai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/hitoniwa-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "hotspot": {
+        "left": 42,
+        "top": 28,
+        "width": 20,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

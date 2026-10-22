@@ -1,0 +1,22 @@
+{
+  "quiz_id": "whole-listen-amai-chashu-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "rate_options": [
+        1.5,
+        1,
+        0.5
+      ],
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

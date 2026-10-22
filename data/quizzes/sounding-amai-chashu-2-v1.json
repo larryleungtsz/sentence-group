@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-amai-chashu-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 2,
+    "text": "叉焼が"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 0.52,
+      "end_sec": 1.22,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "chāshū-ga→叉梳嫁",
+        "一句串：新娘用叉製梳梳頭。"
+      ],
+      "distractors": [
+        "amai→牙賣",
+        "一句串：卡通人形牙齒開小販檔（牙賣）。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

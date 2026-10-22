@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-amai-chashu-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 2,
+    "text": "叉焼が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——兩片叉燒剛擱上碗沿、油脂微顫。視線釘在紅潤切片；肉片本體＝叉燒。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuga-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "hotspot": {
+        "left": 6,
+        "top": 58,
+        "width": 30,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

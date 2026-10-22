@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-amai-chashu-6-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 6,
+    "text": "ちょっと"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "有點。How to pronounce this word?",
+      "gloss": "有點",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

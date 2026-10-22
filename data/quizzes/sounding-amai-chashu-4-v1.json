@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sounding-amai-chashu-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 4,
+    "text": "好きじゃない"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 2.15,
+      "end_sec": 3.32,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "suki→ski",
+        "ja-nai→炸奶",
+        "一句串：卡通人形奶樽圍住炸彈滑雪。"
+      ],
+      "distractors": [
+        "sonnani→Song](https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3%22,%22start_sec%22:2.15,%22end_sec%22:3.32,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22suki%E2%86%92ski%22,%22ja-nai%E2%86%92%E7%82%B8%E5%A5%B6%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9A%E5%8D%A1%E9%80%9A%E4%BA%BA%E5%BD%A2%E5%A5%B6%E6%A8%BD%E5%9C%8D%E4%BD%8F%E7%82%B8%E5%BD%88%E6%BB%91%E9%9B%AA%E3%80%82%22],%22distractors%22:[%22sonnani%E2%86%92Song) 那裡",
+        "一句串：困惑嘅人（那裡）用 mic 唱 Song。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

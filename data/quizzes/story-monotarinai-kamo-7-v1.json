@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-monotarinai-kamo-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 7,
+    "text": "物足りないかも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "吧台尾空碗攤手：碗已見底，人雙肩微聳、掌心向上停住。旁邊一部 Monitor 認真地攞住蛋的脷；另一邊有人正舔住一座表面鋪滿毛的屋（奶家毛）。視線在見底的碗、Monitor 攞脷、舔毛屋之間——未飽＋或許＝可能不夠滿足。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/monotarinai-kamo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/hitoniwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

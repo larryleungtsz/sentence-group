@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-chashuga-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 2,
+    "text": "叉焼が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "拉麵碗沿：兩片紅潤切片叉燒剛擱上，油脂微顫。旁邊一位穿婚紗的新娘，認真地用一把用叉做成的梳，一下一下梳著頭髮；梳齒擦過時，視線落到碗沿那兩片肉上。叉＋梳＋嫁全部在場——肉片本體＝叉燒。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuga-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukijanai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/hitoniwa-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

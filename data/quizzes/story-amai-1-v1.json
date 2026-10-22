@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-amai-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 1,
+    "text": "甘い"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "拉麵吧台近身筷尖：筷子夾起一塊叉燒，表面掛著亮晶晶蜜汁，剛要滴下一滴。旁邊一個卡通人形牙齒開住小販檔，牙販專注地「賣」住那滴蜜汁，像在兜售甜味本身。視線釘在蜜汁與牙販之間——甜可見＝甜的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/monotarinai-kamo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukijanai-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

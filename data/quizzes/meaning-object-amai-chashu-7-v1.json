@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-amai-chashu-7-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 7,
+    "text": "物足りないかも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——空碗底對住鏡頭、雙肩微聳、掌心向上未放下。視線釘在見底的碗；未飽＋或許＝可能不夠滿足。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/monotarinai-kamo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "hotspot": {
+        "left": 66,
+        "top": 70,
+        "width": 22,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

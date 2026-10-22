@@ -64,13 +64,16 @@ function tryParse(raw) {
   // Always apply mechanical markdown URL unwrap / duplicate repair
   const beforeFix = s;
   s = fixMarkdownCorruption(s);
+  // Notion sometimes appends trailing <br /> after the JSON object
+  s = s.replace(/(<br\s*\/?>)+\s*$/i, '').trim();
   const fixed = s !== beforeFix;
   try {
     return { ok: true, data: JSON.parse(s), text: s, fixed };
   } catch (e) {
     // try without fix if fix broke something
     try {
-      return { ok: true, data: JSON.parse(beforeFix), text: beforeFix, fixed: false };
+      const alt = beforeFix.replace(/(<br\s*\/?>)+\s*$/i, '').trim();
+      return { ok: true, data: JSON.parse(alt), text: alt, fixed: false };
     } catch (_) {
       return { ok: false, error: String(e.message || e), text: s, raw };
     }

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-amai-chashu-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 3,
+    "text": "そんなに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位旁半空有掌沿橫伸、像標出「那麼高」一截。請在圖中點這隻橫伸手臂所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "hotspot": {
+        "left": 26,
+        "top": 26,
+        "width": 24,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

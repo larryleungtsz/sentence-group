@@ -1,0 +1,94 @@
+{
+  "quiz_id": "sequence-amai-chashu-v1",
+  "objective": "sequence_training",
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "甘い",
+          "hotspot": {
+            "left": 1,
+            "top": 36,
+            "width": 18,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "叉焼が",
+          "hotspot": {
+            "left": 6,
+            "top": 58,
+            "width": 30,
+            "height": 36,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "そんなに",
+          "hotspot": {
+            "left": 26,
+            "top": 26,
+            "width": 24,
+            "height": 30,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "好きじゃない",
+          "hotspot": {
+            "left": 42,
+            "top": 28,
+            "width": 20,
+            "height": 42,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "人には",
+          "hotspot": {
+            "left": 58,
+            "top": 12,
+            "width": 18,
+            "height": 32,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "ちょっと",
+          "hotspot": {
+            "left": 78,
+            "top": 40,
+            "width": 20,
+            "height": 30,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "物足りないかも",
+          "hotspot": {
+            "left": 66,
+            "top": 70,
+            "width": 22,
+            "height": 28,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

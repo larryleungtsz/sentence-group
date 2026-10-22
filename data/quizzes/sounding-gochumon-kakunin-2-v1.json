@@ -27,7 +27,7 @@
         "一句串：card頭頂戴皇冠，頸上纏鏈。"
       ],
       "distractors": [
-        "割(割) ≈ go",
+        "割(割)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3%22,%22start_sec%22:0.57,%22end_sec%22:0.91,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22Ka%E2%86%92card%22,%22kun%E2%86%92%E5%86%A0%EF%BC%88%E7%9A%87%E5%86%A0%EF%BC%89%22,%22Nin%E2%86%92%E9%8F%88%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9Acard%E9%A0%AD%E9%A0%82%E6%88%B4%E7%9A%87%E5%86%A0%EF%BC%8C%E9%A0%B8%E4%B8%8A%E7%BA%8F%E9%8F%88%E3%80%82%22],%22distractors%22:[%22%E5%89%B2(%E5%89%B2)>) ≈ go",
         "豬(豬) ≈ chū",
         "電腦屏幕(Mon) ≈ mon",
         "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"

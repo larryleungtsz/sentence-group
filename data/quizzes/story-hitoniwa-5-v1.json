@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-hitoniwa-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 5,
+    "text": "人には"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店內人群聚光位：聚光燈打在其中一人身上，其他人暗下。旁邊一隻青蛙，認真地抬起膝頭哥，一下踢中益力多樽（hit多）；樽晃動時，視線釘在被照亮的那人胸口。hit＋多＋knee＋蛙全部在場——對準這人＝對…的人來說。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/hitoniwa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukijanai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/monotarinai-kamo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

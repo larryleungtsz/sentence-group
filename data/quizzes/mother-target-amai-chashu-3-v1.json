@@ -1,0 +1,32 @@
+{
+  "quiz_id": "mother-target-amai-chashu-3-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 3,
+    "text": "そんなに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "那麼／那麼地"
+    },
+    {
+      "type": "select_text",
+      "correct": "そんなに",
+      "distractors": [
+        "甘い",
+        "叉焼が",
+        "好きじゃない",
+        "人には",
+        "ちょっと",
+        "物足りないかも"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

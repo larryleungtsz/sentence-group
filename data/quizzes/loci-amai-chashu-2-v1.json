@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-amai-chashu-2-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "chunk": {
+    "id": 2,
+    "text": "叉焼が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "碗沿架着兩片紅潤切片叉燒。請在圖中點這兩片叉燒／碗所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "hotspot": {
+        "left": 6,
+        "top": 58,
+        "width": 30,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
