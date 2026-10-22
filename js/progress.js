@@ -6,6 +6,8 @@
  *   chunks:  { [groupSlug:chunkId]: { lastCompletedAt, stageIndex } },
  *   sentences: { [groupSlug]: { lastCompletedAt, stageIndex } }
  * }
+ * Admission / join order is decided in Schedule (order + dense), not here.
+ * stageIndex 0 = admitted into T01 once Schedule admits the chunk.
  */
 (function (global) {
   const KEY = 'website-manager-progress-v2';

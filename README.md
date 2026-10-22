@@ -48,15 +48,21 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 邊個 objective 喺邊個 stage 出現：睇 `schedule.json` → `chunk_schedule`。
 
-### Chunk 加入閘（密集階段）
+### Chunk 加入閘（句子順序 + 密集階段）
 
-`groups.json` 入面 `chunks` **陣列次序**就係加入次序。
+`groups.json` 入面 `chunks` **陣列次序**就係加入次序。兩道閘：
 
-- **密集階段** = T01 / T02 / T03（`stageIndex` 0–2）。每個 Sentence Group 同時最多 **1** 個**新** chunk 處於密集。
-- 標記 `already_introduced: true`（或 `shared_with_prior_group`）嘅 chunk：已喺其他 group 出現過，**唔佔**密集位，亦**唔**要等佢到 T1 先開下一個新 chunk。例：`gochumon-kakunin` 嘅「ご注文」已引入 → 「確認」可即時 T01。
-- 下一個**新** chunk：等最近一個非 already_introduced 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。
-- 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。already_introduced 永遠 admitted（若有**未重複**嘅新題仍會出）。
-- 重用 chunk 只匯出 **尚未存在** 嘅 quiz（唔複製 gochumon 已有嘅 quiz_id）。
+1. **句子順序（所有 chunk）**  
+   Chunk *i* 只有喺 chunk *i−1* **已經加入**（進入 T01 或之後）之後先可以加入。新 chunk 同重複 chunk 都要跟順序；**唔可以**跳過前面嘅 chunk。  
+   例：`chashu-shittori` 嘅「ちょっと」雖係重複，仍要等「濃厚」先加入，然後「ちょっと」先可以出。
+
+2. **密集階段（只限新 chunk）**  
+   密集 = T01 / T02 / T03（`stageIndex` 0–2）。每個 Sentence Group 同時最多 **1** 個**新** chunk 處於密集。  
+   - 標記 `already_introduced: true`（或 `shared_with_prior_group`）嘅 chunk：**唔佔**密集位（可同前一塊新 chunk 一齊喺 T01），但仍受上面順序限制。  
+   - 下一個**新** chunk：等最近一個非 already_introduced 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。  
+   - 例：`gochumon-kakunin` 嘅「ご注文」已引入 → 唔佔密集，但「確認」仍要等「ご注文」已加入先開 T01。
+
+出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。重用 chunk 只匯出 **尚未存在** 嘅 quiz（唔複製已有 quiz_id）。
 
 ### Sentence（每個 Sentence Group 一條線）
 

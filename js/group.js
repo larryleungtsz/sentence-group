@@ -114,7 +114,27 @@
     for (let i = 0; i < chunks.length; i++) {
       const c = chunks[i];
       if (admitted.has(c.id)) continue;
-      if (Schedule.isAlreadyIntroduced(c)) continue;
+      // Next not-yet-admitted chunk (new or reused)
+      if (i > 0 && !admitted.has(chunks[i - 1].id)) {
+        const prev = chunks[i - 1];
+        parts.push(
+          'chunk' +
+            c.id +
+            '（' +
+            (c.text || '') +
+            '）等 chunk' +
+            prev.id +
+            '（' +
+            (prev.text || '') +
+            '）先加入（句子順序）'
+        );
+        break;
+      }
+      if (Schedule.isAlreadyIntroduced(c)) {
+        // Order ok but somehow not admitted — shouldn't happen
+        break;
+      }
+      // Dense gate: wait for nearest prior new chunk → T1
       let prev = null;
       for (let j = i - 1; j >= 0; j--) {
         if (!Schedule.isAlreadyIntroduced(chunks[j])) {
@@ -122,7 +142,7 @@
           break;
         }
       }
-      if (!prev) continue;
+      if (!prev) break;
       const prevSt = getChunkState(prev.id);
       if (Schedule.isChunkInDense(prevSt)) {
         const labels = Schedule.chunkStageLabels();
@@ -198,7 +218,7 @@
       (remaining === 0 ? nextUnlockHint() : '') +
       ' · 已加入 chunk：' +
       (adm.length ? adm.join(',') : '—') +
-      ' · SRS＝完成後間隔；最多 1 個新 chunk 密集 T01–T03（已引入唔計）';
+      ' · SRS＝完成後間隔；句子順序加入；最多 1 個新 chunk 密集 T01–T03（已引入唔計但仍跟順序）';
   }
   updateMeta(queue.length);
 
