@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chashu-shittori-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 1,
+    "text": "叉焼は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近身盤心叉燒有食指剛停在盤中紅潤叉燒切片上（整碟）。請在圖中點這碟叉燒所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "hotspot": {
+        "left": 28,
+        "top": 38,
+        "width": 36,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-chashu-shittori-3-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 3,
+    "text": "しっとりしてて"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 1.1,
+      "end_sec": 2.5,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "KtfsRVYEbpo",
+      "start_sec": 188,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "mMKTJya67-4",
+      "start_sec": 2741,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "Co42CD0lroQ",
+      "start_sec": 201,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

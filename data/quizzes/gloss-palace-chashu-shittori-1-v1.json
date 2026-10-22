@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-chashu-shittori-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 1,
+    "text": "叉焼は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "叉燒（主題）。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "hotspot": {
+        "left": 28,
+        "top": 38,
+        "width": 36,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

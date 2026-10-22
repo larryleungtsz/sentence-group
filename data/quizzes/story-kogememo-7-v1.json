@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-kogememo-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 7,
+    "text": "焦げ目も"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤邊。擬人 call機揹住一顆毛毛球，站在焦皮旁。肉邊一圈焦黑脆皮剛入鏡，旁邊第二個勾同時畫上。call機愣住，視線釘在那圈焦邊與第二個勾——焦邊＋也＝焦邊也。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kogememo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/aru-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ajimo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shittori-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chashu-shittori-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 5,
+    "text": "濃厚"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "醬盅提匙有湯匙從醬盅提起、粗稠醬絲剛垂下一寸。請在圖中點這盅／匙所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "hotspot": {
+        "left": 34,
+        "top": 4,
+        "width": 20,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

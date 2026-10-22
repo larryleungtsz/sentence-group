@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-ajimo-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 4,
+    "text": "味も"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "醬碟旁。一塊長成牙齒形的 cheese 正掂住自己的牙。舌尖剛沾到醬汁，旁邊第二個勾同時畫上。芝士停住，視線釘在那第二個勾——味道＋也＝味道也。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ajimo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shittori-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/noko-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/aru-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

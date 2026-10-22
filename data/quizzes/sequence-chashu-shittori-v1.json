@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-chashu-shittori-v1",
+  "objective": "sequence_training",
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "叉焼は",
+          "hotspot": {
+            "left": 28,
+            "top": 38,
+            "width": 36,
+            "height": 42,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "めっちゃ",
+          "hotspot": {
+            "left": 64,
+            "top": 48,
+            "width": 14,
+            "height": 30,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "しっとりしてて",
+          "hotspot": {
+            "left": 44,
+            "top": 34,
+            "width": 14,
+            "height": 26,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "味も",
+          "hotspot": {
+            "left": 2,
+            "top": 6,
+            "width": 24,
+            "height": 40,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "濃厚",
+          "hotspot": {
+            "left": 34,
+            "top": 4,
+            "width": 20,
+            "height": 30,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "ちょっと",
+          "hotspot": {
+            "left": 54,
+            "top": 10,
+            "width": 14,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "焦げ目も",
+          "hotspot": {
+            "left": 42,
+            "top": 58,
+            "width": 18,
+            "height": 22,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "ある",
+          "hotspot": {
+            "left": 76,
+            "top": 26,
+            "width": 20,
+            "height": 34,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

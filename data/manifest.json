@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T21:35:38+08:00",
+  "generated_at": "2026-10-23T00:10:32+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -11,6 +11,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681008498cbbc560712de"
+    },
+    {
+      "quiz_id": "example-listen-chashu-shittori-1-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681388be0dc8b919d25f4"
     },
     {
       "quiz_id": "example-listen-demo-bakuto-1-v1",
@@ -55,6 +66,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681e4aec0e832389c9b59"
+    },
+    {
+      "quiz_id": "loci-chashu-shittori-1-v1",
+      "file": "data/quizzes/loci-chashu-shittori-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a72956814b8577f2cf9a18fa20"
     },
     {
       "quiz_id": "loci-demo-bakuto-1-v1",
@@ -112,6 +134,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681ef953ce0f7d53debd5"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-1-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568166af6adad5f93a5f57"
+    },
+    {
       "quiz_id": "meaning-object-demo-bakuto-1-v1",
       "file": "data/quizzes/meaning-object-demo-bakuto-1-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -165,6 +198,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681f4baf8fb73dbc171ad"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-1-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681fba1cefe30e247dc8b"
     },
     {
       "quiz_id": "sounding-demo-bakuto-1-v1",
@@ -222,6 +266,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956813fac56f20e445ae2e2"
     },
     {
+      "quiz_id": "story-chashuha-1-v1",
+      "file": "data/quizzes/story-chashuha-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "story-demo-1-v1",
       "file": "data/quizzes/story-demo-1-v1.json",
       "objective": "story_select_image",
@@ -264,6 +319,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956815b81d2c8dea7e788c9"
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-1-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-1-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956811db418f92fb860df2a"
     },
     {
       "quiz_id": "shadow-05-demo-bakuto-1-v1",
@@ -321,6 +387,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681659d76d6dbb9e00896"
     },
     {
+      "quiz_id": "shadow-025-chashu-shittori-1-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568141a4f1ed835a0e0372"
+    },
+    {
       "quiz_id": "shadow-025-demo-bakuto-1-v1",
       "file": "data/quizzes/shadow-025-demo-bakuto-1-v1.json",
       "objective": "word_shadowing_025",
@@ -376,6 +453,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568199a775c7402c1eebb4"
     },
     {
+      "quiz_id": "writing-chashu-shittori-1-v1",
+      "file": "data/quizzes/writing-chashu-shittori-1-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681cc92d2d5d698b02c58"
+    },
+    {
       "quiz_id": "writing-demo-bakuto-1-v1",
       "file": "data/quizzes/writing-demo-bakuto-1-v1.json",
       "objective": "writing_shadowing",
@@ -420,6 +508,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568171963dd671d1181421"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-1-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-1-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "youglish-demo-bakuto-1-v1",
       "file": "data/quizzes/youglish-demo-bakuto-1-v1.json",
       "objective": "youglish_listen",
@@ -462,6 +561,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681bbbf54f1355a770d1f"
+    },
+    {
+      "quiz_id": "example-listen-chashu-shittori-2-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568105aecfc7d1590dee62"
     },
     {
       "quiz_id": "example-listen-demo-bakuto-2-v1",
@@ -519,6 +629,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956813c8c6bfc28d0f495e9"
     },
     {
+      "quiz_id": "loci-chashu-shittori-2-v1",
+      "file": "data/quizzes/loci-chashu-shittori-2-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a7295681ac96b2c2161acbefa5"
+    },
+    {
       "quiz_id": "loci-demo-bakuto-2-v1",
       "file": "data/quizzes/loci-demo-bakuto-2-v1.json",
       "objective": "loci_description_tap",
@@ -574,6 +695,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568184bdfcdd262f5d8aa1"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-2-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-2-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681049d6ac016c294743b"
+    },
+    {
       "quiz_id": "meaning-object-demo-bakuto-2-v1",
       "file": "data/quizzes/meaning-object-demo-bakuto-2-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -627,6 +759,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956819b8f98ed6bfc5c3089"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-2-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681839a9ff86217f4c559"
     },
     {
       "quiz_id": "sounding-demo-bakuto-2-v1",
@@ -717,6 +860,17 @@
       "notion_url": "https://app.notion.com/p/4003b2a72956812487e3cb51e883c62c"
     },
     {
+      "quiz_id": "story-meccha-2-v1",
+      "file": "data/quizzes/story-meccha-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "story-pepsi-zero-size-2-v1",
       "file": "data/quizzes/story-pepsi-zero-size-2-v1.json",
       "objective": "story_select_image",
@@ -737,6 +891,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681cda9c3eb7495c593f1"
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-2-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-2-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681319a3fc6a372e666eb"
     },
     {
       "quiz_id": "shadow-05-demo-bakuto-2-v1",
@@ -794,6 +959,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681f38784e1a5c83c0684"
     },
     {
+      "quiz_id": "shadow-025-chashu-shittori-2-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-2-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681e0bc6bc8eb54a17711"
+    },
+    {
       "quiz_id": "shadow-025-demo-bakuto-2-v1",
       "file": "data/quizzes/shadow-025-demo-bakuto-2-v1.json",
       "objective": "word_shadowing_025",
@@ -847,6 +1023,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a72956813baae6f9706e064ee1"
+    },
+    {
+      "quiz_id": "writing-chashu-shittori-2-v1",
+      "file": "data/quizzes/writing-chashu-shittori-2-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568189a845d0e391413195"
     },
     {
       "quiz_id": "writing-demo-bakuto-2-v1",
@@ -904,6 +1091,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956812aaf24cb8fc833ea71"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-2-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-2-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "youglish-demo-bakuto-2-v1",
       "file": "data/quizzes/youglish-demo-bakuto-2-v1.json",
       "objective": "youglish_listen",
@@ -957,6 +1155,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956818da885ce02a0dd5c2a"
+    },
+    {
+      "quiz_id": "example-listen-chashu-shittori-3-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681e3bf29f0e8bffe2bd3"
     },
     {
       "quiz_id": "example-listen-demo-bakuto-3-v1",
@@ -1014,6 +1223,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681b8885ff8db6b9a60ae"
     },
     {
+      "quiz_id": "loci-chashu-shittori-3-v1",
+      "file": "data/quizzes/loci-chashu-shittori-3-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a7295681e0af75d72df307ab9b"
+    },
+    {
       "quiz_id": "loci-demo-bakuto-3-v1",
       "file": "data/quizzes/loci-demo-bakuto-3-v1.json",
       "objective": "loci_description_tap",
@@ -1069,6 +1289,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681f9b30afb544b190fff"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-3-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-3-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568179be90c00f0f99b1ca"
+    },
+    {
       "quiz_id": "meaning-object-demo-bakuto-3-v1",
       "file": "data/quizzes/meaning-object-demo-bakuto-3-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -1122,6 +1353,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681dfa6d0d42d6363f969"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-3-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681ddba8ff3a7f7ecc48f"
     },
     {
       "quiz_id": "sounding-demo-bakuto-3-v1",
@@ -1212,6 +1454,17 @@
       "notion_url": "https://app.notion.com/p/3ff3b2a7295681c6ba49f41252d45783"
     },
     {
+      "quiz_id": "story-shittori-shitete-3-v1",
+      "file": "data/quizzes/story-shittori-shitete-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "story-sonnani-3-v1",
       "file": "data/quizzes/story-sonnani-3-v1.json",
       "objective": "story_select_image",
@@ -1232,6 +1485,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568190a5cbd5882bf82fb9"
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-3-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-3-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681c1aadcdc6ce8b63100"
     },
     {
       "quiz_id": "shadow-05-demo-bakuto-3-v1",
@@ -1289,6 +1553,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681e79d77c50cb3d11c6c"
     },
     {
+      "quiz_id": "shadow-025-chashu-shittori-3-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-3-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568135a66ef35339fa58bf"
+    },
+    {
       "quiz_id": "shadow-025-demo-bakuto-3-v1",
       "file": "data/quizzes/shadow-025-demo-bakuto-3-v1.json",
       "objective": "word_shadowing_025",
@@ -1342,6 +1617,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a729568149a504ef2f89397d72"
+    },
+    {
+      "quiz_id": "writing-chashu-shittori-3-v1",
+      "file": "data/quizzes/writing-chashu-shittori-3-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681269e57cbd75c217c30"
     },
     {
       "quiz_id": "writing-demo-bakuto-3-v1",
@@ -1399,6 +1685,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568160b9c0cd1a3888dff2"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-3-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-3-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "youglish-demo-bakuto-3-v1",
       "file": "data/quizzes/youglish-demo-bakuto-3-v1.json",
       "objective": "youglish_listen",
@@ -1441,6 +1738,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956811abd70ce8c236d2b55"
+    },
+    {
+      "quiz_id": "example-listen-chashu-shittori-4-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568120a7f2c429635dba30"
     },
     {
       "quiz_id": "example-listen-demo-bakuto-4-v1",
@@ -1498,6 +1806,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681819bd5f19026843c22"
     },
     {
+      "quiz_id": "loci-chashu-shittori-4-v1",
+      "file": "data/quizzes/loci-chashu-shittori-4-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a729568171bb77d3b9bf47ce4c"
+    },
+    {
       "quiz_id": "loci-demo-bakuto-4-v1",
       "file": "data/quizzes/loci-demo-bakuto-4-v1.json",
       "objective": "loci_description_tap",
@@ -1551,6 +1870,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681f1a0dbe660f9b42143"
+    },
+    {
+      "quiz_id": "meaning-object-chashu-shittori-4-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-4-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681e4b83ddbc4e83bb728"
     },
     {
       "quiz_id": "meaning-object-demo-bakuto-4-v1",
@@ -1608,6 +1938,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681aab11ed03d2bc8bed8"
     },
     {
+      "quiz_id": "sounding-chashu-shittori-4-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568106a2d2c9642baf150c"
+    },
+    {
       "quiz_id": "sounding-demo-bakuto-4-v1",
       "file": "data/quizzes/sounding-demo-bakuto-4-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -1650,6 +1991,17 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/3ff3b2a72956818899d0ef7434c930af"
+    },
+    {
+      "quiz_id": "story-ajimo-4-v1",
+      "file": "data/quizzes/story-ajimo-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
     },
     {
       "quiz_id": "story-gochumon-4-v1",
@@ -1718,6 +2070,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568103ba48e50e46ae3e98"
     },
     {
+      "quiz_id": "shadow-05-chashu-shittori-4-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-4-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681b1a8cad3344dbf8f88"
+    },
+    {
       "quiz_id": "shadow-05-demo-bakuto-4-v1",
       "file": "data/quizzes/shadow-05-demo-bakuto-4-v1.json",
       "objective": "tone_shadowing_05",
@@ -1771,6 +2134,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568188b9c4e6317591036b"
+    },
+    {
+      "quiz_id": "shadow-025-chashu-shittori-4-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-4-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568117bbc5f4ef735eb66b"
     },
     {
       "quiz_id": "shadow-025-demo-bakuto-4-v1",
@@ -1828,6 +2202,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681e78a5cde4857cefb1b"
     },
     {
+      "quiz_id": "writing-chashu-shittori-4-v1",
+      "file": "data/quizzes/writing-chashu-shittori-4-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681faa7c0de0fd7db00f6"
+    },
+    {
       "quiz_id": "writing-demo-bakuto-4-v1",
       "file": "data/quizzes/writing-demo-bakuto-4-v1.json",
       "objective": "writing_shadowing",
@@ -1881,6 +2266,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a72956813cbda2c4de1fb539ba"
+    },
+    {
+      "quiz_id": "youglish-chashu-shittori-4-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-4-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
     },
     {
       "quiz_id": "youglish-demo-bakuto-4-v1",
@@ -1938,6 +2334,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568100a2a9d42bdb627275"
     },
     {
+      "quiz_id": "example-listen-chashu-shittori-5-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568130b605e388e7b07ef8"
+    },
+    {
       "quiz_id": "example-listen-demo-bakuto-5-v1",
       "file": "data/quizzes/example-listen-demo-bakuto-5-v1.json",
       "objective": "example_sentences_listening",
@@ -1991,6 +2398,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681469074e3483678b4fd"
+    },
+    {
+      "quiz_id": "loci-chashu-shittori-5-v1",
+      "file": "data/quizzes/loci-chashu-shittori-5-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a7295681e896e0cb1332221f0b"
     },
     {
       "quiz_id": "loci-demo-bakuto-5-v1",
@@ -2048,6 +2466,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568197893af5c0d403bfd5"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-5-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-5-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568159a9a8fe51af5ce756"
+    },
+    {
       "quiz_id": "meaning-object-demo-bakuto-5-v1",
       "file": "data/quizzes/meaning-object-demo-bakuto-5-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -2101,6 +2530,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956817bb4f8ea997ea0e479"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-5-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681c6b711df653e55c991"
     },
     {
       "quiz_id": "sounding-demo-bakuto-5-v1",
@@ -2180,6 +2620,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568197846dc1c5bf63d522"
     },
     {
+      "quiz_id": "story-noukou-5-v1",
+      "file": "data/quizzes/story-noukou-5-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "story-pepsi-zero-size-5-v1",
       "file": "data/quizzes/story-pepsi-zero-size-5-v1.json",
       "objective": "story_select_image",
@@ -2211,6 +2662,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681e0b061d5afcf6e94fe"
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-5-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-5-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568166a941f92eb0901c43"
     },
     {
       "quiz_id": "shadow-05-demo-bakuto-5-v1",
@@ -2268,6 +2730,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956819a8af3fa221fe917d5"
     },
     {
+      "quiz_id": "shadow-025-chashu-shittori-5-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-5-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681c992d2f77d196c339b"
+    },
+    {
       "quiz_id": "shadow-025-demo-bakuto-5-v1",
       "file": "data/quizzes/shadow-025-demo-bakuto-5-v1.json",
       "objective": "word_shadowing_025",
@@ -2321,6 +2794,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a72956816cbf20d843d138463e"
+    },
+    {
+      "quiz_id": "writing-chashu-shittori-5-v1",
+      "file": "data/quizzes/writing-chashu-shittori-5-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568147ae74fc38a4aaf144"
     },
     {
       "quiz_id": "writing-demo-bakuto-5-v1",
@@ -2378,6 +2862,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568130998cf268aa502712"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-5-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-5-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "youglish-demo-bakuto-5-v1",
       "file": "data/quizzes/youglish-demo-bakuto-5-v1.json",
       "objective": "youglish_listen",
@@ -2422,6 +2917,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681daba2fedf9912bde07"
     },
     {
+      "quiz_id": "example-listen-chashu-shittori-6-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681789e90c75e048ad048"
+    },
+    {
       "quiz_id": "example-listen-pepsi-zero-size-6-v1",
       "file": "data/quizzes/example-listen-pepsi-zero-size-6-v1.json",
       "objective": "example_sentences_listening",
@@ -2442,6 +2948,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681b0ad0cfd69e7a8e581"
+    },
+    {
+      "quiz_id": "loci-chashu-shittori-6-v1",
+      "file": "data/quizzes/loci-chashu-shittori-6-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a729568167bde1d7f0da77334d"
     },
     {
       "quiz_id": "loci-pepsi-zero-size-6-v1",
@@ -2466,6 +2983,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681329689c3b04d2925b5"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-6-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-6-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681b8a20dea2738936b68"
+    },
+    {
       "quiz_id": "meaning-object-pepsi-zero-size-6-v1",
       "file": "data/quizzes/meaning-object-pepsi-zero-size-6-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -2486,6 +3014,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681cba271c61662c72328"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-6-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-6-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681758865d19b83089a5b"
     },
     {
       "quiz_id": "sounding-pepsi-zero-size-6-v1",
@@ -2510,6 +3049,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956819886c2f64c313ef508"
     },
     {
+      "quiz_id": "story-chotto-chashu-6-v1",
+      "file": "data/quizzes/story-chotto-chashu-6-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "story-pepsi-zero-size-6-v1",
       "file": "data/quizzes/story-pepsi-zero-size-6-v1.json",
       "objective": "story_select_image",
@@ -2530,6 +3080,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956817b939fc3e8f695edb0"
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-6-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-6-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681f8a45ee90bce9798d0"
     },
     {
       "quiz_id": "shadow-05-pepsi-zero-size-6-v1",
@@ -2554,6 +3115,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568110b062f9e18d7934b1"
     },
     {
+      "quiz_id": "shadow-025-chashu-shittori-6-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-6-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568188b90af101bb71c251"
+    },
+    {
       "quiz_id": "shadow-025-pepsi-zero-size-6-v1",
       "file": "data/quizzes/shadow-025-pepsi-zero-size-6-v1.json",
       "objective": "word_shadowing_025",
@@ -2574,6 +3146,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a72956812cb3f2f2f55a553ce2"
+    },
+    {
+      "quiz_id": "writing-chashu-shittori-6-v1",
+      "file": "data/quizzes/writing-chashu-shittori-6-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568161b580e0140bd06215"
     },
     {
       "quiz_id": "writing-pepsi-zero-size-6-v1",
@@ -2598,6 +3181,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956817a9466c8faa29f3613"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-6-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-6-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "youglish-pepsi-zero-size-6-v1",
       "file": "data/quizzes/youglish-pepsi-zero-size-6-v1.json",
       "objective": "youglish_listen",
@@ -2620,6 +3214,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956812eba94e4c0c9b5bf8c"
     },
     {
+      "quiz_id": "example-listen-chashu-shittori-7-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681d1934ad49cb1008cc7"
+    },
+    {
       "quiz_id": "loci-amai-chashu-7-v1",
       "file": "data/quizzes/loci-amai-chashu-7-v1.json",
       "objective": "loci_description_tap",
@@ -2629,6 +3234,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568108b26ac52c90cad8b9"
+    },
+    {
+      "quiz_id": "loci-chashu-shittori-7-v1",
+      "file": "data/quizzes/loci-chashu-shittori-7-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a7295681deb541c25920355cca"
     },
     {
       "quiz_id": "meaning-object-amai-chashu-7-v1",
@@ -2642,6 +3258,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681b1b880f40d01e7aa04"
     },
     {
+      "quiz_id": "meaning-object-chashu-shittori-7-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-7-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568137a5cdd84ecbc07f46"
+    },
+    {
       "quiz_id": "sounding-amai-chashu-7-v1",
       "file": "data/quizzes/sounding-amai-chashu-7-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -2651,6 +3278,28 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568158b060f44c6cb3ab67"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-7-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-7-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568182b5cdf310dd4936ec"
+    },
+    {
+      "quiz_id": "story-kogememo-7-v1",
+      "file": "data/quizzes/story-kogememo-7-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
     },
     {
       "quiz_id": "story-monotarinai-kamo-7-v1",
@@ -2675,6 +3324,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568100bfc8c54219268970"
     },
     {
+      "quiz_id": "shadow-05-chashu-shittori-7-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-7-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568197a373f24bcea8ac73"
+    },
+    {
       "quiz_id": "shadow-025-amai-chashu-7-v1",
       "file": "data/quizzes/shadow-025-amai-chashu-7-v1.json",
       "objective": "word_shadowing_025",
@@ -2684,6 +3344,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681aa9436c3d9b03b2bee"
+    },
+    {
+      "quiz_id": "shadow-025-chashu-shittori-7-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-7-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568146b4b1c911b9e55994"
     },
     {
       "quiz_id": "writing-amai-chashu-7-v1",
@@ -2697,6 +3368,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681228a94cad5d250bff0"
     },
     {
+      "quiz_id": "writing-chashu-shittori-7-v1",
+      "file": "data/quizzes/writing-chashu-shittori-7-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681a4b4a2d3843bddf3ec"
+    },
+    {
       "quiz_id": "youglish-amai-chashu-7-v1",
       "file": "data/quizzes/youglish-amai-chashu-7-v1.json",
       "objective": "youglish_listen",
@@ -2708,6 +3390,116 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956813792e5c9741afa7c8b"
     },
     {
+      "quiz_id": "youglish-chashu-shittori-7-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-7-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "example-listen-chashu-shittori-8-v1",
+      "file": "data/quizzes/example-listen-chashu-shittori-8-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956813f854ccc0db41b667b"
+    },
+    {
+      "quiz_id": "loci-chashu-shittori-8-v1",
+      "file": "data/quizzes/loci-chashu-shittori-8-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": true,
+      "notion_url": "https://app.notion.com/4013b2a72956813091f6c122a622f1fc"
+    },
+    {
+      "quiz_id": "meaning-object-chashu-shittori-8-v1",
+      "file": "data/quizzes/meaning-object-chashu-shittori-8-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681bb8232c724a7204a8a"
+    },
+    {
+      "quiz_id": "sounding-chashu-shittori-8-v1",
+      "file": "data/quizzes/sounding-chashu-shittori-8-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681538829e8fae57a579f"
+    },
+    {
+      "quiz_id": "story-aru-8-v1",
+      "file": "data/quizzes/story-aru-8-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "shadow-05-chashu-shittori-8-v1",
+      "file": "data/quizzes/shadow-05-chashu-shittori-8-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956816095a0e755130d4ffd"
+    },
+    {
+      "quiz_id": "shadow-025-chashu-shittori-8-v1",
+      "file": "data/quizzes/shadow-025-chashu-shittori-8-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681e49440e44cdcc4b0c3"
+    },
+    {
+      "quiz_id": "writing-chashu-shittori-8-v1",
+      "file": "data/quizzes/writing-chashu-shittori-8-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681da80dfda3b3ee9eff4"
+    },
+    {
+      "quiz_id": "youglish-chashu-shittori-8-v1",
+      "file": "data/quizzes/youglish-chashu-shittori-8-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
       "quiz_id": "gloss-palace-amai-chashu-1-v1",
       "file": "data/quizzes/gloss-palace-amai-chashu-1-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -2717,6 +3509,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681faafcffd583a7c81ea"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-1-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956810daf33ee1a0c59d08e"
     },
     {
       "quiz_id": "gloss-palace-demo-bakuto-1-v1",
@@ -2774,6 +3577,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956813f9631fef3e4875eb6"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-1-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568186b28cfef0ed940956"
+    },
+    {
       "quiz_id": "target-mnemonic-demo-bakuto-1-v1",
       "file": "data/quizzes/target-mnemonic-demo-bakuto-1-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -2827,6 +3641,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681ff9a37e3c245a880b1"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-2-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681709322eef33c0cf809"
     },
     {
       "quiz_id": "gloss-palace-demo-bakuto-2-v1",
@@ -2884,6 +3709,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956810586cdfe203b3ffd88"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-2-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-2-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956818d8470d553c7a76d72"
+    },
+    {
       "quiz_id": "target-mnemonic-demo-bakuto-2-v1",
       "file": "data/quizzes/target-mnemonic-demo-bakuto-2-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -2937,6 +3773,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568119aaf9fd7037e58b42"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-3-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956813dbcf2f6ce1d1b83e3"
     },
     {
       "quiz_id": "gloss-palace-demo-bakuto-3-v1",
@@ -2994,6 +3841,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681b6abcfdfff76656f74"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-3-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-3-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681139df3ee44ededd82e"
+    },
+    {
       "quiz_id": "target-mnemonic-demo-bakuto-3-v1",
       "file": "data/quizzes/target-mnemonic-demo-bakuto-3-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -3047,6 +3905,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681ca89f2e82e66d50419"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-4-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681b5b755ca363f7a9d47"
     },
     {
       "quiz_id": "gloss-palace-demo-bakuto-4-v1",
@@ -3104,6 +3973,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568129a597cd780cb3e83a"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-4-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-4-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681a0bfb4d9ace8bcaa41"
+    },
+    {
       "quiz_id": "target-mnemonic-demo-bakuto-4-v1",
       "file": "data/quizzes/target-mnemonic-demo-bakuto-4-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -3157,6 +4037,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956811c908bc7b8cf60b37a"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-5-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956819e9f35e38a25387ece"
     },
     {
       "quiz_id": "gloss-palace-demo-bakuto-5-v1",
@@ -3214,6 +4105,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568139b811d49b662e6d85"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-5-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-5-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956815e8d97d06f15524152"
+    },
+    {
       "quiz_id": "target-mnemonic-demo-bakuto-5-v1",
       "file": "data/quizzes/target-mnemonic-demo-bakuto-5-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -3269,6 +4171,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568149af85c39bbceac4d2"
     },
     {
+      "quiz_id": "gloss-palace-chashu-shittori-6-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956815fa1cffc1c3e5e0cb9"
+    },
+    {
       "quiz_id": "gloss-palace-pepsi-zero-size-6-v1",
       "file": "data/quizzes/gloss-palace-pepsi-zero-size-6-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -3289,6 +4202,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681a88f17eb9021da876e"
+    },
+    {
+      "quiz_id": "target-mnemonic-chashu-shittori-6-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-6-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681fabb5cffa91f2d88ae"
     },
     {
       "quiz_id": "target-mnemonic-pepsi-zero-size-6-v1",
@@ -3313,6 +4237,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681aca31ff71b5fd8477f"
     },
     {
+      "quiz_id": "gloss-palace-chashu-shittori-7-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568175ae05e7ed0c06ec29"
+    },
+    {
       "quiz_id": "target-mnemonic-amai-chashu-7-v1",
       "file": "data/quizzes/target-mnemonic-amai-chashu-7-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -3324,6 +4259,39 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681bfaf84ccc74f6fb4a3"
     },
     {
+      "quiz_id": "target-mnemonic-chashu-shittori-7-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-7-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681fd8336d9b4a65e525e"
+    },
+    {
+      "quiz_id": "gloss-palace-chashu-shittori-8-v1",
+      "file": "data/quizzes/gloss-palace-chashu-shittori-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956819db1ffe034e270a9a8"
+    },
+    {
+      "quiz_id": "target-mnemonic-chashu-shittori-8-v1",
+      "file": "data/quizzes/target-mnemonic-chashu-shittori-8-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568119b8acd563a0d01f8e"
+    },
+    {
       "quiz_id": "mother-lang-amai-chashu-1-v1",
       "file": "data/quizzes/mother-lang-amai-chashu-1-v1.json",
       "objective": "mother_language_pronounce",
@@ -3333,6 +4301,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": false,
       "notion_url": "https://app.notion.com/p/4013b2a7295681bc9ac6f1ac1cc41e03"
+    },
+    {
+      "quiz_id": "mother-lang-chashu-shittori-1-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-1-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956816c95cedb6c2e73bf0a"
     },
     {
       "quiz_id": "mother-lang-demo-bakuto-1-v1",
@@ -3377,6 +4356,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a7295681d5b937db977fa217c1"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-1-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568147a352d8ca8fcf49ac"
     },
     {
       "quiz_id": "mother-target-demo-bakuto-1-v1",
@@ -3434,6 +4424,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681e9a47dc084443670b7"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-2-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-2-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956815e9d2ff29513dd1c73"
+    },
+    {
       "quiz_id": "mother-lang-demo-bakuto-2-v1",
       "file": "data/quizzes/mother-lang-demo-bakuto-2-v1.json",
       "objective": "mother_language_pronounce",
@@ -3487,6 +4488,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568104aeb3dcb888978089"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-2-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-2-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956817d9990c50ffd332ac7"
     },
     {
       "quiz_id": "mother-target-demo-bakuto-2-v1",
@@ -3544,6 +4556,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956818596dec6230ecc8121"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-3-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-3-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956811fa852cbf89e198547"
+    },
+    {
       "quiz_id": "mother-lang-demo-bakuto-3-v1",
       "file": "data/quizzes/mother-lang-demo-bakuto-3-v1.json",
       "objective": "mother_language_pronounce",
@@ -3597,6 +4620,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956810f838ec612b417e30d"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-3-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-3-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681e7ba05fc1a6c7285f4"
     },
     {
       "quiz_id": "mother-target-demo-bakuto-3-v1",
@@ -3654,6 +4688,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681f8a075fd0d4f51ebf2"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-4-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-4-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681b18f37cef68cee9d85"
+    },
+    {
       "quiz_id": "mother-lang-demo-bakuto-4-v1",
       "file": "data/quizzes/mother-lang-demo-bakuto-4-v1.json",
       "objective": "mother_language_pronounce",
@@ -3707,6 +4752,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956815e93f4cdc8ff6dbbd2"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-4-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-4-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568189bb86df30f265b5a6"
     },
     {
       "quiz_id": "mother-target-demo-bakuto-4-v1",
@@ -3764,6 +4820,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a7295681eb8bd4de448b30fb99"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-5-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-5-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568100a71efdce89cf9701"
+    },
+    {
       "quiz_id": "mother-lang-demo-bakuto-5-v1",
       "file": "data/quizzes/mother-lang-demo-bakuto-5-v1.json",
       "objective": "mother_language_pronounce",
@@ -3817,6 +4884,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956817ea770ed6e75fde9ee"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-5-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-5-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956814288a4e898d92c0738"
     },
     {
       "quiz_id": "mother-target-demo-bakuto-5-v1",
@@ -3874,6 +4952,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a729568114b935d3c45d6cef8f"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-6-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-6-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681a4a8bcef23dab10fe8"
+    },
+    {
       "quiz_id": "mother-lang-pepsi-zero-size-6-v1",
       "file": "data/quizzes/mother-lang-pepsi-zero-size-6-v1.json",
       "objective": "mother_language_pronounce",
@@ -3894,6 +4983,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956816caa44ee8b2c6062c6"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-6-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-6-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681ab8306c01ba4a3cecd"
     },
     {
       "quiz_id": "mother-target-pepsi-zero-size-6-v1",
@@ -3918,6 +5018,17 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956813cb83bd1b47564178b"
     },
     {
+      "quiz_id": "mother-lang-chashu-shittori-7-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-7-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a7295681a4bd3dc5d2838994c7"
+    },
+    {
       "quiz_id": "mother-target-amai-chashu-7-v1",
       "file": "data/quizzes/mother-target-amai-chashu-7-v1.json",
       "objective": "mother_to_target_language",
@@ -3929,6 +5040,39 @@
       "notion_url": "https://app.notion.com/p/4013b2a72956812a8eefe9311c12b6ae"
     },
     {
+      "quiz_id": "mother-target-chashu-shittori-7-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-7-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956817dbba5e8a8432b157e"
+    },
+    {
+      "quiz_id": "mother-lang-chashu-shittori-8-v1",
+      "file": "data/quizzes/mother-lang-chashu-shittori-8-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a72956818d908afdb8e9f2a2dc"
+    },
+    {
+      "quiz_id": "mother-target-chashu-shittori-8-v1",
+      "file": "data/quizzes/mother-target-chashu-shittori-8-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/4013b2a729568164a44dfb83d440f6d0"
+    },
+    {
       "quiz_id": "sequence-amai-chashu-v1",
       "file": "data/quizzes/sequence-amai-chashu-v1.json",
       "objective": "sequence_training",
@@ -3938,6 +5082,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a729568164ac19cd24b94f489b"
+    },
+    {
+      "quiz_id": "sequence-chashu-shittori-v1",
+      "file": "data/quizzes/sequence-chashu-shittori-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
     },
     {
       "quiz_id": "sequence-demo-bakuto-v1",
@@ -3993,6 +5148,17 @@
       "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
       "markdown_fixed": true,
       "notion_url": "https://app.notion.com/p/4013b2a72956810093a5fdc7840bf532"
+    },
+    {
+      "quiz_id": "whole-listen-chashu-shittori-v1",
+      "file": "data/quizzes/whole-listen-chashu-shittori-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "markdown_fixed": false,
+      "notion_url": null
     },
     {
       "quiz_id": "whole-listen-demo-bakuto-v1",

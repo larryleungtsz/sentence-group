@@ -1,0 +1,38 @@
+{
+  "quiz_id": "sounding-chashu-shittori-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 4,
+    "text": "味も"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 2.5,
+      "end_sec": 3.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "aji-mo→a cheese",
+        "tooth",
+        "一句串：牙齒形芝士掂住自己嘅牙。"
+      ],
+      "distractors": [
+        "shittori-shitete→舌多梨",
+        "舌爹dead",
+        "一句串：全身梨裝飾嘅脷型卡通（舌多梨）；旁有鬍鬚嘅脷爹雙眼交叉瞓低（舌爹dead）。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

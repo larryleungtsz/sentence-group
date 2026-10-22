@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chashu-shittori-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 8,
+    "text": "ある"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "桌尾攤掌托物有空掌向上攤開、掌心剛托住一件小物停住。請在圖中點這攤掌所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "hotspot": {
+        "left": 76,
+        "top": 26,
+        "width": 20,
+        "height": 34,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

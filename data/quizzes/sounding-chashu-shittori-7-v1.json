@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-chashu-shittori-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 7,
+    "text": "焦げ目も"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 4.4,
+      "end_sec": 5.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "kogeme-mo→call機咩毛",
+        "一句串：擬人 call機（80年代）揹住毛毛球。"
+      ],
+      "distractors": [
+        "chotto→座多",
+        "一句串：好多張椅（座多）。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

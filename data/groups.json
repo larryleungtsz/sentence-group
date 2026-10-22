@@ -262,6 +262,77 @@
           "quizzes_ready": true
         }
       ]
+    },
+    {
+      "slug": "chashu-shittori",
+      "title": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+      "sentence_added_at": "2026-10-22T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-22; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4003b2a729568057b093dfda932a743b",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. 「ちょっと」already_introduced from amai-chashu — does not occupy dense; new-sentence quizzes (chashu-shittori-*-6 / story-chotto-chashu-6) exported.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "叉焼は",
+          "chunk_added_at": "2026-10-22T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first new chunk may start T01 immediately",
+          "notion_url": "https://app.notion.com/p/4013b2a72956810eb280c7d98bc8ecf6",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "めっちゃ",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 1 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681079745fc8b62a04098",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "しっとりしてて",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 2 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a72956812592c7ca149c5cda86",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "味も",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681d08522e8d805952cad",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "濃厚",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a729568130bde4ecb6c0cec35b",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "ちょっと",
+          "already_introduced": true,
+          "shared_with_prior_group": "amai-chashu",
+          "chunk_added_at_note": "already introduced in amai-chashu — does not occupy dense; new-sentence quizzes only",
+          "notion_url": "https://app.notion.com/p/4003b2a729568139a539d37d0fff4e8e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "焦げ目も",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior non-already_introduced (chunk 5) reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a72956818baa20c98e4523c277",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "ある",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 7 reaches T1",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681cd8108c4b3a4e31651",
+          "quizzes_ready": true
+        }
+      ]
     }
   ]
 }

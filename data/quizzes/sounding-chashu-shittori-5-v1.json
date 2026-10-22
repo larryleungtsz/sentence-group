@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sounding-chashu-shittori-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 5,
+    "text": "濃厚"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 3.0,
+      "end_sec": 4.1,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "nōkō→𦣇call",
+        "一句串：人夾住電話喺大脾內側。"
+      ],
+      "distractors": [
+        "aji-mo→a cheese",
+        "tooth",
+        "一句串：牙齒形芝士掂住自己嘅牙。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

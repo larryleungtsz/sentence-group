@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-chashu-shittori-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 8,
+    "text": "ある"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 5.0,
+      "end_sec": 5.67,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "aru→壓路",
+        "一句串：壓路車喺路邊壓路。"
+      ],
+      "distractors": [
+        "kogeme-mo→call機咩毛",
+        "一句串：擬人 call機（80年代）揹住毛毛球。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "quiz_id": "mother-target-chashu-shittori-5-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 5,
+    "text": "濃厚"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "濃厚"
+    },
+    {
+      "type": "select_text",
+      "correct": "濃厚",
+      "distractors": [
+        "叉焼は",
+        "めっちゃ",
+        "しっとりしてて",
+        "味も",
+        "ちょっと",
+        "焦げ目も",
+        "ある"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

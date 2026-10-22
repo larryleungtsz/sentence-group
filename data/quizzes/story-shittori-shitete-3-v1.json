@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-shittori-shitete-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "chunk": {
+    "id": 3,
+    "text": "しっとりしてて"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤心肉面。全身掛滿梨裝飾的脷型卡通站著；旁邊鬍鬚脷爹雙眼畫成交叉、瞓喺地下。指腹剛按進肉面，凹坑裡漾起一層油光。兩隻脷愣住，視線釘在那層油光——濕潤觸感＝濕潤著。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shittori-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuwa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/noko-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kogememo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
