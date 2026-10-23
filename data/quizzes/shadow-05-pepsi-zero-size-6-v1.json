@@ -13,8 +13,8 @@
       "type": "audio_shadow",
       "instruction": "請跟讀語調。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
-      "start_sec": 4.95,
-      "end_sec": 7.15,
+      "start_sec": 5.7,
+      "end_sec": 6.87,
       "rate": 0.5,
       "self_check": true
     }
