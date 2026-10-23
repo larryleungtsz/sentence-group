@@ -45,6 +45,12 @@ header h1 { font-size: 1.35rem; margin: 0; }
 }
 .group-card:hover { border-color: var(--accent); }
 .group-card-title { font-size: 1.1rem; font-weight: 600; }
+.group-due-mark {
+  color: var(--ok);
+  margin-left: 0.4rem;
+  font-size: 0.95em;
+  vertical-align: middle;
+}
 .group-card-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.25rem; }
 .btn {
   appearance: none;

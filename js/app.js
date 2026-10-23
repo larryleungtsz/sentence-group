@@ -52,9 +52,14 @@
     const a = document.createElement('a');
     a.className = 'group-card';
     a.href = 'group.html?slug=' + encodeURIComponent(group.slug);
+    const dueMark =
+      dueCount > 0
+        ? '<span class="group-due-mark" title="有到期題目" aria-label="有到期題目">✅</span>'
+        : '';
     a.innerHTML =
       '<div class="group-card-title">' +
       escapeHtml(group.title || group.sentence) +
+      dueMark +
       '</div>' +
       '<div class="group-card-meta">到期 ' +
       dueCount +
