@@ -59,8 +59,14 @@ data/quizzes/*.json 每題一份 Quiz JSON
 2. **密集階段（只限新 chunk）**  
    密集 = T01 / T02 / T03（`stageIndex` 0–2）。每個 Sentence Group 同時最多 **1** 個**新** chunk 處於密集。  
    - 標記 `already_introduced: true`（或 `shared_with_prior_group`）嘅 chunk：**唔佔**密集位（可同前一塊新 chunk 一齊喺 T01），但仍受上面順序限制。  
-   - 下一個**新** chunk：等最近一個非 already_introduced 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。  
+   - 下一個**新** chunk：等最近一個非 already_introduced／非 skip 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。  
    - 例：`gochumon-kakunin` 嘅「ご注文」已引入 → 唔佔密集，但「確認」仍要等「ご注文」已加入先開 T01。
+
+3. **Skip chunk（`skip: true` 或 `skipped: true`）**  
+   - **永遠唔出**該 chunk 嘅到期題。  
+   - 對加入順序當已 admitted：唔會擋住下一塊。  
+   - **唔佔**密集 T01–T03。  
+   - 例（將來匯入）：`ご来店…` 入面太熟嘅「ありがとうございます」可標 `skip: true`。
 
 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。重用 chunk 只匯出 **尚未存在** 嘅 quiz（唔複製已有 quiz_id）。
 

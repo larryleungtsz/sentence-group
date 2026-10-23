@@ -24,6 +24,10 @@
     let dueCount = 0;
     for (const meta of quizzes) {
       const prog = Progress.getQuiz(meta.quiz_id);
+      const chunk =
+        meta.kind === 'chunk'
+          ? chunks.find((c) => c.id === meta.chunk_id) || null
+          : null;
       const stages = Schedule.dueStages({
         objective: meta.objective,
         kind: meta.kind,
@@ -40,6 +44,7 @@
         now: nowMs,
         admitted:
           meta.kind === 'chunk' ? admitted.has(meta.chunk_id) : true,
+        skipped: meta.kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
       });
       if (stages.length) dueCount++;
     }
@@ -59,7 +64,7 @@
       chunks.length +
       ' chunks（有題 ' +
       readyChunks +
-      '）· 最多 1 個新 chunk 密集（已引入唔計）</div>';
+      '）· 最多 1 個新 chunk 密集（已引入／skip 唔計）</div>';
     list.appendChild(a);
   }
 

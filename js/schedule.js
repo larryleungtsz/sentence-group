@@ -97,13 +97,28 @@
   }
 
   /**
+   * Chunk marked skip / skipped in groups.json: never emits quiz dues,
+   * counts as admitted for join-ORDER (does not block the next chunk),
+   * and does not occupy dense T01–T03.
+   */
+  function isSkipped(chunk) {
+    return !!(chunk && (chunk.skip === true || chunk.skipped === true));
+  }
+
+  /** Skipped or already_introduced: no dense occupancy / dense gate role. */
+  function ignoresDense(chunk) {
+    return isSkipped(chunk) || isAlreadyIntroduced(chunk);
+  }
+
+  /**
    * Chunks array is join order. Two gates:
    * 1) ORDER: chunk i is admitted only after chunk i-1 has been admitted
-   *    (entered T01 or later). Applies to *both* new and already_introduced.
-   *    Never skip an earlier chunk to unlock a later one.
-   * 2) DENSE: at most one *non*-already_introduced chunk in T01–T03.
-   *    A new chunk waits until the nearest previous non-already_introduced
-   *    chunk has unlocked through T1. already_introduced chunks do NOT count
+   *    (entered T01 or later). Applies to new, already_introduced, and skip.
+   *    Skipped chunks are treated as already admitted once ORDER allows,
+   *    so they never block the next chunk. Never jump past an earlier chunk.
+   * 2) DENSE: at most one *new* (non-skip, non-already_introduced) chunk
+   *    in T01–T03. A new chunk waits until the nearest previous dense-eligible
+   *    chunk has unlocked through T1. skip / already_introduced do NOT count
    *    toward dense occupancy (but still obey ORDER).
    * getChunkState(chunkId) → progress state for that chunk.
    */
@@ -119,14 +134,15 @@
       const c = list[i];
       // ORDER: previous chunk must already be admitted
       if (i > 0 && !out.has(list[i - 1].id)) continue;
-      if (isAlreadyIntroduced(c)) {
+      // skip / already_introduced: admitted for ORDER; no dense wait
+      if (isSkipped(c) || isAlreadyIntroduced(c)) {
         out.add(c.id);
         continue;
       }
-      // DENSE: new chunk waits for nearest prior new chunk → T1 ready
+      // DENSE: new chunk waits for nearest prior dense-eligible chunk → T1
       let ok = true;
       for (let j = i - 1; j >= 0; j--) {
-        if (isAlreadyIntroduced(list[j])) continue;
+        if (ignoresDense(list[j])) continue;
         ok = hasUnlockedThroughT1(getChunkState(list[j].id), now);
         break;
       }
@@ -193,6 +209,7 @@
     completedStages,
     now,
     admitted,
+    skipped,
   }) {
     const done = new Set(completedStages || []);
     if (kind === 'sentence') {
@@ -208,6 +225,8 @@
       return [label];
     }
 
+    // skip / skipped chunks never emit dues (even if admitted for ORDER)
+    if (skipped === true) return [];
     if (admitted === false) return [];
 
     const labels = chunkStageLabels();
@@ -250,6 +269,8 @@
     chunkStageReadyAt,
     isChunkInDense,
     isAlreadyIntroduced,
+    isSkipped,
+    ignoresDense,
     hasUnlockedThroughT1,
     isChunkAdmitted,
     admittedChunkIds,

@@ -46,9 +46,14 @@
     );
   });
 
+  function chunkMeta(chunkId) {
+    return chunks.find((c) => c.id === chunkId) || null;
+  }
+
   function dueForMeta(meta) {
     const prog = Progress.getQuiz(meta.quiz_id);
     const kind = meta.kind;
+    const chunk = kind === 'chunk' ? chunkMeta(meta.chunk_id) : null;
     const admitted =
       kind === 'chunk' ? admittedSet().has(meta.chunk_id) : true;
     const chunkState =
@@ -64,6 +69,7 @@
       completedStages: prog.completedStages,
       now: nowMs,
       admitted,
+      skipped: kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
     });
   }
 
@@ -114,7 +120,7 @@
     for (let i = 0; i < chunks.length; i++) {
       const c = chunks[i];
       if (admitted.has(c.id)) continue;
-      // Next not-yet-admitted chunk (new or reused)
+      // Next not-yet-admitted chunk (new or reused; skip auto-admits)
       if (i > 0 && !admitted.has(chunks[i - 1].id)) {
         const prev = chunks[i - 1];
         parts.push(
@@ -130,14 +136,14 @@
         );
         break;
       }
-      if (Schedule.isAlreadyIntroduced(c)) {
+      if (Schedule.isSkipped(c) || Schedule.isAlreadyIntroduced(c)) {
         // Order ok but somehow not admitted — shouldn't happen
         break;
       }
-      // Dense gate: wait for nearest prior new chunk → T1
+      // Dense gate: wait for nearest prior dense-eligible chunk → T1
       let prev = null;
       for (let j = i - 1; j >= 0; j--) {
-        if (!Schedule.isAlreadyIntroduced(chunks[j])) {
+        if (!Schedule.ignoresDense(chunks[j])) {
           prev = chunks[j];
           break;
         }
@@ -183,6 +189,7 @@
     const admitted = admittedSet();
     for (const c of chunks) {
       if (!admitted.has(c.id)) continue;
+      if (Schedule.isSkipped(c)) continue;
       const st = Progress.getChunk(slug, c.id);
       if (Schedule.isChunkStageReady(st, nowMs)) continue;
       const t = Schedule.chunkStageReadyAt(st);
@@ -218,7 +225,7 @@
       (remaining === 0 ? nextUnlockHint() : '') +
       ' · 已加入 chunk：' +
       (adm.length ? adm.join(',') : '—') +
-      ' · SRS＝完成後間隔；句子順序加入；最多 1 個新 chunk 密集 T01–T03（已引入唔計但仍跟順序）';
+      ' · SRS＝完成後間隔；句子順序加入；最多 1 個新 chunk 密集 T01–T03（已引入／skip 唔計但仍跟順序）';
   }
   updateMeta(queue.length);
 
