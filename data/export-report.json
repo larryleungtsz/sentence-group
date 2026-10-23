@@ -1,17 +1,25 @@
 {
-  "generated_at": "2026-10-23T22:20:51+08:00",
-  "action": "re-sync goraitei-arigatou gloss_to_palace_tap palace image URL",
-  "reason": "Q系 Manager fixed Notion Quiz JSON: palace-goraitei-arigatou.png (404) → palace-goraikou.png (200)",
+  "generated_at": "2026-10-23T22:45:48+08:00",
+  "action": "re-sync pepsi-zero-size ペプシゼロは combined image + sounding",
+  "reason": "Agent Manager: Chunk Lexicon Default sounding=pet絲傘蘿蛙 + Combined image replaced; Quiz Objectives still Oct-20 (not regenerated). SQL quota exhausted → notion-fetch lexicon + surgical update.",
+  "chunk": {
+    "text": "ペプシゼロは",
+    "id": "3ff3b2a7-2956-81a6-9dc5-e257c49cda8c",
+    "default_sounding": "pet絲傘蘿蛙",
+    "combined_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png"
+  },
+  "flashcard_app_image_commit": "a5d8639",
   "updated_quiz_ids": [
-    "gloss-palace-goraitei-arigatou-1-v1",
-    "gloss-palace-goraitei-arigatou-3-v1",
-    "gloss-palace-goraitei-arigatou-4-v1",
-    "gloss-palace-goraitei-arigatou-5-v1",
-    "gloss-palace-goraitei-arigatou-6-v1",
-    "gloss-palace-goraitei-arigatou-7-v1"
+    "sounding-pepsi-zero-size-3-v1",
+    "sounding-pepsi-zero-size-4-v1",
+    "story-pepsi-zero-size-3-v1"
   ],
-  "new_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
-  "skip_chunk_unchanged": "ありがとうございます (id=2) skip=true",
-  "bad_url_leftovers": 0,
-  "note": "Notion SQL query quota exhausted; re-synced from notion-fetch confirmation + surgical URL replace on already-exported well-formed quiz JSON (hotspots/semantics unchanged). Chunk 2 not exported."
+  "image_url_unchanged_same_path": true,
+  "quizzes_using_combined_url_count": 15,
+  "pet_sounding_matches": [
+    "data/quizzes/sounding-pepsi-zero-size-3-v1.json:24:        \"pepushi-zero-wa→pet絲傘蘿蛙\",",
+    "data/quizzes/sounding-pepsi-zero-size-4-v1.json:28:        \"pepushi-zero-wa→pet絲傘蘿蛙\","
+  ],
+  "old_sounding_leftovers": 0,
+  "note": "Notion Quiz Objective pages for this chunk still have old Bag Boot / 施拾囉蛙 Quiz JSON (last edited 2026-10-20); site updated from Chunk Lexicon fields. CDN for raw.githubusercontent.com/main may lag ~5min; commit a5d8639 serves new bytes immediately."
 }

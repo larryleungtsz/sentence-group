@@ -21,9 +21,8 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "袋＋靴(Bag](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3%22,%22start_sec%22:1.31,%22end_sec%22:3.2,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E8%A2%8B%EF%BC%8B%E9%9D%B4(Bag>) Boot) ≈ pepu",
-        "拎筲箕嘅乞丐青蛙(施拾囉蛙) ≈ shizero-wa",
-        "一句串：Bag Boot(Bag Boot) 掟錢落 施拾囉蛙(施拾囉蛙)嘅筲箕。"
+        "pepushi-zero-wa→pet絲傘蘿蛙",
+        "一句串：着黑絲拎傘女人抱住寵物狗，施捨錢俾拎木制筲箕嘅青蛙。"
       ],
       "distractors": [
         "仙丹其中一邊輕微燒焦(丹邊燶) ≈ tanpin-no",

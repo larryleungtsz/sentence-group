@@ -21,13 +21,12 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "正在晒太陽嘅豬(曬豬)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3%22,%22start_sec%22:3.2,%22end_sec%22:3.55,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E6%AD%A3%E5%9C%A8%E6%99%92%E5%A4%AA%E9%99%BD%E5%98%85%E8%B1%AC(%E6%9B%AC%E8%B1%AC)>) ≈ saizu",
+        "正在晒太陽嘅豬(曬豬) ≈ saizu",
         "一句串：曬豬(曬豬)。"
       ],
       "distractors": [
-        "袋＋靴(Bag Boot) ≈ pepu",
-        "拎筲箕嘅乞丐青蛙(施拾囉蛙) ≈ shizero-wa",
-        "一句串：Bag Boot(Bag Boot) 掟錢落 施拾囉蛙(施拾囉蛙)嘅筲箕。"
+        "pepushi-zero-wa→pet絲傘蘿蛙",
+        "一句串：着黑絲拎傘女人抱住寵物狗，施捨錢俾拎木制筲箕嘅青蛙。"
       ]
     }
   ],
