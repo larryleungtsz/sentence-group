@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-kago-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 6,
+    "text": "カゴ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "地面鐵絲籃位。一枝樣似車嘅咪剛豎起，咪頭還反光。鐵絲籃同時剛放在地面、開口朝上——視線釘在籃口；籃子＝籃子。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kago-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goraiken-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ashimoto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/onimotsu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

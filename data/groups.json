@@ -404,6 +404,70 @@
           "quizzes_ready": true
         }
       ]
+    },
+    {
+      "slug": "goraitei-arigatou",
+      "title": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "sentence_added_at": "2026-10-23T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-23; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4023b2a72956805e8c65db6734f239a9",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. 「ありがとうございます」(id=2) skip=true — admitted for order only, no quiz dues, no dense. Sequence/whole-sentence quizzes still include that piece.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "ご来店",
+          "chunk_added_at": "2026-10-23T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first new chunk may start T01 immediately",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681f2b90cd691f4667df2",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "ありがとうございます",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "notion_url": "https://app.notion.com/p/4023b2a72956815895dbfd27d5533376",
+          "quizzes_ready": false
+        },
+        {
+          "id": 3,
+          "text": "よかったら",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 1) reaches T1; skip chunk 2 does not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681ccbe95e1a176baac38",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "足元",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 3 reaches T1",
+          "notion_url": "https://app.notion.com/p/4023b2a72956818f9ef2d04c3b0e1270",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "お荷物",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 4 reaches T1",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681dd968fc3e17109f130",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "カゴ",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 5 reaches T1",
+          "notion_url": "https://app.notion.com/p/4023b2a72956815aa3ced329d22950c8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "ありますので",
+          "chunk_added_at_note": "not yet admitted — waits until chunk 6 reaches T1",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681aca4c9eff0461f0dbd",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

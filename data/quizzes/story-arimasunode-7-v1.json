@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-arimasunode-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 7,
+    "text": "ありますので"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "側門門縫托掌。戴住面膜嘅烏鴉伸出脷，喺 disco 燈下跳動。空掌同時剛托住小物，一扇門被推開一縫——視線釘在托掌與門縫；有⋯所以＝有⋯所以。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/arimasunode-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goraiken-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ashimoto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/onimotsu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

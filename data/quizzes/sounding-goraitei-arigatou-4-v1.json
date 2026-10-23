@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-goraitei-arigatou-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 4,
+    "text": "足元"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
+      "start_sec": 2.9,
+      "end_sec": 3.6,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "ashimoto→牙蟬motor",
+        "一句串：卡通蟬開動用牙做嘅摩打。"
+      ],
+      "distractors": [
+        "yokattara→yogurt打爛",
+        "一句串：卡通 yogurt 打爛咗個花樽。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

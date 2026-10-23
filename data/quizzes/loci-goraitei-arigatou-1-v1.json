@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-goraitei-arigatou-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 1,
+    "text": "ご来店"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店門檻落地位有客人腳剛跨過門檻落地。請在圖中點這隻腳／門檻所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "hotspot": {
+        "left": 18,
+        "top": 58,
+        "width": 24,
+        "height": 40,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

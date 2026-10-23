@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-goraitei-arigatou-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 5,
+    "text": "お荷物"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——手剛握住旅行箱拉桿停住。視線釘在握柄與箱身；攜帶之物＝行李。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/onimotsu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kago-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ashimoto-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "hotspot": {
+        "left": 68,
+        "top": 66,
+        "width": 28,
+        "height": 32,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

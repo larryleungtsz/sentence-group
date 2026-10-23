@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-goraitei-arigatou-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 7,
+    "text": "ありますので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
+      "start_sec": 4.3,
+      "end_sec": 5.28,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "arimasu-node→鴉脷mask落的",
+        "一句串：戴面膜烏鴉伸脷喺 disco 跳。"
+      ],
+      "distractors": [
+        "kago→car歌",
+        "一句串：一枝樣似車嘅咪。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

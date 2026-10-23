@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-ashimoto-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 4,
+    "text": "足元"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鞋旁地面光斑。一隻卡通 cute 蟬專心開動用牙砌成嘅摩打，摩打輕轉。視線同時剛垂到鞋旁地面，一圈光斑亮起——視線釘在地面光斑；腳邊位置＝腳邊。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ashimoto-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goraiken-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/onimotsu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kago-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

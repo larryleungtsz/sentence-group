@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-goraitei-arigatou-3-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 3,
+    "text": "よかったら"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "如果較方便的話。How to pronounce this word?",
+      "gloss": "如果較方便的話",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-goraitei-arigatou-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 6,
+    "text": "カゴ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "地面有鐵絲籃剛放好、開口朝上。請在圖中點這籃子所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "hotspot": {
+        "left": 54,
+        "top": 62,
+        "width": 16,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

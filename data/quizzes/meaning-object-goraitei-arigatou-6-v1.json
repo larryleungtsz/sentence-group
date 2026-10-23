@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-goraitei-arigatou-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 6,
+    "text": "カゴ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "定格——鐵絲籃剛放在地面、開口朝上停住。視線釘在籃口與網眼；盛物的籃＝籃子。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kago-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/arimasunode-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/onimotsu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "hotspot": {
+        "left": 54,
+        "top": 62,
+        "width": 16,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

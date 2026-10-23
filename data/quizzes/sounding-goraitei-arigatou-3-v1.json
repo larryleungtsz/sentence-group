@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-goraitei-arigatou-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 3,
+    "text": "よかったら"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
+      "start_sec": 2.2,
+      "end_sec": 2.9,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "yokattara→yogurt打爛",
+        "一句串：卡通 yogurt 打爛咗個花樽。"
+      ],
+      "distractors": [
+        "go-raiten→歌奶釘",
+        "一句串：釘滿釘嘅奶樽 gangster 對住咪唱歌。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

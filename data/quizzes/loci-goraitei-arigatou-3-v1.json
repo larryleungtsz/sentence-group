@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-goraitei-arigatou-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "chunk": {
+    "id": 3,
+    "text": "よかったら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎客台側身位有掌心向上微推一寸、頭微側望你。請在圖中點這人所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "hotspot": {
+        "left": 50,
+        "top": 18,
+        "width": 24,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
