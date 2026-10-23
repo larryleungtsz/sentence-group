@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T19:06:33+08:00",
+  "generated_at": "2026-10-23T22:59:16+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -4448,8 +4448,8 @@
       "sentence": "先程の単品のペプシゼロはサイズいかがされますか？Mサイズで。"
     },
     {
-      "quiz_id": "story-pepsi-zero-size-3-v1",
-      "file": "data/quizzes/story-pepsi-zero-size-3-v1.json",
+      "quiz_id": "story-pepsi-zero-size-3-v2",
+      "file": "data/quizzes/story-pepsi-zero-size-3-v2.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",

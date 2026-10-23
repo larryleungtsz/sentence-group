@@ -1,5 +1,5 @@
 {
-  "quiz_id": "story-pepsi-zero-size-3-v1",
+  "quiz_id": "story-pepsi-zero-size-3-v2",
   "objective": "story_select_image",
   "level": 1,
   "variant": 1,
@@ -20,8 +20,7 @@
         "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
         "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
         "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png"
       ]
     }
   ],
