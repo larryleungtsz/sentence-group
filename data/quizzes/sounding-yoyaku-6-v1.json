@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yoyaku-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 6,
+    "text": "なんですけど"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 6.0,
+      "end_sec": 7.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "nan-desu-kedo→攔deak ghetto",
+        "一句串：一臉ghetto gangster樣嘅人正爬過一張desk。"
+      ],
+      "distractors": [
+        "yoyaku-shiteta→藥pill咬拳舌爹dark",
+        "一句串：卡通藥粒正咬自己拳頭；全黑暗色中年阿爹正舔住嗰粒藥。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

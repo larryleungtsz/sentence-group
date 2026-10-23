@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yoyaku-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 7,
+    "text": "2名様で"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 7.0,
+      "end_sec": 7.8,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "ni-mei-sama-de→knee咩沙馬dead",
+        "一句串：跪低嘅羊；沙造嘅馬躺地、眼睛打交叉。"
+      ],
+      "distractors": [
+        "nan-desu-kedo→攔deak ghetto",
+        "一句串：一臉ghetto gangster樣嘅人正爬過一張desk。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

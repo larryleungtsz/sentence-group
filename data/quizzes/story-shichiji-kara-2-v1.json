@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-shichiji-kara-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 3,
+    "text": "7時から"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "牆邊圓鐘面微微反光。一個人舌頭長出尖刺，刺尖插住一塊芝士，表情專注。佢正把額外嘅辣加緊落辣鍋道——鍋氣一冒，食指剛按在鐘面數字 7 上停住：從七點。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shichiji-kara-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoyaku-shiteta-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nan-desu-kedo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

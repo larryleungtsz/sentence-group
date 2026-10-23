@@ -468,6 +468,97 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "yoyaku",
+      "title": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+      "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+      "sentence_added_at": "2026-10-24T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-24; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4023b2a7295681ee8fa5ffde9ef5e9b9",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Skip=true on いらっしゃいませ～ (1) / ラリー (5) / はい (9) — admitted for order only, no quiz dues, no dense. Sequence uses 8 active hotspots only; whole-sentence includes all pieces in audio.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "いらっしゃいませ～",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 2,
+          "text": "ご予約いただいてますか",
+          "chunk_added_at": "2026-10-24T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first dense-eligible chunk may start T01 immediately (skip id=1 does not gate)",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681bc84bdd610e8432094",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "7時から",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 2) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681cc83d3deab6b4a4cb6",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "予約してた",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 3) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681d791a4ffd8c4a74320",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ラリー",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 6,
+          "text": "なんですけど",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 4) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a72956814cb7afd43bbbe5f61a",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "2名様で",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 6) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a729568152b646cd538a95b8d2",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "よろしかったですか",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 7) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681d381add8e189c55da0",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "はい",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 10,
+          "text": "お席の方",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 8) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681069057ecf0783c51c1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 11,
+          "text": "ご案内しますね",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 10) reaches T1; skip chunks do not gate",
+          "notion_url": "https://app.notion.com/p/4023b2a729568189a4d8fffd03dd86c3",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-nan-desu-kedo-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 6,
+    "text": "なんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎賓檯後燈光偏冷。一臉ghetto gangster樣嘅人專心爬過一張desk，手肘剛撐上——同一瞬間，整隻前臂剛抬到胸前正中停住、頭大幅側轉望你：是⋯呢／不過。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nan-desu-kedo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shichiji-kara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoyaku-shiteta-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

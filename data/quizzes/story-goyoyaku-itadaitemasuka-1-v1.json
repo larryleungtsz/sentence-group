@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-goyoyaku-itadaitemasuka-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 2,
+    "text": "ご予約いただいてますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎賓檯燈光偏亮。頭戴卡通藥嘅怪繃緊咬住自己拳頭。鑊上兩隻蛋着住火滋滋響。着火嘅中年發火阿爹坐住masked car，專心一邊駕一邊炒那兩隻着火蛋，車剛停到檯前——檯上店員雙手剛翻開預約簿、眉微揚望你，正要問：有預約嗎？"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shichiji-kara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoyaku-shiteta-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nan-desu-kedo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

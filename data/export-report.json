@@ -1,25 +1,29 @@
 {
-  "generated_at": "2026-10-23T22:45:48+08:00",
-  "action": "re-sync pepsi-zero-size ペプシゼロは combined image + sounding",
-  "reason": "Agent Manager: Chunk Lexicon Default sounding=pet絲傘蘿蛙 + Combined image replaced; Quiz Objectives still Oct-20 (not regenerated). SQL quota exhausted → notion-fetch lexicon + surgical update.",
-  "chunk": {
-    "text": "ペプシゼロは",
-    "id": "3ff3b2a7-2956-81a6-9dc5-e257c49cda8c",
-    "default_sounding": "pet絲傘蘿蛙",
-    "combined_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png"
+  "slug": "yoyaku",
+  "at": "2026-10-24T02:54:58+08:00",
+  "method": "surgical (SQL quota exhausted; local harvest + notion-fetch Q8/Q11/Q4 sample)",
+  "quiz_count": 100,
+  "objectives": {
+    "example_sentences_listening": 8,
+    "gloss_to_palace_tap": 8,
+    "loci_description_tap": 8,
+    "meaning_object_select_and_tap": 8,
+    "mother_language_pronounce": 8,
+    "mother_to_target_language": 8,
+    "sequence_training": 1,
+    "word_shadowing_025": 8,
+    "tone_shadowing_05": 8,
+    "pronunciation_sounding_select": 8,
+    "story_select_image": 2,
+    "target_to_mnemonic_image": 8,
+    "whole_sentence_listening": 1,
+    "writing_shadowing": 8,
+    "youglish_listen": 8
   },
-  "flashcard_app_image_commit": "a5d8639",
-  "updated_quiz_ids": [
-    "sounding-pepsi-zero-size-3-v1",
-    "sounding-pepsi-zero-size-4-v1",
-    "story-pepsi-zero-size-3-v1"
+  "skip_chunks": [
+    "いらっしゃいませ～",
+    "ラリー",
+    "はい"
   ],
-  "image_url_unchanged_same_path": true,
-  "quizzes_using_combined_url_count": 15,
-  "pet_sounding_matches": [
-    "data/quizzes/sounding-pepsi-zero-size-3-v1.json:24:        \"pepushi-zero-wa→pet絲傘蘿蛙\",",
-    "data/quizzes/sounding-pepsi-zero-size-4-v1.json:28:        \"pepushi-zero-wa→pet絲傘蘿蛙\","
-  ],
-  "old_sounding_leftovers": 0,
-  "note": "Notion Quiz Objective pages for this chunk still have old Bag Boot / 施拾囉蛙 Quiz JSON (last edited 2026-10-20); site updated from Chunk Lexicon fields. CDN for raw.githubusercontent.com/main may lag ~5min; commit a5d8639 serves new bytes immediately."
+  "skip_quiz_leak": []
 }

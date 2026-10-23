@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-yoyaku-7-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 7,
+    "text": "2名様で"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "兩位。How to pronounce this word?",
+      "gloss": "兩位",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

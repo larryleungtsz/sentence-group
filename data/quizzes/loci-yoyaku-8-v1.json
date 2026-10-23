@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 11,
+    "text": "ご案内しますね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "通道口再往內的引路伸掌位有店員身側轉、掌心剛向前伸停住引導。請在圖中點這引導伸掌所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 74,
+        "top": 28,
+        "width": 22,
+        "height": 44,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

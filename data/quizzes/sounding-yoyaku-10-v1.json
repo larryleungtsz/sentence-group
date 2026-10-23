@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yoyaku-10-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 10,
+    "text": "お席の方"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 9.9,
+      "end_sec": 10.8,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "o-seki-no-hō→鵝錫key攞hall",
+        "一句串：鵝錫緊一把key，翼同時攞住學校hall。"
+      ],
+      "distractors": [
+        "yoroshikatta-desu-ka→油螺絲guard打desk架",
+        "一句串：總統護衛樣、人身油螺絲嘅guard；正打滿desk嘅層架。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

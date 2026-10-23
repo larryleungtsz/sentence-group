@@ -1,0 +1,33 @@
+{
+  "quiz_id": "sounding-yoyaku-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 2,
+    "text": "ご予約いただいてますか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 1.4,
+      "end_sec": 3.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "go-yoyaku-itadaitemasu-ka→歌吔拳熱蛋蛋熱爹masked car",
+        "一句串：頭戴卡通藥嘅怪正咬自己拳頭；鑊上兩隻着火蛋；着火中年發火阿爹坐住masked car一邊炒蛋。"
+      ],
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 2,
+    "text": "ご予約いただいてますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎賓檯上翻開的預約簿有店員雙手剛翻開預約簿、眉微揚面露疑問望你。請在圖中點這翻簿疑問店員所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 10,
+        "top": 16,
+        "width": 26,
+        "height": 52,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

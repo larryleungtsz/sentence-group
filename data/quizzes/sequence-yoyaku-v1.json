@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-yoyaku-v1",
+  "objective": "sequence_training",
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "ご予約いただいてますか",
+          "hotspot": {
+            "left": 10,
+            "top": 16,
+            "width": 26,
+            "height": 52,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "7時から",
+          "hotspot": {
+            "left": 1,
+            "top": 2,
+            "width": 20,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "予約してた",
+          "hotspot": {
+            "left": 20,
+            "top": 58,
+            "width": 18,
+            "height": 26,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "なんですけど",
+          "hotspot": {
+            "left": 48,
+            "top": 42,
+            "width": 14,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "2名様で",
+          "hotspot": {
+            "left": 40,
+            "top": 28,
+            "width": 12,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "よろしかったですか",
+          "hotspot": {
+            "left": 46,
+            "top": 12,
+            "width": 14,
+            "height": 26,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "お席の方",
+          "hotspot": {
+            "left": 64,
+            "top": 48,
+            "width": 22,
+            "height": 36,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "ご案内しますね",
+          "hotspot": {
+            "left": 74,
+            "top": 28,
+            "width": 22,
+            "height": 44,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

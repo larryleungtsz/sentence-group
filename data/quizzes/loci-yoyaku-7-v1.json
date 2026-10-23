@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-7-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 10,
+    "text": "お席の方"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "右側通往空桌的通道口有掌心側向、剛指向空桌那一側停住。請在圖中點這空桌／通道口所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 64,
+        "top": 48,
+        "width": 22,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

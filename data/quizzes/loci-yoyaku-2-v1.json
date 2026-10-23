@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-2-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 3,
+    "text": "7時から"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎賓檯後方牆上圓鐘的數字 7 有食指剛按在鐘面數字 7 上停住。請在圖中點這鐘／食指所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 1,
+        "top": 2,
+        "width": 20,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

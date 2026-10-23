@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yoyaku-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 4,
+    "text": "予約してた"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 4.4,
+      "end_sec": 5.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "yoyaku-shiteta→藥pill咬拳舌爹dark",
+        "一句串：卡通藥粒正咬自己拳頭；全黑暗色中年阿爹正舔住嗰粒藥。"
+      ],
+      "distractors": [
+        "shichi-ji-kara→舌刺芝加辣",
+        "一句串：舌頭長刺、刺上插住芝士嘅人；加緊額外辣落辣鍋。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

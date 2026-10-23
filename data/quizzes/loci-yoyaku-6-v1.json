@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 8,
+    "text": "よろしかったですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員點頭確認時的臉前有店員整顆頭剛大幅點下又抬起停住、雙眼正對你確認。請在圖中點這臉所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 46,
+        "top": 12,
+        "width": 14,
+        "height": 26,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

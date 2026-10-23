@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yoyaku-11-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 11,
+    "text": "ご案内しますね"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "start_sec": 10.8,
+      "end_sec": 12.25,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "go-annai-shimasu-ne→菇按奶獅mask",
+        "一句串：卡通蘑菇戴住中國舞獅面罩，正按住奶樽。"
+      ],
+      "distractors": [
+        "o-seki-no-hō→鵝錫key攞hall",
+        "一句串：鵝錫緊一把key，翼同時攞住學校hall。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

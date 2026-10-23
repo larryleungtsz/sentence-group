@@ -1,0 +1,28 @@
+{
+  "quiz_id": "shadow-05-yoyaku-8-v1",
+  "objective": "tone_shadowing_05",
+  "variant": 1,
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀語調。",
+      "audio": {
+        "url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+        "start_sec": 7.8,
+        "end_sec": 9.3,
+        "rate": 0.5
+      },
+      "self_check": true,
+      "feedback": {
+        "on_tick": "pass",
+        "on_cross": "retry"
+      }
+    }
+  ],
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "level": 1,
+  "chunk": {
+    "id": 8,
+    "text": "よろしかったですか"
+  }
+}

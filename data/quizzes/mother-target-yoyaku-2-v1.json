@@ -1,0 +1,33 @@
+{
+  "quiz_id": "mother-target-yoyaku-2-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 2,
+    "text": "ご予約いただいてますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "有預約嗎"
+    },
+    {
+      "type": "select_text",
+      "correct": "ご予約いただいてますか",
+      "distractors": [
+        "7時から",
+        "予約してた",
+        "なんですけど",
+        "2名様で",
+        "よろしかったですか",
+        "お席の方",
+        "ご案内しますね"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

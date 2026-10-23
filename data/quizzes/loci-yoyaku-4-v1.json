@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+  "chunk": {
+    "id": 6,
+    "text": "なんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "迎賓檯後站位店員胸前正中有整隻前臂剛抬到胸前正中停住、頭大幅側轉望你。請在圖中點這胸前／前臂所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "hotspot": {
+        "left": 48,
+        "top": 42,
+        "width": 14,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
