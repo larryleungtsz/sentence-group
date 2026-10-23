@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>練習統計</title>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="nav-back" href="index.html">← 首頁</a>
+      <h1>練習統計</h1>
+    </header>
+    <p class="muted">記錄儲存喺本機（localStorage），唔會寫入 Notion。時間顯示為 Asia/Hong_Kong。</p>
+    <div class="toolbar">
+      <button type="button" id="clear-timing" class="btn btn-ghost">清除計時記錄</button>
+    </div>
+    <p id="stats-empty" class="muted" hidden>未有練習記錄。做完一個 session 就會出現喺度。</p>
+    <div id="session-list"></div>
+    <div id="session-detail" class="stats-detail" hidden></div>
+  </div>
+  <script src="js/schedule.js"></script>
+  <script src="js/timing.js"></script>
+  <script src="js/stats.js"></script>
+</body>
+</html>

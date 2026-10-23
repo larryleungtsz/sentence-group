@@ -142,3 +142,61 @@ header h1 { font-size: 1.35rem; margin: 0; }
   border: 1px solid var(--ok);
 }
 .toolbar { margin: 0.75rem 0 1rem; }
+
+/* Practice timing + stats */
+.nav-link {
+  margin-left: auto;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+.nav-link:hover { text-decoration: underline; }
+.session-banner {
+  margin: 1rem 0;
+  padding: 1rem 1.1rem;
+  background: var(--card);
+  border: 1px solid var(--ok);
+  border-radius: 12px;
+  text-align: center;
+}
+.session-banner-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ok);
+}
+.session-banner-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+.stats-card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.9rem 1.05rem;
+  margin-bottom: 0.65rem;
+  text-decoration: none;
+  color: inherit;
+}
+.stats-card:hover { border-color: var(--accent); }
+.stats-card-active { border-color: var(--ok); }
+.stats-card-title { font-weight: 600; }
+.stats-card-meta { color: var(--muted); font-size: 0.85rem; margin-top: 0.2rem; }
+.stats-detail {
+  margin-top: 1.5rem;
+  padding: 1.1rem 1.15rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.stats-detail h2 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+.stats-detail h3 { font-size: 1rem; margin: 1.1rem 0 0.4rem; color: var(--muted); }
+.stats-breakdown {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+.stats-breakdown li { margin: 0.45rem 0; }
+.stats-label { font-weight: 500; }
+.stats-val { color: var(--ok); margin-left: 0.35rem; }
+.stats-sub { font-size: 0.8rem; margin-top: 0.1rem; }

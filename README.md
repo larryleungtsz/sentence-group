@@ -9,16 +9,28 @@ Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `
 ```
 index.html          首頁：列出 Sentence Groups
 group.html?slug=…   練習頁（可用 ?now=ISO 測試）
+stats.html          練習計時統計（本機歷史）
 css/app.css
 js/schedule.js      完成後間隔 / 到期判斷 / chunk 加入閘
 js/progress.js      localStorage v2 進度
+js/timing.js        localStorage 練習計時（唔寫 Notion）
 js/quiz-runner.js   渲染與評分
-js/app.js / group.js
+js/app.js / group.js / stats.js
 data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
 data/groups.json    Sentence Group + chunks（陣列次序＝加入次序）
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
 ```
+
+## 練習計時
+
+進度 key：`website-manager-timing-v1`（同 SRS 分開）。
+
+- **Session**：撳「開始練習」→ 做完所有到期題（或中途離開且已完成 ≥1 題）
+- **Quiz**：每題開始渲染 → `onPass`
+- **Chunk**：同一 session 內同一 chunk（或句子題）嘅 quiz 用時加總
+- 做完 session 顯示總用時；個別 quiz／chunk 詳情喺統計頁
+- **唔寫 Notion**
 
 ## 如何加入新 Quiz JSON
 

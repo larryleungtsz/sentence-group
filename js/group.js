@@ -6,6 +6,7 @@
   const queueEl = document.getElementById('queue-list');
   const runnerEl = document.getElementById('runner');
   const doneEl = document.getElementById('done');
+  const sessionBannerEl = document.getElementById('session-banner');
 
   if (!slug) {
     titleEl.textContent = '缺少 slug';
@@ -120,7 +121,6 @@
     for (let i = 0; i < chunks.length; i++) {
       const c = chunks[i];
       if (admitted.has(c.id)) continue;
-      // Next not-yet-admitted chunk (new or reused; skip auto-admits)
       if (i > 0 && !admitted.has(chunks[i - 1].id)) {
         const prev = chunks[i - 1];
         parts.push(
@@ -137,10 +137,8 @@
         break;
       }
       if (Schedule.isSkipped(c) || Schedule.isAlreadyIntroduced(c)) {
-        // Order ok but somehow not admitted — shouldn't happen
         break;
       }
-      // Dense gate: wait for nearest prior dense-eligible chunk → T1
       let prev = null;
       for (let j = i - 1; j >= 0; j--) {
         if (!Schedule.ignoresDense(chunks[j])) {
@@ -179,7 +177,7 @@
           );
         }
       }
-      break; // only hint the next gated chunk
+      break;
     }
     return parts.length ? ' · 加入閘：' + parts.join('；') : '';
   }
@@ -213,6 +211,9 @@
   }
 
   let queue = buildDueQueue();
+  /** @type {ReturnType<typeof Timing.createSession>|null} */
+  let activeSession = null;
+  let sessionSaved = false;
 
   function updateMeta(remaining) {
     const adm = Array.from(admittedSet()).sort((a, b) => a - b);
@@ -253,6 +254,28 @@
   }
   renderQueue();
 
+  function showSessionSummary(saved) {
+    if (!sessionBannerEl || !saved) return;
+    sessionBannerEl.hidden = false;
+    sessionBannerEl.innerHTML =
+      '<div class="session-banner-title">今次練習用時 ' +
+      Timing.formatDuration(saved.totalMs) +
+      '</div>' +
+      '<div class="session-banner-meta">完成 ' +
+      saved.quizCount +
+      ' 題 · 詳情睇 <a href="stats.html?session=' +
+      encodeURIComponent(saved.id) +
+      '">統計頁</a></div>';
+  }
+
+  function saveSessionIfNeeded(reason) {
+    if (!activeSession || sessionSaved) return null;
+    const saved = activeSession.finalize(reason);
+    sessionSaved = true;
+    activeSession = null;
+    return saved;
+  }
+
   function afterPass(item) {
     Progress.markPassed(item.meta.quiz_id, item.dueStages, nowIso);
 
@@ -273,14 +296,21 @@
     if (!queue.length) {
       runnerEl.hidden = true;
       doneEl.hidden = false;
-      doneEl.textContent = '今次練習完成' + nextUnlockHint();
+      const saved = saveSessionIfNeeded('complete');
+      const timeBit = saved
+        ? ' · 用時 ' + Timing.formatDuration(saved.totalMs)
+        : '';
+      doneEl.textContent = '今次練習完成' + timeBit + nextUnlockHint();
+      showSessionSummary(saved);
       updateMeta(0);
       return;
     }
     const item = queue[0];
+    if (activeSession) activeSession.startQuiz(item.meta);
     const quiz = await (await fetch(item.meta.file)).json();
     QuizRunner.run(quiz, runnerEl, {
       onPass() {
+        if (activeSession) activeSession.endQuiz(item.meta);
         afterPass(item);
         queue.shift();
         renderQueue();
@@ -292,7 +322,18 @@
 
   document.getElementById('start-btn').addEventListener('click', () => {
     document.getElementById('start-btn').hidden = true;
+    sessionSaved = false;
+    activeSession = Timing.createSession({
+      groupSlug: slug,
+      groupTitle: group.title || group.sentence || slug,
+    });
     nextQuiz();
   });
 
+  // Persist partial session if user leaves after completing ≥1 quiz
+  function onLeave() {
+    saveSessionIfNeeded('leave');
+  }
+  window.addEventListener('pagehide', onLeave);
+  window.addEventListener('beforeunload', onLeave);
 })();
