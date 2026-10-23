@@ -1,124 +1,17 @@
 {
-  "generated_at": "2026-10-23T19:06:33+08:00",
-  "new_group": "goraitei-arigatou",
-  "new_playable": 80,
-  "broken": [],
-  "playable_ids": [
-    "example-listen-goraitei-arigatou-1-v1",
-    "example-listen-goraitei-arigatou-3-v1",
-    "example-listen-goraitei-arigatou-4-v1",
-    "example-listen-goraitei-arigatou-5-v1",
-    "example-listen-goraitei-arigatou-6-v1",
-    "example-listen-goraitei-arigatou-7-v1",
+  "generated_at": "2026-10-23T22:20:51+08:00",
+  "action": "re-sync goraitei-arigatou gloss_to_palace_tap palace image URL",
+  "reason": "Q系 Manager fixed Notion Quiz JSON: palace-goraitei-arigatou.png (404) → palace-goraikou.png (200)",
+  "updated_quiz_ids": [
     "gloss-palace-goraitei-arigatou-1-v1",
     "gloss-palace-goraitei-arigatou-3-v1",
     "gloss-palace-goraitei-arigatou-4-v1",
     "gloss-palace-goraitei-arigatou-5-v1",
     "gloss-palace-goraitei-arigatou-6-v1",
-    "gloss-palace-goraitei-arigatou-7-v1",
-    "loci-goraitei-arigatou-1-v1",
-    "loci-goraitei-arigatou-3-v1",
-    "loci-goraitei-arigatou-4-v1",
-    "loci-goraitei-arigatou-5-v1",
-    "loci-goraitei-arigatou-6-v1",
-    "loci-goraitei-arigatou-7-v1",
-    "meaning-object-goraitei-arigatou-1-v1",
-    "meaning-object-goraitei-arigatou-3-v1",
-    "meaning-object-goraitei-arigatou-4-v1",
-    "meaning-object-goraitei-arigatou-5-v1",
-    "meaning-object-goraitei-arigatou-6-v1",
-    "meaning-object-goraitei-arigatou-7-v1",
-    "mother-lang-goraitei-arigatou-1-v1",
-    "mother-lang-goraitei-arigatou-3-v1",
-    "mother-lang-goraitei-arigatou-4-v1",
-    "mother-lang-goraitei-arigatou-5-v1",
-    "mother-lang-goraitei-arigatou-6-v1",
-    "mother-lang-goraitei-arigatou-7-v1",
-    "mother-target-goraitei-arigatou-1-v1",
-    "mother-target-goraitei-arigatou-3-v1",
-    "mother-target-goraitei-arigatou-4-v1",
-    "mother-target-goraitei-arigatou-5-v1",
-    "mother-target-goraitei-arigatou-6-v1",
-    "mother-target-goraitei-arigatou-7-v1",
-    "sequence-goraitei-arigatou-v1",
-    "shadow-025-goraitei-arigatou-1-v1",
-    "shadow-025-goraitei-arigatou-3-v1",
-    "shadow-025-goraitei-arigatou-4-v1",
-    "shadow-025-goraitei-arigatou-5-v1",
-    "shadow-025-goraitei-arigatou-6-v1",
-    "shadow-025-goraitei-arigatou-7-v1",
-    "shadow-05-goraitei-arigatou-1-v1",
-    "shadow-05-goraitei-arigatou-3-v1",
-    "shadow-05-goraitei-arigatou-4-v1",
-    "shadow-05-goraitei-arigatou-5-v1",
-    "shadow-05-goraitei-arigatou-6-v1",
-    "shadow-05-goraitei-arigatou-7-v1",
-    "sounding-goraitei-arigatou-1-v1",
-    "sounding-goraitei-arigatou-3-v1",
-    "sounding-goraitei-arigatou-4-v1",
-    "sounding-goraitei-arigatou-5-v1",
-    "sounding-goraitei-arigatou-6-v1",
-    "sounding-goraitei-arigatou-7-v1",
-    "story-arimasunode-7-v1",
-    "story-ashimoto-4-v1",
-    "story-goraitei-1-v1",
-    "story-kago-6-v1",
-    "story-onimotsu-5-v1",
-    "story-yokattara-3-v1",
-    "target-mnemonic-goraitei-arigatou-1-v1",
-    "target-mnemonic-goraitei-arigatou-3-v1",
-    "target-mnemonic-goraitei-arigatou-4-v1",
-    "target-mnemonic-goraitei-arigatou-5-v1",
-    "target-mnemonic-goraitei-arigatou-6-v1",
-    "target-mnemonic-goraitei-arigatou-7-v1",
-    "whole-listen-goraitei-arigatou-v1",
-    "writing-goraitei-arigatou-1-v1",
-    "writing-goraitei-arigatou-3-v1",
-    "writing-goraitei-arigatou-4-v1",
-    "writing-goraitei-arigatou-5-v1",
-    "writing-goraitei-arigatou-6-v1",
-    "writing-goraitei-arigatou-7-v1",
-    "youglish-goraitei-arigatou-1-v1",
-    "youglish-goraitei-arigatou-3-v1",
-    "youglish-goraitei-arigatou-4-v1",
-    "youglish-goraitei-arigatou-5-v1",
-    "youglish-goraitei-arigatou-6-v1",
-    "youglish-goraitei-arigatou-7-v1"
+    "gloss-palace-goraitei-arigatou-7-v1"
   ],
-  "notes": [
-    "chunk id=2 ありがとうございます skip=true — zero chunk quizzes",
-    "6 active chunks × 13 objectives + sequence + whole_listen",
-    "mother-lang / shadow-025 filenames remapped to real chunk ids (1,3,4,5,6,7)"
-  ],
-  "coverage_ok": true,
-  "active_chunks": [
-    [
-      1,
-      "ご来店"
-    ],
-    [
-      3,
-      "よかったら"
-    ],
-    [
-      4,
-      "足元"
-    ],
-    [
-      5,
-      "お荷物"
-    ],
-    [
-      6,
-      "カゴ"
-    ],
-    [
-      7,
-      "ありますので"
-    ]
-  ],
-  "sentence_objectives": [
-    "sequence_training",
-    "whole_sentence_listening"
-  ]
+  "new_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+  "skip_chunk_unchanged": "ありがとうございます (id=2) skip=true",
+  "bad_url_leftovers": 0,
+  "note": "Notion SQL query quota exhausted; re-synced from notion-fetch confirmation + surgical URL replace on already-exported well-formed quiz JSON (hotspots/semantics unchanged). Chunk 2 not exported."
 }
