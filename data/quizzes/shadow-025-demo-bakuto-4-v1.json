@@ -13,7 +13,7 @@
       "type": "audio_shadow",
       "instruction": "請跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
-      "start_sec": 2.2,
+      "start_sec": 2.1,
       "rate": 0.25,
       "self_check": true
     }
