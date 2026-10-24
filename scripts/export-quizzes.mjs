@@ -87,6 +87,20 @@ function slugFile(quizId) {
 const playable = [];
 const broken = [];
 
+
+function normalizeAudioSlides(quiz) {
+  for (const s of quiz.slides || []) {
+    const a = s.audio;
+    if (a && typeof a === 'object' && a.url) {
+      if (s.start_sec == null && a.start_sec != null) s.start_sec = a.start_sec;
+      if (s.end_sec == null && a.end_sec != null) s.end_sec = a.end_sec;
+      if (s.rate == null && a.rate != null) s.rate = a.rate;
+      s.audio = a.url;
+    }
+  }
+  return quiz;
+}
+
 function processRow(row, kind) {
   const name = row.Name;
   const objective = row.Objective;
@@ -105,7 +119,7 @@ function processRow(row, kind) {
     });
     return;
   }
-  const quiz = result.data;
+  const quiz = normalizeAudioSlides(result.data);
   if (level != null && quiz.level == null) quiz.level = level;
   if (objective && !quiz.objective) quiz.objective = objective;
   const file = slugFile(quiz.quiz_id);
@@ -156,9 +170,13 @@ for (const p of playable) {
   const q = JSON.parse(fs.readFileSync(path.join(ROOT, p.file), 'utf8'));
   for (const s of q.slides || []) {
     for (const k of ['audio', 'image', 'correct']) {
-      const v = s[k];
+      let v = s[k];
+      if (v && typeof v === 'object' && v.url) v = v.url;
       if (typeof v === 'string' && (v.includes('[http') || v.startsWith('['))) {
         console.log('BAD URL', p.quiz_id, k, v.slice(0, 80));
+      }
+      if (k === 'audio' && v && typeof v === 'object') {
+        console.log('NESTED AUDIO (should be flattened)', p.quiz_id);
       }
     }
   }

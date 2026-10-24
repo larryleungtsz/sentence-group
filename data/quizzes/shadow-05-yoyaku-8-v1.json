@@ -6,17 +6,15 @@
     {
       "type": "audio_shadow",
       "instruction": "請跟讀語調。",
-      "audio": {
-        "url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
-        "start_sec": 7.8,
-        "end_sec": 9.3,
-        "rate": 0.5
-      },
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
       "self_check": true,
       "feedback": {
         "on_tick": "pass",
         "on_cross": "retry"
-      }
+      },
+      "start_sec": 7.8,
+      "end_sec": 9.3,
+      "rate": 0.5
     }
   ],
   "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",

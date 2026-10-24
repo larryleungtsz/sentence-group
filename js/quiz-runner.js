@@ -342,14 +342,24 @@
 
       if (type === 'audio_listen' || type === 'audio_shadow' || type === 'audio_chunk' || type === 'audio_check') {
         body.appendChild(el('p', 'instruction', slide.instruction || '請聆聽'));
-        body.appendChild(
-          makeAudio(slide.audio, {
-            start_sec: slide.start_sec,
-            end_sec: slide.end_sec,
-            rate: slide.rate,
-            rate_options: slide.rate_options,
-          })
-        );
+        // Accept either string URL or {url, start_sec, end_sec, rate} (Notion Q bots sometimes nest).
+        let audioSrc = slide.audio;
+        let audioOpts = {
+          start_sec: slide.start_sec,
+          end_sec: slide.end_sec,
+          rate: slide.rate,
+          rate_options: slide.rate_options,
+        };
+        if (audioSrc && typeof audioSrc === 'object') {
+          audioOpts = {
+            start_sec: audioSrc.start_sec != null ? audioSrc.start_sec : audioOpts.start_sec,
+            end_sec: audioSrc.end_sec != null ? audioSrc.end_sec : audioOpts.end_sec,
+            rate: audioSrc.rate != null ? audioSrc.rate : audioOpts.rate,
+            rate_options: audioOpts.rate_options,
+          };
+          audioSrc = audioSrc.url || audioSrc.src || '';
+        }
+        body.appendChild(makeAudio(audioSrc, audioOpts));
         if (slide.self_check !== false) {
           body.appendChild(
             selfCheckBar(
