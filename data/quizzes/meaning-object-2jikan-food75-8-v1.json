@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-2jikan-food75-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 8,
+    "text": "ご了承ください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見深鞠躬到腰＋雙手合於額前＋眉皺嘴開＝「請見諒」；見這幕→想起請你諒解。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goryoushou-kudasai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-jikan-sei-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/dekimasen-node-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "hotspot": {
+        "left": 70,
+        "top": 16,
+        "width": 26,
+        "height": 72,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

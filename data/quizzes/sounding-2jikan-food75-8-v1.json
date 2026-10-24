@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-2jikan-food75-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 8,
+    "text": "できませんので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
+      "start_sec": 8.0,
+      "end_sec": 9.5,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "dekimasen-node→掟key馬腥落地",
+        "一句串：口含魚嘅馬正掟一把key落地；佢行緊落樓梯、踏到最後一級落地"
+      ],
+      "distractors": [
+        "o-nabe-no-chūmon-dake→鵝拿bear／囉豬芒dark茄",
+        "一句串：BB鵝攞住泰迪熊底部；人身芒果豬鼻正食一粒好黑嘅番茄"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-2jikan-food75-5-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 5,
+    "text": "ラストオーダー"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
+      "start_sec": 4.2,
+      "end_sec": 5.0,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "Tw_jDLfdbn8",
+      "start_sec": 254,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "0QdufPZCDB4",
+      "start_sec": 3577,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "4PbGzwA8IFU",
+      "start_sec": 1517,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

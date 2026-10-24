@@ -1,0 +1,33 @@
+{
+  "quiz_id": "mother-target-2jikan-food75-8-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 8,
+    "text": "ご了承ください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "請見諒"
+    },
+    {
+      "type": "select_text",
+      "correct": "ご了承ください",
+      "distractors": [
+        "2時間制で",
+        "フードが",
+        "75分",
+        "ラストオーダー",
+        "とらせていただきます",
+        "お鍋の注文だけ",
+        "できませんので"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

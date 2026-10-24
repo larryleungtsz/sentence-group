@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-2jikan-food75-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 5,
+    "text": "ラストオーダー"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
+      "start_sec": 4.2,
+      "end_sec": 5.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "rasuto-ōdā→勒薯拖蛋",
+        "一句串：薯仔勒住拖車；拖車拖住一隻蛋"
+      ],
+      "distractors": [
+        "nanajūgo-fun→lala蕉 golf phone",
+        "一句串：香蕉雙手攞住兩支啦啦球；左腳踢緊高爾夫；左腳同時用緊智能電話"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-2jikan-food75-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 1,
+    "text": "2時間制で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "兩小時制。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "hotspot": {
+        "left": 0,
+        "top": 50,
+        "width": 18,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

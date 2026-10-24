@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T00:50:46+08:00",
+  "generated_at": "2026-10-25T03:30:00+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -6749,6 +6749,958 @@
       "level": 1,
       "kind": "chunk",
       "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-1-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-2-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-3-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-4-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-5-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-6-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-7-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "example-listen-2jikan-food75-8-v1",
+      "file": "data/quizzes/example-listen-2jikan-food75-8-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-1-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-2-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-3-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-4-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-5-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-6-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-7-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-2jikan-food75-8-v1",
+      "file": "data/quizzes/gloss-palace-2jikan-food75-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-1-v1",
+      "file": "data/quizzes/loci-2jikan-food75-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-2-v1",
+      "file": "data/quizzes/loci-2jikan-food75-2-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-3-v1",
+      "file": "data/quizzes/loci-2jikan-food75-3-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-4-v1",
+      "file": "data/quizzes/loci-2jikan-food75-4-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-5-v1",
+      "file": "data/quizzes/loci-2jikan-food75-5-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-6-v1",
+      "file": "data/quizzes/loci-2jikan-food75-6-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-7-v1",
+      "file": "data/quizzes/loci-2jikan-food75-7-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "loci-2jikan-food75-8-v1",
+      "file": "data/quizzes/loci-2jikan-food75-8-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-1-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-2-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-2-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-3-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-3-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-4-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-4-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-5-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-5-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-6-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-6-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-7-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-7-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "meaning-object-2jikan-food75-8-v1",
+      "file": "data/quizzes/meaning-object-2jikan-food75-8-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-1-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-1-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-2-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-2-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-3-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-3-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-4-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-4-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-5-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-5-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-6-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-6-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-7-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-7-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "mother-lang-2jikan-food75-8-v1",
+      "file": "data/quizzes/mother-lang-2jikan-food75-8-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-1-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-2-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-2-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-3-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-3-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-4-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-4-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-5-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-5-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-6-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-6-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-7-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-7-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "mother-target-2jikan-food75-8-v1",
+      "file": "data/quizzes/mother-target-2jikan-food75-8-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "sequence-2jikan-food75-v1",
+      "file": "data/quizzes/sequence-2jikan-food75-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。"
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-1-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-2-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-2-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-3-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-3-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-4-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-4-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-5-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-5-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-6-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-6-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-7-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-7-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "shadow-025-2jikan-food75-8-v1",
+      "file": "data/quizzes/shadow-025-2jikan-food75-8-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-2-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-2-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-3-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-3-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-4-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-4-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-5-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-5-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-6-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-6-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-7-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-7-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-8-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-8-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "shadow-05-2jikan-food75-9-v1",
+      "file": "data/quizzes/shadow-05-2jikan-food75-9-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-2-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-3-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-4-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-5-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-6-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-6-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-7-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-7-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-8-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-8-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "sounding-2jikan-food75-9-v1",
+      "file": "data/quizzes/sounding-2jikan-food75-9-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-1-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-2-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-2-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-3-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-3-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-4-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-4-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-5-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-5-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-6-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-6-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-7-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-7-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "target-mnemonic-2jikan-food75-8-v1",
+      "file": "data/quizzes/target-mnemonic-2jikan-food75-8-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "whole-listen-2jikan-food75-v1",
+      "file": "data/quizzes/whole-listen-2jikan-food75-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "sentence",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。"
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-1-v1",
+      "file": "data/quizzes/writing-2jikan-food75-1-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-2-v1",
+      "file": "data/quizzes/writing-2jikan-food75-2-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-3-v1",
+      "file": "data/quizzes/writing-2jikan-food75-3-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-4-v1",
+      "file": "data/quizzes/writing-2jikan-food75-4-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-5-v1",
+      "file": "data/quizzes/writing-2jikan-food75-5-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-6-v1",
+      "file": "data/quizzes/writing-2jikan-food75-6-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-7-v1",
+      "file": "data/quizzes/writing-2jikan-food75-7-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "writing-2jikan-food75-8-v1",
+      "file": "data/quizzes/writing-2jikan-food75-8-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-2-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-2-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-3-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-3-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-4-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-4-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-5-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-5-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-6-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-6-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-7-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-7-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-8-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-8-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "youglish-2jikan-food75-9-v1",
+      "file": "data/quizzes/youglish-2jikan-food75-9-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "story-ni-jikan-sei-de-1-v1",
+      "file": "data/quizzes/story-ni-jikan-sei-de-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "story-fuudo-ga-2-v1",
+      "file": "data/quizzes/story-fuudo-ga-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "story-nanajugo-fun-3-v1",
+      "file": "data/quizzes/story-nanajugo-fun-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "story-rasuto-oodaa-4-v1",
+      "file": "data/quizzes/story-rasuto-oodaa-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "story-torasete-itadakimasu-5-v1",
+      "file": "data/quizzes/story-torasete-itadakimasu-5-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "story-onabe-no-chuumon-dake-6-v1",
+      "file": "data/quizzes/story-onabe-no-chuumon-dake-6-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "story-dekimasen-node-7-v1",
+      "file": "data/quizzes/story-dekimasen-node-7-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "story-goryoushou-kudasai-8-v1",
+      "file": "data/quizzes/story-goryoushou-kudasai-8-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
       "chunk_id": 8
     }
   ]

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-2jikan-food75-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+  "chunk": {
+    "id": 5,
+    "text": "とらせていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "接單微鞠躬位有酒紅 happi 大嬸雙手剛接過訂單、微鞠躬停住。請在圖中點這接單店員所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "hotspot": {
+        "left": 28,
+        "top": 8,
+        "width": 18,
+        "height": 50,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

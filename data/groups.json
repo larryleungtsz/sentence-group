@@ -558,6 +558,90 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "2jikan-food75",
+      "title": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。お鍋の注文だけできませんので、ご了承ください。",
+      "sentence_added_at": "2026-10-25T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-24/25; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4033b2a72956803a82d9d1236adb597c",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Skip=true on お席の方が (1) — admitted for order only, no quiz dues, no dense. Sequence (Q11) uses 8 active hotspots only; whole-sentence includes all pieces in audio.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "お席の方が",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 2,
+          "text": "2時間制で",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first dense-eligible chunk may start T01 immediately (skip id=1 does not gate)",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681f7b538c36fb114fa3d",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "フードが",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681f59158d779a3bd602b",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "75分",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a72956810e9e5ee7b4fa6dc6c5",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ラストオーダー",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a729568174b13aec2a12c0a7b1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "とらせていただきます",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681e9989ae37d084e2666",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "お鍋の注文だけ",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681b3aef2efaa6c98c3a8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "できませんので",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681aaab59eb887c823917",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "ご了承ください",
+          "chunk_added_at": "2026-10-25T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4033b2a7295681d8b7adea1942caa0f8",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }
