@@ -342,7 +342,7 @@
       "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-23; edit when real add time is known",
       "notion_palace_url": "https://app.notion.com/p/4003b2a729568093bcdffbba9d1fcb9b",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. 「めっちゃ」already_introduced from chashu-shittori — does not occupy dense; new-sentence quizzes (mitame-irotsuya-*-3 / story-meccha-mitame-3) exported.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. 「めっちゃ」(id=3) skip=true — admitted for order only, no quiz dues, no dense. Sequence/whole-sentence quizzes still include that piece.",
       "chunks": [
         {
           "id": 1,
@@ -362,16 +362,15 @@
         {
           "id": 3,
           "text": "めっちゃ",
-          "already_introduced": true,
-          "shared_with_prior_group": "chashu-shittori",
-          "chunk_added_at_note": "already introduced in chashu-shittori — does not occupy dense; new-sentence quizzes only",
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
           "notion_url": "https://app.notion.com/p/4013b2a7295681079745fc8b62a04098",
-          "quizzes_ready": true
+          "quizzes_ready": false,
+          "skip": true
         },
         {
           "id": 4,
           "text": "いいから",
-          "chunk_added_at_note": "not yet admitted — waits until nearest prior non-already_introduced (chunk 2) reaches T1",
+          "chunk_added_at_note": "not yet admitted — waits until nearest prior dense-eligible (chunk 2) reaches T1; skip chunk 3 does not gate",
           "notion_url": "https://app.notion.com/p/4013b2a7295681a2af8eef5afca3a975",
           "quizzes_ready": true
         },

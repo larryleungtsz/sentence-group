@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T02:55:31+08:00",
+  "generated_at": "2026-10-25T00:50:46+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -333,15 +333,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "example-listen-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/example-listen-mitame-irotsuya-3-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "example-listen-mitame-irotsuya-4-v1",
@@ -857,15 +848,6 @@
       "chunk_id": 2
     },
     {
-      "quiz_id": "gloss-palace-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/gloss-palace-mitame-irotsuya-3-v1.json",
-      "objective": "gloss_to_palace_tap",
-      "level": 2,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
-    },
-    {
       "quiz_id": "gloss-palace-mitame-irotsuya-4-v1",
       "file": "data/quizzes/gloss-palace-mitame-irotsuya-4-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -1377,15 +1359,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "loci-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/loci-mitame-irotsuya-3-v1.json",
-      "objective": "loci_description_tap",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "loci-mitame-irotsuya-4-v1",
@@ -1901,15 +1874,6 @@
       "chunk_id": 2
     },
     {
-      "quiz_id": "meaning-object-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/meaning-object-mitame-irotsuya-3-v1.json",
-      "objective": "meaning_object_select_and_tap",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
-    },
-    {
       "quiz_id": "meaning-object-mitame-irotsuya-4-v1",
       "file": "data/quizzes/meaning-object-mitame-irotsuya-4-v1.json",
       "objective": "meaning_object_select_and_tap",
@@ -2412,15 +2376,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "mother-lang-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/mother-lang-mitame-irotsuya-3-v1.json",
-      "objective": "mother_language_pronounce",
-      "level": 3,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "mother-lang-mitame-irotsuya-4-v1",
@@ -2934,15 +2889,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "mother-target-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/mother-target-mitame-irotsuya-3-v1.json",
-      "objective": "mother_to_target_language",
-      "level": 3,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "mother-target-mitame-irotsuya-4-v1",
@@ -3530,15 +3476,6 @@
       "chunk_id": 2
     },
     {
-      "quiz_id": "shadow-025-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/shadow-025-mitame-irotsuya-3-v1.json",
-      "objective": "word_shadowing_025",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
-    },
-    {
       "quiz_id": "shadow-025-mitame-irotsuya-4-v1",
       "file": "data/quizzes/shadow-025-mitame-irotsuya-4-v1.json",
       "objective": "word_shadowing_025",
@@ -4050,15 +3987,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "shadow-05-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/shadow-05-mitame-irotsuya-3-v1.json",
-      "objective": "tone_shadowing_05",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "shadow-05-mitame-irotsuya-4-v1",
@@ -4574,15 +4502,6 @@
       "chunk_id": 2
     },
     {
-      "quiz_id": "sounding-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/sounding-mitame-irotsuya-3-v1.json",
-      "objective": "pronunciation_sounding_select",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
-    },
-    {
       "quiz_id": "sounding-mitame-irotsuya-4-v1",
       "file": "data/quizzes/sounding-mitame-irotsuya-4-v1.json",
       "objective": "pronunciation_sounding_select",
@@ -5040,15 +4959,6 @@
       "kind": "chunk",
       "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "story-meccha-mitame-3-v1",
-      "file": "data/quizzes/story-meccha-mitame-3-v1.json",
-      "objective": "story_select_image",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "story-mitamenno-1-v1",
@@ -5609,15 +5519,6 @@
       "chunk_id": 2
     },
     {
-      "quiz_id": "target-mnemonic-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/target-mnemonic-mitame-irotsuya-3-v1.json",
-      "objective": "target_to_mnemonic_image",
-      "level": 2,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
-    },
-    {
       "quiz_id": "target-mnemonic-mitame-irotsuya-4-v1",
       "file": "data/quizzes/target-mnemonic-mitame-irotsuya-4-v1.json",
       "objective": "target_to_mnemonic_image",
@@ -6138,15 +6039,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "writing-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/writing-mitame-irotsuya-3-v1.json",
-      "objective": "writing_shadowing",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "writing-mitame-irotsuya-4-v1",
@@ -6705,15 +6597,6 @@
       "kind": "chunk",
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
       "chunk_id": 2
-    },
-    {
-      "quiz_id": "youglish-mitame-irotsuya-3-v1",
-      "file": "data/quizzes/youglish-mitame-irotsuya-3-v1.json",
-      "objective": "youglish_listen",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
-      "chunk_id": 3
     },
     {
       "quiz_id": "youglish-mitame-irotsuya-4-v1",
