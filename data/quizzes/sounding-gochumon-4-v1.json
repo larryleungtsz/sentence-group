@@ -13,8 +13,8 @@
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
-      "start_sec": 2.92,
-      "end_sec": 3.54,
+      "start_sec": 2.1,
+      "end_sec": 2.4,
       "rate": 1
     },
     {

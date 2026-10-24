@@ -15,7 +15,8 @@
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
       "start_sec": 0.05,
       "rate": 0.25,
-      "self_check": true
+      "self_check": true,
+      "end_sec": 0.6
     }
   ],
   "feedback": {

@@ -14,7 +14,7 @@
       "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
       "start_sec": 0.05,
-      "end_sec": 0.67,
+      "end_sec": 0.6,
       "self_check": true
     },
     {
