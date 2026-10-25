@@ -21,7 +21,7 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "hito-ni-wa→hit多knee](https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3%22,%22start_sec%22:3.32,%22end_sec%22:4.21,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22hito-ni-wa%E2%86%92hit%E5%A4%9Aknee) 蛙",
+        "hito-ni-wa→hit多knee 蛙",
         "一句串：青蛙用膝頭哥踢益力多樽。"
       ],
       "distractors": [

@@ -16,6 +16,38 @@
     return n;
   }
 
+
+  /** Strip markdown-link / raw audio URL junk accidentally baked into text choices. */
+  function cleanChoiceText(s) {
+    if (typeof s !== 'string') return s;
+    if (s.indexOf('](') === -1 && s.indexOf('http') === -1 && s.indexOf('raw.githubusercontent') === -1) {
+      return s;
+    }
+    // LABEL](https://...) TRAIL  or  LABEL](<https://...) TRAIL
+    var m = s.match(/^(.*?)\]\(?<?https?:\/\//i);
+    if (!m) {
+      // strip bare long raw.githubusercontent URLs
+      return s.replace(/https?:\/\/raw\.githubusercontent\.com\S+/gi, '').replace(/\s+/g, ' ').trim() || s;
+    }
+    var label = m[1].trim();
+    var after = s.slice(m[0].length);
+    try {
+      after = decodeURIComponent(after.replace(/\+/g, ' '));
+    } catch (e) { /* keep raw */ }
+    var trail = '';
+    var endM = after.match(/\)>?\s*([^\]]+?)\s*$/);
+    if (endM) {
+      trail = endM[1].replace(/^>+/, '').trim();
+    }
+    trail = trail.replace(/^["'\[\]]+|["'\[\]]+$/g, '').replace(/^\)\s*/, '').trim();
+    // drop leftover ") ≈" artifact → "≈"
+    if (/^\)\s*≈/.test(trail)) trail = trail.replace(/^\)\s*/, '');
+    if (!trail) return label;
+    if (trail.indexOf(label) === 0) return trail;
+    return (label + ' ' + trail).replace(/\)\s+\)\s*≈/g, ') ≈').replace(/([^\s)])\s+\)\s*≈/g, '$1 ≈').trim();
+  }
+
+
   function hitTest(imgEl, evt, hotspot) {
     const rect = imgEl.getBoundingClientRect();
     const x = ((evt.clientX - rect.left) / rect.width) * 100;
@@ -149,17 +181,18 @@
 
       if (type === 'select_text') {
         body.appendChild(el('p', 'instruction', '請選擇正確答案'));
-        const opts = shuffle([slide.correct].concat(slide.distractors || []));
+        const correct = cleanChoiceText(slide.correct);
+        const opts = shuffle([correct].concat((slide.distractors || []).map(cleanChoiceText)));
         const list = el('div', 'choices');
         opts.forEach((opt) => {
           const b = el('button', 'btn choice', opt);
           b.type = 'button';
           b.addEventListener('click', () => {
-            if (opt === slide.correct) {
+            if (opt === correct) {
               idx++;
               renderSlide();
             } else {
-              showFail('錯：正確是「' + slide.correct + '」');
+              showFail('錯：正確是「' + correct + '」');
             }
           });
           list.appendChild(b);
@@ -170,8 +203,9 @@
 
       if (type === 'multi_select') {
         body.appendChild(el('p', 'instruction', slide.instruction || '請全選正確項'));
-        const correctSet = new Set(slide.correct || []);
-        const opts = shuffle((slide.correct || []).concat(slide.distractors || []));
+        const correctList = (slide.correct || []).map(cleanChoiceText);
+        const correctSet = new Set(correctList);
+        const opts = shuffle(correctList.concat((slide.distractors || []).map(cleanChoiceText)));
         const selected = new Set();
         const list = el('div', 'choices');
         opts.forEach((opt) => {

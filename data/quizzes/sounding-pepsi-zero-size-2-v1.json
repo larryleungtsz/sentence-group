@@ -21,7 +21,7 @@
       "type": "multi_select",
       "instruction": "選出與剛才讀音相關的諧音。",
       "correct": [
-        "仙丹其中一邊輕微燒焦(丹邊燶)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3%22,%22start_sec%22:0.68,%22end_sec%22:1.31,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22%E4%BB%99%E4%B8%B9%E5%85%B6%E4%B8%AD%E4%B8%80%E9%82%8A%E8%BC%95%E5%BE%AE%E7%87%92%E7%84%A6(%E4%B8%B9%E9%82%8A%E7%87%B6)>) ≈ tanpin-no",
+        "仙丹其中一邊輕微燒焦(丹邊燶) ≈ tanpin-no",
         "一句串：丹邊燶(丹邊燶)。"
       ],
       "distractors": [
