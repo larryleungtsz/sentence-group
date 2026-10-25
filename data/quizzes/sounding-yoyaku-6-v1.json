@@ -12,9 +12,9 @@
     {
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
-      "start_sec": 6.0,
-      "end_sec": 7.0,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
+      "start_sec": 7.3,
+      "end_sec": 8.3,
       "rate": 1.0
     },
     {

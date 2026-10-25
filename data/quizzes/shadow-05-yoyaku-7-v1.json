@@ -6,14 +6,14 @@
     {
       "type": "audio_shadow",
       "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
       "self_check": true,
       "feedback": {
         "on_tick": "pass",
         "on_cross": "retry"
       },
-      "start_sec": 7.0,
-      "end_sec": 7.8,
+      "start_sec": 8.3,
+      "end_sec": 9.0,
       "rate": 0.5
     }
   ],
