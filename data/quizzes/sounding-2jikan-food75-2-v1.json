@@ -24,7 +24,10 @@
         "ni-jikan-sei-de→knee芝鋼射地",
         "一句串：跪低嘅芝士正用鋼槍射向地板"
       ],
-      "distractors": []
+      "distractors": [
+        "fūdo-ga→呼door guard",
+        "一句串：bodyguard 正用力吹一扇門"
+      ]
     }
   ],
   "feedback": {
