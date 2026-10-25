@@ -1,0 +1,116 @@
+{
+  "quiz_id": "sequence-aragoshi-mikanshu-v1",
+  "objective": "sequence_training",
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "あらごしみかん酒の",
+          "hotspot": {
+            "left": 1,
+            "top": 30,
+            "width": 12,
+            "height": 68,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "ソーダ割り",
+          "hotspot": {
+            "left": 14,
+            "top": 40,
+            "width": 14,
+            "height": 55,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "ぼくは",
+          "hotspot": {
+            "left": 30,
+            "top": 18,
+            "width": 20,
+            "height": 62,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "おかわりで",
+          "hotspot": {
+            "left": 86,
+            "top": 55,
+            "width": 14,
+            "height": 38,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "以上でよろしいですか",
+          "hotspot": {
+            "left": 64,
+            "top": 8,
+            "width": 14,
+            "height": 36,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "とりあえず以上で",
+          "hotspot": {
+            "left": 68,
+            "top": 28,
+            "width": 14,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "お持ちしますね",
+          "hotspot": {
+            "left": 48,
+            "top": 12,
+            "width": 14,
+            "height": 65,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "こちら",
+          "hotspot": {
+            "left": 84,
+            "top": 78,
+            "width": 16,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 9,
+          "text": "おさげしますね",
+          "hotspot": {
+            "left": 66,
+            "top": 55,
+            "width": 20,
+            "height": 24,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

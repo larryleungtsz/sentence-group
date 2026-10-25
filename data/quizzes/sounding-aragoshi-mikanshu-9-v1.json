@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-aragoshi-mikanshu-9-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 14,
+    "text": "おさげしますね"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 15.8,
+      "end_sec": 16.98,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "o-sage-shimasu-ne→惡沙基／撕馬薯",
+        "一句串：面目猙獰、着彩虹Tee嘅人形沙人正撕開馬手上嘅薯條"
+      ],
+      "distractors": [
+        "kochira→哥刺拉",
+        "一句串：全身長滿刺嘅哥斯拉"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

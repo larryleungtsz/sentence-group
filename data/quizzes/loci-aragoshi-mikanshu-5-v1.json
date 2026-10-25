@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aragoshi-mikanshu-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 9,
+    "text": "以上でよろしいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "點單位圍裙女有手持訂單紙望你停住。請在圖中點這圍裙女／訂單所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspot": {
+        "left": 64,
+        "top": 8,
+        "width": 14,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

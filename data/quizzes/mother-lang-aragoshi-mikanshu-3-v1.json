@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-aragoshi-mikanshu-3-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 6,
+    "text": "ぼくは"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "我呢。How to pronounce this word?",
+      "gloss": "我呢",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

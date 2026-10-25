@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-aragoshi-mikanshu-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 12,
+    "text": "お持ちしますね"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 13.9,
+      "end_sec": 15.4,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "o-mochi-shimasu-ne→按摩池／絲mask泥",
+        "一句串：泳池入面好多按摩噴射裝置；泥怪戴住蛛絲面具"
+      ],
+      "distractors": [
+        "toriaezu-ijō-de→駝鳥／牙air阻／耳坐釘",
+        "一句串：卡通牙仔用口吹風牆擋住周圍跑嘅駝鳥；隔離卡通耳仔坐喺釘上"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

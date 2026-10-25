@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-aragoshi-mikanshu-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 3,
+    "text": "ソーダ割り"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見蘇打倒入＋氣泡混酒＝「蘇打兌」；見這幕→想起蘇打兌開。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-soda-wari-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-boku-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-aragoshi-mikanshu-no-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspot": {
+        "left": 14,
+        "top": 40,
+        "width": 14,
+        "height": 55,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

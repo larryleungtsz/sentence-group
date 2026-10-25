@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-aragoshi-mikanshu-2-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 3,
+    "text": "ソーダ割り"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 3,
+      "end_sec": 4.8,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "HVLUQdkkByw",
+      "start_sec": 307,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "iIzsKuaUfPo",
+      "start_sec": 1095,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "QiVm9l8OyvI",
+      "start_sec": 245,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "writing-aragoshi-mikanshu-3-v1",
+  "objective": "writing_shadowing",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 6,
+    "text": "ぼくは"
+  },
+  "slides": [
+    {
+      "type": "writing",
+      "instruction": "請抄寫。",
+      "target": "ぼくは",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

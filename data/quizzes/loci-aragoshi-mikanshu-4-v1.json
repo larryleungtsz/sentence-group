@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aragoshi-mikanshu-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 8,
+    "text": "おかわりで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近桌右緣滿杯有滿杯啤酒剛入鏡停住。請在圖中點這滿杯所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspot": {
+        "left": 86,
+        "top": 55,
+        "width": 14,
+        "height": 38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

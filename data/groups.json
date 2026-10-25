@@ -1,6 +1,126 @@
 {
   "groups": [
     {
+      "slug": "aragoshi-mikanshu",
+      "title": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "sentence_added_at": "2026-10-26T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-25/26; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4043b2a7295680fbbc15c24faa30e4e4",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Skip=true on 飲み物が／1つ／じゃあ／ビール／はい — admitted for order only, no quiz dues, no dense. Sequence (Q11) uses 9 active hotspots only; whole-sentence includes all pieces in audio.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "飲み物が",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 2,
+          "text": "あらごしみかん酒の",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first dense-eligible (id=2) may start T01 immediately (skips do not gate)",
+          "notion_url": "https://app.notion.com/p/4043b2a729568135b459e8815f2802cb",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "ソーダ割り",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a72956816db6c1c3c09dfa7d68",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "1つ",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 5,
+          "text": "じゃあ",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 6,
+          "text": "ぼくは",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a72956810a893bea2145d361ee",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "ビール",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 8,
+          "text": "おかわりで",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a72956814580dcda5292ffc81f",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "以上でよろしいですか",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a72956818b8be0e318f35470f8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "はい",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 11,
+          "text": "とりあえず以上で",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a729568127be60d0bff7997cf0",
+          "quizzes_ready": true
+        },
+        {
+          "id": 12,
+          "text": "お持ちしますね",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a72956816b903bc86f22f51c27",
+          "quizzes_ready": true
+        },
+        {
+          "id": 13,
+          "text": "こちら",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a7295681e2832ad62daaffcd0a",
+          "quizzes_ready": true
+        },
+        {
+          "id": 14,
+          "text": "おさげしますね",
+          "chunk_added_at": "2026-10-26T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4043b2a7295681a3b3e9dbacb3c22552",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
+    },
+    {
       "slug": "gochumon",
       "title": "ご注文お決まりになりましたらお呼びください",
       "sentence": "ご注文お決まりになりましたらお呼びください",

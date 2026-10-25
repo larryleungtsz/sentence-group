@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-aragoshi-mikanshu-2-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 3,
+    "text": "ソーダ割り"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "蘇打兌。How to pronounce this word?",
+      "gloss": "蘇打兌",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

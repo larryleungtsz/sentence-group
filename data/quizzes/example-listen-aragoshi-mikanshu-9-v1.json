@@ -1,0 +1,23 @@
+{
+  "quiz_id": "example-listen-aragoshi-mikanshu-9-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 14,
+    "text": "おさげしますね"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-sage-shimasu-ne.mp3",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

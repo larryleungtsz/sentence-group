@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-aragoshi-mikanshu-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 6,
+    "text": "ぼくは"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 4.8,
+      "end_sec": 5.7,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "boku-wa→扑鼓蛙",
+        "一句串：青蛙拎住木槌扑緊現代鼓"
+      ],
+      "distractors": [
+        "sōda-wari→鎖蛋／rally",
+        "一句串：越野賽車入面有隻被鎖住嘅蛋"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

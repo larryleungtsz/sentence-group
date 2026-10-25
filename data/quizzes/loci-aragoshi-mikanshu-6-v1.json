@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aragoshi-mikanshu-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 11,
+    "text": "とりあえず以上で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "點單位合紙有雙手合紙微推向前停住。請在圖中點這合紙所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspot": {
+        "left": 68,
+        "top": 28,
+        "width": 14,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

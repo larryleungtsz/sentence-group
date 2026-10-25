@@ -1,0 +1,22 @@
+{
+  "quiz_id": "whole-listen-aragoshi-mikanshu-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "rate_options": [
+        1.5,
+        1,
+        0.5
+      ],
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

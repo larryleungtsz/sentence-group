@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-aragoshi-mikanshu-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 9,
+    "text": "以上でよろしいですか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 8.2,
+      "end_sec": 11.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "ijō-de-yoroshii-desu-ka→耳坐釘／油螺絲／desk car",
+        "一句串：卡通耳仔坐喺釘上；手摸住一條好油嘅螺絲；隔離有部用枱砌成嘅車"
+      ],
+      "distractors": [
+        "okawari-de→鱷家／挖梨地",
+        "一句串：卡通鱷魚喺掛滿鱷魚家庭照嘅屋企挖梨花紋地板"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

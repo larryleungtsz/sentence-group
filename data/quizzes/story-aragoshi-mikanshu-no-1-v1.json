@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-aragoshi-mikanshu-no-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 2,
+    "text": "あらごしみかん酒の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "吧檯左角燈光偏暖。一隻蜘蛛繃緊望住前方——一隻面係鋼造嘅獅子專心用屁股坐穩喺棵樹上——酒瓶標「蜜柑」剛轉正面、瓶內粗果渣可見停住：粗濾蜜柑酒的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-aragoshi-mikanshu-no-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-soda-wari-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-boku-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-okawari-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-ijou-de-yoroshii-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-ijou-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-omochi-shimasune-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kochira-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-osage-shimasune-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

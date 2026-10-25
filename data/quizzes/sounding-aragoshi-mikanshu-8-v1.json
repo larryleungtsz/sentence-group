@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-aragoshi-mikanshu-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 13,
+    "text": "こちら"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 15.4,
+      "end_sec": 15.8,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "kochira→哥刺拉",
+        "一句串：全身長滿刺嘅哥斯拉"
+      ],
+      "distractors": [
+        "o-mochi-shimasu-ne→按摩池／絲mask泥",
+        "一句串：泳池入面好多按摩噴射裝置；泥怪戴住蛛絲面具"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

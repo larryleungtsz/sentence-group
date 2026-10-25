@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-okawari-de-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 8,
+    "text": "おかわりで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近桌右緣燈光偏暖。一隻卡通鱷魚專心喺掛滿鱷魚家庭照嘅屋企，用力挖開一塊塊梨花紋地板——空杯剛舉起、第二杯滿杯同時入鏡停住：再來一杯。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-okawari-de-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-aragoshi-mikanshu-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-soda-wari-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-boku-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-ijou-de-yoroshii-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-ijou-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-omochi-shimasune-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kochira-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-osage-shimasune-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

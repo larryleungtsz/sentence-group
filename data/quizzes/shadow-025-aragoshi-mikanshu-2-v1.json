@@ -1,0 +1,26 @@
+{
+  "quiz_id": "shadow-025-aragoshi-mikanshu-2-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+  "chunk": {
+    "id": 3,
+    "text": "ソーダ割り"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 3.0,
+      "rate": 0.25,
+      "self_check": true,
+      "end_sec": 4.8
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
