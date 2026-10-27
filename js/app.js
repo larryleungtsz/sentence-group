@@ -45,6 +45,7 @@
         admitted:
           meta.kind === 'chunk' ? admitted.has(meta.chunk_id) : true,
         skipped: meta.kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
+        scheduleStages: meta.schedule_stages || null,
       });
       if (stages.length) dueCount++;
     }

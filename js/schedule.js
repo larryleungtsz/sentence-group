@@ -213,6 +213,7 @@
     now,
     admitted,
     skipped,
+    scheduleStages,
   }) {
     const done = new Set(completedStages || []);
     if (kind === 'sentence') {
@@ -224,6 +225,14 @@
       const label = labels[si];
       const planned = (schedule.sentence_schedule || {})[objective] || [];
       if (!planned.includes(label)) return [];
+      // Optional per-quiz pin: only due on listed stage labels (e.g. daily Q18).
+      if (
+        Array.isArray(scheduleStages) &&
+        scheduleStages.length &&
+        !scheduleStages.includes(label)
+      ) {
+        return [];
+      }
       if (done.has(label)) return [];
       return [label];
     }

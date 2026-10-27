@@ -176,5 +176,5 @@
       "T+30"
     ]
   },
-  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; sentence: always 1d so T+N ≈ day offset). Chunk admission: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3."
+  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; sentence: always 1d so T+N ≈ day offset). Chunk admission: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3. sentence_segment_shadowing site expand: reverse one-clip/day from partition masters (schedule_stages pin each daily quiz to T+N)."
 }

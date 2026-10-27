@@ -71,6 +71,7 @@
       now: nowMs,
       admitted,
       skipped: kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
+      scheduleStages: meta.schedule_stages || null,
     });
   }
 
