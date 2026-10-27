@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T03:14:51+08:00",
+  "generated_at": "2026-10-28T02:01:54+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -9011,6 +9011,72 @@
       "level": null,
       "kind": "sentence",
       "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。"
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-2s-v2",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-2s-v2.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-3s-v1",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-3s-v1.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-4s-v1",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-4s-v1.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-5s-v1",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-5s-v1.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-6s-v1",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-6s-v1.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-aragoshi-mikanshu-full-v1",
+      "file": "data/quizzes/sentence-segment-shadow-aragoshi-mikanshu-full-v1.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。じゃあ、ぼくはビールおかわりで。ビールおかわりで。以上でよろしいですか？はい、とりあえず以上で。はい、お持ちしますね～こちらおさげしますね～",
+      "markdown_fixed": false,
+      "notion_url": null
     }
   ]
 }

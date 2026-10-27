@@ -57,34 +57,49 @@
   }
 
   function makeAudio(src, opts) {
+    opts = opts || {};
+    const segmentShadow = !!opts.segment_shadow;
     const wrap = el('div', 'audio-wrap');
     const audio = document.createElement('audio');
-    audio.controls = true;
+    // Segment shadowing: custom 重播 only (no native scrub).
+    audio.controls = !segmentShadow;
     audio.preload = 'auto';
     audio.src = src;
-    if (opts && opts.rate != null) audio.playbackRate = opts.rate;
+    const fixedRate = segmentShadow ? 0.75 : opts.rate;
+    if (fixedRate != null) audio.playbackRate = fixedRate;
     wrap.appendChild(audio);
 
     const btns = el('div', 'audio-btns');
-    const play = el('button', 'btn', '播放');
+    const play = el('button', 'btn', segmentShadow ? '重播' : '播放');
     play.type = 'button';
+    let clipListener = null;
     play.addEventListener('click', () => {
-      if (opts && opts.start_sec != null) audio.currentTime = opts.start_sec;
-      if (opts && opts.rate != null) audio.playbackRate = opts.rate;
+      if (clipListener) {
+        audio.removeEventListener('timeupdate', clipListener);
+        clipListener = null;
+      }
+      const start = opts.start_sec != null ? opts.start_sec : 0;
+      if (opts.start_sec != null || segmentShadow) audio.currentTime = start;
+      const useRate = segmentShadow ? 0.75 : opts.rate;
+      if (useRate != null) audio.playbackRate = useRate;
       audio.play();
-      if (opts && opts.end_sec != null) {
-        const onTime = () => {
+      if (opts.end_sec != null) {
+        clipListener = () => {
           if (audio.currentTime >= opts.end_sec) {
             audio.pause();
-            audio.removeEventListener('timeupdate', onTime);
+            if (clipListener) {
+              audio.removeEventListener('timeupdate', clipListener);
+              clipListener = null;
+            }
           }
         };
-        audio.addEventListener('timeupdate', onTime);
+        audio.addEventListener('timeupdate', clipListener);
       }
     });
     btns.appendChild(play);
 
-    if (opts && opts.rate_options) {
+    // No speed picker for sentence_segment_shadowing (fixed 0.75×).
+    if (!segmentShadow && opts.rate_options) {
       opts.rate_options.forEach((r) => {
         const b = el('button', 'btn btn-ghost', r + '×');
         b.type = 'button';
@@ -374,7 +389,13 @@
         return;
       }
 
-      if (type === 'audio_listen' || type === 'audio_shadow' || type === 'audio_chunk' || type === 'audio_check') {
+      if (
+        type === 'audio_listen' ||
+        type === 'audio_shadow' ||
+        type === 'audio_segment_shadow' ||
+        type === 'audio_chunk' ||
+        type === 'audio_check'
+      ) {
         body.appendChild(el('p', 'instruction', slide.instruction || '請聆聽'));
         // Accept either string URL or {url, start_sec, end_sec, rate} (Notion Q bots sometimes nest).
         let audioSrc = slide.audio;
@@ -392,6 +413,17 @@
             rate_options: audioOpts.rate_options,
           };
           audioSrc = audioSrc.url || audioSrc.src || '';
+        }
+        // sentence_segment_shadowing / audio_segment_shadow / rate 0.75 clipped slide → force 0.75× + 重播.
+        const hasClip = audioOpts.start_sec != null || audioOpts.end_sec != null;
+        const segmentShadow =
+          quiz.objective === 'sentence_segment_shadowing' ||
+          type === 'audio_segment_shadow' ||
+          (Number(audioOpts.rate) === 0.75 && hasClip);
+        if (segmentShadow) {
+          audioOpts.segment_shadow = true;
+          audioOpts.rate = 0.75;
+          audioOpts.rate_options = null;
         }
         body.appendChild(makeAudio(audioSrc, audioOpts));
         if (slide.self_check !== false) {

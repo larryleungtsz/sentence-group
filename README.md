@@ -94,6 +94,38 @@ data/quizzes/*.json 每題一份 Quiz JSON
 3. 到期 Level 3（按 chunk id）
 4. 到期 Sentence quizzes
 
+## Sentence objective：`sentence_segment_shadowing`（整句音軌分段跟讀）
+
+由 Sentence Segment Shadowing Bot 出 JSON。站點讀 `objective: "sentence_segment_shadowing"`（slide `type` 可用 `audio_shadow` 或別名 `audio_segment_shadow`）。
+
+- 播放 `start_sec`→`end_sec`，速度固定 **0.75×**（唔顯示速度掣）
+- 按鈕標籤 **重播**；可無限重播；跟讀後自評 Tick／Cross（`self_check`）
+- 多 slide＝多段依序；只 1 slide（通常 0→句末）＝全句 0.75× 跟讀
+- `sentence_schedule.sentence_segment_shadowing`：每個 stage `T+1`…`T+30`（每日解鎖；sentence wait = 1 日，令 T+N ≈ 第 N 日）
+- `whole_sentence_listening` / `sequence_training`：維持 `T+3,T+6,…,T+30`
+
+例：
+
+```json
+{
+  "quiz_id": "sentence-segment-shadow-yoyaku-v1",
+  "objective": "sentence_segment_shadowing",
+  "sentence": "…",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀這一段。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-….mp3",
+      "start_sec": 0.05,
+      "end_sec": 4.1,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": { "on_tick": "pass", "on_cross": "retry" }
+}
+```
+
 ## 本地預覽
 
 ```bash

@@ -2,7 +2,7 @@
 (function (global) {
   const HOUR_MS = 3600 * 1000;
   const DAY_MS = 24 * HOUR_MS;
-  const SENTENCE_WAIT_MS = 3 * DAY_MS;
+  const SENTENCE_WAIT_MS = 1 * DAY_MS;
 
   /** Dense stages: T01, T02, T03 (indices 0–2). At most one chunk in dense at a time. */
   const DENSE_MAX_INDEX = 2;
@@ -170,29 +170,32 @@
     return new Date(state.lastCompletedAt).getTime() + SENTENCE_WAIT_MS;
   }
 
-  /** Ordered sentence stage labels from schedule.sentence_schedule (first objective's list, or union). */
+  /** Ordered sentence stage labels: union of all objectives' T+N, sorted by N. */
   function sentenceStageLabels(schedule) {
     const table = (schedule && schedule.sentence_schedule) || {};
     const keys = Object.keys(table);
     if (!keys.length) {
       const labels = [];
-      for (let d = 3; d <= 30; d += 3) labels.push('T+' + d);
+      for (let d = 1; d <= 30; d++) labels.push('T+' + d);
       return labels;
     }
-    // Prefer first listed objective order; fallback merge preserving first occurrence
-    const first = table[keys[0]] || [];
-    if (first.length) return first.slice();
     const seen = new Set();
-    const out = [];
     for (const k of keys) {
       for (const s of table[k] || []) {
-        if (!seen.has(s)) {
-          seen.add(s);
-          out.push(s);
-        }
+        if (s) seen.add(s);
       }
     }
-    return out;
+    if (!seen.size) {
+      const labels = [];
+      for (let d = 1; d <= 30; d++) labels.push('T+' + d);
+      return labels;
+    }
+    return Array.from(seen).sort((a, b) => {
+      const na = parseInt(String(a).replace(/^T\+/, ''), 10);
+      const nb = parseInt(String(b).replace(/^T\+/, ''), 10);
+      if (Number.isFinite(na) && Number.isFinite(nb) && na !== nb) return na - nb;
+      return String(a).localeCompare(String(b));
+    });
   }
 
   /**
