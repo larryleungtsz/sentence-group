@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T03:51:02+08:00",
+  "generated_at": "2026-10-29T03:52:47+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-amai-chashu-1-v1",
@@ -15395,6 +15395,426 @@
       "kind": "sentence",
       "chunk_id": null,
       "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+30"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d01",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d01.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+1"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d02",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d02.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+2"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d03",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d03.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+3"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d04",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d04.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+4"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d05",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d05.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+5"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d06",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d06.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+6"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d07",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d07.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+7"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d08",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d08.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+8"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d09",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d09.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+9"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d10",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d10.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+10"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d11",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d11.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+11"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d12",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d12.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+12"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d13",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d13.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+13"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d14",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d14.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+14"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d15",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d15.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+15"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d16",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d16.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+16"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d17",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d17.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+17"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d18",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d18.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+18"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d19",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d19.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+19"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d20",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d20.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+20"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d21",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d21.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+21"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d22",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d22.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+22"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d23",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d23.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+23"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d24",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d24.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+24"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d25",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d25.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+25"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d26",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d26.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+26"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d27",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d27.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+27"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d28",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d28.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+28"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d29",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d29.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+29"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d30",
+      "file": "data/quizzes/sentence-segment-shadow-goraitei-arigatou-d30.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
       "markdown_fixed": false,
       "notion_url": null,
       "schedule_stages": [

@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-goraitei-arigatou-d06",
+  "objective": "sentence_segment_shadowing",
+  "stage": "2s",
+  "day": 6,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
+      "start_sec": 1.95,
+      "end_sec": 4.2,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
