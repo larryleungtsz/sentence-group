@@ -101,6 +101,92 @@ function normalizeAudioSlides(quiz) {
   return quiz;
 }
 
+
+/** Optional Lexicon dump: /tmp/chunk-lexicon.json
+ *  Map chunk Name (JP) → { example_audio, example_l1, example_sentences, example_timestamps }
+ *  Prefer Lexicon Example Audio / L1 / sentences / timestamps for example_sentences_listening.
+ */
+function loadChunkLexicon() {
+  const p = '/tmp/chunk-lexicon.json';
+  try {
+    if (!fs.existsSync(p)) return {};
+    const data = JSON.parse(fs.readFileSync(p, 'utf8'));
+    return data && typeof data === 'object' ? data : {};
+  } catch (_) {
+    return {};
+  }
+}
+
+const CHUNK_LEXICON = loadChunkLexicon();
+
+function cleanExampleL1(s) {
+  if (!s || typeof s !== 'string') return '';
+  let t = s
+    .replace(/\\\\\[/g, '[')
+    .replace(/\\\\\]/g, ']')
+    .replace(/\\\\\./g, '.')
+    .replace(/\\\[/g, '[')
+    .replace(/\\\]/g, ']')
+    .replace(/\\\./g, '.')
+    .replace(/<br\s*\/?>/gi, '\n')
+    .replace(/\r/g, '');
+  const lines = t.split('\n').map((l) => l.trim()).filter(Boolean);
+  const kept = lines.filter((l) => !/^script\s*:/i.test(l));
+  return kept
+    .map((l) => l.replace(/\s*\[3秒空白\]\s*/g, ' ').trim())
+    .filter(Boolean)
+    .join('\n');
+}
+
+function isStableAudioUrl(u) {
+  return typeof u === 'string' && /^https?:\/\//i.test(u) && !/prod-files-secure\.s3\./i.test(u);
+}
+
+function preferAudio(existing, lexiconAudio) {
+  if (isStableAudioUrl(lexiconAudio)) return lexiconAudio;
+  if (isStableAudioUrl(existing)) return existing;
+  if (typeof lexiconAudio === 'string' && lexiconAudio) return lexiconAudio;
+  return existing;
+}
+
+function enrichExampleListenFromLexicon(quiz) {
+  if (quiz.objective !== 'example_sentences_listening') return quiz;
+  const chunkText = quiz.chunk && quiz.chunk.text;
+  const lex = (chunkText && CHUNK_LEXICON[chunkText]) || null;
+  if (!lex && !quiz.example_l1 && !quiz.example_sentences && !quiz.example_timestamps) {
+    return quiz;
+  }
+  const l1Raw = (lex && lex.example_l1) || quiz.example_l1 || '';
+  const l1 = cleanExampleL1(l1Raw);
+  const sentences = (lex && lex.example_sentences) || quiz.example_sentences || null;
+  const timestamps = (lex && lex.example_timestamps) || quiz.example_timestamps || null;
+  const lexAudio = lex && (lex.example_audio || lex.exampleAudio);
+
+  if (l1) quiz.example_l1 = l1;
+  if (sentences) quiz.example_sentences = sentences;
+  if (timestamps != null) quiz.example_timestamps = timestamps;
+
+  for (const s of quiz.slides || []) {
+    if (s.type !== 'audio_listen' && s.type !== 'audio_shadow' && s.type !== 'audio_check') continue;
+    if (l1) {
+      s.l1 = l1;
+      if (!s.gloss) s.gloss = l1;
+    }
+    if (lexAudio) {
+      const cur = typeof s.audio === 'string' ? s.audio : (s.audio && s.audio.url);
+      const next = preferAudio(cur, lexAudio);
+      if (typeof s.audio === 'object' && s.audio) s.audio.url = next;
+      else s.audio = next;
+    }
+    // Keep full-file play; store timestamps on quiz for later multi-utterance.
+    if (timestamps != null && s.example_timestamps == null) {
+      s.example_timestamps = timestamps;
+    }
+  }
+  return quiz;
+}
+
+
 function processRow(row, kind) {
   const name = row.Name;
   const objective = row.Objective;
@@ -119,7 +205,7 @@ function processRow(row, kind) {
     });
     return;
   }
-  const quiz = normalizeAudioSlides(result.data);
+  const quiz = enrichExampleListenFromLexicon(normalizeAudioSlides(result.data));
   if (level != null && quiz.level == null) quiz.level = level;
   if (objective && !quiz.objective) quiz.objective = objective;
   const file = slugFile(quiz.quiz_id);

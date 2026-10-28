@@ -397,6 +397,16 @@
         type === 'audio_check'
       ) {
         body.appendChild(el('p', 'instruction', slide.instruction || '請聆聽'));
+        // Example L1 (Chinese gloss) — Lexicon / quiz.example_l1 / slide.l1|gloss
+        const l1Text =
+          slide.l1 ||
+          slide.gloss ||
+          quiz.example_l1 ||
+          quiz.l1 ||
+          '';
+        if (l1Text) {
+          body.appendChild(el('p', 'example-l1 gloss', l1Text));
+        }
         // Accept either string URL or {url, start_sec, end_sec, rate} (Notion Q bots sometimes nest).
         let audioSrc = slide.audio;
         let audioOpts = {

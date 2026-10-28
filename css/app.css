@@ -70,7 +70,14 @@ header h1 { font-size: 1.35rem; margin: 0; }
 .btn.selected { outline: 2px solid var(--accent); }
 .choices { display: flex; flex-direction: column; gap: 0.4rem; }
 .choice { text-align: left; width: 100%; }
-.prompt, .instruction, .gloss, .writing-target { white-space: pre-wrap; }
+.prompt, .instruction, .gloss, .example-l1, .writing-target { white-space: pre-wrap; }
+.example-l1 {
+  color: var(--muted, #9aa4b2);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  margin: 0.35rem 0 0.75rem;
+  opacity: 0.95;
+}
 .writing-target { font-size: 1.4rem; font-weight: 600; }
 .writing-input {
   width: 100%;

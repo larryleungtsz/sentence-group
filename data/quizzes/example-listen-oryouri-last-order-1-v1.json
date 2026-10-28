@@ -13,11 +13,16 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-ryouri-v3.mp3?v=20261028m7v3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。",
+      "gloss": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。",
+  "example_sentences": "1. お料理が美味しいです。\n2. お料理をお願いします。\n3. お料理はまだですか。",
+  "example_timestamps": null
 }
