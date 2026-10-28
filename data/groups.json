@@ -166,7 +166,8 @@
           "quizzes_ready": true,
           "notion_url": "https://app.notion.com/p/3da3b2a7295681bd8552dd2a0ffbf434"
         }
-      ]
+      ],
+      "sentence_quizzes_ready": true
     },
     {
       "slug": "gochumon-kakunin",
