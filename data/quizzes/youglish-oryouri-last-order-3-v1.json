@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-oryouri-last-order-3-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 3,
+    "text": "お時間"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 1.8,
+      "end_sec": 2.3,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "s1VcJLdrygw",
+      "start_sec": 41,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "qa7ReuDiupY",
+      "start_sec": 3196,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "pxt6UzUlTyA",
+      "start_sec": 3016,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
