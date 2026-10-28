@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-gozaimasenka-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 7,
+    "text": "ございませんか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員空掌向上攤開，眉微揚剛停住望你，空氣有啲繃。一個醫生雙腳穩穩踩住兩匹馬，兩馬又踩喺一條有四個轆、散發腥味嘅魚車上；醫生神情專注，低頭用刀割緊齋草藥。草屑飄落，剛巧落喺店員攤開嘅空掌心——正正係「沒有嗎」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-ojikan-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 3,
+    "text": "お時間"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "牆上一面鐘，指針剛停喺整點，秒針都唔敢再跳。鋼鐵人彎身用力，兩邊屁股同時「痾」一聲，跌出一排字仔，字喺半空散開又聚返。字影剛巧疊上停住嘅指針，鐘面定格——正正係「時間」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

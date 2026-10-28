@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-tsuika-no-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 5,
+    "text": "追加の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "原盤旁邊剛多推上嚟一碟菜，碟沿同原盤貼齊停住。一隻穿白袍嘅醫生豬，聽診器掛住胸前，走進一間人形屋仔裏面，神情認真咁把聽診器按喺屋牆。聽筒一貼實，屋門縫剛巧對準外面多出嗰碟菜，整碟「追加」定格——正正係「追加的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

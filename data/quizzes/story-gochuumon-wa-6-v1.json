@@ -1,0 +1,34 @@
+{
+  "quiz_id": "story-gochuumon-wa-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 6,
+    "text": "ご注文は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "檯上訂單攤開，店員掌心向上剛停住望住你，目光專心等答覆。一隻豬蹄攥住鐮刀，另一邊拖住一塊電腦屏幕當墊板，衝到訂單同店員掌心中間。豬把屏幕啪一聲疊喺攤開訂單上，舉起鐮刀對準屏幕用力一割；刀鋒擦過 Mon 屏，又壓住訂單頁同店員望住你嘅眼神——呢一刻正正係「您的點餐呢」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
