@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-oryouri-last-order-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 6,
+    "text": "ご注文は"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 4.5,
+      "end_sec": 5.3,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "go-chūmon-wa→割／豬／Mon",
+        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
+      ],
+      "distractors": [
+        "tsuika-no→豬／醫／家",
+        "一句串：醫生豬(豬／醫) 用聽診器喺 human-like 屋(家) 度診症。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

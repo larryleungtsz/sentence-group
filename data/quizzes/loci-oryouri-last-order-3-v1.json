@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-oryouri-last-order-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 3,
+    "text": "お時間"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "廳牆大鐘有鐘面指針停在整點停住。請在圖中點這大鐘所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspot": {
+        "left": 62,
+        "top": 5,
+        "width": 11,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

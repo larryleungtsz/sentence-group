@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-oryouri-last-order-9-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 11,
+    "text": "レジの方まで"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "請到收銀台那邊。How to pronounce this word?",
+      "gloss": "請到收銀台那邊",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

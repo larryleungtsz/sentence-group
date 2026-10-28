@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-oryouri-last-order-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 4,
+    "text": "となります"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 2.3,
+      "end_sec": 4,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "to-narimasu→陀／辣舌／馬／S",
+        "一句串：圍住紅色辣舌(辣舌) 嘅 陀螺(陀) 攻擊 馬(馬)，再閃出 S(S)。"
+      ],
+      "distractors": [
+        "o-jikan→痾／字／鋼",
+        "一句串：鋼鐵人(鋼) 兩邊屁股跌出 字(字)，伴隨 痾(痾) 聲。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

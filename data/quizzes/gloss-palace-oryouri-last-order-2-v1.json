@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-oryouri-last-order-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 2,
+    "text": "ラストオーダーの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "最後點餐的。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspot": {
+        "left": 28,
+        "top": 58,
+        "width": 12,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

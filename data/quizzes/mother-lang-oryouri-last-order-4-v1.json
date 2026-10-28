@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-oryouri-last-order-4-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 4,
+    "text": "となります"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "到了。How to pronounce this word?",
+      "gloss": "到了",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-oryouri-last-order-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 4,
+    "text": "となります"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "廚房傳菜窗計時器有計時器歸零紅燈停住。請在圖中點這計時器所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspot": {
+        "left": 30,
+        "top": 10,
+        "width": 8,
+        "height": 10,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

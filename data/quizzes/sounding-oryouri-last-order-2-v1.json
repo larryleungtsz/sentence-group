@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-oryouri-last-order-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 2,
+    "text": "ラストオーダーの"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 0.7,
+      "end_sec": 1.8,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "rasuto-ōdā-no→辣／薯／tall／打／蘿",
+        "一句串：頭戴辣椒(辣) 嘅 tall 高薯(薯／tall) 用手 打(打) 自己個 蘿屁股(蘿)。"
+      ],
+      "distractors": [
+        "o-ryōri→鵝／蘿莉",
+        "一句串：鵝(鵝) 穿着 蘿莉裝(蘿莉)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

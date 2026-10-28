@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-oryouri-last-order-9-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+  "chunk": {
+    "id": 10,
+    "text": "伝票となりますので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 9.6,
+      "end_sec": 11.3,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "denpyō-to-narimasu-node→釘／鋪／拖／嗱脷／馬／落地",
+        "一句串：釘鋪(釘／鋪) 拖(拖) 住帶 嗱脷(嗱脷) 嘅 馬(馬) 由空中 落地(落地)。"
+      ],
+      "distractors": [
+        "gozaimasen-ka→割／齋／醫／馬／腥／Car",
+        "一句串：醫生(醫) 雙腳踩住兩匹馬(馬)，馬踩喺四轆腥魚(腥／Car) 上，醫生低頭 割(割) 緊齋草藥(齋)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -762,6 +762,113 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "oryouri-last-order",
+      "title": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+      "sentence": "お料理ラストオーダーのお時間となります。追加のご注文はございませんか？だいじょうぶです。こちら伝票となりますので、レジの方まで、お願いいたします",
+      "sentence_added_at": "2026-10-28T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 + Q18 written 2026-10-28; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4043b2a729568150b59efbc291381d36",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Skip=true on だいじょうぶです／こちら／お願いいたします — admitted for order only, no quiz dues, no dense. Sequence (Q11) uses 9 active hotspots only; whole-sentence includes all pieces in audio. Q18 = reverse one-clip/day d01–d30.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "お料理",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first dense-eligible may start T01 immediately (skips do not gate)",
+          "notion_url": "https://app.notion.com/p/4063b2a7295681298611d6f848fc0597",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "ラストオーダーの",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a7295681d98a9bcf446e8279b1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "お時間",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a72956817a99ebfe4306dea1f8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "となります",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a729568117b229d96246b753aa",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "追加の",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a72956812d80b7ce0f4249e8ac",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "ご注文は",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a7295681638b49d22429252c5d",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "ございませんか",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a729568106a435f584b936bb5b",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "だいじょうぶです",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 9,
+          "text": "こちら",
+          "skip": true,
+          "chunk_added_at_note": "skip — reuse from aragoshi; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "notion_url": "https://app.notion.com/p/4043b2a7295681e2832ad62daaffcd0a",
+          "quizzes_ready": false
+        },
+        {
+          "id": 10,
+          "text": "伝票となりますので",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a7295681868a50fe694347eb29",
+          "quizzes_ready": true
+        },
+        {
+          "id": 11,
+          "text": "レジの方まで",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4063b2a729568139afbbe0a08012e6b9",
+          "quizzes_ready": true
+        },
+        {
+          "id": 12,
+          "text": "お願いいたします",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }
