@@ -1,0 +1,21 @@
+{
+  "quiz_id": "sentence-segment-shadow-mitame-irotsuya-full-v1",
+  "objective": "sentence_segment_shadowing",
+  "stage": "full",
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
+      "start_sec": 0.0,
+      "end_sec": 6.30,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
