@@ -336,7 +336,8 @@
           "notion_url": "https://app.notion.com/p/4003b2a7295681238567ca457e25641a",
           "quizzes_ready": true
         }
-      ]
+      ],
+      "sentence_quizzes_ready": true
     },
     {
       "slug": "demo-bakuto",

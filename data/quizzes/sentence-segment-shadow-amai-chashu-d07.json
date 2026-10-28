@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-amai-chashu-d07",
+  "objective": "sentence_segment_shadowing",
+  "stage": "2s",
+  "day": 7,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 4.12,
+      "end_sec": 6.53,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

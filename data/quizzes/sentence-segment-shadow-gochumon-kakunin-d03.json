@@ -1,7 +1,7 @@
 {
   "quiz_id": "sentence-segment-shadow-gochumon-kakunin-d03",
   "objective": "sentence_segment_shadowing",
-  "stage": "full",
+  "stage": "1s",
   "day": 3,
   "sentence": "ご注文確認させていただきます。お間違いないでしょうか",
   "slides": [
@@ -10,7 +10,7 @@
       "instruction": "請聆聽並跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
       "start_sec": 0.0,
-      "end_sec": 4.55,
+      "end_sec": 0.84,
       "rate": 0.75,
       "self_check": true
     }
