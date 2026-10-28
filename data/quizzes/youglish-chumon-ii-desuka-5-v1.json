@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-chumon-ii-desuka-5-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 8,
+    "text": "つくね2本"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 8.2,
+      "end_sec": 9.5,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "HAB-6OMb-Ug",
+      "start_sec": 1269,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "ifVkvg5pbbo",
+      "start_sec": 17,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "hQRDpsQiuZc",
+      "start_sec": 923,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

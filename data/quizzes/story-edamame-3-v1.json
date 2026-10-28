@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-edamame-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 5,
+    "text": "枝豆"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "碗裏青綠毛豆莢堆得滿滿，豆殼剛停喺碗沿。一個空氮隱形人（只見拳影）專注咁揮拳，打向一匹馬嘅尾巴；馬尾一甩，剛掃過碗邊。尾影同滿碗毛豆莢疊埋——正正係「毛豆」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-edamame-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-karaage-hitosara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukune-nihon-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

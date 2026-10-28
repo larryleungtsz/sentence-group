@@ -1,0 +1,27 @@
+{
+  "quiz_id": "example-listen-chumon-ii-desuka-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 5,
+    "text": "枝豆"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-edamame.mp3",
+      "self_check": true,
+      "l1": "麻煩來毛豆。\n有毛豆嗎。\n再給我一盤毛豆。",
+      "gloss": "麻煩來毛豆。\n有毛豆嗎。\n再給我一盤毛豆。"
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "麻煩來毛豆。\n有毛豆嗎。\n再給我一盤毛豆。",
+  "example_sentences": "枝豆をお願いします。\n枝豆はありますか。\n枝豆をもう一皿ください。"
+}

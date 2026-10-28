@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-tsukune-nihon-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 8,
+    "text": "つくね2本"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤上並排兩串雞肉丸，串柄剛放穩停住。一塊印住日本國旗紅白顏色嘅朱古力，邊緣開始熔，神情似好緊張咁軟落嚟。熔液剛巧沿兩串雞肉丸之間流過——正正係「雞肉丸兩串」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukune-nihon-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-edamame-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-karaage-hitosara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

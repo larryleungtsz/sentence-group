@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-potesara-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 9,
+    "text": "ポテサラ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "勺尖剛挖起一 scoop 乳白薯沙拉，停喺碗沿上方。有人神情認真一腳踢出一粒波，波飛入一片滿是沙嘅森林；沙塵揚起，剛掃過勺尖嗰 scoop。沙影同乳白薯沙拉疊埋——正正係「薯沙拉」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-edamame-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-karaage-hitosara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukune-nihon-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

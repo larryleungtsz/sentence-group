@@ -1,0 +1,22 @@
+{
+  "quiz_id": "whole-listen-chumon-ii-desuka-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "rate_options": [
+        1.5,
+        1,
+        0.5
+      ],
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

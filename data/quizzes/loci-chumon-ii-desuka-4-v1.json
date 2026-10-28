@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chumon-ii-desuka-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 7,
+    "text": "からあげ1皿"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木桌中央灰盤有剛端上的金黃唐揚（帶熱氣）停住。請在圖中點這唐揚盤所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspot": {
+        "left": 33,
+        "top": 70,
+        "width": 25,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

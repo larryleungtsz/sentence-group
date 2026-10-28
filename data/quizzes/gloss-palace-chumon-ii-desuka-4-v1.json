@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-chumon-ii-desuka-4-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 7,
+    "text": "からあげ1皿"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "唐揚一盤。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspot": {
+        "left": 33,
+        "top": 70,
+        "width": 25,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

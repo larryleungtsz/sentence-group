@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-chumon-ii-desuka-6-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 9,
+    "text": "ポテサラ"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "薯沙拉。How to pronounce this word?",
+      "gloss": "薯沙拉",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

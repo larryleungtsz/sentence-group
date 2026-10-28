@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-chumon-ii-desuka-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 2,
+    "text": "注文いいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見攤開菜單＋指點訂單欄望店員＝「可以點餐嗎」；見這幕→想起客人在問可否點餐。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspot": {
+        "left": 11,
+        "top": 54,
+        "width": 28,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-chumon-ii-desuka-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 9,
+    "text": "ポテサラ"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 9.5,
+      "end_sec": 11,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "potesara→波／踢／沙林",
+        "一句串：有人](https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3%22,%22start_sec%22:9.5,%22end_sec%22:11.0,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22potesara%E2%86%92%E6%B3%A2%EF%BC%8F%E8%B8%A2%EF%BC%8F%E6%B2%99%E6%9E%97%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9A%E6%9C%89%E4%BA%BA) 踢(踢) 一粒 波(波) 入去滿沙嘅 沙林(沙林)。"
+      ],
+      "distractors": [
+        "tsukune-ni-hon→朱古力／nihon",
+        "一句串：日本國旗顏色(nihon) 嘅 朱古力(朱古力) 熔緊。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

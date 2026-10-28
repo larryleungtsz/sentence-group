@@ -1,0 +1,31 @@
+{
+  "quiz_id": "mother-target-chumon-ii-desuka-4-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 7,
+    "text": "からあげ1皿"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "唐揚一盤"
+    },
+    {
+      "type": "select_text",
+      "correct": "からあげ1皿",
+      "distractors": [
+        "注文いいですか",
+        "どうぞ",
+        "枝豆",
+        "つくね2本",
+        "ポテサラ"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

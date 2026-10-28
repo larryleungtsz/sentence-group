@@ -1,0 +1,33 @@
+{
+  "quiz_id": "sounding-chumon-ii-desuka-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 2,
+    "text": "注文いいですか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 0.5,
+      "end_sec": 2.6,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "chūmon-ii-desu-ka→柱／芒／衣／deak／card",
+        "一句串：穿着](https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3%22,%22start_sec%22:0.5,%22end_sec%22:2.6,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22ch%C5%ABmon-ii-desu-ka%E2%86%92%E6%9F%B1%EF%BC%8F%E8%8A%92%EF%BC%8F%E8%A1%A3%EF%BC%8Fdeak%EF%BC%8Fcard%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9A%E7%A9%BF%E7%9D%80) 衣(衣) 嘅卡通 芒(芒) 靠住 柱(柱)，用手指戳 檯(deak) 上嘅 卡(card)。"
+      ],
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

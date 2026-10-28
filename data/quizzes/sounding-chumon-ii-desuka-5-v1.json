@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-chumon-ii-desuka-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 8,
+    "text": "つくね2本"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 8.2,
+      "end_sec": 9.5,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "tsukune-ni-hon→朱古力／nihon",
+        "一句串：日本國旗顏色(nihon)](<https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3%22,%22start_sec%22:8.2,%22end_sec%22:9.5,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22tsukune-ni-hon%E2%86%92%E6%9C%B1%E5%8F%A4%E5%8A%9B%EF%BC%8Fnihon%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9A%E6%97%A5%E6%9C%AC%E5%9C%8B%E6%97%97%E9%A1%8F%E8%89%B2(nihon)>) 嘅 朱古力(朱古力) 熔緊。"
+      ],
+      "distractors": [
+        "karaage-hito-sara→color／啞機／hit／doll沙爛",
+        "一句串：七彩封口 啞機(color／啞機) 用力 hit(hit) 沙公仔(doll)，打到 沙爛(沙爛)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

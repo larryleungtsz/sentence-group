@@ -1,0 +1,27 @@
+{
+  "quiz_id": "example-listen-chumon-ii-desuka-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 9,
+    "text": "ポテサラ"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-potesara.mp3",
+      "self_check": true,
+      "l1": "麻煩來薯沙拉。\n有薯沙拉嗎。\n請給我薯沙拉。",
+      "gloss": "麻煩來薯沙拉。\n有薯沙拉嗎。\n請給我薯沙拉。"
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "麻煩來薯沙拉。\n有薯沙拉嗎。\n請給我薯沙拉。",
+  "example_sentences": "ポテサラをお願いします。\nポテサラはありますか。\nポテサラをください。"
+}

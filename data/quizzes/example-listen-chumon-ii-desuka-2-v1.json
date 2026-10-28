@@ -1,0 +1,27 @@
+{
+  "quiz_id": "example-listen-chumon-ii-desuka-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 4,
+    "text": "どうぞ"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-douzo.mp3",
+      "self_check": true,
+      "l1": "請。\n菜單請用。\n這個請用。",
+      "gloss": "請。\n菜單請用。\n這個請用。"
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "請。\n菜單請用。\n這個請用。",
+  "example_sentences": "どうぞ。\nメニューをどうぞ。\nこちらをどうぞ。"
+}

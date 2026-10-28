@@ -869,6 +869,95 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "chumon-ii-desuka",
+      "title": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+      "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+      "sentence_added_at": "2026-10-28T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 + Q18 written 2026-10-28; edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4043b2a72956804a952ccd5986bc5642",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Skip=true on すいません／はい／1つ×2 — admitted for order only, no quiz dues, no dense. Sequence (Q11) uses 6 active hotspots only (ids 1–6); whole-sentence includes all pieces in audio. Q18 = reverse one-clip/day d01–d30 (2s/3s/4s/5s/full; no 6s master).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "すいません",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 2,
+          "text": "注文いいですか",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first dense-eligible may start T01 immediately (skips do not gate)",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681fb9abee94472c1cb14",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "はい",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 4,
+          "text": "どうぞ",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a72956812ba2f1f56ca212399a",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "枝豆",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a72956819991cec3da8d0a2715",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "1つ",
+          "skip": true,
+          "chunk_added_at_note": "skip — too familiar; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 7,
+          "text": "からあげ1皿",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a72956811cb773dd41bd1326a8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "つくね2本",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a72956816fac87c2d2c3c3f3d1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "ポテサラ",
+          "chunk_added_at": "2026-10-28T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681d792a3c7608885a26f",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "1つ",
+          "skip": true,
+          "chunk_added_at_note": "skip — second 1つ; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

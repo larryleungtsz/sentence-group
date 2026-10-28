@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-chumon-ii-desuka-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 7,
+    "text": "からあげ1皿"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 6.1,
+      "end_sec": 8.2,
+      "rate": 1
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "karaage-hito-sara→color／啞機／hit／doll沙爛",
+        "一句串：七彩封口](https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3%22,%22start_sec%22:6.1,%22end_sec%22:8.2,%22rate%22:1.0%7D,%7B%22type%22:%22multi_select%22,%22instruction%22:%22%E9%81%B8%E5%87%BA%E8%88%87%E5%89%9B%E6%89%8D%E8%AE%80%E9%9F%B3%E7%9B%B8%E9%97%9C%E7%9A%84%E8%AB%A7%E9%9F%B3%E3%80%82%22,%22correct%22:[%22karaage-hito-sara%E2%86%92color%EF%BC%8F%E5%95%9E%E6%A9%9F%EF%BC%8Fhit%EF%BC%8Fdoll%E6%B2%99%E7%88%9B%22,%22%E4%B8%80%E5%8F%A5%E4%B8%B2%EF%BC%9A%E4%B8%83%E5%BD%A9%E5%B0%81%E5%8F%A3) 啞機(color／啞機) 用力 hit(hit) 沙公仔(doll)，打到 沙爛(沙爛)。"
+      ],
+      "distractors": [
+        "edamame→air／打／馬尾",
+        "一句串：空氮隱形人(air) 揮拳 打(打) 馬嘅 尾巴(馬尾)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

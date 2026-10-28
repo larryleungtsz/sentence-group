@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chumon-ii-desuka-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 2,
+    "text": "注文いいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位前攤開的米色菜單訂單欄有客人右手食指點住欄位、望向店員停住。請在圖中點這菜單訂單欄所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspot": {
+        "left": 11,
+        "top": 54,
+        "width": 28,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

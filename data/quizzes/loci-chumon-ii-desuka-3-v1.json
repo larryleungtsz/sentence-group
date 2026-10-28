@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-chumon-ii-desuka-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 5,
+    "text": "枝豆"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木桌左角淡色碗有堆滿青綠毛豆莢停住。請在圖中點這毛豆碗所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspot": {
+        "left": 3,
+        "top": 74,
+        "width": 25,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

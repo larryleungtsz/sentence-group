@@ -1,0 +1,83 @@
+{
+  "quiz_id": "sequence-chumon-ii-desuka-v1",
+  "objective": "sequence_training",
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "注文いいですか",
+          "hotspot": {
+            "left": 11,
+            "top": 54,
+            "width": 28,
+            "height": 24,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "どうぞ",
+          "hotspot": {
+            "left": 43,
+            "top": 38,
+            "width": 13,
+            "height": 16,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "枝豆",
+          "hotspot": {
+            "left": 3,
+            "top": 74,
+            "width": 25,
+            "height": 24,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "からあげ1皿",
+          "hotspot": {
+            "left": 33,
+            "top": 70,
+            "width": 25,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "つくね2本",
+          "hotspot": {
+            "left": 58,
+            "top": 76,
+            "width": 22,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "ポテサラ",
+          "hotspot": {
+            "left": 80,
+            "top": 68,
+            "width": 16,
+            "height": 28,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

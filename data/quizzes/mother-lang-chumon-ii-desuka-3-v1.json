@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-chumon-ii-desuka-3-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "すいません、注文いいですか？はい、どうぞー。枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "chunk": {
+    "id": 5,
+    "text": "枝豆"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "毛豆。How to pronounce this word?",
+      "gloss": "毛豆",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
