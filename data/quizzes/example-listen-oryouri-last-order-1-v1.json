@@ -12,10 +12,27 @@
     {
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-ryouri-v4.mp3?v=20261028m7v4",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-ryouri-v5.mp3?v=20261028m7v5",
       "self_check": true,
       "l1": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。",
-      "gloss": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。"
+      "gloss": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お料理が美味しいです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お料理をお願いします。",
+          "start_secs": 5.42
+        },
+        {
+          "id": 3,
+          "text": "お料理はまだですか。",
+          "start_secs": 10.66
+        }
+      ]
     }
   ],
   "feedback": {
@@ -24,5 +41,21 @@
   },
   "example_l1": "1. 料理很好吃。\n2. 麻煩上料理。\n3. 料理還未到嗎。",
   "example_sentences": "1. お料理が美味しいです。\n2. お料理をお願いします。\n3. お料理はまだですか。",
-  "example_timestamps": null
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お料理が美味しいです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お料理をお願いします。",
+      "start_secs": 5.42
+    },
+    {
+      "id": 3,
+      "text": "お料理はまだですか。",
+      "start_secs": 10.66
+    }
+  ]
 }
