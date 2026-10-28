@@ -12,8 +12,8 @@
     {
       "type": "audio_shadow",
       "instruction": "請跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
-      "start_sec": 4,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
+      "start_sec": 3.4,
       "rate": 0.25,
       "self_check": true
     }

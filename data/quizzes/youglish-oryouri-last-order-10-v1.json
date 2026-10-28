@@ -12,9 +12,9 @@
     {
       "type": "audio_check",
       "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
-      "start_sec": 11.3,
-      "end_sec": 13.98,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
+      "start_sec": 9.3,
+      "end_sec": 11.13,
       "self_check": true
     },
     {
