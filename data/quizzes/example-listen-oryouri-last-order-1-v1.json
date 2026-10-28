@@ -12,7 +12,7 @@
     {
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-ryouri.mp3?v=20261028m7redo",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-ryouri-v2.mp3?v=20261028m7v2",
       "self_check": true
     }
   ],
