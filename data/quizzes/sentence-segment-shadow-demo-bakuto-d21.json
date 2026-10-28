@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-demo-bakuto-d21",
+  "objective": "sentence_segment_shadowing",
+  "stage": "full",
+  "day": 21,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
+      "start_sec": 0.0,
+      "end_sec": 3.53,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
