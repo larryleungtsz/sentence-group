@@ -309,7 +309,15 @@
     const item = queue[0];
     if (activeSession) activeSession.startQuiz(item.meta);
     const quiz = await (await fetch(item.meta.file)).json();
+    const chunk = item.meta.kind === 'chunk' ? chunkMeta(item.meta.chunk_id) : null;
     QuizRunner.run(quiz, runnerEl, {
+      context: {
+        groupTitle: group.title || group.sentence || '',
+        groupSlug: slug,
+        kind: item.meta.kind,
+        chunkId: item.meta.kind === 'chunk' ? item.meta.chunk_id : null,
+        chunkText: chunk && chunk.text ? chunk.text : '',
+      },
       onPass() {
         if (activeSession) activeSession.endQuiz(item.meta);
         afterPass(item);

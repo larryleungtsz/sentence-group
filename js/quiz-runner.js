@@ -16,6 +16,177 @@
     return n;
   }
 
+  /** Friendly 題型 names. Unknown keys fall back to the objective key itself. */
+  var OBJECTIVE_LABELS = {
+    example_sentences_listening: '例句聆聽',
+    gloss_to_palace_tap: '解釋對應宮殿',
+    loci_description_tap: '地點描述點選',
+    meaning_object_select_and_tap: '意思物件選擇並點選',
+    mother_language_pronounce: '母語發音',
+    mother_to_target_language: '母語譯目標語',
+    pronunciation_sounding_select: '發音諧音選擇',
+    sentence_segment_shadowing: '句子分段跟讀',
+    sequence_training: '順序訓練',
+    story_select_image: '故事選圖',
+    target_to_mnemonic_image: '目標語記憶圖',
+    tone_shadowing_05: '語調跟讀 0.5×',
+    whole_sentence_listening: '整句聆聽',
+    word_shadowing_025: '單字跟讀 0.25×',
+    writing_shadowing: '書寫跟讀',
+    youglish_listen: 'YouGlish 聆聽',
+  };
+
+  function hasReportValue(v) {
+    return v != null && v !== '';
+  }
+
+  function objectiveDisplay(quiz) {
+    var key = quiz && quiz.objective ? String(quiz.objective) : '';
+    var named = quiz && (quiz.objective_name || quiz.objective_label || quiz.objective_title);
+    if (named != null && String(named).trim()) named = String(named).trim();
+    else named = OBJECTIVE_LABELS[key] || '';
+    if (named && key && named !== key) return named + '（' + key + '）';
+    return named || key || '—';
+  }
+
+  function groupDisplay(quiz, ctx) {
+    ctx = ctx || {};
+    var title = ctx.groupTitle ? String(ctx.groupTitle) : '';
+    var slug = ctx.groupSlug ? String(ctx.groupSlug) : '';
+    if (!title && !slug && quiz && quiz.sentence) title = String(quiz.sentence);
+    if (title && slug) return title + '（' + slug + '）';
+    return title || slug || '—';
+  }
+
+  function chunkDisplay(quiz, ctx) {
+    ctx = ctx || {};
+    var kind = ctx.kind || '';
+    var chunk = quiz && quiz.chunk && typeof quiz.chunk === 'object' ? quiz.chunk : null;
+    var id = chunk && chunk.id != null ? chunk.id : (ctx.chunkId != null ? ctx.chunkId : null);
+    var text = '';
+    if (chunk && chunk.text) text = String(chunk.text);
+    else if (ctx.chunkText) text = String(ctx.chunkText);
+    if (kind === 'sentence' || (kind !== 'chunk' && id == null && !text)) return '整句 / n/a';
+    if (text && id != null) return text + '（id ' + id + '）';
+    if (text) return text;
+    if (id != null) return 'id ' + id;
+    return 'n/a';
+  }
+
+  /**
+   * Identifying lines for the report panel and clipboard.
+   * @param {object} quiz
+   * @param {{ groupTitle?: string, groupSlug?: string, kind?: string, chunkId?: *, chunkText?: string }} [ctx]
+   * @returns {{ label: string, value: string }[]}
+   */
+  function reportLines(quiz, ctx) {
+    quiz = quiz || {};
+    var lines = [
+      { label: '題型', value: objectiveDisplay(quiz) },
+      { label: 'Sentence Group', value: groupDisplay(quiz, ctx) },
+      { label: 'Chunk', value: chunkDisplay(quiz, ctx) },
+    ];
+    if (hasReportValue(quiz.level)) lines.push({ label: 'Level', value: String(quiz.level) });
+    if (hasReportValue(quiz.variant)) lines.push({ label: 'Variant', value: String(quiz.variant) });
+    if (hasReportValue(quiz.stage)) lines.push({ label: 'Stage', value: String(quiz.stage) });
+    if (hasReportValue(quiz.day)) lines.push({ label: 'Day', value: String(quiz.day) });
+    lines.push({ label: 'Quiz ID', value: quiz.quiz_id ? String(quiz.quiz_id) : '—' });
+    return lines;
+  }
+
+  function formatReport(quiz, ctx) {
+    return reportLines(quiz, ctx).map(function (row) {
+      return row.label + ': ' + row.value;
+    }).join('\n');
+  }
+
+  function copyPlainText(text) {
+    if (navigator.clipboard && window.isSecureContext && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(function () {
+        return true;
+      }, function () {
+        return copyViaTextarea(text);
+      });
+    }
+    return Promise.resolve(copyViaTextarea(text));
+  }
+
+  function copyViaTextarea(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed';
+    ta.style.top = '0';
+    ta.style.left = '0';
+    ta.style.width = '1px';
+    ta.style.height = '1px';
+    ta.style.padding = '0';
+    ta.style.border = 'none';
+    ta.style.outline = 'none';
+    ta.style.boxShadow = 'none';
+    ta.style.background = 'transparent';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { ta.setSelectionRange(0, text.length); } catch (e) { /* older browsers */ }
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e2) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+
+  /** 「回報問題」 — collapsed until tapped; one Copy writes the plain-text block. */
+  function mountReport(quiz, hooks) {
+    var ctx = (hooks && hooks.context) || {};
+    var text = formatReport(quiz, ctx);
+    var wrap = el('div', 'report-problem');
+    var toggle = el('button', 'btn btn-ghost report-toggle', '回報問題');
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', 'report-panel');
+
+    var panel = el('div', 'report-panel');
+    panel.id = 'report-panel';
+    panel.hidden = true;
+
+    var block = el('pre', 'report-text', text);
+    var side = el('div', 'report-side');
+    var copyBtn = el('button', 'btn report-copy', '複製');
+    copyBtn.type = 'button';
+    var note = el('span', 'report-note', '');
+    note.setAttribute('aria-live', 'polite');
+    side.appendChild(copyBtn);
+    side.appendChild(note);
+    panel.appendChild(block);
+    panel.appendChild(side);
+
+    toggle.addEventListener('click', function () {
+      var open = panel.hidden;
+      panel.hidden = !open;
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    var noteTimer = null;
+    copyBtn.addEventListener('click', function () {
+      var payload = formatReport(quiz, ctx);
+      copyPlainText(payload).then(function (ok) {
+        note.textContent = ok ? '已複製' : '複製失敗';
+        note.className = ok ? 'report-note ok' : 'report-note bad';
+        copyBtn.textContent = ok ? '已複製' : '複製';
+        if (noteTimer) clearTimeout(noteTimer);
+        noteTimer = setTimeout(function () {
+          note.textContent = '';
+          note.className = 'report-note';
+          copyBtn.textContent = '複製';
+        }, 1600);
+      });
+    });
+
+    wrap.appendChild(toggle);
+    wrap.appendChild(panel);
+    return wrap;
+  }
+
 
   /** Strip markdown-link / raw audio URL junk accidentally baked into text choices. */
   function cleanChoiceText(s) {
@@ -131,7 +302,7 @@
   /**
    * @param {object} quiz
    * @param {HTMLElement} root
-   * @param {{ onPass: Function, onFail?: Function }} hooks
+   * @param {{ onPass: Function, onFail?: Function, context?: object }} hooks
    */
   function run(quiz, root, hooks) {
     root.innerHTML = '';
@@ -143,6 +314,7 @@
     root.appendChild(status);
     root.appendChild(body);
     root.appendChild(feedback);
+    root.appendChild(mountReport(quiz, hooks));
 
     function setStatus() {
       status.textContent =
@@ -526,5 +698,5 @@
     renderSlide();
   }
 
-  global.QuizRunner = { run };
+  global.QuizRunner = { run: run, reportLines: reportLines, formatReport: formatReport };
 })(window);
