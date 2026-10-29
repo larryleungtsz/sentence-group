@@ -28,7 +28,9 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 - **Session**：撳「開始練習」→ 做完所有到期題（或中途離開且已完成 ≥1 題）
 - **Quiz**：每題開始渲染 → `onPass`
-- **Chunk**：同一 session 內同一 chunk（或句子題）嘅 quiz 用時加總
+- **超過 2 分鐘唔計時**：單題用時 **> 120000 ms** 視為無效（閒置／離開）。剛好 **120000 ms** 仍然計入。題目照常完成、SRS 唔受影響；該題 `durationMs` 唔會寫入，亦唔計入 chunk 總和同 session 練習總用時。統計頁只標「不計時」，唔顯示該段時長。
+- **Chunk**：同一 session 內同一 chunk（或句子題）嘅**有效** quiz 用時加總
+- **Session 總用時**：由開始到結束嘅牆鐘時間，減去超時題嘅用時
 - 做完 session 顯示總用時；個別 quiz／chunk 詳情喺統計頁
 - **唔寫 Notion**
 

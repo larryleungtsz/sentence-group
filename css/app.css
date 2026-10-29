@@ -253,4 +253,5 @@ header h1 { font-size: 1.35rem; margin: 0; }
 .stats-breakdown li { margin: 0.45rem 0; }
 .stats-label { font-weight: 500; }
 .stats-val { color: var(--ok); margin-left: 0.35rem; }
+.stats-excluded { color: var(--muted); }
 .stats-sub { font-size: 0.8rem; margin-top: 0.1rem; }
