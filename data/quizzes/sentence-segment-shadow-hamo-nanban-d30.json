@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-hamo-nanban-d30",
+  "objective": "sentence_segment_shadowing",
+  "stage": "full",
+  "day": 30,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3",
+      "start_sec": 0.0,
+      "end_sec": 7.6,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}
