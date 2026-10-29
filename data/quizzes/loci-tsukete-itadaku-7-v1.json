@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-7-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 7,
+    "text": "いえーい"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "客位雙臂剛高舉過頭成 V、嘴大開。請在圖中點這歡呼客人所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 78,
+        "top": 1,
+        "width": 21,
+        "height": 55,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-9-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 9,
+    "text": "おいしそう"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "近身有雙眼剛釘在盤面油光、嘴角上揚。請在圖中點這面容／笑容所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 62,
+        "top": 76,
+        "width": 16,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

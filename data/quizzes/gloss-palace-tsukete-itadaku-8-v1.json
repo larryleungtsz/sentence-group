@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-tsukete-itadaku-8-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 8,
+    "text": "めっちゃ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "超／非常。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 65,
+        "top": 43,
+        "width": 14,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

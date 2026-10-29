@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 4,
+    "text": "おすすめしてるので"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤前店員雙掌剛托起那碟推向你。請在圖中點這店員／托碟所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 26,
+        "top": 8,
+        "width": 28,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

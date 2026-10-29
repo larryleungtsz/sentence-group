@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 6,
+    "text": "お試しください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "面前銀勺（試吃代理）伸向你。請在圖中點這勺所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 28,
+        "top": 70,
+        "width": 18,
+        "height": 26,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

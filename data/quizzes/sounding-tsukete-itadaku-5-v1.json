@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 5,
+    "text": "ぜひ"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 4.5,
+      "end_sec": 4.9,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "zehi→遮／heating",
+        "一句串：一把 遮(遮) 着火 噴火(heating)。"
+      ],
+      "distractors": [
+        "osusume-shiteru-node→痾殊殊／咩／舌釘／路落釘",
+        "一句串：咩(咩) 邊 痾殊殊(痾殊殊) 邊把舌頭 釘(舌釘) 死地下；天上 路落釘(路落釘)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

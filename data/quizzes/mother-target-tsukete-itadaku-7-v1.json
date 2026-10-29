@@ -1,0 +1,35 @@
+{
+  "quiz_id": "mother-target-tsukete-itadaku-7-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 7,
+    "text": "いえーい"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "耶"
+    },
+    {
+      "type": "select_text",
+      "correct": "いえーい",
+      "distractors": [
+        "つけていただくと",
+        "卵っぽい",
+        "お味になるので",
+        "おすすめしてるので",
+        "ぜひ",
+        "お試しください",
+        "めっちゃ",
+        "おいしそう",
+        "食べましょう"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

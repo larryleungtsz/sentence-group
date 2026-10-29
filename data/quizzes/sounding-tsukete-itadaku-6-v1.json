@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 6,
+    "text": "お試しください"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 4.9,
+      "end_sec": 6.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "otameshi-kudasai→樂／打／咩",
+        "一句串：樂(樂) 抬手 打(打) 向一隻 咩(咩)。"
+      ],
+      "distractors": [
+        "zehi→遮／heating",
+        "一句串：一把 遮(遮) 着火 噴火(heating)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

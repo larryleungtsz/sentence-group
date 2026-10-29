@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 3,
+    "text": "お味になるので"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "主盤食物表面醬色剛滲入變深。請在圖中點這盤魚／醬滲所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 32,
+        "top": 50,
+        "width": 20,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

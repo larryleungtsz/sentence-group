@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-10-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 10,
+    "text": "食べましょう"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 9.0,
+      "end_sec": 10.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "tabemashō→thai bear／馬／sor",
+        "一句串：一匹 馬(馬) 向着 thai bear(thai bear) 道歉 sor(sor)。"
+      ],
+      "distractors": [
+        "oishisō→鵝／eat／scissors",
+        "一句串：鵝(鵝) 喺丼飯上面 eat(eat) 緊一把 scissors(scissors)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 1,
+    "text": "つけていただくと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "身前醬碟有筷尖剛蘸進、一滴醬汁垂住。請在圖中點這醬碟／垂滴所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 1,
+        "top": 58,
+        "width": 17,
+        "height": 36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

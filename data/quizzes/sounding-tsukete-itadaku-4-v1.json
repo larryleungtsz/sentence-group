@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 4,
+    "text": "おすすめしてるので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 3.3,
+      "end_sec": 4.5,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "osusume-shiteru-node→痾殊殊／咩／舌釘／路落釘",
+        "一句串：咩(咩) 邊 痾殊殊(痾殊殊) 邊把舌頭 釘(舌釘) 死地下；天上 路落釘(路落釘)。"
+      ],
+      "distractors": [
+        "o-aji-ni-naru-node→鵝／牙／芝／鏈／啦路／落嗲",
+        "一句串：鵝(鵝) 牙上黏 芝(牙／芝)、掛 鏈(鏈)，企喺 啦路(啦路) 中央；天上 落嗲(落嗲)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

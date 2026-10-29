@@ -1133,6 +1133,100 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "tsukete-itadaku",
+      "title": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+      "sentence_added_at": "2026-10-30T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q9+Q11–Q15 written 2026-10-30 (Skip Q10 Example Sentences); Q18 Segment Shadowing d01–d30 expanded 2026-10-30 (masters 1s/2s/3s/4s/5s/6s/7s/full; skip 8s–9s); edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4083b2a7295680deb95bed28b46add5b",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE + Reuse めっちゃ = 10 ACTIVE. Skip=true not used on chunk rows — 店員A／Yuka are dialogue labels only (not chunk rows); no chunk quizzes for them. 「めっちゃ」already_introduced (Reuse) — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 10 active hotspots (ids 1–10). Q10 Example Sentences skipped (deferred). Q18 Segment Shadowing ready (d01–d30; masters 1s→2s→3s→4s→5s→6s→7s→full reverse-walk; skip 8s–9s).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "つけていただくと",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681b6be9be4baad904318",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "卵っぽい",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956819b9772deada790ff85",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "お味になるので",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956812883abf79a02233c46",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "おすすめしてるので",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568182a555c07d74000793",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ぜひ",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681cdb723d1feb733a793",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "お試しください",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568151be6ed5e61fff4587",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "いえーい",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956811ca0cde72f7385250a",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "めっちゃ",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "already introduced (Reuse lexicon) — does not occupy dense; new-sentence quizzes exported; admitted for ORDER immediately",
+          "notion_url": "https://app.notion.com/p/4013b2a7295681079745fc8b62a04098",
+          "quizzes_ready": true,
+          "already_introduced": true
+        },
+        {
+          "id": 9,
+          "text": "おいしそう",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568161a6edf00cfcec40b4",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "食べましょう",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568148b0d0d248ee0fd53f",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 2,
+    "text": "卵っぽい"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 1.4,
+      "end_sec": 2.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "tamago-ppoi→他媽／咯／波椅",
+        "一句串：他媽(他媽) 咯(咯) 一聲坐落張 波椅(波椅)。"
+      ],
+      "distractors": [
+        "tsukete-itadaku-to→雪機／踢／熱蛋／dark／駝",
+        "一句串：雪機(雪機) 腳尖 踢(踢) 向一隻 熱蛋(熱蛋)；旁邊一隻 dark(dark) 駝(駝)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

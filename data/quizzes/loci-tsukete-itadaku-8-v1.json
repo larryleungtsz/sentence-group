@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-tsukete-itadaku-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 8,
+    "text": "めっちゃ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "盤右刻度錶指針剛頂破最右紅線「MAX」。請在圖中點這隻錶所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspot": {
+        "left": 65,
+        "top": 43,
+        "width": 14,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
