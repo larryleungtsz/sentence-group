@@ -12,9 +12,9 @@
     {
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
       "start_sec": 0.05,
-      "end_sec": 0.52,
+      "end_sec": 0.4,
       "rate": 1
     },
     {

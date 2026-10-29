@@ -12,9 +12,9 @@
     {
       "type": "audio_check",
       "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
-      "start_sec": 0.52,
-      "end_sec": 1.22,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
+      "start_sec": 0.4,
+      "end_sec": 1.1,
       "self_check": true
     },
     {

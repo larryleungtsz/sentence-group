@@ -12,10 +12,11 @@
     {
       "type": "audio_shadow",
       "instruction": "請跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
-      "start_sec": 4.21,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
+      "start_sec": 3.0,
       "rate": 0.25,
-      "self_check": true
+      "self_check": true,
+      "end_sec": 3.5
     }
   ],
   "feedback": {
