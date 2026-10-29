@@ -135,7 +135,9 @@
     return ok;
   }
 
-  /** 「回報問題」 — collapsed until tapped; one Copy writes the plain-text block. */
+  /** 「回報問題」 — collapsed until tapped; one Copy writes the plain-text block.
+   *  A full-screen overlay sits behind the open panel; a tap on it dismisses
+   *  the panel. Taps inside the panel (including Copy) do not. */
   function mountReport(quiz, hooks) {
     var ctx = (hooks && hooks.context) || {};
     var text = formatReport(quiz, ctx);
@@ -144,6 +146,10 @@
     toggle.type = 'button';
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'report-panel');
+
+    var overlay = el('div', 'report-overlay');
+    overlay.hidden = true;
+    overlay.setAttribute('aria-hidden', 'true');
 
     var panel = el('div', 'report-panel');
     panel.id = 'report-panel';
@@ -160,10 +166,23 @@
     panel.appendChild(block);
     panel.appendChild(side);
 
-    toggle.addEventListener('click', function () {
-      var open = panel.hidden;
+    function setReportOpen(open) {
       panel.hidden = !open;
+      overlay.hidden = !open;
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      setReportOpen(panel.hidden);
+    });
+
+    overlay.addEventListener('click', function () {
+      setReportOpen(false);
+    });
+
+    panel.addEventListener('click', function (evt) {
+      evt.stopPropagation();
     });
 
     var noteTimer = null;
@@ -183,6 +202,7 @@
     });
 
     wrap.appendChild(toggle);
+    wrap.appendChild(overlay);
     wrap.appendChild(panel);
     return wrap;
   }

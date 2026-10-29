@@ -143,10 +143,22 @@ header h1 { font-size: 1.35rem; margin: 0; }
   border-top: 1px solid var(--border);
 }
 .report-toggle {
+  position: relative;
+  z-index: 32;
   min-height: 44px;
   font-size: 0.95rem;
 }
+/* Catches taps outside the open panel. Transparent so the quiz stays visible. */
+.report-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  background: transparent;
+}
+.report-overlay[hidden] { display: none; }
 .report-panel {
+  position: relative;
+  z-index: 31;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
