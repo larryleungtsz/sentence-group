@@ -135,7 +135,9 @@
     return ok;
   }
 
-  /** 「回報問題」 — collapsed until tapped; one Copy writes the plain-text block. */
+  /** 「回報問題」 — collapsed until tapped; one Copy writes the plain-text block.
+   *  A full-screen overlay sits behind the open panel; a tap on it dismisses
+   *  the panel. Taps inside the panel (including Copy) do not. */
   function mountReport(quiz, hooks) {
     var ctx = (hooks && hooks.context) || {};
     var text = formatReport(quiz, ctx);
@@ -144,6 +146,10 @@
     toggle.type = 'button';
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'report-panel');
+
+    var overlay = el('div', 'report-overlay');
+    overlay.hidden = true;
+    overlay.setAttribute('aria-hidden', 'true');
 
     var panel = el('div', 'report-panel');
     panel.id = 'report-panel';
@@ -160,10 +166,23 @@
     panel.appendChild(block);
     panel.appendChild(side);
 
-    toggle.addEventListener('click', function () {
-      var open = panel.hidden;
+    function setReportOpen(open) {
       panel.hidden = !open;
+      overlay.hidden = !open;
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    toggle.addEventListener('click', function (evt) {
+      evt.stopPropagation();
+      setReportOpen(panel.hidden);
+    });
+
+    overlay.addEventListener('click', function () {
+      setReportOpen(false);
+    });
+
+    panel.addEventListener('click', function (evt) {
+      evt.stopPropagation();
     });
 
     var noteTimer = null;
@@ -183,6 +202,7 @@
     });
 
     wrap.appendChild(toggle);
+    wrap.appendChild(overlay);
     wrap.appendChild(panel);
     return wrap;
   }
@@ -492,9 +512,15 @@
       }
 
       if (type === 'sequence_tap') {
+        // Wrong tap reveals the correct box for this long, then the whole
+        // sequence starts over at the first item. No 「再試」 button.
+        const SEQUENCE_REVEAL_MS = 2500;
         body.appendChild(el('p', 'instruction', slide.instruction || '請按順序點選'));
         const seq = slide.sequence || [];
         let step = 0;
+        let revealLocked = false;
+        let revealTimer = null;
+        let hint = null;
         const progress = el('p', 'seq-progress', '下一個：' + (seq[0] && seq[0].text));
         body.appendChild(progress);
         const wrap = el('div', 'tap-wrap');
@@ -503,7 +529,39 @@
         img.alt = '';
         img.className = 'tap-img';
         wrap.appendChild(img);
+
+        function clearHint() {
+          if (hint) {
+            hint.remove();
+            hint = null;
+          }
+        }
+
+        function showCorrectBox(target) {
+          clearHint();
+          const hs = target.hotspot;
+          if (!hs) return;
+          hint = el('div', 'hotspot-hint');
+          hint.style.left = hs.left + '%';
+          hint.style.top = hs.top + '%';
+          hint.style.width = hs.width + '%';
+          hint.style.height = hs.height + '%';
+          if (target.text) hint.title = target.text;
+          wrap.appendChild(hint);
+        }
+
+        function resetSequence() {
+          revealLocked = false;
+          revealTimer = null;
+          clearHint();
+          step = 0;
+          progress.textContent = '下一個：' + (seq[0] && seq[0].text);
+          feedback.textContent = '';
+          feedback.className = 'quiz-feedback';
+        }
+
         img.addEventListener('click', (evt) => {
+          if (revealLocked) return;
           const target = seq[step];
           if (!target) return;
           if (hitTest(img, evt, target.hotspot)) {
@@ -517,9 +575,11 @@
               feedback.className = 'quiz-feedback ok';
             }
           } else {
+            revealLocked = true;
             showFail('順序錯了，從第一個再來');
-            step = 0;
-            progress.textContent = '下一個：' + seq[0].text;
+            showCorrectBox(target);
+            if (revealTimer) clearTimeout(revealTimer);
+            revealTimer = setTimeout(resetSequence, SEQUENCE_REVEAL_MS);
           }
         });
         body.appendChild(wrap);

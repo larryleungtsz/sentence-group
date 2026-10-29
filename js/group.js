@@ -258,13 +258,16 @@
   function showSessionSummary(saved) {
     if (!sessionBannerEl || !saved) return;
     sessionBannerEl.hidden = false;
+    const excluded = Timing.excludedQuizCount(saved);
     sessionBannerEl.innerHTML =
       '<div class="session-banner-title">今次練習用時 ' +
-      Timing.formatDuration(saved.totalMs) +
+      Timing.formatDuration(Timing.practiceTotalMs(saved)) +
       '</div>' +
       '<div class="session-banner-meta">完成 ' +
       saved.quizCount +
-      ' 題 · 詳情睇 <a href="stats.html?session=' +
+      ' 題' +
+      (excluded ? ' · ' + excluded + ' 題超過 2 分鐘，不計入用時' : '') +
+      ' · 詳情睇 <a href="stats.html?session=' +
       encodeURIComponent(saved.id) +
       '">統計頁</a></div>';
   }
@@ -299,7 +302,7 @@
       doneEl.hidden = false;
       const saved = saveSessionIfNeeded('complete');
       const timeBit = saved
-        ? ' · 用時 ' + Timing.formatDuration(saved.totalMs)
+        ? ' · 用時 ' + Timing.formatDuration(Timing.practiceTotalMs(saved))
         : '';
       doneEl.textContent = '今次練習完成' + timeBit + nextUnlockHint();
       showSessionSummary(saved);
