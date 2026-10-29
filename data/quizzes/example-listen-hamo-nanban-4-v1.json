@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-hamo-nanban-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 5,
+    "text": "本日"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-honjitsu.mp3",
+      "self_check": true,
+      "l1": "1. 今天的推薦是這個。\n2. 今天謝謝您了。\n3. 今天的定食如何。",
+      "gloss": "1. 今天的推薦是這個。\n2. 今天謝謝您了。\n3. 今天的定食如何。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "本日のオススメはこれです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "本日はありがとうございました。",
+          "start_secs": 5.09
+        },
+        {
+          "id": 3,
+          "text": "本日の定食はいかがですか。",
+          "start_secs": 10.13
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 今天的推薦是這個。\n2. 今天謝謝您了。\n3. 今天的定食如何。",
+  "example_sentences": "1. 本日のオススメはこれです。\n2. 本日はありがとうございました。\n3. 本日の定食はいかがですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "本日のオススメはこれです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "本日はありがとうございました。",
+      "start_secs": 5.09
+    },
+    {
+      "id": 3,
+      "text": "本日の定食はいかがですか。",
+      "start_secs": 10.13
+    }
+  ]
+}

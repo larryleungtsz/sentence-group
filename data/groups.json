@@ -1063,10 +1063,10 @@
       "title": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
       "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q1–Q9+Q11–Q15 written 2026-10-30; Q10 Example Sentences deferred (M2 Example Audio pending); Q18 Segment Shadowing deferred (Larry picks cuts later); edit when real add time is known",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-30 (Q10 Example Sentences added same day after M2 Example Audio); Q18 Segment Shadowing deferred (Larry picks cuts later); edit when real add time is known",
       "notion_palace_url": "https://app.notion.com/p/4043b2a7295680a281e0d35768505ce6",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE. Skip=true on こちらが — admitted for sentence order only; no quiz dues; does not occupy dense. 店員A／店員B are dialogue labels only (not chunk rows). Sequence (Q11) uses 7 active hotspots only (ids 1–7 dense ≡ full 1,2,3,5,6,7,8); whole-sentence includes こちらが in audio. Q10 Example Sentences not yet (M2 pending). Q18 Segment Shadowing not yet (no d01–d30).",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE. Skip=true on こちらが — admitted for sentence order only; no quiz dues; does not occupy dense. 店員A／店員B are dialogue labels only (not chunk rows). Sequence (Q11) uses 7 active hotspots only (ids 1–7 dense ≡ full 1,2,3,5,6,7,8); whole-sentence includes こちらが in audio. Q10 Example Sentences ready (Keep7). Q18 Segment Shadowing not yet (no d01–d30).",
       "chunks": [
         {
           "id": 1,

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-hamo-nanban-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 6,
+    "text": "鰯と"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-iwashi-to.mp3",
+      "self_check": true,
+      "l1": "1. 是沙甸魚和茗荷的醋拌小菜。\n2. 把沙甸魚和蘿蔔煮了。\n3. 麻煩來沙甸魚和蔬菜的炒菜。",
+      "gloss": "1. 是沙甸魚和茗荷的醋拌小菜。\n2. 把沙甸魚和蘿蔔煮了。\n3. 麻煩來沙甸魚和蔬菜的炒菜。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "鰯と茗荷の酢の物です。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "鰯と大根を煮ました。",
+          "start_secs": 5.28
+        },
+        {
+          "id": 3,
+          "text": "鰯と野菜の炒め物をお願いします。",
+          "start_secs": 10.28
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是沙甸魚和茗荷的醋拌小菜。\n2. 把沙甸魚和蘿蔔煮了。\n3. 麻煩來沙甸魚和蔬菜的炒菜。",
+  "example_sentences": "1. 鰯と茗荷の酢の物です。\n2. 鰯と大根を煮ました。\n3. 鰯と野菜の炒め物をお願いします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "鰯と茗荷の酢の物です。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "鰯と大根を煮ました。",
+      "start_secs": 5.28
+    },
+    {
+      "id": 3,
+      "text": "鰯と野菜の炒め物をお願いします。",
+      "start_secs": 10.28
+    }
+  ]
+}

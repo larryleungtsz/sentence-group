@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-hamo-nanban-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 3,
+    "text": "南蛮漬けです"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-nanban-zuke-desu.mp3",
+      "self_check": true,
+      "l1": "1. 這是南蠻漬。\n2. 今天的推薦是南蠻漬。\n3. 是海鰻的南蠻漬。",
+      "gloss": "1. 這是南蠻漬。\n2. 今天的推薦是南蠻漬。\n3. 是海鰻的南蠻漬。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "これは南蛮漬けです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "今日のおすすめは南蛮漬けです。",
+          "start_secs": 4.95
+        },
+        {
+          "id": 3,
+          "text": "鱧の南蛮漬けです。",
+          "start_secs": 10.34
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 這是南蠻漬。\n2. 今天的推薦是南蠻漬。\n3. 是海鰻的南蠻漬。",
+  "example_sentences": "1. これは南蛮漬けです。\n2. 今日のおすすめは南蛮漬けです。\n3. 鱧の南蛮漬けです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "これは南蛮漬けです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "今日のおすすめは南蛮漬けです。",
+      "start_secs": 4.95
+    },
+    {
+      "id": 3,
+      "text": "鱧の南蛮漬けです。",
+      "start_secs": 10.34
+    }
+  ]
+}

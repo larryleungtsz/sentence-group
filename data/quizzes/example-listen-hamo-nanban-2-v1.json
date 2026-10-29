@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-hamo-nanban-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 2,
+    "text": "鱧の"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-hamo-no.mp3",
+      "self_check": true,
+      "l1": "1. 麻煩來海鰻的南蠻漬。\n2. 海鰻的天婦羅也推薦。\n3. 這是海鰻的刺身。",
+      "gloss": "1. 麻煩來海鰻的南蠻漬。\n2. 海鰻的天婦羅也推薦。\n3. 這是海鰻的刺身。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "鱧の南蛮漬けをお願いします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "鱧の天ぷらもおすすめです。",
+          "start_secs": 5.33
+        },
+        {
+          "id": 3,
+          "text": "これは鱧の刺身です。",
+          "start_secs": 10.43
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 麻煩來海鰻的南蠻漬。\n2. 海鰻的天婦羅也推薦。\n3. 這是海鰻的刺身。",
+  "example_sentences": "1. 鱧の南蛮漬けをお願いします。\n2. 鱧の天ぷらもおすすめです。\n3. これは鱧の刺身です。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "鱧の南蛮漬けをお願いします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "鱧の天ぷらもおすすめです。",
+      "start_secs": 5.33
+    },
+    {
+      "id": 3,
+      "text": "これは鱧の刺身です。",
+      "start_secs": 10.43
+    }
+  ]
+}

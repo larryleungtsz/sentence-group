@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T01:40:55+08:00",
+  "generated_at": "2026-10-30T01:55:27+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -18387,6 +18387,69 @@
       "level": null,
       "kind": "sentence",
       "chunk_id": null,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-1-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-2-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-3-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-4-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-5-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-6-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
+    },
+    {
+      "quiz_id": "example-listen-hamo-nanban-7-v1",
+      "file": "data/quizzes/example-listen-hamo-nanban-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
       "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。"
     }
   ]
