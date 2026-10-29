@@ -137,6 +137,53 @@ header h1 { font-size: 1.35rem; margin: 0; }
 .ext-link { display: inline-block; margin: 0.25rem 0 0.75rem; }
 .quiz-status { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.5rem; }
 .quiz-feedback { min-height: 1.4em; margin-top: 0.5rem; }
+.report-problem {
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+.report-toggle {
+  min-height: 44px;
+  font-size: 0.95rem;
+}
+.report-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 0.65rem 0.75rem;
+  margin-top: 0.5rem;
+  padding: 0.75rem 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.report-panel[hidden] { display: none; }
+.report-text {
+  flex: 1 1 12rem;
+  min-width: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.report-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.report-copy {
+  min-height: 44px;
+  min-width: 4.75rem;
+}
+.report-note {
+  font-size: 0.85rem;
+  min-height: 1.2em;
+}
+.report-note.ok { color: var(--ok); }
+.report-note.bad { color: var(--bad); }
 .quiz-feedback.ok { color: var(--ok); }
 .quiz-feedback.bad { color: var(--bad); }
 #queue-list { color: var(--muted); font-size: 0.85rem; padding-left: 1.2rem; }
