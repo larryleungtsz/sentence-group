@@ -20659,6 +20659,96 @@
       "schedule_stages": [
         "T+30"
       ]
+    },
+    {
+      "quiz_id": "story-tsukete-itadaku-to-1-v1",
+      "file": "data/quizzes/story-tsukete-itadaku-to-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-tamago-ppoi-2-v1",
+      "file": "data/quizzes/story-tamago-ppoi-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-oaji-ni-naru-node-3-v1",
+      "file": "data/quizzes/story-oaji-ni-naru-node-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-osusume-shiteru-node-4-v1",
+      "file": "data/quizzes/story-osusume-shiteru-node-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-zehi-5-v1",
+      "file": "data/quizzes/story-zehi-5-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-otameshi-kudasai-6-v1",
+      "file": "data/quizzes/story-otameshi-kudasai-6-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-ieei-7-v1",
+      "file": "data/quizzes/story-ieei-7-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-meccha-tsukete-itadaku-8-v1",
+      "file": "data/quizzes/story-meccha-tsukete-itadaku-8-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-oishisou-9-v1",
+      "file": "data/quizzes/story-oishisou-9-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 9,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "story-tabemashou-10-v1",
+      "file": "data/quizzes/story-tabemashou-10-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 10,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     }
   ]
 }

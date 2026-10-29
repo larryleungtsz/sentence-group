@@ -1139,10 +1139,10 @@
       "title": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q1–Q9+Q11–Q15 written 2026-10-30 (Skip Q10 Example Sentences); Q18 Segment Shadowing d01–d30 expanded 2026-10-30 (masters 1s/2s/3s/4s/5s/6s/7s/full; skip 8s–9s); edit when real add time is known",
+      "sentence_added_at_note": "provisional — Q1–Q9+Q11–Q15 written 2026-10-30 (Skip Q10 Example Sentences); Q18 Segment Shadowing d01–d30 expanded 2026-10-30 (masters 1s/2s/3s/4s/5s/6s/7s/full; skip 8s–9s); edit when real add time is known Q5 Story synced 2026-10-30.",
       "notion_palace_url": "https://app.notion.com/p/4083b2a7295680deb95bed28b46add5b",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE + Reuse めっちゃ = 10 ACTIVE. Skip=true not used on chunk rows — 店員A／Yuka are dialogue labels only (not chunk rows); no chunk quizzes for them. 「めっちゃ」already_introduced (Reuse) — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 10 active hotspots (ids 1–10). Q10 Example Sentences skipped (deferred). Q18 Segment Shadowing ready (d01–d30; masters 1s→2s→3s→4s→5s→6s→7s→full reverse-walk; skip 8s–9s).",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE + Reuse めっちゃ = 10 ACTIVE. Skip=true not used on chunk rows — 店員A／Yuka are dialogue labels only (not chunk rows); no chunk quizzes for them. 「めっちゃ」already_introduced (Reuse) — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 10 active hotspots (ids 1–10). Q10 Example Sentences skipped (deferred). Q18 Segment Shadowing ready (d01–d30; masters 1s→2s→3s→4s→5s→6s→7s→full reverse-walk; skip 8s–9s). Q5 Story (story_select_image) ready Keep10.",
       "chunks": [
         {
           "id": 1,
