@@ -6,7 +6,7 @@
     {
       "type": "audio_listen",
       "instruction": "請聆聽整句。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
       "rate_options": [
         1.5,
         1,

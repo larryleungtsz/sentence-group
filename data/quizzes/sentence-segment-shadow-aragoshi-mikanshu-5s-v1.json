@@ -7,27 +7,27 @@
     {
       "type": "audio_shadow",
       "instruction": "請聆聽並跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
       "start_sec": 0.0,
-      "end_sec": 4.26,
+      "end_sec": 5.6,
       "rate": 0.75,
       "self_check": true
     },
     {
       "type": "audio_shadow",
       "instruction": "請聆聽並跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
-      "start_sec": 4.26,
-      "end_sec": 9.54,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
+      "start_sec": 5.6,
+      "end_sec": 10.57,
       "rate": 0.75,
       "self_check": true
     },
     {
       "type": "audio_shadow",
       "instruction": "請聆聽並跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
-      "start_sec": 9.54,
-      "end_sec": 16.98,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
+      "start_sec": 10.57,
+      "end_sec": 16.09,
       "rate": 0.75,
       "self_check": true
     }

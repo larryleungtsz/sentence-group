@@ -12,9 +12,9 @@
     {
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
-      "start_sec": 4.8,
-      "end_sec": 5.7,
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
+      "start_sec": 4.7,
+      "end_sec": 5.6,
       "rate": 1.0
     },
     {
