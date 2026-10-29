@@ -356,7 +356,10 @@
 
       if (type === 'prompt') {
         body.appendChild(el('p', 'prompt', slide.text || ''));
-        const next = el('button', 'btn btn-primary', '下一題');
+        // 故事選圖 step 1 is still this quiz (story → image). Later advances stay 「下一題」.
+        const advanceLabel =
+          quiz.objective === 'story_select_image' && idx === 0 ? '下一步' : '下一題';
+        const next = el('button', 'btn btn-primary', advanceLabel);
         next.type = 'button';
         next.addEventListener('click', () => {
           idx++;
