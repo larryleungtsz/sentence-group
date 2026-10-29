@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-yokattara-onomi-d09",
+  "objective": "sentence_segment_shadowing",
+  "stage": "2s",
+  "day": 9,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 6.8,
+      "end_sec": 8.02,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

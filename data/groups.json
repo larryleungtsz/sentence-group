@@ -971,10 +971,10 @@
       "title": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
       "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-30; Q18 Segment Shadowing deferred (Larry picks cuts later); edit when real add time is known",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-30; Q18 Segment Shadowing d01–d30 expanded 2026-10-30 (masters 1s/2s/3s/4s/5s/full; skip 6s); edit when real add time is known",
       "notion_palace_url": "https://app.notion.com/p/4043b2a729568005aed3cddffc4fec7c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. Skip=true on 生ビール／お願いします — admitted for sentence order only; no quiz dues; do not occupy dense. 「よかったら」already_introduced from goraitei-arigatou — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 8 active hotspots only (ids 1–8); whole-sentence includes skips in audio. Q18 Segment Shadowing not yet (no d01–d30).",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. Skip=true on 生ビール／お願いします — admitted for sentence order only; no quiz dues; do not occupy dense. 「よかったら」already_introduced from goraitei-arigatou — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 8 active hotspots only (ids 1–8); whole-sentence includes skips in audio. Q18 Segment Shadowing ready (d01–d30; masters 1s→2s→3s→4s→5s→full reverse-walk).",
       "chunks": [
         {
           "id": 1,
