@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-hamo-nanban-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 3,
+    "text": "南蛮漬けです"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3?v=20261030hamo",
+      "start_sec": 2.4,
+      "end_sec": 4.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "nanban-zuke-desu→爛／斑／豬／基",
+        "一句串：全身長 斑馬紋(斑) 嘅 豬(豬) 着住件 爛(爛) 彩虹 tee(基)。"
+      ],
+      "distractors": [
+        "hamo-no→蝦／毛／蘿",
+        "一句串：一隻 蝦(蝦) 喺自己個 蘿屁股(蘿) 上面生 毛(毛)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

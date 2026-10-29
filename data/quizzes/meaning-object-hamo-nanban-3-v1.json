@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-hamo-nanban-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 3,
+    "text": "南蛮漬けです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見炸魚浸琥珀醋汁＋洋蔥絲＝「是南蠻漬」；見這幕→想起是南蠻漬。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-nanbanzuke-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-hamo-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-honjitsu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "hotspot": {
+        "left": 22,
+        "top": 58,
+        "width": 18,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

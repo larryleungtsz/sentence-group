@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-hamo-nanban-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 8,
+    "text": "酢の物です"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3?v=20261030hamo",
+      "start_sec": 6.5,
+      "end_sec": 7.6,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "sunomono-desu→豬／攞／Mon／攞／desk",
+        "一句串：一隻 豬(豬) 一手 攞(攞) 住 Mon(Mon)，另一手 攞(攞) 住 desk(desk)。"
+      ],
+      "distractors": [
+        "myōga-no→鋼鐵底／手放底",
+        "一句串：一個人下半身全係 鋼鐵底(鋼鐵底)，雙手 放底(手放底) 按住自己底部。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

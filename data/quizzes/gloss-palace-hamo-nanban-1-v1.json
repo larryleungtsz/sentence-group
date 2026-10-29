@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-hamo-nanban-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 1,
+    "text": "こちらからですね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "從這邊呢。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "hotspot": {
+        "left": 15,
+        "top": 43,
+        "width": 15,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

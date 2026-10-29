@@ -1,0 +1,32 @@
+{
+  "quiz_id": "mother-target-hamo-nanban-7-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 8,
+    "text": "酢の物です"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "是醋拌小菜"
+    },
+    {
+      "type": "select_text",
+      "correct": "酢の物です",
+      "distractors": [
+        "こちらからですね",
+        "鱧の",
+        "南蛮漬けです",
+        "本日",
+        "鰯と",
+        "茗荷の"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

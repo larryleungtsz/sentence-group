@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-hamo-nanban-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "こちらからですね。鱧の南蛮漬けです。こちらが本日、鰯と茗荷の酢の物です。",
+  "chunk": {
+    "id": 6,
+    "text": "鰯と"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "遠位白長盤左側有兩條銀亮沙甸魚並排、中間「と」亮起停住。請在圖中點這沙甸魚／左側所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "hotspot": {
+        "left": 52,
+        "top": 60,
+        "width": 22,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
