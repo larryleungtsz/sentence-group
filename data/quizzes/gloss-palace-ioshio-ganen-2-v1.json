@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-ioshio-ganen-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 2,
+    "text": "お召し上がり方として"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "作為食用方法。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "hotspot": {
+        "left": 20,
+        "top": 58,
+        "width": 26,
+        "height": 38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

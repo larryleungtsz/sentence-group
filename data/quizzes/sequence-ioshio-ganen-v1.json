@@ -1,0 +1,61 @@
+{
+  "quiz_id": "sequence-ioshio-ganen-v1",
+  "objective": "sequence_training",
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "おいしいんですけれども",
+          "hotspot": {
+            "left": 48,
+            "top": 4,
+            "width": 28,
+            "height": 40,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "お召し上がり方として",
+          "hotspot": {
+            "left": 20,
+            "top": 58,
+            "width": 26,
+            "height": 38,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "硫黄塩っていう",
+          "hotspot": {
+            "left": 45,
+            "top": 58,
+            "width": 18,
+            "height": 40,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "岩塩です",
+          "hotspot": {
+            "left": 58,
+            "top": 50,
+            "width": 22,
+            "height": 30,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

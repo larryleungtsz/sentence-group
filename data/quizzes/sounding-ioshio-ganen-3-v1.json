@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-ioshio-ganen-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 3,
+    "text": "硫黄塩っていう"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
+      "start_sec": 5.7,
+      "end_sec": 6.9,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "iōshio-tte-iu→2痾／shit／痾爹／油",
+        "一句串：兩個年輕人同時 2痾(2痾) 出 shit(shit)；旁邊 痾爹(痾爹) 同步屙出 油(油)。"
+      ],
+      "distractors": [
+        "o-meshiagari-kata-to-shite→臥／messi／壓／car／鏈／卡蛋／dog／舌爹",
+        "一句串：messi(messi) 臥(臥) 喺架被 壓(壓) 扁嘅 car(car) 上；轆鎖 鏈(鏈)、卡住 蛋(卡蛋)；旁邊 狗(dog) 伸長 舌爹(舌爹)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

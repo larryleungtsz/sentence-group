@@ -1,0 +1,29 @@
+{
+  "quiz_id": "mother-target-ioshio-ganen-2-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 2,
+    "text": "お召し上がり方として"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "作為食用方法"
+    },
+    {
+      "type": "select_text",
+      "correct": "お召し上がり方として",
+      "distractors": [
+        "おいしいんですけれども",
+        "硫黄塩っていう",
+        "岩塩です"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

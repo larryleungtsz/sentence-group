@@ -1,0 +1,33 @@
+{
+  "quiz_id": "sounding-ioshio-ganen-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 1,
+    "text": "おいしいんですけれども"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
+      "start_sec": 0.05,
+      "end_sec": 2.4,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "oishii-n-desu-keredomo→鵝／熱鮮／desk／機／lev／多毛",
+        "一句串：一頭着火 鵝(鵝／熱鮮) 咬住鮮魚企喺 desk(desk) 上；空中一部全身 多毛(lev／多毛) 嘅 機(機) 人緩緩壓低。"
+      ],
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

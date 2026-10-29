@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-oishii-n-desu-keredomo-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 1,
+    "text": "おいしいんですけれども"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "嘴角剛上揚，掌沿同時橫切把話頭撥轉，動作停住。一隻頭上着火嘅鵝（鵝／熱鮮）神情認真，咬住一條鮮魚企喺張枱（desk）上面；空中一部機械人（機）全身長滿毛（lev／多毛），緩緩壓低。熱鮮鵝咬魚、desk、多毛機人一齊撞過上揚嘅嘴角同橫切嘅掌沿——正正係「雖然好吃不過」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oishii-n-desu-keredomo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-omeshiagari-kata-to-shite-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ioshio-tte-iu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ganen-desu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

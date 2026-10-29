@@ -1227,6 +1227,51 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "ioshio-ganen",
+      "title": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "sentence_added_at": "2026-10-30T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q9+Q11–Q15 written 2026-10-30 (Skip Q10 Example Sentences; Skip Q18 Segment Shadowing). Q9 #3 硫黄塩っていう Soft GO Skip YouGlish (0 clips; no page). Edit when real add time is known.",
+      "notion_palace_url": "https://app.notion.com/p/4083b2a7295680078863d659ce61b295",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep4 ACTIVE (おいしいんですけれども／お召し上がり方として／硫黄塩っていう／岩塩です). Skip=true not used on chunk rows — 店員A／店員B are dialogue labels only (not chunk rows); おすすめの／こちらですね are sentence fillers with no lexicon/Area rows and no chunk quizzes. Sequence (Q11) uses 4 active hotspots (ids 1–4). Q10 Example Sentences skipped (deferred). Q18 Segment Shadowing skipped (Larry cut later). Q9 YouGlish Soft Skip on #3 硫黄塩っていう (0 align=ok clips; no invented clips; quiz absent).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "おいしいんですけれども",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681148015e788c210316e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "お召し上がり方として",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681289377f6fbe7780441",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "硫黄塩っていう",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681e181e3c1bbb7cf4697",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "岩塩です",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568179a1b0e01d021c23a7",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

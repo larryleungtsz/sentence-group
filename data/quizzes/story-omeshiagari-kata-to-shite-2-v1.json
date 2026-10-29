@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-omeshiagari-kata-to-shite-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 2,
+    "text": "お召し上がり方として"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "說明卡「吃法」頁剛翻開正面停住。一個穿球衣似 Messi 嘅人（messi）神情專注，臥（臥）喺架微微被壓扁嘅車（壓／car）上；車轆鎖住鐵鏈（鏈），轆上卡住一隻蛋（卡蛋）；旁邊一隻中年狗（dog）鬍鬚翹起、長舌用力伸出（舌爹）。臥、messi、壓 car、鏈卡蛋同 dog 舌爹一齊掃過翻開嘅「吃法」頁——正正係「作為食用方法」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-omeshiagari-kata-to-shite-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oishii-n-desu-keredomo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ioshio-tte-iu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ganen-desu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

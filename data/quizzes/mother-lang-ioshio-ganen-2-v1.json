@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-ioshio-ganen-2-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 2,
+    "text": "お召し上がり方として"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "作為食用方法。How to pronounce this word?",
+      "gloss": "作為食用方法",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

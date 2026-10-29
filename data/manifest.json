@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T02:03:16+08:00",
+  "generated_at": "2026-10-30T03:41:46+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -20749,6 +20749,447 @@
       "kind": "chunk",
       "chunk_id": 10,
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "loci-ioshio-ganen-1-v1",
+      "file": "data/quizzes/loci-ioshio-ganen-1-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "loci-ioshio-ganen-2-v1",
+      "file": "data/quizzes/loci-ioshio-ganen-2-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "loci-ioshio-ganen-3-v1",
+      "file": "data/quizzes/loci-ioshio-ganen-3-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "loci-ioshio-ganen-4-v1",
+      "file": "data/quizzes/loci-ioshio-ganen-4-v1.json",
+      "objective": "loci_description_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "gloss-palace-ioshio-ganen-1-v1",
+      "file": "data/quizzes/gloss-palace-ioshio-ganen-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "gloss-palace-ioshio-ganen-2-v1",
+      "file": "data/quizzes/gloss-palace-ioshio-ganen-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "gloss-palace-ioshio-ganen-3-v1",
+      "file": "data/quizzes/gloss-palace-ioshio-ganen-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "gloss-palace-ioshio-ganen-4-v1",
+      "file": "data/quizzes/gloss-palace-ioshio-ganen-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "meaning-object-ioshio-ganen-1-v1",
+      "file": "data/quizzes/meaning-object-ioshio-ganen-1-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "meaning-object-ioshio-ganen-2-v1",
+      "file": "data/quizzes/meaning-object-ioshio-ganen-2-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "meaning-object-ioshio-ganen-3-v1",
+      "file": "data/quizzes/meaning-object-ioshio-ganen-3-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "meaning-object-ioshio-ganen-4-v1",
+      "file": "data/quizzes/meaning-object-ioshio-ganen-4-v1.json",
+      "objective": "meaning_object_select_and_tap",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-025-ioshio-ganen-1-v1",
+      "file": "data/quizzes/shadow-025-ioshio-ganen-1-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-025-ioshio-ganen-2-v1",
+      "file": "data/quizzes/shadow-025-ioshio-ganen-2-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-025-ioshio-ganen-3-v1",
+      "file": "data/quizzes/shadow-025-ioshio-ganen-3-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-025-ioshio-ganen-4-v1",
+      "file": "data/quizzes/shadow-025-ioshio-ganen-4-v1.json",
+      "objective": "word_shadowing_025",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "story-oishii-n-desu-keredomo-1-v1",
+      "file": "data/quizzes/story-oishii-n-desu-keredomo-1-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "story-omeshiagari-kata-to-shite-2-v1",
+      "file": "data/quizzes/story-omeshiagari-kata-to-shite-2-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "story-ioshio-tte-iu-3-v1",
+      "file": "data/quizzes/story-ioshio-tte-iu-3-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "story-ganen-desu-4-v1",
+      "file": "data/quizzes/story-ganen-desu-4-v1.json",
+      "objective": "story_select_image",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sounding-ioshio-ganen-1-v1",
+      "file": "data/quizzes/sounding-ioshio-ganen-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sounding-ioshio-ganen-2-v1",
+      "file": "data/quizzes/sounding-ioshio-ganen-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sounding-ioshio-ganen-3-v1",
+      "file": "data/quizzes/sounding-ioshio-ganen-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sounding-ioshio-ganen-4-v1",
+      "file": "data/quizzes/sounding-ioshio-ganen-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-05-ioshio-ganen-1-v1",
+      "file": "data/quizzes/shadow-05-ioshio-ganen-1-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-05-ioshio-ganen-2-v1",
+      "file": "data/quizzes/shadow-05-ioshio-ganen-2-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-05-ioshio-ganen-3-v1",
+      "file": "data/quizzes/shadow-05-ioshio-ganen-3-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "shadow-05-ioshio-ganen-4-v1",
+      "file": "data/quizzes/shadow-05-ioshio-ganen-4-v1.json",
+      "objective": "tone_shadowing_05",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "whole-listen-ioshio-ganen-v1",
+      "file": "data/quizzes/whole-listen-ioshio-ganen-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "youglish-ioshio-ganen-1-v1",
+      "file": "data/quizzes/youglish-ioshio-ganen-1-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "youglish-ioshio-ganen-2-v1",
+      "file": "data/quizzes/youglish-ioshio-ganen-2-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "youglish-ioshio-ganen-4-v1",
+      "file": "data/quizzes/youglish-ioshio-ganen-4-v1.json",
+      "objective": "youglish_listen",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sequence-ioshio-ganen-v1",
+      "file": "data/quizzes/sequence-ioshio-ganen-v1.json",
+      "objective": "sequence_training",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "writing-ioshio-ganen-1-v1",
+      "file": "data/quizzes/writing-ioshio-ganen-1-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "writing-ioshio-ganen-2-v1",
+      "file": "data/quizzes/writing-ioshio-ganen-2-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "writing-ioshio-ganen-3-v1",
+      "file": "data/quizzes/writing-ioshio-ganen-3-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "writing-ioshio-ganen-4-v1",
+      "file": "data/quizzes/writing-ioshio-ganen-4-v1.json",
+      "objective": "writing_shadowing",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-lang-ioshio-ganen-1-v1",
+      "file": "data/quizzes/mother-lang-ioshio-ganen-1-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-lang-ioshio-ganen-2-v1",
+      "file": "data/quizzes/mother-lang-ioshio-ganen-2-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-lang-ioshio-ganen-3-v1",
+      "file": "data/quizzes/mother-lang-ioshio-ganen-3-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-lang-ioshio-ganen-4-v1",
+      "file": "data/quizzes/mother-lang-ioshio-ganen-4-v1.json",
+      "objective": "mother_language_pronounce",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "target-mnemonic-ioshio-ganen-1-v1",
+      "file": "data/quizzes/target-mnemonic-ioshio-ganen-1-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "target-mnemonic-ioshio-ganen-2-v1",
+      "file": "data/quizzes/target-mnemonic-ioshio-ganen-2-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "target-mnemonic-ioshio-ganen-3-v1",
+      "file": "data/quizzes/target-mnemonic-ioshio-ganen-3-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "target-mnemonic-ioshio-ganen-4-v1",
+      "file": "data/quizzes/target-mnemonic-ioshio-ganen-4-v1.json",
+      "objective": "target_to_mnemonic_image",
+      "level": 2,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-target-ioshio-ganen-1-v1",
+      "file": "data/quizzes/mother-target-ioshio-ganen-1-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-target-ioshio-ganen-2-v1",
+      "file": "data/quizzes/mother-target-ioshio-ganen-2-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-target-ioshio-ganen-3-v1",
+      "file": "data/quizzes/mother-target-ioshio-ganen-3-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "mother-target-ioshio-ganen-4-v1",
+      "file": "data/quizzes/mother-target-ioshio-ganen-4-v1.json",
+      "objective": "mother_to_target_language",
+      "level": 3,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     }
   ]
 }
