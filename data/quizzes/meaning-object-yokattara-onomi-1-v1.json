@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-yokattara-onomi-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 1,
+    "text": "よかったら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見掌心向上微推一寸、頭微側望你＝「如果較方便的話」；見這幕→想起如果較方便的話。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-otooshi-desu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-saisho-ni-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "hotspot": {
+        "left": 23,
+        "top": 51,
+        "width": 13,
+        "height": 14,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

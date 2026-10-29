@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yokattara-onomi-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 10,
+    "text": "お通しです"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 8.3,
+      "end_sec": 9.04,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "o-tōshi-desu→鱷／多士／的士",
+        "一句串：鱷魚(鱷) 坐住紅色 的士(的士)，一邊食漏芝士嘅 多士(多士)。"
+      ],
+      "distractors": [
+        "shitsurei-shimasu→舌／紫／lev／施／馬",
+        "一句串：魔術師用懸浮紫色 脷(舌／紫／lev) 對一匹被打中嘅 馬(馬) 施(施) 法。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

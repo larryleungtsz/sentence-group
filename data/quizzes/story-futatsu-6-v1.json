@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-futatsu-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 7,
+    "text": "2つ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "檯面上方，食指同中指剛豎起停住，兩指並齊。一隻樣貌醜怪嘅豬，神情認真坐喺一塊極闊但唔高嘅蛋撻上面，撻皮邊緣被壓扁。豬同闊撻剛好卡喺豎起兩指之間——正正係「兩個／兩份」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-futatsu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-saisho-ni-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-onomimono-no-hou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-oukagai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-jaa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-shitsurei-shimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-otooshi-desu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

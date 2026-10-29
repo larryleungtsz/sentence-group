@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-shitsurei-shimasu-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 9,
+    "text": "失礼します"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員側轉邁步，微鞠躬剛停喺門口，姿態專心要離開。一個魔術師伸出懸浮半空嘅紫色脷，神情專注，對一匹正被打中嘅馬施下咒語；馬身一震，咒語光掃過。微鞠躬嘅店員側影同紫脷、被打中嘅馬疊埋——正正係「失陪了」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-shitsurei-shimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-saisho-ni-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-onomimono-no-hou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-oukagai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-jaa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-futatsu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-otooshi-desu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

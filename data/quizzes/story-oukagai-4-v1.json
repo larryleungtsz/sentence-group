@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-oukagai-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 4,
+    "text": "おうかがいしておきますね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "記事本攤開，筆尖剛停喺空白行上，眉微揚望住你，空氣繃緊。卡通屋前馬路上面，四隻鱷魚排成一列企住：每隻脷穿住 piercings、戴住 Oakley 太陽眼鏡、頭頂掛住醫用口罩，目光專注望過嚟。四鱷同舌刺、Oakley、口罩一齊定格喺筆尖停住嗰行旁邊——正正係「先為您詢問」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-oukagai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-saisho-ni-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-onomimono-no-hou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-jaa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-futatsu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-shitsurei-shimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-otooshi-desu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

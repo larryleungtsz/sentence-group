@@ -1,0 +1,33 @@
+{
+  "quiz_id": "mother-target-yokattara-onomi-1-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 1,
+    "text": "よかったら"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "如果較方便的話"
+    },
+    {
+      "type": "select_text",
+      "correct": "よかったら",
+      "distractors": [
+        "最初に",
+        "お飲みものの方",
+        "おうかがいしておきますね",
+        "じゃあ",
+        "2つ",
+        "失礼します",
+        "お通しです"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

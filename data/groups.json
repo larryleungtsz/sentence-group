@@ -965,6 +965,98 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "yokattara-onomi",
+      "title": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+      "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+      "sentence_added_at": "2026-10-30T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1–Q15 written 2026-10-30; Q18 Segment Shadowing deferred (Larry picks cuts later); edit when real add time is known",
+      "notion_palace_url": "https://app.notion.com/p/4043b2a729568005aed3cddffc4fec7c",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. Skip=true on 生ビール／お願いします — admitted for sentence order only; no quiz dues; do not occupy dense. 「よかったら」already_introduced from goraitei-arigatou — does not occupy dense; new-sentence quizzes exported. Sequence (Q11) uses 8 active hotspots only (ids 1–8); whole-sentence includes skips in audio. Q18 Segment Shadowing not yet (no d01–d30).",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "よかったら",
+          "already_introduced": true,
+          "chunk_added_at_note": "already introduced in goraitei-arigatou — does not occupy dense; new-sentence quizzes only; admitted for ORDER immediately",
+          "notion_url": "https://app.notion.com/p/4023b2a7295681ccbe95e1a176baac38",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "最初に",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — first new dense-eligible may start T01 immediately (already_introduced does not gate)",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681ab88f3dfccbeae55d4",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "お飲みものの方",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a729568176b62ce311998b407f",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "おうかがいしておきますね",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681eaa161c015e74cf2f1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "じゃあ",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681e28601c46d907e22df",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "生ビール",
+          "skip": true,
+          "chunk_added_at_note": "skip — familiar / no chunk quiz; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
+        },
+        {
+          "id": 7,
+          "text": "2つ",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a729568159843ecf024d73e43f",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "お願いします",
+          "skip": true,
+          "chunk_added_at_note": "skip — familiar / no chunk quiz; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "notion_url": "https://app.notion.com/p/4073b2a7295681daaef6f32714e3e141",
+          "quizzes_ready": false
+        },
+        {
+          "id": 9,
+          "text": "失礼します",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a72956817daa07f2fb8a089ac1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "お通しです",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4073b2a729568182bed4f05b8f6c6ec7",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

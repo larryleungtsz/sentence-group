@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-yokattara-onomi-v1",
+  "objective": "sequence_training",
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "よかったら",
+          "hotspot": {
+            "left": 23,
+            "top": 51,
+            "width": 13,
+            "height": 14,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "最初に",
+          "hotspot": {
+            "left": 26,
+            "top": 74,
+            "width": 11,
+            "height": 12,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "お飲みものの方",
+          "hotspot": {
+            "left": 61,
+            "top": 57,
+            "width": 15,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "おうかがいしておきますね",
+          "hotspot": {
+            "left": 26,
+            "top": 38,
+            "width": 14,
+            "height": 14,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "じゃあ",
+          "hotspot": {
+            "left": 34,
+            "top": 68,
+            "width": 12,
+            "height": 14,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "2つ",
+          "hotspot": {
+            "left": 47,
+            "top": 43,
+            "width": 11,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "失礼します",
+          "hotspot": {
+            "left": 76,
+            "top": 12,
+            "width": 16,
+            "height": 52,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "お通しです",
+          "hotspot": {
+            "left": 43,
+            "top": 80,
+            "width": 13,
+            "height": 14,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

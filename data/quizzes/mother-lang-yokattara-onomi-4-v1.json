@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-yokattara-onomi-4-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 4,
+    "text": "おうかがいしておきますね"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "先為您詢問。How to pronounce this word?",
+      "gloss": "先為您詢問",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

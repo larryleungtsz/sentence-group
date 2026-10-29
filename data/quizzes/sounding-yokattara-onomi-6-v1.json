@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yokattara-onomi-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 7,
+    "text": "2つ"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 5.4,
+      "end_sec": 7.1,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "futatsu→闊／撻／豬",
+        "一句串：一隻醜 豬(豬) 坐喺極 闊、唔高嘅 蛋撻(闊／撻) 上。"
+      ],
+      "distractors": [
+        "jā→炸／炸彈",
+        "一句串：一枚 炸彈(炸／炸彈) 定格喺掌沿旁。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

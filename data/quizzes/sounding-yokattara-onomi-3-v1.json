@@ -1,0 +1,36 @@
+{
+  "quiz_id": "sounding-yokattara-onomi-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "よかったら、最初にお飲みものの方 、おうかがいしておきますね。じゃあ、生ビール2つお願いします。失礼します。お通しです",
+  "chunk": {
+    "id": 3,
+    "text": "お飲みものの方"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 1.5,
+      "end_sec": 2.6,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音。",
+      "correct": [
+        "o-nomimono-no-hō→鵝／攞／米／摸／蘿／攞可",
+        "一句串：鵝(鵝) 攞(攞) 住生 米(米) 同 可樂(攞可)，雙腳 摸(摸)／擦住自己個 蘿屁股(蘿)。"
+      ],
+      "distractors": [
+        "saisho-ni→sai／鎖鏈",
+        "一句串：鏽爛廢棄嘅 鎖鏈(鎖鏈) 掛住標籤 sai(sai)。"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
