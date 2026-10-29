@@ -512,9 +512,15 @@
       }
 
       if (type === 'sequence_tap') {
+        // Wrong tap reveals the correct box for this long, then the whole
+        // sequence starts over at the first item. No 「再試」 button.
+        const SEQUENCE_REVEAL_MS = 2500;
         body.appendChild(el('p', 'instruction', slide.instruction || '請按順序點選'));
         const seq = slide.sequence || [];
         let step = 0;
+        let revealLocked = false;
+        let revealTimer = null;
+        let hint = null;
         const progress = el('p', 'seq-progress', '下一個：' + (seq[0] && seq[0].text));
         body.appendChild(progress);
         const wrap = el('div', 'tap-wrap');
@@ -523,7 +529,39 @@
         img.alt = '';
         img.className = 'tap-img';
         wrap.appendChild(img);
+
+        function clearHint() {
+          if (hint) {
+            hint.remove();
+            hint = null;
+          }
+        }
+
+        function showCorrectBox(target) {
+          clearHint();
+          const hs = target.hotspot;
+          if (!hs) return;
+          hint = el('div', 'hotspot-hint');
+          hint.style.left = hs.left + '%';
+          hint.style.top = hs.top + '%';
+          hint.style.width = hs.width + '%';
+          hint.style.height = hs.height + '%';
+          if (target.text) hint.title = target.text;
+          wrap.appendChild(hint);
+        }
+
+        function resetSequence() {
+          revealLocked = false;
+          revealTimer = null;
+          clearHint();
+          step = 0;
+          progress.textContent = '下一個：' + (seq[0] && seq[0].text);
+          feedback.textContent = '';
+          feedback.className = 'quiz-feedback';
+        }
+
         img.addEventListener('click', (evt) => {
+          if (revealLocked) return;
           const target = seq[step];
           if (!target) return;
           if (hitTest(img, evt, target.hotspot)) {
@@ -537,9 +575,11 @@
               feedback.className = 'quiz-feedback ok';
             }
           } else {
+            revealLocked = true;
             showFail('順序錯了，從第一個再來');
-            step = 0;
-            progress.textContent = '下一個：' + seq[0].text;
+            showCorrectBox(target);
+            if (revealTimer) clearTimeout(revealTimer);
+            revealTimer = setTimeout(resetSequence, SEQUENCE_REVEAL_MS);
           }
         });
         body.appendChild(wrap);

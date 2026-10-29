@@ -105,6 +105,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 - 多 slide＝多段依序；只 1 slide（通常 0→句末）＝全句 0.75× 跟讀
 - `sentence_schedule.sentence_segment_shadowing`：每個 stage `T+1`…`T+30`（每日解鎖；sentence wait = 1 日，令 T+N ≈ 第 N 日）
 - `whole_sentence_listening` / `sequence_training`：維持 `T+3,T+6,…,T+30`
+- `sequence_training`：撳錯位置會即時顯示而家應該點嘅正確框，保持 **2.5 秒**（2500 ms），然後自動由第一個重新開始成題序列，唔使撳「再試」
 
 例：
 
