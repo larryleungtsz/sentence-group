@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 5,
+    "text": "月見つくね"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tsukimi-tsukune.mp3",
+      "self_check": true,
+      "l1": "1. 月見雞丸麻煩你。\n2. 有月見雞丸嗎。\n3. 再加月見雞丸。",
+      "gloss": "1. 月見雞丸麻煩你。\n2. 有月見雞丸嗎。\n3. 再加月見雞丸。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "月見つくねをお願いします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "月見つくねはありますか。",
+          "start_secs": 4.95
+        },
+        {
+          "id": 3,
+          "text": "月見つくねを追加で。",
+          "start_secs": 9.8
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 月見雞丸麻煩你。\n2. 有月見雞丸嗎。\n3. 再加月見雞丸。",
+  "example_sentences": "1. 月見つくねをお願いします。\n2. 月見つくねはありますか。\n3. 月見つくねを追加で。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "月見つくねをお願いします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "月見つくねはありますか。",
+      "start_secs": 4.95
+    },
+    {
+      "id": 3,
+      "text": "月見つくねを追加で。",
+      "start_secs": 9.8
+    }
+  ]
+}

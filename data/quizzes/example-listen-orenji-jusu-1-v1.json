@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 1,
+    "text": "オレンジジュースと"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-orenji-jusu-to.mp3",
+      "self_check": true,
+      "l1": "1. 橙汁和啤酒。\n2. 橙汁和水麻煩你。\n3. 橙汁和烏龍茶麻煩你。",
+      "gloss": "1. 橙汁和啤酒。\n2. 橙汁和水麻煩你。\n3. 橙汁和烏龍茶麻煩你。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "オレンジジュースとビールで。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "オレンジジュースと水をお願いします。",
+          "start_secs": 4.75
+        },
+        {
+          "id": 3,
+          "text": "オレンジジュースと烏龍茶ください。",
+          "start_secs": 10.09
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 橙汁和啤酒。\n2. 橙汁和水麻煩你。\n3. 橙汁和烏龍茶麻煩你。",
+  "example_sentences": "1. オレンジジュースとビールで。\n2. オレンジジュースと水をお願いします。\n3. オレンジジュースと烏龍茶ください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "オレンジジュースとビールで。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "オレンジジュースと水をお願いします。",
+      "start_secs": 4.75
+    },
+    {
+      "id": 3,
+      "text": "オレンジジュースと烏龍茶ください。",
+      "start_secs": 10.09
+    }
+  ]
+}

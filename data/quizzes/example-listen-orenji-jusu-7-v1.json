@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-7-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sore-dake-de-ii.mp3",
+      "self_check": true,
+      "l1": "1. 只要那些就好。\n2. 今天只要那些就好。\n3. 飲料只要那些就好。",
+      "gloss": "1. 只要那些就好。\n2. 今天只要那些就好。\n3. 飲料只要那些就好。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "それだけでいいです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "今日はそれだけでいいです。",
+          "start_secs": 4.28
+        },
+        {
+          "id": 3,
+          "text": "飲み物はそれだけでいいです。",
+          "start_secs": 9.14
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 只要那些就好。\n2. 今天只要那些就好。\n3. 飲料只要那些就好。",
+  "example_sentences": "1. それだけでいいです。\n2. 今日はそれだけでいいです。\n3. 飲み物はそれだけでいいです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "それだけでいいです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "今日はそれだけでいいです。",
+      "start_secs": 4.28
+    },
+    {
+      "id": 3,
+      "text": "飲み物はそれだけでいいです。",
+      "start_secs": 9.14
+    }
+  ]
+}

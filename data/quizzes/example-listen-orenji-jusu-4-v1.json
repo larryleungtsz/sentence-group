@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ato-yakitori.mp3",
+      "self_check": true,
+      "l1": "1. 還有，燒鳥也可以嗎。\n2. 還有，燒鳥也可以嗎，鹽味。\n3. 還有，燒鳥也可以嗎，醬汁。",
+      "gloss": "1. 還有，燒鳥也可以嗎。\n2. 還有，燒鳥也可以嗎，鹽味。\n3. 還有，燒鳥也可以嗎，醬汁。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "あと、焼き鳥もいいですか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "あと、焼き鳥もいいですか、塩で。",
+          "start_secs": 5.34
+        },
+        {
+          "id": 3,
+          "text": "あと、焼き鳥もいいですか、タレで。",
+          "start_secs": 11.22
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 還有，燒鳥也可以嗎。\n2. 還有，燒鳥也可以嗎，鹽味。\n3. 還有，燒鳥也可以嗎，醬汁。",
+  "example_sentences": "1. あと、焼き鳥もいいですか。\n2. あと、焼き鳥もいいですか、塩で。\n3. あと、焼き鳥もいいですか、タレで。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "あと、焼き鳥もいいですか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "あと、焼き鳥もいいですか、塩で。",
+      "start_secs": 5.34
+    },
+    {
+      "id": 3,
+      "text": "あと、焼き鳥もいいですか、タレで。",
+      "start_secs": 11.22
+    }
+  ]
+}

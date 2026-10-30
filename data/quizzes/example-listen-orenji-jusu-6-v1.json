@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 6,
+    "text": "とりあえず、"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-toriaezu.mp3",
+      "self_check": true,
+      "l1": "1. 先來啤酒。\n2. 先這樣。\n3. 先麻煩你。",
+      "gloss": "1. 先來啤酒。\n2. 先這樣。\n3. 先麻煩你。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "とりあえず、ビールください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "とりあえず、これで。",
+          "start_secs": 4.84
+        },
+        {
+          "id": 3,
+          "text": "とりあえず、お願いします。",
+          "start_secs": 9.29
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 先來啤酒。\n2. 先這樣。\n3. 先麻煩你。",
+  "example_sentences": "1. とりあえず、ビールください。\n2. とりあえず、これで。\n3. とりあえず、お願いします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "とりあえず、ビールください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "とりあえず、これで。",
+      "start_secs": 4.84
+    },
+    {
+      "id": 3,
+      "text": "とりあえず、お願いします。",
+      "start_secs": 9.29
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-orenji-jusu-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 2,
+    "text": "焼酎を"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-shochu-wo.mp3",
+      "self_check": true,
+      "l1": "1. 燒酒麻煩你。\n2. 請給我燒酒。\n3. 再加燒酒。",
+      "gloss": "1. 燒酒麻煩你。\n2. 請給我燒酒。\n3. 再加燒酒。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "焼酎をお願いします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "焼酎をください。",
+          "start_secs": 4.68
+        },
+        {
+          "id": 3,
+          "text": "焼酎を追加で。",
+          "start_secs": 8.94
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 燒酒麻煩你。\n2. 請給我燒酒。\n3. 再加燒酒。",
+  "example_sentences": "1. 焼酎をお願いします。\n2. 焼酎をください。\n3. 焼酎を追加で。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "焼酎をお願いします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "焼酎をください。",
+      "start_secs": 4.68
+    },
+    {
+      "id": 3,
+      "text": "焼酎を追加で。",
+      "start_secs": 8.94
+    }
+  ]
+}
