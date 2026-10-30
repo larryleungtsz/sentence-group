@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 6,
+    "text": "ちょうど"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-choudo.mp3",
+      "self_check": true,
+      "l1": "1. 剛好。\n2. 剛好收您。\n3. 剛好是這個金額。",
+      "gloss": "1. 剛好。\n2. 剛好收您。\n3. 剛好是這個金額。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "ちょうどです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ちょうどお預かりします。",
+          "start_secs": 4.08
+        },
+        {
+          "id": 3,
+          "text": "ちょうどになります。",
+          "start_secs": 8.7
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 剛好。\n2. 剛好收您。\n3. 剛好是這個金額。",
+  "example_sentences": "1. ちょうどです。\n2. ちょうどお預かりします。\n3. ちょうどになります。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "ちょうどです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ちょうどお預かりします。",
+      "start_secs": 4.08
+    },
+    {
+      "id": 3,
+      "text": "ちょうどになります。",
+      "start_secs": 8.7
+    }
+  ]
+}

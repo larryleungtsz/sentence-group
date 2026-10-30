@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-8-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 8,
+    "text": "領収書は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ryoushuusho-wa.mp3",
+      "self_check": true,
+      "l1": "1. 收據需要嗎。\n2. 收據稍後交給您。\n3. 收據需要寫抬頭嗎。",
+      "gloss": "1. 收據需要嗎。\n2. 收據稍後交給您。\n3. 收據需要寫抬頭嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "領収書はご入り用ですか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "領収書は後ほどお渡しします。",
+          "start_secs": 5.1
+        },
+        {
+          "id": 3,
+          "text": "領収書は宛名が必要ですか。",
+          "start_secs": 10.62
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 收據需要嗎。\n2. 收據稍後交給您。\n3. 收據需要寫抬頭嗎。",
+  "example_sentences": "1. 領収書はご入り用ですか。\n2. 領収書は後ほどお渡しします。\n3. 領収書は宛名が必要ですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "領収書はご入り用ですか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "領収書は後ほどお渡しします。",
+      "start_secs": 5.1
+    },
+    {
+      "id": 3,
+      "text": "領収書は宛名が必要ですか。",
+      "start_secs": 10.62
+    }
+  ]
+}

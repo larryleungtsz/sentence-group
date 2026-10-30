@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 6,
+    "text": "ご案内させていただきます"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-goannai-sasete.mp3",
+      "self_check": true,
+      "l1": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。",
+      "gloss": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "ご案内させていただきます。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "確認させていただきます。",
+          "start_secs": 4.88
+        },
+        {
+          "id": 3,
+          "text": "ご説明させていただきます。",
+          "start_secs": 9.55
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。",
+  "example_sentences": "1. ご案内させていただきます。\n2. 確認させていただきます。\n3. ご説明させていただきます。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "ご案内させていただきます。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "確認させていただきます。",
+      "start_secs": 4.88
+    },
+    {
+      "id": 3,
+      "text": "ご説明させていただきます。",
+      "start_secs": 9.55
+    }
+  ]
+}

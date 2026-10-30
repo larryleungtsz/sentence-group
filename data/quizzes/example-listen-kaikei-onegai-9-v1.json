@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-9-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 9,
+    "text": "ご利用になられますか"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-goriyou.mp3",
+      "self_check": true,
+      "l1": "1. 收據需要嗎。\n2. 積分要使用嗎。\n3. 袋子需要嗎。",
+      "gloss": "1. 收據需要嗎。\n2. 積分要使用嗎。\n3. 袋子需要嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "領収書はご利用になられますか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ポイントはご利用になられますか。",
+          "start_secs": 5.46
+        },
+        {
+          "id": 3,
+          "text": "袋はご利用になられますか。",
+          "start_secs": 10.94
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 收據需要嗎。\n2. 積分要使用嗎。\n3. 袋子需要嗎。",
+  "example_sentences": "1. 領収書はご利用になられますか。\n2. ポイントはご利用になられますか。\n3. 袋はご利用になられますか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "領収書はご利用になられますか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ポイントはご利用になられますか。",
+      "start_secs": 5.46
+    },
+    {
+      "id": 3,
+      "text": "袋はご利用になられますか。",
+      "start_secs": 10.94
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 2,
+    "text": "2名って"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-2mei-tte.mp3",
+      "self_check": true,
+      "l1": "1. 兩位有空位嗎。\n2. 兩位可以麻煩嗎。\n3. 兩位可以嗎。",
+      "gloss": "1. 兩位有空位嗎。\n2. 兩位可以麻煩嗎。\n3. 兩位可以嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "2名って空いてますか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "2名ってお願いできますか。",
+          "start_secs": 5.05
+        },
+        {
+          "id": 3,
+          "text": "2名って大丈夫ですか。",
+          "start_secs": 10.28
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 兩位有空位嗎。\n2. 兩位可以麻煩嗎。\n3. 兩位可以嗎。",
+  "example_sentences": "1. 2名って空いてますか。\n2. 2名ってお願いできますか。\n3. 2名って大丈夫ですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "2名って空いてますか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "2名ってお願いできますか。",
+      "start_secs": 5.05
+    },
+    {
+      "id": 3,
+      "text": "2名って大丈夫ですか。",
+      "start_secs": 10.28
+    }
+  ]
+}

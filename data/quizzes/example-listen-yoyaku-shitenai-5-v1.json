@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 5,
+    "text": "少々お待ちください"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-shosho-omachi.mp3",
+      "self_check": true,
+      "l1": "1. 請稍等。\n2. 請稍等一下。\n3. 請稍候。",
+      "gloss": "1. 請稍等。\n2. 請稍等一下。\n3. 請稍候。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "少々お待ちください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "少々お待ちくださいね。",
+          "start_secs": 4.64
+        },
+        {
+          "id": 3,
+          "text": "少々お待ちくださいませ。",
+          "start_secs": 9.32
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 請稍等。\n2. 請稍等一下。\n3. 請稍候。",
+  "example_sentences": "1. 少々お待ちください。\n2. 少々お待ちくださいね。\n3. 少々お待ちくださいませ。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "少々お待ちください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "少々お待ちくださいね。",
+      "start_secs": 4.64
+    },
+    {
+      "id": 3,
+      "text": "少々お待ちくださいませ。",
+      "start_secs": 9.32
+    }
+  ]
+}

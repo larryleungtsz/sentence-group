@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ioshio-ganen-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 4,
+    "text": "岩塩です"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ganen-desu.mp3",
+      "self_check": true,
+      "l1": "1. 這是岩鹽。\n2. 是硫黃的岩鹽。\n3. 是喜馬拉雅的岩鹽。",
+      "gloss": "1. 這是岩鹽。\n2. 是硫黃的岩鹽。\n3. 是喜馬拉雅的岩鹽。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "これは岩塩です。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "硫黄の岩塩です。",
+          "start_secs": 4.7
+        },
+        {
+          "id": 3,
+          "text": "ヒマラヤの岩塩です。",
+          "start_secs": 9.3
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 這是岩鹽。\n2. 是硫黃的岩鹽。\n3. 是喜馬拉雅的岩鹽。",
+  "example_sentences": "1. これは岩塩です。\n2. 硫黄の岩塩です。\n3. ヒマラヤの岩塩です。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "これは岩塩です。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "硫黄の岩塩です。",
+      "start_secs": 4.7
+    },
+    {
+      "id": 3,
+      "text": "ヒマラヤの岩塩です。",
+      "start_secs": 9.3
+    }
+  ]
+}

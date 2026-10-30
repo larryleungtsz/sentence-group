@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 3,
+    "text": "4,210円"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-4210-en.mp3",
+      "self_check": true,
+      "l1": "1. 是4,210日圓。\n2. 合計是4,210日圓。\n3. 收您4,210日圓。",
+      "gloss": "1. 是4,210日圓。\n2. 合計是4,210日圓。\n3. 收您4,210日圓。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "4,210円になります。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "合計で4,210円です。",
+          "start_secs": 5.12
+        },
+        {
+          "id": 3,
+          "text": "4,210円お預かりします。",
+          "start_secs": 10.7
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是4,210日圓。\n2. 合計是4,210日圓。\n3. 收您4,210日圓。",
+  "example_sentences": "1. 4,210円になります。\n2. 合計で4,210円です。\n3. 4,210円お預かりします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "4,210円になります。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "合計で4,210円です。",
+      "start_secs": 5.12
+    },
+    {
+      "id": 3,
+      "text": "4,210円お預かりします。",
+      "start_secs": 10.7
+    }
+  ]
+}

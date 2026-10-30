@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-7-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 7,
+    "text": "お預かりします"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-oazukari.mp3",
+      "self_check": true,
+      "l1": "1. 收您。\n2. 現金，收您。\n3. 卡，收您。",
+      "gloss": "1. 收您。\n2. 現金，收您。\n3. 卡，收您。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お預かりします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "現金、お預かりします。",
+          "start_secs": 4.13
+        },
+        {
+          "id": 3,
+          "text": "カード、お預かりします。",
+          "start_secs": 9.03
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 收您。\n2. 現金，收您。\n3. 卡，收您。",
+  "example_sentences": "1. お預かりします。\n2. 現金、お預かりします。\n3. カード、お預かりします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お預かりします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "現金、お預かりします。",
+      "start_secs": 4.13
+    },
+    {
+      "id": 3,
+      "text": "カード、お預かりします。",
+      "start_secs": 9.03
+    }
+  ]
+}

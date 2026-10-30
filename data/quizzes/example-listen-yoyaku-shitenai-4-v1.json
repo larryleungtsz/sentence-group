@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 4,
+    "text": "お席確認してまいりますので"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-oseki-kakunin.mp3",
+      "self_check": true,
+      "l1": "1. 我去確認座位，請稍等。\n2. 我去確認座位，請在這邊等候。\n3. 我去確認座位，請慢慢來。",
+      "gloss": "1. 我去確認座位，請稍等。\n2. 我去確認座位，請在這邊等候。\n3. 我去確認座位，請慢慢來。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お席確認してまいりますので、少々お待ちください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お席確認してまいりますので、こちらでお待ちください。",
+          "start_secs": 6.4
+        },
+        {
+          "id": 3,
+          "text": "お席確認してまいりますので、ごゆっくりどうぞ。",
+          "start_secs": 12.82
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 我去確認座位，請稍等。\n2. 我去確認座位，請在這邊等候。\n3. 我去確認座位，請慢慢來。",
+  "example_sentences": "1. お席確認してまいりますので、少々お待ちください。\n2. お席確認してまいりますので、こちらでお待ちください。\n3. お席確認してまいりますので、ごゆっくりどうぞ。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お席確認してまいりますので、少々お待ちください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お席確認してまいりますので、こちらでお待ちください。",
+      "start_secs": 6.4
+    },
+    {
+      "id": 3,
+      "text": "お席確認してまいりますので、ごゆっくりどうぞ。",
+      "start_secs": 12.82
+    }
+  ]
+}

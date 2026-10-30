@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ioshio-ganen-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 1,
+    "text": "おいしいんですけれども"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-oishii-n-desu-keredomo.mp3",
+      "self_check": true,
+      "l1": "1. 雖然好吃不過，有點貴。\n2. 雖然好吃不過，份量少。\n3. 雖然好吃不過，請試著加鹽。",
+      "gloss": "1. 雖然好吃不過，有點貴。\n2. 雖然好吃不過，份量少。\n3. 雖然好吃不過，請試著加鹽。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "おいしいんですけれども、ちょっと高いです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "おいしいんですけれども、量が少ないです。",
+          "start_secs": 6.18
+        },
+        {
+          "id": 3,
+          "text": "おいしいんですけれども、塩をつけてみてください。",
+          "start_secs": 12.22
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 雖然好吃不過，有點貴。\n2. 雖然好吃不過，份量少。\n3. 雖然好吃不過，請試著加鹽。",
+  "example_sentences": "1. おいしいんですけれども、ちょっと高いです。\n2. おいしいんですけれども、量が少ないです。\n3. おいしいんですけれども、塩をつけてみてください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "おいしいんですけれども、ちょっと高いです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "おいしいんですけれども、量が少ないです。",
+      "start_secs": 6.18
+    },
+    {
+      "id": 3,
+      "text": "おいしいんですけれども、塩をつけてみてください。",
+      "start_secs": 12.22
+    }
+  ]
+}

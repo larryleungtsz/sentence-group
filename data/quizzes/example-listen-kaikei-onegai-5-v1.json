@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 5,
+    "text": "これでお願いします"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-korede-onegai.mp3",
+      "self_check": true,
+      "l1": "1. 用這個麻煩您。\n2. 用卡，這個麻煩您。\n3. 現金，這個麻煩您。",
+      "gloss": "1. 用這個麻煩您。\n2. 用卡，這個麻煩您。\n3. 現金，這個麻煩您。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "これでお願いします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "カードで、これでお願いします。",
+          "start_secs": 4.44
+        },
+        {
+          "id": 3,
+          "text": "現金、これでお願いします。",
+          "start_secs": 9.69
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 用這個麻煩您。\n2. 用卡，這個麻煩您。\n3. 現金，這個麻煩您。",
+  "example_sentences": "1. これでお願いします。\n2. カードで、これでお願いします。\n3. 現金、これでお願いします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "これでお願いします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "カードで、これでお願いします。",
+      "start_secs": 4.44
+    },
+    {
+      "id": 3,
+      "text": "現金、これでお願いします。",
+      "start_secs": 9.69
+    }
+  ]
+}

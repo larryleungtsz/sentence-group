@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-7-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 7,
+    "text": "お進みください"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-osusumi-kudasai.mp3",
+      "self_check": true,
+      "l1": "1. 請往前。\n2. 請往這邊走。\n3. 請往裡面走。",
+      "gloss": "1. 請往前。\n2. 請往這邊走。\n3. 請往裡面走。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お進みください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "こちらへお進みください。",
+          "start_secs": 4.32
+        },
+        {
+          "id": 3,
+          "text": "奥へお進みください。",
+          "start_secs": 9.15
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 請往前。\n2. 請往這邊走。\n3. 請往裡面走。",
+  "example_sentences": "1. お進みください。\n2. こちらへお進みください。\n3. 奥へお進みください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お進みください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "こちらへお進みください。",
+      "start_secs": 4.32
+    },
+    {
+      "id": 3,
+      "text": "奥へお進みください。",
+      "start_secs": 9.15
+    }
+  ]
+}

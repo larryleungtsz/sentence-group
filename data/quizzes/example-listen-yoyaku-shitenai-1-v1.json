@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 1,
+    "text": "予約してないんですけど"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-yoyaku-shitenai-n-desu-kedo.mp3",
+      "self_check": true,
+      "l1": "1. 雖然沒有預約，有空位嗎。\n2. 雖然沒有預約，可以入座嗎。\n3. 雖然沒有預約，可以嗎。",
+      "gloss": "1. 雖然沒有預約，有空位嗎。\n2. 雖然沒有預約，可以入座嗎。\n3. 雖然沒有預約，可以嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "予約してないんですけど、空いてますか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "予約してないんですけど、入れますか。",
+          "start_secs": 5.68
+        },
+        {
+          "id": 3,
+          "text": "予約してないんですけど、大丈夫ですか。",
+          "start_secs": 11.47
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 雖然沒有預約，有空位嗎。\n2. 雖然沒有預約，可以入座嗎。\n3. 雖然沒有預約，可以嗎。",
+  "example_sentences": "1. 予約してないんですけど、空いてますか。\n2. 予約してないんですけど、入れますか。\n3. 予約してないんですけど、大丈夫ですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "予約してないんですけど、空いてますか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "予約してないんですけど、入れますか。",
+      "start_secs": 5.68
+    },
+    {
+      "id": 3,
+      "text": "予約してないんですけど、大丈夫ですか。",
+      "start_secs": 11.47
+    }
+  ]
+}

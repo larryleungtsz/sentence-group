@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ioshio-ganen-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 3,
+    "text": "硫黄塩っていう"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ioshio-tteiu.mp3",
+      "self_check": true,
+      "l1": "1. 是叫做硫黃鹽的岩鹽。\n2. 這是叫做硫黃鹽的東西。\n3. 請撒上叫做硫黃鹽的。",
+      "gloss": "1. 是叫做硫黃鹽的岩鹽。\n2. 這是叫做硫黃鹽的東西。\n3. 請撒上叫做硫黃鹽的。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "硫黄塩っていう岩塩です。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "これは硫黄塩っていうものです。",
+          "start_secs": 5.13
+        },
+        {
+          "id": 3,
+          "text": "硫黄塩っていうのをかけてください。",
+          "start_secs": 10.59
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是叫做硫黃鹽的岩鹽。\n2. 這是叫做硫黃鹽的東西。\n3. 請撒上叫做硫黃鹽的。",
+  "example_sentences": "1. 硫黄塩っていう岩塩です。\n2. これは硫黄塩っていうものです。\n3. 硫黄塩っていうのをかけてください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "硫黄塩っていう岩塩です。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "これは硫黄塩っていうものです。",
+      "start_secs": 5.13
+    },
+    {
+      "id": 3,
+      "text": "硫黄塩っていうのをかけてください。",
+      "start_secs": 10.59
+    }
+  ]
+}

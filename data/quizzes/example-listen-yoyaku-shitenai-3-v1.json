@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-yoyaku-shitenai-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 3,
+    "text": "空いてますか"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-aite-masuka.mp3",
+      "self_check": true,
+      "l1": "1. 有空位嗎。\n2. 吧檯有空位嗎。\n3. 包廂有空位嗎。",
+      "gloss": "1. 有空位嗎。\n2. 吧檯有空位嗎。\n3. 包廂有空位嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "空いてますか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "カウンター、空いてますか。",
+          "start_secs": 4.08
+        },
+        {
+          "id": 3,
+          "text": "個室は空いてますか。",
+          "start_secs": 9.07
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 有空位嗎。\n2. 吧檯有空位嗎。\n3. 包廂有空位嗎。",
+  "example_sentences": "1. 空いてますか。\n2. カウンター、空いてますか。\n3. 個室は空いてますか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "空いてますか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "カウンター、空いてますか。",
+      "start_secs": 4.08
+    },
+    {
+      "id": 3,
+      "text": "個室は空いてますか。",
+      "start_secs": 9.07
+    }
+  ]
+}

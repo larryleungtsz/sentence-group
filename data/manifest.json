@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T18:40:27+08:00",
+  "generated_at": "2026-10-31T01:17:51+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -24705,6 +24705,186 @@
       "kind": "chunk",
       "chunk_id": 6,
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-1-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-2-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-3-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-4-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-5-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-6-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-7-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-8-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-8-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-kaikei-onegai-9-v1",
+      "file": "data/quizzes/example-listen-kaikei-onegai-9-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 9,
+      "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-1-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-2-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-3-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-4-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-5-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-6-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-yoyaku-shitenai-7-v1",
+      "file": "data/quizzes/example-listen-yoyaku-shitenai-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
+    },
+    {
+      "quiz_id": "example-listen-ioshio-ganen-1-v1",
+      "file": "data/quizzes/example-listen-ioshio-ganen-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "example-listen-ioshio-ganen-2-v1",
+      "file": "data/quizzes/example-listen-ioshio-ganen-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "example-listen-ioshio-ganen-3-v1",
+      "file": "data/quizzes/example-listen-ioshio-ganen-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "example-listen-ioshio-ganen-4-v1",
+      "file": "data/quizzes/example-listen-ioshio-ganen-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     }
   ]
 }

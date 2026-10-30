@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 1,
+    "text": "かしこまりました"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-kashikomarimashita.mp3",
+      "self_check": true,
+      "l1": "1. 明白了。\n2. 明白了，請稍等。\n3. 明白了，馬上為您準備。",
+      "gloss": "1. 明白了。\n2. 明白了，請稍等。\n3. 明白了，馬上為您準備。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "かしこまりました。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "かしこまりました、少々お待ちください。",
+          "start_secs": 4.09
+        },
+        {
+          "id": 3,
+          "text": "かしこまりました、すぐご用意します。",
+          "start_secs": 9.78
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 明白了。\n2. 明白了，請稍等。\n3. 明白了，馬上為您準備。",
+  "example_sentences": "1. かしこまりました。\n2. かしこまりました、少々お待ちください。\n3. かしこまりました、すぐご用意します。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "かしこまりました。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "かしこまりました、少々お待ちください。",
+      "start_secs": 4.09
+    },
+    {
+      "id": 3,
+      "text": "かしこまりました、すぐご用意します。",
+      "start_secs": 9.78
+    }
+  ]
+}

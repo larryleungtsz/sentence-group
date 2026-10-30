@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-kaikei-onegai-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 2,
+    "text": "お会計は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-okaikei-wa.mp3",
+      "self_check": true,
+      "l1": "1. 帳單在這邊。\n2. 帳單結好了嗎。\n3. 帳單用卡可以嗎。",
+      "gloss": "1. 帳單在這邊。\n2. 帳單結好了嗎。\n3. 帳單用卡可以嗎。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お会計はこちらです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お会計はお済みですか。",
+          "start_secs": 4.56
+        },
+        {
+          "id": 3,
+          "text": "お会計はカードでよろしいですか。",
+          "start_secs": 9.32
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 帳單在這邊。\n2. 帳單結好了嗎。\n3. 帳單用卡可以嗎。",
+  "example_sentences": "1. お会計はこちらです。\n2. お会計はお済みですか。\n3. お会計はカードでよろしいですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お会計はこちらです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お会計はお済みですか。",
+      "start_secs": 4.56
+    },
+    {
+      "id": 3,
+      "text": "お会計はカードでよろしいですか。",
+      "start_secs": 9.32
+    }
+  ]
+}
