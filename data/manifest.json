@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T03:41:46+08:00",
+  "generated_at": "2026-10-30T12:13:04+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -21190,6 +21190,426 @@
       "kind": "chunk",
       "chunk_id": 4,
       "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d01",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d01.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+1"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d02",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d02.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+2"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d03",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d03.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+3"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d04",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d04.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+4"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d05",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d05.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+5"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d06",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d06.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+6"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d07",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d07.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+7"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d08",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d08.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+8"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d09",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d09.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+9"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d10",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d10.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+10"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d11",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d11.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+11"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d12",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d12.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+12"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d13",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d13.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+13"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d14",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d14.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+14"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d15",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d15.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+15"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d16",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d16.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+16"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d17",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d17.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+17"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d18",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d18.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+18"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d19",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d19.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+19"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d20",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d20.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+20"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d21",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d21.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+21"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d22",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d22.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+22"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d23",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d23.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+23"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d24",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d24.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+24"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d25",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d25.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+25"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d26",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d26.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+26"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d27",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d27.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+27"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d28",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d28.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+28"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d29",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d29.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+29"
+      ]
+    },
+    {
+      "quiz_id": "sentence-segment-shadow-ioshio-ganen-d30",
+      "file": "data/quizzes/sentence-segment-shadow-ioshio-ganen-d30.json",
+      "objective": "sentence_segment_shadowing",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+      "markdown_fixed": false,
+      "notion_url": null,
+      "schedule_stages": [
+        "T+30"
+      ]
     }
   ]
 }
