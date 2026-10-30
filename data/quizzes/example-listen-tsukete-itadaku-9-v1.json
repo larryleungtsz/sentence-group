@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-9-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 9,
+    "text": "おいしそう"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-oishisou.mp3",
+      "self_check": true,
+      "l1": "1. 看起來好吃呢。\n2. 看起來超好吃。\n3. 這個定食，看起來好吃。",
+      "gloss": "1. 看起來好吃呢。\n2. 看起來超好吃。\n3. 這個定食，看起來好吃。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "おいしそうですね。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "めっちゃおいしそう。",
+          "start_secs": 4.49
+        },
+        {
+          "id": 3,
+          "text": "この定食、おいしそう。",
+          "start_secs": 9.15
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 看起來好吃呢。\n2. 看起來超好吃。\n3. 這個定食，看起來好吃。",
+  "example_sentences": "1. おいしそうですね。\n2. めっちゃおいしそう。\n3. この定食、おいしそう。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "おいしそうですね。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "めっちゃおいしそう。",
+      "start_secs": 4.49
+    },
+    {
+      "id": 3,
+      "text": "この定食、おいしそう。",
+      "start_secs": 9.15
+    }
+  ]
+}

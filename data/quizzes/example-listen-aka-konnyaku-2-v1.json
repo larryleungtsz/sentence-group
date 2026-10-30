@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 2,
+    "text": "赤蒟蒻"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-aka-konnyaku.mp3",
+      "self_check": true,
+      "l1": "1. 為您送上紅蒟蒻。\n2. 紅蒟蒻是用高湯燉煮著。\n3. 紅蒟蒻如何？",
+      "gloss": "1. 為您送上紅蒟蒻。\n2. 紅蒟蒻是用高湯燉煮著。\n3. 紅蒟蒻如何？",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "赤蒟蒻をお出しします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "赤蒟蒻はお出汁で炊いております。",
+          "start_secs": 5.04
+        },
+        {
+          "id": 3,
+          "text": "赤蒟蒻はいかがですか。",
+          "start_secs": 10.71
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 為您送上紅蒟蒻。\n2. 紅蒟蒻是用高湯燉煮著。\n3. 紅蒟蒻如何？",
+  "example_sentences": "1. 赤蒟蒻をお出しします。\n2. 赤蒟蒻はお出汁で炊いております。\n3. 赤蒟蒻はいかがですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "赤蒟蒻をお出しします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "赤蒟蒻はお出汁で炊いております。",
+      "start_secs": 5.04
+    },
+    {
+      "id": 3,
+      "text": "赤蒟蒻はいかがですか。",
+      "start_secs": 10.71
+    }
+  ]
+}

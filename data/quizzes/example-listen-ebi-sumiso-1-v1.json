@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 1,
+    "text": "お隣が"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-tonari-ga.mp3",
+      "self_check": true,
+      "l1": "1. 旁邊是蝦和青瓜。\n2. 旁邊是今天的推薦。\n3. 旁邊是小碟。",
+      "gloss": "1. 旁邊是蝦和青瓜。\n2. 旁邊是今天的推薦。\n3. 旁邊是小碟。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お隣が海老ときゅうりです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お隣が本日のおすすめです。",
+          "start_secs": 5.37
+        },
+        {
+          "id": 3,
+          "text": "お隣が小鉢になります。",
+          "start_secs": 10.77
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 旁邊是蝦和青瓜。\n2. 旁邊是今天的推薦。\n3. 旁邊是小碟。",
+  "example_sentences": "1. お隣が海老ときゅうりです。\n2. お隣が本日のおすすめです。\n3. お隣が小鉢になります。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お隣が海老ときゅうりです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お隣が本日のおすすめです。",
+      "start_secs": 5.37
+    },
+    {
+      "id": 3,
+      "text": "お隣が小鉢になります。",
+      "start_secs": 10.77
+    }
+  ]
+}

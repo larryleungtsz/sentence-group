@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 5,
+    "text": "そのお隣が"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sono-o-tonari-ga.mp3",
+      "self_check": true,
+      "l1": "1. 再旁邊是香菇和蜆。\n2. 再旁邊是燉煮拼盤。\n3. 再旁邊是今天的小碟。",
+      "gloss": "1. 再旁邊是香菇和蜆。\n2. 再旁邊是燉煮拼盤。\n3. 再旁邊是今天的小碟。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "そのお隣が椎茸とあさりです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "そのお隣が炊き合わせです。",
+          "start_secs": 5.91
+        },
+        {
+          "id": 3,
+          "text": "そのお隣が本日の小鉢です。",
+          "start_secs": 11.14
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 再旁邊是香菇和蜆。\n2. 再旁邊是燉煮拼盤。\n3. 再旁邊是今天的小碟。",
+  "example_sentences": "1. そのお隣が椎茸とあさりです。\n2. そのお隣が炊き合わせです。\n3. そのお隣が本日の小鉢です。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "そのお隣が椎茸とあさりです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "そのお隣が炊き合わせです。",
+      "start_secs": 5.91
+    },
+    {
+      "id": 3,
+      "text": "そのお隣が本日の小鉢です。",
+      "start_secs": 11.14
+    }
+  ]
+}

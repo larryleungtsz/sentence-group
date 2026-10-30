@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 3,
+    "text": "きゅうりの"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-kyuri-no.mp3",
+      "self_check": true,
+      "l1": "1. 是青瓜的醋拌菜。\n2. 也有青瓜的淺漬。\n3. 青瓜的沙拉如何？",
+      "gloss": "1. 是青瓜的醋拌菜。\n2. 也有青瓜的淺漬。\n3. 青瓜的沙拉如何？",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "きゅうりの酢の物です。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "きゅうりの浅漬けもございます。",
+          "start_secs": 4.8
+        },
+        {
+          "id": 3,
+          "text": "きゅうりのサラダはいかがですか。",
+          "start_secs": 9.8
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是青瓜的醋拌菜。\n2. 也有青瓜的淺漬。\n3. 青瓜的沙拉如何？",
+  "example_sentences": "1. きゅうりの酢の物です。\n2. きゅうりの浅漬けもございます。\n3. きゅうりのサラダはいかがですか。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "きゅうりの酢の物です。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "きゅうりの浅漬けもございます。",
+      "start_secs": 4.8
+    },
+    {
+      "id": 3,
+      "text": "きゅうりのサラダはいかがですか。",
+      "start_secs": 9.8
+    }
+  ]
+}

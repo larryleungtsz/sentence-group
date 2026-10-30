@@ -1348,7 +1348,7 @@
           "quizzes_ready": true
         }
       ],
-      "sentence_quizzes_ready": false
+      "sentence_quizzes_ready": true
     },
     {
       "slug": "aka-konnyaku",
@@ -1409,7 +1409,7 @@
           "quizzes_ready": true
         }
       ],
-      "sentence_quizzes_ready": false
+      "sentence_quizzes_ready": true
     }
   ]
 }

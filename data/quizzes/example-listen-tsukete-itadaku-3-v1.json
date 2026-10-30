@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 3,
+    "text": "お味になるので"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-aji-ni-naru-node.mp3",
+      "self_check": true,
+      "l1": "1. 會變成溫和的味道所以，推薦。\n2. 會變成偏甜的味道所以，小孩也喜歡。\n3. 會變成濃味所以，請注意。",
+      "gloss": "1. 會變成溫和的味道所以，推薦。\n2. 會變成偏甜的味道所以，小孩也喜歡。\n3. 會變成濃味所以，請注意。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "まろやかなお味になるので、おすすめです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "甘めのお味になるので、子どもにも人気です。",
+          "start_secs": 5.84
+        },
+        {
+          "id": 3,
+          "text": "濃いお味になるので、ご注意ください。",
+          "start_secs": 11.96
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 會變成溫和的味道所以，推薦。\n2. 會變成偏甜的味道所以，小孩也喜歡。\n3. 會變成濃味所以，請注意。",
+  "example_sentences": "1. まろやかなお味になるので、おすすめです。\n2. 甘めのお味になるので、子どもにも人気です。\n3. 濃いお味になるので、ご注意ください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "まろやかなお味になるので、おすすめです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "甘めのお味になるので、子どもにも人気です。",
+      "start_secs": 5.84
+    },
+    {
+      "id": 3,
+      "text": "濃いお味になるので、ご注意ください。",
+      "start_secs": 11.96
+    }
+  ]
+}

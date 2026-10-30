@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 4,
+    "text": "おすすめしてるので"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-osusume-shiteru-node.mp3",
+      "self_check": true,
+      "l1": "1. 店裡所以在推薦，請務必試試。\n2. 店員所以在推薦，很受歡迎。\n3. 每天所以在推薦，很有自信。",
+      "gloss": "1. 店裡所以在推薦，請務必試試。\n2. 店員所以在推薦，很受歡迎。\n3. 每天所以在推薦，很有自信。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お店でおすすめしてるので、ぜひどうぞ。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "スタッフがおすすめしてるので、人気です。",
+          "start_secs": 5.61
+        },
+        {
+          "id": 3,
+          "text": "毎日おすすめしてるので、自信があります。",
+          "start_secs": 11.3
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 店裡所以在推薦，請務必試試。\n2. 店員所以在推薦，很受歡迎。\n3. 每天所以在推薦，很有自信。",
+  "example_sentences": "1. お店でおすすめしてるので、ぜひどうぞ。\n2. スタッフがおすすめしてるので、人気です。\n3. 毎日おすすめしてるので、自信があります。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お店でおすすめしてるので、ぜひどうぞ。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "スタッフがおすすめしてるので、人気です。",
+      "start_secs": 5.61
+    },
+    {
+      "id": 3,
+      "text": "毎日おすすめしてるので、自信があります。",
+      "start_secs": 11.3
+    }
+  ]
+}

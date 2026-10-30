@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 4,
+    "text": "炊いております"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-taite-orimasu.mp3",
+      "self_check": true,
+      "l1": "1. 是用高湯燉煮著。\n2. 在慢慢燉煮著。\n3. 從今早開始燉煮著。",
+      "gloss": "1. 是用高湯燉煮著。\n2. 在慢慢燉煮著。\n3. 從今早開始燉煮著。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お出汁で炊いております。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ゆっくり炊いております。",
+          "start_secs": 4.64
+        },
+        {
+          "id": 3,
+          "text": "今朝から炊いております。",
+          "start_secs": 9.24
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是用高湯燉煮著。\n2. 在慢慢燉煮著。\n3. 從今早開始燉煮著。",
+  "example_sentences": "1. お出汁で炊いております。\n2. ゆっくり炊いております。\n3. 今朝から炊いております。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お出汁で炊いております。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ゆっくり炊いております。",
+      "start_secs": 4.64
+    },
+    {
+      "id": 3,
+      "text": "今朝から炊いております。",
+      "start_secs": 9.24
+    }
+  ]
+}

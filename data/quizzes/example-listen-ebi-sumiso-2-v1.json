@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 2,
+    "text": "海老と"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ebi-to.mp3",
+      "self_check": true,
+      "l1": "1. 是蝦和青瓜淋醋味噌。\n2. 是蝦和蔬菜的拼盤。\n3. 請一起享用蝦和豆腐。",
+      "gloss": "1. 是蝦和青瓜淋醋味噌。\n2. 是蝦和蔬菜的拼盤。\n3. 請一起享用蝦和豆腐。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "海老ときゅうりの酢味噌がけです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "海老と野菜の盛り合わせです。",
+          "start_secs": 5.22
+        },
+        {
+          "id": 3,
+          "text": "海老と豆腐を一緒にどうぞ。",
+          "start_secs": 10.38
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是蝦和青瓜淋醋味噌。\n2. 是蝦和蔬菜的拼盤。\n3. 請一起享用蝦和豆腐。",
+  "example_sentences": "1. 海老ときゅうりの酢味噌がけです。\n2. 海老と野菜の盛り合わせです。\n3. 海老と豆腐を一緒にどうぞ。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "海老ときゅうりの酢味噌がけです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "海老と野菜の盛り合わせです。",
+      "start_secs": 5.22
+    },
+    {
+      "id": 3,
+      "text": "海老と豆腐を一緒にどうぞ。",
+      "start_secs": 10.38
+    }
+  ]
+}

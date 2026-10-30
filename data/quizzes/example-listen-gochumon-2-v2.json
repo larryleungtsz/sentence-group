@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-gochumon-2-v2",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 2,
+    "text": "お決まりに"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-kimari-ni.mp3",
+      "self_check": true,
+      "l1": "1. 您的點餐決定好了嗎？\n2. 決定好了的話請來電。\n3. 尺寸決定好了的話請告知。",
+      "gloss": "1. 您的點餐決定好了嗎？\n2. 決定好了的話請來電。\n3. 尺寸決定好了的話請告知。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "ご注文はお決まりになりましたか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お決まりになりましたらお電話ください。",
+          "start_secs": 5.6
+        },
+        {
+          "id": 3,
+          "text": "サイズがお決まりになりましたらお知らせください。",
+          "start_secs": 11.06
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 您的點餐決定好了嗎？\n2. 決定好了的話請來電。\n3. 尺寸決定好了的話請告知。",
+  "example_sentences": "1. ご注文はお決まりになりましたか。\n2. お決まりになりましたらお電話ください。\n3. サイズがお決まりになりましたらお知らせください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "ご注文はお決まりになりましたか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お決まりになりましたらお電話ください。",
+      "start_secs": 5.6
+    },
+    {
+      "id": 3,
+      "text": "サイズがお決まりになりましたらお知らせください。",
+      "start_secs": 11.06
+    }
+  ]
+}

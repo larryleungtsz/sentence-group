@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-7-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 7,
+    "text": "いえーい"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ieei.mp3",
+      "self_check": true,
+      "l1": "1. 耶！\n2. 耶，來了！\n3. 耶，看起來好吃！",
+      "gloss": "1. 耶！\n2. 耶，來了！\n3. 耶，看起來好吃！",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "いえーい！",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "いえーい、きたー！",
+          "start_secs": 4.24
+        },
+        {
+          "id": 3,
+          "text": "いえーい、おいしそう！",
+          "start_secs": 9.25
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 耶！\n2. 耶，來了！\n3. 耶，看起來好吃！",
+  "example_sentences": "1. いえーい！\n2. いえーい、きたー！\n3. いえーい、おいしそう！",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "いえーい！",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "いえーい、きたー！",
+      "start_secs": 4.24
+    },
+    {
+      "id": 3,
+      "text": "いえーい、おいしそう！",
+      "start_secs": 9.25
+    }
+  ]
+}

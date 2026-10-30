@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-8-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 8,
+    "text": "炊き合わせです"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-takiawase-desu.mp3",
+      "self_check": true,
+      "l1": "1. 這個是燉煮拼盤。\n2. 是季節的燉煮拼盤。\n3. 是根菜的燉煮拼盤。",
+      "gloss": "1. 這個是燉煮拼盤。\n2. 是季節的燉煮拼盤。\n3. 是根菜的燉煮拼盤。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "こちらは炊き合わせです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "季節の炊き合わせです。",
+          "start_secs": 5.04
+        },
+        {
+          "id": 3,
+          "text": "根菜の炊き合わせです。",
+          "start_secs": 9.8
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 這個是燉煮拼盤。\n2. 是季節的燉煮拼盤。\n3. 是根菜的燉煮拼盤。",
+  "example_sentences": "1. こちらは炊き合わせです。\n2. 季節の炊き合わせです。\n3. 根菜の炊き合わせです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "こちらは炊き合わせです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "季節の炊き合わせです。",
+      "start_secs": 5.04
+    },
+    {
+      "id": 3,
+      "text": "根菜の炊き合わせです。",
+      "start_secs": 9.8
+    }
+  ]
+}

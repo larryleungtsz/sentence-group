@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-10-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 10,
+    "text": "食べましょう"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tabemashou.mp3",
+      "self_check": true,
+      "l1": "1. 來吃吧。\n2. 趁還沒涼來吃吧。\n3. 一起來吃吧。",
+      "gloss": "1. 來吃吧。\n2. 趁還沒涼來吃吧。\n3. 一起來吃吧。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "食べましょう。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "冷めないうちに食べましょう。",
+          "start_secs": 3.96
+        },
+        {
+          "id": 3,
+          "text": "一緒に食べましょう。",
+          "start_secs": 8.74
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 來吃吧。\n2. 趁還沒涼來吃吧。\n3. 一起來吃吧。",
+  "example_sentences": "1. 食べましょう。\n2. 冷めないうちに食べましょう。\n3. 一緒に食べましょう。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "食べましょう。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "冷めないうちに食べましょう。",
+      "start_secs": 3.96
+    },
+    {
+      "id": 3,
+      "text": "一緒に食べましょう。",
+      "start_secs": 8.74
+    }
+  ]
+}

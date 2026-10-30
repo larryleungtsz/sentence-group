@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 5,
+    "text": "そのまま"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sono-mama.mp3",
+      "self_check": true,
+      "l1": "1. 請就那樣食用。\n2. 就那樣／原樣也好吃。\n3. 可以就那樣試吃。",
+      "gloss": "1. 請就那樣食用。\n2. 就那樣／原樣也好吃。\n3. 可以就那樣試吃。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "そのままお召し上がりください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "そのままでもおいしいです。",
+          "start_secs": 5.09
+        },
+        {
+          "id": 3,
+          "text": "そのままお試しいただけます。",
+          "start_secs": 9.99
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 請就那樣食用。\n2. 就那樣／原樣也好吃。\n3. 可以就那樣試吃。",
+  "example_sentences": "1. そのままお召し上がりください。\n2. そのままでもおいしいです。\n3. そのままお試しいただけます。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "そのままお召し上がりください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "そのままでもおいしいです。",
+      "start_secs": 5.09
+    },
+    {
+      "id": 3,
+      "text": "そのままお試しいただけます。",
+      "start_secs": 9.99
+    }
+  ]
+}

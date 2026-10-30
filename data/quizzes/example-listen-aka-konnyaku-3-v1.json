@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-3-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 3,
+    "text": "お出汁で"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-dashi-de.mp3",
+      "self_check": true,
+      "l1": "1. 是用高湯燉煮著。\n2. 是用高湯燉煮的蔬菜。\n3. 是用高湯調味的。",
+      "gloss": "1. 是用高湯燉煮著。\n2. 是用高湯燉煮的蔬菜。\n3. 是用高湯調味的。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お出汁で炊いております。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お出汁で煮込んだ野菜です。",
+          "start_secs": 4.64
+        },
+        {
+          "id": 3,
+          "text": "お出汁で味をつけております。",
+          "start_secs": 9.72
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是用高湯燉煮著。\n2. 是用高湯燉煮的蔬菜。\n3. 是用高湯調味的。",
+  "example_sentences": "1. お出汁で炊いております。\n2. お出汁で煮込んだ野菜です。\n3. お出汁で味をつけております。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お出汁で炊いております。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お出汁で煮込んだ野菜です。",
+      "start_secs": 4.64
+    },
+    {
+      "id": 3,
+      "text": "お出汁で味をつけております。",
+      "start_secs": 9.72
+    }
+  ]
+}

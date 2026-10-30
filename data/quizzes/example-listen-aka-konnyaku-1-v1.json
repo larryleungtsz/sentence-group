@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 1,
+    "text": "その下"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sono-shita.mp3",
+      "self_check": true,
+      "l1": "1. 在那下面，是紅蒟蒻。\n2. 在那下面有小碟。\n3. 請看在那下面。",
+      "gloss": "1. 在那下面，是紅蒟蒻。\n2. 在那下面有小碟。\n3. 請看在那下面。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "その下、赤蒟蒻でございます。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "その下に小鉢がございます。",
+          "start_secs": 5.64
+        },
+        {
+          "id": 3,
+          "text": "その下をご覧ください。",
+          "start_secs": 10.92
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 在那下面，是紅蒟蒻。\n2. 在那下面有小碟。\n3. 請看在那下面。",
+  "example_sentences": "1. その下、赤蒟蒻でございます。\n2. その下に小鉢がございます。\n3. その下をご覧ください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "その下、赤蒟蒻でございます。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "その下に小鉢がございます。",
+      "start_secs": 5.64
+    },
+    {
+      "id": 3,
+      "text": "その下をご覧ください。",
+      "start_secs": 10.92
+    }
+  ]
+}

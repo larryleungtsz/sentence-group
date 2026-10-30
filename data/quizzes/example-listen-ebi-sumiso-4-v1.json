@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-4-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 4,
+    "text": "酢味噌がけです"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sumiso-gake-desu.mp3",
+      "self_check": true,
+      "l1": "1. 這個是醋味噌淋的。\n2. 是蝦的醋味噌淋的。\n3. 是季節蔬菜的醋味噌淋的。",
+      "gloss": "1. 這個是醋味噌淋的。\n2. 是蝦的醋味噌淋的。\n3. 是季節蔬菜的醋味噌淋的。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "こちらは酢味噌がけです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "海老の酢味噌がけです。",
+          "start_secs": 5.19
+        },
+        {
+          "id": 3,
+          "text": "季節野菜の酢味噌がけです。",
+          "start_secs": 9.86
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 這個是醋味噌淋的。\n2. 是蝦的醋味噌淋的。\n3. 是季節蔬菜的醋味噌淋的。",
+  "example_sentences": "1. こちらは酢味噌がけです。\n2. 海老の酢味噌がけです。\n3. 季節野菜の酢味噌がけです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "こちらは酢味噌がけです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "海老の酢味噌がけです。",
+      "start_secs": 5.19
+    },
+    {
+      "id": 3,
+      "text": "季節野菜の酢味噌がけです。",
+      "start_secs": 9.86
+    }
+  ]
+}

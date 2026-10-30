@@ -419,51 +419,6 @@
       "chunk_id": 5
     },
     {
-      "quiz_id": "example-listen-gochumon-1-v1",
-      "file": "data/quizzes/example-listen-gochumon-1-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "chunk_id": 1
-    },
-    {
-      "quiz_id": "example-listen-gochumon-2-v1",
-      "file": "data/quizzes/example-listen-gochumon-2-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "chunk_id": 2
-    },
-    {
-      "quiz_id": "example-listen-gochumon-3-v1",
-      "file": "data/quizzes/example-listen-gochumon-3-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "chunk_id": 3
-    },
-    {
-      "quiz_id": "example-listen-gochumon-4-v1",
-      "file": "data/quizzes/example-listen-gochumon-4-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "chunk_id": 4
-    },
-    {
-      "quiz_id": "example-listen-gochumon-5-v1",
-      "file": "data/quizzes/example-listen-gochumon-5-v1.json",
-      "objective": "example_sentences_listening",
-      "level": 1,
-      "kind": "chunk",
-      "sentence": "ご注文お決まりになりましたらお呼びください",
-      "chunk_id": 5
-    },
-    {
       "quiz_id": "example-listen-gochumon-kakunin-2-v1",
       "file": "data/quizzes/example-listen-gochumon-kakunin-2-v1.json",
       "objective": "example_sentences_listening",
@@ -21732,6 +21687,258 @@
       "quiz_id": "sounding-aka-konnyaku-6-v1",
       "file": "data/quizzes/sounding-aka-konnyaku-6-v1.json",
       "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-1-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-10-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-10-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 10,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-2-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-3-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-4-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-5-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-6-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-7-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-tsukete-itadaku-9-v1",
+      "file": "data/quizzes/example-listen-tsukete-itadaku-9-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 9,
+      "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-1-v2",
+      "file": "data/quizzes/example-listen-gochumon-1-v2.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "ご注文お決まりになりましたらお呼びください"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-2-v2",
+      "file": "data/quizzes/example-listen-gochumon-2-v2.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "ご注文お決まりになりましたらお呼びください"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-3-v2",
+      "file": "data/quizzes/example-listen-gochumon-3-v2.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "ご注文お決まりになりましたらお呼びください"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-4-v2",
+      "file": "data/quizzes/example-listen-gochumon-4-v2.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "ご注文お決まりになりましたらお呼びください"
+    },
+    {
+      "quiz_id": "example-listen-gochumon-5-v2",
+      "file": "data/quizzes/example-listen-gochumon-5-v2.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "ご注文お決まりになりましたらお呼びください"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-1-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-2-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-3-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-4-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-5-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-6-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-6-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-7-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-7-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-ebi-sumiso-8-v1",
+      "file": "data/quizzes/example-listen-ebi-sumiso-8-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-1-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-1-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-2-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-2-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-3-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-3-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-4-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-4-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-5-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-5-v1.json",
+      "objective": "example_sentences_listening",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "example-listen-aka-konnyaku-6-v1",
+      "file": "data/quizzes/example-listen-aka-konnyaku-6-v1.json",
+      "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
       "chunk_id": 6,

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-gochumon-5-v2",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 5,
+    "text": "ください"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-kudasai.mp3",
+      "self_check": true,
+      "l1": "1. 決定好了的話請叫我。\n2. 請稍候。\n3. 請填寫這張表格。",
+      "gloss": "1. 決定好了的話請叫我。\n2. 請稍候。\n3. 請填寫這張表格。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お決まりになりましたらお呼びください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "少々お待ちください。",
+          "start_secs": 5.51
+        },
+        {
+          "id": 3,
+          "text": "こちらの用紙にご記入ください。",
+          "start_secs": 10.11
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 決定好了的話請叫我。\n2. 請稍候。\n3. 請填寫這張表格。",
+  "example_sentences": "1. お決まりになりましたらお呼びください。\n2. 少々お待ちください。\n3. こちらの用紙にご記入ください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お決まりになりましたらお呼びください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "少々お待ちください。",
+      "start_secs": 5.51
+    },
+    {
+      "id": 3,
+      "text": "こちらの用紙にご記入ください。",
+      "start_secs": 10.11
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-gochumon-4-v2",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 4,
+    "text": "お呼び"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-yobi.mp3",
+      "self_check": true,
+      "l1": "1. 決定好了的話請叫我。\n2. 我會呼叫您，請稍候。\n3. 請叫店員。",
+      "gloss": "1. 決定好了的話請叫我。\n2. 我會呼叫您，請稍候。\n3. 請叫店員。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "お決まりになりましたらお呼びください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お呼びしますので少々お待ちください。",
+          "start_secs": 5.53
+        },
+        {
+          "id": 3,
+          "text": "係員をお呼びください。",
+          "start_secs": 11.25
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 決定好了的話請叫我。\n2. 我會呼叫您，請稍候。\n3. 請叫店員。",
+  "example_sentences": "1. お決まりになりましたらお呼びください。\n2. お呼びしますので少々お待ちください。\n3. 係員をお呼びください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "お決まりになりましたらお呼びください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お呼びしますので少々お待ちください。",
+      "start_secs": 5.53
+    },
+    {
+      "id": 3,
+      "text": "係員をお呼びください。",
+      "start_secs": 11.25
+    }
+  ]
+}

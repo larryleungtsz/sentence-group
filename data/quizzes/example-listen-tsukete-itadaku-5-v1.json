@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-5-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 5,
+    "text": "ぜひ"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-zehi.mp3",
+      "self_check": true,
+      "l1": "1. 請務必試試。\n2. 請務必點餐。\n3. 請務必再來。",
+      "gloss": "1. 請務必試試。\n2. 請務必點餐。\n3. 請務必再來。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "ぜひお試しください。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ぜひご注文ください。",
+          "start_secs": 4.74
+        },
+        {
+          "id": 3,
+          "text": "ぜひまた来てください。",
+          "start_secs": 9.49
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 請務必試試。\n2. 請務必點餐。\n3. 請務必再來。",
+  "example_sentences": "1. ぜひお試しください。\n2. ぜひご注文ください。\n3. ぜひまた来てください。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "ぜひお試しください。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ぜひご注文ください。",
+      "start_secs": 4.74
+    },
+    {
+      "id": 3,
+      "text": "ぜひまた来てください。",
+      "start_secs": 9.49
+    }
+  ]
+}

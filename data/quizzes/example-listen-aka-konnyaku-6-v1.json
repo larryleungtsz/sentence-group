@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-aka-konnyaku-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 6,
+    "text": "お召し上がりいただいても"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-meshiagari-itadaitemo.mp3",
+      "self_check": true,
+      "l1": "1. 即使請您就那樣食用也可以，沒問題。\n2. 即使請您食用也可以。\n3. 即使請您食用也可以，沒問題。",
+      "gloss": "1. 即使請您就那樣食用也可以，沒問題。\n2. 即使請您食用也可以。\n3. 即使請您食用也可以，沒問題。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "そのままお召し上がりいただいても大丈夫です。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "お召し上がりいただいても結構でございます。",
+          "start_secs": 5.97
+        },
+        {
+          "id": 3,
+          "text": "お召し上がりいただいても問題ございません。",
+          "start_secs": 11.76
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 即使請您就那樣食用也可以，沒問題。\n2. 即使請您食用也可以。\n3. 即使請您食用也可以，沒問題。",
+  "example_sentences": "1. そのままお召し上がりいただいても大丈夫です。\n2. お召し上がりいただいても結構でございます。\n3. お召し上がりいただいても問題ございません。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "そのままお召し上がりいただいても大丈夫です。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "お召し上がりいただいても結構でございます。",
+      "start_secs": 5.97
+    },
+    {
+      "id": 3,
+      "text": "お召し上がりいただいても問題ございません。",
+      "start_secs": 11.76
+    }
+  ]
+}

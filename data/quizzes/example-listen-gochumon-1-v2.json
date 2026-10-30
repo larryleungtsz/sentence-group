@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-gochumon-1-v2",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "chunk": {
+    "id": 1,
+    "text": "ご注文"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-go-chumon.mp3",
+      "self_check": true,
+      "l1": "1. 您的點餐決定好了嗎？\n2. 電話可以接受您的點餐。\n3. 請在櫃檯點餐。",
+      "gloss": "1. 您的點餐決定好了嗎？\n2. 電話可以接受您的點餐。\n3. 請在櫃檯點餐。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "ご注文はお決まりですか。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ご注文を電話で承ります。",
+          "start_secs": 5.05
+        },
+        {
+          "id": 3,
+          "text": "ご注文はカウンターでお願いします。",
+          "start_secs": 10.53
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 您的點餐決定好了嗎？\n2. 電話可以接受您的點餐。\n3. 請在櫃檯點餐。",
+  "example_sentences": "1. ご注文はお決まりですか。\n2. ご注文を電話で承ります。\n3. ご注文はカウンターでお願いします。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "ご注文はお決まりですか。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ご注文を電話で承ります。",
+      "start_secs": 5.05
+    },
+    {
+      "id": 3,
+      "text": "ご注文はカウンターでお願いします。",
+      "start_secs": 10.53
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-2-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 2,
+    "text": "卵っぽい"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tamago-ppoi.mp3",
+      "self_check": true,
+      "l1": "1. 有像蛋的味道。\n2. 有點像蛋呢。\n3. 這個醬是像蛋的。",
+      "gloss": "1. 有像蛋的味道。\n2. 有點像蛋呢。\n3. 這個醬是像蛋的。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "卵っぽい味がします。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ちょっと卵っぽいですね。",
+          "start_secs": 4.85
+        },
+        {
+          "id": 3,
+          "text": "このソースは卵っぽいです。",
+          "start_secs": 9.92
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 有像蛋的味道。\n2. 有點像蛋呢。\n3. 這個醬是像蛋的。",
+  "example_sentences": "1. 卵っぽい味がします。\n2. ちょっと卵っぽいですね。\n3. このソースは卵っぽいです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "卵っぽい味がします。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ちょっと卵っぽいですね。",
+      "start_secs": 4.85
+    },
+    {
+      "id": 3,
+      "text": "このソースは卵っぽいです。",
+      "start_secs": 9.92
+    }
+  ]
+}

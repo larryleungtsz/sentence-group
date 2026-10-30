@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-6-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 6,
+    "text": "椎茸と"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-shiitake-to.mp3",
+      "self_check": true,
+      "l1": "1. 是香菇和蜆的燉煮拼盤。\n2. 正在燉煮香菇和蔬菜。\n3. 是香菇和昆布的高湯。",
+      "gloss": "1. 是香菇和蜆的燉煮拼盤。\n2. 正在燉煮香菇和蔬菜。\n3. 是香菇和昆布的高湯。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "椎茸とあさりの炊き合わせです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "椎茸と野菜を煮込んでいます。",
+          "start_secs": 5.53
+        },
+        {
+          "id": 3,
+          "text": "椎茸と昆布の出汁です。",
+          "start_secs": 10.93
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是香菇和蜆的燉煮拼盤。\n2. 正在燉煮香菇和蔬菜。\n3. 是香菇和昆布的高湯。",
+  "example_sentences": "1. 椎茸とあさりの炊き合わせです。\n2. 椎茸と野菜を煮込んでいます。\n3. 椎茸と昆布の出汁です。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "椎茸とあさりの炊き合わせです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "椎茸と野菜を煮込んでいます。",
+      "start_secs": 5.53
+    },
+    {
+      "id": 3,
+      "text": "椎茸と昆布の出汁です。",
+      "start_secs": 10.93
+    }
+  ]
+}

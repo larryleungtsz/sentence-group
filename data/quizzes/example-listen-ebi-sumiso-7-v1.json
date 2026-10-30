@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-ebi-sumiso-7-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 7,
+    "text": "あさりの"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-asari-no.mp3",
+      "self_check": true,
+      "l1": "1. 是蜆的清酒蒸。\n2. 也有蜆的味噌湯。\n3. 蜆的湯頭很濃郁。",
+      "gloss": "1. 是蜆的清酒蒸。\n2. 也有蜆的味噌湯。\n3. 蜆的湯頭很濃郁。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "あさりの酒蒸しです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "あさりの味噌汁もございます。",
+          "start_secs": 4.68
+        },
+        {
+          "id": 3,
+          "text": "あさりの出汁がきいています。",
+          "start_secs": 9.64
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 是蜆的清酒蒸。\n2. 也有蜆的味噌湯。\n3. 蜆的湯頭很濃郁。",
+  "example_sentences": "1. あさりの酒蒸しです。\n2. あさりの味噌汁もございます。\n3. あさりの出汁がきいています。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "あさりの酒蒸しです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "あさりの味噌汁もございます。",
+      "start_secs": 4.68
+    },
+    {
+      "id": 3,
+      "text": "あさりの出汁がきいています。",
+      "start_secs": 9.64
+    }
+  ]
+}

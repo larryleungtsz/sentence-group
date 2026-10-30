@@ -1,0 +1,61 @@
+{
+  "quiz_id": "example-listen-tsukete-itadaku-1-v1",
+  "objective": "example_sentences_listening",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 1,
+    "text": "つけていただくと"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tsukete-itadaku-to.mp3",
+      "self_check": true,
+      "l1": "1. 如果蘸著的話很好吃。\n2. 如果加上醬的話，味道會變。\n3. 如果蘸這個醬汁的話，推薦。",
+      "gloss": "1. 如果蘸著的話很好吃。\n2. 如果加上醬的話，味道會變。\n3. 如果蘸這個醬汁的話，推薦。",
+      "example_timestamps": [
+        {
+          "id": 1,
+          "text": "つけていただくとおいしいです。",
+          "start_secs": 0.05
+        },
+        {
+          "id": 2,
+          "text": "ソースをつけていただくと、味が変わります。",
+          "start_secs": 5.12
+        },
+        {
+          "id": 3,
+          "text": "このタレをつけていただくとおすすめです。",
+          "start_secs": 11.08
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 如果蘸著的話很好吃。\n2. 如果加上醬的話，味道會變。\n3. 如果蘸這個醬汁的話，推薦。",
+  "example_sentences": "1. つけていただくとおいしいです。\n2. ソースをつけていただくと、味が変わります。\n3. このタレをつけていただくとおすすめです。",
+  "example_timestamps": [
+    {
+      "id": 1,
+      "text": "つけていただくとおいしいです。",
+      "start_secs": 0.05
+    },
+    {
+      "id": 2,
+      "text": "ソースをつけていただくと、味が変わります。",
+      "start_secs": 5.12
+    },
+    {
+      "id": 3,
+      "text": "このタレをつけていただくとおすすめです。",
+      "start_secs": 11.08
+    }
+  ]
+}
