@@ -1,0 +1,48 @@
+{
+  "quiz_id": "sounding-orenji-jusu-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 3,
+    "text": "ロックで"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 1.95,
+      "end_sec": 2.95,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜ro≈落；kku≈cool；de≈釘｜chain：落／cool／釘(冰造嘅釘)",
+        "落 = 一鎚落落去",
+        "cool = 好 cool",
+        "釘 = 冰造嘅釘",
+        "一句串：工人一鎚落落去，鎚緊粒冰造好 cool 嘅釘"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜ato≈阿童；yaki≈yak；tori≈key；mo≈tall；ii≈梨；摸＝動作；desu≈desk；ka≈car；煙＝枱上煙｜chain：阿童(阿童木)／yak／key(食緊鎖匙)／tall／梨(好高長腿梨)／摸／煙／desk(枱)／car(車)",
+        "阿童 = 阿童木",
+        "yakkey = 食緊鎖匙",
+        "tall梨 = 好高長腿梨",
+        "摸 = 摸",
+        "煙 = 煙",
+        "desk = 枱",
+        "car = 車",
+        "阿童yakkeytall梨摸煙deskcar - 阿童木食緊枝 yak key；隔離好高長腿梨摸住枱上煙同車",
+        "SOR：reading→objects｜shō≈鎖；chū≈豬；o≈鵝｜chain：鎖(手扣)／豬／鵝(燒鵝)",
+        "鎖 = 手扣"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-orenji-jusu-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 6.95,
+      "end_sec": 8.25,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜sore≈梳；dake≈lev；de≈打；ii≈cake；desu≈醫／desk｜chain：梳／lev(飄浮梳)／打／cake(似的士蛋糕)／醫／desk(枱造醫生)",
+        "梳lev = 飄浮梳",
+        "打 = 打",
+        "cake = 似的士蛋糕",
+        "醫desk = 枱造醫生",
+        "一句串：飄浮梳同枱造醫生一齊打住似的士蛋糕"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜kore≈call；no≈lev；oka≈攞；wari≈惡／car／rally｜chain：call(講電話)／lev(level-up)／攞／惡／car／rally(惡樣 rally car 角色)",
+        "call = 講電話",
+        "lev = level-up",
+        "攞 = 拎住",
+        "惡carrally = 惡樣 rally car 角色",
+        "calllev攞惡carrally - 男人一邊講電話一邊 level-up，另一隻手攞住惡樣 rally car 角色",
+        "SOR：reading→objects｜tori≈駝鳥；ae≈嗌；zu≈air／豬｜chain：駝鳥／嗌／air／豬(天氣空氣入面嘅豬)",
+        "駝鳥 = 駝鳥"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

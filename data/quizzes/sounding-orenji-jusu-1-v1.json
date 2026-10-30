@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-orenji-jusu-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 1,
+    "text": "オレンジジュースと"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 0.05,
+      "end_sec": 1.15,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜orenji≈餓／𡃁雞；jūsu≈啜；to≈樹doll｜chain：餓／𡃁雞(腰極幼嘅細雞)／啜／樹doll(樹形公仔)",
+        "餓𡃁雞 = 腰極幼嘅細雞",
+        "啜 = 啜汁",
+        "樹doll = 樹形公仔",
+        "一句串：腰極幼嘅細雞正啜緊樹形公仔嘅汁"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜shō≈鎖；chū≈豬；o≈鵝｜chain：鎖(手扣)／豬／鵝(燒鵝)",
+        "鎖 = 手扣",
+        "豬 = 豬",
+        "鵝 = 燒鵝",
+        "鎖豬鵝 - 被手扣鎖住嘅豬被果喺燒鵝入面",
+        "SOR：reading→objects｜kore≈call；no≈lev；oka≈攞；wari≈惡／car／rally｜chain：call(講電話)／lev(level-up)／攞／惡／car／rally(惡樣 rally car 角色)",
+        "call = 講電話"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

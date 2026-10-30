@@ -1,0 +1,48 @@
+{
+  "quiz_id": "sounding-orenji-jusu-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 2.95,
+      "end_sec": 5.05,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜ato≈阿童；yaki≈yak；tori≈key；mo≈tall；ii≈梨；摸＝動作；desu≈desk；ka≈car；煙＝枱上煙｜chain：阿童(阿童木)／yak／key(食緊鎖匙)／tall／梨(好高長腿梨)／摸／煙／desk(枱)／car(車)",
+        "阿童 = 阿童木",
+        "yakkey = 食緊鎖匙",
+        "tall梨 = 好高長腿梨",
+        "摸 = 摸",
+        "煙 = 煙",
+        "desk = 枱",
+        "car = 車",
+        "一句串：阿童木食緊枝 yak key；隔離好高長腿梨摸住枱上煙同車"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜tsu≈啜；kimi≈kim／咪；tsu≈啜；kune≈罐／梨｜chain：啜／kim／咪(頭戴 kimchi 嘅貓)／啜／罐／梨(滿梨罐)",
+        "啜 = 啜",
+        "kim咪 = 頭戴 kimchi 嘅貓",
+        "罐梨 = 滿梨罐",
+        "啜kim咪啜罐梨 - 一個女孩啜住頭戴 kimchi 嘅貓；另一個女孩啜住滿梨罐",
+        "SOR：reading→objects｜ro≈落；kku≈cool；de≈釘｜chain：落／cool／釘(冰造嘅釘)",
+        "落 = 一鎚落落去"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

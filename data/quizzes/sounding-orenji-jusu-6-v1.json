@@ -1,0 +1,45 @@
+{
+  "quiz_id": "sounding-orenji-jusu-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 6,
+    "text": "とりあえず、"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 6.35,
+      "end_sec": 6.95,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜tori≈駝鳥；ae≈嗌；zu≈air／豬｜chain：駝鳥／嗌／air／豬(天氣空氣入面嘅豬)",
+        "駝鳥 = 駝鳥",
+        "嗌 = 大叫",
+        "air豬 = 天氣空氣入面嘅豬",
+        "一句串：駝鳥向住天氣空氣入面嘅豬大叫"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜sore≈梳；dake≈lev；de≈打；ii≈cake；desu≈醫／desk｜chain：梳／lev(飄浮梳)／打／cake(似的士蛋糕)／醫／desk(枱造醫生)",
+        "梳lev = 飄浮梳",
+        "打 = 打",
+        "cake = 似的士蛋糕",
+        "醫desk = 枱造醫生",
+        "梳lev打cake醫desk - 飄浮梳同枱造醫生一齊打住似的士蛋糕",
+        "SOR：reading→objects｜tsu≈啜；kimi≈kim／咪；tsu≈啜；kune≈罐／梨｜chain：啜／kim／咪(頭戴 kimchi 嘅貓)／啜／罐／梨(滿梨罐)",
+        "啜 = 啜"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

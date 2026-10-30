@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-orenji-jusu-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 5,
+    "text": "月見つくね"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 5.05,
+      "end_sec": 6.35,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜tsu≈啜；kimi≈kim／咪；tsu≈啜；kune≈罐／梨｜chain：啜／kim／咪(頭戴 kimchi 嘅貓)／啜／罐／梨(滿梨罐)",
+        "啜 = 啜",
+        "kim咪 = 頭戴 kimchi 嘅貓",
+        "罐梨 = 滿梨罐",
+        "一句串：一個女孩啜住頭戴 kimchi 嘅貓；另一個女孩啜住滿梨罐"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜tori≈駝鳥；ae≈嗌；zu≈air／豬｜chain：駝鳥／嗌／air／豬(天氣空氣入面嘅豬)",
+        "駝鳥 = 駝鳥",
+        "嗌 = 大叫",
+        "air豬 = 天氣空氣入面嘅豬",
+        "駝鳥嗌air豬 - 駝鳥向住天氣空氣入面嘅豬大叫",
+        "SOR：reading→objects｜ato≈阿童；yaki≈yak；tori≈key；mo≈tall；ii≈梨；摸＝動作；desu≈desk；ka≈car；煙＝枱上煙｜chain：阿童(阿童木)／yak／key(食緊鎖匙)／tall／梨(好高長腿梨)／摸／煙／desk(枱)／car(車)",
+        "阿童 = 阿童木"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

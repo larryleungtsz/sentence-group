@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T01:22:57+08:00",
+  "generated_at": "2026-10-31T01:26:49+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -26043,6 +26043,94 @@
       "schedule_stages": [
         "T+30"
       ]
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-1-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a729568190a95dd6b9c673aa9d"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-2-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a7295681cf8c0ceb6a4269f440"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-3-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a729568154ba88f1bd908d3401"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-4-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a7295681fab15ff4ab8f0577e1"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-5-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a729568183b532dbe263fdee99"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-6-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-6-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a7295681f7ac69ca80298b17cd"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-7-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-7-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a7295681bc8a6dfc1f99933467"
+    },
+    {
+      "quiz_id": "sounding-orenji-jusu-8-v1",
+      "file": "data/quizzes/sounding-orenji-jusu-8-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "markdown_fixed": false,
+      "notion_url": "https://app.notion.com/p/4093b2a7295681028f7fe3ad78b547eb"
     }
   ]
 }

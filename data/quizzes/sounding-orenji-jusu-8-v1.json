@@ -1,0 +1,45 @@
+{
+  "quiz_id": "sounding-orenji-jusu-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 8,
+    "text": "これのおかわり"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 8.25,
+      "end_sec": 9.456327,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜kore≈call；no≈lev；oka≈攞；wari≈惡／car／rally｜chain：call(講電話)／lev(level-up)／攞／惡／car／rally(惡樣 rally car 角色)",
+        "call = 講電話",
+        "lev = level-up",
+        "攞 = 拎住",
+        "惡carrally = 惡樣 rally car 角色",
+        "一句串：男人一邊講電話一邊 level-up，另一隻手攞住惡樣 rally car 角色"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜orenji≈餓／𡃁雞；jūsu≈啜；to≈樹doll｜chain：餓／𡃁雞(腰極幼嘅細雞)／啜／樹doll(樹形公仔)",
+        "餓𡃁雞 = 腰極幼嘅細雞",
+        "啜 = 啜汁",
+        "樹doll = 樹形公仔",
+        "餓𡃁雞啜樹doll - 腰極幼嘅細雞正啜緊樹形公仔嘅汁",
+        "SOR：reading→objects｜sore≈梳；dake≈lev；de≈打；ii≈cake；desu≈醫／desk｜chain：梳／lev(飄浮梳)／打／cake(似的士蛋糕)／醫／desk(枱造醫生)",
+        "梳lev = 飄浮梳"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

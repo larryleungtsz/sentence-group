@@ -1570,10 +1570,10 @@
       "title": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
       "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
       "sentence_added_at": "2026-10-31T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–4s/6s+full skip 5s) written 2026-10-31 (80 chunk + 2 sentence Soft GO; masters on disk; dailies in manifest). Soft Skip Q6／Q9／Q10; Combined soft-gap expected. Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–4s/6s+full skip 5s) written 2026-10-31 (80 chunk + 2 sentence Soft GO; masters on disk; dailies in manifest). Q6 Sounding Soft GO ready (1..8-v1); Soft Skip Q9／Q10; Combined soft-gap expected. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4093b2a72956804480ccc6b053e04bab",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE (オレンジジュースと／焼酎を／ロックで／あと、焼き鳥もいいですか／月見つくね／とりあえず、／それだけでいいです／これのおかわり). SKIP 飲み物は·1つ·をください (no chunk rows/quizzes). Soft Skip Q6／Q9／Q10. Soft GO Q18 d01–d30 (1s→2s→3s→4s→6s→full reverse-walk; skip 5s). Combined may be GH soft-gap.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE (オレンジジュースと／焼酎を／ロックで／あと、焼き鳥もいいですか／月見つくね／とりあえず、／それだけでいいです／これのおかわり). SKIP 飲み物は·1つ·をください (no chunk rows/quizzes). Q6 Sounding Soft GO ready (1..8-v1). Soft Skip Q9／Q10. Soft GO Q18 d01–d30 (1s→2s→3s→4s→6s→full reverse-walk; skip 5s). Combined may be GH soft-gap.",
       "chunks": [
         {
           "id": 1,
