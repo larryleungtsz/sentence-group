@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-kaikei-onegai-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 5,
+    "text": "これでお願いします"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見鈔票疊剛推到櫃台邊、前端剛碰到收款托盤沿停住＝「用這個麻煩您」；見這幕→想起用這個麻煩您。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "hotspot": {
+        "left": 22,
+        "top": 52,
+        "width": 14,
+        "height": 16,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 2,
+    "text": "2名って"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "桌邊大字「2」號牌剛豎起停住。一部 MacBook（mac）神情專注跪住（knee），伸出條脷，脷上面有 pierces 既釘（釘）。knee、mac 同釘一齊撞過剛豎起嘅大字「2」號牌——正正係「（說）兩位」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

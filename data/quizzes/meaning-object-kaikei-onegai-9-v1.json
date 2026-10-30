@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-kaikei-onegai-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 9,
+    "text": "ご利用になられますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見「要／不要」雙選卡剛翻開正面停住＝「需要嗎」；見這幕→想起需要嗎。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-o-kaikei-wa-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "hotspot": {
+        "left": 87,
+        "top": 46,
+        "width": 11,
+        "height": 34,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

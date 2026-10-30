@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 6,
+    "text": "ご案内させていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "布簾剛拉開、座位走廊同時亮起停住。一隻哥布林（哥）神情緊張按住自己胸部（按奶）；隔離有條眼打交差嘅蛇（殺蛇Dead），蛇尾上面放住兩隻蛋（2蛋蛋），同時用 key 抹緊地上（key抹）。哥、按奶、殺蛇Dead、2蛋蛋同 key抹 一齊撞過剛拉開同時亮起嘅布簾同座位走廊——正正係「讓我為您帶位」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

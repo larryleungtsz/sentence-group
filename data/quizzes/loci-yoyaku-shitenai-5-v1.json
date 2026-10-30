@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-shitenai-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 5,
+    "text": "少々お待ちください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "等候區小几上嘅沙漏：剛翻轉、沙開始漏停住。請在圖中點這沙漏所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspot": {
+        "left": 56,
+        "top": 68,
+        "width": 12,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

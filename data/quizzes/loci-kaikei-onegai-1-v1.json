@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-kaikei-onegai-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 1,
+    "text": "かしこまりました"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "訂單夾上的綠色印章印位：綠色「承知」印章剛蓋在訂單上停住。請在圖中點這印章／訂單夾所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "hotspot": {
+        "left": 16,
+        "top": 70,
+        "width": 22,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-9-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 9,
+    "text": "ご利用になられますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "「要／不要」雙選卡剛翻開正面停住。一隻跪喺道嘅哥布林（哥／knee）神情認真，背住巨型 YOYO（YO），手上拎住條鏈（鏈）；鏈連住浮起（Lev）嘅 cheerleading 啦啦球（啦啦），又再連住浮起、戴住 mask 嘅車（mask／car）。哥、knee、YO、鏈、啦啦、Lev、mask 同 car 一齊撞過剛翻開嘅「要／不要」雙選卡——正正係「需要嗎」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-o-kaikei-wa-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

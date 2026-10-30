@@ -1,0 +1,94 @@
+{
+  "quiz_id": "sequence-yoyaku-shitenai-v1",
+  "objective": "sequence_training",
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "予約してないんですけど",
+          "hotspot": {
+            "left": 21,
+            "top": 40,
+            "width": 14,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "2名って",
+          "hotspot": {
+            "left": 13,
+            "top": 40,
+            "width": 9,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "空いてますか",
+          "hotspot": {
+            "left": 48,
+            "top": 48,
+            "width": 16,
+            "height": 24,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "お席確認してまいりますので",
+          "hotspot": {
+            "left": 35,
+            "top": 4,
+            "width": 14,
+            "height": 26,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "少々お待ちください",
+          "hotspot": {
+            "left": 56,
+            "top": 68,
+            "width": 12,
+            "height": 24,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "ご案内させていただきます",
+          "hotspot": {
+            "left": 54,
+            "top": 12,
+            "width": 13,
+            "height": 34,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "お進みください",
+          "hotspot": {
+            "left": 82,
+            "top": 28,
+            "width": 16,
+            "height": 58,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

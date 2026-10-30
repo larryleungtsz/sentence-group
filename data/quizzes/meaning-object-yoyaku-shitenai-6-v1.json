@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-yoyaku-shitenai-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 6,
+    "text": "ご案内させていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見布簾剛拉開、座位走廊同時亮起停住＝「讓我為您帶位」；見這幕→想起讓我為您帶位。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspot": {
+        "left": 54,
+        "top": 12,
+        "width": 13,
+        "height": 34,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

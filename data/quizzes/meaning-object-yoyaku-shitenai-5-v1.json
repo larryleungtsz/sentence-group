@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-yoyaku-shitenai-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 5,
+    "text": "少々お待ちください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見沙漏剛翻轉、沙開始漏停住＝「請稍等」；見這幕→想起請稍等。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspot": {
+        "left": 56,
+        "top": 68,
+        "width": 12,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

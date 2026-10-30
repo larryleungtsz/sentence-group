@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-yoyaku-shitenai-7-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 7,
+    "text": "お進みください"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "請往前。How to pronounce this word?",
+      "gloss": "請往前",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

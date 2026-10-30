@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 2,
+    "text": "お会計は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "長條帳單剛攤開正面停住。一個惡相嘅導遊（惡／Guide）神情認真，拎住枝旗仔企喺前；後面一隻雙腳企喺道嘅機器青蛙（機蛙）定格跟住。惡、Guide 同機蛙一齊掃過攤開正面嘅長條帳單——正正係「（關於）帳單」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-o-kaikei-wa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-4210-en-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ni-narimasu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

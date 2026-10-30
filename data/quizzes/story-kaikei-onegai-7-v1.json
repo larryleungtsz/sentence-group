@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 7,
+    "text": "お預かりします"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "收款托盤剛拉回櫃台內、現金同時入盤停住。一隻鵝（鵝）神情認真喺賭枱推籌碼押注（押注）；對手係一個食緊咖喱（咖喱）、戴住眼鏡好似好 smart（smart）嘅卡通薯仔（薯）。鵝、押注、咖喱、smart 同薯一齊壓過剛拉回入盤嘅收款托盤——正正係「收您」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

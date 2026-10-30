@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-kaikei-onegai-3-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 3,
+    "text": "4,210円"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "4,210日圓"
+    },
+    {
+      "type": "select_text",
+      "correct": "4,210円",
+      "distractors": [
+        "かしこまりました",
+        "お会計は",
+        "になります",
+        "これでお願いします"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

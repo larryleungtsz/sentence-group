@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-yoyaku-shitenai-4-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 4,
+    "text": "お席確認してまいりますので"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "我去確認座位所以。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspot": {
+        "left": 35,
+        "top": 4,
+        "width": 14,
+        "height": 26,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

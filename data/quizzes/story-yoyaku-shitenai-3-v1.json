@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 3,
+    "text": "空いてますか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "空桌兩椅剛拉開、桌面乾淨無盤停住。有個男人神情認真一邊挨住枝大釘（挨／釘），一邊抹緊架車（抹／car）。挨、釘、抹同 car 一齊掃過剛拉開乾淨無盤嘅空桌兩椅——正正係「有空位嗎」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

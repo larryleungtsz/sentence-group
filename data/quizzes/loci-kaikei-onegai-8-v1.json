@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-kaikei-onegai-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 8,
+    "text": "領収書は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "收據機出紙口：白紙收據剛抽出、正面轉向你停住。請在圖中點這收據／出紙口所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "hotspot": {
+        "left": 76,
+        "top": 50,
+        "width": 11,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

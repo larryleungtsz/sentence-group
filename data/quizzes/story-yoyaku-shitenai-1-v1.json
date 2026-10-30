@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 1,
+    "text": "予約してないんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "預約簿空白頁剛翻開、欄位全空停住。一個人形 YOYO（YO／Yak）坐喺張枱（desk）上面，全身着到好似 gangster（ghetto）——皮褸紋身齊全，神情緊張；口裏面好多食物殘渣，條脷仲有 pierces 既釘（舌釘），正用條脷 lick 緊枝煙（奶煙）。YO、Yak、舌釘、奶煙、desk 同 ghetto 一齊壓過剛翻開欄位全空嘅預約簿空白頁——正正係「雖然冇預約」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

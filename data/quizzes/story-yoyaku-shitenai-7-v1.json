@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 7,
+    "text": "お進みください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "通道門剛推開、地上箭頭指向深處停住。一隻貓咪（咪）神情專注喺度打鼓，嗰兩個鼓係用樹幹做嘅（樹／樹），鼓聲帶住一股樂（樂）。樂、樹、樹同咪一齊掃過剛推開、地上箭頭指向深處嘅通道門——正正係「請往前」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

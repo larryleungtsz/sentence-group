@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 4,
+    "text": "お席確認してまいりますので"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位平面圖剛攤開、紅筆圈住一格停住。一條鱷魚（鱷）神情專注 kiss 住個鎖匙（錫／Key）；旁邊有張 poker card（Card）戴住皇冠（冠）、鐵住金鏈（鏈），條脷掂住個地下（舌地）。同時有個男人開檔賣緊空氣鏈（賣／air／鏈），旁邊有個口罩飄緊落地（mask／落地）。鱷、錫、Key、Card、冠、鏈、舌地、賣、air、鏈、mask 同落地一齊壓過剛攤開紅筆圈住一格嘅座位平面圖——正正係「我去確認座位所以」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

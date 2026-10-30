@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-8-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 8,
+    "text": "領収書は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "白紙收據剛抽出、正面轉向你停住。有人神情專注攞住一本書（攞／書），用書包住一隻青蛙再鎖實（鎖／蛙）。攞、書、鎖同蛙一齊掃過剛抽出轉向你嘅白紙收據——正正係「（關於）收據」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

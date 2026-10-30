@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-yoyaku-shitenai-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 6,
+    "text": "ご案内させていただきます"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "用餐區入口嘅布簾：剛拉開、座位走廊亮起停住。請在圖中點這布簾所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspot": {
+        "left": 54,
+        "top": 12,
+        "width": 13,
+        "height": 34,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

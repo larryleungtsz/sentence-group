@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 6,
+    "text": "ちょうど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "天平兩邊砝碼剛齊平停住。一隻手腳唔合比例、顏色亂七八糟、眼耳口鼻錯晒嘅毛公仔（錯／doll）神情茫然企喺度。錯同 doll 一齊撞過兩邊剛齊平嘅天平砝碼——正正係「剛好」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

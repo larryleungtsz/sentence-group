@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-yoyaku-shitenai-5-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 5,
+    "text": "少々お待ちください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "請稍等"
+    },
+    {
+      "type": "select_text",
+      "correct": "少々お待ちください",
+      "distractors": [
+        "予約してないんですけど",
+        "2名って",
+        "空いてますか",
+        "お席確認してまいりますので"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

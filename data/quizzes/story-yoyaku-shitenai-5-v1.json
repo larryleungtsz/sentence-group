@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-yoyaku-shitenai-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 5,
+    "text": "少々お待ちください"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "沙漏剛翻轉、沙開始漏停住。一隻鵝（鵝）神情認真，左右手各攞住一把梳（梳／梳），用力抹地上好多刺（抹／刺）。梳、梳、鵝、抹同刺一齊掃過剛翻轉開始漏沙嘅沙漏——正正係「請稍等」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

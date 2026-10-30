@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 3,
+    "text": "4,210円"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "金額條大字「¥4,210」剛印出停住。一個人形心公仔（Heart）神情專注跪低（knee），用巨大化拳（拳）打向一隻咬住條魚（腥）、雙手伸懶腰（Yawn）、身上紋住日元 YEN（豬／Yen）嘅豬。Yawn、腥、knee、Heart、拳、豬同 Yen 一齊撞過剛印出嘅「¥4,210」金額條——正正係「4,210日圓」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-4210-en-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ni-narimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

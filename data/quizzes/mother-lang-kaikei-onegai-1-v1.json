@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-kaikei-onegai-1-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 1,
+    "text": "かしこまりました"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "明白了／遵命。How to pronounce this word?",
+      "gloss": "明白了／遵命",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

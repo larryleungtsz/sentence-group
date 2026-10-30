@@ -1,0 +1,28 @@
+{
+  "quiz_id": "story-kaikei-onegai-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 5,
+    "text": "これでお願いします"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鈔票疊剛推到櫃台邊、前端剛碰到收款托盤沿停住。喺一間浮起（Lev）嘅屋企（家）入面，一個中年有鬍鬚、帶點愴桑嘅 Lego 爹（Lego／爹）神情專注打緊電話（Call／on），同一時間撕開表層面具（撕／mask），裏面原來係人。Call、Lego、爹、on、Lev、家、撕同 mask 一齊掃過剛碰到托盤沿嘅鈔票疊——正正係「用這個麻煩您」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
