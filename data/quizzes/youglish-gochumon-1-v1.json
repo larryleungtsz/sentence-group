@@ -12,15 +12,15 @@
     {
       "type": "audio_check",
       "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
       "start_sec": 0.05,
-      "end_sec": 0.6,
+      "end_sec": 0.7,
       "self_check": true
     },
     {
       "type": "youglish",
       "instruction": "請聆聽。",
-      "video_id": "xUsfBwBW2T4",
+      "video_id": "xUfBwBW2T4",
       "start_sec": 7476,
       "self_check": true
     },

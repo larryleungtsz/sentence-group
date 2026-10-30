@@ -12,11 +12,10 @@
     {
       "type": "audio_shadow",
       "instruction": "請跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
       "start_sec": 0.05,
       "rate": 0.25,
-      "self_check": true,
-      "end_sec": 0.6
+      "self_check": true
     }
   ],
   "feedback": {
