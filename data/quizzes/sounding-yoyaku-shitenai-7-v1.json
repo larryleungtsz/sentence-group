@@ -1,0 +1,48 @@
+{
+  "quiz_id": "sounding-yoyaku-shitenai-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 7,
+    "text": "お進みください"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+      "start_sec": 9.7,
+      "end_sec": 10.553469,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈樂；su≈樹；su≈樹；mi≈咪｜chain：樂／樹／樹(兩個樹幹鼓)／咪(貓咪打鼓)",
+        "樂 = 樂",
+        "樹 = 樹幹鼓",
+        "樹 = 樹幹鼓",
+        "咪 = 貓咪打鼓",
+        "一句串：貓咪喺兩個樹幹鼓上打鼓，鼓聲帶住樂"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜yo≈YO；yaku≈Yak；shite≈舌釘；nai≈奶煙；desu≈desk；kedo≈ghetto｜chain：YO(人形YOYO／口內食物殘渣)／Yak／舌釘(脷 pierces)／奶煙(脷 lick 煙)／desk(坐喺枱)／ghetto(gangster 皮褸／紋身)",
+        "YO = 人形YOYO／口內食物殘渣",
+        "Yak = Yak",
+        "舌釘 = 脷 pierces",
+        "奶煙 = 脷 lick 煙",
+        "desk = 枱",
+        "ghetto = gangster皮褸紋身",
+        "YOYak舌釘奶煙deskghetto - 人形YOYO坐喺枱上着到似gangster，口內殘渣脷有釘再lick煙",
+        "SOR：reading→objects｜go≈哥；annai≈按奶；sasete≈殺蛇Dead；itada≈2蛋蛋；kimasu≈key抹｜chain：哥(哥布林按住胸部)／按奶／殺蛇Dead(眼打交差嘅蛇)／2蛋蛋(蛇尾兩隻蛋)／key抹(key 抹地上)",
+        "哥 = 哥布林按住胸部"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

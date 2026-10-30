@@ -15,10 +15,10 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg?v=20261030combined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg?v=20261030combined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg?v=20261030combined"
       ]
     }
   ],

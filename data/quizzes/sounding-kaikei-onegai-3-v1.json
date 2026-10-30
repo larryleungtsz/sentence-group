@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kaikei-onegai-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 3,
+    "text": "4,210円"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
+      "start_sec": 2.4,
+      "end_sec": 3.6,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜yon≈Yawn；sen≈腥；ni≈knee；hyaku≈Heart；jū≈拳；en≈豬／Yen｜chain：Yawn(伸懶腰)／腥(咬住條魚)／knee(跪)／Heart(跪低人形心公仔)／拳(巨大化拳)／豬／Yen(身上YEN紋)",
+        "Yawn = 伸懶腰",
+        "腥 = 咬住條魚",
+        "knee = 跪",
+        "Heart = 跪低人形心公仔",
+        "拳 = 巨大化拳",
+        "豬Yen = 身上紋住YEN嘅豬",
+        "一句串：人形心公仔跪低用巨大化拳打向咬魚伸懶腰身上YEN紋嘅豬"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜ni≈鯉；na≈嗱；ri≈脷；ma≈抹；su≈書｜chain：鯉／嗱／脷(acidic綠色脷)／抹／書",
+        "鯉 = 鯉魚",
+        "嗱 = 可以嗱到人",
+        "脷 = acidic綠色脷",
+        "抹 = 抹",
+        "書 = 書",
+        "鯉嗱脷抹書 - 鯉魚伸出可以嗱到人嘅acidic綠色脷，攞毛巾抹住一本書",
+        "SOR：reading→objects｜o≈惡；kaikei≈Guide；wa≈機蛙｜chain：惡／Guide(拎旗仔導遊)／機蛙(雙腳企喺道嘅機器青蛙)",
+        "惡 = 惡相"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

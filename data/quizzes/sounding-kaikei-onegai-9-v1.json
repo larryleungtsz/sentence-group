@@ -1,0 +1,50 @@
+{
+  "quiz_id": "sounding-kaikei-onegai-9-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 9,
+    "text": "ご利用になられますか"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
+      "start_sec": 9.4,
+      "end_sec": 10.814694,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜go≈哥；ri≈knee；yō≈YO；ni≈鏈；nara≈啦啦；re≈Lev；masu≈mask；ka≈car｜chain：哥(跪喺道哥布林)／knee／YO(巨型YOYO)／鏈／啦啦(浮起啦啦球)／Lev(浮起)／mask／car(戴mask嘅車)",
+        "哥 = 跪喺道哥布林",
+        "knee = 跪",
+        "YO = 巨型YOYO",
+        "鏈 = 鏈",
+        "啦啦 = 浮起啦啦球",
+        "Lev = 浮起",
+        "mask = mask",
+        "car = 戴mask嘅車",
+        "一句串：跪喺道哥布林背巨型YOYO拎鏈，連住浮起啦啦球同戴mask嘅車"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜ka≈Class；shi≈哥；koma≈瑪莉；rimashita≈MASTER｜chain：Class(亞洲學校學生椅枱／課室)／哥(哥布林)／瑪莉(似Mario嘅男人)／MASTER(功夫大師)",
+        "Class = 亞洲學校課室",
+        "哥 = 哥布林",
+        "瑪莉 = 似Mario嘅男人",
+        "MASTER = 功夫大師",
+        "Class哥瑪莉MASTER - 亞洲學校課室入面，哥布林坐喺學生椅枱，被似Mario嘅瑪莉同功夫大師責備",
+        "SOR：reading→objects｜ryō≈攞；shū≈書；sho≈鎖；wa≈蛙｜chain：攞／書／鎖／蛙",
+        "攞 = 攞住"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -15,10 +15,10 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-4210-en-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-4210-en-combined.jpg?v=20261030combined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ni-narimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ni-narimasu-combined.jpg?v=20261030combined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg?v=20261030combined"
       ]
     },
     {

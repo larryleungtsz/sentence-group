@@ -1416,10 +1416,10 @@
       "title": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
       "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q7 flat／Q8／Q11–Q15 written 2026-10-30 (90 chunk + 2 sentence). Soft Skip Q6 (no Sounding split)／Q9 (0 YouGlish)／Q10 (Example deferred)／Q18 (wait Larry 起切; audio ~10.81s). Loci quiz_id loci-kaikei-onegai-{1..9}-v1 (pages-01; ignore early-probe dups). Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–9／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Soft Skip Q9 (0 YouGlish)／Q10 (Example deferred). Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Loci quiz_id loci-kaikei-onegai-{1..9}-v1. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4093b2a72956806a91f2f1a73dc10bc3",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE (かしこまりました／お会計は／4,210円／になります／これでお願いします／ちょうど／お預かりします／領収書は／ご利用になられますか). SKIP 会計お願いします·ありがとうございました·お願いします·はい×2·第二個4,210円·A·B (no chunk rows/quizzes). Soft Skip Q6／Q9／Q10／Q18. Combined may be GH soft-gap.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE (かしこまりました／お会計は／4,210円／になります／これでお願いします／ちょうど／お預かりします／領収書は／ご利用になられますか). SKIP 会計お願いします·ありがとうございました·お願いします·はい×2·第二個4,210円·A·B (no chunk rows/quizzes). Soft Skip Q9／Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
       "chunks": [
         {
           "id": 1,
@@ -1501,10 +1501,10 @@
       "title": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
       "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q7／Q8／Q11–Q15 written 2026-10-30 (70 chunk + 2 sentence). Soft Skip Q6／Q9／Q10／Q18 (audio ~10.55s; wait Larry 起切). Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–7 (incl. Reuse ご案内)／Q7／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Soft Skip Q9／Q10. Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4093b2a729568045867ec86cf6ff2ede",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE (予約してないんですけど／2名って／空いてますか／お席確認してまいりますので／少々お待ちください／ご案内させていただきます／お進みください). SKIP 客人·服務員A·服務員B (dialogue labels only). Soft Skip Q6／Q9／Q10／Q18. Combined may be GH soft-gap.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE (予約してないんですけど／2名って／空いてますか／お席確認してまいりますので／少々お待ちください／ご案内させていただきます／お進みください). SKIP 客人·服務員A·服務員B (dialogue labels only). Soft Skip Q9／Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
       "chunks": [
         {
           "id": 1,

@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-yoyaku-shitenai-d04",
+  "objective": "sentence_segment_shadowing",
+  "stage": "1s",
+  "day": 4,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+      "start_sec": 4.1,
+      "end_sec": 6.11,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

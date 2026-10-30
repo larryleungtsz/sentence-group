@@ -1,0 +1,22 @@
+{
+  "quiz_id": "sentence-segment-shadow-kaikei-onegai-d05",
+  "objective": "sentence_segment_shadowing",
+  "stage": "1s",
+  "day": 5,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
+      "start_sec": 4.47,
+      "end_sec": 6.08,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

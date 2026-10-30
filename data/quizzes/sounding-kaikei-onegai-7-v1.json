@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-kaikei-onegai-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 7,
+    "text": "お預かりします"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
+      "start_sec": 7.2,
+      "end_sec": 8.4,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈鵝；azu≈押注；kari≈咖喱；shima≈smart；su≈薯｜chain：鵝／押注(賭枱推籌碼)／咖喱／smart(戴眼鏡)／薯(卡通薯仔)",
+        "鵝 = 鵝",
+        "押注 = 賭枱推籌碼",
+        "咖喱 = 咖喱",
+        "smart = 戴眼鏡",
+        "薯 = 卡通薯仔",
+        "一句串：鵝喺賭枱推籌碼押注，對手係食咖喱戴眼鏡嘅卡通薯仔"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜ryō≈攞；shū≈書；sho≈鎖；wa≈蛙｜chain：攞／書／鎖／蛙",
+        "攞 = 攞住",
+        "書 = 書",
+        "鎖 = 鎖實",
+        "蛙 = 青蛙",
+        "攞書鎖蛙 - 攞住一本書，用書包住青蛙再鎖實",
+        "SOR：reading→objects｜chō≈錯；do≈doll｜chain：錯／doll(手腳唔合比例、顏色亂、五官錯晒嘅毛公仔)",
+        "錯 = 錯晒"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

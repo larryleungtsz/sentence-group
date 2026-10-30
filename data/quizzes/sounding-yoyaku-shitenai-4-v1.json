@@ -1,0 +1,54 @@
+{
+  "quiz_id": "sounding-yoyaku-shitenai-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 4,
+    "text": "お席確認してまいりますので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+      "start_sec": 4.22,
+      "end_sec": 6.22,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈鱷；seki≈錫／Key；kaku≈Card／冠；nin≈鏈；shite≈舌地；mai≈賣；ri≈air；masu≈鏈／mask；node≈落地｜chain：鱷(吻錫／Key)／錫／Key／Card(poker card 戴冠＋鐵金鏈)／冠／鏈／舌地(脷掂地)／賣／air／鏈(空氣鏈)／mask／落地",
+        "鱷 = 鱷魚",
+        "錫Key = 鎖匙",
+        "Card = poker card",
+        "冠 = 皇冠",
+        "鏈 = 鐵金鏈",
+        "舌地 = 脷掂地",
+        "賣 = 開檔賣",
+        "air = 空氣",
+        "鏈 = 空氣鏈",
+        "mask = 口罩",
+        "落地 = 落地",
+        "一句串：鱷魚kiss鎖匙；poker card戴冠鐵金鏈脷掂地；男人賣空氣鏈，口罩飄落地"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜shō≈梳；shō≈梳；o≈鵝；machi≈抹；kudasai≈刺｜chain：梳／梳／鵝／抹／刺(地上好多刺)",
+        "梳 = 梳",
+        "梳 = 梳",
+        "鵝 = 鵝",
+        "抹 = 抹",
+        "刺 = 地上好多刺",
+        "梳梳鵝抹刺 - 鵝左右手各攞梳，用力抹地上好多刺",
+        "SOR：reading→objects｜a≈挨；ite≈釘；masu≈抹；ka≈car｜chain：挨／釘(大釘)／抹／car(車)",
+        "挨 = 挨住"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

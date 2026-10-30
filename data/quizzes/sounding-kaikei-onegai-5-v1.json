@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-kaikei-onegai-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
+  "chunk": {
+    "id": 5,
+    "text": "これでお願いします"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
+      "start_sec": 4.7,
+      "end_sec": 6.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜kore≈Call；de≈Lego／爹；o≈on；ne≈Lev；gai≈家；shi≈撕；masu≈mask｜chain：Call(打電話)／Lego／爹(中年Lego man有鬍鬚愴桑)／on／Lev(levitating)／家／撕／mask",
+        "Call = 打電話",
+        "Lego爹 = 中年有鬍鬚愴桑嘅Lego man",
+        "on = on",
+        "Lev = 浮起",
+        "家 = 屋企",
+        "撕 = 撕開",
+        "mask = 面具",
+        "一句串：浮起屋企入面，中年Lego爹打電話同時撕開表層面具"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜chō≈錯；do≈doll｜chain：錯／doll(手腳唔合比例、顏色亂、五官錯晒嘅毛公仔)",
+        "錯 = 錯晒",
+        "doll = 手腳唔合比例顏色亂五官錯晒嘅毛公仔",
+        "錯doll - 手腳唔合比例、顏色亂、五官錯晒嘅毛公仔茫然企喺度",
+        "SOR：reading→objects｜ni≈鯉；na≈嗱；ri≈脷；ma≈抹；su≈書｜chain：鯉／嗱／脷(acidic綠色脷)／抹／書",
+        "鯉 = 鯉魚"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

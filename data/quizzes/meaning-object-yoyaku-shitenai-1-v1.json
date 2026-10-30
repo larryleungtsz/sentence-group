@@ -15,10 +15,10 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg?v=20261030combined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg?v=20261030combined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg?v=20261030combined"
       ]
     },
     {

@@ -15,10 +15,10 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg?v=20261030combined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg?v=20261030combined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg?v=20261030combined"
       ]
     }
   ],
