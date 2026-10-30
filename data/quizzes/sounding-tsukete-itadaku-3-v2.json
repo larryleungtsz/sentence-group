@@ -1,0 +1,48 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-3-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 3,
+    "text": "お味になるので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 2.2,
+      "end_sec": 3.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈鵝；aji≈牙／芝；ni≈鏈；naru≈啦路；node≈落嗲｜chain：鵝／牙／芝／鏈／啦路(啦啦球路)／落嗲(沙嗲面)",
+        "鵝 = 鵝",
+        "牙 = 牙",
+        "芝 = 芝士碎",
+        "鏈 = 金鏈",
+        "啦路 = 啦啦球路",
+        "落嗲 = 沙嗲面落下",
+        "一句串：鵝牙黏芝士碎掛金鏈企喺啦啦球路中央，天落沙嗲面"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜osusume≈痾殊殊／咩；shiteru≈舌釘；node≈路落釘｜chain：痾殊殊(羊撒尿)／咩(羊)／舌釘／路落釘(天落釘)",
+        "痾殊殊 = 羊撒尿",
+        "咩 = 羊",
+        "舌釘 = 舌頭釘死喺地下",
+        "路落釘 = 天落釘",
+        "痾殊殊咩舌釘路落釘 - 羊邊痾殊殊邊把舌頭釘死地下，天上落釘",
+        "SOR：reading→objects｜tamago≈他媽／咯；ppoi≈波椅｜chain：他媽(中年婦人)／咯／波椅(ball pattern 單人梳化)",
+        "他媽 = 中年婦人"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

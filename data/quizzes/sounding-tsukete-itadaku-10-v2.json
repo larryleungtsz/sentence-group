@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-10-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 10,
+    "text": "食べましょう"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 9.0,
+      "end_sec": 10.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜tabe≈thai bear；ma≈馬；shō≈sor｜chain：thai bear(泰旗 Tee 肌肉熊)／馬／sor(道歉)",
+        "thaibear = 泰旗 Tee 肌肉熊",
+        "馬 = 馬",
+        "sor = 道歉",
+        "一句串：馬向着泰旗 Tee 肌肉熊道歉"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜tsukete≈雪機／踢；itadaku≈熱蛋／dark；to≈駝｜chain：雪機(剷雪機器人)／踢／熱蛋／dark(黑皮膚)／駝(駱駝)",
+        "雪機 = 剷雪機器人",
+        "踢 = 踢",
+        "熱蛋 = 着火蛋",
+        "dark = 黑皮膚",
+        "駝 = 駱駝",
+        "雪機踢熱蛋dark駝 - 剷雪機器人踢向熱蛋，旁有黑皮膚駱駝"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

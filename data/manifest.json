@@ -19653,8 +19653,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-1-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-1-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-1-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-1-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19662,8 +19662,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-2-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-2-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-2-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-2-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19671,8 +19671,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-3-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-3-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-3-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-3-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19680,8 +19680,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-4-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-4-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-4-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-4-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19689,8 +19689,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-5-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-5-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-5-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-5-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19698,8 +19698,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-6-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-6-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-6-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-6-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19707,8 +19707,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-7-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-7-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-7-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-7-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19716,8 +19716,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-8-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-8-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-8-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-8-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19725,8 +19725,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-9-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-9-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-9-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-9-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -19734,8 +19734,8 @@
       "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。"
     },
     {
-      "quiz_id": "sounding-tsukete-itadaku-10-v1",
-      "file": "data/quizzes/sounding-tsukete-itadaku-10-v1.json",
+      "quiz_id": "sounding-tsukete-itadaku-10-v2",
+      "file": "data/quizzes/sounding-tsukete-itadaku-10-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -20931,8 +20931,8 @@
       "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     },
     {
-      "quiz_id": "sounding-ioshio-ganen-1-v1",
-      "file": "data/quizzes/sounding-ioshio-ganen-1-v1.json",
+      "quiz_id": "sounding-ioshio-ganen-1-v2",
+      "file": "data/quizzes/sounding-ioshio-ganen-1-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -20940,8 +20940,8 @@
       "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     },
     {
-      "quiz_id": "sounding-ioshio-ganen-2-v1",
-      "file": "data/quizzes/sounding-ioshio-ganen-2-v1.json",
+      "quiz_id": "sounding-ioshio-ganen-2-v2",
+      "file": "data/quizzes/sounding-ioshio-ganen-2-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -20949,8 +20949,8 @@
       "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     },
     {
-      "quiz_id": "sounding-ioshio-ganen-3-v1",
-      "file": "data/quizzes/sounding-ioshio-ganen-3-v1.json",
+      "quiz_id": "sounding-ioshio-ganen-3-v2",
+      "file": "data/quizzes/sounding-ioshio-ganen-3-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -20958,8 +20958,8 @@
       "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。"
     },
     {
-      "quiz_id": "sounding-ioshio-ganen-4-v1",
-      "file": "data/quizzes/sounding-ioshio-ganen-4-v1.json",
+      "quiz_id": "sounding-ioshio-ganen-4-v2",
+      "file": "data/quizzes/sounding-ioshio-ganen-4-v2.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",

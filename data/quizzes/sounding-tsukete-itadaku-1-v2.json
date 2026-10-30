@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-1-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 1,
+    "text": "つけていただくと"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 0.05,
+      "end_sec": 1.4,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜tsukete≈雪機／踢；itadaku≈熱蛋／dark；to≈駝｜chain：雪機(剷雪機器人)／踢／熱蛋／dark(黑皮膚)／駝(駱駝)",
+        "雪機 = 剷雪機器人",
+        "踢 = 踢",
+        "熱蛋 = 着火蛋",
+        "dark = 黑皮膚",
+        "駝 = 駱駝",
+        "一句串：剷雪機器人踢向熱蛋，旁有黑皮膚駱駝"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜tamago≈他媽／咯；ppoi≈波椅｜chain：他媽(中年婦人)／咯／波椅(ball pattern 單人梳化)",
+        "他媽 = 中年婦人",
+        "咯 = 咯聲",
+        "波椅 = ball pattern 單人梳化",
+        "他媽咯波椅 - 中年婦人咯一聲坐落球紋單人梳化",
+        "SOR：reading→objects｜tabe≈thai bear；ma≈馬；shō≈sor｜chain：thai bear(泰旗 Tee 肌肉熊)／馬／sor(道歉)",
+        "thaibear = 泰旗 Tee 肌肉熊",
+        "馬 = 馬"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

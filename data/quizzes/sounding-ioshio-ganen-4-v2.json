@@ -1,0 +1,43 @@
+{
+  "quiz_id": "sounding-ioshio-ganen-4-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 4,
+    "text": "岩塩です"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
+      "start_sec": 6.9,
+      "end_sec": 7.9,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜gan≈缸；en≈air；desu≈desk｜chain：缸(魚缸)／air(困住嘅空氣)／desk(枱)",
+        "缸 = 魚缸",
+        "air = 困住嘅空氣",
+        "desk = 枱",
+        "一句串：魚缸困住空氣放喺枱上"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜oishi≈鵝／熱鮮；n desu≈desk；kere≈機；domo≈lev／多毛｜chain：鵝／熱鮮(頭上着火＋咬住鮮魚)／desk(枱)／機(機械人)／lev／多毛",
+        "鵝 = 鵝",
+        "熱鮮 = 頭上着火＋咬住鮮魚",
+        "機 = 機械人",
+        "lev = 懸浮",
+        "多毛 = 全身長滿毛"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

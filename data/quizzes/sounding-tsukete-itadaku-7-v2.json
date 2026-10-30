@@ -1,0 +1,42 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-7-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 7,
+    "text": "いえーい"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 6.3,
+      "end_sec": 7.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜iē／ie≈耳；ēi／ei≈air｜chain：耳／air(空氣衝擊波)",
+        "耳 = 耳",
+        "air = 空氣衝擊波",
+        "一句串：耳仔旁邊湧出空氣衝擊波"
+      ],
+      "distractors": [
+        "SOR：meccha→matcha｜chain：一盅綠茶／matcha",
+        "matcha = 一盅綠茶／matcha",
+        "matcha - 一盅綠茶／matcha",
+        "SOR：reading→objects｜otameshi≈樂／打／咩；kudasai＝（未覆蓋 — 見 Flag）｜chain：樂(音符人)／打／咩(山羊)",
+        "樂 = 音符人",
+        "打 = 打"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

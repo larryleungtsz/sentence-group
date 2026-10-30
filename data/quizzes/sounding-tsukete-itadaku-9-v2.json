@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-9-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 9,
+    "text": "おいしそう"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 7.8,
+      "end_sec": 9.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈鵝；ishi≈eat；sō≈scissors｜chain：鵝／eat／scissors",
+        "鵝 = 鵝",
+        "eat = 食",
+        "scissors = 剪刀",
+        "一句串：鵝喺丼飯上面 eat 緊一把 scissors"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜tabe≈thai bear；ma≈馬；shō≈sor｜chain：thai bear(泰旗 Tee 肌肉熊)／馬／sor(道歉)",
+        "thaibear = 泰旗 Tee 肌肉熊",
+        "馬 = 馬",
+        "sor = 道歉",
+        "thaibear馬sor - 馬向着泰旗 Tee 肌肉熊道歉",
+        "SOR：meccha→matcha｜chain：一盅綠茶／matcha",
+        "matcha = 一盅綠茶／matcha"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

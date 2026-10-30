@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-ioshio-ganen-3-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、こちらですね。硫黄塩っていう岩塩です。",
+  "chunk": {
+    "id": 3,
+    "text": "硫黄塩っていう"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
+      "start_sec": 5.7,
+      "end_sec": 6.9,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜iō≈2痾；shio≈shit；tte≈痾爹；iu≈油｜chain：2痾(兩個年輕人屙啡色粒)／shit／痾爹(中年爹屙)／油",
+        "2痾 = 兩個年輕人屙啡色粒",
+        "shit = 啡色粒",
+        "痾爹 = 中年爹屙",
+        "油 = 油",
+        "一句串：兩個年輕人屙啡色粒；中年爹同步屙油"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜gan≈缸；en≈air；desu≈desk｜chain：缸(魚缸)／air(困住嘅空氣)／desk(枱)",
+        "缸 = 魚缸",
+        "air = 困住嘅空氣",
+        "desk = 枱",
+        "缸airdesk - 魚缸困住空氣放喺枱上",
+        "SOR：reading→objects｜o≈臥；meshi≈messi；agari≈壓；kata≈car；to≈鏈／卡蛋；shite≈dog／舌爹｜chain：臥／messi／壓／car／鏈／卡蛋(蛋卡喺轆)／dog(中年狗)／舌爹(長舌伸出)",
+        "臥 = 臥",
+        "messi = Messi 球衣人"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

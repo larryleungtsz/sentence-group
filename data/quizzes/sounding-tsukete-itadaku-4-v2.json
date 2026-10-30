@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-4-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 4,
+    "text": "おすすめしてるので"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 3.3,
+      "end_sec": 4.5,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜osusume≈痾殊殊／咩；shiteru≈舌釘；node≈路落釘｜chain：痾殊殊(羊撒尿)／咩(羊)／舌釘／路落釘(天落釘)",
+        "痾殊殊 = 羊撒尿",
+        "咩 = 羊",
+        "舌釘 = 舌頭釘死喺地下",
+        "路落釘 = 天落釘",
+        "一句串：羊邊痾殊殊邊把舌頭釘死地下，天上落釘"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜ze≈遮；hi≈heating｜chain：遮(umbrella)／heating(着火／噴火)",
+        "遮 = 遮／umbrella",
+        "heating = 着火／噴火",
+        "遮heating - 遮着火噴火",
+        "SOR：reading→objects｜o≈鵝；aji≈牙／芝；ni≈鏈；naru≈啦路；node≈落嗲｜chain：鵝／牙／芝／鏈／啦路(啦啦球路)／落嗲(沙嗲面)",
+        "鵝 = 鵝",
+        "牙 = 牙",
+        "芝 = 芝士碎"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-tsukete-itadaku-2-v2",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。いえーい！めっちゃおいしそう。食べましょう。",
+  "chunk": {
+    "id": 2,
+    "text": "卵っぽい"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
+      "start_sec": 1.4,
+      "end_sec": 2.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜tamago≈他媽／咯；ppoi≈波椅｜chain：他媽(中年婦人)／咯／波椅(ball pattern 單人梳化)",
+        "他媽 = 中年婦人",
+        "咯 = 咯聲",
+        "波椅 = ball pattern 單人梳化",
+        "一句串：中年婦人咯一聲坐落球紋單人梳化"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜o≈鵝；aji≈牙／芝；ni≈鏈；naru≈啦路；node≈落嗲｜chain：鵝／牙／芝／鏈／啦路(啦啦球路)／落嗲(沙嗲面)",
+        "鵝 = 鵝",
+        "牙 = 牙",
+        "芝 = 芝士碎",
+        "鏈 = 金鏈",
+        "啦路 = 啦啦球路",
+        "落嗲 = 沙嗲面落下"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
