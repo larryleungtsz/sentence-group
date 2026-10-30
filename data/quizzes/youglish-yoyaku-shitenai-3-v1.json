@@ -1,0 +1,46 @@
+{
+  "quiz_id": "youglish-yoyaku-shitenai-3-v1",
+  "objective": "youglish_listen",
+  "level": 1,
+  "variant": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+  "chunk": {
+    "id": 3,
+    "text": "空いてますか"
+  },
+  "slides": [
+    {
+      "type": "audio_check",
+      "instruction": "如果你聽到這個詞，請按 Yes；否則按 No。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+      "start_sec": 3.15,
+      "end_sec": 4.22,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "vVLjkBot5Eg",
+      "start_sec": 663,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "oO78GJ48XkU",
+      "start_sec": 1583,
+      "self_check": true
+    },
+    {
+      "type": "youglish",
+      "instruction": "請聆聽。",
+      "video_id": "0kKARS4xt7Y",
+      "start_sec": 1796,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

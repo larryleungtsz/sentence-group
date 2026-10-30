@@ -1278,10 +1278,10 @@
       "title": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep8 NEW v1 written 2026-10-30 (SOR＋Sounding Split). Other Q types not yet synced. Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep8 NEW v1 written 2026-10-30 (SOR＋Sounding Split). Q9 YouGlish Soft GO ready (youglish-ebi-sumiso-1..8-v1). Other Q types not yet synced. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4083b2a7295680e6b97ae36cc91552a0",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. 店員A／店員B are dialogue labels only (not chunk rows). Q6 Sounding Soft GO ready (sounding-ebi-sumiso-1..8-v1). Other chunk/sentence quiz types not yet synced.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. 店員A／店員B are dialogue labels only (not chunk rows). Q6 Sounding Soft GO ready (sounding-ebi-sumiso-1..8-v1). Q9 YouGlish Soft GO ready (youglish-ebi-sumiso-1..8-v1). Other chunk/sentence quiz types not yet synced.",
       "chunks": [
         {
           "id": 1,
@@ -1355,10 +1355,10 @@
       "title": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep6 NEW v1 written 2026-10-30 (SOR＋Sounding Split; SKIP こちら). Other Q types not yet synced. Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep6 NEW v1 written 2026-10-30 (SOR＋Sounding Split; SKIP こちら). Q9 YouGlish Soft GO ready (youglish-aka-konnyaku-1..6-v1). Other Q types not yet synced. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4083b2a7295680d08b26d6de8dd036e5",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep6 ACTIVE (その下／赤蒟蒻／お出汁で／炊いております／そのまま／お召し上がりいただいても). 店員A／店員B are dialogue labels only (not chunk rows). こちら is sentence filler / Reuse SKIP — no lexicon/Area row and no chunk quiz (not in this array; spoken audio still includes こちら between お出汁で and 炊いております). Q6 Sounding Soft GO ready (sounding-aka-konnyaku-1..6-v1). Other chunk/sentence quiz types not yet synced.",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep6 ACTIVE (その下／赤蒟蒻／お出汁で／炊いております／そのまま／お召し上がりいただいても). 店員A／店員B are dialogue labels only (not chunk rows). こちら is sentence filler / Reuse SKIP — no lexicon/Area row and no chunk quiz (not in this array; spoken audio still includes こちら between お出汁で and 炊いております). Q6 Sounding Soft GO ready (sounding-aka-konnyaku-1..6-v1). Q9 YouGlish Soft GO ready (youglish-aka-konnyaku-1..6-v1). Other chunk/sentence quiz types not yet synced.",
       "chunks": [
         {
           "id": 1,
@@ -1416,10 +1416,10 @@
       "title": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
       "sentence": "かしこまりました。お会計は4,210円になります。これでお願いします。ちょうど、お預かりします。領収書は、ご利用になられますか？",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–9／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Soft Skip Q9 (0 YouGlish)／Q10 (Example deferred). Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Loci quiz_id loci-kaikei-onegai-{1..9}-v1. Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–9／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Q9 YouGlish Soft GO ready (youglish-kaikei-onegai-1..9-v1). Soft Skip Q10 (Example deferred). Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Loci quiz_id loci-kaikei-onegai-{1..9}-v1. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4093b2a72956806a91f2f1a73dc10bc3",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE (かしこまりました／お会計は／4,210円／になります／これでお願いします／ちょうど／お預かりします／領収書は／ご利用になられますか). SKIP 会計お願いします·ありがとうございました·お願いします·はい×2·第二個4,210円·A·B (no chunk rows/quizzes). Soft Skip Q9／Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep9 ACTIVE (かしこまりました／お会計は／4,210円／になります／これでお願いします／ちょうど／お預かりします／領収書は／ご利用になられますか). SKIP 会計お願いします·ありがとうございました·お願いします·はい×2·第二個4,210円·A·B (no chunk rows/quizzes). Q9 YouGlish Soft GO ready (1..9-v1); Soft Skip Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
       "chunks": [
         {
           "id": 1,
@@ -1501,10 +1501,10 @@
       "title": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
       "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
       "sentence_added_at": "2026-10-30T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–7 (incl. Reuse ご案内)／Q7／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Soft Skip Q9／Q10. Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q6 Sounding 1–7 (incl. Reuse ご案内)／Q7／Q8／Q11–Q15 + Q18 d01–d30 (1s–6s+full) written 2026-10-30. Q9 YouGlish Soft GO ready (youglish-yoyaku-shitenai-1..7-v1). Soft Skip Q10. Combined soft-gap CLOSED (flashcard-app 6469627; ?v=20261030combined). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/4093b2a729568045867ec86cf6ff2ede",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
-      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE (予約してないんですけど／2名って／空いてますか／お席確認してまいりますので／少々お待ちください／ご案内させていただきます／お進みください). SKIP 客人·服務員A·服務員B (dialogue labels only). Soft Skip Q9／Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep7 ACTIVE (予約してないんですけど／2名って／空いてますか／お席確認してまいりますので／少々お待ちください／ご案内させていただきます／お進みください). SKIP 客人·服務員A·服務員B (dialogue labels only). Q9 YouGlish Soft GO ready (1..7-v1); Soft Skip Q10; Q6+Q18 live; Combined CLOSED (?v=20261030combined).",
       "chunks": [
         {
           "id": 1,
