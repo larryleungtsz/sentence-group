@@ -1,0 +1,44 @@
+{
+  "quiz_id": "sounding-ebi-sumiso-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 6,
+    "text": "椎茸と"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
+      "start_sec": 4.9,
+      "end_sec": 5.7,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜shii≈獅；take≈撻／茄；to≈tall｜chain：獅(着柔道衫)／撻／茄／tall(長條蕃茄)",
+        "獅 = 獅子",
+        "撻 = 獅子撻低左隻長條蕃茄",
+        "茄tall = 長高的蕃茄",
+        "一句串：獅子着柔道衫撻低左隻長條蕃茄"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜a≈壓；sa≈沙；ri≈脷；no≈落｜chain：壓／沙／脷(大舌頭卡通)／落(滑梯滑落)",
+        "壓 = 壓住一把沙",
+        "沙 = 一把沙",
+        "脷 = 大舌頭卡通",
+        "落 = 滑梯滑落",
+        "壓沙脷落 - 大舌頭卡通壓住一把沙一齊喺滑梯滑落",
+        "SOR：reading→objects｜sono o-tonari ga≈傻佬｜chain：傻佬(呆樣人，雙手拎住白紙卡)；後半 tonari 已喺 #1"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

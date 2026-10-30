@@ -1,0 +1,42 @@
+{
+  "quiz_id": "sounding-aka-konnyaku-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 1,
+    "text": "その下"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 0.05,
+      "end_sec": 1.0,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜sono≈鎖／law；shita≈start｜chain：鎖／law(法官大人)／start(start 掣)",
+        "鎖law = 被鎖住嘅法官大人",
+        "start = start 掣",
+        "一句串：被鎖住嘅法官大人按下 start 掣"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜aka≈壓價；kon≈江；nya≈梨；ku≈yak／拳｜chain：壓價(壓住價錢牌)／江(江水道)／梨(卡通梨)／yak／拳(食自己拳頭)",
+        "壓價 = 壓住價錢牌",
+        "江 = 江水道",
+        "梨 = 卡通梨人",
+        "yak拳 = 猛食自己拳頭",
+        "壓價江梨yak拳 - 江上卡通梨人壓住價錢牌，同時猛食自己拳頭"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1272,6 +1272,144 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "ebi-sumiso",
+      "title": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+      "sentence_added_at": "2026-10-30T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep8 NEW v1 written 2026-10-30 (SOR＋Sounding Split). Other Q types not yet synced. Edit when real add time is known.",
+      "notion_palace_url": "https://app.notion.com/p/4083b2a7295680e6b97ae36cc91552a0",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE. 店員A／店員B are dialogue labels only (not chunk rows). Q6 Sounding Soft GO ready (sounding-ebi-sumiso-1..8-v1). Other chunk/sentence quiz types not yet synced.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "お隣が",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a729568150b7fbc9f1ee1c1b18",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "海老と",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956816282a8d5c6c0f65b2f",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "きゅうりの",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956814da7eee3181a14481d",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "酢味噌がけです",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681edbb53c41d85109780",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "そのお隣が",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681fca889daa1922396f8",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "椎茸と",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681b79106cc2350847226",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "あさりの",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681a99ad0e991d9562b35",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "炊き合わせです",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956817b8e3afe6b458efeb2",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": false
+    },
+    {
+      "slug": "aka-konnyaku",
+      "title": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+      "sentence_added_at": "2026-10-30T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q6 Sounding Soft GO Keep6 NEW v1 written 2026-10-30 (SOR＋Sounding Split; SKIP こちら). Other Q types not yet synced. Edit when real add time is known.",
+      "notion_palace_url": "https://app.notion.com/p/4083b2a7295680d08b26d6de8dd036e5",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep6 ACTIVE (その下／赤蒟蒻／お出汁で／炊いております／そのまま／お召し上がりいただいても). 店員A／店員B are dialogue labels only (not chunk rows). こちら is sentence filler / Reuse SKIP — no lexicon/Area row and no chunk quiz (not in this array; spoken audio still includes こちら between お出汁で and 炊いております). Q6 Sounding Soft GO ready (sounding-aka-konnyaku-1..6-v1). Other chunk/sentence quiz types not yet synced.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "その下",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681158630e3b7f55b7c6c",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "赤蒟蒻",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681a7a815ff257a5be11b",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "お出汁で",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956813aa438f40c7c9f34e2",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "炊いております",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a72956816fb57bc5c779887b3e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "そのまま",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681489e59dc6102895a27",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "お召し上がりいただいても",
+          "chunk_added_at": "2026-10-30T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4083b2a7295681e0a319e63576c49541",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": false
     }
   ]
 }

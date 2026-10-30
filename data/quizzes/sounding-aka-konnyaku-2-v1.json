@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-aka-konnyaku-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 2,
+    "text": "赤蒟蒻"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 1.0,
+      "end_sec": 2.3,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜aka≈壓價；kon≈江；nya≈梨；ku≈yak／拳｜chain：壓價(壓住價錢牌)／江(江水道)／梨(卡通梨)／yak／拳(食自己拳頭)",
+        "壓價 = 壓住價錢牌",
+        "江 = 江水道",
+        "梨 = 卡通梨人",
+        "yak拳 = 猛食自己拳頭",
+        "一句串：江上卡通梨人壓住價錢牌，同時猛食自己拳頭"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜o≈鵝；dashi≈dark／屍；de≈desk｜chain：鵝／dark(全黑燒焦)／屍(zombie)／desk(枱)",
+        "鵝 = 鵝",
+        "dark = 全黑燒焦",
+        "屍 = 僵屍",
+        "desk = 枱",
+        "鵝dark屍desk - 枱上停住一隻全黑燒焦嘅鵝屍僵屍",
+        "SOR：reading→objects｜sono≈鎖／law；shita≈start｜chain：鎖／law(法官大人)／start(start 掣)",
+        "鎖law = 被鎖住嘅法官大人"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

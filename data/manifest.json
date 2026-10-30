@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T12:13:04+08:00",
+  "generated_at": "2026-10-30T12:55:31+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -21610,6 +21610,132 @@
       "schedule_stages": [
         "T+30"
       ]
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-1-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-2-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-3-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-4-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-5-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-6-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-6-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-7-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-7-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 7,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-ebi-sumiso-8-v1",
+      "file": "data/quizzes/sounding-ebi-sumiso-8-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 8,
+      "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-1-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 1,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-2-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-2-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 2,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-3-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 3,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-4-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-4-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 4,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-5-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-5-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 5,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
+    },
+    {
+      "quiz_id": "sounding-aka-konnyaku-6-v1",
+      "file": "data/quizzes/sounding-aka-konnyaku-6-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "chunk_id": 6,
+      "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     }
   ]
 }

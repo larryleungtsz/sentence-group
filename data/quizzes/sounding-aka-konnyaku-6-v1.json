@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-aka-konnyaku-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 6,
+    "text": "お召し上がりいただいても"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 5.3,
+      "end_sec": 6.92,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜o≈鱷；meshi≈messi；agari≈壓／car；itadaite≈脷／熱蛋／die；mo≈爹磨｜chain：鱷(鱷魚帽)／messi／壓／car／脷／熱蛋(着火蛋人)／die(雙眼交叉)／爹磨(中年爹磨豆)",
+        "鱷 = 鱷魚帽",
+        "messi = Messi 球衣人",
+        "壓car = 用力壓住車",
+        "脷 = 脷",
+        "熱蛋 = 着火蛋人",
+        "die = 雙眼交叉",
+        "爹磨 = 中年爹磨豆",
+        "一句串：鱷魚帽 Messi 人壓住車，帽邊伸脷，隔離着火蛋人雙眼交叉及中年爹磨豆"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜sono≈鎖／law；shita≈start｜chain：鎖／law(法官大人)／start(start 掣)",
+        "鎖law = 被鎖住嘅法官大人",
+        "start = start 掣",
+        "鎖lawstart - 被鎖住嘅法官大人按下 start 掣",
+        "SOR：reading→objects｜sono≈鎖／law；mama≈馬／馬｜chain：鎖／law(法官大人)／馬／馬(左右各一)",
+        "鎖law = 法官大人",
+        "馬 = 馬（左）",
+        "馬 = 馬（右）"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

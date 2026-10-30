@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-ebi-sumiso-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 7,
+    "text": "あさりの"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
+      "start_sec": 5.7,
+      "end_sec": 6.2,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜a≈壓；sa≈沙；ri≈脷；no≈落｜chain：壓／沙／脷(大舌頭卡通)／落(滑梯滑落)",
+        "壓 = 壓住一把沙",
+        "沙 = 一把沙",
+        "脷 = 大舌頭卡通",
+        "落 = 滑梯滑落",
+        "一句串：大舌頭卡通壓住一把沙一齊喺滑梯滑落"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜taki≈tart／key；awa≈鴉／蛙；se≈射；desu≈desk｜chain：tart／key(腳 tart 着炮車鎖匙位)／鴉／蛙／射／desk(枱)",
+        "tartkey = 腳 tart 住炮車嘅鎖匙位",
+        "鴉 = 烏鴉",
+        "蛙 = 青蛙",
+        "射 = 開火射擊",
+        "desk = 枱",
+        "tartkey鴉蛙射desk - 烏鴉用腳 tart 住炮車鎖匙位，隔離青蛙大炮開火，炮彈射到枱上",
+        "SOR：reading→objects｜shii≈獅；take≈撻／茄；to≈tall｜chain：獅(着柔道衫)／撻／茄／tall(長條蕃茄)"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

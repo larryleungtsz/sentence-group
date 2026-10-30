@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sounding-ebi-sumiso-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 4,
+    "text": "酢味噌がけです"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
+      "start_sec": 2.0,
+      "end_sec": 3.6,
+      "rate": 1.0
+    },
+    {
+      "type": "multi_select",
+      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
+      "correct": [
+        "SOR：reading→objects｜su≈樹；miso≈咪梳；gake≈card機；desu≈desk｜chain：樹／咪梳(樹上貓咪梳頭)／card機(洗啤牌機)／desk(枱)",
+        "樹 = 樹",
+        "咪梳 = 樹上貓咪梳頭",
+        "card機 = 洗啤牌機",
+        "desk = 枱",
+        "一句串：枱上長住一棵樹，樹上貓咪梳頭，隔離一部洗啤牌機"
+      ],
+      "distractors": [
+        "SOR：reading→objects｜sono o-tonari ga≈傻佬｜chain：傻佬(呆樣人，雙手拎住白紙卡)；後半 tonari 已喺 #1",
+        "傻佬 = 呆樣人，雙手拎住白紙卡",
+        "傻佬 - 呆呆哋嘅傻佬雙手拎住白紙卡企喺度",
+        "SOR：reading→objects｜kyū≈kill；ri≈梨；no≈落｜chain：kill(凶神惡煞殺手＋武士刀)／梨／落(切開落下)",
+        "kill = 凶神惡煞殺手＋武士刀",
+        "梨 = 梨",
+        "落 = 切開落下",
+        "kill梨落 - 凶神惡煞殺手用武士刀切開梨，切開嘅半邊落下"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
