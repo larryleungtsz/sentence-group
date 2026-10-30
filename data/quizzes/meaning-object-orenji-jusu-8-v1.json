@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-orenji-jusu-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 8,
+    "text": "これのおかわり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見同樣一碟剛再端上、並排原碟旁停住＝「這個再來一份」；見這幕→想起這個再來一份。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kore-no-okawari-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-orenji-jusu-to-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-shochu-o-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 70,
+        "top": 74,
+        "width": 13,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 1,
+    "text": "オレンジジュースと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木製「と」夾子剛夾在橙汁杯與旁物之間停住。一隻好餓、腰極幼嘅細雞（餓／𡃁雞）神情認真，正啜緊一隻樹形公仔（啜／樹doll）嘅汁。餓、𡃁雞、啜同樹doll 一齊壓過剛夾在橙汁杯與旁物之間嘅木製「と」夾子——正正係「橙汁和」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-orenji-jusu-to-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

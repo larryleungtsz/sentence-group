@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-orenji-jusu-7-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見多餘項目剛劃掉、只留那幾格亮起停住＝「只要那些就好」；見這幕→想起只要那些就好。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kore-no-okawari-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-orenji-jusu-to-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 89,
+        "top": 38,
+        "width": 10,
+        "height": 52,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

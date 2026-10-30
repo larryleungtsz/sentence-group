@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-orenji-jusu-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 5,
+    "text": "月見つくね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見雞丸串上半熟蛋黃剛放穩、蛋心像月停住＝「月見雞丸」；見這幕→想起月見雞丸。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukimi-tsukune-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 54,
+        "top": 66,
+        "width": 14,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

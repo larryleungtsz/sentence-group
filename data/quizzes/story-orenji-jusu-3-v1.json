@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 3,
+    "text": "ロックで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "大冰塊剛倒進杯底、棱角同時亮起停住。有個工人神情專注，一鎚落落去（落），鎚緊粒冰造、好 cool 嘅釘（cool／釘）。落、cool 同釘一齊掃過剛倒進杯底、棱角同時亮起嘅大冰塊——正正係「加冰」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-rokku-de-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

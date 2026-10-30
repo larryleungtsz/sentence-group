@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-orenji-jusu-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 2,
+    "text": "焼酎を"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見透明燒酒瓶剛豎在桌心、標籤正面停住＝「燒酒（賓語）」；見這幕→想起燒酒（賓語）。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-shochu-o-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-rokku-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 29,
+        "top": 32,
+        "width": 8,
+        "height": 48,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

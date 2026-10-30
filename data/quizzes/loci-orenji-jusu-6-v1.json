@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-orenji-jusu-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 6,
+    "text": "とりあえず、"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "訂單夾角「暫」牌位：「暫」立牌剛豎起停住。請在圖中點這訂單夾角「暫」牌所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 82,
+        "top": 62,
+        "width": 10,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

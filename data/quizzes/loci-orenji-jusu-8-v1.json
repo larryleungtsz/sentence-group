@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-orenji-jusu-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 8,
+    "text": "これのおかわり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "月見盤右側おかわり位：第二碟月見並排剛擺好停住。請在圖中點這月見盤右側おかわり所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 70,
+        "top": 74,
+        "width": 13,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

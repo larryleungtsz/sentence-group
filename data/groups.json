@@ -1564,6 +1564,83 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "orenji-jusu",
+      "title": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+      "sentence_added_at": "2026-10-31T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Soft GO Q1–Q5／Q7 flat／Q8／Q11–Q15 + Q18 d01–d30 (1s–4s/6s+full skip 5s) written 2026-10-31 (80 chunk + 2 sentence Soft GO; masters on disk; dailies in manifest). Soft Skip Q6／Q9／Q10; Combined soft-gap expected. Edit when real add time is known.",
+      "notion_palace_url": "https://app.notion.com/p/4093b2a72956804480ccc6b053e04bab",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "chunk_order_note": "Chunks join in this array order. Dense gate independent of other groups. Keep8 ACTIVE (オレンジジュースと／焼酎を／ロックで／あと、焼き鳥もいいですか／月見つくね／とりあえず、／それだけでいいです／これのおかわり). SKIP 飲み物は·1つ·をください (no chunk rows/quizzes). Soft Skip Q6／Q9／Q10. Soft GO Q18 d01–d30 (1s→2s→3s→4s→6s→full reverse-walk; skip 5s). Combined may be GH soft-gap.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "オレンジジュースと",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a729568126baf8de08ba8cc3b5",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "焼酎を",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a729568165891dec0b8e2b4412",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "ロックで",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a729568166818cc592802dab4e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "あと、焼き鳥もいいですか",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a7295681a7a606c4e1884b8f5e",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "月見つくね",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a729568168b7f0e311f5535e72",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "とりあえず、",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a7295681a39c46d31620389b75",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "それだけでいいです",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a72956813bb8f4d30b93ae82f1",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "これのおかわり",
+          "chunk_added_at": "2026-10-31T00:00:00+08:00",
+          "chunk_added_at_note": "provisional",
+          "notion_url": "https://app.notion.com/p/4093b2a7295681ca8844ccc6e5c85196",
+          "quizzes_ready": true
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

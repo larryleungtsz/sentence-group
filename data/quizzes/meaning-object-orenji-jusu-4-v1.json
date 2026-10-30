@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-orenji-jusu-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見燒鳥串盤剛多推上一旁、問號牌同時豎起停住＝「還有，燒鳥也可以嗎」；見這幕→想起還有，燒鳥也可以嗎。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukimi-tsukune-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 38,
+        "top": 55,
+        "width": 20,
+        "height": 35,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-orenji-jusu-1-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 1,
+    "text": "オレンジジュースと"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "橙汁和。How to pronounce this word?",
+      "gloss": "橙汁和",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

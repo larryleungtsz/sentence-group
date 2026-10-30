@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 5,
+    "text": "月見つくね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "雞丸串上半熟蛋黃剛放穩、蛋心像月停住。一個女孩神情認真啜住一隻頭戴 kimchi 嘅貓（啜／kim／咪）；另一個女孩同時啜住一罐滿滿嘅梨（啜／罐／梨）。啜、kim、咪、啜、罐同梨一齊撞過剛放穩、蛋心像月嘅雞丸串半熟蛋黃——正正係「月見雞丸」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukimi-tsukune-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

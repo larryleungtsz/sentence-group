@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-orenji-jusu-7-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "只要那些就好。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 89,
+        "top": 38,
+        "width": 10,
+        "height": 52,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-orenji-jusu-8-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 8,
+    "text": "これのおかわり"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "這個再來一份。How to pronounce this word?",
+      "gloss": "這個再來一份",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

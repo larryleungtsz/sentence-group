@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-orenji-jusu-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "燒鳥傳菜托盤位：串盤＋問號立牌剛擺齊停住。請在圖中點這燒鳥傳菜托盤所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 38,
+        "top": 55,
+        "width": 20,
+        "height": 35,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

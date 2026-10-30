@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "燒鳥串盤剛多推上一旁、問號牌同時豎起停住。阿童木（阿童）神情認真食緊枝 yak key（yak／key）；隔離一個好高長腿嘅梨（tall／梨）神情專注，摸緊張上面好多煙同車嘅枱（摸／煙／desk／car）。阿童、yak、key、tall、梨、摸、煙、desk 同 car 一齊壓過剛多推上一旁、問號牌同時豎起嘅燒鳥串盤——正正係「還有，燒鳥也可以嗎」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

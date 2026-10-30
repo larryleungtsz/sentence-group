@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "多餘項目剛劃掉、只留那幾格亮起停住。一把飄浮嘅梳（梳／lev）同埋一個用枱做成嘅醫生（醫／desk）神情專注，一齊打住一個似的士嘅蛋糕（打／cake）。梳、lev、打、cake、醫同 desk 一齊壓過剛劃掉多餘、只留那幾格亮起嘅訂單格——正正係「只要那些就好」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "writing-orenji-jusu-3-v1",
+  "objective": "writing_shadowing",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 3,
+    "text": "ロックで"
+  },
+  "slides": [
+    {
+      "type": "writing",
+      "instruction": "請抄寫。",
+      "target": "ロックで",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

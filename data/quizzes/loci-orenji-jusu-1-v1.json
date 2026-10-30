@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-orenji-jusu-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 1,
+    "text": "オレンジジュースと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "飲品欄左側橙汁杯位：木製「と」夾剛夾住橙汁杯旁停住。請在圖中點這飲品欄左側橙汁杯所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 3,
+        "top": 50,
+        "width": 16,
+        "height": 38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

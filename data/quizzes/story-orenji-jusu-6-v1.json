@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 6,
+    "text": "とりあえず、"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "小牌「暫」剛豎在訂單角停住。一隻駝鳥（駝鳥）神情緊張，向住一隻喺天氣空氣入面嘅豬（air／豬）大叫（嗌）。駝鳥、嗌、air 同豬一齊掃過剛豎在訂單角嘅小牌「暫」——正正係「暫時／先」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

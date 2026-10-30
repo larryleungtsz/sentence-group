@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-orenji-jusu-v1",
+  "objective": "sequence_training",
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "オレンジジュースと",
+          "hotspot": {
+            "left": 3,
+            "top": 50,
+            "width": 16,
+            "height": 38,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "焼酎を",
+          "hotspot": {
+            "left": 29,
+            "top": 32,
+            "width": 8,
+            "height": 48,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "ロックで",
+          "hotspot": {
+            "left": 22,
+            "top": 70,
+            "width": 10,
+            "height": 22,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "あと、焼き鳥もいいですか",
+          "hotspot": {
+            "left": 38,
+            "top": 55,
+            "width": 20,
+            "height": 35,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "月見つくね",
+          "hotspot": {
+            "left": 54,
+            "top": 66,
+            "width": 14,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "とりあえず、",
+          "hotspot": {
+            "left": 82,
+            "top": 62,
+            "width": 10,
+            "height": 28,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "それだけでいいです",
+          "hotspot": {
+            "left": 89,
+            "top": 38,
+            "width": 10,
+            "height": 52,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "これのおかわり",
+          "hotspot": {
+            "left": 70,
+            "top": 74,
+            "width": 13,
+            "height": 22,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

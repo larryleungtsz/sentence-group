@@ -1,0 +1,26 @@
+{
+  "quiz_id": "shadow-05-orenji-jusu-4-v1",
+  "objective": "tone_shadowing_05",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 4,
+    "text": "あと、焼き鳥もいいですか"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀語調。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
+      "start_sec": 2.95,
+      "end_sec": 5.05,
+      "rate": 0.5,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

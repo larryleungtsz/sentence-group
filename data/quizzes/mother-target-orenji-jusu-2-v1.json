@@ -1,0 +1,30 @@
+{
+  "quiz_id": "mother-target-orenji-jusu-2-v1",
+  "objective": "mother_to_target_language",
+  "level": 3,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 2,
+    "text": "焼酎を"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "燒酒（賓語）"
+    },
+    {
+      "type": "select_text",
+      "correct": "焼酎を",
+      "distractors": [
+        "オレンジジュースと",
+        "ロックで",
+        "あと、焼き鳥もいいですか",
+        "月見つくね"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

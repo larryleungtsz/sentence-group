@@ -1,0 +1,30 @@
+{
+  "quiz_id": "target-mnemonic-orenji-jusu-7-v1",
+  "objective": "target_to_mnemonic_image",
+  "level": 2,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 7,
+    "text": "それだけでいいです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "それだけでいいです"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-orenji-jusu-to-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-shochu-o-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-rokku-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 2,
+    "text": "焼酎を"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "透明燒酒瓶剛豎在桌心、標籤正面停住。一隻被手扣鎖住嘅豬（鎖／豬）神情緊張，被果喺一隻燒鵝入面（鵝）。鎖、豬同鵝一齊撞過剛豎在桌心、標籤正面嘅透明燒酒瓶——正正係「燒酒（賓語）」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-shochu-o-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-orenji-jusu-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 3,
+    "text": "ロックで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "加冰塊杯位：大冰塊棱角剛發亮停住。請在圖中點這加冰塊杯所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspot": {
+        "left": 22,
+        "top": 70,
+        "width": 10,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

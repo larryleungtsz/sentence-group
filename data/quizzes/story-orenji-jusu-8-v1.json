@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-orenji-jusu-8-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。",
+  "chunk": {
+    "id": 8,
+    "text": "これのおかわり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "同樣一碟剛再端上、並排原碟旁停住。有個男人神情認真一邊講緊電話（call），一邊 level up（lev），另一隻手攞住一隻惡樣嘅 rally car 角色（攞／惡／car／rally）。call、lev、攞、惡、car 同 rally 一齊撞過剛再端上、並排原碟旁嘅第二碟——正正係「這個再來一份」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kore-no-okawari-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
