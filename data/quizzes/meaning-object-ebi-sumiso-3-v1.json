@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-ebi-sumiso-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 3,
+    "text": "きゅうりの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見翠綠青瓜斜片剛排成一列停住＝「青瓜的」；見這幕→想起青瓜的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 26,
+        "top": 64,
+        "width": 16,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

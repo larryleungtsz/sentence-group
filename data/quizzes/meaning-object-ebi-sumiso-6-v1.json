@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-ebi-sumiso-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 6,
+    "text": "椎茸と"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見兩朵褐傘香菇剛並排、中間「と」同時亮起停住＝「香菇和」；見這幕→想起香菇和。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-shiitake-to-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 50,
+        "top": 62,
+        "width": 12,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

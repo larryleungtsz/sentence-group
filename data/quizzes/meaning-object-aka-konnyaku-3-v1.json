@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-aka-konnyaku-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 3,
+    "text": "お出汁で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見琥珀色高湯剛從壺嘴倒出一柱停住＝「用高湯」；見這幕→想起用高湯。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-o-dashi-de-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 29,
+        "top": 30,
+        "width": 15,
+        "height": 42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

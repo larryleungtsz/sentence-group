@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-aka-konnyaku-3-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 3,
+    "text": "お出汁で"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "用高湯。How to pronounce this word?",
+      "gloss": "用高湯",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-ebi-sumiso-7-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 7,
+    "text": "あさりの"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "蜆的。How to pronounce this word?",
+      "gloss": "蜆的",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

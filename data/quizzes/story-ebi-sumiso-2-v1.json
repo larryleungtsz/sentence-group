@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-ebi-sumiso-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 2,
+    "text": "海老と"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "幾隻粉紅蝦剛並排，中間「と」同時亮起停住。一個用空氣砌成、拉得好長嘅 B 形寶寶（air／B／tall）神情專注企喺度。air、B 同 tall 一齊掃過並排粉紅蝦同中間亮起嘅「と」——正正係「蝦和」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

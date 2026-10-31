@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aka-konnyaku-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 4,
+    "text": "炊いております"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "燉鍋湯面：鍋裡食材剛在微滾湯面燉著、氣泡同時冒出停住。請在圖中點這燉鍋所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 46,
+        "top": 50,
+        "width": 20,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

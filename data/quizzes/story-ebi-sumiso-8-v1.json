@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-ebi-sumiso-8-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 8,
+    "text": "炊き合わせです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "小盅裡多色燉煮菜剛擺齊停住。一隻烏鴉（鴉）神情認真，用腳 tart 住炮車嘅鎖匙位（tart／key）；隔離青蛙大炮一齊開火（蛙／射），炮彈射到張枱上（desk）。tart key、鴉、蛙、射同 desk 一齊壓過擺齊多色燉煮菜嘅小盅——正正係「是燉煮拼盤」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-takiawase-desu-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

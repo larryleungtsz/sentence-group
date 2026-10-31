@@ -1,0 +1,30 @@
+{
+  "quiz_id": "target-mnemonic-aka-konnyaku-3-v1",
+  "objective": "target_to_mnemonic_image",
+  "level": 2,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 3,
+    "text": "お出汁で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "お出汁で"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-o-dashi-de-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-taite-orimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-sono-mama-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

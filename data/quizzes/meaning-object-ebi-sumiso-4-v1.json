@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-ebi-sumiso-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 4,
+    "text": "酢味噌がけです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見淺黃醋味噌醬剛淋在菜上、一絲垂住停住＝「是醋味噌淋的」；見這幕→想起是醋味噌淋的。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 32,
+        "top": 45,
+        "width": 8,
+        "height": 16,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-ebi-sumiso-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 8,
+    "text": "炊き合わせです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見小盅裡多色燉煮菜剛擺齊停住＝「是燉煮拼盤」；見這幕→想起是燉煮拼盤。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-takiawase-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 76,
+        "top": 56,
+        "width": 16,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

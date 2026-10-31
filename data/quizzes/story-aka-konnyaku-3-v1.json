@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-aka-konnyaku-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 3,
+    "text": "お出汁で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "琥珀色高湯剛從壺嘴倒出一柱停住。張枱（desk）上停住一隻全黑燒焦嘅鵝屍僵屍（鵝／dark／屍），神情定格。dark 鵝屍同 desk 一齊壓過倒出嘅高湯柱——正正係「用高湯」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-o-dashi-de-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

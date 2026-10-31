@@ -1,0 +1,30 @@
+{
+  "quiz_id": "sentence-segment-shadow-aka-konnyaku-3s-v1",
+  "objective": "sentence_segment_shadowing",
+  "stage": "3s",
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 0.0,
+      "end_sec": 3.2,
+      "rate": 0.75,
+      "self_check": true
+    },
+    {
+      "type": "audio_shadow",
+      "instruction": "請聆聽並跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 3.2,
+      "end_sec": 6.92,
+      "rate": 0.75,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

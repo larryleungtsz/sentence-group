@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-aka-konnyaku-5-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 5,
+    "text": "そのまま"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "就那樣／原樣。How to pronounce this word?",
+      "gloss": "就那樣／原樣",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

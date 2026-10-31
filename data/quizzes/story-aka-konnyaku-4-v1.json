@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-aka-konnyaku-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 4,
+    "text": "炊いております"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鍋裡食材剛在微滾湯面燉著，氣泡同時冒出停住。一位泰式打扮嘅中年爹（thai／dad）神情緊張，雙手按住肚皮，一邊搶住一匹馬（馬），手上拎住鵝同梨（鵝／梨）。thai dad、鵝、梨同馬一齊掃過微滾湯面同氣泡——正正係「燉煮著」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-taite-orimasu-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

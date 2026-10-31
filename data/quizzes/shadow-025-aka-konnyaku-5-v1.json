@@ -1,0 +1,26 @@
+{
+  "quiz_id": "shadow-025-aka-konnyaku-5-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 5,
+    "text": "そのまま"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
+      "start_sec": 4.7,
+      "end_sec": 5.3,
+      "rate": 0.25,
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

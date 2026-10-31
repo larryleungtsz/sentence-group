@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-ebi-sumiso-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 7,
+    "text": "あさりの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "幾隻開殼蜆剛排開，殼內肉可見停住。一個大舌頭卡通（脷）神情專注，壓住一把沙（壓／沙），一齊喺滑梯滑落（落）。壓、沙、脷同落一齊撞過排開嘅開殼蜆——正正係「蜆的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-asari-no-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

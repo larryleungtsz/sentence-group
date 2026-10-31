@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aka-konnyaku-1-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 1,
+    "text": "その下"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "架子下格：食指剛指向架子下方那一格停住。請在圖中點這指／架下格所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 10,
+        "top": 48,
+        "width": 16,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

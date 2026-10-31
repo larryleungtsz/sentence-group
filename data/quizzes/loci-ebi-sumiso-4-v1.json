@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-ebi-sumiso-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 4,
+    "text": "酢味噌がけです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "第一碟醬面垂絲：淺黃醋味噌醬剛淋在菜上、一絲垂住停住。請在圖中點這醬絲所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 32,
+        "top": 45,
+        "width": 8,
+        "height": 16,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

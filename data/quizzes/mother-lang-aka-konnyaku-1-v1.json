@@ -1,0 +1,23 @@
+{
+  "quiz_id": "mother-lang-aka-konnyaku-1-v1",
+  "objective": "mother_language_pronounce",
+  "level": 3,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 1,
+    "text": "その下"
+  },
+  "slides": [
+    {
+      "type": "record_pronounce",
+      "instruction": "在那下面。How to pronounce this word?",
+      "gloss": "在那下面",
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

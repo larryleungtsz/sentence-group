@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-aka-konnyaku-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 2,
+    "text": "赤蒟蒻"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鮮紅蒟蒻塊剛擺滿小碟停住。一條江水道（江）上，一個卡通梨人（梨）神情專注，用力壓住一塊大價錢牌（壓價），同一時間猛食自己拳頭（yak／拳）。壓價、江、梨同 yak 拳一齊撞過擺滿紅蒟蒻嘅小碟——正正係「紅蒟蒻」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

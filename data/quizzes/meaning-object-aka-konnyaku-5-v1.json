@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-aka-konnyaku-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 5,
+    "text": "そのまま"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見整碟菜剛原封不動、旁邊調味瓶沒碰停住＝「就那樣／原樣」；見這幕→想起就那樣／原樣。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-sono-mama-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 68,
+        "top": 73,
+        "width": 26,
+        "height": 15,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

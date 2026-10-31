@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-ebi-sumiso-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 1,
+    "text": "お隣が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "旁邊是。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 20,
+        "top": 36,
+        "width": 14,
+        "height": 14,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

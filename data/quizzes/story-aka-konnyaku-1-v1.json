@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-aka-konnyaku-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 1,
+    "text": "その下"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "食指剛指向架子下方那一格停住。一位被鎖住嘅法官大人（鎖／law）神情認真，按下 start 掣（start）；鎖鏈同 start 掣光一齊掃過指向架下格嘅食指——正正係「在那下面」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

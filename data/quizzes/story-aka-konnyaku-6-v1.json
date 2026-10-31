@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-aka-konnyaku-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 6,
+    "text": "お召し上がりいただいても"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員掌心向上剛推向菜盤，頭微點停住。一個戴鱷魚帽（鱷）、穿球衣似 Messi 嘅人（messi）神情專注，用力壓住一架車（壓／car），帽邊伸出一條脷（脷）；隔離一位中年爹喺度磨豆（爹磨），磨機上停住一隻着火、雙眼打交叉嘅蛋人（熱蛋／die）。鱷 messi、壓 car、脷、熱蛋 die 同爹磨一齊撞過推向菜盤嘅掌心——正正係「即使請您食用也可以」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-o-meshiagari-itadaite-mo-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

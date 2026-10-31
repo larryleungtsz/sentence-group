@@ -1,0 +1,30 @@
+{
+  "quiz_id": "target-mnemonic-ebi-sumiso-4-v1",
+  "objective": "target_to_mnemonic_image",
+  "level": 2,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 4,
+    "text": "酢味噌がけです"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "酢味噌がけです"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-sono-o-tonari-ga-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

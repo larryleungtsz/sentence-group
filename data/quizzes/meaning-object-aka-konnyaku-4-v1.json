@@ -1,0 +1,39 @@
+{
+  "quiz_id": "meaning-object-aka-konnyaku-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 4,
+    "text": "炊いております"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "見鍋裡食材剛在微滾湯面燉著、氣泡同時冒出停住＝「燉煮著」；見這幕→想起燉煮著。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-taite-orimasu-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg"
+      ]
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 46,
+        "top": 50,
+        "width": 20,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-ebi-sumiso-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 5,
+    "text": "そのお隣が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "第二碟左側旁位：掌心側向再移一格、剛指向更遠那碟停住。請在圖中點這掌／手所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 58,
+        "top": 42,
+        "width": 16,
+        "height": 18,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

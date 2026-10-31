@@ -1,0 +1,105 @@
+{
+  "quiz_id": "sequence-ebi-sumiso-v1",
+  "objective": "sequence_training",
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "slides": [
+    {
+      "type": "sequence_tap",
+      "instruction": "請按順序點選各物件。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "sequence": [
+        {
+          "id": 1,
+          "text": "お隣が",
+          "hotspot": {
+            "left": 20,
+            "top": 36,
+            "width": 14,
+            "height": 14,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 2,
+          "text": "海老と",
+          "hotspot": {
+            "left": 10,
+            "top": 64,
+            "width": 16,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 3,
+          "text": "きゅうりの",
+          "hotspot": {
+            "left": 26,
+            "top": 64,
+            "width": 16,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 4,
+          "text": "酢味噌がけです",
+          "hotspot": {
+            "left": 32,
+            "top": 45,
+            "width": 8,
+            "height": 16,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 5,
+          "text": "そのお隣が",
+          "hotspot": {
+            "left": 58,
+            "top": 42,
+            "width": 16,
+            "height": 18,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 6,
+          "text": "椎茸と",
+          "hotspot": {
+            "left": 50,
+            "top": 62,
+            "width": 12,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 7,
+          "text": "あさりの",
+          "hotspot": {
+            "left": 62,
+            "top": 62,
+            "width": 12,
+            "height": 20,
+            "unit": "percent"
+          }
+        },
+        {
+          "id": 8,
+          "text": "炊き合わせです",
+          "hotspot": {
+            "left": 76,
+            "top": 56,
+            "width": 16,
+            "height": 28,
+            "unit": "percent"
+          }
+        }
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_sequence"
+  }
+}

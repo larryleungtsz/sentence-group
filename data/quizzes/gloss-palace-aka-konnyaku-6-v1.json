@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-aka-konnyaku-6-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 6,
+    "text": "お召し上がりいただいても"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "即使請您食用也可以。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 70,
+        "top": 48,
+        "width": 15,
+        "height": 22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

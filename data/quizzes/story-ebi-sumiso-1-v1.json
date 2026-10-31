@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-ebi-sumiso-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 1,
+    "text": "お隣が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "掌心側向、剛指向旁邊那碟停住。一條超高嘅鱷魚（鱷／tall）神情困惑，雙手舉高，喺度搵「那裏」嘅家（那裏／家）——屋其實就喺背脊後。tall 鱷、那裏同家一齊撞過側向指向旁邊碟嘅掌心——正正係「旁邊是」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

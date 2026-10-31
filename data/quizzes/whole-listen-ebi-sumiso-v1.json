@@ -1,0 +1,22 @@
+{
+  "quiz_id": "whole-listen-ebi-sumiso-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
+      "rate_options": [
+        1.5,
+        1,
+        0.5
+      ],
+      "self_check": true
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

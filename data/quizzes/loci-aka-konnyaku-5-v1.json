@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-aka-konnyaku-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "chunk": {
+    "id": 5,
+    "text": "そのまま"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "菜盤＋旁調味瓶：整碟菜剛原封不動、旁邊調味瓶沒碰停住。請在圖中點這菜盤／調味瓶所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspot": {
+        "left": 68,
+        "top": 73,
+        "width": 26,
+        "height": 15,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

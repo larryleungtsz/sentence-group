@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-ebi-sumiso-6-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 6,
+    "text": "椎茸と"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "第二碟香菇排：兩朵褐傘香菇剛並排停住。請在圖中點這香菇所在的位置。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspot": {
+        "left": 50,
+        "top": 62,
+        "width": 12,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "quiz_id": "story-ebi-sumiso-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。",
+  "chunk": {
+    "id": 3,
+    "text": "きゅうりの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "翠綠青瓜斜片剛排成一列停住。一個凶神惡煞嘅殺手（kill）神情專注，用武士刀切開一隻梨（梨），切開嘅半邊同時落下（落）。kill、梨同落一齊壓過排成一列嘅青瓜斜片——正正係「青瓜的」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg",
+      "distractors": []
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
