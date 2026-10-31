@@ -15,7 +15,7 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg?v=20261031ebiakacombined",
       "distractors": []
     }
   ],

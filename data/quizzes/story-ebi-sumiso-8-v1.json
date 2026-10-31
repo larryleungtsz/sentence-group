@@ -15,7 +15,7 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-takiawase-desu-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-takiawase-desu-combined.jpg?v=20261031ebiakacombined",
       "distractors": []
     }
   ],

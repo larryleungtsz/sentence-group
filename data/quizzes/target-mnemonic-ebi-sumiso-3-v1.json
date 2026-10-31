@@ -15,12 +15,12 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg?v=20261031ebiakacombined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-sono-o-tonari-ga-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg?v=20261031ebiakacombined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg?v=20261031ebiakacombined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-sumiso-gake-desu-combined.jpg?v=20261031ebiakacombined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-sono-o-tonari-ga-combined.jpg?v=20261031ebiakacombined"
       ]
     }
   ],

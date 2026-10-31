@@ -15,10 +15,10 @@
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-o-dashi-de-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-o-dashi-de-combined.jpg?v=20261031ebiakacombined",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-sono-shita-combined.jpg?v=20261031ebiakacombined",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-aka-konnyaku-combined.jpg?v=20261031ebiakacombined"
       ]
     },
     {
