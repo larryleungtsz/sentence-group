@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>一次性重置 ebi + aka</title>
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="nav-back" href="../index.html">← 首頁</a>
+      <h1>一次性重置</h1>
+    </header>
+    <p id="status" class="muted">準備清 ebi-sumiso 同 aka-konnyaku 嘅 SRS…</p>
+    <p id="detail" class="muted"></p>
+    <ul id="links" hidden>
+      <li><a id="a-ebi" href="../group.html?slug=ebi-sumiso">開 ebi-sumiso</a></li>
+      <li><a id="a-aka" href="../group.html?slug=aka-konnyaku">開 aka-konnyaku</a></li>
+    </ul>
+  </div>
+  <script>
+(function () {
+  var KEY = 'website-manager-progress-v2';
+  var SLUGS = ['ebi-sumiso', 'aka-konnyaku'];
+  var statusEl = document.getElementById('status');
+  var detailEl = document.getElementById('detail');
+  var linksEl = document.getElementById('links');
+
+  function emptyRoot() {
+    return { quizzes: {}, chunks: {}, sentences: {} };
+  }
+
+  try {
+    var raw = JSON.parse(localStorage.getItem(KEY) || 'null');
+    if (!raw || typeof raw !== 'object') raw = emptyRoot();
+    var quizzes = raw.quizzes || {};
+    var chunks = raw.chunks || {};
+    var sentences = raw.sentences || {};
+    var removedQ = 0, removedC = 0, removedS = 0;
+
+    Object.keys(quizzes).forEach(function (id) {
+      for (var i = 0; i < SLUGS.length; i++) {
+        if (id.indexOf(SLUGS[i]) !== -1) {
+          delete quizzes[id];
+          removedQ++;
+          break;
+        }
+      }
+    });
+    Object.keys(chunks).forEach(function (k) {
+      for (var i = 0; i < SLUGS.length; i++) {
+        if (k.indexOf(SLUGS[i] + ':') === 0) {
+          delete chunks[k];
+          removedC++;
+          break;
+        }
+      }
+    });
+    SLUGS.forEach(function (slug) {
+      if (Object.prototype.hasOwnProperty.call(sentences, slug)) {
+        delete sentences[slug];
+        removedS++;
+      }
+    });
+
+    raw.quizzes = quizzes;
+    raw.chunks = chunks;
+    raw.sentences = sentences;
+    localStorage.setItem(KEY, JSON.stringify(raw));
+
+    statusEl.textContent = '已重置 ebi-sumiso + aka-konnyaku（只清呢兩個 group 嘅 SRS）。';
+    detailEl.textContent =
+      '清咗 quiz ' + removedQ + '、chunk ' + removedC + '、sentence ' + removedS +
+      '。其他 sentence group 唔變。可以開下面連結睇到期題。';
+    linksEl.hidden = false;
+  } catch (e) {
+    statusEl.textContent = '重置失敗：' + (e && e.message ? e.message : String(e));
+  }
+})();
+  </script>
+</body>
+</html>
