@@ -2,7 +2,7 @@
   "quiz_id": "sentence-segment-shadow-aka-konnyaku-4s-v1-r20261101",
   "objective": "sentence_segment_shadowing",
   "stage": "4s",
-  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
   "slides": [
     {
       "type": "audio_shadow",

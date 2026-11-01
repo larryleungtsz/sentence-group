@@ -1,7 +1,7 @@
 {
   "quiz_id": "sequence-aka-konnyaku-v1-r20261101",
   "objective": "sequence_training",
-  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
   "slides": [
     {
       "type": "sequence_tap",

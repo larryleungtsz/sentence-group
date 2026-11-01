@@ -3,7 +3,7 @@
   "objective": "mother_to_target_language",
   "level": 3,
   "variant": 1,
-  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
   "chunk": {
     "id": 3,
     "text": "お出汁で"

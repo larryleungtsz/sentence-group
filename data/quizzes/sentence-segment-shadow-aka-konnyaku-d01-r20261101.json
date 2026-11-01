@@ -3,7 +3,7 @@
   "objective": "sentence_segment_shadowing",
   "stage": "1s",
   "day": 1,
-  "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても",
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても",
   "slides": [
     {
       "type": "audio_shadow",
