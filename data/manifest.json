@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T11:52:47+08:00",
+  "generated_at": "2026-11-01T13:07:33+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -21567,8 +21567,8 @@
       ]
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-1-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-1-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-1-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21576,8 +21576,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-2-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-2-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-2-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21585,8 +21585,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-3-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-3-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-3-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21594,8 +21594,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-4-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-4-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-4-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21603,8 +21603,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-5-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-5-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-5-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21612,8 +21612,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-6-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-6-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-6-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21621,8 +21621,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-7-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-7-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-7-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21630,8 +21630,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-ebi-sumiso-8-v1",
-      "file": "data/quizzes/sounding-ebi-sumiso-8-v1.json",
+      "quiz_id": "sounding-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/sounding-ebi-sumiso-8-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21639,8 +21639,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-1-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-1-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-1-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21648,8 +21648,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-2-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-2-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-2-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21657,8 +21657,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-3-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-3-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-3-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21666,8 +21666,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-4-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-4-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-4-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21675,8 +21675,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-5-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-5-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-5-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21684,8 +21684,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sounding-aka-konnyaku-6-v1",
-      "file": "data/quizzes/sounding-aka-konnyaku-6-v1.json",
+      "quiz_id": "sounding-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/sounding-aka-konnyaku-6-v1-r20261101.json",
       "objective": "pronunciation_sounding_select",
       "level": 1,
       "kind": "chunk",
@@ -21819,8 +21819,8 @@
       "sentence": "ご注文お決まりになりましたらお呼びください"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-1-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-1-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-1-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21828,8 +21828,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-2-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-2-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-2-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21837,8 +21837,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-3-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-3-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-3-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21846,8 +21846,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-4-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-4-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-4-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21855,8 +21855,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-5-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-5-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-5-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21864,8 +21864,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-6-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-6-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-6-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21873,8 +21873,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-7-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-7-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-7-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21882,8 +21882,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-ebi-sumiso-8-v1",
-      "file": "data/quizzes/example-listen-ebi-sumiso-8-v1.json",
+      "quiz_id": "example-listen-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/example-listen-ebi-sumiso-8-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21891,8 +21891,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-1-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-1-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-1-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21900,8 +21900,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-2-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-2-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-2-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21909,8 +21909,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-3-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-3-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-3-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21918,8 +21918,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-4-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-4-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-4-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21927,8 +21927,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-5-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-5-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-5-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -21936,8 +21936,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "example-listen-aka-konnyaku-6-v1",
-      "file": "data/quizzes/example-listen-aka-konnyaku-6-v1.json",
+      "quiz_id": "example-listen-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/example-listen-aka-konnyaku-6-v1-r20261101.json",
       "objective": "example_sentences_listening",
       "level": 1,
       "kind": "chunk",
@@ -24581,8 +24581,8 @@
       "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-1-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-1-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-1-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24590,8 +24590,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-2-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-2-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-2-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24599,8 +24599,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-3-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-3-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-3-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24608,8 +24608,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-4-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-4-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-4-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24617,8 +24617,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-5-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-5-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-5-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24626,8 +24626,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-6-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-6-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-6-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24635,8 +24635,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-7-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-7-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-7-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24644,8 +24644,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-ebi-sumiso-8-v1",
-      "file": "data/quizzes/youglish-ebi-sumiso-8-v1.json",
+      "quiz_id": "youglish-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/youglish-ebi-sumiso-8-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24653,8 +24653,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-1-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-1-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-1-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24662,8 +24662,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-2-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-2-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-2-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24671,8 +24671,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-3-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-3-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-3-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24680,8 +24680,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-4-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-4-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-4-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24689,8 +24689,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-5-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-5-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-5-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -24698,8 +24698,8 @@
       "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "youglish-aka-konnyaku-6-v1",
-      "file": "data/quizzes/youglish-aka-konnyaku-6-v1.json",
+      "quiz_id": "youglish-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/youglish-aka-konnyaku-6-v1-r20261101.json",
       "objective": "youglish_listen",
       "level": 1,
       "kind": "chunk",
@@ -26277,8 +26277,8 @@
       "sentence": "オレンジジュースと、焼酎をロックで。あと、焼き鳥もいいですか？月見つくね。とりあえず、それだけでいいです。これのおかわり。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-1-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-1-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-1-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26286,8 +26286,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-2-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-2-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-2-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26295,8 +26295,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-3-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-3-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-3-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26304,8 +26304,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-4-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-4-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-4-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26313,8 +26313,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-5-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-5-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-5-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26322,8 +26322,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-6-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-6-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-6-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26331,8 +26331,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-7-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-7-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-7-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26340,8 +26340,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "gloss-palace-ebi-sumiso-8-v1",
-      "file": "data/quizzes/gloss-palace-ebi-sumiso-8-v1.json",
+      "quiz_id": "gloss-palace-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-ebi-sumiso-8-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -26349,8 +26349,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-1-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-1-v1.json",
+      "quiz_id": "loci-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-1-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26358,8 +26358,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-2-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-2-v1.json",
+      "quiz_id": "loci-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-2-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26367,8 +26367,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-3-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-3-v1.json",
+      "quiz_id": "loci-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-3-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26376,8 +26376,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-4-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-4-v1.json",
+      "quiz_id": "loci-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-4-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26385,8 +26385,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-5-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-5-v1.json",
+      "quiz_id": "loci-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-5-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26394,8 +26394,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-6-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-6-v1.json",
+      "quiz_id": "loci-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-6-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26403,8 +26403,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-7-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-7-v1.json",
+      "quiz_id": "loci-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-7-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26412,8 +26412,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "loci-ebi-sumiso-8-v1",
-      "file": "data/quizzes/loci-ebi-sumiso-8-v1.json",
+      "quiz_id": "loci-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/loci-ebi-sumiso-8-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -26421,8 +26421,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-1-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-1-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-1-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26430,8 +26430,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-2-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-2-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-2-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26439,8 +26439,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-3-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-3-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-3-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26448,8 +26448,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-4-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-4-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-4-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26457,8 +26457,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-5-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-5-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-5-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26466,8 +26466,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-6-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-6-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-6-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26475,8 +26475,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-7-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-7-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-7-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26484,8 +26484,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "meaning-object-ebi-sumiso-8-v1",
-      "file": "data/quizzes/meaning-object-ebi-sumiso-8-v1.json",
+      "quiz_id": "meaning-object-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/meaning-object-ebi-sumiso-8-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -26493,8 +26493,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-1-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-1-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-1-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26502,8 +26502,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-2-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-2-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-2-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26511,8 +26511,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-3-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-3-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-3-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26520,8 +26520,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-4-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-4-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-4-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26529,8 +26529,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-5-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-5-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-5-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26538,8 +26538,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-6-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-6-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-6-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26547,8 +26547,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-7-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-7-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-7-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26556,8 +26556,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-lang-ebi-sumiso-8-v1",
-      "file": "data/quizzes/mother-lang-ebi-sumiso-8-v1.json",
+      "quiz_id": "mother-lang-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/mother-lang-ebi-sumiso-8-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -26565,8 +26565,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-1-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-1-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-1-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26574,8 +26574,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-2-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-2-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-2-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26583,8 +26583,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-3-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-3-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-3-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26592,8 +26592,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-4-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-4-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-4-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26601,8 +26601,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-5-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-5-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-5-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26610,8 +26610,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-6-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-6-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-6-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26619,8 +26619,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-7-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-7-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-7-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26628,8 +26628,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "mother-target-ebi-sumiso-8-v1",
-      "file": "data/quizzes/mother-target-ebi-sumiso-8-v1.json",
+      "quiz_id": "mother-target-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/mother-target-ebi-sumiso-8-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -26637,8 +26637,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sequence-ebi-sumiso-v1",
-      "file": "data/quizzes/sequence-ebi-sumiso-v1.json",
+      "quiz_id": "sequence-ebi-sumiso-v1-r20261101",
+      "file": "data/quizzes/sequence-ebi-sumiso-v1-r20261101.json",
       "objective": "sequence_training",
       "level": null,
       "kind": "sentence",
@@ -26646,8 +26646,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-1-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-1-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-1-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26655,8 +26655,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-2-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-2-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-2-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26664,8 +26664,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-3-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-3-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-3-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26673,8 +26673,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-4-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-4-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-4-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26682,8 +26682,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-5-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-5-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-5-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26691,8 +26691,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-6-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-6-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-6-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26700,8 +26700,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-7-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-7-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-7-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26709,8 +26709,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-025-ebi-sumiso-8-v1",
-      "file": "data/quizzes/shadow-025-ebi-sumiso-8-v1.json",
+      "quiz_id": "shadow-025-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/shadow-025-ebi-sumiso-8-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -26718,8 +26718,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-1-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-1-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-1-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26727,8 +26727,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-2-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-2-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-2-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26736,8 +26736,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-3-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-3-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-3-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26745,8 +26745,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-4-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-4-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-4-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26754,8 +26754,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-5-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-5-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-5-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26763,8 +26763,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-6-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-6-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-6-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26772,8 +26772,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-7-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-7-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-7-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26781,8 +26781,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "shadow-05-ebi-sumiso-8-v1",
-      "file": "data/quizzes/shadow-05-ebi-sumiso-8-v1.json",
+      "quiz_id": "shadow-05-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/shadow-05-ebi-sumiso-8-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -26790,8 +26790,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-1-v1",
-      "file": "data/quizzes/story-ebi-sumiso-1-v1.json",
+      "quiz_id": "story-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-1-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26799,8 +26799,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-2-v1",
-      "file": "data/quizzes/story-ebi-sumiso-2-v1.json",
+      "quiz_id": "story-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-2-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26808,8 +26808,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-3-v1",
-      "file": "data/quizzes/story-ebi-sumiso-3-v1.json",
+      "quiz_id": "story-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-3-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26817,8 +26817,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-4-v1",
-      "file": "data/quizzes/story-ebi-sumiso-4-v1.json",
+      "quiz_id": "story-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-4-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26826,8 +26826,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-5-v1",
-      "file": "data/quizzes/story-ebi-sumiso-5-v1.json",
+      "quiz_id": "story-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-5-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26835,8 +26835,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-6-v1",
-      "file": "data/quizzes/story-ebi-sumiso-6-v1.json",
+      "quiz_id": "story-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-6-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26844,8 +26844,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-7-v1",
-      "file": "data/quizzes/story-ebi-sumiso-7-v1.json",
+      "quiz_id": "story-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-7-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26853,8 +26853,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "story-ebi-sumiso-8-v1",
-      "file": "data/quizzes/story-ebi-sumiso-8-v1.json",
+      "quiz_id": "story-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/story-ebi-sumiso-8-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -26862,8 +26862,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-1-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-1-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-1-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26871,8 +26871,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-2-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-2-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-2-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26880,8 +26880,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-3-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-3-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-3-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26889,8 +26889,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-4-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-4-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-4-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26898,8 +26898,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-5-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-5-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-5-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26907,8 +26907,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-6-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-6-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-6-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26916,8 +26916,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-7-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-7-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-7-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26925,8 +26925,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "target-mnemonic-ebi-sumiso-8-v1",
-      "file": "data/quizzes/target-mnemonic-ebi-sumiso-8-v1.json",
+      "quiz_id": "target-mnemonic-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-ebi-sumiso-8-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -26934,8 +26934,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "whole-listen-ebi-sumiso-v1",
-      "file": "data/quizzes/whole-listen-ebi-sumiso-v1.json",
+      "quiz_id": "whole-listen-ebi-sumiso-v1-r20261101",
+      "file": "data/quizzes/whole-listen-ebi-sumiso-v1-r20261101.json",
       "objective": "whole_sentence_listening",
       "level": null,
       "kind": "sentence",
@@ -26943,8 +26943,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-1-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-1-v1.json",
+      "quiz_id": "writing-ebi-sumiso-1-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-1-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26952,8 +26952,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-2-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-2-v1.json",
+      "quiz_id": "writing-ebi-sumiso-2-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-2-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26961,8 +26961,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-3-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-3-v1.json",
+      "quiz_id": "writing-ebi-sumiso-3-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-3-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26970,8 +26970,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-4-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-4-v1.json",
+      "quiz_id": "writing-ebi-sumiso-4-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-4-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26979,8 +26979,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-5-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-5-v1.json",
+      "quiz_id": "writing-ebi-sumiso-5-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-5-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26988,8 +26988,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-6-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-6-v1.json",
+      "quiz_id": "writing-ebi-sumiso-6-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-6-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -26997,8 +26997,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-7-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-7-v1.json",
+      "quiz_id": "writing-ebi-sumiso-7-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-7-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27006,8 +27006,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "writing-ebi-sumiso-8-v1",
-      "file": "data/quizzes/writing-ebi-sumiso-8-v1.json",
+      "quiz_id": "writing-ebi-sumiso-8-v1-r20261101",
+      "file": "data/quizzes/writing-ebi-sumiso-8-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27015,8 +27015,8 @@
       "sentence": "お隣が海老ときゅうりの酢味噌がけです。そのお隣が、椎茸とあさりの炊き合わせです。"
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d01",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d01.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d01-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d01-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27029,8 +27029,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d02",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d02.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d02-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d02-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27043,8 +27043,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d03",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d03.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d03-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d03-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27057,8 +27057,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d04",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d04.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d04-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d04-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27071,8 +27071,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d05",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d05.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d05-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d05-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27085,8 +27085,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d06",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d06.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d06-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d06-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27099,8 +27099,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d07",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d07.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d07-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d07-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27113,8 +27113,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d08",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d08.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d08-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d08-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27127,8 +27127,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d09",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d09.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d09-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d09-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27141,8 +27141,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d10",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d10.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d10-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d10-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27155,8 +27155,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d11",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d11.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d11-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d11-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27169,8 +27169,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d12",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d12.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d12-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d12-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27183,8 +27183,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d13",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d13.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d13-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d13-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27197,8 +27197,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d14",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d14.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d14-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d14-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27211,8 +27211,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d15",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d15.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d15-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d15-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27225,8 +27225,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d16",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d16.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d16-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d16-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27239,8 +27239,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d17",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d17.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d17-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d17-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27253,8 +27253,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d18",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d18.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d18-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d18-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27267,8 +27267,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d19",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d19.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d19-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d19-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27281,8 +27281,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d20",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d20.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d20-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d20-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27295,8 +27295,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d21",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d21.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d21-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d21-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27309,8 +27309,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d22",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d22.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d22-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d22-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27323,8 +27323,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d23",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d23.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d23-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d23-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27337,8 +27337,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d24",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d24.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d24-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d24-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27351,8 +27351,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d25",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d25.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d25-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d25-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27365,8 +27365,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d26",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d26.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d26-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d26-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27379,8 +27379,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d27",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d27.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d27-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d27-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27393,8 +27393,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d28",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d28.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d28-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d28-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27407,8 +27407,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d29",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d29.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d29-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d29-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27421,8 +27421,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d30",
-      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d30.json",
+      "quiz_id": "sentence-segment-shadow-ebi-sumiso-d30-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-ebi-sumiso-d30-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -27435,8 +27435,8 @@
       ]
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-1-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-1-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-1-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27444,8 +27444,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-2-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-2-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-2-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27453,8 +27453,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-3-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-3-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-3-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27462,8 +27462,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-4-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-4-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-4-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27471,8 +27471,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-5-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-5-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-5-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27480,8 +27480,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "gloss-palace-aka-konnyaku-6-v1",
-      "file": "data/quizzes/gloss-palace-aka-konnyaku-6-v1.json",
+      "quiz_id": "gloss-palace-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/gloss-palace-aka-konnyaku-6-v1-r20261101.json",
       "objective": "gloss_to_palace_tap",
       "level": 2,
       "kind": "chunk",
@@ -27489,8 +27489,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-1-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-1-v1.json",
+      "quiz_id": "loci-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-1-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27498,8 +27498,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-2-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-2-v1.json",
+      "quiz_id": "loci-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-2-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27507,8 +27507,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-3-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-3-v1.json",
+      "quiz_id": "loci-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-3-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27516,8 +27516,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-4-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-4-v1.json",
+      "quiz_id": "loci-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-4-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27525,8 +27525,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-5-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-5-v1.json",
+      "quiz_id": "loci-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-5-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27534,8 +27534,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "loci-aka-konnyaku-6-v1",
-      "file": "data/quizzes/loci-aka-konnyaku-6-v1.json",
+      "quiz_id": "loci-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/loci-aka-konnyaku-6-v1-r20261101.json",
       "objective": "loci_description_tap",
       "level": 1,
       "kind": "chunk",
@@ -27543,8 +27543,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-1-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-1-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-1-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27552,8 +27552,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-2-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-2-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-2-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27561,8 +27561,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-3-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-3-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-3-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27570,8 +27570,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-4-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-4-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-4-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27579,8 +27579,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-5-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-5-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-5-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27588,8 +27588,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "meaning-object-aka-konnyaku-6-v1",
-      "file": "data/quizzes/meaning-object-aka-konnyaku-6-v1.json",
+      "quiz_id": "meaning-object-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/meaning-object-aka-konnyaku-6-v1-r20261101.json",
       "objective": "meaning_object_select_and_tap",
       "level": 1,
       "kind": "chunk",
@@ -27597,8 +27597,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-1-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-1-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-1-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27606,8 +27606,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-2-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-2-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-2-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27615,8 +27615,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-3-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-3-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-3-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27624,8 +27624,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-4-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-4-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-4-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27633,8 +27633,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-5-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-5-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-5-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27642,8 +27642,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-lang-aka-konnyaku-6-v1",
-      "file": "data/quizzes/mother-lang-aka-konnyaku-6-v1.json",
+      "quiz_id": "mother-lang-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/mother-lang-aka-konnyaku-6-v1-r20261101.json",
       "objective": "mother_language_pronounce",
       "level": 3,
       "kind": "chunk",
@@ -27651,8 +27651,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-1-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-1-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-1-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27660,8 +27660,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-2-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-2-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-2-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27669,8 +27669,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-3-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-3-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-3-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27678,8 +27678,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-4-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-4-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-4-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27687,8 +27687,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-5-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-5-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-5-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27696,8 +27696,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "mother-target-aka-konnyaku-6-v1",
-      "file": "data/quizzes/mother-target-aka-konnyaku-6-v1.json",
+      "quiz_id": "mother-target-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/mother-target-aka-konnyaku-6-v1-r20261101.json",
       "objective": "mother_to_target_language",
       "level": 3,
       "kind": "chunk",
@@ -27705,8 +27705,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sequence-aka-konnyaku-v1",
-      "file": "data/quizzes/sequence-aka-konnyaku-v1.json",
+      "quiz_id": "sequence-aka-konnyaku-v1-r20261101",
+      "file": "data/quizzes/sequence-aka-konnyaku-v1-r20261101.json",
       "objective": "sequence_training",
       "level": null,
       "kind": "sentence",
@@ -27714,8 +27714,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-1-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-1-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-1-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27723,8 +27723,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-2-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-2-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-2-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27732,8 +27732,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-3-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-3-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-3-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27741,8 +27741,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-4-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-4-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-4-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27750,8 +27750,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-5-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-5-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-5-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27759,8 +27759,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-025-aka-konnyaku-6-v1",
-      "file": "data/quizzes/shadow-025-aka-konnyaku-6-v1.json",
+      "quiz_id": "shadow-025-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/shadow-025-aka-konnyaku-6-v1-r20261101.json",
       "objective": "word_shadowing_025",
       "level": 1,
       "kind": "chunk",
@@ -27768,8 +27768,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-1-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-1-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-1-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27777,8 +27777,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-2-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-2-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-2-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27786,8 +27786,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-3-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-3-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-3-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27795,8 +27795,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-4-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-4-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-4-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27804,8 +27804,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-5-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-5-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-5-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27813,8 +27813,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "shadow-05-aka-konnyaku-6-v1",
-      "file": "data/quizzes/shadow-05-aka-konnyaku-6-v1.json",
+      "quiz_id": "shadow-05-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/shadow-05-aka-konnyaku-6-v1-r20261101.json",
       "objective": "tone_shadowing_05",
       "level": 1,
       "kind": "chunk",
@@ -27822,8 +27822,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-1-v1",
-      "file": "data/quizzes/story-aka-konnyaku-1-v1.json",
+      "quiz_id": "story-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-1-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27831,8 +27831,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-2-v1",
-      "file": "data/quizzes/story-aka-konnyaku-2-v1.json",
+      "quiz_id": "story-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-2-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27840,8 +27840,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-3-v1",
-      "file": "data/quizzes/story-aka-konnyaku-3-v1.json",
+      "quiz_id": "story-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-3-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27849,8 +27849,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-4-v1",
-      "file": "data/quizzes/story-aka-konnyaku-4-v1.json",
+      "quiz_id": "story-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-4-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27858,8 +27858,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-5-v1",
-      "file": "data/quizzes/story-aka-konnyaku-5-v1.json",
+      "quiz_id": "story-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-5-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27867,8 +27867,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "story-aka-konnyaku-6-v1",
-      "file": "data/quizzes/story-aka-konnyaku-6-v1.json",
+      "quiz_id": "story-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/story-aka-konnyaku-6-v1-r20261101.json",
       "objective": "story_select_image",
       "level": 1,
       "kind": "chunk",
@@ -27876,8 +27876,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-1-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-1-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-1-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27885,8 +27885,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-2-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-2-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-2-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27894,8 +27894,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-3-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-3-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-3-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27903,8 +27903,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-4-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-4-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-4-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27912,8 +27912,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-5-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-5-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-5-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27921,8 +27921,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "target-mnemonic-aka-konnyaku-6-v1",
-      "file": "data/quizzes/target-mnemonic-aka-konnyaku-6-v1.json",
+      "quiz_id": "target-mnemonic-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/target-mnemonic-aka-konnyaku-6-v1-r20261101.json",
       "objective": "target_to_mnemonic_image",
       "level": 2,
       "kind": "chunk",
@@ -27930,8 +27930,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "whole-listen-aka-konnyaku-v1",
-      "file": "data/quizzes/whole-listen-aka-konnyaku-v1.json",
+      "quiz_id": "whole-listen-aka-konnyaku-v1-r20261101",
+      "file": "data/quizzes/whole-listen-aka-konnyaku-v1-r20261101.json",
       "objective": "whole_sentence_listening",
       "level": null,
       "kind": "sentence",
@@ -27939,8 +27939,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-1-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-1-v1.json",
+      "quiz_id": "writing-aka-konnyaku-1-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-1-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27948,8 +27948,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-2-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-2-v1.json",
+      "quiz_id": "writing-aka-konnyaku-2-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-2-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27957,8 +27957,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-3-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-3-v1.json",
+      "quiz_id": "writing-aka-konnyaku-3-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-3-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27966,8 +27966,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-4-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-4-v1.json",
+      "quiz_id": "writing-aka-konnyaku-4-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-4-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27975,8 +27975,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-5-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-5-v1.json",
+      "quiz_id": "writing-aka-konnyaku-5-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-5-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27984,8 +27984,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "writing-aka-konnyaku-6-v1",
-      "file": "data/quizzes/writing-aka-konnyaku-6-v1.json",
+      "quiz_id": "writing-aka-konnyaku-6-v1-r20261101",
+      "file": "data/quizzes/writing-aka-konnyaku-6-v1-r20261101.json",
       "objective": "writing_shadowing",
       "level": 1,
       "kind": "chunk",
@@ -27993,8 +27993,8 @@
       "sentence": "その下、赤蒟蒻、お出汁で炊いております。そのままお召し上がりいただいても"
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d01",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d01.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d01-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d01-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28007,8 +28007,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d02",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d02.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d02-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d02-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28021,8 +28021,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d03",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d03.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d03-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d03-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28035,8 +28035,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d04",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d04.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d04-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d04-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28049,8 +28049,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d05",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d05.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d05-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d05-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28063,8 +28063,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d06",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d06.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d06-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d06-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28077,8 +28077,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d07",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d07.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d07-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d07-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28091,8 +28091,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d08",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d08.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d08-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d08-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28105,8 +28105,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d09",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d09.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d09-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d09-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28119,8 +28119,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d10",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d10.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d10-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d10-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28133,8 +28133,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d11",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d11.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d11-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d11-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28147,8 +28147,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d12",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d12.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d12-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d12-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28161,8 +28161,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d13",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d13.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d13-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d13-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28175,8 +28175,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d14",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d14.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d14-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d14-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28189,8 +28189,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d15",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d15.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d15-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d15-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28203,8 +28203,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d16",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d16.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d16-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d16-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28217,8 +28217,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d17",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d17.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d17-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d17-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28231,8 +28231,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d18",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d18.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d18-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d18-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28245,8 +28245,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d19",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d19.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d19-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d19-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28259,8 +28259,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d20",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d20.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d20-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d20-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28273,8 +28273,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d21",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d21.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d21-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d21-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28287,8 +28287,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d22",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d22.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d22-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d22-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28301,8 +28301,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d23",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d23.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d23-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d23-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28315,8 +28315,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d24",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d24.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d24-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d24-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28329,8 +28329,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d25",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d25.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d25-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d25-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28343,8 +28343,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d26",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d26.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d26-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d26-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28357,8 +28357,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d27",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d27.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d27-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d27-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28371,8 +28371,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d28",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d28.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d28-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d28-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28385,8 +28385,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d29",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d29.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d29-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d29-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
@@ -28399,8 +28399,8 @@
       ]
     },
     {
-      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d30",
-      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d30.json",
+      "quiz_id": "sentence-segment-shadow-aka-konnyaku-d30-r20261101",
+      "file": "data/quizzes/sentence-segment-shadow-aka-konnyaku-d30-r20261101.json",
       "objective": "sentence_segment_shadowing",
       "level": null,
       "kind": "sentence",
