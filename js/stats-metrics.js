@@ -52,10 +52,15 @@
     };
   }
 
+  /** Same cap as Timing.MAX_VALID_QUIZ_MS. Exactly 120000 ms still counts. */
+  var MAX_VALID_QUIZ_MS = 120000;
+
   function quizDurationMs(quiz) {
     if (!quiz || typeof quiz !== 'object') return null;
+    if (quiz.timingValid === false) return null;
     var ms = Number(quiz.durationMs);
     if (!isFinite(ms) || ms < 0) return null;
+    if (ms > MAX_VALID_QUIZ_MS) return null;
     return ms;
   }
 
@@ -313,6 +318,7 @@
     WEEK_DAYS: WEEK_DAYS,
     hktDayStartMs: hktDayStartMs,
     practiceWindows: practiceWindows,
+    MAX_VALID_QUIZ_MS: MAX_VALID_QUIZ_MS,
     quizDurationMs: quizDurationMs,
     quizAnchorMs: quizAnchorMs,
     overview: overview,

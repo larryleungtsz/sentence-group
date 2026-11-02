@@ -34,9 +34,10 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 - **Session**：撳「開始練習」→ 做完所有到期題（或中途離開且已完成 ≥1 題）
 - **Quiz**：每題開始渲染 → `onPass`
-- **Chunk**：同一 session 內同一 chunk（或句子題）嘅 quiz 用時加總
-- 做完 session 顯示總用時（牆鐘）；個別 quiz／chunk 詳情喺統計頁
-- **統計頁練習時間**係每題 `durationMs` 加總，唔用 session 牆鐘 `totalMs`。今日／本週用香港時間日界；本週＝近 7 日（今日連之前 6 日），唔係星期一至日
+- **超過 2 分鐘唔計時**：單題用時 **> 120000 ms** 視為無效。剛好 **120000 ms** 仍然計入。題目照常完成、SRS 唔受影響；該題 `durationMs` 寫成 `null`（`timingValid: false`），唔計入 chunk 總和、session 練習總用時，同統計頁嘅練習時間加總。統計頁只標「不計時」，唔顯示該段時長或該題開始→結束。
+- **Chunk**：同一 session 內同一 chunk（或句子題）嘅**有效** quiz 用時加總
+- 做完 session 顯示總用時（牆鐘減去超時題）；個別 quiz／chunk 詳情喺統計頁
+- **統計頁練習時間**係每題有效 `durationMs` 加總，唔用 session 牆鐘 `totalMs`，亦唔計超過 2 分鐘嘅題。今日／本週用香港時間日界；本週＝近 7 日（今日連之前 6 日），唔係星期一至日
 - **學新詞**係 chunk 第一次入 T1（`stageIndex` 去到 3）嘅 `enteredT1At`。skip／`already_introduced`／`shared_with_prior_group` 唔計。已經過咗 T1、又冇真實時間嘅舊 chunk 唔會補一個日期
 - **唔寫 Notion**
 

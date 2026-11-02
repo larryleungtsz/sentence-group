@@ -172,10 +172,11 @@
         '<div class="stats-card-meta">' +
         Timing.formatHKT(startMs) +
         ' · ' +
-        Timing.formatDuration(s.totalMs) +
+        Timing.formatDuration(Timing.practiceTotalMs(s)) +
         ' · ' +
         s.quizCount +
         ' 題' +
+        (Timing.excludedQuizCount(s) ? ' · ' + Timing.excludedQuizCount(s) + ' 題不計時' : '') +
         (s.reason === 'leave' ? ' · 中途離開' : '') +
         '</div>';
       listEl.appendChild(a);
@@ -200,17 +201,21 @@
       ' · 結束 ' +
       Timing.formatHKT(endMs) +
       ' · 總用時 <strong>' +
-      Timing.formatDuration(s.totalMs) +
+      Timing.formatDuration(Timing.practiceTotalMs(s)) +
       '</strong>' +
       (s.reason === 'leave' ? '（中途離開）' : '') +
+      (Timing.excludedQuizCount(s)
+        ? ' · ' + Timing.excludedQuizCount(s) + ' 題超過 2 分鐘，未計入用時'
+        : '') +
       '</p>';
 
+    const chunks = Timing.chunksForSession(s);
     html += '<h3>Chunk 用時</h3>';
-    if (!s.chunks || !s.chunks.length) {
+    if (!chunks.length) {
       html += '<p class="muted">無</p>';
     } else {
       html += '<ul class="stats-breakdown">';
-      s.chunks.forEach((c) => {
+      chunks.forEach((c) => {
         html +=
           '<li><span class="stats-label">' +
           escapeHtml(c.label) +
@@ -231,20 +236,29 @@
       s.quizzes.forEach((q) => {
         const chunkBit =
           q.kind === 'chunk' ? ' c' + q.chunkId : q.kind === 'sentence' ? ' 句子' : '';
+        const time = Timing.quizTimePresentation(q);
         html +=
           '<li><span class="stats-label">L' +
           (q.level != null ? q.level : 'S') +
           chunkBit +
           ' ' +
           escapeHtml(q.objective || q.quizId) +
-          '</span> <span class="stats-val">' +
-          Timing.formatDuration(q.durationMs) +
-          '</span>' +
-          '<div class="muted stats-sub">' +
-          Timing.formatHKT(Date.parse(q.startedAt)) +
-          ' → ' +
-          Timing.formatHKT(Date.parse(q.endedAt)) +
-          '</div></li>';
+          '</span> <span class="stats-val' +
+          (time.counted ? '' : ' stats-excluded') +
+          '">' +
+          escapeHtml(time.durationText) +
+          '</span>';
+        if (time.counted) {
+          html +=
+            '<div class="muted stats-sub">' +
+            Timing.formatHKT(Date.parse(q.startedAt)) +
+            ' → ' +
+            Timing.formatHKT(Date.parse(q.endedAt)) +
+            '</div>';
+        } else if (time.note) {
+          html += '<div class="muted stats-sub">' + escapeHtml(time.note) + '</div>';
+        }
+        html += '</li>';
       });
       html += '</ol>';
     }

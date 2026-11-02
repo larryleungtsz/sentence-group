@@ -125,6 +125,35 @@ test('quiz-sum ignores session wall totalMs and anchors on startedAt', function 
   assert.strictEqual(ov.weekMs, 4000);
 });
 
+test('quizzes over 2 minutes are left out of practice totals', function () {
+  var now = hkt('2026-11-02T12:00:00+08:00');
+  var longQuiz = quiz(180000, '2026-11-02T02:00:00.000Z', { quizId: 'long' });
+  var flagged = quiz(5000, '2026-11-02T02:10:00.000Z', { quizId: 'flagged' });
+  flagged.timingValid = false;
+  flagged.durationMs = null;
+  var exact = quiz(120000, '2026-11-02T02:20:00.000Z', { quizId: 'exact' });
+  var short = quiz(4000, '2026-11-02T02:30:00.000Z', { quizId: 'short' });
+  var sessions = [session('g', [short, longQuiz, flagged, exact])];
+  var ov = SM.overview(sessions, now);
+  assert.strictEqual(ov.allMs, 4000 + 120000);
+  assert.strictEqual(ov.todayMs, 4000 + 120000);
+  var rows = SM.groupRollup(sessions);
+  assert.strictEqual(rows.length, 1);
+  assert.strictEqual(rows[0].totalMs, 4000 + 120000);
+  assert.strictEqual(rows[0].quizCount, 2);
+  var chunks = SM.groupChunkRows(sessions, 'g', { chunks: [{ id: 1, text: 'c' }], sentence: 's' });
+  var chunk = null;
+  chunks.forEach(function (row) {
+    if (row.key === 'c1') chunk = row;
+  });
+  assert.ok(chunk);
+  assert.strictEqual(chunk.totalMs, 4000 + 120000);
+  assert.strictEqual(chunk.quizCount, 2);
+  assert.strictEqual(SM.quizDurationMs(longQuiz), null);
+  assert.strictEqual(SM.quizDurationMs(flagged), null);
+  assert.strictEqual(SM.quizDurationMs(exact), 120000);
+});
+
 test('invalid durations are skipped; zero durations still count', function () {
   var now = hkt('2026-11-02T12:00:00+08:00');
   var ov = SM.overview(
