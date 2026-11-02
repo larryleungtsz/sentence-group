@@ -22,6 +22,8 @@
     gloss_to_palace_tap: '解釋對應宮殿',
     loci_description_tap: '地點描述點選',
     meaning_object_select_and_tap: '意思物件選擇並點選',
+    // Q19 Cloze. Soft GO later needs a full quiz dump; this label is site wiring only.
+    mother_cloze_usage: '母語填空用法',
     mother_language_pronounce: '母語發音',
     mother_to_target_language: '母語譯目標語',
     pronunciation_sounding_select: '發音諧音選擇',
@@ -187,6 +189,26 @@
     return wrap;
   }
 
+
+  /** Highlight ____ (or fullwidth ＿＿) inside a Cloze card. Grading still uses the full string. */
+  function appendClozeLabel(node, text) {
+    var src = String(text);
+    var re = /(_{2,}|＿{2,})/g;
+    var last = 0;
+    var m;
+    var any = false;
+    while ((m = re.exec(src))) {
+      any = true;
+      if (m.index > last) node.appendChild(document.createTextNode(src.slice(last, m.index)));
+      node.appendChild(el('span', 'cloze-blank', m[1]));
+      last = m.index + m[1].length;
+    }
+    if (!any) {
+      node.textContent = src;
+      return;
+    }
+    if (last < src.length) node.appendChild(document.createTextNode(src.slice(last)));
+  }
 
   /** Strip markdown-link / raw audio URL junk accidentally baked into text choices. */
   function cleanChoiceText(s) {
@@ -355,7 +377,8 @@
       const type = slide.type;
 
       if (type === 'prompt') {
-        body.appendChild(el('p', 'prompt', slide.text || ''));
+        const clozePrompt = quiz.objective === 'mother_cloze_usage';
+        body.appendChild(el('p', clozePrompt ? 'prompt cloze-prompt' : 'prompt', slide.text || ''));
         // 故事選圖 step 1 is still this quiz (story → image). Later advances stay 「下一題」.
         const advanceLabel =
           quiz.objective === 'story_select_image' && idx === 0 ? '下一步' : '下一題';
@@ -370,13 +393,23 @@
       }
 
       if (type === 'select_text') {
-        body.appendChild(el('p', 'instruction', '請選擇正確答案'));
+        // Q19 Cloze reuses exact card match. Cards are blanked L1 sentences, not a free-fill input.
+        const cloze = quiz.objective === 'mother_cloze_usage';
+        body.appendChild(
+          el(
+            'p',
+            cloze ? 'instruction cloze-instruction' : 'instruction',
+            cloze ? '請選擇空白正確的母語句子' : '請選擇正確答案'
+          )
+        );
         const correct = cleanChoiceText(slide.correct);
         const opts = shuffle([correct].concat((slide.distractors || []).map(cleanChoiceText)));
-        const list = el('div', 'choices');
+        const list = el('div', cloze ? 'choices cloze-choices' : 'choices');
         opts.forEach((opt) => {
-          const b = el('button', 'btn choice', opt);
+          const b = el('button', cloze ? 'btn choice cloze-choice' : 'btn choice');
           b.type = 'button';
+          if (cloze) appendClozeLabel(b, opt);
+          else b.textContent = opt;
           b.addEventListener('click', () => {
             if (opt === correct) {
               idx++;

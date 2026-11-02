@@ -11822,6 +11822,15 @@
       "chunk_id": 2
     },
     {
+      "quiz_id": "mother-cloze-usage-smoke-v1",
+      "file": "data/quizzes/mother-cloze-usage-smoke-v1.json",
+      "objective": "mother_cloze_usage",
+      "level": 3,
+      "kind": "chunk",
+      "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
+      "chunk_id": 2
+    },
+    {
       "quiz_id": "mother-target-yoyaku-3-v1",
       "file": "data/quizzes/mother-target-yoyaku-3-v1.json",
       "objective": "mother_to_target_language",
