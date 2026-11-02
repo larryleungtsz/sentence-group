@@ -116,6 +116,14 @@
       "T11",
       "T14",
       "T17"
+    ],
+    "mother_cloze_usage": [
+      "T03",
+      "T5",
+      "T8",
+      "T11",
+      "T14",
+      "T18"
     ]
   },
   "sentence_schedule": {
