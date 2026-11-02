@@ -254,6 +254,80 @@ header h1 { font-size: 1.35rem; margin: 0; }
 .stats-label { font-weight: 500; }
 .stats-val { color: var(--ok); margin-left: 0.35rem; }
 .stats-sub { font-size: 0.8rem; margin-top: 0.1rem; }
+.stats-section-title { font-size: 1.05rem; margin: 1.25rem 0 0.55rem; }
+.stats-overview {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+.stats-chip {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  min-width: 0;
+}
+.stats-chip-label { color: var(--muted); font-size: 0.82rem; }
+.stats-chip-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ok);
+  margin-top: 0.15rem;
+  word-break: break-word;
+}
+.stats-chip-sub { color: var(--muted); font-size: 0.85rem; margin-top: 0.25rem; }
+.stats-group {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 0.65rem;
+}
+.stats-group summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+}
+.stats-group summary::-webkit-details-marker { display: none; }
+.stats-group summary::before {
+  content: '▸';
+  color: var(--muted);
+  flex: none;
+}
+.stats-group[open] summary::before { content: '▾'; }
+.stats-group summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.stats-group-title {
+  font-weight: 600;
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}
+.stats-group-time {
+  color: var(--ok);
+  white-space: nowrap;
+  flex: none;
+}
+.stats-chunks { padding: 0 1rem 0.75rem 2.1rem; }
+.stats-chunk-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--border);
+}
+.stats-chunk-row .stats-label { min-width: 0; word-break: break-word; }
+.stats-chunk-meta { white-space: nowrap; flex: none; }
+.stats-chunk-empty { margin: 0 0 0.6rem 2.1rem; }
+@media (max-width: 560px) {
+  .stats-overview { grid-template-columns: 1fr; }
+}
 
 /* Cloud sync + phone backup */
 .sync-panel {

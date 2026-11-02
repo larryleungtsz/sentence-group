@@ -38,6 +38,9 @@
   const nowIso = new Date(nowMs).toISOString();
 
   const chunks = group.chunks || [];
+  if (typeof Progress.reconcileEnteredT1 === 'function') {
+    Progress.reconcileEnteredT1(groupsData);
+  }
   const getChunkState = (chunkId) => Progress.getChunk(slug, chunkId);
 
   function admittedSet() {
@@ -287,7 +290,12 @@
 
     if (item.meta.kind === 'chunk') {
       if (!chunkHasDue(item.meta.chunk_id)) {
-        Progress.advanceChunk(slug, item.meta.chunk_id, nowIso);
+        Progress.advanceChunk(
+          slug,
+          item.meta.chunk_id,
+          nowIso,
+          chunkMeta(item.meta.chunk_id)
+        );
       }
     } else if (item.meta.kind === 'sentence') {
       if (!sentenceHasDue()) {

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>練習統計</title>
-  <link rel="stylesheet" href="css/app.css?v=20261102chrome" />
+  <link rel="stylesheet" href="css/app.css?v=20261102stats" />
 </head>
 <body>
   <div class="wrap">
@@ -14,6 +14,15 @@
     </header>
     <div id="sync-panel"></div>
     <p class="muted">未登入雲端時，記錄只喺本機（localStorage），唔會寫入 Notion。時間顯示為 Asia/Hong_Kong。手機備份用上面「匯出 JSON／匯入 JSON」合併，空白唔會覆蓋。</p>
+    <p class="muted" id="stats-metric-note">練習時間係每題用時加總（durationMs），唔係成個 session 嘅牆鐘。本週係香港時間近 7 日，由今日倒數，唔係星期一至日。學新詞係詞塊第一次入 T1 嘅時間；skip 同已經引入唔計。舊詞如果冇入 T1 時間，只會喺練習時間入面，唔會計入今日／本週學新詞。</p>
+
+    <h2 class="stats-section-title">總覽</h2>
+    <div id="stats-overview" class="stats-overview" aria-live="polite"></div>
+
+    <h2 class="stats-section-title">Sentence Group</h2>
+    <div id="stats-groups"></div>
+
+    <h2 class="stats-section-title">歷次練習</h2>
     <div class="toolbar">
       <button type="button" id="clear-timing" class="btn btn-ghost">清除計時記錄</button>
     </div>
@@ -22,11 +31,12 @@
     <div id="session-detail" class="stats-detail" hidden></div>
   </div>
   <script src="js/sync-config.js?v=20261102chrome"></script>
-  <script src="js/sync-merge.js?v=20261102chrome"></script>
+  <script src="js/sync-merge.js?v=20261102stats"></script>
   <script src="js/schedule.js"></script>
+  <script src="js/stats-metrics.js?v=20261102stats"></script>
   <script src="js/timing.js?v=20261102chrome"></script>
-  <script src="js/progress.js?v=20261102chrome"></script>
+  <script src="js/progress.js?v=20261102stats"></script>
   <script src="js/sync.js?v=20261102chrome"></script>
-  <script src="js/stats.js?v=20261102chrome"></script>
+  <script src="js/stats.js?v=20261102stats"></script>
 </body>
 </html>
