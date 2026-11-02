@@ -18,7 +18,7 @@
       "instruction": "請聆聽並跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
       "start_sec": 1.15,
-      "end_sec": 1.95,
+      "end_sec": 1.89,
       "rate": 0.75,
       "self_check": true
     },
@@ -26,7 +26,7 @@
       "type": "audio_shadow",
       "instruction": "請聆聽並跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
-      "start_sec": 1.95,
+      "start_sec": 1.89,
       "end_sec": 2.95,
       "rate": 0.75,
       "self_check": true
@@ -63,7 +63,7 @@
       "instruction": "請聆聽並跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
       "start_sec": 6.95,
-      "end_sec": 8.25,
+      "end_sec": 8.34,
       "rate": 0.75,
       "self_check": true
     },
@@ -71,7 +71,7 @@
       "type": "audio_shadow",
       "instruction": "請聆聽並跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
-      "start_sec": 8.25,
+      "start_sec": 8.34,
       "end_sec": 9.46,
       "rate": 0.75,
       "self_check": true
