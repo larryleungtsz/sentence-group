@@ -22,7 +22,7 @@
     gloss_to_palace_tap: '解釋對應宮殿',
     loci_description_tap: '地點描述點選',
     meaning_object_select_and_tap: '意思物件選擇並點選',
-    // Q19 Cloze. Soft GO later needs a full quiz dump; this label is site wiring only.
+    // Q19 Cloze: one slide (chunk + blanked L1 cards). Soft GO content still later.
     mother_cloze_usage: '母語填空用法',
     mother_language_pronounce: '母語發音',
     mother_to_target_language: '母語譯目標語',
@@ -190,6 +190,30 @@
   }
 
 
+  /**
+   * Q19 Cloze is one slide: the chunk and the blanked L1 cards share it.
+   * A leftover prompt slide is folded in and not shown as its own step.
+   */
+  function clozeSlides(quiz) {
+    var raw = quiz.slides || [];
+    var select = null;
+    var promptText = '';
+    for (var i = 0; i < raw.length; i++) {
+      var s = raw[i];
+      if (!s) continue;
+      if (!select && s.type === 'select_text') select = s;
+      if (!promptText && s.type === 'prompt' && s.text) promptText = String(s.text);
+    }
+    if (!select) return raw;
+    var chunkText = select.prompt || (quiz.chunk && quiz.chunk.text) || promptText || '';
+    return [{
+      type: 'select_text',
+      prompt: chunkText ? String(chunkText) : '',
+      correct: select.correct,
+      distractors: select.distractors || [],
+    }];
+  }
+
   /** Highlight ____ (or fullwidth ＿＿) inside a Cloze card. Grading still uses the full string. */
   function appendClozeLabel(node, text) {
     var src = String(text);
@@ -328,7 +352,7 @@
    */
   function run(quiz, root, hooks) {
     root.innerHTML = '';
-    const slides = quiz.slides || [];
+    const slides = quiz.objective === 'mother_cloze_usage' ? clozeSlides(quiz) : (quiz.slides || []);
     let idx = 0;
     const status = el('div', 'quiz-status');
     const body = el('div', 'quiz-body');
@@ -368,17 +392,16 @@
       feedback.textContent = '';
       feedback.className = 'quiz-feedback';
       body.innerHTML = '';
-      setStatus();
       if (idx >= slides.length) {
         finishPass();
         return;
       }
+      setStatus();
       const slide = slides[idx];
       const type = slide.type;
 
       if (type === 'prompt') {
-        const clozePrompt = quiz.objective === 'mother_cloze_usage';
-        body.appendChild(el('p', clozePrompt ? 'prompt cloze-prompt' : 'prompt', slide.text || ''));
+        body.appendChild(el('p', 'prompt', slide.text || ''));
         // 故事選圖 step 1 is still this quiz (story → image). Later advances stay 「下一題」.
         const advanceLabel =
           quiz.objective === 'story_select_image' && idx === 0 ? '下一步' : '下一題';
@@ -393,9 +416,14 @@
       }
 
       if (type === 'select_text') {
-        // Q19 Cloze reuses exact card match. Cards are blanked L1 sentences, not a free-fill input.
+        // Q19 Cloze: chunk and blanked L1 cards on this same slide. Grade is still exact card match.
         const cloze = quiz.objective === 'mother_cloze_usage';
-        body.appendChild(
+        const host = cloze ? el('div', 'cloze-slide') : body;
+        if (cloze) {
+          const chunkText = slide.prompt || (quiz.chunk && quiz.chunk.text) || '';
+          if (chunkText) host.appendChild(el('p', 'prompt cloze-prompt', chunkText));
+        }
+        host.appendChild(
           el(
             'p',
             cloze ? 'instruction cloze-instruction' : 'instruction',
@@ -420,7 +448,8 @@
           });
           list.appendChild(b);
         });
-        body.appendChild(list);
+        host.appendChild(list);
+        if (cloze) body.appendChild(host);
         return;
       }
 

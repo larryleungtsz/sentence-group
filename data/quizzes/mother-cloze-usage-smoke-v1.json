@@ -10,11 +10,8 @@
   },
   "slides": [
     {
-      "type": "prompt",
-      "text": "ご予約いただいてますか"
-    },
-    {
       "type": "select_text",
+      "prompt": "ご予約いただいてますか",
       "correct": "有____嗎",
       "distractors": [
         "____有嗎",
