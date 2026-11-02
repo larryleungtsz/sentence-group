@@ -13,10 +13,15 @@
     return;
   }
 
+  const syncReady =
+    window.Sync && typeof Sync.ready === 'function'
+      ? Sync.ready()
+      : Promise.resolve();
   const [groupsRes, manifestRes, scheduleRes] = await Promise.all([
     fetch('data/groups.json'),
     fetch('data/manifest.json'),
     fetch('data/schedule.json'),
+    syncReady,
   ]);
   const groupsData = await groupsRes.json();
   const manifest = await manifestRes.json();

@@ -24,8 +24,17 @@
     }
   }
 
+  function notifyLocal(kind) {
+    try {
+      if (global.Sync && typeof global.Sync.onLocalWrite === 'function') {
+        global.Sync.onLocalWrite(kind);
+      }
+    } catch (e) {}
+  }
+
   function saveAll(data) {
     localStorage.setItem(KEY, JSON.stringify(data));
+    notifyLocal('timing');
   }
 
   function uid() {
