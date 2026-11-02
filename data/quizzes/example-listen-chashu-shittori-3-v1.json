@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-shittori-shite.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 蛋糕濕潤著很好吃。\n2. 麵包濕潤著很軟。\n3. 肉濕潤著很好吃。",
+      "gloss": "1. 蛋糕濕潤著很好吃。\n2. 麵包濕潤著很軟。\n3. 肉濕潤著很好吃。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 蛋糕濕潤著很好吃。\n2. 麵包濕潤著很軟。\n3. 肉濕潤著很好吃。"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sakki-no.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 剛才的訂單，已確認了。\n2. 剛才的客人是哪位？\n3. 就剛才的事打電話了。",
+      "gloss": "1. 剛才的訂單，已確認了。\n2. 剛才的客人是哪位？\n3. 就剛才的事打電話了。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 剛才的訂單，已確認了。\n2. 剛才的客人是哪位？\n3. 就剛才的事打電話了。"
 }

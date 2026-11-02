@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-omachigai.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 有沒有弄錯呢。\n2. 請不要弄錯。\n3. 如果弄錯了請說。",
+      "gloss": "1. 有沒有弄錯呢。\n2. 請不要弄錯。\n3. 如果弄錯了請說。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 有沒有弄錯呢。\n2. 請不要弄錯。\n3. 如果弄錯了請說。"
 }

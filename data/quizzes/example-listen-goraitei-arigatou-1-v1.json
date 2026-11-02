@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ご来店.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 感謝光臨。\n2. 請務必光臨。\n3. 今天光臨的人很多。",
+      "gloss": "1. 感謝光臨。\n2. 請務必光臨。\n3. 今天光臨的人很多。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 感謝光臨。\n2. 請務必光臨。\n3. 今天光臨的人很多。"
 }

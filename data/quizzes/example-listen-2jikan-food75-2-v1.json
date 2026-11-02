@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-fuudo-ga.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 餐點很慢。\n2. 餐點很好吃。\n3. 餐點不夠。",
+      "gloss": "1. 餐點很慢。\n2. 餐點很好吃。\n3. 餐點不夠。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 餐點很慢。\n2. 餐點很好吃。\n3. 餐點不夠。"
 }

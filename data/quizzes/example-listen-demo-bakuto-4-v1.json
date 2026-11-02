@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-jibun-wa.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 我自己喜歡咖啡。\n2. 我自己明天休息。\n3. 我自己還沒決定。",
+      "gloss": "1. 我自己喜歡咖啡。\n2. 我自己明天休息。\n3. 我自己還沒決定。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 我自己喜歡咖啡。\n2. 我自己明天休息。\n3. 我自己還沒決定。"
 }

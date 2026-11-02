@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-よかったら.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 如果較方便的話請用。\n2. 如果較方便的話請看菜單。\n3. 如果較方便的話生啤如何。",
+      "gloss": "1. 如果較方便的話請用。\n2. 如果較方便的話請看菜單。\n3. 如果較方便的話生啤如何。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 如果較方便的話請用。\n2. 如果較方便的話請看菜單。\n3. 如果較方便的話生啤如何。"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-7時から.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩從七點開始。\n2. 工作從七點開始。\n3. 電影從七點開始。",
+      "gloss": "1. 麻煩從七點開始。\n2. 工作從七點開始。\n3. 電影從七點開始。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩從七點開始。\n2. 工作從七點開始。\n3. 電影從七點開始。"
 }

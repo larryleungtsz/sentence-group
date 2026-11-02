@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-2名様で.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩兩位。\n2. 兩位可以嗎？\n3. 這邊，兩位。",
+      "gloss": "1. 麻煩兩位。\n2. 兩位可以嗎？\n3. 這邊，兩位。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩兩位。\n2. 兩位可以嗎？\n3. 這邊，兩位。"
 }

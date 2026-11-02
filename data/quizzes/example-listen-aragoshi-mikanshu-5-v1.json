@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ijo-de-yoroshii-desu-ka.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 點單以上可以嗎。\n2. 結帳以上可以嗎。\n3. 菜單以上可以嗎。",
+      "gloss": "1. 點單以上可以嗎。\n2. 結帳以上可以嗎。\n3. 菜單以上可以嗎。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 點單以上可以嗎。\n2. 結帳以上可以嗎。\n3. 菜單以上可以嗎。"
 }

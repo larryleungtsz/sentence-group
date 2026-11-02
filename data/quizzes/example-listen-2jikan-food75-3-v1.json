@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-nanajugo-fun.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 七十五分鐘就結束。\n2. 等候時間是七十五分鐘。\n3. 還有七十五分鐘。",
+      "gloss": "1. 七十五分鐘就結束。\n2. 等候時間是七十五分鐘。\n3. 還有七十五分鐘。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 七十五分鐘就結束。\n2. 等候時間是七十五分鐘。\n3. 還有七十五分鐘。"
 }

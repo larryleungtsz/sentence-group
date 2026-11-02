@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tanpin-no.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 單點的飲料也可以點。\n2. 單點的比較快。\n3. 請給我單點的炸薯條。",
+      "gloss": "1. 單點的飲料也可以點。\n2. 單點的比較快。\n3. 請給我單點的炸薯條。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 單點的飲料也可以點。\n2. 單點的比較快。\n3. 請給我單點的炸薯條。"
 }

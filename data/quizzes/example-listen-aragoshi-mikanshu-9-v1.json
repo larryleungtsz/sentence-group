@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-sage-shimasu-ne.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 幫您收走盤子。\n2. 幫您收走空杯。\n3. 幫您收拾桌子。",
+      "gloss": "1. 幫您收走盤子。\n2. 幫您收走空杯。\n3. 幫您收拾桌子。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 幫您收走盤子。\n2. 幫您收走空杯。\n3. 幫您收拾桌子。"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-meccha.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 超好吃。\n2. 超熱。\n3. 超累。",
+      "gloss": "1. 超好吃。\n2. 超熱。\n3. 超累。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 超好吃。\n2. 超熱。\n3. 超累。"
 }

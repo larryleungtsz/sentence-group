@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-suki-janai.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 不喜歡辣的東西。\n2. 他不喜歡電影。\n3. 我不喜歡早上。",
+      "gloss": "1. 不喜歡辣的東西。\n2. 他不喜歡電影。\n3. 我不喜歡早上。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 不喜歡辣的東西。\n2. 他不喜歡電影。\n3. 我不喜歡早上。"
 }

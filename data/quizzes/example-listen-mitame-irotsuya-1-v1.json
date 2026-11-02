@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-mitame-no.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 外表的印象很好。\n2. 外表的顏色很漂亮。\n3. 喜歡外表的感覺。",
+      "gloss": "1. 外表的印象很好。\n2. 外表的顏色很漂亮。\n3. 喜歡外表的感覺。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 外表的印象很好。\n2. 外表的顏色很漂亮。\n3. 喜歡外表的感覺。"
 }

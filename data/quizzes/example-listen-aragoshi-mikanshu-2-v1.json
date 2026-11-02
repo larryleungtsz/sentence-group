@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-soda-wari.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩用蘇打兌。\n2. 這裡蘇打兌很受歡迎。\n3. 燒酎改成蘇打兌。",
+      "gloss": "1. 麻煩用蘇打兌。\n2. 這裡蘇打兌很受歡迎。\n3. 燒酎改成蘇打兌。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩用蘇打兌。\n2. 這裡蘇打兌很受歡迎。\n3. 燒酎改成蘇打兌。"
 }

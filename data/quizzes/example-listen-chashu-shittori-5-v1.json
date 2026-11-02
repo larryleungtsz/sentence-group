@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-noukou.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 湯很濃厚。\n2. 喜歡濃厚的芝士。\n3. 醬汁味道很濃厚。",
+      "gloss": "1. 湯很濃厚。\n2. 喜歡濃厚的芝士。\n3. 醬汁味道很濃厚。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 湯很濃厚。\n2. 喜歡濃厚的芝士。\n3. 醬汁味道很濃厚。"
 }

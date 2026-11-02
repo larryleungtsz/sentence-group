@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-denpyou-to-narimasu-node.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 這邊是帳單所以請拿走。\n2. 是帳單所以麻煩結帳。\n3. 是帳單所以請確認。",
+      "gloss": "1. 這邊是帳單所以請拿走。\n2. 是帳單所以麻煩結帳。\n3. 是帳單所以請確認。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 這邊是帳單所以請拿走。\n2. 是帳單所以麻煩結帳。\n3. 是帳單所以請確認。"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ikaga-saremasu-ka.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 飲料要怎樣呢。\n2. 結帳要怎樣呢。\n3. 這個，要怎樣呢。",
+      "gloss": "1. 飲料要怎樣呢。\n2. 結帳要怎樣呢。\n3. 這個，要怎樣呢。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 飲料要怎樣呢。\n2. 結帳要怎樣呢。\n3. 這個，要怎樣呢。"
 }
