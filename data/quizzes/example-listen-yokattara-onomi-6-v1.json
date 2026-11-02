@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-futatsu.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩來兩份。\n2. 這個，請給我兩份。\n3. 請給我兩杯生啤。",
+      "gloss": "1. 麻煩來兩份。\n2. 這個，請給我兩份。\n3. 請給我兩杯生啤。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩來兩份。\n2. 這個，請給我兩份。\n3. 請給我兩杯生啤。"
 }

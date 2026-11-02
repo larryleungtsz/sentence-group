@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-jaa.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 那麼，就這樣麻煩您。\n2. 那麼，請給我生啤。\n3. 那麼，再見再來。",
+      "gloss": "1. 那麼，就這樣麻煩您。\n2. 那麼，請給我生啤。\n3. 那麼，再見再來。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 那麼，就這樣麻煩您。\n2. 那麼，請給我生啤。\n3. 那麼，再見再來。"
 }

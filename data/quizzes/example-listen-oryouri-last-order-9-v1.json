@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-reji-no-hou-made.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 請往收銀台那邊前進。\n2. 結帳請到收銀台那邊。\n3. 拿著帳單到收銀台那邊。",
+      "gloss": "1. 請往收銀台那邊前進。\n2. 結帳請到收銀台那邊。\n3. 拿著帳單到收銀台那邊。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 請往收銀台那邊前進。\n2. 結帳請到收銀台那邊。\n3. 拿著帳單到收銀台那邊。"
 }

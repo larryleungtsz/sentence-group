@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-kakunin.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 我確認您的點餐。\n2. 請確認地址。\n3. 預約已確認了。",
+      "gloss": "1. 我確認您的點餐。\n2. 請確認地址。\n3. 預約已確認了。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 我確認您的點餐。\n2. 請確認地址。\n3. 預約已確認了。"
 }

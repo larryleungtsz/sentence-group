@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-toriaezu-ijo-de.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩先這樣就好。\n2. 今天先這樣就好。\n3. 飲料先這樣就好沒問題。",
+      "gloss": "1. 麻煩先這樣就好。\n2. 今天先這樣就好。\n3. 飲料先這樣就好沒問題。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩先這樣就好。\n2. 今天先這樣就好。\n3. 飲料先這樣就好沒問題。"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ありますので.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 有位子所以請用。\n2. 有時間所以我會等。\n3. 有籃子所以請用。",
+      "gloss": "1. 有位子所以請用。\n2. 有時間所以我會等。\n3. 有籃子所以請用。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 有位子所以請用。\n2. 有時間所以我會等。\n3. 有籃子所以請用。"
 }

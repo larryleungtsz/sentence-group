@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-aragoshi-mikan-shu-no.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩給我粗濾蜜柑酒的蘇打兌。\n2. 我喜歡粗濾蜜柑酒的雞尾酒。\n3. 粗濾蜜柑酒的酒偏甜。",
+      "gloss": "1. 麻煩給我粗濾蜜柑酒的蘇打兌。\n2. 我喜歡粗濾蜜柑酒的雞尾酒。\n3. 粗濾蜜柑酒的酒偏甜。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩給我粗濾蜜柑酒的蘇打兌。\n2. 我喜歡粗濾蜜柑酒的雞尾酒。\n3. 粗濾蜜柑酒的酒偏甜。"
 }

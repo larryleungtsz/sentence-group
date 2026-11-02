@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-pepushi-zero-wa.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 有百事零嗎。\n2. 百事零不甜呢。\n3. 百事零在這邊。",
+      "gloss": "1. 有百事零嗎。\n2. 百事零不甜呢。\n3. 百事零在這邊。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 有百事零嗎。\n2. 百事零不甜呢。\n3. 百事零在這邊。"
 }

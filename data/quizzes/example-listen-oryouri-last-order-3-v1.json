@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-jikan.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 時間到了。\n2. 時間可以嗎。\n3. 耽誤您時間了。",
+      "gloss": "1. 時間到了。\n2. 時間可以嗎。\n3. 耽誤您時間了。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 時間到了。\n2. 時間可以嗎。\n3. 耽誤您時間了。"
 }

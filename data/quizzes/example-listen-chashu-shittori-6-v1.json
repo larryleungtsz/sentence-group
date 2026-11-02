@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-chotto.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 請稍等一下。\n2. 有點冷。\n3. 有點貴。",
+      "gloss": "1. 請稍等一下。\n2. 有點冷。\n3. 有點貴。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 請稍等一下。\n2. 有點冷。\n3. 有點貴。"
 }

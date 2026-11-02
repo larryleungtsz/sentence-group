@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tsuika-no.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 有追加的料理嗎。\n2. 麻煩給我追加的飲料。\n3. 追加的費用不用。",
+      "gloss": "1. 有追加的料理嗎。\n2. 麻煩給我追加的飲料。\n3. 追加的費用不用。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 有追加的料理嗎。\n2. 麻煩給我追加的飲料。\n3. 追加的費用不用。"
 }

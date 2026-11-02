@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-monotarinai-kamo.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 這個分量可能不夠滿足。\n2. 味道淡的話可能不夠滿足。\n3. 一人份可能不夠滿足。",
+      "gloss": "1. 這個分量可能不夠滿足。\n2. 味道淡的話可能不夠滿足。\n3. 一人份可能不夠滿足。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 這個分量可能不夠滿足。\n2. 味道淡的話可能不夠滿足。\n3. 一人份可能不夠滿足。"
 }

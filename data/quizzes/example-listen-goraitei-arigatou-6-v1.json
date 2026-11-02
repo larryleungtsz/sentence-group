@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-カゴ.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 請放進籃子。\n2. 請使用籃子。\n3. 籃子是空的。",
+      "gloss": "1. 請放進籃子。\n2. 請使用籃子。\n3. 籃子是空的。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 請放進籃子。\n2. 請使用籃子。\n3. 籃子是空的。"
 }

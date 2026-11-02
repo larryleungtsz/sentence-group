@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-okawari-de.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 啤酒再來一杯。\n2. 麻煩一樣的再來一杯。\n3. 茶再來一杯就好。",
+      "gloss": "1. 啤酒再來一杯。\n2. 麻煩一樣的再來一杯。\n3. 茶再來一杯就好。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 啤酒再來一杯。\n2. 麻煩一樣的再來一杯。\n3. 茶再來一杯就好。"
 }

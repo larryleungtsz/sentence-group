@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-ni-jikan-sei-de.mp3?v=20261025sei",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 麻煩用兩小時制。\n2. 這裡是兩小時制。\n3. 座位用兩小時制輪換。",
+      "gloss": "1. 麻煩用兩小時制。\n2. 這裡是兩小時制。\n3. 座位用兩小時制輪換。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 麻煩用兩小時制。\n2. 這裡是兩小時制。\n3. 座位用兩小時制輪換。"
 }

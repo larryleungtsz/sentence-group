@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-なんですけど.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 是預約呢。\n2. 是稍微早了一點呢。\n3. 是第一次呢。",
+      "gloss": "1. 是預約呢。\n2. 是稍微早了一點呢。\n3. 是第一次呢。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 是預約呢。\n2. 是稍微早了一點呢。\n3. 是第一次呢。"
 }

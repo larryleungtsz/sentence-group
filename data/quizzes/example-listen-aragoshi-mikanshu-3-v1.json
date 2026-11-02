@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-boku-wa.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 我呢點啤酒。\n2. 我呢在這裡等。\n3. 我呢再來一杯。",
+      "gloss": "1. 我呢點啤酒。\n2. 我呢在這裡等。\n3. 我呢再來一杯。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 我呢點啤酒。\n2. 我呢在這裡等。\n3. 我呢再來一杯。"
 }

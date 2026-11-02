@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-o-nomimono-no-hou.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 飲料這邊決定好了嗎。\n2. 先從飲料這邊開始麻煩您。\n3. 飲料這邊要生啤。",
+      "gloss": "1. 飲料這邊決定好了嗎。\n2. 先從飲料這邊開始麻煩您。\n3. 飲料這邊要生啤。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 飲料這邊決定好了嗎。\n2. 先從飲料這邊開始麻煩您。\n3. 飲料這邊要生啤。"
 }

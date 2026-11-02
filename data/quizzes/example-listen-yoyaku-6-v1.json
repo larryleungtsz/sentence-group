@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-よろしかったですか.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 這邊可以嗎？\n2. 水可以嗎？\n3. 這個座位可以嗎？",
+      "gloss": "1. 這邊可以嗎？\n2. 水可以嗎？\n3. 這個座位可以嗎？"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 這邊可以嗎？\n2. 水可以嗎？\n3. 這個座位可以嗎？"
 }

@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-suki-dakedo.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 甜的東西是喜歡的，但不想變胖。\n2. 電影是喜歡的，但今天不看。\n3. 他是喜歡的，但現在很忙。",
+      "gloss": "1. 甜的東西是喜歡的，但不想變胖。\n2. 電影是喜歡的，但今天不看。\n3. 他是喜歡的，但現在很忙。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 甜的東西是喜歡的，但不想變胖。\n2. 電影是喜歡的，但今天不看。\n3. 他是喜歡的，但現在很忙。"
 }

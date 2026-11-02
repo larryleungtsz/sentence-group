@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-kogeme-mo.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 焦邊也有，很香。\n2. 焦邊也烤得很漂亮。\n3. 也有焦邊，很好吃。",
+      "gloss": "1. 焦邊也有，很香。\n2. 焦邊也烤得很漂亮。\n3. 也有焦邊，很好吃。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 焦邊也有，很香。\n2. 焦邊也烤得很漂亮。\n3. 也有焦邊，很好吃。"
 }

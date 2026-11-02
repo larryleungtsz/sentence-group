@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-お席の方.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 請往座位這邊。\n2. 請往座位這邊走。\n3. 我帶您去座位這邊。",
+      "gloss": "1. 請往座位這邊。\n2. 請往座位這邊走。\n3. 我帶您去座位這邊。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 請往座位這邊。\n2. 請往座位這邊走。\n3. 我帶您去座位這邊。"
 }

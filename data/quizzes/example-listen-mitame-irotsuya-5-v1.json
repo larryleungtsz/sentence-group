@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-tabenakute-mo.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 即使不吃也知道。\n2. 即使不吃香味也好。\n3. 即使不吃也滿足。",
+      "gloss": "1. 即使不吃也知道。\n2. 即使不吃香味也好。\n3. 即使不吃也滿足。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 即使不吃也知道。\n2. 即使不吃香味也好。\n3. 即使不吃也滿足。"
 }

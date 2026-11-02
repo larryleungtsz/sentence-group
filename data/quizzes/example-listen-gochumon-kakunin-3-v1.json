@@ -13,11 +13,14 @@
       "type": "audio_listen",
       "instruction": "請聆聽例句。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/m7-sasete-itadakimasu.mp3",
-      "self_check": true
+      "self_check": true,
+      "l1": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。",
+      "gloss": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。"
     }
   ],
   "feedback": {
     "on_tick": "pass",
     "on_cross": "retry"
-  }
+  },
+  "example_l1": "1. 請讓我為您引導。\n2. 請讓我確認。\n3. 請讓我說明。"
 }
