@@ -46,7 +46,7 @@
     });
   }
 
-  function renderDetail(id) {
+  function renderDetail(id, opts) {
     const s = Timing.getSession(id);
     if (!s) {
       detailEl.hidden = true;
@@ -113,15 +113,28 @@
       html += '</ol>';
     }
     detailEl.innerHTML = html;
-    detailEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (!opts || opts.scroll !== false) {
+      detailEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 
   renderList();
   if (focusId) renderDetail(focusId);
 
+  window.addEventListener('sentence-group-sync', () => {
+    renderList();
+    if (focusId) renderDetail(focusId, { scroll: false });
+  });
+
   if (clearBtn) {
     clearBtn.addEventListener('click', () => {
-      if (!confirm('清除全部練習計時記錄？（唔影響 SRS 進度）')) return;
+      if (
+        !confirm(
+          '清除本機練習計時？（唔影響 SRS。雲端如果已經有備份，下次同步會合併返嚟，唔會用空白覆蓋雲端。）'
+        )
+      ) {
+        return;
+      }
       Timing.clearAll();
       location.href = 'stats.html';
     });

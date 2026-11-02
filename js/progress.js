@@ -8,6 +8,8 @@
  * }
  * Admission / join order is decided in Schedule (order + dense), not here.
  * stageIndex 0 = admitted into T01 once Schedule admits the chunk.
+ * updatedAt is the write time used by cloud merge (last-write-wins only when
+ * both sides have it). Older backups without updatedAt still load.
  */
 (function (global) {
   const KEY = 'website-manager-progress-v2';
@@ -30,8 +32,17 @@
     }
   }
 
+  function notifyLocal(kind) {
+    try {
+      if (global.Sync && typeof global.Sync.onLocalWrite === 'function') {
+        global.Sync.onLocalWrite(kind);
+      }
+    } catch (e) {}
+  }
+
   function saveAll(data) {
     localStorage.setItem(KEY, JSON.stringify(data));
+    notifyLocal('progress');
   }
 
   function chunkKey(groupSlug, chunkId) {
@@ -71,6 +82,7 @@
     for (const s of stagesToMark || []) set.add(s);
     cur.completedStages = Array.from(set);
     cur.lastReviewedAt = nowIso || new Date().toISOString();
+    cur.updatedAt = cur.lastReviewedAt;
     all.quizzes[quizId] = cur;
     saveAll(all);
     return cur;
@@ -87,6 +99,7 @@
     const cur = all.chunks[k] || Schedule.defaultChunkState();
     cur.lastCompletedAt = nowIso || new Date().toISOString();
     cur.stageIndex = (cur.stageIndex | 0) + 1;
+    cur.updatedAt = cur.lastCompletedAt;
     all.chunks[k] = cur;
     saveAll(all);
     return cur;
@@ -98,6 +111,7 @@
     const cur = all.sentences[groupSlug] || Schedule.defaultSentenceState();
     cur.lastCompletedAt = nowIso || new Date().toISOString();
     cur.stageIndex = (cur.stageIndex | 0) + 1;
+    cur.updatedAt = cur.lastCompletedAt;
     all.sentences[groupSlug] = cur;
     saveAll(all);
     return cur;

@@ -9,13 +9,18 @@ Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `
 ```
 index.html          首頁：列出 Sentence Groups
 group.html?slug=…   練習頁（可用 ?now=ISO 測試）
-stats.html          練習計時統計（本機歷史）
+stats.html          練習計時統計、匯出／匯入、雲端同步
+export.html         手機專用匯出／匯入（同 stats 一樣嘅兩個 key）
 css/app.css
 js/schedule.js      完成後間隔 / 到期判斷 / chunk 加入閘
 js/progress.js      localStorage v2 進度
 js/timing.js        localStorage 練習計時（唔寫 Notion）
+js/sync-config.js   Supabase URL、anon key、allowedEmails（留空＝只係本機）
+js/sync-merge.js    合併規則（node 單測，唔使網絡）
+js/sync.js          Google 登入、同步、匯出／匯入
 js/quiz-runner.js   渲染與評分
 js/app.js / group.js / stats.js
+supabase/schema.sql 雲端表 + RLS
 data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
 data/groups.json    Sentence Group + chunks（陣列次序＝加入次序）
 data/manifest.json  可玩 quiz 清單
@@ -135,3 +140,104 @@ python3 -m http.server 8080
 ```
 
 練習頁可用 `?now=2026-10-20T20:00:00+08:00` 固定「而家」方便測試。
+
+合併邏輯單測（唔使網絡、唔使 Supabase）：
+
+```bash
+node js/sync-merge.test.js
+```
+
+## 雲端同步（Supabase + Google）
+
+練習計時（`website-manager-timing-v1`）同 SRS（`website-manager-progress-v2`）可以跨裝置同步。未填 `js/sync-config.js` 時，網站同以前一樣，**只係本機**；統計頁會寫「雲端同步未設定」。匯出／匯入 JSON 喺未設定時都用得。
+
+資料主人 id 固定係 `larry`，唔係 `auth.uid()`。登入嘅 Google 帳戶經 `user_mapping` 對應去 `larry`。網頁只放 Supabase URL 同 **anon public key**。唔好將 service role key 或者 Google client secret 放進 git。
+
+### 手機備份就係 seed（iPhone Chrome）
+
+開雲端之前，先備份手機而家嘅兩個 key。空白備份唔會覆蓋已有記錄。iPhone Chrome **唔會跑** `javascript:` 書籤，所以唔好靠書籤。
+
+合併（`js/sync-merge.js`）：
+
+- **計時**：按 session id 合併；同一個 session 入面按 quiz id 去重（留用時較長嗰筆）。Chunk 用時由合併後嘅 quiz 再計，唔會加兩次。空嘅 session 清單唔會清走另一邊。
+- **SRS**：按 quiz id、chunk key（`group:chunkId`）、sentence slug 逐筆合併。Quiz 嘅 `completedStages` 取聯集。Chunk／sentence：兩邊都有 `updatedAt` 先用較新嗰筆（last-write-wins，可以退 stage）；否則保留較高 `stageIndex`（手機舊備份多數冇 `updatedAt`，唔會被較低嘅記錄清走）。`stageIndex` 0 而且冇 `lastCompletedAt` 當空，唔會覆蓋有進度嘅記錄。刪走一個 key **唔會**當墓碑，另一邊有就會留低。
+- **第一次同步**（計時同 SRS 分開計）：雲端空、本機有 → 上傳本機；本機空、雲端有 → 拉落本機；兩邊都有 → 合併再寫兩邊。永遠唔會用空 payload 覆蓋有資料嘅一邊。
+
+統計頁「匯出 JSON」下載**一份**檔，兩個 key 都喺入面（值可以係物件；匯入亦接受 `localStorage.getItem` 嗰種字串）：
+
+```json
+{
+  "website-manager-timing-v1": { "sessions": [] },
+  "website-manager-progress-v2": { "quizzes": {}, "chunks": {}, "sentences": {} }
+}
+```
+
+iPhone Chrome／Safari 撳 **匯出 JSON** 之後：
+
+1. 電腦瀏覽器會試下載。
+2. 手機有分享功能就開分享表。
+3. 分享唔得就試複製。
+4. 以上都唔得，全螢幕文字框留低：長按 → 全選 → 複製。
+
+匯入可以貼上，亦可以揀檔，然後撳「合併匯入」。空白唔會覆蓋。
+
+直接開 [`export.html`](export.html) 係同一套掣，統計頁難搵時用呢條：
+
+`https://larryleungtsz.github.io/sentence-group/export.html`
+
+#### Merge 之後（iPhone Chrome 主路徑）
+
+用手機 Chrome 打開統計頁或者 `export.html` → **匯出 JSON**。唔使書籤，唔使電腦。另一部機用 **合併匯入**。如果部手機本來就有 localStorage，登入後雲端係空就會直接當 seed 上傳；備份仍然要留低。
+
+#### Merge 之前（暫時）
+
+而家嘅 GitHub Pages **未有**呢個掣。iPhone Chrome 撳 `javascript:` 書籤冇反應，唔好靠書籤。手機自己又冇 DevTools。暫時只可以喺已經接上頁面 console 嘅時候（例如用電腦檢查部手機）貼一次：
+
+```js
+copy(JSON.stringify({
+  "website-manager-timing-v1": localStorage.getItem("website-manager-timing-v1"),
+  "website-manager-progress-v2": localStorage.getItem("website-manager-progress-v2")
+}))
+```
+
+Pages 更新之後唔使再跑 console，改開 `export.html` 撳匯出。
+
+### 一次性設定（Larry 先做，先至可以登入）
+
+1. 開一個 Supabase project。
+2. SQL Editor 跑 `supabase/schema.sql`。
+3. 插入允許嘅 Gmail（要小寫），可以多過一個，全部對應主人 `larry`：
+
+   ```sql
+   insert into public.sync_allowlist (email) values ('you@gmail.com');
+   ```
+
+4. Google Cloud Console → APIs & Services → Credentials → Create OAuth client ID → **Web application**。
+   - Authorized JavaScript origins：`https://larryleungtsz.github.io`、`http://localhost:8080`
+   - Authorized redirect URI：**只有** Supabase callback  
+     `https://YOUR_PROJECT.supabase.co/auth/v1/callback`  
+     Client secret 只貼喺 Supabase，唔好 commit。
+5. Supabase → Authentication → Providers → Google：貼 Client ID + Client secret。  
+   Authentication → URL configuration：
+   - Site URL：`https://larryleungtsz.github.io/sentence-group/`
+   - Redirect URLs 加上：  
+     `https://larryleungtsz.github.io/sentence-group/`  
+     `https://larryleungtsz.github.io/sentence-group/index.html`  
+     `https://larryleungtsz.github.io/sentence-group/stats.html`  
+     `https://larryleungtsz.github.io/sentence-group/group.html`  
+     `https://larryleungtsz.github.io/sentence-group/export.html`  
+     `http://localhost:8080/`  
+     `http://localhost:8080/index.html`  
+     `http://localhost:8080/stats.html`  
+     `http://localhost:8080/group.html`  
+     `http://localhost:8080/export.html`
+6. 編輯 `js/sync-config.js`（範本係 `js/sync-config.example.js`）：
+   - `supabaseUrl`：`https://YOUR_PROJECT.supabase.co`
+   - `supabaseAnonKey`：Project Settings → API → **anon public**（程式會拒絕 `service_role`）
+   - `allowedEmails`：同第 3 步一樣嘅 Gmail。呢個陣列只係介面檢查；真正攔截係 SQL allowlist + RLS。
+   - `ownerId` 維持 `larry`。
+7. Merge 呢個 PR（唔好直接推 main）。Pages 更新之後，用手機開統計頁 → Google 登入 → 而家同步。
+
+離線時本機 localStorage 仍然係來源。失敗會記低 dirty flag（`website-manager-sync-queue-v1`），有網、返到個分頁、或者約 30 秒會再試。登出唔會刪本機記錄。
+
+換後端只需要改 `js/sync.js` 入面寫 Supabase 嗰截；合併規則留喺 `js/sync-merge.js`。

@@ -1,4 +1,7 @@
 (async function () {
+  if (window.Sync && typeof Sync.ready === 'function') {
+    await Sync.ready();
+  }
   const list = document.getElementById('group-list');
   const [groupsRes, manifestRes, scheduleRes] = await Promise.all([
     fetch('data/groups.json'),
