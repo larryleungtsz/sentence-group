@@ -10,6 +10,7 @@ Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `
 index.html          首頁：列出 Sentence Groups
 group.html?slug=…   練習頁（可用 ?now=ISO 測試）
 stats.html          練習計時統計、匯出／匯入、雲端同步
+export.html         手機專用匯出／匯入（同 stats 一樣嘅兩個 key）
 css/app.css
 js/schedule.js      完成後間隔 / 到期判斷 / chunk 加入閘
 js/progress.js      localStorage v2 進度
@@ -152,9 +153,9 @@ node js/sync-merge.test.js
 
 資料主人 id 固定係 `larry`，唔係 `auth.uid()`。登入嘅 Google 帳戶經 `user_mapping` 對應去 `larry`。網頁只放 Supabase URL 同 **anon public key**。唔好將 service role key 或者 Google client secret 放進 git。
 
-### 手機備份就係 seed（iPhone Safari）
+### 手機備份就係 seed（iPhone Chrome）
 
-開雲端之前，先備份手機而家嘅兩個 key。空白備份唔會覆蓋已有記錄。
+開雲端之前，先備份手機而家嘅兩個 key。空白備份唔會覆蓋已有記錄。iPhone Chrome **唔會跑** `javascript:` 書籤，所以唔好靠書籤。
 
 合併（`js/sync-merge.js`）：
 
@@ -171,26 +172,35 @@ node js/sync-merge.test.js
 }
 ```
 
-iPhone Safari 經常擋自動下載。撳匯出之後會出文字框：撳「複製」或「分享」，或者長按文字框全選再複製。匯入可以貼上，亦可以揀檔，然後撳「合併匯入」。
+iPhone Chrome／Safari 撳 **匯出 JSON** 之後：
 
-#### 而家（Export 掣未上到 GitHub Pages）— 書籤小工具
+1. 電腦瀏覽器會試下載。
+2. 手機有分享功能就開分享表。
+3. 分享唔得就試複製。
+4. 以上都唔得，全螢幕文字框留低：長按 → 全選 → 複製。
 
-喺**而家練習緊嘅網站**（同一個 origin，先至讀到部手機嘅 localStorage）加一個書籤：
+匯入可以貼上，亦可以揀檔，然後撳「合併匯入」。空白唔會覆蓋。
 
-1. Safari 打開練習站任何一頁。
-2. 分享 → 加入書籤。
-3. 書籤 → 編輯 → 撳開嗰個書籤 → 刪走網址 → 貼上下面整行 → 完成。
-4. 再打開練習站，撳個書籤。
-5. 撳「複製」，或者長按文字全選再複製。貼去備忘錄。
-6. 呢個 PR Merge 同 Pages 更新之後，改用統計頁「匯出 JSON」。匯入用同一份 JSON。
+直接開 [`export.html`](export.html) 係同一套掣，統計頁難搵時用呢條：
 
-```text
-javascript:(function(){var t=JSON.stringify({"website-manager-timing-v1":localStorage.getItem("website-manager-timing-v1"),"website-manager-progress-v2":localStorage.getItem("website-manager-progress-v2")});var d=document,o=d.getElementById("sg-backup-export");if(o)o.remove();o=d.createElement("div");o.id="sg-backup-export";o.style.cssText="position:fixed;inset:0;z-index:99999;background:#0f1419;color:#e7ecf3;padding:12px;display:flex;flex-direction:column;gap:8px;font:16px -apple-system,system-ui";var p=d.createElement("div");p.textContent="長按文字全選再複製。呢份係 timing + SRS 備份。";var ta=d.createElement("textarea");ta.style.cssText="flex:1;width:100%;font:12px ui-monospace,monospace;color:#111";ta.value=t;var b=d.createElement("button");b.textContent="複製";b.style.cssText="font:16px system-ui;padding:12px";b.onclick=function(){ta.focus();ta.select();try{ta.setSelectionRange(0,t.length)}catch(e){}var done=function(){b.textContent="已複製"};try{if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done,function(){try{if(d.execCommand("copy"))done()}catch(e){}})}else if(d.execCommand("copy"))done()}catch(e){}};var c=d.createElement("button");c.textContent="關閉";c.style.cssText="font:16px system-ui;padding:12px";c.onclick=function(){o.remove()};o.appendChild(p);o.appendChild(b);o.appendChild(ta);o.appendChild(c);d.body.appendChild(o);ta.focus();try{ta.setSelectionRange(0,t.length)}catch(e){}})();
+`https://larryleungtsz.github.io/sentence-group/export.html`
+
+#### Merge 之後（iPhone Chrome 主路徑）
+
+用手機 Chrome 打開統計頁或者 `export.html` → **匯出 JSON**。唔使書籤，唔使電腦。另一部機用 **合併匯入**。如果部手機本來就有 localStorage，登入後雲端係空就會直接當 seed 上傳；備份仍然要留低。
+
+#### Merge 之前（暫時）
+
+而家嘅 GitHub Pages **未有**呢個掣。iPhone Chrome 撳 `javascript:` 書籤冇反應，唔好靠書籤。手機自己又冇 DevTools。暫時只可以喺已經接上頁面 console 嘅時候（例如用電腦檢查部手機）貼一次：
+
+```js
+copy(JSON.stringify({
+  "website-manager-timing-v1": localStorage.getItem("website-manager-timing-v1"),
+  "website-manager-progress-v2": localStorage.getItem("website-manager-progress-v2")
+}))
 ```
 
-#### Merge 之後
-
-統計頁 → **匯出 JSON**（同上嘅形狀）。另一部機用 **合併匯入**。如果部手機本來就有 localStorage，登入後雲端係空就會直接當 seed 上傳，唔使再貼一次；備份仍然要留低。
+Pages 更新之後唔使再跑 console，改開 `export.html` 撳匯出。
 
 ### 一次性設定（Larry 先做，先至可以登入）
 
@@ -215,10 +225,12 @@ javascript:(function(){var t=JSON.stringify({"website-manager-timing-v1":localSt
      `https://larryleungtsz.github.io/sentence-group/index.html`  
      `https://larryleungtsz.github.io/sentence-group/stats.html`  
      `https://larryleungtsz.github.io/sentence-group/group.html`  
+     `https://larryleungtsz.github.io/sentence-group/export.html`  
      `http://localhost:8080/`  
      `http://localhost:8080/index.html`  
      `http://localhost:8080/stats.html`  
-     `http://localhost:8080/group.html`
+     `http://localhost:8080/group.html`  
+     `http://localhost:8080/export.html`
 6. 編輯 `js/sync-config.js`（範本係 `js/sync-config.example.js`）：
    - `supabaseUrl`：`https://YOUR_PROJECT.supabase.co`
    - `supabaseAnonKey`：Project Settings → API → **anon public**（程式會拒絕 `service_role`）

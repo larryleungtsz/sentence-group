@@ -372,6 +372,25 @@ test('double-encoded string values unwrap', function () {
   assert.strictEqual(parsed.timing.sessions[0].quizzes[0].quizId, 'q');
 });
 
+test('export fallbacks: desktop downloads, iPhone shares then copy, textarea always last', function () {
+  assert.deepStrictEqual(
+    SM.planExportFallbacks({ ios: false, canDownload: true, canShare: true, canCopy: true }),
+    ['download', 'textarea']
+  );
+  assert.deepStrictEqual(
+    SM.planExportFallbacks({ ios: true, canShare: true, canCopy: true }),
+    ['share', 'copy', 'textarea']
+  );
+  assert.deepStrictEqual(
+    SM.planExportFallbacks({ ios: true, canShare: false, canCopy: true }),
+    ['copy', 'textarea']
+  );
+  assert.deepStrictEqual(
+    SM.planExportFallbacks({ ios: true, canShare: false, canCopy: false }),
+    ['textarea']
+  );
+});
+
 if (failed) {
   console.error(failed + ' failed');
   process.exit(1);

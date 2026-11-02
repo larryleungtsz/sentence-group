@@ -510,6 +510,30 @@
     };
   }
 
+  /**
+   * How the 匯出 JSON button hands the file over.
+   * iPhone Chrome ignores javascript: bookmarklets and often drops <a download>.
+   *   desktop: try download, always leave the full-screen textarea up
+   *   phone with Web Share: share sheet, then copy if that fails
+   *   phone with clipboard only: copy
+   *   always end on the textarea so a long-press Select All still works
+   * env: { ios, canShare, canCopy, canDownload }
+   */
+  function planExportFallbacks(env) {
+    env = env || {};
+    var steps = [];
+    if (!env.ios && env.canDownload !== false) {
+      steps.push('download');
+    } else if (env.canShare) {
+      steps.push('share');
+      if (env.canCopy) steps.push('copy');
+    } else if (env.canCopy) {
+      steps.push('copy');
+    }
+    steps.push('textarea');
+    return steps;
+  }
+
   return {
     TIMING_KEY: TIMING_KEY,
     PROGRESS_KEY: PROGRESS_KEY,
@@ -530,5 +554,6 @@
     buildExportObject: buildExportObject,
     countProgress: countProgress,
     recomputeChunks: recomputeChunks,
+    planExportFallbacks: planExportFallbacks,
   };
 });

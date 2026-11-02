@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>手機備份</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <style>
+    .backup-lead { font-size: 1.02rem; }
+    .backup-actions { display: flex; flex-direction: column; gap: 0.55rem; margin: 0.8rem 0; }
+    .backup-actions .btn, .backup-import .btn {
+      min-height: 48px;
+      width: 100%;
+      margin: 0;
+      font-size: 1.05rem;
+    }
+    .backup-row { display: flex; gap: 0.5rem; }
+    .backup-row .btn { flex: 1; width: auto; }
+    .backup-text {
+      width: 100%;
+      min-height: 8rem;
+      font-size: 16px;
+      line-height: 1.4;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #0c1016;
+      color: var(--text);
+      padding: 0.6rem;
+    }
+    .backup-msg { margin: 0.4rem 0; }
+    .backup-bad { color: var(--bad); }
+    .backup-file {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+    }
+    .backup-sheet {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 12px;
+      padding-bottom: calc(12px + env(safe-area-inset-bottom));
+    }
+    .backup-sheet[hidden] { display: none !important; }
+    .backup-sheet h2 { margin: 0; font-size: 1.15rem; }
+    .backup-sheet .backup-text { flex: 1; min-height: 0; }
+    .backup-sheet .backup-row .btn { min-height: 44px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="nav-back" href="index.html">← 首頁</a>
+      <h1>手機備份</h1>
+    </header>
+    <p class="backup-lead">iPhone Chrome 同 Safari 都用呢頁。唔使登入，唔使書籤，唔使電腦。</p>
+    <p class="muted">撳「匯出 JSON」會出<strong>一份</strong>備份，入面有 <code>website-manager-timing-v1</code>（計時）同 <code>website-manager-progress-v2</code>（SRS）。下載唔到就撳「分享」或「複製」。再唔得就長按全螢幕文字，揀「全選」，再複製，貼去備忘錄。</p>
+    <p id="backup-status" class="backup-msg">讀緊本機記錄…</p>
+    <div class="backup-actions">
+      <button type="button" class="btn btn-primary" id="backup-export">匯出 JSON</button>
+      <div class="backup-row">
+        <button type="button" class="btn" id="backup-copy">複製</button>
+        <button type="button" class="btn" id="backup-share">分享</button>
+        <button type="button" class="btn btn-ghost" id="backup-download">下載</button>
+      </div>
+    </div>
+    <div class="backup-import">
+      <h2>匯入 JSON（合併）</h2>
+      <p class="muted">貼上備份，或者揀檔，再撳「合併匯入」。空白或者唔齊嘅備份<strong>唔會</strong>清走手機已有嘅計時同 SRS。</p>
+      <label class="btn" for="backup-file">揀備份檔案</label>
+      <input id="backup-file" class="backup-file" type="file" accept="application/json,.json,text/plain,.txt" />
+      <textarea id="backup-import" class="backup-text" spellcheck="false" autocomplete="off" autocapitalize="off" placeholder="貼上備份 JSON…"></textarea>
+      <button type="button" class="btn btn-primary" id="backup-import-btn">合併匯入</button>
+      <p id="backup-import-msg" class="backup-msg"></p>
+    </div>
+  </div>
+  <div id="backup-sheet" class="backup-sheet" hidden>
+    <h2>匯出 JSON</h2>
+    <p id="backup-sheet-msg" class="backup-msg">長按文字，揀全選，再複製。</p>
+    <div class="backup-row">
+      <button type="button" class="btn btn-primary" id="backup-select">全選</button>
+      <button type="button" class="btn" id="backup-sheet-copy">複製</button>
+      <button type="button" class="btn" id="backup-sheet-share">分享</button>
+      <button type="button" class="btn btn-ghost" id="backup-close">關閉</button>
+    </div>
+    <textarea id="backup-sheet-text" class="backup-text" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+  </div>
+  <script src="js/sync-merge.js"></script>
+  <script src="js/export-backup.js"></script>
+  <script>
+    (function () {
+      var copy = document.getElementById('backup-copy');
+      var share = document.getElementById('backup-share');
+      var sheetCopy = document.getElementById('backup-sheet-copy');
+      var sheetShare = document.getElementById('backup-sheet-share');
+      if (sheetCopy && copy) sheetCopy.addEventListener('click', function () { copy.click(); });
+      if (sheetShare && share) sheetShare.addEventListener('click', function () { share.click(); });
+    })();
+  </script>
+</body>
+</html>

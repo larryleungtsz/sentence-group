@@ -256,6 +256,9 @@
   }
 
   function sayExport(text) {
+    if (!document.getElementById('sync-export-msg')) ensureExportSheet();
+    var sheet = document.getElementById('sync-export-sheet');
+    if (sheet) sheet.hidden = false;
     var el = document.getElementById('sync-export-msg');
     if (el) el.textContent = text;
   }
@@ -267,20 +270,94 @@
     el.className = bad ? 'sync-msg sync-status-bad' : 'sync-msg';
   }
 
-  function showExportBox(text) {
+  function exportEnv() {
+    return {
+      ios: isIOS(),
+      canShare: typeof navigator.share === 'function',
+      canCopy: !!(navigator.clipboard && navigator.clipboard.writeText),
+      canDownload: true,
+    };
+  }
+
+  function selectExportText() {
+    var ta = document.getElementById('sync-export-text');
+    if (!ta) return;
+    ta.focus();
+    try {
+      ta.setSelectionRange(0, ta.value.length);
+    } catch (e) {}
+  }
+
+  function ensureExportSheet() {
+    var sheet = document.getElementById('sync-export-sheet');
+    if (sheet) return sheet;
+    sheet = document.createElement('div');
+    sheet.id = 'sync-export-sheet';
+    sheet.className = 'sync-export-sheet';
+    sheet.hidden = true;
+    sheet.innerHTML =
+      '<p class="sync-sheet-title">匯出 JSON</p>' +
+      '<p id="sync-export-msg" class="sync-msg">兩個 key 都喺下面。iPhone Chrome：下載唔到就撳分享或複製；再唔得就長按文字框，揀全選，再複製。</p>' +
+      '<div class="sync-actions">' +
+      '<button type="button" class="btn btn-primary" id="sync-select-all">全選</button>' +
+      '<button type="button" class="btn btn-primary" id="sync-copy">複製</button>' +
+      '<button type="button" class="btn" id="sync-share">分享</button>' +
+      '<button type="button" class="btn btn-ghost" id="sync-download">下載</button>' +
+      '<button type="button" class="btn btn-ghost" id="sync-export-close">關閉</button>' +
+      '</div>' +
+      '<textarea id="sync-export-text" class="sync-text" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>';
+    document.body.appendChild(sheet);
+    document.getElementById('sync-select-all').addEventListener('click', selectExportText);
+    document.getElementById('sync-copy').addEventListener('click', onCopy);
+    document.getElementById('sync-share').addEventListener('click', onShare);
+    document.getElementById('sync-download').addEventListener('click', onDownload);
+    document.getElementById('sync-export-close').addEventListener('click', function () {
+      sheet.hidden = true;
+    });
+    return sheet;
+  }
+
+  function showExportSheet(text) {
     lastExportText = text;
-    var box = document.getElementById('sync-export-box');
+    var sheet = ensureExportSheet();
     var ta = document.getElementById('sync-export-text');
     var shareBtn = document.getElementById('sync-share');
-    if (box) box.hidden = false;
-    if (shareBtn) shareBtn.hidden = !navigator.share;
-    if (ta) {
-      ta.value = text;
-      try {
-        ta.focus();
-        ta.setSelectionRange(0, text.length);
-      } catch (e) {}
+    sheet.hidden = false;
+    if (shareBtn) shareBtn.hidden = typeof navigator.share !== 'function';
+    if (ta) ta.value = text;
+    selectExportText();
+  }
+
+  function copyExportText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text).then(
+        function () {
+          return true;
+        },
+        function () {
+          return false;
+        }
+      );
     }
+    selectExportText();
+    try {
+      return Promise.resolve(document.execCommand('copy'));
+    } catch (e) {
+      return Promise.resolve(false);
+    }
+  }
+
+  function shareExportText(text) {
+    if (typeof navigator.share !== 'function') {
+      return Promise.reject(new Error('no share'));
+    }
+    var filename = backupName();
+    var file = new File([text], filename, { type: 'application/json' });
+    var withFile = navigator.canShare && navigator.canShare({ files: [file] });
+    if (withFile) {
+      return navigator.share({ files: [file], title: filename });
+    }
+    return navigator.share({ title: filename, text: text });
   }
 
   function onExport() {
@@ -291,37 +368,55 @@
       sayExport('匯出失敗：' + (e && e.message ? e.message : String(e)));
       return;
     }
-    showExportBox(text);
-    var copyP =
-      navigator.clipboard && navigator.clipboard.writeText
-        ? navigator.clipboard.writeText(text)
-        : Promise.reject(new Error('no clipboard'));
-    if (isIOS()) {
-      copyP.then(
-        function () {
-          sayExport(
-            '已複製兩個 key。iPhone 下載經常冇反應；可以再撳「分享」。長按文字框可以再選一次。'
-          );
-        },
-        function () {
-          sayExport(
-            '請撳「複製」，或者長按下面文字框全選再複製。iPhone Safari 經常擋自動下載。'
-          );
-        }
-      );
-    } else {
-      try {
-        downloadText(backupName(), text);
-      } catch (e) {}
-      copyP.then(
-        function () {
-          sayExport('已下載，亦已複製。兩個 key 喺同一份 JSON。');
-        },
-        function () {
-          sayExport('已嘗試下載。如果冇檔案，撳「複製」或者長按文字框。');
-        }
+    showExportSheet(text);
+    var plan = SM.planExportFallbacks(exportEnv());
+    var autos = plan.filter(function (step) {
+      return step !== 'textarea';
+    });
+    function finishOnTextarea(prefix) {
+      sayExport(
+        (prefix ? prefix + ' ' : '') +
+          '全螢幕文字已經選好。長按文字框，揀「全選」，再複製。兩個 key 都喺入面。'
       );
     }
+    function runStep(i) {
+      if (i >= autos.length) {
+        finishOnTextarea('');
+        return;
+      }
+      var step = autos[i];
+      if (step === 'download') {
+        try {
+          downloadText(backupName(), text);
+          sayExport('已嘗試下載。如果冇檔案，撳分享或複製，或者長按文字全選。');
+        } catch (e) {
+          runStep(i + 1);
+        }
+        return;
+      }
+      if (step === 'share') {
+        shareExportText(text).then(
+          function () {
+            sayExport('已開分享。文字留喺全螢幕，可以再複製。');
+          },
+          function (err) {
+            if (err && err.name === 'AbortError') {
+              finishOnTextarea('分享已取消。');
+              return;
+            }
+            runStep(i + 1);
+          }
+        );
+        return;
+      }
+      if (step === 'copy') {
+        copyExportText(text).then(function (ok) {
+          if (ok) sayExport('已複製兩個 key。亦可以長按文字框再選一次。');
+          else finishOnTextarea('複製被擋住。');
+        });
+      }
+    }
+    runStep(0);
   }
 
   function onCopy() {
@@ -331,54 +426,29 @@
       sayExport('未有備份。先撳「匯出 JSON」。');
       return;
     }
-    var done = function (ok) {
-      sayExport(ok ? '已複製到剪貼簿。' : '複製被擋住。請長按文字框全選，再揀複製。');
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).then(
-        function () {
-          done(true);
-        },
-        function () {
-          done(false);
-        }
+    copyExportText(text).then(function (ok) {
+      sayExport(
+        ok
+          ? '已複製到剪貼簿。'
+          : '複製被擋住。請長按文字框，揀全選，再複製。'
       );
-      return;
-    }
-    try {
-      if (ta) {
-        ta.focus();
-        ta.select();
-        ta.setSelectionRange(0, text.length);
-      }
-      done(document.execCommand('copy'));
-    } catch (e) {
-      done(false);
-    }
+    });
   }
 
   function onShare() {
     var ta = document.getElementById('sync-export-text');
     var text = ta && ta.value ? ta.value : lastExportText;
-    if (!text || !navigator.share) {
-      sayExport('呢個瀏覽器冇分享功能。請用「複製」。');
+    if (!text || typeof navigator.share !== 'function') {
+      sayExport('呢個瀏覽器冇分享功能。請撳複製，或者長按文字框全選。');
       return;
     }
-    var filename = backupName();
-    var file = new File([text], filename, { type: 'application/json' });
-    var shareFiles =
-      navigator.canShare &&
-      navigator.canShare({ files: [file] });
-    var pending = shareFiles
-      ? navigator.share({ files: [file], title: filename })
-      : navigator.share({ title: filename, text: text });
-    pending.then(
+    shareExportText(text).then(
       function () {
         sayExport('已開分享。');
       },
       function (err) {
         if (err && err.name === 'AbortError') return;
-        sayExport('分享失敗。請撳「複製」或者長按文字框。');
+        sayExport('分享失敗。請撳複製，或者長按文字框全選。');
       }
     );
   }
@@ -880,16 +950,10 @@ function syncOnce() {
     }
     if (!full) return;
     var exportBtn = document.getElementById('sync-export');
-    var copyBtn = document.getElementById('sync-copy');
-    var shareBtn = document.getElementById('sync-share');
-    var downloadBtn = document.getElementById('sync-download');
     var importBtn = document.getElementById('sync-import');
     var fileInput = document.getElementById('sync-file');
     var importArea = document.getElementById('sync-import-text');
     if (exportBtn) exportBtn.addEventListener('click', onExport);
-    if (copyBtn) copyBtn.addEventListener('click', onCopy);
-    if (shareBtn) shareBtn.addEventListener('click', onShare);
-    if (downloadBtn) downloadBtn.addEventListener('click', onDownload);
     if (fileInput) {
       fileInput.addEventListener('change', function () {
         var file = fileInput.files && fileInput.files[0];
@@ -971,20 +1035,12 @@ function syncOnce() {
       '<p id="sync-account" class="muted sync-account"></p>' +
       '<p class="muted sync-lead">一份 JSON 同時有 <code>website-manager-timing-v1</code> 同 <code>website-manager-progress-v2</code>。匯入係合併：計時按 session id + quiz id 去重；SRS 按每題／每 chunk 時間戳。雲端空就上傳本機；本機空就拉雲端；兩邊都有就合併。空白唔會覆蓋。</p>' +
       '<div class="sync-actions">' +
-      '<button type="button" class="btn btn-primary" id="sync-export">匯出 JSON</button>' +
+      '<button type="button" class="btn btn-primary sync-export-main" id="sync-export">匯出 JSON</button>' +
       '<button type="button" class="btn" id="sync-signin">用 Google 登入</button>' +
       '<button type="button" class="btn" id="sync-signout" hidden>登出</button>' +
       '<button type="button" class="btn" id="sync-now" hidden>而家同步</button>' +
       '</div>' +
-      '<div id="sync-export-box" class="sync-export-box" hidden>' +
-      '<p id="sync-export-msg" class="sync-msg">iPhone 如果冇下載，撳複製或者長按文字框全選。</p>' +
-      '<div class="sync-actions">' +
-      '<button type="button" class="btn btn-primary" id="sync-copy">複製 JSON</button>' +
-      '<button type="button" class="btn" id="sync-share" hidden>分享</button>' +
-      '<button type="button" class="btn btn-ghost" id="sync-download">下載</button>' +
-      '</div>' +
-      '<textarea id="sync-export-text" class="sync-text" spellcheck="false" autocomplete="off"></textarea>' +
-      '</div>' +
+      '<p class="muted">iPhone Chrome 撳上面「匯出 JSON」。下載唔到會出分享，再唔得就複製，最後係全螢幕文字（長按全選）。同一頁：<a href="export.html">export.html</a>。唔使用書籤。</p>' +
       '<div class="sync-import">' +
       '<h3>匯入 JSON（合併）</h3>' +
       '<p class="muted">貼上手機備份，或者揀檔。接受字串或已解析嘅兩個 key，亦接受單獨一份 timing／progress。唔會用空白覆蓋本機。</p>' +
@@ -1005,7 +1061,7 @@ function syncOnce() {
       '<button type="button" class="btn" id="sync-signin">用 Google 登入</button>' +
       '<button type="button" class="btn" id="sync-signout" hidden>登出</button>' +
       '<button type="button" class="btn" id="sync-now" hidden>而家同步</button>' +
-      '<a class="btn btn-ghost" href="stats.html">備份／匯入 JSON</a>' +
+      '<a class="btn btn-ghost" href="export.html">匯出／匯入 JSON</a>' +
       '</div>'
     );
   }
