@@ -19,6 +19,7 @@ js/sync-config.js   Supabase URL、anon key、allowedEmails（留空＝只係本
 js/sync-merge.js    合併規則（node 單測，唔使網絡）
 js/sync.js          Google 登入、同步、匯出／匯入
 js/quiz-runner.js   渲染與評分
+js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
 data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
@@ -34,7 +35,9 @@ data/quizzes/*.json 每題一份 Quiz JSON
 - **Session**：撳「開始練習」→ 做完所有到期題（或中途離開且已完成 ≥1 題）
 - **Quiz**：每題開始渲染 → `onPass`
 - **Chunk**：同一 session 內同一 chunk（或句子題）嘅 quiz 用時加總
-- 做完 session 顯示總用時；個別 quiz／chunk 詳情喺統計頁
+- 做完 session 顯示總用時（牆鐘）；個別 quiz／chunk 詳情喺統計頁
+- **統計頁練習時間**係每題 `durationMs` 加總，唔用 session 牆鐘 `totalMs`。今日／本週用香港時間日界；本週＝近 7 日（今日連之前 6 日），唔係星期一至日
+- **學新詞**係 chunk 第一次入 T1（`stageIndex` 去到 3）嘅 `enteredT1At`。skip／`already_introduced`／`shared_with_prior_group` 唔計。已經過咗 T1、又冇真實時間嘅舊 chunk 唔會補一個日期
 - **唔寫 Notion**
 
 ## 如何加入新 Quiz JSON
@@ -145,6 +148,7 @@ python3 -m http.server 8080
 
 ```bash
 node js/sync-merge.test.js
+node js/stats-metrics.test.js
 ```
 
 ## 雲端同步（Supabase + Google）
@@ -160,7 +164,7 @@ node js/sync-merge.test.js
 合併（`js/sync-merge.js`）：
 
 - **計時**：按 session id 合併；同一個 session 入面按 quiz id 去重（留用時較長嗰筆）。Chunk 用時由合併後嘅 quiz 再計，唔會加兩次。空嘅 session 清單唔會清走另一邊。
-- **SRS**：按 quiz id、chunk key（`group:chunkId`）、sentence slug 逐筆合併。Quiz 嘅 `completedStages` 取聯集。Chunk／sentence：兩邊都有 `updatedAt` 先用較新嗰筆（last-write-wins，可以退 stage）；否則保留較高 `stageIndex`（手機舊備份多數冇 `updatedAt`，唔會被較低嘅記錄清走）。`stageIndex` 0 而且冇 `lastCompletedAt` 當空，唔會覆蓋有進度嘅記錄。刪走一個 key **唔會**當墓碑，另一邊有就會留低。
+- **SRS**：按 quiz id、chunk key（`group:chunkId`）、sentence slug 逐筆合併。Quiz 嘅 `completedStages` 取聯集。Chunk／sentence：兩邊都有 `updatedAt` 先用較新嗰筆（last-write-wins，可以退 stage）；否則保留較高 `stageIndex`（手機舊備份多數冇 `updatedAt`，唔會被較低嘅記錄清走）。`stageIndex` 0 而且冇 `lastCompletedAt` 當空，唔會覆蓋有進度嘅記錄。刪走一個 key **唔會**當墓碑，另一邊有就會留低。Chunk 嘅 `enteredT1At`（第一次入 T1）按 chunk key 聯集；空白唔會清走；兩邊都有就留較早嗰個，唔受 stage 嘅 last-write-wins 影響。
 - **第一次同步**（計時同 SRS 分開計）：雲端空、本機有 → 上傳本機；本機空、雲端有 → 拉落本機；兩邊都有 → 合併再寫兩邊。永遠唔會用空 payload 覆蓋有資料嘅一邊。
 
 統計頁「匯出 JSON」下載**一份**檔，兩個 key 都喺入面（值可以係物件；匯入亦接受 `localStorage.getItem` 嗰種字串）：

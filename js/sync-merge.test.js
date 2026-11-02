@@ -372,6 +372,136 @@ test('double-encoded string values unwrap', function () {
   assert.strictEqual(parsed.timing.sessions[0].quizzes[0].quizId, 'q');
 });
 
+test('enteredT1At unions by chunk key and empty does not wipe', function () {
+  var merged = SM.mergeProgress(
+    {
+      quizzes: {},
+      chunks: {
+        'ebi:1': {
+          lastCompletedAt: '2026-10-01T00:00:00.000Z',
+          stageIndex: 4,
+          enteredT1At: '2026-09-01T00:00:00.000Z',
+        },
+      },
+      sentences: {},
+    },
+    {
+      quizzes: {},
+      chunks: {
+        'ebi:2': {
+          lastCompletedAt: '2026-10-02T00:00:00.000Z',
+          stageIndex: 3,
+          enteredT1At: '2026-10-02T00:00:00.000Z',
+        },
+        'ebi:1': {
+          lastCompletedAt: '2026-10-03T00:00:00.000Z',
+          stageIndex: 5,
+          enteredT1At: '',
+        },
+      },
+      sentences: {},
+    }
+  );
+  assert.strictEqual(merged.chunks['ebi:1'].enteredT1At, '2026-09-01T00:00:00.000Z');
+  assert.strictEqual(merged.chunks['ebi:2'].enteredT1At, '2026-10-02T00:00:00.000Z');
+  assert.strictEqual(merged.chunks['ebi:1'].stageIndex, 5);
+});
+
+test('both enteredT1At values keep the earliest, even when stage LWW goes backwards', function () {
+  var tie = SM.mergeCursor(
+    {
+      lastCompletedAt: '2026-10-01T00:00:00.000Z',
+      stageIndex: 4,
+      enteredT1At: '2026-09-01T00:00:00.000Z',
+    },
+    {
+      lastCompletedAt: '2026-10-09T00:00:00.000Z',
+      stageIndex: 4,
+      enteredT1At: '2026-10-02T00:00:00.000Z',
+    }
+  );
+  assert.strictEqual(tie.stageIndex, 4);
+  assert.strictEqual(tie.lastCompletedAt, '2026-10-09T00:00:00.000Z');
+  assert.strictEqual(tie.enteredT1At, '2026-09-01T00:00:00.000Z');
+
+  var lww = SM.mergeCursor(
+    {
+      lastCompletedAt: '2026-10-01T00:00:00.000Z',
+      stageIndex: 5,
+      updatedAt: '2026-10-01T00:00:00.000Z',
+      enteredT1At: '2026-09-01T00:00:00.000Z',
+    },
+    {
+      lastCompletedAt: '2026-10-03T00:00:00.000Z',
+      stageIndex: 1,
+      updatedAt: '2026-10-03T00:00:00.000Z',
+    }
+  );
+  assert.strictEqual(lww.stageIndex, 1);
+  assert.strictEqual(lww.updatedAt, '2026-10-03T00:00:00.000Z');
+  assert.strictEqual(lww.enteredT1At, '2026-09-01T00:00:00.000Z');
+});
+
+test('empty cursor and empty progress document do not drop enteredT1At', function () {
+  var fromEmptyCursor = SM.mergeCursor(
+    { lastCompletedAt: '2026-10-01T00:00:00.000Z', stageIndex: 4, enteredT1At: '2026-09-15T00:00:00.000Z' },
+    { lastCompletedAt: null, stageIndex: 0, enteredT1At: '' }
+  );
+  assert.strictEqual(fromEmptyCursor.stageIndex, 4);
+  assert.strictEqual(fromEmptyCursor.enteredT1At, '2026-09-15T00:00:00.000Z');
+
+  var full = {
+    quizzes: {},
+    chunks: {
+      'ebi:1': {
+        lastCompletedAt: '2026-10-01T00:00:00.000Z',
+        stageIndex: 3,
+        enteredT1At: '2026-10-01T00:00:00.000Z',
+      },
+    },
+    sentences: {},
+  };
+  var kept = SM.mergeProgress(full, { quizzes: {}, chunks: {}, sentences: {} });
+  assert.strictEqual(kept.chunks['ebi:1'].enteredT1At, '2026-10-01T00:00:00.000Z');
+
+  var imported = SM.parseImport(JSON.stringify({
+    quizzes: {},
+    chunks: {
+      'ebi:9': {
+        stageIndex: 3,
+        lastCompletedAt: '2026-10-04T00:00:00.000Z',
+        enteredT1At: '2026-10-04T00:00:00.000Z',
+      },
+    },
+    sentences: {},
+  }));
+  var applied = SM.applyImport(
+    { sessions: [] },
+    {
+      quizzes: {},
+      chunks: {
+        'ebi:1': {
+          stageIndex: 4,
+          lastCompletedAt: '2026-10-01T00:00:00.000Z',
+          enteredT1At: '2026-09-01T00:00:00.000Z',
+        },
+      },
+      sentences: {},
+    },
+    imported
+  );
+  assert.strictEqual(applied.progress.chunks['ebi:1'].enteredT1At, '2026-09-01T00:00:00.000Z');
+  assert.strictEqual(applied.progress.chunks['ebi:9'].enteredT1At, '2026-10-04T00:00:00.000Z');
+});
+
+test('invalid enteredT1At does not replace a real timestamp', function () {
+  var merged = SM.mergeCursor(
+    { lastCompletedAt: '2026-10-01T00:00:00.000Z', stageIndex: 4, enteredT1At: 'not-a-date' },
+    { lastCompletedAt: '2026-10-02T00:00:00.000Z', stageIndex: 4, enteredT1At: '2026-10-02T00:00:00.000Z' }
+  );
+  assert.strictEqual(merged.enteredT1At, '2026-10-02T00:00:00.000Z');
+});
+
 test('export fallbacks: desktop downloads, iPhone shares then copy, textarea always last', function () {
   assert.deepStrictEqual(
     SM.planExportFallbacks({ ios: false, canDownload: true, canShare: true, canCopy: true }),

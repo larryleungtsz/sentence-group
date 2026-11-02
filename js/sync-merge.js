@@ -51,6 +51,16 @@
  *     stageIndex. Tie → later lastCompletedAt. A clocked-but-lower record
  *     must not wipe an untimestamped phone seed that is further along.
  *
+ *   T1 event (學新詞), stored as chunk.enteredT1At:
+ *     One ISO timestamp per chunk key — the first time stageIndex
+ *     reached T1 (index 3). The chunk map is the event log; there is
+ *     no separate events[] array.
+ *     Union by chunk key: a key present on only one side is kept.
+ *     Empty / missing / invalid enteredT1At never clears the other side.
+ *     If both sides have a timestamp, keep the earliest.
+ *     This is independent of stageIndex last-write-wins. A newer cursor
+ *     must not drop an older enteredT1At.
+ *
  * SEED (per document, timing and progress independently)
  *   both empty            → none
  *   local data, cloud empty → push (upload local seed)
@@ -257,12 +267,38 @@
     return (rec.stageIndex | 0) === 0 && (rec.lastCompletedAt == null || rec.lastCompletedAt === '');
   }
 
+  function validIso(value) {
+    if (typeof value !== 'string' || !value) return null;
+    var t = timeMs(value);
+    if (isNaN(t)) return null;
+    return value;
+  }
+
+  /** Earliest non-empty enteredT1At. A blank side does not win. */
+  function earliestEnteredT1(a, b) {
+    var aa = a && validIso(a.enteredT1At);
+    var bb = b && validIso(b.enteredT1At);
+    if (!aa && !bb) return null;
+    if (!aa) return bb;
+    if (!bb) return aa;
+    return earlierIso(aa, bb);
+  }
+
+  function applyEnteredT1(out, a, b) {
+    var stamp = earliestEnteredT1(a, b);
+    if (stamp) out.enteredT1At = stamp;
+    else delete out.enteredT1At;
+    return out;
+  }
+
   function copyCursor(rec) {
     var out = {
       lastCompletedAt: rec && rec.lastCompletedAt ? rec.lastCompletedAt : null,
       stageIndex: rec ? rec.stageIndex | 0 : 0,
     };
     if (rec && rec.updatedAt) out.updatedAt = rec.updatedAt;
+    var stamp = rec && validIso(rec.enteredT1At);
+    if (stamp) out.enteredT1At = stamp;
     return out;
   }
 
@@ -278,27 +314,31 @@
   function mergeCursor(a, b) {
     var aEmpty = isCursorEmpty(a);
     var bEmpty = isCursorEmpty(b);
-    if (aEmpty && bEmpty) return { lastCompletedAt: null, stageIndex: 0 };
-    if (aEmpty) return copyCursor(b);
-    if (bEmpty) return copyCursor(a);
-
-    var aU = updatedMs(a);
-    var bU = updatedMs(b);
-    if (aU != null && bU != null && aU !== bU) {
-      return copyCursor(aU > bU ? a : b);
+    var out;
+    if (aEmpty && bEmpty) out = { lastCompletedAt: null, stageIndex: 0 };
+    else if (aEmpty) out = copyCursor(b);
+    else if (bEmpty) out = copyCursor(a);
+    else {
+      var aU = updatedMs(a);
+      var bU = updatedMs(b);
+      if (aU != null && bU != null && aU !== bU) {
+        out = copyCursor(aU > bU ? a : b);
+      } else {
+        var aSi = a.stageIndex | 0;
+        var bSi = b.stageIndex | 0;
+        if (aSi !== bSi) out = copyCursor(aSi > bSi ? a : b);
+        else {
+          out = {
+            lastCompletedAt: laterIso(a.lastCompletedAt, b.lastCompletedAt) || null,
+            stageIndex: aSi,
+          };
+          var stamp = laterIso(a.updatedAt, b.updatedAt);
+          if (stamp) out.updatedAt = stamp;
+        }
+      }
     }
-
-    var aSi = a.stageIndex | 0;
-    var bSi = b.stageIndex | 0;
-    if (aSi !== bSi) return copyCursor(aSi > bSi ? a : b);
-
-    var out = {
-      lastCompletedAt: laterIso(a.lastCompletedAt, b.lastCompletedAt) || null,
-      stageIndex: aSi,
-    };
-    var stamp = laterIso(a.updatedAt, b.updatedAt);
-    if (stamp) out.updatedAt = stamp;
-    return out;
+    // enteredT1At is unioned even when the cursor itself is empty or loses LWW.
+    return applyEnteredT1(out, a, b);
   }
 
   function mergeQuizRecord(a, b) {

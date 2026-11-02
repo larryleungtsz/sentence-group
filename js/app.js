@@ -11,6 +11,9 @@
   const groupsData = await groupsRes.json();
   const manifest = await manifestRes.json();
   const schedule = await scheduleRes.json();
+  if (typeof Progress.reconcileEnteredT1 === 'function') {
+    Progress.reconcileEnteredT1(groupsData);
+  }
   const params = new URLSearchParams(location.search);
   const nowParam = params.get('now');
   const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
