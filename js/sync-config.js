@@ -1,23 +1,20 @@
 /**
- * Cloud sync settings for the static site.
+ * Copy of the sync config template.
+ * The site loads js/sync-config.js (same shape). Fill that file, not this one.
  *
- * The browser may hold the Supabase URL and the anon (public) key only.
- * Never put the service role key or the Google client secret in this file.
+ *   supabaseUrl      https://YOUR_PROJECT.supabase.co
+ *   supabaseAnonKey  Project Settings → API → anon public key
+ *                    (role must be "anon"; a service_role key is refused)
+ *   ownerId          fixed: larry
+ *   allowedEmails    Google accounts allowed to sign in
  *
- * Leave the strings empty until the one-time setup in the README.
- * allowedEmails is Larry's Google accounts (lowercase). The same addresses
- * must be inserted into public.sync_allowlist (see supabase/schema.sql).
- * The array is not the security boundary; Postgres RLS is.
- *
- * ownerId stays "larry". Rows are stored under that id, not auth.uid().
+ * Google client secret stays in the Supabase dashboard, not in git.
  */
 (function (global) {
   global.SYNC_CONFIG = {
-    supabaseUrl: '',
-    supabaseAnonKey: '',
+    supabaseUrl: 'https://zmmcldktmrkxaxxyvxra.supabase.co',
+    supabaseAnonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InptbWNsZGt0bXJreGF4eHl2eHJhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM1OTY4MjgsImV4cCI6MjEwOTE3MjgyOH0.TTWD4fD2BMZquqIF2c3lwm_T4ZnHWKFzak4ZmZIWNQY',
     ownerId: 'larry',
-    allowedEmails: [
-      // 'larry@gmail.com',
-    ],
+    allowedEmails: ['larryleungtsz@gmail.com'],
   };
 })(typeof window !== 'undefined' ? window : globalThis);
