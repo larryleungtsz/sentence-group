@@ -13,7 +13,7 @@
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
-      "start_sec": 8.25,
+      "start_sec": 8.34,
       "end_sec": 9.456327,
       "rate": 1.0
     },
