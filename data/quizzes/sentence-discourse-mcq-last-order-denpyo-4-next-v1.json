@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-last-order-denpyo-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "こちら伝票となりますので、レジの方まで、お願いいたします。",
+  "direction": "next",
+  "usage_note": "店員交帳單＋指路；「ので」理由＋「方まで」方向",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「こちら伝票となりますので、レジの方まで、お願いいたします。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "卡同現金都得。",
+      "distractors": [
+        "尾單仲有好耐。",
+        "菜單幫您攞嚟。",
+        "我帶您去座位。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

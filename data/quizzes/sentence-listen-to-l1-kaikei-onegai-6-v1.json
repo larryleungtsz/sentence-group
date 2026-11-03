@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-kaikei-onegai-6-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "領収書は、ご利用になられますか？",
+  "l1": "收據要唔要？",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3",
+      "start_sec": 8.4,
+      "end_sec": 10.81,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "收據要唔要？",
+      "distractors": [
+        "麻煩結帳。",
+        "明白了。帳單係4,210日圓。",
+        "好，用呢個麻煩你。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

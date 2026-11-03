@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-6-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "領収書は、ご利用になられますか？",
+  "direction": "next",
+  "usage_note": "店員問要唔要收據；「ご利用になられますか」＝敬語問「要用嗎」",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「領収書は、ご利用になられますか？」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "唔使啦，唔該。",
+      "distractors": [
+        "決定好點咩未？",
+        "喺邊度結帳？",
+        "帶你去禁煙座。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

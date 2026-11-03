@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-yoyaku-shitenai-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "予約してないんですけど、2名って、空いてますか？",
+  "direction": "prev",
+  "usage_note": "無預約時用「んですけど」軟化開場，再以「って」框人數，最後用「空いてますか」問空位。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「予約してないんですけど、2名って、空いてますか？」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "兩個人想入，有冇位？",
+      "distractors": [
+        "預約個名係田中。",
+        "畀我睇吓菜單。",
+        "水嚟一杯。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

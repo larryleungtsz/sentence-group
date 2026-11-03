@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-orenji-jusu-5-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 5,
+  "sentence": "これのおかわりをください",
+  "direction": "prev",
+  "usage_note": "「おかわり」＝同一款再嚟；「これの」指眼前／已點嘅嘢",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「これのおかわりをください」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "啱啱個月見雞丸好正。",
+      "distractors": [
+        "呢個食譜畀我啦。",
+        "包裝紙麻煩畀我。",
+        "價錢牌淨係想睇下（唔買）。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

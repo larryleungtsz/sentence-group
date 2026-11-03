@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-ioshio-ganen-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、",
+  "l1": "雖然很好吃，不過作為推薦的吃法——就是這個呢。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "雖然很好吃，不過作為推薦的吃法——就是這個呢。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 48,
+          "top": 4,
+          "width": 28,
+          "height": 40,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

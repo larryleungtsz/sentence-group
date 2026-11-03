@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-yoyaku-annai-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "はい、お席の方ご案内しますね。",
+  "direction": "next",
+  "usage_note": "「はい」承接人數確認後，「お席の方」＋「ご案内しますね」＝禮貌帶位；句尾「ね」軟化附和",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、お席の方ご案内しますね。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "行李放嗰邊架度啦。",
+      "distractors": [
+        "我取消訂位。",
+        "淨係要收據。",
+        "我再入去確認位，請等吓。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

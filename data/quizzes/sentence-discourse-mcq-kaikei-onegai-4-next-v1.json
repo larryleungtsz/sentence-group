@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "4,210円ちょうど、お預かりします。",
+  "direction": "next",
+  "usage_note": "收款套語：「金額＋ちょうど＋お預かりします」＝剛好收到呢個數；店員立場",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「4,210円ちょうど、お預かりします。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "收據要唔要？",
+      "distractors": [
+        "想問吓你點咩？",
+        "預約取消我幫你辦。",
+        "前菜送上嚟喇。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-chashu-shittori-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "l1": "叉燒超濕潤，味道也很濃厚。還有一點焦邊。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "start_sec": 0.05,
+      "end_sec": 5.67,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "叉燒超濕潤，味道也很濃厚。還有一點焦邊。",
+      "distractors": [
+        "請結帳。",
+        "兩位有位嗎？",
+        "菜單睇完未？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

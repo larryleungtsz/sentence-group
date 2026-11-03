@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-gochumon-kakunin-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お間違いないでしょうか",
+  "l1": "沒有弄錯吧？",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
+      "start_sec": 2.58,
+      "end_sec": 4.55,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "沒有弄錯吧？",
+      "distractors": [
+        "請讓我確認您的點餐。",
+        "請結帳。",
+        "兩位有位嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

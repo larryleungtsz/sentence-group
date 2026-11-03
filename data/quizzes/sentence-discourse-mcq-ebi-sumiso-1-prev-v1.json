@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-ebi-sumiso-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。",
+  "direction": "prev",
+  "usage_note": "店員介紹小菜位置＋品名：「お隣が〜です」指向旁邊碟；酢味噌がけ＝淋醋味噌",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お隣が海老ときゅうりの酢味噌がけです。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "今日小碟喺呢邊。",
+      "distractors": [
+        "蝦養殖場導賞有冇預約？",
+        "帶你去隔籬張枱（換位）。",
+        "結帳去隔籬個櫃枱。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

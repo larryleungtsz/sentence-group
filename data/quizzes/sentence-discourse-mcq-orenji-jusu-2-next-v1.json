@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-orenji-jusu-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "あと、焼き鳥もいいですか？",
+  "direction": "next",
+  "usage_note": "「あと＋〜もいいですか」＝追加點餐／問可唔可以再加；唔係問好唔好食",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「あと、焼き鳥もいいですか？」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好，燒鳥都加埋。",
+      "distractors": [
+        "燒鳥店兼職幾時請人？",
+        "燒鳥食譜可唔可以教我？",
+        "不如轉去禁煙區得唔得？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

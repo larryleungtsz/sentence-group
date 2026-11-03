@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-aka-konnyaku-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "そのままお召し上がりいただいても",
+  "direction": "next",
+  "usage_note": "店員推薦吃法：けんじょう「お召し上がりいただいても」＝原樣／直接食都得（句尾省略常見於口語推介）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「そのままお召し上がりいただいても」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "加薑蓉都好夾。",
+      "distractors": [
+        "退貨要聽日先得。",
+        "直接將卡插落收銀機。",
+        "試食請去試衫間。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

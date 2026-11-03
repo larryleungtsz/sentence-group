@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-chumon-ii-desuka-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "はい、どうぞー。",
+  "l1": "好，請。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "好，請。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "hotspots": [
+        {
+          "id": 2,
+          "left": 43,
+          "top": 38,
+          "width": 13,
+          "height": 16,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        2
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

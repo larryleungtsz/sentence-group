@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-tsukete-itadaku-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "いえーい！めっちゃおいしそう。",
+  "l1": "耶！",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3",
+      "start_sec": 7.2,
+      "end_sec": 9.0,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "耶！",
+      "distractors": [
+        "如果蘸著吃的話，會有蛋味，所以我推薦，請務必試試。",
+        "看起來超好吃。來吃吧。",
+        "像蛋的"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

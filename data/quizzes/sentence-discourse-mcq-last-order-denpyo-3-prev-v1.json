@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-last-order-denpyo-3-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "だいじょうぶです。",
+  "direction": "prev",
+  "usage_note": "客婉拒追加；短答完結",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「だいじょうぶです。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "仲有冇嘢想加？",
+      "distractors": [
+        "歡迎光臨。",
+        "麻煩畀本菜單。",
+        "兩杯生啤唔該。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

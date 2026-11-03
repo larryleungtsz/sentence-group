@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "じゃあ、ぼくはビールおかわりで。",
+  "direction": "next",
+  "usage_note": "客追加己杯；「じゃあ」轉折＋「おかわりで」簡潔完結",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「じゃあ、ぼくはビールおかわりで。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "大杯就得。",
+      "distractors": [
+        "開胃菜我哋唔要。",
+        "畀個外賣袋唔該。",
+        "請改訂位時間。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

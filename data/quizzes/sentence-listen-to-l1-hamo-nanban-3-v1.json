@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-hamo-nanban-3-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "こちらが本日、鰯と茗荷の酢の物です。",
+  "l1": "這邊是今天的沙甸魚和茗荷醋拌小菜。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3",
+      "start_sec": 4.3,
+      "end_sec": 7.6,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "這邊是今天的沙甸魚和茗荷醋拌小菜。",
+      "distractors": [
+        "從這邊呢。",
+        "這是鱧魚的南蠻漬。",
+        "從這邊呢"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

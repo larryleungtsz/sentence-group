@@ -75,7 +75,7 @@ test('shipped schedule keeps passage objectives and Q20–Q24 on the sentence la
     assert.ok(!schedule.passage_schedule[key], key);
     assert.strictEqual(
       manifest.quizzes.some(function (q) { return q.objective === key; }),
-      false,
+      true,
       key
     );
   });
@@ -240,7 +240,7 @@ test('live passage quizzes are due on kind passage and the smoke shell is not', 
   assert.deepStrictEqual(smoke, []);
 });
 
-test('manifest passage kinds keep objectives; only the smoke quiz is kind sentence', function () {
+test('manifest passage kinds keep objectives; sentence rows are live Soft GO', function () {
   const passages = manifest.quizzes.filter((q) => q.kind === 'passage');
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
   assert.strictEqual(passages.length, 704);
@@ -248,22 +248,24 @@ test('manifest passage kinds keep objectives; only the smoke quiz is kind senten
     assert.ok(PASSAGE_OBJECTIVES.indexOf(q.objective) !== -1, q.quiz_id);
     assert.ok(q.chunk_id == null, q.quiz_id);
   });
-  assert.strictEqual(sentences.length, 1);
-  const smoke = sentences[0];
-  assert.strictEqual(smoke.quiz_id, 'sentence-shell-smoke-yoyaku-shitenai-s1-v1');
-  assert.strictEqual(smoke.objective, 'sentence_shell_smoke');
-  assert.strictEqual(smoke.sentence_id, 's1');
-  assert.strictEqual(smoke.group_slug, 'yoyaku-shitenai');
-  const file = JSON.parse(fs.readFileSync(path.join(root, smoke.file), 'utf8'));
-  assert.strictEqual(file.quiz_id, smoke.quiz_id);
-  assert.strictEqual(file.sentence_id, 's1');
-  assert.ok(!file.slides.some((slide) => slide.audio));
+  assert.strictEqual(sentences.length, 273);
+  assert.ok(!sentences.some((q) => q.quiz_id === 'sentence-shell-smoke-yoyaku-shitenai-s1-v1'));
+  assert.ok(!sentences.some((q) => q.objective === 'sentence_shell_smoke'));
+  const sentenceObjectives = Object.keys(SENTENCE_SCHEDULE);
+  sentences.forEach((q) => {
+    assert.ok(sentenceObjectives.indexOf(q.objective) !== -1, q.quiz_id);
+    assert.strictEqual(q.shell, false, q.quiz_id);
+    assert.strictEqual(q.level, null, q.quiz_id);
+    assert.strictEqual(q.chunk_id, null, q.quiz_id);
+    assert.ok(q.sentence_id, q.quiz_id);
+    assert.ok(q.group_slug, q.quiz_id);
+  });
+  assert.ok(!fs.existsSync(path.join(root, 'data/quizzes/sentence-shell-smoke-yoyaku-shitenai-s1-v1.json')));
 });
 
-test('yoyaku-shitenai sentences[] obey chunk-boundary-wins; other groups stay flat', function () {
-  const withSentences = groups.groups.filter((g) => Array.isArray(g.sentences) && g.sentences.length);
-  assert.deepStrictEqual(withSentences.map((g) => g.slug), ['yoyaku-shitenai']);
-  const group = withSentences[0];
+test('yoyaku-shitenai sentences[] still join the passage under chunk-boundary-wins', function () {
+  const group = groups.groups.find((g) => g.slug === 'yoyaku-shitenai');
+  assert.ok(group);
   assert.strictEqual(group.chunks.length, 7);
   const byId = new Map(group.chunks.map((c) => [c.id, c]));
   const seen = new Set();
@@ -297,6 +299,7 @@ test('yoyaku-shitenai sentences[] obey chunk-boundary-wins; other groups stay fl
   }
   if (buf) parts.push(buf);
   assert.deepStrictEqual(parts, group.sentences.map((s) => s.text));
+  assert.ok(group.sentences.every((s) => typeof s.l1 === 'string' && s.l1));
 });
 
 test('legacy progress.sentences migrates on load and advance keeps the mirror', function () {
@@ -332,47 +335,53 @@ test('legacy progress.sentences migrates on load and advance keeps the mirror', 
   assert.strictEqual(store[Progress.KEY], frozen);
 });
 
-test('smoke fixture is attached to yoyaku-shitenai and is not due; other groups have no sentence quizzes', function () {
+test('fresh units due Q20 where that quiz exists; Q24-only yoyaku is quiet until T+5', function () {
   const now = Date.parse('2026-11-03T00:00:00.000Z');
   const fresh = { stageIndex: 0, lastCompletedAt: null };
-  groups.groups.forEach((group) => {
-    const ids = new Set((group.sentences || []).map((s) => s && s.id).filter((id) => id != null && id !== ''));
-    const mine = manifest.quizzes.filter((q) => {
-      if (q.kind === 'passage') return q.sentence === group.sentence;
-      if (q.kind === 'sentence') {
-        if (!ids.has(q.sentence_id)) return false;
-        if (q.group_slug && q.group_slug !== group.slug) return false;
-        if (q.sentence && q.sentence !== group.sentence) return false;
-        return true;
-      }
-      return false;
-    });
-    const sentenceDue = mine.filter((q) => q.kind === 'sentence' && Schedule.dueStages({
-      objective: q.objective,
-      kind: q.kind,
-      schedule: schedule,
-      sentenceUnitState: fresh,
-      completedStages: [],
-      now: now,
-      scheduleStages: q.schedule_stages || null,
-    }).length);
-    assert.strictEqual(sentenceDue.length, 0, group.slug);
-    if (group.slug === 'yoyaku-shitenai') {
-      assert.strictEqual(mine.filter((q) => q.kind === 'sentence').length, 1);
-      const passageDue = mine.filter((q) => q.kind === 'passage' && Schedule.dueStages({
-        objective: q.objective,
-        kind: 'passage',
-        schedule: schedule,
-        passageState: fresh,
-        completedStages: [],
-        now: now,
-        scheduleStages: q.schedule_stages || null,
-      }).length);
-      assert.ok(passageDue.length > 0);
-    } else {
-      assert.strictEqual(mine.filter((q) => q.kind === 'sentence').length, 0, group.slug);
-    }
+  assert.ok(!manifest.quizzes.some((q) => q.quiz_id === 'sentence-shell-smoke-yoyaku-shitenai-s1-v1'));
+  const pilot = groups.groups.find((g) => g.slug === 'yoyaku-shitenai');
+  const pilotIds = new Set(pilot.sentences.map((s) => s.id));
+  const pilotQuizzes = manifest.quizzes.filter((q) => {
+    if (q.kind !== 'sentence') return false;
+    if (!pilotIds.has(q.sentence_id)) return false;
+    if (q.group_slug !== pilot.slug) return false;
+    if (q.sentence !== pilot.sentence) return false;
+    return true;
   });
+  const pilotDue = pilotQuizzes.filter((q) => Schedule.dueStages({
+    objective: q.objective,
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: fresh,
+    completedStages: [],
+    now: now,
+  }).length);
+  assert.strictEqual(pilotDue.length, 3);
+  assert.ok(pilotDue.every((q) => q.objective === 'sentence_listen_to_l1'));
+  const passageDue = manifest.quizzes.filter((q) => q.kind === 'passage' && q.sentence === pilot.sentence && Schedule.dueStages({
+    objective: q.objective,
+    kind: 'passage',
+    schedule: schedule,
+    passageState: fresh,
+    completedStages: [],
+    now: now,
+    scheduleStages: q.schedule_stages || null,
+  }).length);
+  assert.ok(passageDue.length > 0);
+  const annai = groups.groups.find((g) => g.slug === 'yoyaku');
+  const annaiQuizzes = manifest.quizzes.filter((q) => q.kind === 'sentence' && q.group_slug === 'yoyaku');
+  assert.strictEqual(annaiQuizzes.length, 4);
+  assert.ok(annaiQuizzes.every((q) => q.objective === 'sentence_discourse_mcq'));
+  assert.ok(annaiQuizzes.every((q) => q.sentence === annai.sentence));
+  const annaiDue = annaiQuizzes.filter((q) => Schedule.dueStages({
+    objective: q.objective,
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: fresh,
+    completedStages: [],
+    now: now,
+  }).length);
+  assert.strictEqual(annaiDue.length, 0);
 });
 
 test('a lower passages cursor does not wipe a further legacy sentences cursor', function () {

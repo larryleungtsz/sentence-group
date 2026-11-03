@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-amai-chashu-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "l1": "不太喜歡甜叉燒的人，可能會覺得有點不夠滿足。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3",
+      "start_sec": 0.05,
+      "end_sec": 4.86,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "不太喜歡甜叉燒的人，可能會覺得有點不夠滿足。",
+      "distractors": [
+        "請結帳。",
+        "兩位有位嗎？",
+        "菜單睇完未？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

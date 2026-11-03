@@ -17,6 +17,7 @@
   const params = new URLSearchParams(location.search);
   const nowParam = params.get('now');
   const nowMs = nowParam ? new Date(nowParam).getTime() : Date.now();
+  const nowIso = new Date(nowMs).toISOString();
 
   for (const group of groupsData.groups || []) {
     const chunks = group.chunks || [];
@@ -27,6 +28,14 @@
     const quizzes = (manifest.quizzes || []).filter(
       (q) => q.sentence === group.sentence
     );
+    Schedule.fastForwardVacuousSentenceUnits({
+      schedule,
+      quizzes,
+      sentences: group.sentences,
+      now: nowMs,
+      getState: (id) => Progress.getSentenceUnit(group.slug, id),
+      advance: (id) => Progress.advanceSentenceUnit(group.slug, id, nowIso),
+    });
     let dueCount = 0;
     for (const meta of quizzes) {
       const prog = Progress.getQuiz(meta.quiz_id);

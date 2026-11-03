@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-pepsi-zero-size-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？",
+  "direction": "prev",
+  "usage_note": "「先程の＋単品の」指先頭單點；店員用「いかがされますか」問杯裝尺寸",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「先程の単品のペプシゼロはサイズいかがされますか？」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "食物嗰邊係咪就係咁多？",
+      "distractors": [
+        "單張飛賣晒。",
+        "百事廠參觀有興趣嗎？",
+        "頭先會議資料要邊個尺寸？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-kaikei-onegai-4-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "4,210円ちょうど、お預かりします。",
+  "l1": "收你剛好4,210日圓。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3",
+      "start_sec": 2.4,
+      "end_sec": 8.4,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "收你剛好4,210日圓。",
+      "distractors": [
+        "麻煩結帳。",
+        "明白了。帳單係4,210日圓。",
+        "好，用呢個麻煩你。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

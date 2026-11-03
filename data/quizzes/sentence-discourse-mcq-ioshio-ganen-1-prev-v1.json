@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-ioshio-ganen-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "おいしいんですけれども、おすすめのお召し上がり方として、",
+  "direction": "prev",
+  "usage_note": "「けれども」讓步後轉介推薦吃法，句尾「として」掛起下文介紹方法／配料。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「おいしいんですけれども、おすすめのお召し上がり方として、」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "鍾意重口味嘅客人，我建議……",
+      "distractors": [
+        "喺呢度結帳得唔得？",
+        "我帶你去座位。",
+        "今日已經滿座。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

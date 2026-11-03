@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-chumon-ii-desuka-3-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "direction": "prev",
+  "usage_note": "點餐列舉：料理名＋助數詞連講；無動詞都成立",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "諗好就可以講喇。",
+      "distractors": [
+        "今日午餐沽清。",
+        "我帶你去座位。",
+        "要先付錢先坐。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

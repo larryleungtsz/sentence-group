@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-yoyaku-shitenai-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お席確認してまいりますので、少々お待ちください。",
+  "l1": "服務員A：我去確認座位，請稍等。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "服務員A：我去確認座位，請稍等。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "hotspots": [
+        {
+          "id": 4,
+          "left": 35,
+          "top": 4,
+          "width": 14,
+          "height": 26,
+          "unit": "percent"
+        },
+        {
+          "id": 5,
+          "left": 56,
+          "top": 68,
+          "width": 12,
+          "height": 24,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        4,
+        5
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

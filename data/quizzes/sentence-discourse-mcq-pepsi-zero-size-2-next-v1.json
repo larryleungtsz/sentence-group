@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-pepsi-zero-size-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "Mサイズで。",
+  "direction": "next",
+  "usage_note": "客人短答「〜サイズで」＝選定杯裝；可省略「お願いします」",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「Mサイズで。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好，要唔要多啲冰？",
+      "distractors": [
+        "咁取消成單啦。",
+        "收據聽日先攞。",
+        "畀我 M 碼鞋。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

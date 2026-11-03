@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-goraikou-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "direction": "prev",
+  "usage_note": "店員迎客：感謝光臨＋「よかったら」提議腳邊行李籃；「ありますので」＝有呢樣所以可用",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ご来店ありがとうございます。よかったら足元お荷物カゴありますので。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "請坐呢邊。",
+      "distractors": [
+        "Last order 淨返十分鐘。",
+        "埋單用現金得唔得？",
+        "預約個名係邊位？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

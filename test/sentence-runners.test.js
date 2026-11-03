@@ -501,12 +501,14 @@ tests.push(test('Q18 segment shadow, Q8 listening, Q4 word shadow, Q19 cloze, an
   assert.ok(img);
 }));
 
-tests.push(test('fixture quizzes are outside the manifest, so Q20–Q24 are not due', function () {
+tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 objectives are in it', function () {
   const ids = new Set(manifest.quizzes.map(function (quiz) { return quiz.quiz_id; }));
-  const objectives = new Set(manifest.quizzes.map(function (quiz) { return quiz.objective; }));
   fixture.quizzes.forEach(function (quiz) {
     assert.strictEqual(ids.has(quiz.quiz_id), false, quiz.quiz_id);
-    assert.strictEqual(objectives.has(quiz.objective), false, quiz.objective);
+    assert.ok(
+      manifest.quizzes.some(function (row) { return row.objective === quiz.objective && row.kind === 'sentence'; }),
+      quiz.objective
+    );
   });
   assert.ok(fs.readFileSync(path.join(root, 'js/group.js'), 'utf8').indexOf('sentenceFixture') !== -1);
   const now = Date.parse('2026-11-03T00:00:00.000Z');
@@ -540,14 +542,10 @@ tests.push(test('fixture quizzes are outside the manifest, so Q20–Q24 are not 
       now: now,
     });
     assert.deepStrictEqual(freshDue, planned[0] === 'T+1' ? ['T+1'] : [], quiz.objective);
-    assert.strictEqual(
-      manifest.quizzes.some(function (row) { return row.objective === quiz.objective; }),
-      false
-    );
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
-    1
+    273
   );
 }));
 

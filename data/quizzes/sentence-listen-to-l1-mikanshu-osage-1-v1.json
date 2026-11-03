@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-mikanshu-osage-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。",
+  "l1": "飲料是粗濾蜜柑酒的蘇打兌一杯。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 1.2,
+      "end_sec": 4.7,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "飲料是粗濾蜜柑酒的蘇打兌一杯。",
+      "distractors": [
+        "那我啤酒再來一杯。",
+        "啤酒再來一杯。",
+        "以上可以嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

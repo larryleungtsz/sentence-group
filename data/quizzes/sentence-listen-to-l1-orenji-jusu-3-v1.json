@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-orenji-jusu-3-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "月見つくね1つ",
+  "l1": "月見雞丸一份",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3",
+      "start_sec": 5.05,
+      "end_sec": 6.35,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "月見雞丸一份",
+      "distractors": [
+        "飲料要橙汁同冰燒酒",
+        "仲有，燒鳥都得嗎？",
+        "暫時只要咁多就好"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

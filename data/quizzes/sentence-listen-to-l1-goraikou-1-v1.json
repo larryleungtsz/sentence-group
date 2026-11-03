@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-goraikou-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご来店ありがとうございます。よかったら足元お荷物カゴありますので。",
+  "l1": "歡迎光臨，非常感謝。方便的話，腳邊有放行李的籃子。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
+      "start_sec": 0.05,
+      "end_sec": 5.28,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "歡迎光臨，非常感謝。方便的話，腳邊有放行李的籃子。",
+      "distractors": [
+        "非常感謝",
+        "如果方便的話",
+        "腳邊"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

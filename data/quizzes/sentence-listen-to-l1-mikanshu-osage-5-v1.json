@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-mikanshu-osage-5-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 5,
+  "sentence": "はい、とりあえず以上で。",
+  "l1": "好，先這樣就好。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
+      "start_sec": 10.7,
+      "end_sec": 12.9,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "好，先這樣就好。",
+      "distractors": [
+        "飲料是粗濾蜜柑酒的蘇打兌一杯。",
+        "那我啤酒再來一杯。",
+        "啤酒再來一杯。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

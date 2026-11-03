@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-aka-konnyaku-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "そのままお召し上がりいただいても",
+  "l1": "店員B：就算原樣直接食都可以……",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員B：就算原樣直接食都可以……"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspots": [
+        {
+          "id": 5,
+          "left": 68,
+          "top": 73,
+          "width": 26,
+          "height": 15,
+          "unit": "percent"
+        },
+        {
+          "id": 6,
+          "left": 70,
+          "top": 48,
+          "width": 15,
+          "height": 22,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        5,
+        6
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

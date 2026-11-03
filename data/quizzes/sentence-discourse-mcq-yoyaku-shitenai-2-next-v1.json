@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-yoyaku-shitenai-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お席確認してまいりますので、少々お待ちください。",
+  "direction": "next",
+  "usage_note": "店員謙讓「てまいります」表離開確認，用「ので」接「少々お待ちください」請客人稍候。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お席確認してまいりますので、少々お待ちください。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "呢張枱啱啱空咗。",
+      "distractors": [
+        "收據即刻出。",
+        "關舖係十點。",
+        "飲品想點咩？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

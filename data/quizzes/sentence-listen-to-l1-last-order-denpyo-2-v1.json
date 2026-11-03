@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-last-order-denpyo-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "追加のご注文はございませんか？",
+  "l1": "有沒有追加點餐？",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3",
+      "start_sec": 3.4,
+      "end_sec": 7.2,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "有沒有追加點餐？",
+      "distractors": [
+        "料理最後點餐時間到了。",
+        "沒問題。",
+        "這邊是帳單，請到收銀台那邊，麻煩您。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

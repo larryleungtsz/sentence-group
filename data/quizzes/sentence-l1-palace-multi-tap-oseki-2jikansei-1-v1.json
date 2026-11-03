@@ -1,0 +1,82 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-oseki-2jikansei-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。",
+  "l1": "座位是兩小時制，餐點七十五分鐘，會請您做最後點餐。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "座位是兩小時制，餐點七十五分鐘，會請您做最後點餐。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 0,
+          "top": 50,
+          "width": 18,
+          "height": 42,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 16,
+          "top": 55,
+          "width": 28,
+          "height": 40,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 42,
+          "top": 68,
+          "width": 14,
+          "height": 24,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 4,
+          "top": 4,
+          "width": 24,
+          "height": 52,
+          "unit": "percent"
+        },
+        {
+          "id": 5,
+          "left": 28,
+          "top": 8,
+          "width": 18,
+          "height": 50,
+          "unit": "percent"
+        },
+        {
+          "id": 6,
+          "left": 46,
+          "top": 48,
+          "width": 14,
+          "height": 20,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

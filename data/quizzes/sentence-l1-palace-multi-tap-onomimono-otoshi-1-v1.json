@@ -1,0 +1,64 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-onomimono-otoshi-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "よかったら、最初にお飲みものの方、おうかがいしておきますね。",
+  "l1": "如果方便的話，先幫您問一下飲料。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "如果方便的話，先幫您問一下飲料。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 23,
+          "top": 51,
+          "width": 13,
+          "height": 14,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 26,
+          "top": 74,
+          "width": 11,
+          "height": 12,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 61,
+          "top": 57,
+          "width": 15,
+          "height": 28,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 26,
+          "top": 38,
+          "width": 14,
+          "height": 14,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

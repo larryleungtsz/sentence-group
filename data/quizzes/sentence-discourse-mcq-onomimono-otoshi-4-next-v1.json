@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-onomimono-otoshi-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "お通しです。",
+  "direction": "next",
+  "usage_note": "店員呈開胃菜；名詞＋です定物",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お通しです。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "喜歡邊樣就攞邊樣啦。",
+      "distractors": [
+        "請撕單。",
+        "請喺收銀台等。",
+        "我幫您取消預約。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

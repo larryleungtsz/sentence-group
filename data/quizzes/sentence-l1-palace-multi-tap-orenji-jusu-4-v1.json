@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-orenji-jusu-4-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "とりあえず、それだけでいいです",
+  "l1": "暫時只要咁多就好",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "暫時只要咁多就好"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspots": [
+        {
+          "id": 6,
+          "left": 82,
+          "top": 62,
+          "width": 10,
+          "height": 28,
+          "unit": "percent"
+        },
+        {
+          "id": 7,
+          "left": 89,
+          "top": 38,
+          "width": 10,
+          "height": 52,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        6,
+        7
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

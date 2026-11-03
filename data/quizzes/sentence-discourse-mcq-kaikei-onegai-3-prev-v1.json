@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-3-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "はい、これでお願いします。",
+  "direction": "prev",
+  "usage_note": "付款時「これでお願いします」＝用呢筆錢／呢種方式結；「これ」多指遞出嘅現金或卡",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、これでお願いします。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "付款用現金得唔得？",
+      "distractors": [
+        "用呢支筆簽合約。",
+        "用呢個開房門。",
+        "菜單就決定呢幾個？（仲未結帳）"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

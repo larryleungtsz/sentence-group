@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "以上でよろしいですか？",
+  "direction": "next",
+  "usage_note": "店員確認點單完結；「以上で」＋丁寧問",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「以上でよろしいですか？」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "餸要唔要再加？",
+      "distractors": [
+        "請返屋企啦。",
+        "請撕單埋帳。",
+        "訂位已經訂唔到。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

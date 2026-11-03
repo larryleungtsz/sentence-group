@@ -261,15 +261,24 @@
     return (parts.length ? ' · 下次：' + parts.join('；') : '') + gate;
   }
 
-  let queue = buildDueQueue();
   /**
    * Dev-only Q20–Q24 runner smoke. The quizzes live in data/fixtures and are
-   * not in the manifest, so a normal visit never dues them (sentence_schedule
-   * already lists the objectives, but nothing is due without a manifest row).
-   * This path never writes SRS, timing, or sync snapshots. Open
+   * not in the manifest. This path never writes SRS, timing, or sync snapshots,
+   * and it does not fast-forward empty sentence stages. Open
    * group.html?slug=yoyaku-shitenai&sentenceFixture=1
    */
   const fixtureMode = params.get('sentenceFixture') === '1';
+  if (!fixtureMode) {
+    Schedule.fastForwardVacuousSentenceUnits({
+      schedule,
+      quizzes: groupQuizzes,
+      sentences: group.sentences,
+      now: nowMs,
+      getState: (id) => Progress.getSentenceUnit(slug, id),
+      advance: (id) => Progress.advanceSentenceUnit(slug, id, nowIso),
+    });
+  }
+  let queue = buildDueQueue();
   if (fixtureMode) {
     let payload = null;
     try {

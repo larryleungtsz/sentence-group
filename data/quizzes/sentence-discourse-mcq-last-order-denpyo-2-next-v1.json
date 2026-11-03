@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-last-order-denpyo-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "追加のご注文はございませんか？",
+  "direction": "next",
+  "usage_note": "店員再確認追加；丁寧否定疑問",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「追加のご注文はございませんか？」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "飲品仲可以加杯。",
+      "distractors": [
+        "開門係五點。",
+        "我先問您想飲咩。",
+        "請跟我入座。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-pepsi-zero-size-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "先程の単品のペプシゼロはサイズいかがされますか？",
+  "l1": "剛才單點的百事零，尺寸要怎樣？",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "剛才單點的百事零，尺寸要怎樣？"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 7,
+          "top": 59,
+          "width": 13,
+          "height": 31,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 20,
+          "top": 72,
+          "width": 24,
+          "height": 18,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 48,
+          "top": 52,
+          "width": 12,
+          "height": 36,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 75,
+          "top": 32,
+          "width": 22,
+          "height": 46,
+          "unit": "percent"
+        },
+        {
+          "id": 5,
+          "left": 32,
+          "top": 12,
+          "width": 28,
+          "height": 48,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-mikanshu-osage-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。",
+  "l1": "飲料是粗濾蜜柑酒的蘇打兌一杯。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "飲料是粗濾蜜柑酒的蘇打兌一杯。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 1,
+          "top": 30,
+          "width": 12,
+          "height": 68,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 14,
+          "top": 40,
+          "width": 14,
+          "height": 55,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

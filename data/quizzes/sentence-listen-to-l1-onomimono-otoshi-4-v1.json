@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-onomimono-otoshi-4-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "お通しです。",
+  "l1": "這是開胃小菜。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 8.3,
+      "end_sec": 9.04,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "這是開胃小菜。",
+      "distractors": [
+        "如果方便的話，先幫您問一下飲料。",
+        "那麼，生啤兩杯麻煩您。",
+        "失陪了。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

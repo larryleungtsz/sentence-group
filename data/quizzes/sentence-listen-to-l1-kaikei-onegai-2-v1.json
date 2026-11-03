@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-kaikei-onegai-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "かしこまりました。お会計は4,210円になります。",
+  "l1": "明白了。帳單係4,210日圓。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3",
+      "start_sec": 0.05,
+      "end_sec": 4.7,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "明白了。帳單係4,210日圓。",
+      "distractors": [
+        "麻煩結帳。",
+        "好，用呢個麻煩你。",
+        "收你剛好4,210日圓。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

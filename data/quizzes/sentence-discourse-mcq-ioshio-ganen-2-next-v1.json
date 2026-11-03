@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-ioshio-ganen-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "こちらですね。硫黄塩っていう岩塩です。",
+  "direction": "next",
+  "usage_note": "「こちらですね」指物確認，再用「っていう」命名，最後以類別「岩塩です」歸類說明。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「こちらですね。硫黄塩っていう岩塩です。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "香氣係賣點，先聞吓。",
+      "distractors": [
+        "跟住我，我帶你入。",
+        "結帳一次過埋。",
+        "外賣袋免費。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

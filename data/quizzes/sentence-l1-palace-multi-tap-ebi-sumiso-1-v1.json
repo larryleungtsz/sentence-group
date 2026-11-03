@@ -1,0 +1,64 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-ebi-sumiso-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お隣が海老ときゅうりの酢味噌がけです。",
+  "l1": "店員A：旁邊係蝦同青瓜淋醋味噌。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員A：旁邊係蝦同青瓜淋醋味噌。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 20,
+          "top": 36,
+          "width": 14,
+          "height": 14,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 10,
+          "top": 64,
+          "width": 16,
+          "height": 20,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 26,
+          "top": 64,
+          "width": 16,
+          "height": 20,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 32,
+          "top": 45,
+          "width": 8,
+          "height": 16,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

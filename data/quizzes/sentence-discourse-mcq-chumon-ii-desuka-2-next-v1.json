@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-chumon-ii-desuka-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "はい、どうぞー。",
+  "direction": "next",
+  "usage_note": "店員許可點餐：「どうぞ」＝請講／請點；拉長音口語親和",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、どうぞー。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "生啤兩杯，再加雞肉丸。",
+      "distractors": [
+        "出口喺呢邊請。",
+        "收據俾你。",
+        "傘架喺門口。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

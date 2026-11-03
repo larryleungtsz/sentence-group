@@ -1,0 +1,29 @@
+{
+  "quiz_id": "sentence-shadowing-075-kaikei-onegai-4-v1",
+  "objective": "sentence_shadowing_075",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "4,210円ちょうど、お預かりします。",
+  "slides": [
+    {
+      "type": "record_shadow",
+      "instruction": "請聽 0.75× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3",
+      "rate": 0.75,
+      "action": "start_record",
+      "sentence_window_hint": {
+        "start_sec": 2.4,
+        "end_sec": 8.4
+      }
+    },
+    {
+      "type": "record_shadow",
+      "instruction": "可重播自己錄音；完成後按完成（錄音唔上雲，完成即丟）。",
+      "action": "review_complete",
+      "storage": "temp_blob_v1"
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-3-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "ビールおかわりで。",
+  "direction": "prev",
+  "usage_note": "店員覆述確認；短複述鎖定訂單",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ビールおかわりで。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "麻煩再說一次。",
+      "distractors": [
+        "到打烊時間喇。",
+        "只收現金。",
+        "廁所喺走廊盡頭。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -188,6 +188,11 @@
    * manifest quiz uses that objective; missing quizzes are not invented.
    * If `passage_schedule` is absent, `sentence_schedule` is still the legacy
    * Passage table — do not treat it as Sentence objectives.
+   *
+   * A ready stage with no quiz for that sentence unit is already complete.
+   * `vacuousSentenceAdvanceCount` is 1 in that case so callers can step the
+   * cursor once; the 1-day wait then applies, which is how Q24-only units
+   * reach T+5. Full-suite units still stop on the stage that has a quiz.
    */
   function sentenceScheduleTable(schedule) {
     if (
@@ -288,6 +293,72 @@
 
   function sentenceUnitStageLabels(schedule) {
     return orderedStageLabels(sentenceScheduleTable(schedule));
+  }
+
+  function quizOccupiesSentenceStage(q, schedule, sentenceId, label) {
+    if (!q || q.kind !== 'sentence') return false;
+    if (q.sentence_id !== sentenceId) return false;
+    const planned = (sentenceScheduleTable(schedule) || {})[q.objective] || [];
+    if (!planned.includes(label)) return false;
+    if (
+      Array.isArray(q.schedule_stages) &&
+      q.schedule_stages.length &&
+      !q.schedule_stages.includes(label)
+    ) {
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * 1 when the sentence unit's current stage is ready and no manifest quiz
+   * uses it; 0 otherwise. At most one, because stepping starts the wait.
+   * Does not advance past the last label.
+   */
+  function vacuousSentenceAdvanceCount({ schedule, quizzes, sentenceId, state, now }) {
+    const labels = sentenceUnitStageLabels(schedule);
+    const cursor = state || defaultSentenceUnitState();
+    const si = cursor.stageIndex | 0;
+    if (si < 0 || si >= labels.length - 1) return 0;
+    if (!isSentenceUnitStageReady(cursor, now)) return 0;
+    const label = labels[si];
+    const occupies = (quizzes || []).some((q) =>
+      quizOccupiesSentenceStage(q, schedule, sentenceId, label)
+    );
+    return occupies ? 0 : 1;
+  }
+
+  /**
+   * Step every sentence whose current stage has no quiz. `advance` must
+   * persist one stage and stamp lastCompletedAt so the next call sees the wait.
+   */
+  function fastForwardVacuousSentenceUnits({
+    schedule,
+    quizzes,
+    sentences,
+    now,
+    getState,
+    advance,
+  }) {
+    (sentences || []).forEach((s) => {
+      if (!s || s.id == null || s.id === '') return;
+      let guard = 0;
+      while (guard++ < 48) {
+        const state = getState(s.id);
+        if (
+          !vacuousSentenceAdvanceCount({
+            schedule,
+            quizzes,
+            sentenceId: s.id,
+            state,
+            now,
+          })
+        ) {
+          break;
+        }
+        advance(s.id);
+      }
+    });
   }
 
   function dueOnTimeline(labels, state, ready, planned, scheduleStages, done) {
@@ -415,6 +486,8 @@
     passageStageLabels,
     sentenceStageLabels,
     sentenceUnitStageLabels,
+    vacuousSentenceAdvanceCount,
+    fastForwardVacuousSentenceUnits,
     dueStages,
     latestDueStage,
     formatHKT,

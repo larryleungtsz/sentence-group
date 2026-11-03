@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-chashu-shittori-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "direction": "prev",
+  "usage_note": "食評連鎖：「しっとりしてて」質感＋「味も濃厚」；「ちょっと焦げ目もある」＝輕微焦邊作加分細節",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "實物睇落仲好過相。",
+      "distractors": [
+        "麻煩埋單。",
+        "停車場收費機壞咗。",
+        "座位限時兩小時。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-ebi-sumiso-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "そのお隣が、椎茸とあさりの炊き合わせです。",
+  "l1": "店員B：再旁邊係香菇同蜆嘅燉煮拼盤。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員B：再旁邊係香菇同蜆嘅燉煮拼盤。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "hotspots": [
+        {
+          "id": 5,
+          "left": 58,
+          "top": 42,
+          "width": 16,
+          "height": 18,
+          "unit": "percent"
+        },
+        {
+          "id": 6,
+          "left": 50,
+          "top": 62,
+          "width": 12,
+          "height": 20,
+          "unit": "percent"
+        },
+        {
+          "id": 7,
+          "left": 62,
+          "top": 62,
+          "width": 12,
+          "height": 20,
+          "unit": "percent"
+        },
+        {
+          "id": 8,
+          "left": 76,
+          "top": 56,
+          "width": 16,
+          "height": 28,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

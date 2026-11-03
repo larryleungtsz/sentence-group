@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-gochumon-okimari-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "direction": "prev",
+  "usage_note": "「お決まりになりましたら」＝決定後；「お呼びください」＝請叫我；店員暫離前用語",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ご注文お決まりになりましたらお呼びください」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "餐牌放低啦，慢慢睇。",
+      "distractors": [
+        "埋單計好就叫我。",
+        "成單取消，唔該。",
+        "的士到咗就叫我。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-bakuga-tome-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "でも麦芽糖が多め。自分は好きだけど。",
+  "direction": "prev",
+  "usage_note": "轉折評價：「でも」接上句優點後講缺點；「多め」＝偏多；「自分は好きだけど」＝個人OK但留餘地",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「でも麦芽糖が多め。自分は好きだけど。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "香味OK，不過……",
+      "distractors": [
+        "埋單想分期。",
+        "座位可唔可以加兩小時？",
+        "我哋簽麥芽糖批發合約啦。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

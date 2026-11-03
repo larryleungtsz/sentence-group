@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-yoyaku-annai-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？",
+  "direction": "prev",
+  "usage_note": "迎賓開場「いらっしゃいませ」接謙讓「ご予約いただいてますか」＝店員確認客人有冇預約；「いただいて」表受惠於對方預約",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「いらっしゃいませ～、ご予約いただいてますか？」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "門口啱啱得空，即刻招呼。",
+      "distractors": [
+        "麻煩埋單。",
+        "兩杯生啤唔該。",
+        "睇吓菜單得唔得？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

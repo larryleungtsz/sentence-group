@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-7-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 7,
+  "sentence": "はい、お願いします。",
+  "direction": "prev",
+  "usage_note": "短答應承（呢度＝要收據）；語境靠上文，本身係通用應答",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、お願いします。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "袋要唔要？",
+      "distractors": [
+        "好，麻煩你（面試自我介紹前）。",
+        "好，麻煩你（電話未講完訂單就收線）。",
+        "菜單講解再講多次（已經結完帳）。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

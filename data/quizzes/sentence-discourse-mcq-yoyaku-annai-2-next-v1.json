@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-yoyaku-annai-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "7時から予約してたラリーなんですけど",
+  "direction": "next",
+  "usage_note": "客人自報「時間＋予約してた＋名前＋なんですけど」＝軟化開場說明自己係邊個預約；「してた」口語過去、「なんですけど」求對方接話",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「7時から予約してたラリーなんですけど」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "等緊您喇，位已經執好。",
+      "distractors": [
+        "我嚟幫您落單。",
+        "外賣袋要唔要？",
+        "而家係打烊通知。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

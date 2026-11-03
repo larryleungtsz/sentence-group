@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-mikanshu-osage-3-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "ビールおかわりで。",
+  "l1": "啤酒再來一杯。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "啤酒再來一杯。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspots": [
+        {
+          "id": 4,
+          "left": 86,
+          "top": 55,
+          "width": 14,
+          "height": 38,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        4
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}
