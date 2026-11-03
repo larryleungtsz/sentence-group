@@ -288,6 +288,241 @@
     return x >= l && x <= l + w && y >= t && y <= t + h;
   }
 
+  /**
+   * Whole-sentence shadowing (Q22 / Q23). These stay off the Q18 segment UI
+   * even when the sentence is a start/end window at 0.75×.
+   */
+  var WHOLE_SENTENCE_SHADOW_RATES = {
+    sentence_shadowing_125: 1.25,
+    sentence_shadowing_075: 0.75,
+  };
+
+  function wholeSentenceShadowRate(objective) {
+    if (!objective || !Object.prototype.hasOwnProperty.call(WHOLE_SENTENCE_SHADOW_RATES, objective)) {
+      return null;
+    }
+    return WHOLE_SENTENCE_SHADOW_RATES[objective];
+  }
+
+  /**
+   * Q18 segment chrome (hidden scrubber, 「重播」, forced 0.75×).
+   * Passage quizzes keep the old rule, including `rate === 0.75 && hasClip`.
+   * Q20–Q24 never enter that branch.
+   */
+  function isSegmentShadow(quiz, type, audioOpts) {
+    audioOpts = audioOpts || {};
+    var objective = quiz && quiz.objective;
+    if (wholeSentenceShadowRate(objective) != null) return false;
+    if (
+      objective === 'sentence_listen_to_l1' ||
+      objective === 'sentence_l1_palace_multi_tap' ||
+      objective === 'sentence_discourse_mcq'
+    ) {
+      return false;
+    }
+    var hasClip = audioOpts.start_sec != null || audioOpts.end_sec != null;
+    return (
+      objective === 'sentence_segment_shadowing' ||
+      type === 'audio_segment_shadow' ||
+      (Number(audioOpts.rate) === 0.75 && hasClip)
+    );
+  }
+
+  /**
+   * Playback plan for an audio slide.
+   * Q22/Q23: fixed whole-sentence rate, ephemeral recorder, no self-check score.
+   * The recording plan is `{ enabled, persist: false, score: false }` — the
+   * Blob stays in the slide closure and is never written to progress, timing,
+   * or sync snapshots.
+   */
+  function shadowSlidePlan(quiz, type, audioOpts) {
+    var fixed = wholeSentenceShadowRate(quiz && quiz.objective);
+    if (fixed != null) {
+      return {
+        segmentShadow: false,
+        rate: fixed,
+        rateOptions: null,
+        record: { enabled: true, persist: false, score: false },
+        selfCheck: false,
+      };
+    }
+    var segment = isSegmentShadow(quiz, type, audioOpts || {});
+    return {
+      segmentShadow: segment,
+      rate: segment ? 0.75 : audioOpts && audioOpts.rate,
+      rateOptions: segment ? null : audioOpts && audioOpts.rate_options,
+      record: { enabled: false, persist: false, score: false },
+      selfCheck: true,
+    };
+  }
+
+  function resolveAudio(slide) {
+    slide = slide || {};
+    var audioSrc = slide.audio;
+    var audioOpts = {
+      start_sec: slide.start_sec,
+      end_sec: slide.end_sec,
+      rate: slide.rate,
+      rate_options: slide.rate_options,
+    };
+    if (audioSrc && typeof audioSrc === 'object') {
+      audioOpts = {
+        start_sec: audioSrc.start_sec != null ? audioSrc.start_sec : audioOpts.start_sec,
+        end_sec: audioSrc.end_sec != null ? audioSrc.end_sec : audioOpts.end_sec,
+        rate: audioSrc.rate != null ? audioSrc.rate : audioOpts.rate,
+        rate_options: audioOpts.rate_options,
+      };
+      audioSrc = audioSrc.url || audioSrc.src || '';
+    }
+    return { src: audioSrc || '', opts: audioOpts };
+  }
+
+  function pointInHotspot(point, hotspot) {
+    if (!point || !hotspot) return false;
+    return (
+      point.x >= hotspot.left &&
+      point.x <= hotspot.left + hotspot.width &&
+      point.y >= hotspot.top &&
+      point.y <= hotspot.top + hotspot.height
+    );
+  }
+
+  /** Flat `{left,top,width,height}` or sequence-style `{ hotspot: {...} }`. */
+  function hotspotRect(item) {
+    if (!item || typeof item !== 'object') return null;
+    var hs = item.hotspot && typeof item.hotspot === 'object' ? item.hotspot : item;
+    var left = Number(hs.left);
+    var top = Number(hs.top);
+    var width = Number(hs.width);
+    var height = Number(hs.height);
+    if (![left, top, width, height].every(function (n) { return Number.isFinite(n); })) return null;
+    if (width <= 0 || height <= 0) return null;
+    return { left: left, top: top, width: width, height: height };
+  }
+
+  /**
+   * Q21 targets. Accepts `hotspots`, `targets`, or sequence-shaped `sequence`.
+   * A lone `hotspot` counts as a one-item set. Invalid rects are dropped.
+   * Empty / all-invalid → `{ ok: false, reason: 'missing_hotspots' }`.
+   */
+  function multiTapTargets(slide) {
+    var list = slide && (slide.hotspots || slide.targets || slide.sequence);
+    if (!Array.isArray(list) || !list.length) {
+      if (slide && slide.hotspot) {
+        list = [{ hotspot: slide.hotspot, id: slide.id, label: slide.label || slide.text || '' }];
+      } else {
+        return { ok: false, reason: 'missing_hotspots', targets: [] };
+      }
+    }
+    var targets = [];
+    var seen = new Set();
+    for (var i = 0; i < list.length; i++) {
+      var item = list[i];
+      var rect = hotspotRect(item);
+      if (!rect) continue;
+      var id = item && item.id != null && item.id !== '' ? String(item.id) : String(i);
+      if (seen.has(id)) continue;
+      seen.add(id);
+      var label = '';
+      if (item && (item.label || item.text)) label = String(item.label || item.text);
+      targets.push({ id: id, label: label, hotspot: rect });
+    }
+    if (!targets.length) return { ok: false, reason: 'missing_hotspots', targets: [] };
+    return { ok: true, reason: '', targets: targets };
+  }
+
+  function multiTapImage(slide, quiz, context) {
+    context = context || {};
+    var image = slide && (slide.image || slide.palace_image_url);
+    if (!image && quiz) image = quiz.palace_image_url || quiz.image;
+    if (!image) image = context.palaceImageUrl || '';
+    return image ? String(image) : '';
+  }
+
+  /**
+   * Order-independent collect-all. Overlaps prefer a hotspot not yet collected.
+   * @returns {{ kind: 'hit'|'repeat'|'miss', id?: string, label?: string, done: boolean }}
+   */
+  function gradeMultiTap(targets, collectedIds, point) {
+    var collected = new Set((collectedIds || []).map(function (id) { return String(id); }));
+    var hit = null;
+    var repeat = null;
+    var list = targets || [];
+    for (var i = 0; i < list.length; i++) {
+      var target = list[i];
+      if (!pointInHotspot(point, target.hotspot)) continue;
+      if (collected.has(target.id)) {
+        if (!repeat) repeat = target;
+      } else if (!hit) {
+        hit = target;
+      }
+    }
+    if (hit) {
+      return {
+        kind: 'hit',
+        id: hit.id,
+        label: hit.label,
+        done: collected.size + 1 >= list.length,
+      };
+    }
+    if (repeat) return { kind: 'repeat', id: repeat.id, label: repeat.label, done: false };
+    return { kind: 'miss', done: false };
+  }
+
+  /** Q20: keep the sentence audio on the same slide as the L1 choices. */
+  function listenToL1Slides(quiz) {
+    var raw = quiz.slides || [];
+    var audioSlide = null;
+    var select = null;
+    for (var i = 0; i < raw.length; i++) {
+      var s = raw[i];
+      if (!s) continue;
+      if (
+        !audioSlide &&
+        (s.type === 'audio_listen' || s.type === 'audio_shadow' || s.type === 'audio_chunk' || s.type === 'audio_check')
+      ) {
+        audioSlide = s;
+      }
+      if (!select && s.type === 'select_text') select = s;
+    }
+    if (!select && audioSlide && (audioSlide.correct != null || audioSlide.distractors)) {
+      select = audioSlide;
+    }
+    if (!select) return raw;
+    var audio = audioSlide && audioSlide !== select ? audioSlide.audio : (select.audio || (audioSlide && audioSlide.audio));
+    var start = null;
+    var end = null;
+    var rate = null;
+    if (audioSlide) {
+      if (audioSlide.start_sec != null) start = audioSlide.start_sec;
+      if (audioSlide.end_sec != null) end = audioSlide.end_sec;
+      if (audioSlide.rate != null) rate = audioSlide.rate;
+    }
+    if (select.start_sec != null && start == null) start = select.start_sec;
+    if (select.end_sec != null && end == null) end = select.end_sec;
+    if (select.rate != null && rate == null) rate = select.rate;
+    if (!audio && select.audio) audio = select.audio;
+    return [{
+      type: 'select_text',
+      listen_l1: true,
+      prompt: select.prompt || '',
+      correct: select.correct,
+      distractors: select.distractors || [],
+      audio: audio || null,
+      start_sec: start,
+      end_sec: end,
+      rate: rate,
+      instruction: select.instruction || '請聆聽句子，然後揀啱嘅翻譯',
+    }];
+  }
+
+  function prepareSlides(quiz) {
+    if (!quiz) return [];
+    if (quiz.objective === 'mother_cloze_usage') return clozeSlides(quiz);
+    if (quiz.objective === 'sentence_listen_to_l1') return listenToL1Slides(quiz);
+    return quiz.slides || [];
+  }
+
   function makeAudio(src, opts) {
     opts = opts || {};
     const segmentShadow = !!opts.segment_shadow;
@@ -365,10 +600,123 @@
    * @param {HTMLElement} root
    * @param {{ onPass: Function, onFail?: Function, context?: object }} hooks
    */
+  /**
+   * In-session shadow take. The Blob and object URL never leave this closure:
+   * nothing is written to progress, timing, or sync snapshots, and the take is
+   * not scored.
+   */
+  function mountEphemeralRecorder(parent) {
+    var rec = null;
+    var chunks = [];
+    var objectUrl = null;
+    var stream = null;
+    var disposed = false;
+    var status = el('p', 'record-status', '錄音只留喺呢次練習，唔會儲存，亦唔會評分。');
+    var btn = el('button', 'btn', '開始錄音');
+    btn.type = 'button';
+    var playback = el('div', 'record-playback');
+
+    function revoke() {
+      if (objectUrl) {
+        try { URL.revokeObjectURL(objectUrl); } catch (e) { /* already gone */ }
+        objectUrl = null;
+      }
+    }
+
+    function stopTracks() {
+      if (!stream) return;
+      try {
+        stream.getTracks().forEach(function (track) { track.stop(); });
+      } catch (e) { /* ignore */ }
+      stream = null;
+    }
+
+    function unsupported(msg) {
+      status.textContent = msg;
+      btn.textContent = '開始錄音';
+    }
+
+    btn.addEventListener('click', function () {
+      if (disposed) return;
+      if (rec && rec.state === 'recording') {
+        try { rec.stop(); } catch (e) { unsupported('停唔到錄音。可以照跟讀，然後完成。'); }
+        return;
+      }
+      var devices = navigator.mediaDevices;
+      if (!devices || typeof devices.getUserMedia !== 'function' || typeof MediaRecorder === 'undefined') {
+        unsupported('呢個瀏覽器未支援錄音。可以照跟讀，然後完成。');
+        return;
+      }
+      devices.getUserMedia({ audio: true }).then(function (nextStream) {
+        if (disposed) {
+          try { nextStream.getTracks().forEach(function (track) { track.stop(); }); } catch (e) { /* ignore */ }
+          return;
+        }
+        stopTracks();
+        stream = nextStream;
+        chunks = [];
+        revoke();
+        playback.innerHTML = '';
+        var mime = '';
+        if (MediaRecorder.isTypeSupported && MediaRecorder.isTypeSupported('audio/webm')) mime = 'audio/webm';
+        rec = mime ? new MediaRecorder(nextStream, { mimeType: mime }) : new MediaRecorder(nextStream);
+        rec.ondataavailable = function (event) {
+          if (event.data && event.data.size) chunks.push(event.data);
+        };
+        rec.onstop = function () {
+          var mimeType = rec && rec.mimeType ? rec.mimeType : 'audio/webm';
+          var take = chunks.slice();
+          chunks = [];
+          stopTracks();
+          if (disposed) return;
+          var blob = new Blob(take, { type: mimeType });
+          revoke();
+          objectUrl = URL.createObjectURL(blob);
+          var audio = document.createElement('audio');
+          audio.controls = true;
+          audio.src = objectUrl;
+          playback.appendChild(el('p', 'hint', '重聽自己'));
+          playback.appendChild(audio);
+          status.textContent = '可以重聽自己。錄音唔會儲存，亦唔會評分。';
+          btn.textContent = '再錄一次';
+        };
+        rec.start();
+        btn.textContent = '停止錄音';
+        status.textContent = '錄音中…';
+      }, function () {
+        if (!disposed) unsupported('未開到咪。可以照跟讀，然後完成。');
+      });
+    });
+
+    var box = el('div', 'record-box');
+    box.appendChild(status);
+    box.appendChild(btn);
+    box.appendChild(playback);
+    parent.appendChild(box);
+
+    return function dispose() {
+      disposed = true;
+      chunks = [];
+      if (rec && rec.state === 'recording') {
+        rec.ondataavailable = null;
+        var stopped = rec;
+        rec = null;
+        stopped.onstop = function () { stopTracks(); };
+        try { stopped.stop(); } catch (e) { stopTracks(); }
+      } else {
+        stopTracks();
+      }
+      revoke();
+      playback.innerHTML = '';
+    };
+  }
+
   function run(quiz, root, hooks) {
+    hooks = hooks || {};
     root.innerHTML = '';
-    const slides = quiz.objective === 'mother_cloze_usage' ? clozeSlides(quiz) : (quiz.slides || []);
+    const slides = prepareSlides(quiz);
     let idx = 0;
+    let disposeRecorder = null;
     const status = el('div', 'quiz-status');
     const body = el('div', 'quiz-body');
     const feedback = el('div', 'quiz-feedback');
@@ -403,7 +751,35 @@
       if (hooks.onFail) hooks.onFail(quiz);
     }
 
+    function releaseRecorder() {
+      if (!disposeRecorder) return;
+      var dispose = disposeRecorder;
+      disposeRecorder = null;
+      dispose();
+    }
+
+    /** Missing sentence-layer data must not mark the quiz passed. */
+    function mountSoftSkip(message) {
+      body.appendChild(el('p', 'instruction', message));
+      const skip = el('button', 'btn', '跳過');
+      skip.type = 'button';
+      skip.addEventListener('click', () => {
+        if (idx < slides.length - 1) {
+          idx++;
+          renderSlide();
+          return;
+        }
+        if (hooks.onSkip) hooks.onSkip(quiz);
+        else {
+          idx++;
+          renderSlide();
+        }
+      });
+      body.appendChild(skip);
+    }
+
     function renderSlide() {
+      releaseRecorder();
       feedback.textContent = '';
       feedback.className = 'quiz-feedback';
       body.innerHTML = '';
@@ -433,18 +809,51 @@
       if (type === 'select_text') {
         // Q19 Cloze: chunk and blanked L1 cards on this same slide. Grade is still exact card match.
         const cloze = quiz.objective === 'mother_cloze_usage';
+        const listenL1 = !cloze && (quiz.objective === 'sentence_listen_to_l1' || slide.listen_l1);
+        const discourse = !cloze && quiz.objective === 'sentence_discourse_mcq';
+        if ((listenL1 || discourse) && (slide.correct == null || slide.correct === '')) {
+          mountSoftSkip(discourse ? '呢題未有語境選項，跳過。' : '呢題未有翻譯選項，跳過。');
+          return;
+        }
         const host = cloze ? el('div', 'cloze-slide') : body;
         if (cloze) {
           const chunkText = slide.prompt || (quiz.chunk && quiz.chunk.text) || '';
           if (chunkText) host.appendChild(el('p', 'prompt cloze-prompt', chunkText));
         }
+        if (discourse) {
+          const stem = slide.prompt || slide.context || slide.stem || '';
+          if (stem) host.appendChild(el('p', 'prompt', stem));
+        }
+        const instruction = cloze
+          ? '請選擇空白正確的母語句子'
+          : listenL1
+            ? (slide.instruction || '請聆聽句子，然後揀啱嘅翻譯')
+            : discourse
+              ? '請揀最啱上文下理嘅母語句'
+              : '請選擇正確答案';
         host.appendChild(
           el(
             'p',
             cloze ? 'instruction cloze-instruction' : 'instruction',
-            cloze ? '請選擇空白正確的母語句子' : '請選擇正確答案'
+            instruction
           )
         );
+        if (listenL1) {
+          const resolved = resolveAudio(slide);
+          if (resolved.src) {
+            host.appendChild(makeAudio(resolved.src, {
+              start_sec: resolved.opts.start_sec,
+              end_sec: resolved.opts.end_sec,
+              rate: resolved.opts.rate,
+              segment_shadow: false,
+            }));
+          } else {
+            host.appendChild(el('p', 'hint', '未有句子音檔，仍然可以揀翻譯。'));
+          }
+          if (slide.prompt && slide.prompt !== slide.correct) {
+            host.appendChild(el('p', 'prompt', slide.prompt));
+          }
+        }
         const correct = cleanChoiceText(slide.correct);
         const opts = shuffle([correct].concat((slide.distractors || []).map(cleanChoiceText)));
         const list = el('div', cloze ? 'choices cloze-choices' : 'choices');
@@ -533,6 +942,92 @@
           grid.appendChild(b);
         });
         body.appendChild(grid);
+        return;
+      }
+
+      if (type === 'multi_tap' || (type === 'tap' && quiz.objective === 'sentence_l1_palace_multi_tap')) {
+        const ctx = hooks.context || {};
+        const parsed = multiTapTargets(slide);
+        const image = multiTapImage(slide, quiz, ctx);
+        const l1 = slide.prompt || slide.l1 || quiz.l1 || ctx.sentenceL1 || '';
+        if (!image || !parsed.ok) {
+          const why = !image && !parsed.ok
+            ? '未有宮殿圖同熱區，跳過呢題。'
+            : !image
+              ? '未有宮殿圖，跳過呢題。'
+              : '未有呢句嘅熱區，跳過呢題。';
+          mountSoftSkip(why);
+          return;
+        }
+        if (l1) body.appendChild(el('p', 'prompt sentence-l1', l1));
+        body.appendChild(el('p', 'instruction', slide.instruction || '請點選呢句相關嘅所有位置'));
+        const targets = parsed.targets;
+        const collected = [];
+        const progress = el('p', 'multi-tap-progress', '已點 0/' + targets.length);
+        body.appendChild(progress);
+        const wrap = el('div', 'tap-wrap');
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = '';
+        img.className = 'tap-img';
+        wrap.appendChild(img);
+        const selectedBoxes = new Map();
+        let hints = [];
+
+        function clearHints() {
+          hints.forEach((node) => node.remove());
+          hints = [];
+        }
+
+        function paintBox(hotspot, className) {
+          const box = el('div', className);
+          box.style.left = hotspot.left + '%';
+          box.style.top = hotspot.top + '%';
+          box.style.width = hotspot.width + '%';
+          box.style.height = hotspot.height + '%';
+          wrap.appendChild(box);
+          return box;
+        }
+
+        img.addEventListener('click', (evt) => {
+          const rect = img.getBoundingClientRect();
+          const point = {
+            x: ((evt.clientX - rect.left) / rect.width) * 100,
+            y: ((evt.clientY - rect.top) / rect.height) * 100,
+          };
+          clearHints();
+          const result = gradeMultiTap(targets, collected, point);
+          if (result.kind === 'hit') {
+            collected.push(result.id);
+            const target = targets.filter((item) => item.id === result.id)[0];
+            if (target && !selectedBoxes.has(target.id)) {
+              const box = paintBox(target.hotspot, 'hotspot-selected');
+              if (target.label) box.title = target.label;
+              selectedBoxes.set(target.id, box);
+            }
+            progress.textContent = '已點 ' + collected.length + '/' + targets.length;
+            if (result.done) {
+              idx++;
+              renderSlide();
+            } else {
+              feedback.textContent = '啱，仲有位置未點';
+              feedback.className = 'quiz-feedback ok';
+            }
+          } else if (result.kind === 'repeat') {
+            feedback.textContent = '呢度已經點過';
+            feedback.className = 'quiz-feedback';
+          } else {
+            showFail('呢個位置唔係呢句（已點 ' + collected.length + '/' + targets.length + '）');
+            const fb = quiz.feedback || {};
+            if (fb.on_wrong === 'show_correct_box' || fb.on_wrong === 'show_correct') {
+              targets.forEach((target) => {
+                if (collected.indexOf(target.id) !== -1) return;
+                hints.push(paintBox(target.hotspot, 'hotspot-hint'));
+              });
+            }
+          }
+        });
+        body.appendChild(wrap);
         return;
       }
 
@@ -690,7 +1185,28 @@
         type === 'audio_chunk' ||
         type === 'audio_check'
       ) {
-        body.appendChild(el('p', 'instruction', slide.instruction || '請聆聽'));
+        const resolved = resolveAudio(slide);
+        const audioSrc = resolved.src;
+        const audioOpts = resolved.opts;
+        // Q18 (and any non-whitelisted 0.75× clip) keeps segment chrome.
+        // Q22/Q23 force their whole-sentence rate and never set segment_shadow.
+        const plan = shadowSlidePlan(quiz, type, audioOpts);
+        if (plan.segmentShadow) {
+          audioOpts.segment_shadow = true;
+          audioOpts.rate = 0.75;
+          audioOpts.rate_options = null;
+        } else if (plan.record.enabled) {
+          audioOpts.segment_shadow = false;
+          audioOpts.rate = plan.rate;
+          audioOpts.rate_options = null;
+        }
+        const instruction = plan.record.enabled
+          ? (slide.instruction || ('請跟讀成句（' + plan.rate + '×）'))
+          : (slide.instruction || '請聆聽');
+        body.appendChild(el('p', 'instruction', instruction));
+        if (plan.record.enabled && (slide.text || slide.prompt)) {
+          body.appendChild(el('p', 'prompt', slide.text || slide.prompt));
+        }
         // Example L1 (Chinese gloss) — Lexicon / quiz.example_l1 / slide.l1|gloss
         const l1Text =
           slide.l1 ||
@@ -701,35 +1217,18 @@
         if (l1Text) {
           body.appendChild(el('p', 'example-l1 gloss', l1Text));
         }
-        // Accept either string URL or {url, start_sec, end_sec, rate} (Notion Q bots sometimes nest).
-        let audioSrc = slide.audio;
-        let audioOpts = {
-          start_sec: slide.start_sec,
-          end_sec: slide.end_sec,
-          rate: slide.rate,
-          rate_options: slide.rate_options,
-        };
-        if (audioSrc && typeof audioSrc === 'object') {
-          audioOpts = {
-            start_sec: audioSrc.start_sec != null ? audioSrc.start_sec : audioOpts.start_sec,
-            end_sec: audioSrc.end_sec != null ? audioSrc.end_sec : audioOpts.end_sec,
-            rate: audioSrc.rate != null ? audioSrc.rate : audioOpts.rate,
-            rate_options: audioOpts.rate_options,
-          };
-          audioSrc = audioSrc.url || audioSrc.src || '';
-        }
-        // sentence_segment_shadowing / audio_segment_shadow / rate 0.75 clipped slide → force 0.75× + 重播.
-        const hasClip = audioOpts.start_sec != null || audioOpts.end_sec != null;
-        const segmentShadow =
-          quiz.objective === 'sentence_segment_shadowing' ||
-          type === 'audio_segment_shadow' ||
-          (Number(audioOpts.rate) === 0.75 && hasClip);
-        if (segmentShadow) {
-          audioOpts.segment_shadow = true;
-          audioOpts.rate = 0.75;
-          audioOpts.rate_options = null;
-        }
         body.appendChild(makeAudio(audioSrc, audioOpts));
+        if (plan.record.enabled) {
+          disposeRecorder = mountEphemeralRecorder(body);
+          const done = el('button', 'btn btn-primary', '完成跟讀');
+          done.type = 'button';
+          done.addEventListener('click', () => {
+            idx++;
+            renderSlide();
+          });
+          body.appendChild(done);
+          return;
+        }
         if (slide.self_check !== false) {
           body.appendChild(
             selfCheckBar(
@@ -820,5 +1319,21 @@
     renderSlide();
   }
 
-  global.QuizRunner = { run: run, reportLines: reportLines, formatReport: formatReport };
-})(window);
+  global.QuizRunner = {
+    run: run,
+    reportLines: reportLines,
+    formatReport: formatReport,
+    prepareSlides: prepareSlides,
+    isSegmentShadow: isSegmentShadow,
+    shadowSlidePlan: shadowSlidePlan,
+    wholeSentenceShadowRate: wholeSentenceShadowRate,
+    multiTapTargets: multiTapTargets,
+    multiTapImage: multiTapImage,
+    gradeMultiTap: gradeMultiTap,
+    hotspotRect: hotspotRect,
+  };
+
+  if (typeof module === 'object' && module.exports) {
+    module.exports = global.QuizRunner;
+  }
+})(typeof window !== 'undefined' ? window : global);
