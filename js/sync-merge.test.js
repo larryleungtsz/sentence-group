@@ -521,6 +521,65 @@ test('export fallbacks: desktop downloads, iPhone shares then copy, textarea alw
   );
 });
 
+test('legacy sentences fold into passages and are not reset by an empty passages map', function () {
+  var legacy = {
+    quizzes: {},
+    chunks: {},
+    sentences: { ebi: { lastCompletedAt: '2026-10-01T00:00:00.000Z', stageIndex: 4 } },
+  };
+  var normalized = SM.normalizeProgress(legacy);
+  assert.strictEqual(normalized.passages.ebi.stageIndex, 4);
+  assert.strictEqual(normalized.sentences.ebi.stageIndex, 4);
+  assert.strictEqual(SM.isProgressEmpty(legacy), false);
+
+  var merged = SM.mergeProgress(legacy, {
+    quizzes: {},
+    chunks: {},
+    passages: { ebi: { lastCompletedAt: '2026-10-02T00:00:00.000Z', stageIndex: 1 } },
+    sentences: {},
+  });
+  assert.strictEqual(merged.passages.ebi.stageIndex, 4);
+  assert.strictEqual(merged.sentences.ebi.stageIndex, 4);
+});
+
+test('passage mirror and sentenceUnits merge without touching each other', function () {
+  var merged = SM.mergeProgress(
+    {
+      quizzes: {},
+      chunks: {},
+      passages: { ebi: { lastCompletedAt: '2026-10-01T00:00:00.000Z', stageIndex: 2 } },
+      sentenceUnits: {
+        'ebi:s1': { lastCompletedAt: '2026-10-03T00:00:00.000Z', stageIndex: 1 },
+      },
+    },
+    {
+      quizzes: {},
+      chunks: {},
+      sentences: { aka: { lastCompletedAt: '2026-10-04T00:00:00.000Z', stageIndex: 3 } },
+      sentenceUnits: {},
+    }
+  );
+  assert.strictEqual(merged.passages.ebi.stageIndex, 2);
+  assert.strictEqual(merged.passages.aka.stageIndex, 3);
+  assert.strictEqual(merged.sentences.aka.stageIndex, 3);
+  assert.strictEqual(merged.sentenceUnits['ebi:s1'].stageIndex, 1);
+  assert.strictEqual(SM.isProgressEmpty({ sentenceUnits: { 'ebi:s1': { stageIndex: 1, lastCompletedAt: '2026-10-01T00:00:00.000Z' } } }), false);
+});
+
+test('legacy passage timing and a sentence unit do not share a bucket', function () {
+  var rows = SM.recomputeChunks([
+    { kind: 'sentence', chunkId: null, durationMs: 1000, quizId: 'old' },
+    { kind: 'passage', chunkId: null, durationMs: 500, quizId: 'new' },
+    { kind: 'sentence', sentenceId: 's1', chunkId: null, durationMs: 250, quizId: 'unit' },
+  ]);
+  var byKey = {};
+  rows.forEach(function (row) { byKey[row.key] = row; });
+  assert.strictEqual(byKey.passage.totalMs, 1500);
+  assert.strictEqual(byKey.passage.label, '段落題');
+  assert.strictEqual(byKey['s:s1'].totalMs, 250);
+  assert.strictEqual(byKey['s:s1'].kind, 'sentence');
+});
+
 if (failed) {
   console.error(failed + ' failed');
   process.exit(1);

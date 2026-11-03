@@ -42,9 +42,13 @@
           meta.kind === 'chunk'
             ? Progress.getChunk(group.slug, meta.chunk_id)
             : null,
-        sentenceState:
+        passageState:
+          meta.kind === 'passage'
+            ? Progress.getPassage(group.slug)
+            : null,
+        sentenceUnitState:
           meta.kind === 'sentence'
-            ? Progress.getSentence(group.slug)
+            ? Progress.getSentenceUnit(group.slug, meta.sentence_id)
             : null,
         completedStages: prog.completedStages,
         now: nowMs,

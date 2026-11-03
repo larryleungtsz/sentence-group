@@ -29,7 +29,7 @@
   var linksEl = document.getElementById('links');
 
   function emptyRoot() {
-    return { quizzes: {}, chunks: {}, sentences: {} };
+    return { quizzes: {}, chunks: {}, passages: {}, sentences: {}, sentenceUnits: {} };
   }
 
   try {
@@ -38,6 +38,8 @@
     var quizzes = raw.quizzes || {};
     var chunks = raw.chunks || {};
     var sentences = raw.sentences || {};
+    var passages = raw.passages || {};
+    var sentenceUnits = raw.sentenceUnits || {};
     var removedQ = 0, removedC = 0, removedS = 0;
 
     Object.keys(quizzes).forEach(function (id) {
@@ -63,11 +65,25 @@
         delete sentences[slug];
         removedS++;
       }
+      if (Object.prototype.hasOwnProperty.call(passages, slug)) {
+        delete passages[slug];
+        removedS++;
+      }
+    });
+    Object.keys(sentenceUnits).forEach(function (key) {
+      for (var i = 0; i < SLUGS.length; i++) {
+        if (key.indexOf(SLUGS[i] + ':') === 0) {
+          delete sentenceUnits[key];
+          break;
+        }
+      }
     });
 
     raw.quizzes = quizzes;
     raw.chunks = chunks;
+    raw.passages = passages;
     raw.sentences = sentences;
+    raw.sentenceUnits = sentenceUnits;
     localStorage.setItem(KEY, JSON.stringify(raw));
 
     statusEl.textContent = '已重置 ebi-sumiso + aka-konnyaku（只清呢兩個 group 嘅 SRS）。';

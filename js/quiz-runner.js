@@ -27,12 +27,18 @@
     mother_language_pronounce: '母語發音',
     mother_to_target_language: '母語譯目標語',
     pronunciation_sounding_select: '發音諧音選擇',
+    sentence_discourse_mcq: '句子語境選擇',
+    sentence_l1_palace_multi_tap: '母語對應宮殿',
+    sentence_listen_to_l1: '聽句選翻譯',
     sentence_segment_shadowing: '整段分段跟讀',
+    sentence_shadowing_075: '句子跟讀 0.75×',
+    sentence_shadowing_125: '句子跟讀 1.25×',
     sequence_training: '段落順序訓練',
     story_select_image: '故事選圖',
     target_to_mnemonic_image: '目標語記憶圖',
     tone_shadowing_05: '語調跟讀 0.5×',
     whole_sentence_listening: '整段聆聽',
+    sentence_shell_smoke: '句子層空殼',
     word_shadowing_025: '單字跟讀 0.25×',
     writing_shadowing: '書寫跟讀',
     youglish_listen: 'YouGlish 聆聽',
@@ -68,7 +74,16 @@
     var text = '';
     if (chunk && chunk.text) text = String(chunk.text);
     else if (ctx.chunkText) text = String(ctx.chunkText);
-    if (kind === 'sentence' || (kind !== 'chunk' && id == null && !text)) return '整段 / n/a';
+    if (kind === 'passage') return '整段 / n/a';
+    if (kind === 'sentence') {
+      var sentenceText = ctx.sentenceText ? String(ctx.sentenceText) : '';
+      var sid = ctx.sentenceId != null && ctx.sentenceId !== '' ? ctx.sentenceId : null;
+      if (sentenceText && sid != null) return sentenceText + '（' + sid + '）';
+      if (sentenceText) return sentenceText;
+      if (sid != null) return '句子 ' + sid;
+      return '句子 / n/a';
+    }
+    if (kind !== 'chunk' && id == null && !text) return '整段 / n/a';
     if (text && id != null) return text + '（id ' + id + '）';
     if (text) return text;
     if (id != null) return 'id ' + id;

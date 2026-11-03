@@ -48,6 +48,7 @@ function quiz(duration, started, extra) {
     endedAt: (extra && extra.endedAt) || started,
     durationMs: duration,
   };
+  if (extra && extra.sentenceId != null) q.sentenceId = extra.sentenceId;
   return q;
 }
 
@@ -225,7 +226,7 @@ test('expand lists every group chunk, sentence row, and timing-only ids', functi
     }),
     [
       'c3|ちょっと|true|5100',
-      'sentence|段落題|false|2000',
+      'passage|段落題|false|2000',
       'c9|c9|false|1000',
       'c1|濃厚|true|0',
       'c2|c2|false|0',
@@ -233,7 +234,7 @@ test('expand lists every group chunk, sentence row, and timing-only ids', functi
   );
 });
 
-test('sentence row is omitted only when the group has no sentence and no sentence quizzes', function () {
+test('passage row is omitted only when the group has no sentence and no passage quizzes', function () {
   var rows = SM.groupChunkRows(
     [session('g', [quiz(10, '2026-11-01T00:00:00.000Z', { chunkId: 1 })])],
     'g',
@@ -241,10 +242,42 @@ test('sentence row is omitted only when the group has no sentence and no sentenc
   );
   assert.strictEqual(
     rows.some(function (r) {
-      return r.kind === 'sentence';
+      return r.kind === 'passage' || r.kind === 'sentence';
     }),
     false
   );
+});
+
+test('legacy kind sentence timing stays on the passage row; sentenceId is its own row', function () {
+  var group = {
+    slug: 'ebi',
+    sentence: '海老',
+    chunks: [{ id: 1, text: '濃厚' }],
+    sentences: [{ id: 's1', text: '海老。' }],
+  };
+  var rows = SM.groupChunkRows(
+    [
+      session('ebi', [
+        quiz(4000, '2026-11-01T00:00:00.000Z', { kind: 'sentence', chunkId: null, quizId: 'legacy' }),
+        quiz(1500, '2026-11-01T00:01:00.000Z', { kind: 'passage', chunkId: null, quizId: 'p' }),
+        quiz(250, '2026-11-01T00:02:00.000Z', {
+          kind: 'sentence',
+          chunkId: null,
+          sentenceId: 's1',
+          quizId: 'unit',
+        }),
+      ]),
+    ],
+    'ebi',
+    group
+  );
+  var passage = rows.filter(function (r) { return r.kind === 'passage'; })[0];
+  var unit = rows.filter(function (r) { return r.kind === 'sentence'; })[0];
+  assert.strictEqual(passage.key, 'passage');
+  assert.strictEqual(passage.totalMs, 5500);
+  assert.strictEqual(unit.key, 's:s1');
+  assert.strictEqual(unit.totalMs, 250);
+  assert.strictEqual(unit.label, '海老。');
 });
 
 test('學新詞 counts enteredT1At in today and last 7 HKT days, not current stage', function () {

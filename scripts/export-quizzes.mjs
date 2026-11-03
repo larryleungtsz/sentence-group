@@ -224,11 +224,14 @@ function processRow(row, kind) {
 }
 
 for (const row of chunkRows) processRow(row, 'chunk');
-for (const row of sentenceRows) processRow(row, 'sentence');
+// Notion "sentence quizzes" raw is the Passage layer (Q8 / Q11 / Q18).
+// The middle Sentence layer is not this dump; do not write kind "sentence" here.
+for (const row of sentenceRows) processRow(row, 'passage');
 
 playable.sort((a, b) => {
-  const ka = a.kind === 'sentence' ? 1 : 0;
-  const kb = b.kind === 'sentence' ? 1 : 0;
+  const rank = (kind) => (kind === 'sentence' ? 1 : kind === 'passage' ? 2 : 0);
+  const ka = rank(a.kind);
+  const kb = rank(b.kind);
   if (ka !== kb) return ka - kb;
   const la = a.level ?? 99;
   const lb = b.level ?? 99;

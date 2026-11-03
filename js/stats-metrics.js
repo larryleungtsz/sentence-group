@@ -145,8 +145,24 @@
       });
   }
 
+  /**
+   * `kind: "sentence"` with no sentenceId is a legacy Passage timing row.
+   * Keep in step with timing.js timingLayer.
+   */
+  function timingLayer(quiz) {
+    if (!quiz || typeof quiz !== 'object') return 'chunk';
+    if (quiz.kind === 'passage') return 'passage';
+    if (quiz.kind === 'sentence') {
+      if (quiz.sentenceId != null && quiz.sentenceId !== '') return 'sentence';
+      return 'passage';
+    }
+    return 'chunk';
+  }
+
   function chunkKeyForQuiz(quiz) {
-    if (quiz && quiz.kind === 'sentence') return 'sentence';
+    var layer = timingLayer(quiz);
+    if (layer === 'passage') return 'passage';
+    if (layer === 'sentence') return 's:' + quiz.sentenceId;
     var id = quiz && quiz.chunkId != null ? quiz.chunkId : '?';
     return 'c' + id;
   }
@@ -160,11 +176,13 @@
         var ms = quizDurationMs(quiz);
         if (ms == null) return;
         var key = chunkKeyForQuiz(quiz);
+        var layer = timingLayer(quiz);
         if (!map[key]) {
           map[key] = {
             key: key,
-            kind: key === 'sentence' ? 'sentence' : 'chunk',
-            chunkId: key === 'sentence' ? null : quiz.chunkId != null ? quiz.chunkId : null,
+            kind: layer === 'chunk' ? 'chunk' : layer,
+            chunkId: layer === 'chunk' && quiz.chunkId != null ? quiz.chunkId : null,
+            sentenceId: layer === 'sentence' ? quiz.sentenceId : null,
             totalMs: 0,
             quizCount: 0,
           };
@@ -203,7 +221,7 @@
       });
     });
     Object.keys(sums).forEach(function (key) {
-      if (key === 'sentence' || seen[key]) return;
+      if (key === 'passage' || key.indexOf('s:') === 0 || seen[key]) return;
       var sum = sums[key];
       var idLabel = sum.chunkId != null ? 'c' + sum.chunkId : 'c?';
       rows.push({
@@ -216,24 +234,68 @@
         quizCount: sum.quizCount,
       });
     });
-    var sentenceSum = sums.sentence;
-    var sentenceApplicable =
-      !!(group && group.sentence) || !!(sentenceSum && sentenceSum.quizCount > 0);
-    if (sentenceApplicable) {
+    var sentenceList = (group && group.sentences) || [];
+    sentenceList.forEach(function (sentence, index) {
+      if (!sentence || sentence.id == null || sentence.id === '') return;
+      var key = 's:' + sentence.id;
+      seen[key] = true;
+      var sum = sums[key];
+      var text = sentence.text ? String(sentence.text) : '';
       rows.push({
-        key: 'sentence',
+        key: key,
         kind: 'sentence',
+        chunkId: null,
+        sentenceId: sentence.id,
+        order: index,
+        label: text || '句子 ' + sentence.id,
+        labelFromText: !!text,
+        totalMs: sum ? sum.totalMs : 0,
+        quizCount: sum ? sum.quizCount : 0,
+      });
+    });
+    Object.keys(sums).forEach(function (key) {
+      if (key.indexOf('s:') !== 0 || seen[key]) return;
+      var sum = sums[key];
+      rows.push({
+        key: key,
+        kind: 'sentence',
+        chunkId: null,
+        sentenceId: sum.sentenceId,
+        order: 100000,
+        label: '句子 ' + (sum.sentenceId != null ? sum.sentenceId : key.slice(2)),
+        labelFromText: false,
+        totalMs: sum.totalMs,
+        quizCount: sum.quizCount,
+      });
+    });
+    var passageSum = sums.passage;
+    var passageApplicable =
+      !!(group && group.sentence) || !!(passageSum && passageSum.quizCount > 0);
+    if (passageApplicable) {
+      rows.push({
+        key: 'passage',
+        kind: 'passage',
         chunkId: null,
         label: '段落題',
         labelFromText: false,
-        totalMs: sentenceSum ? sentenceSum.totalMs : 0,
-        quizCount: sentenceSum ? sentenceSum.quizCount : 0,
+        totalMs: passageSum ? passageSum.totalMs : 0,
+        quizCount: passageSum ? passageSum.quizCount : 0,
       });
     }
     rows.sort(function (a, b) {
       if (b.totalMs !== a.totalMs) return b.totalMs - a.totalMs;
-      var ai = a.kind === 'sentence' ? 1000000000 : Number(a.chunkId);
-      var bi = b.kind === 'sentence' ? 1000000000 : Number(b.chunkId);
+      var ai =
+        a.kind === 'passage'
+          ? 1000000000
+          : a.kind === 'sentence'
+            ? 900000000 + (a.order || 0)
+            : Number(a.chunkId);
+      var bi =
+        b.kind === 'passage'
+          ? 1000000000
+          : b.kind === 'sentence'
+            ? 900000000 + (b.order || 0)
+            : Number(b.chunkId);
       if (ai !== bi) return (isNaN(ai) ? 0 : ai) - (isNaN(bi) ? 0 : bi);
       return String(a.key).localeCompare(String(b.key));
     });

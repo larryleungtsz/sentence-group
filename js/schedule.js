@@ -38,8 +38,21 @@
     return { lastCompletedAt: null, stageIndex: 0 };
   }
 
-  /** Default sentence timeline state when never practiced. */
+  /** Default Passage timeline state when never practiced. */
+  function defaultPassageState() {
+    return { lastCompletedAt: null, stageIndex: 0 };
+  }
+
+  /**
+   * Legacy name for the Passage cursor. Still the whole-passage timeline,
+   * not the middle Sentence layer (`defaultSentenceUnitState`).
+   */
   function defaultSentenceState() {
+    return defaultPassageState();
+  }
+
+  /** Default per-sentence unit cursor. Same shape as a Passage cursor. */
+  function defaultSentenceUnitState() {
     return { lastCompletedAt: null, stageIndex: 0 };
   }
 
@@ -151,29 +164,95 @@
     return out;
   }
 
-  function isSentenceStageReady(sentenceState, now) {
-    const state = sentenceState || defaultSentenceState();
-    const si = state.stageIndex | 0;
+  /**
+   * Passage objectives live on `passage_schedule`.
+   * A file that has not been migrated yet still has them on `sentence_schedule`
+   * and no `passage_schedule` key — read that only as a fallback.
+   * Once `passage_schedule` exists, `sentence_schedule` is the middle Sentence
+   * layer and must not feed Passage dues.
+   */
+  function passageScheduleTable(schedule) {
+    if (
+      schedule &&
+      Object.prototype.hasOwnProperty.call(schedule, 'passage_schedule') &&
+      schedule.passage_schedule &&
+      typeof schedule.passage_schedule === 'object'
+    ) {
+      return schedule.passage_schedule;
+    }
+    return (schedule && schedule.sentence_schedule) || {};
+  }
+
+  /**
+   * Middle Sentence layer (Q20–Q24 stages). A stage is due only when a
+   * manifest quiz uses that objective; missing quizzes are not invented.
+   * If `passage_schedule` is absent, `sentence_schedule` is still the legacy
+   * Passage table — do not treat it as Sentence objectives.
+   */
+  function sentenceScheduleTable(schedule) {
+    if (
+      !schedule ||
+      !Object.prototype.hasOwnProperty.call(schedule, 'passage_schedule')
+    ) {
+      return {};
+    }
+    const table = schedule.sentence_schedule;
+    return table && typeof table === 'object' ? table : {};
+  }
+
+  function isTimelineStageReady(state, now, waitMs) {
+    const cursor = state || defaultPassageState();
+    const si = cursor.stageIndex | 0;
     if (si < 0) return false;
     if (si === 0) return true;
-    if (!state.lastCompletedAt) return false;
-    const unlockedAt =
-      new Date(state.lastCompletedAt).getTime() + SENTENCE_WAIT_MS;
+    if (!cursor.lastCompletedAt) return false;
+    const unlockedAt = new Date(cursor.lastCompletedAt).getTime() + waitMs;
     return now >= unlockedAt;
   }
 
-  function sentenceStageReadyAt(sentenceState) {
-    const state = sentenceState || defaultSentenceState();
-    const si = state.stageIndex | 0;
+  function timelineStageReadyAt(state, waitMs) {
+    const cursor = state || defaultPassageState();
+    const si = cursor.stageIndex | 0;
     if (si === 0) return null;
-    if (!state.lastCompletedAt) return null;
-    return new Date(state.lastCompletedAt).getTime() + SENTENCE_WAIT_MS;
+    if (!cursor.lastCompletedAt) return null;
+    return new Date(cursor.lastCompletedAt).getTime() + waitMs;
   }
 
-  /** Ordered sentence stage labels: union of all objectives' T+N, sorted by N. */
-  function sentenceStageLabels(schedule) {
-    const table = (schedule && schedule.sentence_schedule) || {};
-    const keys = Object.keys(table);
+  /** Passage wait is 1 day, so T+N lines up with day N. */
+  function isPassageStageReady(passageState, now) {
+    return isTimelineStageReady(passageState, now, SENTENCE_WAIT_MS);
+  }
+
+  /** Legacy name. Passage timeline, not the Sentence layer. */
+  function isSentenceStageReady(sentenceState, now) {
+    return isPassageStageReady(sentenceState, now);
+  }
+
+  /**
+   * Sentence-unit wait matches Passage for the empty shell.
+   * Q20–Q24 can change SENTENCE_UNIT_WAIT_MS without touching Passage.
+   */
+  const SENTENCE_UNIT_WAIT_MS = SENTENCE_WAIT_MS;
+
+  function isSentenceUnitStageReady(unitState, now) {
+    return isTimelineStageReady(unitState, now, SENTENCE_UNIT_WAIT_MS);
+  }
+
+  function passageStageReadyAt(passageState) {
+    return timelineStageReadyAt(passageState, SENTENCE_WAIT_MS);
+  }
+
+  function sentenceStageReadyAt(sentenceState) {
+    return passageStageReadyAt(sentenceState);
+  }
+
+  function sentenceUnitStageReadyAt(unitState) {
+    return timelineStageReadyAt(unitState, SENTENCE_UNIT_WAIT_MS);
+  }
+
+  /** Union of a schedule table's stage labels, sorted by T+N. Empty table → T+1..T+30. */
+  function orderedStageLabels(table) {
+    const keys = Object.keys(table || {});
     if (!keys.length) {
       const labels = [];
       for (let d = 1; d <= 30; d++) labels.push('T+' + d);
@@ -198,6 +277,37 @@
     });
   }
 
+  function passageStageLabels(schedule) {
+    return orderedStageLabels(passageScheduleTable(schedule));
+  }
+
+  /** Legacy name for Passage stage labels. */
+  function sentenceStageLabels(schedule) {
+    return passageStageLabels(schedule);
+  }
+
+  function sentenceUnitStageLabels(schedule) {
+    return orderedStageLabels(sentenceScheduleTable(schedule));
+  }
+
+  function dueOnTimeline(labels, state, ready, planned, scheduleStages, done) {
+    const cursor = state || defaultPassageState();
+    const si = cursor.stageIndex | 0;
+    if (si < 0 || si >= labels.length) return [];
+    if (!ready) return [];
+    const label = labels[si];
+    if (!planned.includes(label)) return [];
+    if (
+      Array.isArray(scheduleStages) &&
+      scheduleStages.length &&
+      !scheduleStages.includes(label)
+    ) {
+      return [];
+    }
+    if (done.has(label)) return [];
+    return [label];
+  }
+
   /**
    * Due stage labels for one quiz under completion-based unlock.
    * Only the timeline's current stage can be due (once ready and not yet marked on quiz).
@@ -209,6 +319,8 @@
     schedule,
     chunkState,
     sentenceState,
+    passageState,
+    sentenceUnitState,
     completedStages,
     now,
     admitted,
@@ -216,25 +328,29 @@
     scheduleStages,
   }) {
     const done = new Set(completedStages || []);
+    if (kind === 'passage') {
+      const state = passageState || sentenceState || defaultPassageState();
+      const planned = (passageScheduleTable(schedule) || {})[objective] || [];
+      return dueOnTimeline(
+        passageStageLabels(schedule),
+        state,
+        isPassageStageReady(state, now),
+        planned,
+        scheduleStages,
+        done
+      );
+    }
     if (kind === 'sentence') {
-      const labels = sentenceStageLabels(schedule);
-      const state = sentenceState || defaultSentenceState();
-      const si = state.stageIndex | 0;
-      if (si < 0 || si >= labels.length) return [];
-      if (!isSentenceStageReady(state, now)) return [];
-      const label = labels[si];
-      const planned = (schedule.sentence_schedule || {})[objective] || [];
-      if (!planned.includes(label)) return [];
-      // Optional per-quiz pin: only due on listed stage labels (e.g. daily Q18).
-      if (
-        Array.isArray(scheduleStages) &&
-        scheduleStages.length &&
-        !scheduleStages.includes(label)
-      ) {
-        return [];
-      }
-      if (done.has(label)) return [];
-      return [label];
+      const state = sentenceUnitState || defaultSentenceUnitState();
+      const planned = (sentenceScheduleTable(schedule) || {})[objective] || [];
+      return dueOnTimeline(
+        sentenceUnitStageLabels(schedule),
+        state,
+        isSentenceUnitStageReady(state, now),
+        planned,
+        scheduleStages,
+        done
+      );
     }
 
     // skip / skipped chunks never emit dues (even if admitted for ORDER)
@@ -272,11 +388,13 @@
     );
   }
 
-  global.Schedule = {
+  const api = {
     chunkStageLabels,
     chunkWaitAfterStage,
     defaultChunkState,
+    defaultPassageState,
     defaultSentenceState,
+    defaultSentenceUnitState,
     isChunkStageReady,
     chunkStageReadyAt,
     isChunkInDense,
@@ -286,16 +404,29 @@
     hasUnlockedThroughT1,
     isChunkAdmitted,
     admittedChunkIds,
+    passageScheduleTable,
+    sentenceScheduleTable,
+    isPassageStageReady,
     isSentenceStageReady,
+    isSentenceUnitStageReady,
+    passageStageReadyAt,
     sentenceStageReadyAt,
+    sentenceUnitStageReadyAt,
+    passageStageLabels,
     sentenceStageLabels,
+    sentenceUnitStageLabels,
     dueStages,
     latestDueStage,
     formatHKT,
     HOUR_MS,
     DAY_MS,
     SENTENCE_WAIT_MS,
+    SENTENCE_UNIT_WAIT_MS,
     DENSE_MAX_INDEX,
     T1_STAGE_INDEX,
   };
-})(window);
+  global.Schedule = api;
+  if (typeof module === 'object' && module.exports) {
+    module.exports = api;
+  }
+})(typeof window !== 'undefined' ? window : globalThis);

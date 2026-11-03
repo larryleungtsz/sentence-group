@@ -47,8 +47,20 @@
     return Schedule.admittedChunkIds(chunks, getChunkState, nowMs);
   }
 
+  const sentenceIds = new Set(
+    (group.sentences || [])
+      .map((s) => (s && s.id != null ? s.id : null))
+      .filter((id) => id != null && id !== '')
+  );
+
   const groupQuizzes = (manifest.quizzes || []).filter((q) => {
-    if (q.kind === 'sentence') return q.sentence === group.sentence;
+    if (q.kind === 'passage') return q.sentence === group.sentence;
+    if (q.kind === 'sentence') {
+      if (!sentenceIds.has(q.sentence_id)) return false;
+      if (q.group_slug && q.group_slug !== group.slug) return false;
+      if (q.sentence && q.sentence !== group.sentence) return false;
+      return true;
+    }
     return (
       chunks.some((c) => c.id === q.chunk_id) &&
       q.sentence === group.sentence
@@ -67,14 +79,17 @@
       kind === 'chunk' ? admittedSet().has(meta.chunk_id) : true;
     const chunkState =
       kind === 'chunk' ? Progress.getChunk(slug, meta.chunk_id) : null;
-    const sentenceState =
-      kind === 'sentence' ? Progress.getSentence(slug) : null;
+    const passageState =
+      kind === 'passage' ? Progress.getPassage(slug) : null;
+    const sentenceUnitState =
+      kind === 'sentence' ? Progress.getSentenceUnit(slug, meta.sentence_id) : null;
     return Schedule.dueStages({
       objective: meta.objective,
       kind,
       schedule,
       chunkState,
-      sentenceState,
+      passageState,
+      sentenceUnitState,
       completedStages: prog.completedStages,
       now: nowMs,
       admitted,
@@ -91,10 +106,12 @@
         due.push({ meta, dueStages: stages });
       }
     }
-    // L1 → L2 → L3 → sentence; within level by chunk_id (join order)
+    // L1 → L2 → L3 chunks, then Sentence units, then Passage.
+    // Groups with no due Sentence quizzes keep the old chunk-then-passage order.
     due.sort((a, b) => {
-      const ka = a.meta.kind === 'sentence' ? 1 : 0;
-      const kb = b.meta.kind === 'sentence' ? 1 : 0;
+      const rank = (kind) => (kind === 'sentence' ? 1 : kind === 'passage' ? 2 : 0);
+      const ka = rank(a.meta.kind);
+      const kb = rank(b.meta.kind);
       if (ka !== kb) return ka - kb;
       if (ka === 0) {
         const la = a.meta.level ?? 99;
@@ -103,6 +120,11 @@
         const ca = a.meta.chunk_id ?? 0;
         const cb = b.meta.chunk_id ?? 0;
         if (ca !== cb) return ca - cb;
+      }
+      if (ka === 1) {
+        const sa = String(a.meta.sentence_id || '');
+        const sb = String(b.meta.sentence_id || '');
+        if (sa !== sb) return sa.localeCompare(sb);
       }
       return (
         (a.meta.objective || '').localeCompare(b.meta.objective || '') ||
@@ -118,9 +140,18 @@
     );
   }
 
-  function sentenceHasDue() {
+  function passageHasDue() {
     return groupQuizzes.some(
-      (m) => m.kind === 'sentence' && dueForMeta(m).length
+      (m) => m.kind === 'passage' && dueForMeta(m).length
+    );
+  }
+
+  function sentenceUnitHasDue(sentenceId) {
+    return groupQuizzes.some(
+      (m) =>
+        m.kind === 'sentence' &&
+        m.sentence_id === sentenceId &&
+        dueForMeta(m).length
     );
   }
 
@@ -206,11 +237,22 @@
         parts.push('chunk' + c.id + ' ' + lab + ' @ ' + Schedule.formatHKT(t));
       }
     }
-    const ss = Progress.getSentence(slug);
-    if (!Schedule.isSentenceStageReady(ss, nowMs)) {
-      const t = Schedule.sentenceStageReadyAt(ss);
+    (group.sentences || []).forEach((s) => {
+      if (!s || s.id == null || s.id === '') return;
+      const st = Progress.getSentenceUnit(slug, s.id);
+      if (Schedule.isSentenceUnitStageReady(st, nowMs)) return;
+      const t = Schedule.sentenceUnitStageReadyAt(st);
       if (t != null) {
-        const labels = Schedule.sentenceStageLabels(schedule);
+        const labels = Schedule.sentenceUnitStageLabels(schedule);
+        const lab = labels[st.stageIndex] || '?';
+        parts.push('sentence ' + s.id + ' ' + lab + ' @ ' + Schedule.formatHKT(t));
+      }
+    });
+    const ss = Progress.getPassage(slug);
+    if (!Schedule.isPassageStageReady(ss, nowMs)) {
+      const t = Schedule.passageStageReadyAt(ss);
+      if (t != null) {
+        const labels = Schedule.passageStageLabels(schedule);
         const lab = labels[ss.stageIndex] || '?';
         parts.push('passage ' + lab + ' @ ' + Schedule.formatHKT(t));
       }
@@ -246,7 +288,9 @@
       const chunkBit =
         item.meta.kind === 'chunk'
           ? ' c' + item.meta.chunk_id
-          : '';
+          : item.meta.kind === 'sentence'
+            ? ' ' + (item.meta.sentence_id || 'sentence')
+            : '';
       li.textContent =
         i +
         1 +
@@ -300,9 +344,13 @@
           chunkMeta(item.meta.chunk_id)
         );
       }
+    } else if (item.meta.kind === 'passage') {
+      if (!passageHasDue()) {
+        Progress.advancePassage(slug, nowIso);
+      }
     } else if (item.meta.kind === 'sentence') {
-      if (!sentenceHasDue()) {
-        Progress.advanceSentence(slug, nowIso);
+      if (!sentenceUnitHasDue(item.meta.sentence_id)) {
+        Progress.advanceSentenceUnit(slug, item.meta.sentence_id, nowIso);
       }
     }
   }
@@ -326,6 +374,10 @@
     if (activeSession) activeSession.startQuiz(item.meta);
     const quiz = await (await fetch(item.meta.file)).json();
     const chunk = item.meta.kind === 'chunk' ? chunkMeta(item.meta.chunk_id) : null;
+    const sentenceRow =
+      item.meta.kind === 'sentence'
+        ? (group.sentences || []).find((s) => s && s.id === item.meta.sentence_id) || null
+        : null;
     QuizRunner.run(quiz, runnerEl, {
       context: {
         groupTitle: group.title || group.sentence || '',
@@ -333,6 +385,8 @@
         kind: item.meta.kind,
         chunkId: item.meta.kind === 'chunk' ? item.meta.chunk_id : null,
         chunkText: chunk && chunk.text ? chunk.text : '',
+        sentenceId: item.meta.kind === 'sentence' ? item.meta.sentence_id : null,
+        sentenceText: sentenceRow && sentenceRow.text ? sentenceRow.text : '',
       },
       onPass() {
         if (activeSession) activeSession.endQuiz(item.meta);

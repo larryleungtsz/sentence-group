@@ -74,8 +74,8 @@
         ' 題、' +
         progress.chunks +
         ' 個 chunk、' +
-        progress.sentences +
-        ' 句。唔使登入。'
+        progress.passages +
+        ' 段。唔使登入。'
     );
   }
 
