@@ -1,4 +1,4 @@
-# Website Manager — Sentence Group 練習站
+# Website Manager — Passage Group 練習站
 
 靜態 HTML + JS，可部署到 GitHub Pages。時區：Asia/Hong_Kong。
 
@@ -7,7 +7,7 @@ Website Manager。從 Notion 讀題目，按**完成後間隔**出題（唔用 `
 ## 檔案結構
 
 ```
-index.html          首頁：列出 Sentence Groups
+index.html          首頁：列出 Passage Groups
 group.html?slug=…   練習頁（可用 ?now=ISO 測試）
 stats.html          練習計時統計、匯出／匯入、雲端同步
 export.html         手機專用匯出／匯入（同 stats 一樣嘅兩個 key）
@@ -23,7 +23,7 @@ js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
 data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
-data/groups.json    Sentence Group + chunks（陣列次序＝加入次序）
+data/groups.json    Passage Group + chunks（陣列次序＝加入次序）
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
 ```
@@ -35,7 +35,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 - **Session**：撳「開始練習」→ 做完所有到期題（或中途離開且已完成 ≥1 題）
 - **Quiz**：每題開始渲染 → `onPass`
 - **超過 2 分鐘唔計時**：單題用時 **> 120000 ms** 視為無效。剛好 **120000 ms** 仍然計入。題目照常完成、SRS 唔受影響；該題 `durationMs` 寫成 `null`（`timingValid: false`），唔計入 chunk 總和、session 練習總用時，同統計頁嘅練習時間加總。統計頁只標「不計時」，唔顯示該段時長或該題開始→結束。
-- **Chunk**：同一 session 內同一 chunk（或句子題）嘅**有效** quiz 用時加總
+- **Chunk**：同一 session 內同一 chunk（或段落題）嘅**有效** quiz 用時加總
 - 做完 session 顯示總用時（牆鐘減去超時題）；個別 quiz／chunk 詳情喺統計頁
 - **統計頁練習時間**係每題有效 `durationMs` 加總，唔用 session 牆鐘 `totalMs`，亦唔計超過 2 分鐘嘅題。今日／本週用香港時間日界；本週＝近 7 日（今日連之前 6 日），唔係星期一至日
 - **學新詞**係 chunk 第一次入 T1（`stageIndex` 去到 3）嘅 `enteredT1At`。skip／`already_introduced`／`shared_with_prior_group` 唔計。已經過咗 T1、又冇真實時間嘅舊 chunk 唔會補一個日期
@@ -78,7 +78,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
    例：`chashu-shittori` 嘅「ちょっと」雖係重複，仍要等「濃厚」先加入，然後「ちょっと」先可以出。
 
 2. **密集階段（只限新 chunk）**  
-   密集 = T01 / T02 / T03（`stageIndex` 0–2）。每個 Sentence Group 同時最多 **1** 個**新** chunk 處於密集。  
+   密集 = T01 / T02 / T03（`stageIndex` 0–2）。每個 Passage Group 同時最多 **1** 個**新** chunk 處於密集。  
    - 標記 `already_introduced: true`（或 `shared_with_prior_group`）嘅 chunk：**唔佔**密集位（可同前一塊新 chunk 一齊喺 T01），但仍受上面順序限制。  
    - 下一個**新** chunk：等最近一個非 already_introduced／非 skip 嘅前一塊 **T1 ready**（完成 T03 後 +24h）。  
    - 例：`gochumon-kakunin` 嘅「ご注文」已引入 → 唔佔密集，但「確認」仍要等「ご注文」已加入先開 T01。
@@ -91,25 +91,25 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 出題時：未 admitted 嘅 chunk 唔會出任何到期題（包括 T01）。重用 chunk 只匯出 **尚未存在** 嘅 quiz（唔複製已有 quiz_id）。
 
-### Sentence（每個 Sentence Group 一條線）
+### Passage（每個 Passage Group 一條線）
 
 `sentence_schedule` 入面嘅 label 按順序當 stage 0, 1, 2…（例如 T+3 → T+6）。  
-第一次（從未完成）即時出第一個 stage；每次做完所有當時到期嘅 Sentence Quiz 後等 **3 日** 先出下一個。
+第一次（從未完成）即時出第一個 stage；每次做完所有當時到期嘅 Passage Quiz 後等 **3 日** 先出下一個。
 
 ### 出題順序
 
 1. 到期 Level 1（按 chunk id／加入次序）
 2. 到期 Level 2（按 chunk id）
 3. 到期 Level 3（按 chunk id）
-4. 到期 Sentence quizzes
+4. 到期 Passage quizzes
 
-## Sentence objective：`sentence_segment_shadowing`（整句音軌分段跟讀）
+## Passage objective：`sentence_segment_shadowing`（整段分段跟讀）
 
 由 Sentence Segment Shadowing Bot 出 JSON。站點讀 `objective: "sentence_segment_shadowing"`（slide `type` 可用 `audio_shadow` 或別名 `audio_segment_shadow`）。
 
 - 播放 `start_sec`→`end_sec`，速度固定 **0.75×**（唔顯示速度掣）
 - 按鈕標籤 **重播**；可無限重播；跟讀後自評 Tick／Cross（`self_check`）
-- 多 slide＝多段依序；只 1 slide（通常 0→句末）＝全句 0.75× 跟讀
+- 多 slide＝多段依序；只 1 slide（通常 0→句末）＝全段 0.75× 跟讀
 - `sentence_schedule.sentence_segment_shadowing`：每個 stage `T+1`…`T+30`（每日解鎖；sentence wait = 1 日，令 T+N ≈ 第 N 日）
 - `whole_sentence_listening` / `sequence_training`：維持 `T+3,T+6,…,T+30`
 - `sequence_training`（`sequence_tap`）：撳錯位置會即時顯示而家呢步嘅正確框（綠色 hotspot），保持 **3 秒**（3000 ms），然後清走個框並由第一個重新開始成題序列。期間再撳無效，唔使撳「再試」

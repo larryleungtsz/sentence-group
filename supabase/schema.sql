@@ -1,4 +1,4 @@
--- Sentence Group cloud sync.
+-- Passage Group cloud sync.
 -- Run once in the Supabase SQL editor (role postgres). Do not ship a service role key.
 --
 -- Data is stored for the fixed owner id "larry", not per auth.uid().

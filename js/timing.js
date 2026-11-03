@@ -53,7 +53,7 @@
           key: key,
           chunkId: record.chunkId,
           kind: record.kind,
-          label: record.kind === 'sentence' ? '句子題' : 'chunk' + record.chunkId,
+          label: record.kind === 'sentence' ? '段落題' : 'chunk' + record.chunkId,
           totalMs: 0,
           quizCount: 0,
         };

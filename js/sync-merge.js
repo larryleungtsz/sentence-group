@@ -1,5 +1,5 @@
 /**
- * Backend-neutral merge for Sentence Group cloud sync.
+ * Backend-neutral merge for Passage Group cloud sync.
  *
  * localStorage keys (unchanged):
  *   website-manager-timing-v1
@@ -198,7 +198,7 @@
           key: key,
           chunkId: q.chunkId != null ? q.chunkId : null,
           kind: q.kind || 'chunk',
-          label: q.kind === 'sentence' ? '句子題' : 'chunk' + q.chunkId,
+          label: q.kind === 'sentence' ? '段落題' : 'chunk' + q.chunkId,
           totalMs: 0,
           quizCount: 0,
         };
