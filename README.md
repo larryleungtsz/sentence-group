@@ -67,7 +67,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 | 做完 T2 | 2.25 日 | T3 |
 | 之後每次 | 上次間隔 × 1.5 | T4, T5, … |
 
-邊個 objective 喺邊個 stage 出現：睇 `schedule.json` → `chunk_schedule`。`mother_cloze_usage`（Q19 母語填空用法 / Cloze，Level 3）只喺 `T03`、`T5`、`T8`、`T11`、`T14`、`T18`（刻意唔包括 T1）：Slide 1 顯示 chunk，Slide 2 用 `select_text` 選帶空白嘅母語句，整張卡精確比對。完整 Soft GO 之後先需要 Q19 全套題；而家只係站點、時間表同 runner，外加一條 smoke fixture。
+邊個 objective 喺邊個 stage 出現：睇 `schedule.json` → `chunk_schedule`。`mother_cloze_usage`（Q19 母語填空用法 / Cloze，Level 3）只喺 `T03`、`T5`、`T8`、`T11`、`T14`、`T18`（刻意唔包括 T1）：**同一張 slide** 同時顯示 chunk 同帶空白嘅母語 `select_text` 卡（`prompt` = chunk；`correct` + `distractors` = 選項），整張卡精確比對。唔再分 Slide 1 prompt、Slide 2 選卡。Soft GO 全套題內容仍然之後先做；而家只係站點、時間表同 runner，外加一條 smoke fixture。
 
 ### Chunk 加入閘（句子順序 + 密集階段）
 

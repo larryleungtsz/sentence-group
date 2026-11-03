@@ -71,9 +71,24 @@ header h1 { font-size: 1.35rem; margin: 0; }
 .choices { display: flex; flex-direction: column; gap: 0.4rem; }
 .choice { text-align: left; width: 100%; }
 .prompt, .instruction, .gloss, .example-l1, .writing-target { white-space: pre-wrap; }
-/* Q19 Cloze: blanked L1 cards. The blank is display-only; grading stays exact select_text. */
-.cloze-prompt { font-size: 1.35rem; font-weight: 650; }
-.cloze-instruction { font-weight: 600; }
+/* Q19 Cloze: one slide — chunk prompt and blanked L1 cards together. Blank is display-only; grading stays exact select_text. */
+.cloze-slide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.1rem 1.15rem 1.15rem;
+}
+.cloze-prompt {
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: center;
+  margin: 0.15rem 0 0;
+}
+.cloze-instruction { font-weight: 600; margin: 0; }
 .cloze-choice { font-size: 1.05rem; line-height: 1.45; }
 .cloze-blank {
   display: inline-block;
