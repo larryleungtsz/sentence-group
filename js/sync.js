@@ -517,15 +517,46 @@
     } catch (e) {}
   }
 
+  /**
+   * Whether a sync that changed SRS should navigate.
+   * Practice pages must not reload: Sync.ready() abandons bootstrap after 8s
+   * while syncNow() keeps running, then initialDone is already true when that
+   * attempt writes progress. Reloading while 「開始練習」 is on the page drops
+   * the click (guests never take this path). group.js rebuilds the due queue
+   * from the sentence-group-sync event instead.
+   */
+  function decidePageReload(s) {
+    if (!s || !s.initialDone || !s.progressChanged) return false;
+    if (s.hasImport) return false;
+    if (s.hasStart) return false;
+    if (s.hasGroupList) return true;
+    return false;
+  }
+
+  /**
+   * Idle practice page: fold cloud SRS into the on-screen queue.
+   * Once 開始練習 has hidden the button, leave the running queue alone.
+   */
+  function shouldRefreshPracticeQueue(s) {
+    if (!s || !s.progressChanged || s.fixtureMode) return false;
+    if (s.practiceStarted || s.startHidden) return false;
+    return true;
+  }
+
   function maybeReload(progressChanged) {
-    if (!initialDone || !progressChanged) return;
-    if (document.getElementById('sync-import')) return;
     var start = document.getElementById('start-btn');
-    if (start) {
-      if (!start.hidden) global.location.reload();
+    if (
+      !decidePageReload({
+        initialDone: initialDone,
+        progressChanged: !!progressChanged,
+        hasImport: !!document.getElementById('sync-import'),
+        hasStart: !!start,
+        hasGroupList: !!document.getElementById('group-list'),
+      })
+    ) {
       return;
     }
-    if (document.getElementById('group-list')) global.location.reload();
+    global.location.reload();
   }
 
   function runImportFromText(text) {
@@ -1107,24 +1138,31 @@ function syncOnce() {
     return readyPromise;
   }
 
-  global.addEventListener('online', function () {
-    if (readQueue().dirty && state.email) syncNow();
-  });
-  document.addEventListener('visibilitychange', function () {
-    if (document.visibilityState === 'visible' && readQueue().dirty && state.email) {
-      scheduleSync();
-    }
-  });
-  global.setInterval(function () {
-    if (readQueue().dirty && state.email && navigator.onLine !== false) syncNow();
-  }, 30000);
-
   global.Sync = {
     ready: ready,
     onLocalWrite: onLocalWrite,
     syncNow: syncNow,
     OWNER_ID: OWNER_ID,
+    decidePageReload: decidePageReload,
+    shouldRefreshPracticeQueue: shouldRefreshPracticeQueue,
   };
 
-  ready();
+  if (typeof document !== 'undefined') {
+    global.addEventListener('online', function () {
+      if (readQueue().dirty && state.email) syncNow();
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible' && readQueue().dirty && state.email) {
+        scheduleSync();
+      }
+    });
+    global.setInterval(function () {
+      if (readQueue().dirty && state.email && navigator.onLine !== false) syncNow();
+    }, 30000);
+    ready();
+  }
+
+  if (typeof module === 'object' && module.exports) {
+    module.exports = global.Sync;
+  }
 })(typeof window !== 'undefined' ? window : globalThis);
