@@ -134,14 +134,15 @@
       "kind": "sentence",
       "sentence_id": "s1",
       "fixture": true,
+      "note": "Q24 choices are L1 (mother tongue). The prompt may keep a short Japanese context cue.",
       "slides": [
         {
           "type": "select_text",
           "prompt": "客人：予約してないんですけど、2名って、空いてますか？\n邊句最啱接落去？",
-          "correct": "お席確認してまいりますので、少々お待ちください。",
+          "correct": "我去確認座位，請稍等。",
           "distractors": [
-            "ご案内させていただきます　お進みください。",
-            "これでお願いします。"
+            "我帶你過去，請往裡面走。",
+            "就這樣麻煩你了。"
           ]
         }
       ]

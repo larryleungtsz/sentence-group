@@ -829,7 +829,7 @@
           : listenL1
             ? (slide.instruction || '請聆聽句子，然後揀啱嘅翻譯')
             : discourse
-              ? '請揀最啱上文下理嘅句子'
+              ? '請揀最啱上文下理嘅母語句'
               : '請選擇正確答案';
         host.appendChild(
           el(

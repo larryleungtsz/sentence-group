@@ -134,7 +134,7 @@ python3 -m http.server 8080
 | `sentence_l1_palace_multi_tap` | `multi_tap`（`tap` 都會走呢條） | 顯示母語句，順序無關咁點齊 `hotspots`。撳錯會講明，已點嘅保留。冇圖或冇有效熱區就跳過，**唔** `markPassed`。 |
 | `sentence_shadowing_125` | `audio_shadow` | 成句 **1.25×**。唔會入 Q18 分段 UI。 |
 | `sentence_shadowing_075` | `audio_shadow` | 成句 **0.75×**。即使有 `start_sec`／`end_sec` 都唔會變成分段「重播」。 |
-| `sentence_discourse_mcq` | `select_text` | 顯示 `prompt`／`context`，揀最啱上文下理嘅句子。 |
+| `sentence_discourse_mcq` | `select_text` | 顯示 `prompt`／`context`。選項（`correct` 同 `distractors`）係母語，唔係日文。 |
 
 Q22／Q23 錄音係 v1：`MediaRecorder` Blob 只可以喺呢次練習重聽，**唔評分**，亦唔會寫入 progress、timing 或 sync snapshot。撳「完成跟讀」先去下一題（冇 ✓／✗ 自評）。
 

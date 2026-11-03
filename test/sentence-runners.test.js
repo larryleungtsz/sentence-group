@@ -332,10 +332,10 @@ tests.push(test('Q24 shows the discourse stem and grades the sentence choice', f
   let passed = 0;
   const root = runQuiz(quiz, { onPass: function () { passed += 1; } });
   assert.ok(texts(root).some(function (t) { return t.indexOf('邊句最啱接落去') !== -1; }));
-  assert.ok(texts(root).indexOf('請揀最啱上文下理嘅句子') !== -1);
-  buttonNamed(root, 'これでお願いします。').click();
+  assert.ok(texts(root).indexOf('請揀最啱上文下理嘅母語句') !== -1);
+  buttonNamed(root, '就這樣麻煩你了。').click();
   assert.strictEqual(passed, 0);
-  buttonNamed(root, 'お席確認してまいりますので、少々お待ちください。').click();
+  buttonNamed(root, '我去確認座位，請稍等。').click();
   assert.strictEqual(passed, 1);
 }));
 
