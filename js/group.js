@@ -262,11 +262,49 @@
   }
 
   let queue = buildDueQueue();
+  /**
+   * Dev-only Q20–Q24 runner smoke. The quizzes live in data/fixtures and are
+   * not in the manifest, so a normal visit never dues them (sentence_schedule
+   * already lists the objectives, but nothing is due without a manifest row).
+   * This path never writes SRS, timing, or sync snapshots. Open
+   * group.html?slug=yoyaku-shitenai&sentenceFixture=1
+   */
+  const fixtureMode = params.get('sentenceFixture') === '1';
+  if (fixtureMode) {
+    let payload = null;
+    try {
+      const res = await fetch('data/fixtures/sentence-q20-q24.json');
+      if (res.ok) payload = await res.json();
+    } catch (err) {
+      payload = null;
+    }
+    const list = payload && Array.isArray(payload.quizzes) ? payload.quizzes : [];
+    queue = list.map((quiz) => ({
+      fixture: true,
+      quiz: quiz,
+      dueStages: ['fixture'],
+      meta: {
+        quiz_id: quiz.quiz_id,
+        objective: quiz.objective,
+        kind: quiz.kind || 'sentence',
+        level: quiz.level != null ? quiz.level : null,
+        sentence_id: quiz.sentence_id,
+        file: null,
+      },
+    }));
+  }
+  const fixtureMissing = fixtureMode && queue.length === 0;
   /** @type {ReturnType<typeof Timing.createSession>|null} */
   let activeSession = null;
   let sessionSaved = false;
 
   function updateMeta(remaining) {
+    if (fixtureMode) {
+      metaEl.textContent = fixtureMissing
+        ? '讀唔到 Q20–Q24 fixture（data/fixtures/sentence-q20-q24.json）。'
+        : 'Fixture Q20–Q24（唔計入 SRS、用時、progress） · 剩餘 ' + remaining + ' 題';
+      return;
+    }
     const adm = Array.from(admittedSet()).sort((a, b) => a - b);
     metaEl.textContent =
       '而家：' +
@@ -333,6 +371,7 @@
   }
 
   function afterPass(item) {
+    if (item.fixture) return;
     Progress.markPassed(item.meta.quiz_id, item.dueStages, nowIso);
 
     if (item.meta.kind === 'chunk') {
@@ -361,6 +400,11 @@
     if (!queue.length) {
       runnerEl.hidden = true;
       doneEl.hidden = false;
+      if (fixtureMode) {
+        doneEl.textContent = 'Fixture 做完。呢幾題冇寫入 SRS、用時或者 progress。';
+        updateMeta(0);
+        return;
+      }
       const saved = saveSessionIfNeeded('complete');
       const timeBit = saved
         ? ' · 用時 ' + Timing.formatDuration(Timing.practiceTotalMs(saved))
@@ -371,13 +415,19 @@
       return;
     }
     const item = queue[0];
-    if (activeSession) activeSession.startQuiz(item.meta);
-    const quiz = await (await fetch(item.meta.file)).json();
+    if (activeSession && !item.fixture) activeSession.startQuiz(item.meta);
+    const quiz = item.quiz || await (await fetch(item.meta.file)).json();
     const chunk = item.meta.kind === 'chunk' ? chunkMeta(item.meta.chunk_id) : null;
     const sentenceRow =
       item.meta.kind === 'sentence'
         ? (group.sentences || []).find((s) => s && s.id === item.meta.sentence_id) || null
         : null;
+    function leaveQuiz() {
+      queue.shift();
+      renderQueue();
+      updateMeta(queue.length);
+      nextQuiz();
+    }
     QuizRunner.run(quiz, runnerEl, {
       context: {
         groupTitle: group.title || group.sentence || '',
@@ -387,14 +437,17 @@
         chunkText: chunk && chunk.text ? chunk.text : '',
         sentenceId: item.meta.kind === 'sentence' ? item.meta.sentence_id : null,
         sentenceText: sentenceRow && sentenceRow.text ? sentenceRow.text : '',
+        sentenceL1: sentenceRow && sentenceRow.l1 ? sentenceRow.l1 : '',
+        palaceImageUrl: group.palace_image_url || '',
       },
       onPass() {
-        if (activeSession) activeSession.endQuiz(item.meta);
-        afterPass(item);
-        queue.shift();
-        renderQueue();
-        updateMeta(queue.length);
-        nextQuiz();
+        if (activeSession && !item.fixture) activeSession.endQuiz(item.meta);
+        if (!item.fixture) afterPass(item);
+        leaveQuiz();
+      },
+      onSkip() {
+        if (activeSession && !item.fixture) activeSession.endQuiz(item.meta);
+        leaveQuiz();
       },
     });
   }
@@ -402,10 +455,12 @@
   document.getElementById('start-btn').addEventListener('click', () => {
     document.getElementById('start-btn').hidden = true;
     sessionSaved = false;
-    activeSession = Timing.createSession({
-      groupSlug: slug,
-      groupTitle: group.title || group.sentence || slug,
-    });
+    if (!fixtureMode) {
+      activeSession = Timing.createSession({
+        groupSlug: slug,
+        groupTitle: group.title || group.sentence || slug,
+      });
+    }
     nextQuiz();
   });
 

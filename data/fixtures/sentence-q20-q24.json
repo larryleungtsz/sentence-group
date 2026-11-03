@@ -1,0 +1,150 @@
+{
+  "fixture": true,
+  "group_slug": "yoyaku-shitenai",
+  "note": "Dev smoke only for Q20–Q24 runners. Not referenced by data/manifest.json and not a schedule objective dump, so group.html does not due these quizzes. Open group.html?slug=yoyaku-shitenai&sentenceFixture=1 — that mode does not write SRS, timing, or progress. Q22's slide.rate is deliberately 0.75 with a clip so the runner must still play the whole sentence at 1.25× instead of the Q18 segment UI. Hotspots are copied from the existing loci quizzes for chunks 1–3 (s1). This is not Soft GO content.",
+  "quizzes": [
+    {
+      "quiz_id": "fixture-sentence-listen-to-l1-yoyaku-s1",
+      "objective": "sentence_listen_to_l1",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+      "slides": [
+        {
+          "type": "audio_listen",
+          "instruction": "請聆聽句子。",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+          "start_sec": 0,
+          "end_sec": 4.1,
+          "self_check": false
+        },
+        {
+          "type": "select_text",
+          "correct": "雖然沒有預約，兩位，有空位嗎？",
+          "distractors": [
+            "我去確認座位，請稍等。",
+            "我帶你過去，請往裡面走。"
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_id": "fixture-sentence-l1-palace-multi-tap-yoyaku-s1",
+      "objective": "sentence_l1_palace_multi_tap",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "sentence": "予約してないんですけど、2名って、空いてますか？お席確認してまいりますので、少々お待ちください。ご案内させていただきます　お進みください。",
+      "slides": [
+        {
+          "type": "multi_tap",
+          "instruction": "請點選呢句相關嘅所有位置",
+          "prompt": "雖然沒有預約，兩位，有空位嗎？",
+          "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+          "hotspots": [
+            {
+              "id": "c1",
+              "label": "予約してないんですけど",
+              "left": 21,
+              "top": 40,
+              "width": 14,
+              "height": 20
+            },
+            {
+              "id": "c2",
+              "label": "2名って",
+              "hotspot": {
+                "left": 13,
+                "top": 40,
+                "width": 9,
+                "height": 20,
+                "unit": "percent"
+              }
+            },
+            {
+              "id": "c3",
+              "label": "空いてますか",
+              "left": 48,
+              "top": 48,
+              "width": 16,
+              "height": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "quiz_id": "fixture-sentence-l1-palace-missing-yoyaku-s1",
+      "objective": "sentence_l1_palace_multi_tap",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "note": "Fail-soft path. Empty hotspots must skip without a pass.",
+      "slides": [
+        {
+          "type": "multi_tap",
+          "prompt": "雖然沒有預約，兩位，有空位嗎？",
+          "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+          "hotspots": []
+        }
+      ]
+    },
+    {
+      "quiz_id": "fixture-sentence-shadowing-125-yoyaku-s1",
+      "objective": "sentence_shadowing_125",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "slides": [
+        {
+          "type": "audio_shadow",
+          "instruction": "請跟讀成句（1.25×）。",
+          "text": "予約してないんですけど、2名って、空いてますか？",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+          "start_sec": 0,
+          "end_sec": 4.1,
+          "rate": 0.75,
+          "self_check": true
+        }
+      ]
+    },
+    {
+      "quiz_id": "fixture-sentence-shadowing-075-yoyaku-s1",
+      "objective": "sentence_shadowing_075",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "slides": [
+        {
+          "type": "audio_shadow",
+          "instruction": "請跟讀成句（0.75×）。",
+          "text": "予約してないんですけど、2名って、空いてますか？",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
+          "start_sec": 0,
+          "end_sec": 4.1,
+          "rate": 0.75,
+          "self_check": true
+        }
+      ]
+    },
+    {
+      "quiz_id": "fixture-sentence-discourse-mcq-yoyaku-s1",
+      "objective": "sentence_discourse_mcq",
+      "kind": "sentence",
+      "sentence_id": "s1",
+      "fixture": true,
+      "slides": [
+        {
+          "type": "select_text",
+          "prompt": "客人：予約してないんですけど、2名って、空いてますか？\n邊句最啱接落去？",
+          "correct": "お席確認してまいりますので、少々お待ちください。",
+          "distractors": [
+            "ご案内させていただきます　お進みください。",
+            "これでお願いします。"
+          ]
+        }
+      ]
+    }
+  ]
+}

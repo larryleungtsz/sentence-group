@@ -107,7 +107,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 切句規則：**chunk-boundary-wins**。一句只包含完整 chunk；唔切開 `chunk.text`；同一個 chunk id 唔可以出現喺兩句。標點只可以落喺 chunk 與 chunk 之間。  
 而家只得 **`yoyaku-shitenai`** 有三句（`s1`–`s3`）。其他 group 冇 `sentences[]`，Chunk／Passage 出題同以前一樣。`chunks[]` 保留。
 
-`sentence_schedule` 已經寫好 Q20–Q24 嘅 `T+N`（每個 objective 每 5 日一次，互相錯開；等待同 Passage 一樣係 1 日）。冇對應 manifest quiz 就唔會到期。Smoke fixture（`sentence-shell-smoke-yoyaku-shitenai-s1-v1`）嘅 objective 唔喺呢個表，所以都唔會到期。Live 題同 runner slide 未做。
+`sentence_schedule` 已經寫好 Q20–Q24 嘅 `T+N`（每個 objective 每 5 日一次，互相錯開；等待同 Passage 一樣係 1 日）。冇對應 manifest quiz 就唔會到期。Smoke fixture（`sentence-shell-smoke-yoyaku-shitenai-s1-v1`）嘅 objective 唔喺呢個表，所以都唔會到期。Runner 已接 Q20–Q24；Soft GO 題目 JSON 未入 manifest，所以而家仍然唔會到期。
 
 | Objective | 題 | Stages |
 |-----------|----|--------|
@@ -118,6 +118,29 @@ data/quizzes/*.json 每題一份 Quiz JSON
 | `sentence_discourse_mcq` | Q24 | T+5, T+10, T+15, T+20, T+25, T+30 |
 
 進度 key：`sentenceUnits[slug:sentenceId]`，同 Passage／Chunk 分開。共用一條 `T+1`…`T+30` 時間線（stage 0 = T+1）。
+
+### Sentence runners（Q20–Q24）
+
+`js/quiz-runner.js` 收到 `kind: "sentence"` 嘅 quiz 之後會渲染同評分。未有 Soft GO JSON 之前，練習頁唔會出呢五題。手動煙測用 fixture（唔入 `manifest.json`、唔寫 SRS／用時／progress）：
+
+```bash
+python3 -m http.server 8080
+# http://localhost:8080/group.html?slug=yoyaku-shitenai&sentenceFixture=1
+```
+
+| Objective | Slide | 行為 |
+|-----------|--------|------|
+| `sentence_listen_to_l1` | `audio_listen` + `select_text`（摺成同一張） | 播句子音，揀啱嘅母語翻譯。冇選項就跳過，唔當通過。 |
+| `sentence_l1_palace_multi_tap` | `multi_tap`（`tap` 都會走呢條） | 顯示母語句，順序無關咁點齊 `hotspots`。撳錯會講明，已點嘅保留。冇圖或冇有效熱區就跳過，**唔** `markPassed`。 |
+| `sentence_shadowing_125` | `audio_shadow` | 成句 **1.25×**。唔會入 Q18 分段 UI。 |
+| `sentence_shadowing_075` | `audio_shadow` | 成句 **0.75×**。即使有 `start_sec`／`end_sec` 都唔會變成分段「重播」。 |
+| `sentence_discourse_mcq` | `select_text` | 顯示 `prompt`／`context`，揀最啱上文下理嘅句子。 |
+
+Q22／Q23 錄音係 v1：`MediaRecorder` Blob 只可以喺呢次練習重聽，**唔評分**，亦唔會寫入 progress、timing 或 sync snapshot。撳「完成跟讀」先去下一題（冇 ✓／✗ 自評）。
+
+Q21 熱區可以係平面 `{ id, label, left, top, width, height }`，或者同 `sequence_tap` 一樣包住 `hotspot`。圖唔寫喺 slide 時，會用 Passage Group 嘅 `palace_image_url`。
+
+Q18 `sentence_segment_shadowing`、Q8、Q11、chunk 題唔經上面嘅 whitelist。`rate === 0.75` 而且有 clip 嘅**其他** objective 仍然係分段跟讀。
 
 ### 出題順序
 
@@ -177,6 +200,7 @@ node js/sync-merge.test.js
 node js/stats-metrics.test.js
 node test/timing-invalid.test.js
 node test/passage-sentence.test.js
+node test/sentence-runners.test.js
 ```
 
 ## 雲端同步（Supabase + Google）
