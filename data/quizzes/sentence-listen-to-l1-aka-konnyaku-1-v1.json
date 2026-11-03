@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-aka-konnyaku-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。",
+  "l1": "店員A：下面嗰個紅蒟蒻，我哋係用高湯煮嘅。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3",
+      "start_sec": 0.05,
+      "end_sec": 3.2,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "店員A：下面嗰個紅蒟蒻，我哋係用高湯煮嘅。",
+      "distractors": [
+        "店員B：就算原樣直接食都可以……",
+        "請結帳。",
+        "兩位有位嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

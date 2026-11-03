@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-last-order-denpyo-4-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "こちら伝票となりますので、レジの方まで、お願いいたします。",
+  "l1": "這邊是帳單，請到收銀台那邊，麻煩您。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "這邊是帳單，請到收銀台那邊，麻煩您。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspots": [
+        {
+          "id": 9,
+          "left": 34,
+          "top": 82,
+          "width": 22,
+          "height": 14,
+          "unit": "percent"
+        },
+        {
+          "id": 10,
+          "left": 82,
+          "top": 36,
+          "width": 16,
+          "height": 30,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        9,
+        10
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

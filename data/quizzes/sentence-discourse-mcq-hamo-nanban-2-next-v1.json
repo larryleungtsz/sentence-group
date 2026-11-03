@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-hamo-nanban-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "鱧の南蛮漬けです。",
+  "direction": "next",
+  "usage_note": "店員呈菜命名；「〜です」定物介紹",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「鱧の南蛮漬けです。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "洋蔥甜味都係重點。",
+      "distractors": [
+        "預約取消喇。",
+        "停車場泊滿。",
+        "我即刻攞單據過嚟。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

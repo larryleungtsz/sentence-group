@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-tsukete-itadaku-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。",
+  "direction": "prev",
+  "usage_note": "店員推介：條件「つけていただくと」＋結果「卵っぽいお味」＋「おすすめ／ぜひお試し」雙重勸試",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「つけていただくと、卵っぽいお味になるので、おすすめしてるので、ぜひお試しください。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "蘸少少呢個汁，味道會變得好唔同。",
+      "distractors": [
+        "停車費半價，記得去櫃檯換票。",
+        "會員註冊先有折扣，掃吓個二維碼。",
+        "呢款牆紙色好似蛋黃，要唔要樣本？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-oseki-2jikansei-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。",
+  "l1": "座位是兩小時制，餐點七十五分鐘，會請您做最後點餐。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
+      "start_sec": 0.05,
+      "end_sec": 6.8,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "座位是兩小時制，餐點七十五分鐘，會請您做最後點餐。",
+      "distractors": [
+        "不能只點火鍋，請見諒。",
+        "兩小時制",
+        "餐點七十五分鐘"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-aka-konnyaku-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。",
+  "l1": "店員A：下面嗰個紅蒟蒻，我哋係用高湯煮嘅。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "店員A：下面嗰個紅蒟蒻，我哋係用高湯煮嘅。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aka-konnyaku.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 10,
+          "top": 48,
+          "width": 16,
+          "height": 28,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 20,
+          "top": 72,
+          "width": 14,
+          "height": 12,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 29,
+          "top": 30,
+          "width": 15,
+          "height": 42,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

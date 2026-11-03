@@ -1,0 +1,64 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-last-order-denpyo-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。",
+  "l1": "料理最後點餐時間到了。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "料理最後點餐時間到了。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 2,
+          "top": 38,
+          "width": 22,
+          "height": 34,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 28,
+          "top": 58,
+          "width": 12,
+          "height": 18,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 62,
+          "top": 5,
+          "width": 11,
+          "height": 18,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 30,
+          "top": 10,
+          "width": 8,
+          "height": 10,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-tsukete-itadaku-3-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "食べましょう。",
+  "direction": "prev",
+  "usage_note": "「食べましょう」＝提議一齊食／開餐；勸誘形，唔係命令食晒",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「食べましょう。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "相都影完，可以開動啦。",
+      "distractors": [
+        "食飯會報名費先交。",
+        "收舖之後先食，而家廚房閂咗。",
+        "會議室借嚟開會，唔關食嘅事。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

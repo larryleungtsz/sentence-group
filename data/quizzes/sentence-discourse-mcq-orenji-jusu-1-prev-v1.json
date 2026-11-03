@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-orenji-jusu-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "飲み物はオレンジジュースと、焼酎をロックで",
+  "direction": "prev",
+  "usage_note": "點飲：品名用「と」並列；燒酒「ロックで」＝加冰（唔係ロック音樂／房間）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「飲み物はオレンジジュースと、焼酎をロックで」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "我哋先點杯嘢飲得唔得？",
+      "distractors": [
+        "今日最後落單係九點。",
+        "座位未空，麻煩再等陣。",
+        "結帳用現金得唔得？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

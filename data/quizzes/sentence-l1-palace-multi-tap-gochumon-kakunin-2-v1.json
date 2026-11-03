@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-gochumon-kakunin-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お間違いないでしょうか",
+  "l1": "沒有弄錯吧？",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "沒有弄錯吧？"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "hotspots": [
+        {
+          "id": 4,
+          "left": 66,
+          "top": 52,
+          "width": 16,
+          "height": 32,
+          "unit": "percent"
+        },
+        {
+          "id": 5,
+          "left": 55,
+          "top": 10,
+          "width": 30,
+          "height": 48,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        4,
+        5
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

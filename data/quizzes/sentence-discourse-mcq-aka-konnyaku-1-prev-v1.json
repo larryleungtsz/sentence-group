@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-aka-konnyaku-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "その下、赤蒟蒻、お出汁でこちら炊いております。",
+  "direction": "prev",
+  "usage_note": "店員指位置「その下」＋品名「赤蒟蒻」＋製法「お出汁で炊いております」（謙讓丁寧）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「その下、赤蒟蒻、お出汁でこちら炊いております。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "架上每一層我講吓。",
+      "distractors": [
+        "紅蒟蒻廠參觀要預約。",
+        "高湯粉超市買得到。",
+        "落一層搭電梯啦。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

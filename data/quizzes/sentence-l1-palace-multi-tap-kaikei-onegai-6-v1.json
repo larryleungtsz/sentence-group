@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-kaikei-onegai-6-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "領収書は、ご利用になられますか？",
+  "l1": "收據要唔要？",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "收據要唔要？"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "hotspots": [
+        {
+          "id": 8,
+          "left": 76,
+          "top": 50,
+          "width": 11,
+          "height": 22,
+          "unit": "percent"
+        },
+        {
+          "id": 9,
+          "left": 87,
+          "top": 46,
+          "width": 11,
+          "height": 34,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        8,
+        9
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

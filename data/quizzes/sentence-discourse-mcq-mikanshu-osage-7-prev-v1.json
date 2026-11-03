@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-7-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 7,
+  "sentence": "こちらおさげしますね～",
+  "direction": "prev",
+  "usage_note": "店員收空杯／空盤；「おさげ」＝下げる敬語",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「こちらおさげしますね～」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "枱面我幫您執吓。",
+      "distractors": [
+        "麻煩畀菜單。",
+        "訂位已經滿晒。",
+        "唔收卡。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-yoyaku-shitenai-3-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "ご案内させていただきます　お進みください。",
+  "l1": "服務員B：我帶您入座，請往前行。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3",
+      "start_sec": 7.7,
+      "end_sec": 10.55,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "服務員B：我帶您入座，請往前行。",
+      "distractors": [
+        "客人：雖然冇預約，兩位有冇位呀？",
+        "服務員A：我去確認座位，請稍等。",
+        "請結帳。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

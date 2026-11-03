@@ -1,0 +1,29 @@
+{
+  "quiz_id": "sentence-shadowing-125-chashu-shittori-1-v1",
+  "objective": "sentence_shadowing_125",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "叉焼はめっちゃしっとりしてて、味も濃厚。ちょっと焦げ目もある。",
+  "slides": [
+    {
+      "type": "record_shadow",
+      "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
+      "rate": 1.25,
+      "action": "start_record",
+      "sentence_window_hint": {
+        "start_sec": 0.05,
+        "end_sec": 5.67
+      }
+    },
+    {
+      "type": "record_shadow",
+      "instruction": "可重播自己錄音；完成後按完成（錄音唔上雲，完成即丟）。",
+      "action": "review_complete",
+      "storage": "temp_blob_v1"
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

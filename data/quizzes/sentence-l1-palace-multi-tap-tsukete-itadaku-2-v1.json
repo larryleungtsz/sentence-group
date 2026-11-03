@@ -1,0 +1,46 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-tsukete-itadaku-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "いえーい！めっちゃおいしそう。",
+  "l1": "耶！",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "耶！"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "hotspots": [
+        {
+          "id": 8,
+          "left": 65,
+          "top": 43,
+          "width": 14,
+          "height": 30,
+          "unit": "percent"
+        },
+        {
+          "id": 9,
+          "left": 62,
+          "top": 76,
+          "width": 16,
+          "height": 22,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        8,
+        9
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

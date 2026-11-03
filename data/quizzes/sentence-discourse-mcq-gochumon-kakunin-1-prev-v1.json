@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-gochumon-kakunin-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文確認させていただきます。",
+  "direction": "prev",
+  "usage_note": "店員謙讓「確認させていただきます」＝請容許我核對訂單；服務場面用語",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ご注文確認させていただきます。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "前菜上咗，我再對一次內容。",
+      "distractors": [
+        "請跟我入座。",
+        "埋單用信用卡得唔得？",
+        "今晚提早收舖通知。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

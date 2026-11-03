@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-oseki-2jikansei-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お鍋の注文だけできませんので、ご了承ください。",
+  "l1": "不能只點火鍋，請見諒。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
+      "start_sec": 6.8,
+      "end_sec": 10.89,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "不能只點火鍋，請見諒。",
+      "distractors": [
+        "座位是兩小時制，餐點七十五分鐘，會請您做最後點餐。",
+        "兩小時制",
+        "餐點七十五分鐘"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

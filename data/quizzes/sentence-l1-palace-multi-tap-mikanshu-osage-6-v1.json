@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-mikanshu-osage-6-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "はい、お持ちしますね～",
+  "l1": "好，幫您送上～",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "好，幫您送上～"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "hotspots": [
+        {
+          "id": 7,
+          "left": 48,
+          "top": 12,
+          "width": 14,
+          "height": 65,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        7
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

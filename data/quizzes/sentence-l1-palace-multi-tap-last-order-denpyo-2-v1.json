@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-last-order-denpyo-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "追加のご注文はございませんか？",
+  "l1": "有沒有追加點餐？",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "有沒有追加點餐？"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "hotspots": [
+        {
+          "id": 5,
+          "left": 50,
+          "top": 70,
+          "width": 12,
+          "height": 14,
+          "unit": "percent"
+        },
+        {
+          "id": 6,
+          "left": 42,
+          "top": 22,
+          "width": 14,
+          "height": 52,
+          "unit": "percent"
+        },
+        {
+          "id": 7,
+          "left": 66,
+          "top": 20,
+          "width": 16,
+          "height": 64,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        5,
+        6,
+        7
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

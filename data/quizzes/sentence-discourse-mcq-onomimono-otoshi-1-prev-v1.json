@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-onomimono-otoshi-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "よかったら、最初にお飲みものの方、おうかがいしておきますね。",
+  "direction": "prev",
+  "usage_note": "店員先問飲品；「よかったら」緩和＋「〜ておきます」先處理",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「よかったら、最初にお飲みものの方、おうかがいしておきますね。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "兩位係咪先嚟飲嘢？",
+      "distractors": [
+        "停車場已經滿晒。",
+        "埋單，麻煩您。",
+        "請幫我哋收走空碟。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

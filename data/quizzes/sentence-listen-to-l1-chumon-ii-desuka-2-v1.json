@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-chumon-ii-desuka-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "はい、どうぞー。",
+  "l1": "好，請。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 2.6,
+      "end_sec": 3.8,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "好，請。",
+      "distractors": [
+        "不好意思，可以點餐嗎？",
+        "毛豆一份。唐揚一盤。雞肉丸兩串。薯沙拉一份。",
+        "可以點餐嗎"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

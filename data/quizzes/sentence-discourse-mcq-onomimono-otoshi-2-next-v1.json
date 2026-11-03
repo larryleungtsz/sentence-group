@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-onomimono-otoshi-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "じゃあ、生ビール2つお願いします。",
+  "direction": "next",
+  "usage_note": "客決定飲品；「じゃあ」承接＋數量＋「お願いします」",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「じゃあ、生ビール2つお願いします。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好嘅，稍等一陣。",
+      "distractors": [
+        "出門之前請先結帳。",
+        "呢張係帳單。",
+        "尾單喇，唔可以再加單。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

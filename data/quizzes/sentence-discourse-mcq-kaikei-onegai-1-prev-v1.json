@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "会計お願いします。",
+  "direction": "prev",
+  "usage_note": "客人叫結帳：名詞「会計」＋「お願いします」；餐廳／店尾用，唔係公司會計部",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「会計お願いします。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "唔使再加嘢啦。",
+      "distractors": [
+        "菜單再畀多一本。",
+        "打去公司財務部啦。",
+        "會計資格考試幾時考？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

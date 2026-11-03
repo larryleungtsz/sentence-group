@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-oseki-2jikansei-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。",
+  "direction": "prev",
+  "usage_note": "店員說明規則：「お席の方が〜制」座位時限；「とらせていただきます」＝謙讓請容許我哋收最後點餐",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お席の方が2時間制でフードが75分、ラストオーダーとらせていただきます。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "今日接近滿座，先同你講清楚規則。",
+      "distractors": [
+        "泊車優惠貼紙俾你。",
+        "請問埋單未？",
+        "兼職招聘喺呢邊。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

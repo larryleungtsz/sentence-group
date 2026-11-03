@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-gochumon-kakunin-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お間違いないでしょうか",
+  "direction": "next",
+  "usage_note": "「お間違い＋ないでしょうか」＝客氣確認有無錯誤；唔係道歉句",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お間違いないでしょうか」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "啊，湯改大盛。",
+      "distractors": [
+        "可唔可以影餐牌相？",
+        "對唔住，帶錯枱。",
+        "麻煩埋單。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

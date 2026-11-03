@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-6-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "はい、お持ちしますね～",
+  "direction": "next",
+  "usage_note": "店員承諾送上；「お持ちします」送達（非お待ち）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、お持ちしますね～」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "冰都會多啲。",
+      "distractors": [
+        "請去收銀台。",
+        "帳單畀您。",
+        "我取消咗您嘅預約。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

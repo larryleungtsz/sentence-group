@@ -22,7 +22,7 @@ js/quiz-runner.js   渲染與評分
 js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
-data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q24 階段；未有 live 題）
+data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q24 live Soft GO）
 data/groups.json    Passage Group + chunks（陣列次序＝加入次序）+ optional sentences[]
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
@@ -46,7 +46,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `passage` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（P3 空殼；要有 `sentence_id`，而且該 group 有 `sentences[]`）
+   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；要有 `sentence_id`，而且該 group 有 `sentences[]`）
 3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
@@ -101,27 +101,41 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 進度 key：`passages[slug]`。舊嘅 `sentences[slug]` 會喺載入時摺入 `passages`（唔會把 stageIndex 歸零），並寫返做鏡像，等未更新嘅手機／雲端 blob 仍然睇到同一條線。
 
-### Sentence（中間層，P3 空殼）
+### Sentence（中間層，Soft GO Q20–Q24）
 
-`groups.json` 可以有 `sentences[]`：`{ id, text, chunk_ids, start_sec?, end_sec?, l1? }`。  
-切句規則：**chunk-boundary-wins**。一句只包含完整 chunk；唔切開 `chunk.text`；同一個 chunk id 唔可以出現喺兩句。標點只可以落喺 chunk 與 chunk 之間。  
-而家只得 **`yoyaku-shitenai`** 有三句（`s1`–`s3`）。其他 group 冇 `sentences[]`，Chunk／Passage 出題同以前一樣。`chunks[]` 保留。
+每個 Passage Group 都有 `sentences[]`：`{ id, text, chunk_ids, l1? }`。  
+切句規則：**chunk-boundary-wins**。一句係連續嘅 active chunk；唔切開 `chunk.text`；同一個 chunk id 唔可以出現喺兩句。`skip: true` 嘅 chunk 留喺 `chunks[]`，唔入 `chunk_ids`。
 
-`sentence_schedule` 已經寫好 Q20–Q24 嘅 `T+N`（每個 objective 每 5 日一次，互相錯開；等待同 Passage 一樣係 1 日）。冇對應 manifest quiz 就唔會到期。Smoke fixture（`sentence-shell-smoke-yoyaku-shitenai-s1-v1`）嘅 objective 唔喺呢個表，所以都唔會到期。Runner 已接 Q20–Q24；Soft GO 題目 JSON 未入 manifest，所以而家仍然唔會到期。
+Soft GO 題目喺 `data/quizzes/`。`manifest.json` 用 `kind: "sentence"`。`sentence` 欄係成段 `group.sentence`（練習頁同首頁靠呢個字串對 group）。`sentence_id` 係 `s1`、`s2`…。`group_slug` 係 site slug。`shell` 係 `false`。
 
-| Objective | 題 | Stages |
-|-----------|----|--------|
-| `sentence_listen_to_l1` | Q20 | T+1, T+6, T+11, T+16, T+21, T+26 |
-| `sentence_l1_palace_multi_tap` | Q21 | T+2, T+7, T+12, T+17, T+22, T+27 |
-| `sentence_shadowing_125` | Q22 | T+3, T+8, T+13, T+18, T+23, T+28 |
-| `sentence_shadowing_075` | Q23 | T+4, T+9, T+14, T+19, T+24, T+29 |
-| `sentence_discourse_mcq` | Q24 | T+5, T+10, T+15, T+20, T+25, T+30 |
+| Objective | 題 | 題數 | Stages |
+|-----------|----|------|--------|
+| `sentence_listen_to_l1` | Q20 | 53 | T+1, T+6, T+11, T+16, T+21, T+26 |
+| `sentence_l1_palace_multi_tap` | Q21 | 53 | T+2, T+7, T+12, T+17, T+22, T+27 |
+| `sentence_shadowing_125` | Q22 | 53 | T+3, T+8, T+13, T+18, T+23, T+28 |
+| `sentence_shadowing_075` | Q23 | 53 | T+4, T+9, T+14, T+19, T+24, T+29 |
+| `sentence_discourse_mcq` | Q24 | 61 | T+5, T+10, T+15, T+20, T+25, T+30 |
+
+22 個 group、61 句。53 句有齊 Q20–Q24。Q24 多出嘅 8 句只得 Q24。
+
+Q24-only（Q20–Q23 唔喺 bundle，冇加假題）：
+
+- `yoyaku`（Soft GO slug `yoyaku-annai`）四句都係 Q24。呢個 group 唔算 full-suite Soft GO。
+- `kaikei-onegai` 嘅 s1、s5、s7，同 `oryouri-last-order` 嘅 s3。
+
+冇 active chunk span（`chunk_ids` 空）：`aragoshi-mikanshu` s3（第二次「おかわりで」，唯一 chunk 留喺 s2）、`oryouri-last-order` s3、`kaikei-onegai` s1／s5／s7。各 group 嘅 `sentences_note` 有寫。
+
+`yokattara-onomi`：live passage 保留「方 、」（逗號前有空格）；Soft GO s1 係「方、」。slug `onomimono-otoshi` → `yokattara-onomi` 對過 `groups.json`，冇改。s4 嘅 Soft GO 句尾有「。」，passage 字串冇。
+
+新鮮句單位（`stageIndex` 0）即時出 Q20（T+1）。做完該 stage 全部到期題之後等 1 日。如果而家嘅 stage 冇 manifest quiz（Q24-only 句嘅 T+1 至 T+4），打開首頁或者練習頁會將呢個 stage 記為完成並推前一級，然後照樣等 1 日。Q24 喺句單位行到 T+5 先到期。
 
 進度 key：`sentenceUnits[slug:sentenceId]`，同 Passage／Chunk 分開。共用一條 `T+1`…`T+30` 時間線（stage 0 = T+1）。
 
+Smoke quiz `sentence-shell-smoke-yoyaku-shitenai-s1-v1` 已刪，避免同 live Soft GO 一齊出現。
+
 ### Sentence runners（Q20–Q24）
 
-`js/quiz-runner.js` 收到 `kind: "sentence"` 嘅 quiz 之後會渲染同評分。未有 Soft GO JSON 之前，練習頁唔會出呢五題。手動煙測用 fixture（唔入 `manifest.json`、唔寫 SRS／用時／progress）：
+`js/quiz-runner.js` 收到 `kind: "sentence"` 嘅 quiz 之後會渲染同評分。Live 題由 manifest 按 `sentence_schedule` 到期。手動煙測仍然可以用 fixture：
 
 ```bash
 python3 -m http.server 8080
@@ -201,6 +215,7 @@ node js/stats-metrics.test.js
 node test/timing-invalid.test.js
 node test/passage-sentence.test.js
 node test/sentence-runners.test.js
+node test/softgo-live.test.js
 ```
 
 ## 雲端同步（Supabase + Google）

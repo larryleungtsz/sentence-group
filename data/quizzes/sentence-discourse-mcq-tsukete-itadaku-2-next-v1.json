@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-tsukete-itadaku-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "いえーい！めっちゃおいしそう。",
+  "direction": "next",
+  "usage_note": "客人興奮反應：「いえーい」感嘆＋「めっちゃおいしそう」＝睇落超好食（口語關西／年輕人）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「いえーい！めっちゃおいしそう。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "趁熱開餐，唔好等凍咗。",
+      "distractors": [
+        "關門通知：今晚提早收舖。",
+        "淨係睇價錢牌就走，唔好落單。",
+        "功課仲剩好多，今晚冇得玩。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

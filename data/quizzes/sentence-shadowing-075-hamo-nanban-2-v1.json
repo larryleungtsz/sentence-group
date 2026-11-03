@@ -1,0 +1,29 @@
+{
+  "quiz_id": "sentence-shadowing-075-hamo-nanban-2-v1",
+  "objective": "sentence_shadowing_075",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "鱧の南蛮漬けです。",
+  "slides": [
+    {
+      "type": "record_shadow",
+      "instruction": "請聽 0.75× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3",
+      "rate": 0.75,
+      "action": "start_record",
+      "sentence_window_hint": {
+        "start_sec": 1.7,
+        "end_sec": 4.3
+      }
+    },
+    {
+      "type": "record_shadow",
+      "instruction": "可重播自己錄音；完成後按完成（錄音唔上雲，完成即丟）。",
+      "action": "review_complete",
+      "storage": "temp_blob_v1"
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

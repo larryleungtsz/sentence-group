@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-orenji-jusu-5-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 5,
+  "sentence": "これのおかわりをください",
+  "l1": "呢個再嚟多一份",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢個再嚟多一份"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspots": [
+        {
+          "id": 8,
+          "left": 70,
+          "top": 74,
+          "width": 13,
+          "height": 22,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        8
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

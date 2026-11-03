@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-gochumon-kakunin-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文確認させていただきます。",
+  "l1": "請讓我確認您的點餐。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
+      "start_sec": 0.05,
+      "end_sec": 2.58,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "請讓我確認您的點餐。",
+      "distractors": [
+        "沒有弄錯吧？",
+        "請結帳。",
+        "兩位有位嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

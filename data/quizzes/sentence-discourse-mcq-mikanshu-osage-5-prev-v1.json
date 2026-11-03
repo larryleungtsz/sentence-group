@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-5-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 5,
+  "sentence": "はい、とりあえず以上で。",
+  "direction": "prev",
+  "usage_note": "客暫完結；「とりあえず」留後加空間",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「はい、とりあえず以上で。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "仲有冇其他想要？",
+      "distractors": [
+        "請檢查吓有冇嘢唔見。",
+        "麻煩埋單。",
+        "而家係關門廣播。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

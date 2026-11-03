@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-amai-chashu-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。",
+  "direction": "prev",
+  "usage_note": "評價轉折：「〜人には」對特定口味群體；「物足りないかも」＝可能覺得唔夠／輕描淡寫推測",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「甘い叉焼がそんなに好きじゃない人には、ちょっと物足りないかも。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "湯夠濃，不過配料點樣呢？",
+      "distractors": [
+        "埋單刷卡得唔得？",
+        "停車場滿晒。",
+        "枱位訂到未？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

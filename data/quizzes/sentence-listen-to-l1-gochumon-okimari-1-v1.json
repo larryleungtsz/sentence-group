@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-gochumon-okimari-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "l1": "您的點餐決定好了請叫我。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 0.05,
+      "end_sec": 3.11,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "您的點餐決定好了請叫我。",
+      "distractors": [
+        "決定的話",
+        "成為了的話",
+        "呼叫"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

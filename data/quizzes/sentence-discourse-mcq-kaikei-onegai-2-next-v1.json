@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "かしこまりました。お会計は4,210円になります。",
+  "direction": "next",
+  "usage_note": "店員應答「かしこまりました」＋報金額「お会計は〜になります」；丁寧告知總額",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「かしこまりました。お会計は4,210円になります。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好，用呢個麻煩你。",
+      "distractors": [
+        "預約決定好未？",
+        "座位請坐呢邊。",
+        "收據要唔要？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

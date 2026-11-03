@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-chumon-ii-desuka-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "すいません、注文いいですか？",
+  "direction": "prev",
+  "usage_note": "客人叫店員：「注文いいですか」＝而家可唔可以點餐（唔係問「訂單好唔好」）",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「すいません、注文いいですか？」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "開胃小菜食完，可以落單未？",
+      "distractors": [
+        "請問幾點關門？",
+        "可唔可以換檯？",
+        "麻煩埋單。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

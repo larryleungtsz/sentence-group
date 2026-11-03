@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-ioshio-ganen-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "こちらですね。硫黄塩っていう岩塩です。",
+  "l1": "叫做硫黃鹽的岩鹽。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3",
+      "start_sec": 5.7,
+      "end_sec": 7.94,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "叫做硫黃鹽的岩鹽。",
+      "distractors": [
+        "雖然很好吃，不過作為推薦的吃法——就是這個呢。",
+        "請結帳。",
+        "兩位有位嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

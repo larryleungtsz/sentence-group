@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-ebi-sumiso-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "そのお隣が、椎茸とあさりの炊き合わせです。",
+  "direction": "next",
+  "usage_note": "「そのお隣が」＝再指隔籬／下一碟；炊き合わせ＝多種燉煮拼盤",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「そのお隣が、椎茸とあさりの炊き合わせです。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "熱嘅，小心碟邊。",
+      "distractors": [
+        "燉煮鍋淨係送屋企。",
+        "蜆生嘅淨係外賣。",
+        "香菇漢字練習簿畀我。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

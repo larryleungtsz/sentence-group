@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-orenji-jusu-4-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "とりあえず、それだけでいいです",
+  "direction": "next",
+  "usage_note": "「とりあえず」＋「それだけでいいです」＝暫時先點呢啲、先收手；唔係永久只得呢啲",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「とりあえず、それだけでいいです」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "之後想加嘢再叫我就得。",
+      "distractors": [
+        "菜單全部都要。",
+        "暫時咁，聽日先再嚟（今次唔落單）。",
+        "咁我乜都唔點啦。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

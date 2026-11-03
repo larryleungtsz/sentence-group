@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-hamo-nanban-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "こちらからですね。",
+  "direction": "prev",
+  "usage_note": "店員指近側菜／開場導引；「から」標起點",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「こちらからですね。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "唔該稍等一陣。",
+      "distractors": [
+        "埋單分開計得唔得？",
+        "預約可唔可以改？",
+        "廁所喺邊？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

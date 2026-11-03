@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-onomimono-otoshi-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "じゃあ、生ビール2つお願いします。",
+  "l1": "那麼，生啤兩杯麻煩您。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
+      "start_sec": 4.2,
+      "end_sec": 5.4,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "那麼，生啤兩杯麻煩您。",
+      "distractors": [
+        "如果方便的話，先幫您問一下飲料。",
+        "失陪了。",
+        "這是開胃小菜。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

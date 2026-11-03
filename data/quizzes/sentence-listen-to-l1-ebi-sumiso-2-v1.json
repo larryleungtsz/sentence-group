@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-ebi-sumiso-2-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "そのお隣が、椎茸とあさりの炊き合わせです。",
+  "l1": "店員B：再旁邊係香菇同蜆嘅燉煮拼盤。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3",
+      "start_sec": 3.6,
+      "end_sec": 7.37,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "店員B：再旁邊係香菇同蜆嘅燉煮拼盤。",
+      "distractors": [
+        "店員A：旁邊係蝦同青瓜淋醋味噌。",
+        "請結帳。",
+        "兩位有位嗎？"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

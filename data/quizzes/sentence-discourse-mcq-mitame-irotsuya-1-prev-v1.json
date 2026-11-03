@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mitame-irotsuya-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる",
+  "direction": "prev",
+  "usage_note": "因果：「いいから」＝因為賣相好；「食べなくても〜分かる」＝未入口都估到合口味",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「見た目の色つやがめっちゃいいから、食べなくても自分の口に合うって分かる」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "呢碟擺盤好適合影相。",
+      "distractors": [
+        "關門後請幫手清潔。",
+        "埋單用信用卡。",
+        "我核對吓預約名。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

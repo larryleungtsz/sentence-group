@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-kaikei-onegai-5-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 5,
+  "sentence": "ありがとうございました。",
+  "direction": "prev",
+  "usage_note": "客人離席／付完款後道謝（過去形ございました）；完結語氣",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ありがとうございました。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "找錢喺呢度，多謝。",
+      "distractors": [
+        "菜仲未上齊。",
+        "預約個名麻煩再確認。",
+        "呢張係答謝會邀請函。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

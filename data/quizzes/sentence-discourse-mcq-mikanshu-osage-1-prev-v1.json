@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-mikanshu-osage-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "飲み物が、あらごしみかん酒の、ソーダ割り1つ。",
+  "direction": "prev",
+  "usage_note": "客點飲；「〜が」主題＋酒種＋割方＋數量",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「飲み物が、あらごしみかん酒の、ソーダ割り1つ。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "酒水頁睇過未？",
+      "distractors": [
+        "可唔可以換枱？",
+        "再五分鐘就關門。",
+        "麻煩埋單。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

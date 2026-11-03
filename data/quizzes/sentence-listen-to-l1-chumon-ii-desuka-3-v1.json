@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-chumon-ii-desuka-3-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 3,
+  "sentence": "枝豆1つ。からあげ1皿。つくね2本。ポテサラ1つ。",
+  "l1": "毛豆一份。唐揚一盤。雞肉丸兩串。薯沙拉一份。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chumon-ii-desuka.mp3",
+      "start_sec": 6.1,
+      "end_sec": 11.0,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "毛豆一份。唐揚一盤。雞肉丸兩串。薯沙拉一份。",
+      "distractors": [
+        "不好意思，可以點餐嗎？",
+        "好，請。",
+        "可以點餐嗎"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-hamo-nanban-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "こちらからですね。",
+  "l1": "從這邊呢。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "從這邊呢。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 15,
+          "top": 43,
+          "width": 15,
+          "height": 20,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

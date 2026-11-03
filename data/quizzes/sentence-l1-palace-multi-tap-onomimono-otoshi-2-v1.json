@@ -1,0 +1,37 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-onomimono-otoshi-2-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "じゃあ、生ビール2つお願いします。",
+  "l1": "那麼，生啤兩杯麻煩您。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "那麼，生啤兩杯麻煩您。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "hotspots": [
+        {
+          "id": 5,
+          "left": 34,
+          "top": 68,
+          "width": 12,
+          "height": 14,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        5
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

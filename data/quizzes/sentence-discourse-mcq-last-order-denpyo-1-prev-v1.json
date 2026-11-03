@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-last-order-denpyo-1-prev-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "お料理ラストオーダーのお時間となります。",
+  "direction": "prev",
+  "usage_note": "店員公告；「となります」正式時間告知",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お料理ラストオーダーのお時間となります。」\n請揀合適嘅上文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "各位客人請留意。",
+      "distractors": [
+        "歡迎光臨，我帶位。",
+        "呢碟係開胃小菜。",
+        "麻煩兩杯生啤。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

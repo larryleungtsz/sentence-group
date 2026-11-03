@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-orenji-jusu-1-v1",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "飲み物はオレンジジュースと、焼酎をロックで",
+  "l1": "飲料要橙汁同冰燒酒",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "飲料要橙汁同冰燒酒"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 3,
+          "top": 50,
+          "width": 16,
+          "height": 38,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 29,
+          "top": 32,
+          "width": 8,
+          "height": 48,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 22,
+          "top": 70,
+          "width": 10,
+          "height": 22,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

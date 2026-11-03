@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-oseki-2jikansei-2-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お鍋の注文だけできませんので、ご了承ください。",
+  "direction": "next",
+  "usage_note": "限制＋致歉：「〜だけできませんので」＝淨係…唔得；「ご了承ください」正式請見諒",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お鍋の注文だけできませんので、ご了承ください。」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "可唔可以再加多一碟一齊叫？",
+      "distractors": [
+        "見諒簽名請交會計。",
+        "淨係自備火鍋嚟食就得。",
+        "所以我哋會報警。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
