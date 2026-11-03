@@ -224,7 +224,7 @@
         key: 'sentence',
         kind: 'sentence',
         chunkId: null,
-        label: '句子題',
+        label: '段落題',
         labelFromText: false,
         totalMs: sentenceSum ? sentenceSum.totalMs : 0,
         quizCount: sentenceSum ? sentenceSum.quizCount : 0,

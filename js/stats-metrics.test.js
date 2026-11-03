@@ -225,7 +225,7 @@ test('expand lists every group chunk, sentence row, and timing-only ids', functi
     }),
     [
       'c3|ちょっと|true|5100',
-      'sentence|句子題|false|2000',
+      'sentence|段落題|false|2000',
       'c9|c9|false|1000',
       'c1|濃厚|true|0',
       'c2|c2|false|0',

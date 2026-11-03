@@ -72,8 +72,8 @@
 
     statusEl.textContent = '已重置 ebi-sumiso + aka-konnyaku（只清呢兩個 group 嘅 SRS）。';
     detailEl.textContent =
-      '清咗 quiz ' + removedQ + '、chunk ' + removedC + '、sentence ' + removedS +
-      '。其他 sentence group 唔變。可以開下面連結睇到期題。';
+      '清咗 quiz ' + removedQ + '、chunk ' + removedC + '、passage ' + removedS +
+      '。其他 Passage Group 唔變。可以開下面連結睇到期題。';
     linksEl.hidden = false;
   } catch (e) {
     statusEl.textContent = '重置失敗：' + (e && e.message ? e.message : String(e));

@@ -201,7 +201,7 @@
     return changed;
   }
 
-  /** Same for sentence group timeline (always +3 days to next stage). */
+  /** Same for Passage Group timeline (always +3 days to next stage). */
   function advanceSentence(groupSlug, nowIso) {
     const all = loadAll();
     const cur = all.sentences[groupSlug] || schedule().defaultSentenceState();

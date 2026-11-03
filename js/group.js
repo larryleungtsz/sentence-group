@@ -28,7 +28,7 @@
   const schedule = await scheduleRes.json();
   const group = (groupsData.groups || []).find((g) => g.slug === slug);
   if (!group) {
-    titleEl.textContent = '找不到 Sentence Group：' + slug;
+    titleEl.textContent = '找不到 Passage Group：' + slug;
     return;
   }
 
@@ -212,7 +212,7 @@
       if (t != null) {
         const labels = Schedule.sentenceStageLabels(schedule);
         const lab = labels[ss.stageIndex] || '?';
-        parts.push('sentence ' + lab + ' @ ' + Schedule.formatHKT(t));
+        parts.push('passage ' + lab + ' @ ' + Schedule.formatHKT(t));
       }
     }
     const gate = admissionHint();

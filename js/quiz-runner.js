@@ -27,12 +27,12 @@
     mother_language_pronounce: '母語發音',
     mother_to_target_language: '母語譯目標語',
     pronunciation_sounding_select: '發音諧音選擇',
-    sentence_segment_shadowing: '句子分段跟讀',
-    sequence_training: '順序訓練',
+    sentence_segment_shadowing: '整段分段跟讀',
+    sequence_training: '段落順序訓練',
     story_select_image: '故事選圖',
     target_to_mnemonic_image: '目標語記憶圖',
     tone_shadowing_05: '語調跟讀 0.5×',
-    whole_sentence_listening: '整句聆聽',
+    whole_sentence_listening: '整段聆聽',
     word_shadowing_025: '單字跟讀 0.25×',
     writing_shadowing: '書寫跟讀',
     youglish_listen: 'YouGlish 聆聽',
@@ -68,7 +68,7 @@
     var text = '';
     if (chunk && chunk.text) text = String(chunk.text);
     else if (ctx.chunkText) text = String(ctx.chunkText);
-    if (kind === 'sentence' || (kind !== 'chunk' && id == null && !text)) return '整句 / n/a';
+    if (kind === 'sentence' || (kind !== 'chunk' && id == null && !text)) return '整段 / n/a';
     if (text && id != null) return text + '（id ' + id + '）';
     if (text) return text;
     if (id != null) return 'id ' + id;
@@ -85,7 +85,7 @@
     quiz = quiz || {};
     var lines = [
       { label: '題型', value: objectiveDisplay(quiz) },
-      { label: 'Sentence Group', value: groupDisplay(quiz, ctx) },
+      { label: 'Passage Group', value: groupDisplay(quiz, ctx) },
       { label: 'Chunk', value: chunkDisplay(quiz, ctx) },
     ];
     if (hasReportValue(quiz.level)) lines.push({ label: 'Level', value: String(quiz.level) });
