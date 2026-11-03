@@ -461,17 +461,68 @@
     });
   }
 
-  document.getElementById('start-btn').addEventListener('click', () => {
-    document.getElementById('start-btn').hidden = true;
+  function abortPracticeStart() {
+    activeSession = null;
     sessionSaved = false;
-    if (!fixtureMode) {
-      activeSession = Timing.createSession({
-        groupSlug: slug,
-        groupTitle: group.title || group.sentence || slug,
-      });
+    const btn = document.getElementById('start-btn');
+    if (btn) {
+      btn.removeAttribute('data-practice-started');
+      btn.hidden = false;
     }
-    nextQuiz();
+    runnerEl.hidden = true;
+    runnerEl.innerHTML = '';
+    doneEl.hidden = true;
+    updateMeta(queue.length);
+  }
+
+  // Cloud SRS that arrives after the queue was painted (the bootstrap sync
+  // often finishes past Sync.ready()'s 8s cutoff) updates this list in place.
+  // A reload used to land on the same visible button and swallow the click.
+  window.addEventListener('sentence-group-sync', (ev) => {
+    if (!window.Sync || typeof Sync.shouldRefreshPracticeQueue !== 'function') return;
+    const btn = document.getElementById('start-btn');
+    const detail = ev && ev.detail;
+    if (
+      !Sync.shouldRefreshPracticeQueue({
+        progressChanged: !!(detail && detail.progressChanged),
+        fixtureMode: fixtureMode,
+        practiceStarted:
+          !!activeSession || !!(btn && btn.getAttribute('data-practice-started') === '1'),
+        startHidden: !!(btn && btn.hidden),
+      })
+    ) {
+      return;
+    }
+    queue = buildDueQueue();
+    updateMeta(queue.length);
+    renderQueue();
   });
+
+  const startBtn = document.getElementById('start-btn');
+  startBtn.addEventListener('click', () => {
+    startBtn.setAttribute('data-practice-started', '1');
+    startBtn.hidden = true;
+    sessionSaved = false;
+    try {
+      if (!fixtureMode) {
+        activeSession = Timing.createSession({
+          groupSlug: slug,
+          groupTitle: group.title || group.sentence || slug,
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      abortPracticeStart();
+      return;
+    }
+    Promise.resolve()
+      .then(() => nextQuiz())
+      .catch((err) => {
+        console.error(err);
+        abortPracticeStart();
+      });
+  });
+  startBtn.hidden = false;
 
   // Persist partial session if user leaves after completing ≥1 quiz
   function onLeave() {
