@@ -4,8 +4,14 @@
  * {
  *   quizzes: { [quizId]: { completedStages: string[], lastReviewedAt: string|null } },
  *   chunks:  { [groupSlug:chunkId]: { lastCompletedAt, stageIndex, updatedAt?, enteredT1At? } },
- *   sentences: { [groupSlug]: { lastCompletedAt, stageIndex } }
+ *   passages: { [groupSlug]: { lastCompletedAt, stageIndex, updatedAt? } },
+ *   sentences: { [groupSlug]: mirror of passages — legacy key, same cursors },
+ *   sentenceUnits: { [groupSlug:sentenceId]: { lastCompletedAt, stageIndex, updatedAt? } }
  * }
+ * `sentences` used to be the Passage timeline. Load folds it into `passages`
+ * (higher stageIndex wins unless both sides have updatedAt) and writes the
+ * mirror back so an older client or in-flight blob does not drop stageIndex.
+ * `sentenceUnits` is the middle Sentence layer and is never stored in `sentences`.
  * Admission / join order is decided in Schedule (order + dense), not here.
  * stageIndex 0 = admitted into T01 once Schedule admits the chunk.
  * updatedAt is the write time used by cloud merge (last-write-wins only when
@@ -31,21 +37,107 @@
   }
 
   function emptyRoot() {
-    return { quizzes: {}, chunks: {}, sentences: {} };
+    return {
+      quizzes: {},
+      chunks: {},
+      passages: {},
+      sentences: {},
+      sentenceUnits: {},
+    };
+  }
+
+  function isPlain(o) {
+    return !!o && typeof o === 'object' && !Array.isArray(o);
+  }
+
+  function copyCursor(rec) {
+    const api = global.SyncMerge;
+    if (api && typeof api.mergeCursor === 'function' && rec) {
+      return api.mergeCursor(rec, rec);
+    }
+    const out = {
+      lastCompletedAt: rec && rec.lastCompletedAt ? rec.lastCompletedAt : null,
+      stageIndex: rec ? rec.stageIndex | 0 : 0,
+    };
+    if (rec && rec.updatedAt) out.updatedAt = rec.updatedAt;
+    return out;
+  }
+
+  /**
+   * Same cursor rules as sync-merge: empty never wipes a real cursor;
+   * both updatedAt → later write; otherwise higher stageIndex.
+   */
+  function mergePassageCursor(a, b) {
+    const api = global.SyncMerge;
+    if (api && typeof api.mergeCursor === 'function') return api.mergeCursor(a, b);
+    const aEmpty = !isPlain(a) || ((a.stageIndex | 0) === 0 && !a.lastCompletedAt);
+    const bEmpty = !isPlain(b) || ((b.stageIndex | 0) === 0 && !b.lastCompletedAt);
+    if (aEmpty && bEmpty) return { lastCompletedAt: null, stageIndex: 0 };
+    if (aEmpty) return copyCursor(b);
+    if (bEmpty) return copyCursor(a);
+    const aU = a.updatedAt ? Date.parse(a.updatedAt) : NaN;
+    const bU = b.updatedAt ? Date.parse(b.updatedAt) : NaN;
+    if (!isNaN(aU) && !isNaN(bU) && aU !== bU) return copyCursor(aU > bU ? a : b);
+    const aSi = a.stageIndex | 0;
+    const bSi = b.stageIndex | 0;
+    if (aSi !== bSi) return copyCursor(aSi > bSi ? a : b);
+    const later =
+      String(b.lastCompletedAt || '') > String(a.lastCompletedAt || '') ? b : a;
+    return copyCursor(later);
+  }
+
+  /** Fold legacy `sentences` into canonical `passages`. Neither map is mutated. */
+  function foldPassages(passages, legacy) {
+    const base = isPlain(passages) ? passages : {};
+    const old = isPlain(legacy) ? legacy : {};
+    const out = {};
+    const seen = Object.create(null);
+    Object.keys(base).concat(Object.keys(old)).forEach(function (key) {
+      if (seen[key]) return;
+      seen[key] = true;
+      const a = Object.prototype.hasOwnProperty.call(base, key) ? base[key] : undefined;
+      const b = Object.prototype.hasOwnProperty.call(old, key) ? old[key] : undefined;
+      if (a == null && b == null) return;
+      if (a == null) out[key] = copyCursor(b);
+      else if (b == null) out[key] = copyCursor(a);
+      else out[key] = mergePassageCursor(a, b);
+    });
+    return out;
+  }
+
+  function canonicalize(raw) {
+    const passages = foldPassages(raw && raw.passages, raw && raw.sentences);
+    return {
+      quizzes: isPlain(raw && raw.quizzes) ? raw.quizzes : {},
+      chunks: isPlain(raw && raw.chunks) ? raw.chunks : {},
+      passages: passages,
+      sentences: JSON.parse(JSON.stringify(passages)),
+      sentenceUnits: isPlain(raw && raw.sentenceUnits) ? raw.sentenceUnits : {},
+    };
+  }
+
+  function shapeDiffers(raw, next) {
+    if (!isPlain(raw)) return true;
+    return (
+      JSON.stringify(raw.quizzes || {}) !== JSON.stringify(next.quizzes) ||
+      JSON.stringify(raw.chunks || {}) !== JSON.stringify(next.chunks) ||
+      JSON.stringify(raw.passages || {}) !== JSON.stringify(next.passages) ||
+      JSON.stringify(raw.sentences || {}) !== JSON.stringify(next.sentences) ||
+      JSON.stringify(raw.sentenceUnits || {}) !== JSON.stringify(next.sentenceUnits)
+    );
   }
 
   function loadAll() {
+    let raw = null;
     try {
-      const raw = JSON.parse(storage().getItem(KEY) || 'null');
-      if (!raw || typeof raw !== 'object') return emptyRoot();
-      return {
-        quizzes: raw.quizzes || {},
-        chunks: raw.chunks || {},
-        sentences: raw.sentences || {},
-      };
+      raw = JSON.parse(storage().getItem(KEY) || 'null');
     } catch (_) {
-      return emptyRoot();
+      raw = null;
     }
+    if (!isPlain(raw)) return emptyRoot();
+    const next = canonicalize(raw);
+    if (shapeDiffers(raw, next)) saveAll(next);
+    return next;
   }
 
   function notifyLocal(kind) {
@@ -126,9 +218,38 @@
     return all.chunks[k] || schedule().defaultChunkState();
   }
 
-  function getSentence(groupSlug) {
+  function passageState() {
+    const api = schedule();
+    if (api && typeof api.defaultPassageState === 'function') return api.defaultPassageState();
+    if (api && typeof api.defaultSentenceState === 'function') return api.defaultSentenceState();
+    return { lastCompletedAt: null, stageIndex: 0 };
+  }
+
+  function unitState() {
+    const api = schedule();
+    if (api && typeof api.defaultSentenceUnitState === 'function') {
+      return api.defaultSentenceUnitState();
+    }
+    return { lastCompletedAt: null, stageIndex: 0 };
+  }
+
+  function getPassage(groupSlug) {
     const all = loadAll();
-    return all.sentences[groupSlug] || schedule().defaultSentenceState();
+    return all.passages[groupSlug] || passageState();
+  }
+
+  /** Legacy name. Reads the Passage timeline (not sentenceUnits). */
+  function getSentence(groupSlug) {
+    return getPassage(groupSlug);
+  }
+
+  function sentenceUnitKey(groupSlug, sentenceId) {
+    return groupSlug + ':' + sentenceId;
+  }
+
+  function getSentenceUnit(groupSlug, sentenceId) {
+    const all = loadAll();
+    return all.sentenceUnits[sentenceUnitKey(groupSlug, sentenceId)] || unitState();
   }
 
   function markPassed(quizId, stagesToMark, nowIso) {
@@ -201,14 +322,36 @@
     return changed;
   }
 
-  /** Same for Passage Group timeline (always +3 days to next stage). */
-  function advanceSentence(groupSlug, nowIso) {
+  /**
+   * Passage Group timeline. Wait before the next stage is Schedule's
+   * passage wait (1 day). The legacy `sentences` map is written as a mirror.
+   */
+  function advancePassage(groupSlug, nowIso) {
     const all = loadAll();
-    const cur = all.sentences[groupSlug] || schedule().defaultSentenceState();
+    const cur = all.passages[groupSlug] || passageState();
     cur.lastCompletedAt = nowIso || new Date().toISOString();
     cur.stageIndex = (cur.stageIndex | 0) + 1;
     cur.updatedAt = cur.lastCompletedAt;
-    all.sentences[groupSlug] = cur;
+    all.passages[groupSlug] = cur;
+    all.sentences[groupSlug] = JSON.parse(JSON.stringify(cur));
+    saveAll(all);
+    return cur;
+  }
+
+  /** Legacy name. Advances the Passage timeline, not a sentence unit. */
+  function advanceSentence(groupSlug, nowIso) {
+    return advancePassage(groupSlug, nowIso);
+  }
+
+  /** Middle Sentence layer. One cursor per group slug + sentence id. */
+  function advanceSentenceUnit(groupSlug, sentenceId, nowIso) {
+    const all = loadAll();
+    const key = sentenceUnitKey(groupSlug, sentenceId);
+    const cur = all.sentenceUnits[key] || unitState();
+    cur.lastCompletedAt = nowIso || new Date().toISOString();
+    cur.stageIndex = (cur.stageIndex | 0) + 1;
+    cur.updatedAt = cur.lastCompletedAt;
+    all.sentenceUnits[key] = cur;
     saveAll(all);
     return cur;
   }
@@ -223,11 +366,16 @@
     get,
     getQuiz,
     getChunk,
+    getPassage,
     getSentence,
+    getSentenceUnit,
     chunkKey,
+    sentenceUnitKey,
     markPassed,
     advanceChunk,
+    advancePassage,
     advanceSentence,
+    advanceSentenceUnit,
     resetAll,
     reconcileEnteredT1,
     resolveEnteredT1At,

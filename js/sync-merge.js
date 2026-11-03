@@ -11,7 +11,11 @@
  *     "website-manager-progress-v2": <object or JSON string>
  *   }
  * Import also accepts a raw timing document `{ sessions: [] }` or a raw
- * progress document `{ quizzes, chunks, sentences }`.
+ * progress document `{ quizzes, chunks, passages, sentences, sentenceUnits }`.
+ * `passages` is the Passage timeline. `sentences` is the legacy name for that
+ * same map: normalize folds it in (so a phone blob is not reset) and writes
+ * it back as a mirror. `sentenceUnits` is the middle Sentence layer
+ * (`groupSlug:sentenceId`) and is never merged into `sentences`.
  *
  * NEVER replace one side with an empty or partial document.
  *
@@ -28,7 +32,8 @@
  *   After merge, keep the newest 200 sessions (same cap as Timing).
  *   An empty session list does not wipe the other side.
  *
- * PROGRESS (per quiz id, per chunk key "group:chunkId", per sentence slug)
+ * PROGRESS (per quiz id, per chunk key "group:chunkId", per passage slug,
+ * per sentence-unit key "group:sentenceId")
  *   A missing key on one side does not delete that key on the other.
  *   An empty document (no quiz, chunk, or sentence entries) does not
  *   replace a non-empty document.
@@ -41,7 +46,7 @@
  *     There are no delete-tombstones: removing a key locally does not
  *     remove it from the other side on merge.
  *
- *   Chunk / sentence cursor (stageIndex + lastCompletedAt):
+ *   Chunk / passage / sentence-unit cursor (stageIndex + lastCompletedAt):
  *     Empty cursor = stageIndex 0 AND lastCompletedAt null/empty.
  *     An empty cursor never replaces a non-empty cursor.
  *     If BOTH sides have updatedAt and they differ: last-write-wins
@@ -135,14 +140,38 @@
     return normalizeTiming(input).sessions.length === 0;
   }
 
+  /**
+   * Legacy `sentences` and canonical `passages` are the same Passage cursors.
+   * Fold before merge so a blob that only has one of them cannot zero the other.
+   */
+  function foldPassageCursors(passages, legacySentences) {
+    return mergeRecordMap(
+      isPlain(passages) ? passages : {},
+      isPlain(legacySentences) ? legacySentences : {},
+      mergeCursor,
+      copyCursor
+    );
+  }
+
+  function emptyProgress() {
+    return {
+      quizzes: {},
+      chunks: {},
+      passages: {},
+      sentences: {},
+      sentenceUnits: {},
+    };
+  }
+
   function normalizeProgress(input) {
-    if (!isPlain(input)) {
-      return { quizzes: {}, chunks: {}, sentences: {} };
-    }
+    if (!isPlain(input)) return emptyProgress();
+    var passages = foldPassageCursors(input.passages, input.sentences);
     return {
       quizzes: isPlain(input.quizzes) ? input.quizzes : {},
       chunks: isPlain(input.chunks) ? input.chunks : {},
-      sentences: isPlain(input.sentences) ? input.sentences : {},
+      passages: passages,
+      sentences: clone(passages),
+      sentenceUnits: isPlain(input.sentenceUnits) ? input.sentenceUnits : {},
     };
   }
 
@@ -151,7 +180,8 @@
     return (
       Object.keys(n.quizzes).length === 0 &&
       Object.keys(n.chunks).length === 0 &&
-      Object.keys(n.sentences).length === 0
+      Object.keys(n.passages).length === 0 &&
+      Object.keys(n.sentenceUnits).length === 0
     );
   }
 
@@ -186,19 +216,45 @@
     });
   }
 
+  /**
+   * Timing layer. `kind: "sentence"` without sentenceId is a legacy Passage
+   * quiz (recorded before the key move). A real Sentence quiz stores sentenceId.
+   * Keep this in step with timing.js and stats-metrics.js.
+   */
+  function timingLayer(record) {
+    if (!record || typeof record !== 'object') return 'chunk';
+    if (record.kind === 'passage') return 'passage';
+    if (record.kind === 'sentence') {
+      if (record.sentenceId != null && record.sentenceId !== '') return 'sentence';
+      return 'passage';
+    }
+    return 'chunk';
+  }
+
+  function timingBucketKey(record) {
+    var layer = timingLayer(record);
+    if (layer === 'passage') return 'passage';
+    if (layer === 'sentence') return 's:' + record.sentenceId;
+    return 'c' + (record.chunkId != null ? record.chunkId : '?');
+  }
+
   function recomputeChunks(quizzes) {
     var acc = Object.create(null);
     (quizzes || []).forEach(function (q) {
-      var key =
-        q.kind === 'sentence'
-          ? 'sentence'
-          : 'c' + (q.chunkId != null ? q.chunkId : '?');
+      var layer = timingLayer(q);
+      var key = timingBucketKey(q);
       if (!acc[key]) {
         acc[key] = {
           key: key,
-          chunkId: q.chunkId != null ? q.chunkId : null,
-          kind: q.kind || 'chunk',
-          label: q.kind === 'sentence' ? '段落題' : 'chunk' + q.chunkId,
+          chunkId: layer === 'chunk' && q.chunkId != null ? q.chunkId : null,
+          sentenceId: layer === 'sentence' ? q.sentenceId : null,
+          kind: layer === 'chunk' ? q.kind || 'chunk' : layer,
+          label:
+            layer === 'passage'
+              ? '段落題'
+              : layer === 'sentence'
+                ? '句子 ' + q.sentenceId
+                : 'chunk' + q.chunkId,
           totalMs: 0,
           quizCount: 0,
         };
@@ -383,18 +439,35 @@
     return out;
   }
 
+  function withPassageMirror(doc) {
+    var passages = doc.passages || {};
+    return {
+      quizzes: doc.quizzes || {},
+      chunks: doc.chunks || {},
+      passages: passages,
+      sentences: clone(passages),
+      sentenceUnits: doc.sentenceUnits || {},
+    };
+  }
+
   function mergeProgress(local, remote) {
     var L = normalizeProgress(local);
     var R = normalizeProgress(remote);
-    if (isProgressEmpty(L) && isProgressEmpty(R)) {
-      return { quizzes: {}, chunks: {}, sentences: {} };
-    }
-    if (isProgressEmpty(L)) return clone(R);
-    if (isProgressEmpty(R)) return clone(L);
+    if (isProgressEmpty(L) && isProgressEmpty(R)) return emptyProgress();
+    if (isProgressEmpty(L)) return withPassageMirror(clone(R));
+    if (isProgressEmpty(R)) return withPassageMirror(clone(L));
+    var passages = mergeRecordMap(L.passages, R.passages, mergeCursor, copyCursor);
     return {
       quizzes: mergeRecordMap(L.quizzes, R.quizzes, mergeQuizRecord, clone),
       chunks: mergeRecordMap(L.chunks, R.chunks, mergeCursor, copyCursor),
-      sentences: mergeRecordMap(L.sentences, R.sentences, mergeCursor, copyCursor),
+      passages: passages,
+      sentences: clone(passages),
+      sentenceUnits: mergeRecordMap(
+        L.sentenceUnits,
+        R.sentenceUnits,
+        mergeCursor,
+        copyCursor
+      ),
     };
   }
 
@@ -427,7 +500,13 @@
 
   function looksLikeProgress(o) {
     if (!isPlain(o) || Array.isArray(o.sessions)) return false;
-    return isPlain(o.quizzes) || isPlain(o.chunks) || isPlain(o.sentences);
+    return (
+      isPlain(o.quizzes) ||
+      isPlain(o.chunks) ||
+      isPlain(o.passages) ||
+      isPlain(o.sentences) ||
+      isPlain(o.sentenceUnits)
+    );
   }
 
   function unwrapStored(v) {
@@ -511,10 +590,6 @@
     };
   }
 
-  function emptyProgress() {
-    return { quizzes: {}, chunks: {}, sentences: {} };
-  }
-
   /**
    * Merge a parsed backup into the current local documents.
    * Keys absent from the backup are left unchanged.
@@ -546,7 +621,9 @@
     return {
       quizzes: Object.keys(n.quizzes).length,
       chunks: Object.keys(n.chunks).length,
+      passages: Object.keys(n.passages).length,
       sentences: Object.keys(n.sentences).length,
+      sentenceUnits: Object.keys(n.sentenceUnits).length,
     };
   }
 

@@ -126,7 +126,7 @@
       "T18"
     ]
   },
-  "sentence_schedule": {
+  "passage_schedule": {
     "sentence_segment_shadowing": [
       "T+1",
       "T+2",
@@ -184,5 +184,47 @@
       "T+30"
     ]
   },
-  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; sentence: always 1d so T+N ≈ day offset). Chunk admission: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3. sentence_segment_shadowing site expand: reverse one-clip/day from partition masters (schedule_stages pin each daily quiz to T+N)."
+  "sentence_schedule": {
+    "sentence_listen_to_l1": [
+      "T+1",
+      "T+6",
+      "T+11",
+      "T+16",
+      "T+21",
+      "T+26"
+    ],
+    "sentence_l1_palace_multi_tap": [
+      "T+2",
+      "T+7",
+      "T+12",
+      "T+17",
+      "T+22",
+      "T+27"
+    ],
+    "sentence_shadowing_125": [
+      "T+3",
+      "T+8",
+      "T+13",
+      "T+18",
+      "T+23",
+      "T+28"
+    ],
+    "sentence_shadowing_075": [
+      "T+4",
+      "T+9",
+      "T+14",
+      "T+19",
+      "T+24",
+      "T+29"
+    ],
+    "sentence_discourse_mcq": [
+      "T+5",
+      "T+10",
+      "T+15",
+      "T+20",
+      "T+25",
+      "T+30"
+    ]
+  },
+  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk: 1h→3h→24h→1.5d→2.25d→×1.5; passage and sentence units: always 1d so T+N ≈ day offset). passage_schedule is the Passage timeline (Q8 whole_sentence_listening, Q18 sentence_segment_shadowing, Q11 sequence_training). Legacy key sentence_schedule is still read for Passage only when passage_schedule is absent. Once passage_schedule exists, sentence_schedule is the middle Sentence layer (Q20 sentence_listen_to_l1 T+1/6/11/16/21/26, Q21 sentence_l1_palace_multi_tap T+2/7/12/17/22/27, Q22 sentence_shadowing_125 T+3/8/13/18/23/28, Q23 sentence_shadowing_075 T+4/9/14/19/24/29, Q24 sentence_discourse_mcq T+5/10/15/20/25/30). Those stages do nothing until a manifest quiz uses the objective. Chunk admission: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3. sentence_segment_shadowing site expand: reverse one-clip/day from partition masters (schedule_stages pin each daily quiz to T+N)."
 }

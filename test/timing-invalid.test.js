@@ -179,7 +179,7 @@ test('mixed session keeps short quizzes and excludes the long one from chunk and
     JSON.stringify([
       { key: 'c1', totalMs: 10000, quizCount: 1 },
       { key: 'c2', totalMs: 20000, quizCount: 1 },
-      { key: 'sentence', totalMs: 15000, quizCount: 1 },
+      { key: 'passage', totalMs: 15000, quizCount: 1 },
     ])
   );
   const slow = saved.quizzes.find((q) => q.quizId === 'b');

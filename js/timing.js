@@ -4,7 +4,10 @@
  *
  * Session: 開始練習 → queue empty (or leave after ≥1 quiz).
  * Quiz: QuizRunner.run start → onPass end.
- * Chunk: sum of *counted* quiz durations for same chunk_id (or "sentence") in that session.
+ * Chunk: sum of *counted* quiz durations for same chunk_id.
+ * Passage (kind "passage", or legacy kind "sentence" with no sentenceId) sums
+ * under "passage". A Sentence-layer quiz (kind "sentence" + sentenceId) sums
+ * under "s:<sentenceId>".
  *
  * A completed quiz counts toward practice time only when its elapsed time is
  * <= MAX_VALID_QUIZ_MS (120000). Exactly 120000 ms is valid; 120001 ms is not.
@@ -37,10 +40,22 @@
     return isQuizDurationValid(quiz.durationMs);
   }
 
+  /** Keep in step with sync-merge.js timingLayer and stats-metrics.js. */
+  function timingLayer(record) {
+    if (!record || typeof record !== 'object') return 'chunk';
+    if (record.kind === 'passage') return 'passage';
+    if (record.kind === 'sentence') {
+      if (record.sentenceId != null && record.sentenceId !== '') return 'sentence';
+      return 'passage';
+    }
+    return 'chunk';
+  }
+
   function chunkKeyFor(record) {
-    return record.kind === 'sentence'
-      ? 'sentence'
-      : 'c' + (record.chunkId != null ? record.chunkId : '?');
+    const layer = timingLayer(record);
+    if (layer === 'passage') return 'passage';
+    if (layer === 'sentence') return 's:' + record.sentenceId;
+    return 'c' + (record.chunkId != null ? record.chunkId : '?');
   }
 
   function aggregateChunks(quizzes) {
@@ -48,12 +63,19 @@
     (quizzes || []).forEach((record) => {
       if (!isQuizCounted(record)) return;
       const key = chunkKeyFor(record);
+      const layer = timingLayer(record);
       if (!acc[key]) {
         acc[key] = {
           key: key,
-          chunkId: record.chunkId,
-          kind: record.kind,
-          label: record.kind === 'sentence' ? '段落題' : 'chunk' + record.chunkId,
+          chunkId: layer === 'chunk' ? record.chunkId : null,
+          sentenceId: layer === 'sentence' ? record.sentenceId : null,
+          kind: layer === 'chunk' ? record.kind : layer,
+          label:
+            layer === 'passage'
+              ? '段落題'
+              : layer === 'sentence'
+                ? '句子 ' + record.sentenceId
+                : 'chunk' + record.chunkId,
           totalMs: 0,
           quizCount: 0,
         };
@@ -68,6 +90,7 @@
         return {
           key: c.key,
           chunkId: c.chunkId,
+          sentenceId: c.sentenceId != null ? c.sentenceId : null,
           kind: c.kind,
           label: c.label,
           totalMs: c.totalMs,
@@ -292,6 +315,10 @@
         level: meta.level != null ? meta.level : null,
         kind: meta.kind || 'chunk',
         chunkId: meta.kind === 'chunk' ? meta.chunk_id : null,
+        sentenceId:
+          meta.kind === 'sentence' && meta.sentence_id != null && meta.sentence_id !== ''
+            ? meta.sentence_id
+            : null,
         startedAt: new Date(now).toISOString(),
         startedAtMs: now,
       };
@@ -310,6 +337,7 @@
         level: open.level,
         kind: open.kind,
         chunkId: open.chunkId,
+        sentenceId: open.sentenceId != null ? open.sentenceId : null,
         startedAt: open.startedAt,
         endedAt: new Date(now).toISOString(),
         // Drop the number when invalid so totals and the stats page cannot show it.

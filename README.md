@@ -22,8 +22,8 @@ js/quiz-runner.js   渲染與評分
 js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
-data/schedule.json  chunk_schedule + sentence_schedule（邊個 objective 喺邊個 stage）
-data/groups.json    Passage Group + chunks（陣列次序＝加入次序）
+data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q24 階段；未有 live 題）
+data/groups.json    Passage Group + chunks（陣列次序＝加入次序）+ optional sentences[]
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
 ```
@@ -45,7 +45,8 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
-   - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
+   - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `passage` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
+   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（P3 空殼；要有 `sentence_id`，而且該 group 有 `sentences[]`）
 3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
@@ -93,15 +94,38 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 ### Passage（每個 Passage Group 一條線）
 
-`sentence_schedule` 入面嘅 label 按順序當 stage 0, 1, 2…（例如 T+3 → T+6）。  
-第一次（從未完成）即時出第一個 stage；每次做完所有當時到期嘅 Passage Quiz 後等 **3 日** 先出下一個。
+`passage_schedule` 入面嘅 label 按順序當 stage 0, 1, 2…（例如 T+1 → T+2 → T+3）。  
+舊檔如果未有 `passage_schedule`，會讀 legacy `sentence_schedule`（同一套 Passage objectives）。  
+`passage_schedule` 一旦存在，`sentence_schedule` 就係中間 Sentence 層，唔會再當 Passage 時間表。  
+第一次（從未完成）即時出第一個 stage；每次做完所有當時到期嘅 Passage Quiz 後等 **1 日** 先出下一個（`T+N` ≈ 第 N 日）。
+
+進度 key：`passages[slug]`。舊嘅 `sentences[slug]` 會喺載入時摺入 `passages`（唔會把 stageIndex 歸零），並寫返做鏡像，等未更新嘅手機／雲端 blob 仍然睇到同一條線。
+
+### Sentence（中間層，P3 空殼）
+
+`groups.json` 可以有 `sentences[]`：`{ id, text, chunk_ids, start_sec?, end_sec?, l1? }`。  
+切句規則：**chunk-boundary-wins**。一句只包含完整 chunk；唔切開 `chunk.text`；同一個 chunk id 唔可以出現喺兩句。標點只可以落喺 chunk 與 chunk 之間。  
+而家只得 **`yoyaku-shitenai`** 有三句（`s1`–`s3`）。其他 group 冇 `sentences[]`，Chunk／Passage 出題同以前一樣。`chunks[]` 保留。
+
+`sentence_schedule` 已經寫好 Q20–Q24 嘅 `T+N`（每個 objective 每 5 日一次，互相錯開；等待同 Passage 一樣係 1 日）。冇對應 manifest quiz 就唔會到期。Smoke fixture（`sentence-shell-smoke-yoyaku-shitenai-s1-v1`）嘅 objective 唔喺呢個表，所以都唔會到期。Live 題同 runner slide 未做。
+
+| Objective | 題 | Stages |
+|-----------|----|--------|
+| `sentence_listen_to_l1` | Q20 | T+1, T+6, T+11, T+16, T+21, T+26 |
+| `sentence_l1_palace_multi_tap` | Q21 | T+2, T+7, T+12, T+17, T+22, T+27 |
+| `sentence_shadowing_125` | Q22 | T+3, T+8, T+13, T+18, T+23, T+28 |
+| `sentence_shadowing_075` | Q23 | T+4, T+9, T+14, T+19, T+24, T+29 |
+| `sentence_discourse_mcq` | Q24 | T+5, T+10, T+15, T+20, T+25, T+30 |
+
+進度 key：`sentenceUnits[slug:sentenceId]`，同 Passage／Chunk 分開。共用一條 `T+1`…`T+30` 時間線（stage 0 = T+1）。
 
 ### 出題順序
 
 1. 到期 Level 1（按 chunk id／加入次序）
 2. 到期 Level 2（按 chunk id）
 3. 到期 Level 3（按 chunk id）
-4. 到期 Passage quizzes
+4. 到期 Sentence quizzes（有 `sentences[]` 而且 objective 喺 `sentence_schedule` 先會出現）
+5. 到期 Passage quizzes
 
 ## Passage objective：`sentence_segment_shadowing`（整段分段跟讀）
 
@@ -110,7 +134,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 - 播放 `start_sec`→`end_sec`，速度固定 **0.75×**（唔顯示速度掣）
 - 按鈕標籤 **重播**；可無限重播；跟讀後自評 Tick／Cross（`self_check`）
 - 多 slide＝多段依序；只 1 slide（通常 0→句末）＝全段 0.75× 跟讀
-- `sentence_schedule.sentence_segment_shadowing`：每個 stage `T+1`…`T+30`（每日解鎖；sentence wait = 1 日，令 T+N ≈ 第 N 日）
+- `passage_schedule.sentence_segment_shadowing`：每個 stage `T+1`…`T+30`（每日解鎖；passage wait = 1 日，令 T+N ≈ 第 N 日）
 - `whole_sentence_listening` / `sequence_training`：維持 `T+3,T+6,…,T+30`
 - `sequence_training`（`sequence_tap`）：撳錯位置會即時顯示而家呢步嘅正確框（綠色 hotspot），保持 **3 秒**（3000 ms），然後清走個框並由第一個重新開始成題序列。期間再撳無效，唔使撳「再試」
 
@@ -151,6 +175,8 @@ python3 -m http.server 8080
 ```bash
 node js/sync-merge.test.js
 node js/stats-metrics.test.js
+node test/timing-invalid.test.js
+node test/passage-sentence.test.js
 ```
 
 ## 雲端同步（Supabase + Google）
@@ -166,7 +192,7 @@ node js/stats-metrics.test.js
 合併（`js/sync-merge.js`）：
 
 - **計時**：按 session id 合併；同一個 session 入面按 quiz id 去重（留用時較長嗰筆）。Chunk 用時由合併後嘅 quiz 再計，唔會加兩次。空嘅 session 清單唔會清走另一邊。
-- **SRS**：按 quiz id、chunk key（`group:chunkId`）、sentence slug 逐筆合併。Quiz 嘅 `completedStages` 取聯集。Chunk／sentence：兩邊都有 `updatedAt` 先用較新嗰筆（last-write-wins，可以退 stage）；否則保留較高 `stageIndex`（手機舊備份多數冇 `updatedAt`，唔會被較低嘅記錄清走）。`stageIndex` 0 而且冇 `lastCompletedAt` 當空，唔會覆蓋有進度嘅記錄。刪走一個 key **唔會**當墓碑，另一邊有就會留低。Chunk 嘅 `enteredT1At`（第一次入 T1）按 chunk key 聯集；空白唔會清走；兩邊都有就留較早嗰個，唔受 stage 嘅 last-write-wins 影響。
+- **SRS**：按 quiz id、chunk key（`group:chunkId`）、passage slug、sentence-unit key（`group:sentenceId`）逐筆合併。Quiz 嘅 `completedStages` 取聯集。Chunk／passage／sentence unit：兩邊都有 `updatedAt` 先用較新嗰筆（last-write-wins，可以退 stage）；否則保留較高 `stageIndex`（手機舊備份多數冇 `updatedAt`，唔會被較低嘅記錄清走）。`stageIndex` 0 而且冇 `lastCompletedAt` 當空，唔會覆蓋有進度嘅記錄。刪走一個 key **唔會**當墓碑，另一邊有就會留低。舊 key `sentences` 會先摺入 `passages` 再合併，合併結果同時寫返 `sentences` 鏡像。Chunk 嘅 `enteredT1At`（第一次入 T1）按 chunk key 聯集；空白唔會清走；兩邊都有就留較早嗰個，唔受 stage 嘅 last-write-wins 影響。
 - **第一次同步**（計時同 SRS 分開計）：雲端空、本機有 → 上傳本機；本機空、雲端有 → 拉落本機；兩邊都有 → 合併再寫兩邊。永遠唔會用空 payload 覆蓋有資料嘅一邊。
 
 統計頁「匯出 JSON」下載**一份**檔，兩個 key 都喺入面（值可以係物件；匯入亦接受 `localStorage.getItem` 嗰種字串）：
@@ -174,7 +200,7 @@ node js/stats-metrics.test.js
 ```json
 {
   "website-manager-timing-v1": { "sessions": [] },
-  "website-manager-progress-v2": { "quizzes": {}, "chunks": {}, "sentences": {} }
+  "website-manager-progress-v2": { "quizzes": {}, "chunks": {}, "passages": {}, "sentences": {}, "sentenceUnits": {} }
 }
 ```
 

@@ -39,7 +39,8 @@
   }
 
   function chunkLabelHtml(row) {
-    if (row.kind === 'sentence') return escapeHtml(row.label || '段落題');
+    if (row.kind === 'passage') return escapeHtml(row.label || '段落題');
+    if (row.kind === 'sentence') return escapeHtml(row.label || '句子');
     if (row.labelFromText) {
       return (
         escapeHtml(row.label) +
@@ -235,7 +236,15 @@
       html += '<ol class="stats-breakdown">';
       s.quizzes.forEach((q) => {
         const chunkBit =
-          q.kind === 'chunk' ? ' c' + q.chunkId : q.kind === 'sentence' ? ' 段落' : '';
+          q.kind === 'chunk'
+            ? ' c' + q.chunkId
+            : q.kind === 'passage'
+              ? ' 段落'
+              : q.kind === 'sentence'
+                ? q.sentenceId != null && q.sentenceId !== ''
+                  ? ' 句' + q.sentenceId
+                  : ' 段落'
+                : '';
         const time = Timing.quizTimePresentation(q);
         html +=
           '<li><span class="stats-label">L' +

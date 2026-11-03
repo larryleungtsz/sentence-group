@@ -1563,6 +1563,24 @@
           "quizzes_ready": true
         }
       ],
+      "sentences_note": "P3 pilot only. Cut rule is chunk-boundary-wins: each sentence is whole chunks plus the punctuation already between them. A chunk.text is never bisected, and chunk ids do not repeat across sentences. Flat chunks[] stays the practice list. No Q20–Q24 quizzes.",
+      "sentences": [
+        {
+          "id": "s1",
+          "text": "予約してないんですけど、2名って、空いてますか？",
+          "chunk_ids": [1, 2, 3]
+        },
+        {
+          "id": "s2",
+          "text": "お席確認してまいりますので、少々お待ちください。",
+          "chunk_ids": [4, 5]
+        },
+        {
+          "id": "s3",
+          "text": "ご案内させていただきます　お進みください。",
+          "chunk_ids": [6, 7]
+        }
+      ],
       "sentence_quizzes_ready": true
     },
     {

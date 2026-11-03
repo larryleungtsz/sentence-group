@@ -30,7 +30,9 @@ create table if not exists public.user_mapping (
 
 -- One JSON document per localStorage key, for owner "larry".
 -- doc_key is the localStorage key. payload is the parsed object
--- ({ sessions } or { quizzes, chunks, sentences }).
+-- ({ sessions } or { quizzes, chunks, passages, sentences, sentenceUnits }).
+-- passages is the Passage timeline. sentences is a legacy mirror of passages.
+-- sentenceUnits is the middle Sentence layer (groupSlug:sentenceId).
 -- revision is the optimistic-concurrency counter (not auth.uid()).
 create table if not exists public.sync_snapshots (
   owner_id text not null,
