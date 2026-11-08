@@ -12,9 +12,7 @@
     {
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
-      "start_sec": 15.76,
-      "end_sec": 16.1,
+      "audio": "data/audio/clips/koshitsu-yoyaku-17.wav",
       "rate": 1.0
     },
     {
