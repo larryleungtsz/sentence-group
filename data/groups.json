@@ -2065,6 +2065,29 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "koshitsu-yoyaku",
+      "title": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "sentence_added_at": "2026-11-09T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
+      "chunk_order_note": "Q6-only shell: only chunk 17 プランで so this quiz is playable (first/only array member is admitted at T01). Do not invent other chunks. Full palace Area coords list プランで as id 13; this quiz JSON uses chunk.id 17 (matches quiz_id / audio timestamp id). Dense gate independent of other groups.",
+      "chunks": [
+        {
+          "id": 17,
+          "text": "プランで",
+          "chunk_added_at": "2026-11-09T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q6 Soft GO only",
+          "notion_url": "https://app.notion.com/p/4113b2a729568189ba5efb904c9e2869",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q6-only shell. sentences[] empty until full palace Soft GO.",
+      "sentences": [],
+      "sentence_quizzes_ready": false
     }
   ]
 }
