@@ -150,7 +150,7 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; chunk 3 DENSE-waits', function () {
+test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
@@ -158,9 +158,9 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; ch
   assert.strictEqual(group.sentence_quizzes_ready, false);
   assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') === -1);
   assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3]') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('admits [1, 17, 2]') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('admits 1, 17, 2, and 3 at T01') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
   assert.strictEqual(group.chunks[0].text, 'えっと');
   assert.strictEqual(group.chunks[0].quizzes_ready, true);
@@ -182,7 +182,9 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; ch
   assert.strictEqual(group.chunks[3].quizzes_ready, true);
   assert.notStrictEqual(group.chunks[3].skip, true);
   assert.notStrictEqual(group.chunks[3].skipped, true);
-  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[3], 'already_introduced'));
+  assert.strictEqual(group.chunks[3].already_introduced, true);
+  assert.ok(group.chunks[3].already_introduced_note.indexOf('2026-11-09') !== -1);
+  assert.ok(group.chunks[3].already_introduced_note.indexOf('sounding-koshitsu-yoyaku-3-v1') !== -1);
   assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[3], 'shared_with_prior_group'));
   const expected = [
     {
@@ -229,8 +231,7 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; ch
     function () { return Schedule.defaultChunkState(); },
     now
   );
-  assert.deepStrictEqual(Array.from(admitted), [1, 17, 2]);
-  assert.ok(!admitted.has(3));
+  assert.deepStrictEqual(Array.from(admitted), [1, 17, 2, 3]);
   const chunk2QuizId = 'sounding-koshitsu-yoyaku-2-v1';
   const chunk2Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk2QuizId);
   assert.strictEqual(chunk2Rows.length, 1);
@@ -327,67 +328,7 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; ch
       admitted: admitted.has(3),
       skipped: false,
     }),
-    []
-  );
-
-  const hour = 60 * 60 * 1000;
-  let chunk1 = Schedule.defaultChunkState();
-  function stateAt(id) {
-    return id === 1 ? chunk1 : Schedule.defaultChunkState();
-  }
-  let t = now;
-  chunk1 = { stageIndex: 1, lastCompletedAt: new Date(t).toISOString() };
-  t += hour;
-  assert.strictEqual(Schedule.isChunkStageReady(chunk1, t), true);
-  chunk1 = { stageIndex: 2, lastCompletedAt: new Date(t).toISOString() };
-  t += 3 * hour;
-  assert.strictEqual(Schedule.isChunkStageReady(chunk1, t), true);
-  chunk1 = { stageIndex: 3, lastCompletedAt: new Date(t).toISOString() };
-  assert.strictEqual(Schedule.hasUnlockedThroughT1(chunk1, t), false);
-  assert.deepStrictEqual(
-    Array.from(Schedule.admittedChunkIds(group.chunks, stateAt, t)),
-    [1, 17, 2]
-  );
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: chunk3Row.objective,
-      kind: chunk3Row.kind,
-      schedule: schedule,
-      chunkState: Schedule.defaultChunkState(),
-      completedStages: [],
-      now: t,
-      admitted: Schedule.admittedChunkIds(group.chunks, stateAt, t).has(3),
-      skipped: false,
-    }),
-    []
-  );
-  t += 24 * hour;
-  assert.strictEqual(Schedule.hasUnlockedThroughT1(chunk1, t), true);
-  const admittedAfterT1 = Schedule.admittedChunkIds(group.chunks, stateAt, t);
-  assert.deepStrictEqual(Array.from(admittedAfterT1), [1, 17, 2, 3]);
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: chunk3Row.objective,
-      kind: chunk3Row.kind,
-      schedule: schedule,
-      chunkState: Schedule.defaultChunkState(),
-      completedStages: [],
-      now: t,
-      admitted: admittedAfterT1.has(3),
-      skipped: false,
-    }),
     ['T01']
-  );
-  const pastT1 = { stageIndex: 4, lastCompletedAt: new Date(now).toISOString() };
-  assert.strictEqual(Schedule.hasUnlockedThroughT1(pastT1, now), true);
-  assert.ok(
-    Schedule.admittedChunkIds(
-      group.chunks,
-      function (id) {
-        return id === 1 ? pastT1 : Schedule.defaultChunkState();
-      },
-      now
-    ).has(3)
   );
 });
 
