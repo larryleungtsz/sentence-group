@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>一次性重置 koshitsu-yoyaku</title>
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="nav-back" href="../index.html">← 首頁</a>
+      <h1>一次性重置</h1>
+    </header>
+    <p id="status" class="muted">準備清 koshitsu-yoyaku 嘅 SRS…</p>
+    <p id="detail" class="muted"></p>
+    <ul id="links" hidden>
+      <li><a href="../group.html?slug=koshitsu-yoyaku">開 koshitsu-yoyaku 練習頁</a></li>
+    </ul>
+  </div>
+  <script src="../js/sync-config.js"></script>
+  <script>
+(function () {
+  var KEY = 'website-manager-progress-v2';
+  var SLUG = 'koshitsu-yoyaku';
+  var DOC_KEY = 'website-manager-progress-v2';
+  var OWNER_ID = 'larry';
+  var statusEl = document.getElementById('status');
+  var detailEl = document.getElementById('detail');
+  var linksEl = document.getElementById('links');
+
+  function emptyRoot() {
+    return { quizzes: {}, chunks: {}, passages: {}, sentences: {}, sentenceUnits: {} };
+  }
+
+  function isPlain(o) {
+    return !!o && typeof o === 'object' && !Array.isArray(o);
+  }
+
+  function stripGroup(raw) {
+    if (!raw || typeof raw !== 'object') raw = emptyRoot();
+    var quizzes = raw.quizzes && typeof raw.quizzes === 'object' ? raw.quizzes : {};
+    var chunks = raw.chunks && typeof raw.chunks === 'object' ? raw.chunks : {};
+    var sentences = raw.sentences && typeof raw.sentences === 'object' ? raw.sentences : {};
+    var passages = raw.passages && typeof raw.passages === 'object' ? raw.passages : {};
+    var sentenceUnits = raw.sentenceUnits && typeof raw.sentenceUnits === 'object' ? raw.sentenceUnits : {};
+    var removedQ = 0, removedC = 0, removedP = 0, removedU = 0;
+
+    Object.keys(quizzes).forEach(function (id) {
+      if (id.indexOf(SLUG) !== -1) {
+        delete quizzes[id];
+        removedQ++;
+      }
+    });
+    Object.keys(chunks).forEach(function (k) {
+      if (k.indexOf(SLUG + ':') === 0) {
+        delete chunks[k];
+        removedC++;
+      }
+    });
+    if (Object.prototype.hasOwnProperty.call(sentences, SLUG)) {
+      delete sentences[SLUG];
+      removedP++;
+    }
+    if (Object.prototype.hasOwnProperty.call(passages, SLUG)) {
+      delete passages[SLUG];
+      removedP++;
+    }
+    Object.keys(sentenceUnits).forEach(function (key) {
+      if (key.indexOf(SLUG + ':') === 0) {
+        delete sentenceUnits[key];
+        removedU++;
+      }
+    });
+
+    raw.quizzes = quizzes;
+    raw.chunks = chunks;
+    raw.passages = passages;
+    raw.sentences = sentences;
+    raw.sentenceUnits = sentenceUnits;
+    return { raw: raw, removedQ: removedQ, removedC: removedC, removedP: removedP, removedU: removedU };
+  }
+
+  function summarize(prefix, r) {
+    return prefix + ' quiz ' + r.removedQ + '、chunk ' + r.removedC +
+      '、passage/sentence ' + r.removedP + '、sentenceUnit ' + r.removedU;
+  }
+
+  function loadSupabaseJs() {
+    if (window.supabase && typeof window.supabase.createClient === 'function') {
+      return Promise.resolve();
+    }
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/dist/umd/supabase.js';
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error('載入 Supabase 程式庫失敗')); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function stripCloud() {
+    var cfg = window.SYNC_CONFIG || {};
+    var url = String(cfg.supabaseUrl || '');
+    var key = String(cfg.supabaseAnonKey || '');
+    if (!url || !key || !window.supabase) {
+      return Promise.resolve('未設定雲端，只清咗本機。');
+    }
+    var client = window.supabase.createClient(url, key, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    });
+    return client.auth.getSession().then(function (res) {
+      var session = res && res.data && res.data.session;
+      if (!session) return '呢部裝置未登入，只清咗本機。若你用另一部已登入裝置練習過，請用嗰部都打開此頁。';
+      return client
+        .from('sync_snapshots')
+        .select('payload, revision')
+        .eq('owner_id', OWNER_ID)
+        .eq('doc_key', DOC_KEY)
+        .maybeSingle()
+        .then(function (fetched) {
+          if (fetched.error) throw fetched.error;
+          if (!fetched.data) return '雲端未有進度檔，無需改雲端。';
+          var payload = fetched.data.payload;
+          if (typeof payload === 'string') payload = JSON.parse(payload);
+          if (!isPlain(payload)) return '雲端進度格式唔啱，未改雲端。';
+          var before = JSON.stringify(payload);
+          var result = stripGroup(payload);
+          if (JSON.stringify(result.raw) === before) {
+            return '雲端本來就無此組紀錄。' + summarize('（檢查：', result) + '）';
+          }
+          var nextRev = (Number(fetched.data.revision) || 1) + 1;
+          return client
+            .from('sync_snapshots')
+            .update({
+              payload: result.raw,
+              revision: nextRev,
+              updated_at: new Date().toISOString()
+            })
+            .eq('owner_id', OWNER_ID)
+            .eq('doc_key', DOC_KEY)
+            .eq('revision', fetched.data.revision)
+            .select('revision')
+            .then(function (upd) {
+              if (upd.error) throw upd.error;
+              if (!upd.data || !upd.data.length) {
+                throw new Error('雲端剛被另一部機更新，請再刷新此頁一次。');
+              }
+              return summarize('已同步清雲端：', result);
+            });
+        });
+    });
+  }
+
+  try {
+    var raw = JSON.parse(localStorage.getItem(KEY) || 'null');
+    var localResult = stripGroup(raw);
+    localStorage.setItem(KEY, JSON.stringify(localResult.raw));
+    statusEl.textContent = '已重置本機 koshitsu-yoyaku SRS（只清呢一組）。正在檢查雲端…';
+    detailEl.textContent = summarize('本機清咗', localResult) + '。未改 already_introduced、schedule.json、計時紀錄，亦無改其他 Passage Group。';
+
+    loadSupabaseJs()
+      .then(stripCloud)
+      .then(function (cloudMsg) {
+        statusEl.textContent = '已重置 koshitsu-yoyaku 嘅 SRS（只清呢一組）。';
+        detailEl.textContent = detailEl.textContent + ' ' + cloudMsg +
+          ' 請關閉其他練習分頁後，再開下面連結（建議硬重新整理）。兩條 Q6（えっと、プランで）可以從開頭再練。';
+        linksEl.hidden = false;
+      })
+      .catch(function (e) {
+        statusEl.textContent = '本機已重置，但雲端更新失敗：' + (e && e.message ? e.message : String(e));
+        linksEl.hidden = false;
+      });
+  } catch (e) {
+    statusEl.textContent = '重置失敗：' + (e && e.message ? e.message : String(e));
+  }
+})();
+  </script>
+</body>
+</html>
