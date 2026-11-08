@@ -150,7 +150,7 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01; chunk 5 DENSE-waits', function () {
+test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, 3, and 5 are due at T01', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
@@ -158,9 +158,9 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01;
   assert.strictEqual(group.sentence_quizzes_ready, false);
   assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3, 5]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') === -1);
   assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3, 5]') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('admits 1, 17, 2, and 3 at T01') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('admits 1, 17, 2, 3, and 5 at T01') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
   assert.strictEqual(group.chunks[0].text, 'えっと');
   assert.strictEqual(group.chunks[0].quizzes_ready, true);
@@ -190,8 +190,10 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01;
   assert.strictEqual(group.chunks[4].text, '個室は');
   assert.strictEqual(group.chunks[4].quizzes_ready, true);
   assert.notStrictEqual(group.chunks[4].skip, true);
-  assert.notStrictEqual(group.chunks[4].already_introduced, true);
-  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[4], 'already_introduced'));
+  assert.notStrictEqual(group.chunks[4].skipped, true);
+  assert.strictEqual(group.chunks[4].already_introduced, true);
+  assert.ok(group.chunks[4].already_introduced_note.indexOf('2026-11-09') !== -1);
+  assert.ok(group.chunks[4].already_introduced_note.indexOf('sounding-koshitsu-yoyaku-5-v1') !== -1);
   assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[4], 'shared_with_prior_group'));
   const expected = [
     {
@@ -238,8 +240,7 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01;
     function () { return Schedule.defaultChunkState(); },
     now
   );
-  assert.deepStrictEqual(Array.from(admitted), [1, 17, 2, 3]);
-  assert.ok(!admitted.has(5));
+  assert.deepStrictEqual(Array.from(admitted), [1, 17, 2, 3, 5]);
   const chunk2QuizId = 'sounding-koshitsu-yoyaku-2-v1';
   const chunk2Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk2QuizId);
   assert.strictEqual(chunk2Rows.length, 1);
@@ -374,10 +375,10 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01;
       chunkState: Schedule.defaultChunkState(),
       completedStages: [],
       now: now,
-      admitted: false,
+      admitted: admitted.has(5),
       skipped: false,
     }),
-    []
+    ['T01']
   );
 });
 
