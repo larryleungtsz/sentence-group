@@ -2074,7 +2074,7 @@
       "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
-      "chunk_order_note": "Q6-only shell with three chunks: 1 えっと (new) then 17 プランで (already_introduced:true, already live) then 2 個室って (new, appended — not palace order). Append-not-insert: putting 2 between 1 and 17 would ORDER-block 17 until 2 is admitted, while DENSE blocks 2 until 1 unlocks through T1 (~28h+), hiding プランで. Fresh player: chunks 1 and 17 admitted at T01; chunk 2 DENSE-waits until chunk 1 unlocks through T1. Do not set already_introduced on chunk 2. Do not invent other palace chunks. Keep palace audio-timestamp ids 1 / 2 / 17. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
+      "chunk_order_note": "Q6-only shell. Chunk order stays [1 えっと, 17 プランで, 2 個室って], not palace order [1, 2, 17]. Chunks 17 and 2 are already_introduced. A fresh player admits 1, 17, and 2 at T01; only chunk 1 occupies the dense slot. Append-not-insert: putting 2 between 1 and 17 is unnecessary now that 2 is already_introduced, but do not reorder — leave [1, 17, 2] as-is to avoid extra churn. Do not invent other palace chunks. Keep palace audio-timestamp ids 1 / 2 / 17. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
       "chunks": [
         {
           "id": 1,
@@ -2095,6 +2095,8 @@
         {
           "id": 2,
           "text": "個室って",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-2-v1 is immediately playable. Flag so chunk 2 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T03:01:14+08:00",
           "chunk_added_at_note": "provisional — Soft GO sounding-koshitsu-yoyaku-2-v1 (個室って). Clip data/audio/clips/koshitsu-yoyaku-2.wav 0.98–2.07.",
           "notion_url": "https://app.notion.com/p/4113b2a729568166981acedb037010af",
