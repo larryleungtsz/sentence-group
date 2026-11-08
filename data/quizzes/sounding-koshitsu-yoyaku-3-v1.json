@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 3,
+    "text": "まだ"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-3.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "馬打",
+      "distractors": [
+        "哥sit豬蛙",
+        "摸",
+        "壓家奶desk泥"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【馬】打　選出這一截對應的物件描述。",
+      "correct": "棕色的駿馬",
+      "distractors": [
+        "戴著紅拳套出拳的動作"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "馬【打】　請點選確認最後一截對應的物件描述。",
+      "correct": "戴著紅拳套出拳的動作",
+      "distractors": [],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
