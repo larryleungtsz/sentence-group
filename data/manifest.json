@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T00:12:57+08:00",
+  "generated_at": "2026-11-09T01:47:23+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -31705,6 +31705,15 @@
       "kind": "chunk",
       "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "chunk_id": 17
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-1-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-1-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 1
     }
   ]
 }

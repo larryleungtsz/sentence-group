@@ -13,7 +13,7 @@
       "type": "audio_chunk",
       "instruction": "請聽這個詞。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
-      "start_sec": 15.81,
+      "start_sec": 15.76,
       "end_sec": 16.1,
       "rate": 1.0
     },
@@ -22,15 +22,6 @@
       "instruction": "選出正確的廣東話諧音串。",
       "correct": "潑爛地",
       "distractors": [
-        "Air拖",
-        "哥舌豬Dead",
-        "馬打",
-        "哥sit豬蛙",
-        "摸",
-        "壓家奶desk泥",
-        "挖car梨master",
-        "Telblue路錫Key爹",
-        "哥按奶can蘿deskYo",
         "Kneel芝CANHand",
         "攞米河DIe豬機",
         "Class哥瑪莉MASTER"

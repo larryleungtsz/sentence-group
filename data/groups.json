@@ -2074,13 +2074,21 @@
       "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
-      "chunk_order_note": "Q6-only shell: only chunk 17 プランで so this quiz is playable (first/only array member is admitted at T01). Do not invent other chunks. Full palace Area coords list プランで as id 13; this quiz JSON uses chunk.id 17 (matches quiz_id / audio timestamp id). Dense gate independent of other groups.",
+      "chunk_order_note": "Q6-only shell with two chunks: 1 えっと (new) then 17 プランで (already_introduced:true, already live). Both admitted at T01 for a fresh player: chunk 1 is the new dense chunk; chunk 17 does not occupy/wait on the dense gate. Do not invent other palace chunks. Keep chunk ids 1 and 17 as written by Q6 (audio-timestamp ids). sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
       "chunks": [
+        {
+          "id": 1,
+          "text": "えっと",
+          "chunk_added_at": "2026-11-09T01:43:00+08:00",
+          "chunk_added_at_note": "provisional — Q6 Soft GO sounding-koshitsu-yoyaku-1-v1",
+          "notion_url": "https://app.notion.com/p/4113b2a729568103b74ad49f42819a0b",
+          "quizzes_ready": true
+        },
         {
           "id": 17,
           "text": "プランで",
-          "chunk_added_at": "2026-11-09T00:00:00+08:00",
-          "chunk_added_at_note": "provisional — Q6 Soft GO only",
+          "already_introduced": true,
+          "already_introduced_note": "Already live on this Q6-only shell (PR #17). Flag so adding chunk 1 does not hide プランで behind the dense T01–T03 gate (next new chunk would otherwise wait until etto unlocks through T1, ~28h+). Both quizzes must be immediately playable so Larry can verify the start_sec pads.",
           "notion_url": "https://app.notion.com/p/4113b2a729568189ba5efb904c9e2869",
           "quizzes_ready": true
         }

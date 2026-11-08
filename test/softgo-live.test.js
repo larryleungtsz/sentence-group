@@ -150,50 +150,75 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell and chunk 17 is due at T01', function () {
+test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
+  assert.ok(Q6_ONLY_SHELLS.has(group.slug));
   assert.deepStrictEqual(group.sentences, []);
   assert.strictEqual(group.sentence_quizzes_ready, false);
-  assert.strictEqual(group.chunks.length, 1);
-  assert.strictEqual(group.chunks[0].id, 17);
-  assert.strictEqual(group.chunks[0].text, 'プランで');
+  assert.strictEqual(group.chunks.length, 2);
+  assert.strictEqual(group.chunks[0].id, 1);
+  assert.strictEqual(group.chunks[0].text, 'えっと');
   assert.strictEqual(group.chunks[0].quizzes_ready, true);
   assert.notStrictEqual(group.chunks[0].skip, true);
-  const row = manifest.quizzes.find((q) => q.quiz_id === 'sounding-koshitsu-yoyaku-17-v1');
-  assert.ok(row);
-  assert.strictEqual(row.file, 'data/quizzes/sounding-koshitsu-yoyaku-17-v1.json');
-  assert.strictEqual(row.objective, 'pronunciation_sounding_select');
-  assert.strictEqual(row.kind, 'chunk');
-  assert.strictEqual(row.level, 1);
-  assert.strictEqual(row.chunk_id, 17);
-  assert.strictEqual(row.sentence, group.sentence);
-  const quiz = JSON.parse(fs.readFileSync(path.join(root, row.file), 'utf8'));
-  assert.strictEqual(quiz.quiz_id, row.quiz_id);
-  assert.strictEqual(quiz.sentence, group.sentence);
-  assert.strictEqual(quiz.chunk.id, 17);
-  assert.strictEqual(quiz.chunk.text, 'プランで');
-  assert.ok(quiz.slides[2].instruction.includes('【潑】爛地\u3000選出'));
-  const now = Date.parse('2026-11-09T00:00:00+08:00');
+  assert.notStrictEqual(group.chunks[0].already_introduced, true);
+  assert.strictEqual(group.chunks[1].id, 17);
+  assert.strictEqual(group.chunks[1].text, 'プランで');
+  assert.strictEqual(group.chunks[1].quizzes_ready, true);
+  assert.strictEqual(group.chunks[1].already_introduced, true);
+  assert.notStrictEqual(group.chunks[1].skip, true);
+  const expected = [
+    { quiz_id: 'sounding-koshitsu-yoyaku-1-v1', chunk_id: 1, start_sec: 0 },
+    { quiz_id: 'sounding-koshitsu-yoyaku-17-v1', chunk_id: 17, start_sec: 15.76 },
+  ];
+  expected.forEach(function (item) {
+    const row = manifest.quizzes.find((q) => q.quiz_id === item.quiz_id);
+    assert.ok(row, item.quiz_id);
+    assert.strictEqual(row.file, 'data/quizzes/' + item.quiz_id + '.json');
+    assert.strictEqual(row.objective, 'pronunciation_sounding_select');
+    assert.strictEqual(row.kind, 'chunk');
+    assert.strictEqual(row.level, 1);
+    assert.strictEqual(row.chunk_id, item.chunk_id);
+    assert.strictEqual(row.sentence, group.sentence);
+    const quiz = JSON.parse(fs.readFileSync(path.join(root, row.file), 'utf8'));
+    assert.strictEqual(quiz.quiz_id, row.quiz_id);
+    assert.strictEqual(quiz.sentence, group.sentence);
+    assert.strictEqual(quiz.chunk.id, item.chunk_id);
+    assert.strictEqual(quiz.chunk.text, group.chunks.find((c) => c.id === item.chunk_id).text);
+    const audio = quiz.slides.find((slide) => slide.type === 'audio_chunk');
+    assert.ok(audio, item.quiz_id);
+    assert.strictEqual(audio.start_sec, item.start_sec);
+  });
+  const quiz17 = JSON.parse(
+    fs.readFileSync(path.join(root, 'data/quizzes/sounding-koshitsu-yoyaku-17-v1.json'), 'utf8')
+  );
+  assert.notStrictEqual(quiz17.slides[0].start_sec, 15.81);
+  assert.ok(quiz17.slides[2].instruction.includes('【潑】爛地\u3000選出'));
+  const now = Date.parse('2026-11-09T01:43:00+08:00');
   const admitted = Schedule.admittedChunkIds(
     group.chunks,
     function () { return Schedule.defaultChunkState(); },
     now
   );
+  assert.ok(admitted.has(1));
   assert.ok(admitted.has(17));
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: row.objective,
-      kind: row.kind,
-      schedule: schedule,
-      chunkState: Schedule.defaultChunkState(),
-      completedStages: [],
-      now: now,
-      admitted: admitted.has(row.chunk_id),
-      skipped: false,
-    }),
-    ['T01']
-  );
+  assert.strictEqual(admitted.size, 2);
+  expected.forEach(function (item) {
+    const row = manifest.quizzes.find((q) => q.quiz_id === item.quiz_id);
+    assert.deepStrictEqual(
+      Schedule.dueStages({
+        objective: row.objective,
+        kind: row.kind,
+        schedule: schedule,
+        chunkState: Schedule.defaultChunkState(),
+        completedStages: [],
+        now: now,
+        admitted: admitted.has(row.chunk_id),
+        skipped: false,
+      }),
+      ['T01']
+    );
+  });
 });
 
 test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function () {
