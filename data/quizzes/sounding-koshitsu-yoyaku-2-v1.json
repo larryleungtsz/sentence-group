@@ -31,35 +31,35 @@
       "instruction": "【哥】舌豬Dead　選出這一截對應的物件描述。",
       "correct": "綠色哥布林",
       "distractors": [
-        "哥布林極長的舌頭",
-        "卡通死豬",
-        "豬的卡通交差眼 + 粉筆圍線"
+        "極長的舌頭",
+        "卡通豬",
+        "交差眼 + 粉筆圍線"
       ],
       "shuffle": true
     },
     {
       "type": "select_text",
       "instruction": "哥【舌】豬Dead　選出這一截對應的物件描述。",
-      "correct": "哥布林極長的舌頭",
+      "correct": "極長的舌頭",
       "distractors": [
-        "卡通死豬",
-        "豬的卡通交差眼 + 粉筆圍線"
+        "卡通豬",
+        "交差眼 + 粉筆圍線"
       ],
       "shuffle": true
     },
     {
       "type": "select_text",
       "instruction": "哥舌【豬】Dead　選出這一截對應的物件描述。",
-      "correct": "卡通死豬",
+      "correct": "卡通豬",
       "distractors": [
-        "豬的卡通交差眼 + 粉筆圍線"
+        "交差眼 + 粉筆圍線"
       ],
       "shuffle": true
     },
     {
       "type": "select_text",
       "instruction": "哥舌豬【Dead】　請點選確認最後一截對應的物件描述。",
-      "correct": "豬的卡通交差眼 + 粉筆圍線",
+      "correct": "交差眼 + 粉筆圍線",
       "distractors": [],
       "shuffle": true
     }
