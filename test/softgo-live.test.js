@@ -81,6 +81,9 @@ const EXPECTED_SENTENCES = {
   'orenji-jusu': 5,
 };
 
+/** Playable chunk quizzes only. Not a sentence-layer Soft GO palace. */
+const Q6_ONLY_SHELLS = new Set(['koshitsu-yoyaku']);
+
 function isSkip(chunk) {
   return !!(chunk && (chunk.skip === true || chunk.skipped === true));
 }
@@ -117,10 +120,12 @@ function groupBySlug(slug) {
 }
 
 test('every group has the Soft GO sentence count and chunk-boundary-wins holds', function () {
-  assert.strictEqual(groups.groups.length, Object.keys(EXPECTED_SENTENCES).length);
+  const sentenceGroups = groups.groups.filter((group) => !Q6_ONLY_SHELLS.has(group.slug));
+  assert.strictEqual(groups.groups.length, sentenceGroups.length + Q6_ONLY_SHELLS.size);
+  assert.strictEqual(sentenceGroups.length, Object.keys(EXPECTED_SENTENCES).length);
   const passages = groups.groups.map((g) => g.sentence);
   assert.strictEqual(new Set(passages).size, passages.length);
-  groups.groups.forEach((group) => {
+  sentenceGroups.forEach((group) => {
     assert.strictEqual(group.sentences.length, EXPECTED_SENTENCES[group.slug], group.slug);
     assert.ok(group.sentences_note && group.sentences_note.indexOf('chunk-boundary-wins') !== -1, group.slug);
     const active = (group.chunks || []).filter((c) => !isSkip(c));
@@ -143,6 +148,52 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
     });
     assert.deepStrictEqual(flat, active.map((c) => c.id), group.slug);
   });
+});
+
+test('koshitsu-yoyaku is a Q6-only shell and chunk 17 is due at T01', function () {
+  const group = groupBySlug('koshitsu-yoyaku');
+  assert.ok(group);
+  assert.deepStrictEqual(group.sentences, []);
+  assert.strictEqual(group.sentence_quizzes_ready, false);
+  assert.strictEqual(group.chunks.length, 1);
+  assert.strictEqual(group.chunks[0].id, 17);
+  assert.strictEqual(group.chunks[0].text, 'プランで');
+  assert.strictEqual(group.chunks[0].quizzes_ready, true);
+  assert.notStrictEqual(group.chunks[0].skip, true);
+  const row = manifest.quizzes.find((q) => q.quiz_id === 'sounding-koshitsu-yoyaku-17-v1');
+  assert.ok(row);
+  assert.strictEqual(row.file, 'data/quizzes/sounding-koshitsu-yoyaku-17-v1.json');
+  assert.strictEqual(row.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(row.kind, 'chunk');
+  assert.strictEqual(row.level, 1);
+  assert.strictEqual(row.chunk_id, 17);
+  assert.strictEqual(row.sentence, group.sentence);
+  const quiz = JSON.parse(fs.readFileSync(path.join(root, row.file), 'utf8'));
+  assert.strictEqual(quiz.quiz_id, row.quiz_id);
+  assert.strictEqual(quiz.sentence, group.sentence);
+  assert.strictEqual(quiz.chunk.id, 17);
+  assert.strictEqual(quiz.chunk.text, 'プランで');
+  assert.ok(quiz.slides[2].instruction.includes('【潑】爛地\u3000選出'));
+  const now = Date.parse('2026-11-09T00:00:00+08:00');
+  const admitted = Schedule.admittedChunkIds(
+    group.chunks,
+    function () { return Schedule.defaultChunkState(); },
+    now
+  );
+  assert.ok(admitted.has(17));
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: row.objective,
+      kind: row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: now,
+      admitted: admitted.has(row.chunk_id),
+      skipped: false,
+    }),
+    ['T01']
+  );
 });
 
 test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function () {

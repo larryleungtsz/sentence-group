@@ -1,0 +1,70 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-17-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 17,
+    "text": "プランで"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
+      "start_sec": 15.81,
+      "end_sec": 16.1,
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "潑爛地",
+      "distractors": [
+        "Air拖",
+        "哥舌豬Dead",
+        "馬打",
+        "哥sit豬蛙",
+        "摸",
+        "壓家奶desk泥",
+        "挖car梨master",
+        "Telblue路錫Key爹",
+        "哥按奶can蘿deskYo",
+        "Kneel芝CANHand",
+        "攞米河DIe豬機",
+        "Class哥瑪莉MASTER"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【潑】爛地　選出這一截對應的物件描述。",
+      "correct": "撥水的動態與水花",
+      "distractors": [
+        "破爛毀壞的地表碎片",
+        "爛地基底"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "潑【爛】地　選出這一截對應的物件描述。",
+      "correct": "破爛毀壞的地表碎片",
+      "distractors": [
+        "爛地基底"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "潑爛【地】　請點選確認最後一截對應的物件描述。",
+      "correct": "爛地基底",
+      "distractors": [],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
