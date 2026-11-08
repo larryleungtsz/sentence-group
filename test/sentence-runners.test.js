@@ -302,6 +302,44 @@ tests.push(test('Q21 parses flat and nested hotspots and grades a set in any ord
   assert.strictEqual(QuizRunner.multiTapImage({}, {}, {}), '');
 }));
 
+tests.push(test('generic select_text uses slide.instruction when present', function () {
+  function selectQuiz(extra) {
+    return {
+      objective: 'generic_select_text',
+      slides: [Object.assign({
+        type: 'select_text',
+        prompt: 'stem that stays off this page',
+        correct: '對',
+        distractors: ['錯'],
+      }, extra)],
+    };
+  }
+
+  const withNote = runQuiz(selectQuiz({ instruction: '【潑】爛地' }));
+  assert.ok(texts(withNote).indexOf('【潑】爛地') !== -1);
+  assert.ok(texts(withNote).indexOf('請選擇正確答案') === -1);
+  assert.ok(texts(withNote).indexOf('stem that stays off this page') === -1);
+
+  const missing = runQuiz(selectQuiz({}));
+  assert.ok(texts(missing).indexOf('請選擇正確答案') !== -1);
+  assert.ok(texts(missing).indexOf('stem that stays off this page') === -1);
+
+  const blank = runQuiz(selectQuiz({ instruction: '   ' }));
+  assert.ok(texts(blank).indexOf('請選擇正確答案') !== -1);
+
+  const clozeRoot = runQuiz(cloze);
+  assert.ok(texts(clozeRoot).indexOf('請選擇空白正確的母語句子') !== -1);
+  assert.ok(texts(clozeRoot).indexOf('請選擇正確答案') === -1);
+
+  const discourse = runQuiz(quizByObjective('sentence_discourse_mcq'));
+  assert.ok(texts(discourse).indexOf('請揀最啱上文下理嘅母語句') !== -1);
+  assert.ok(texts(discourse).indexOf('請選擇正確答案') === -1);
+
+  const listen = runQuiz(quizByObjective('sentence_listen_to_l1'));
+  assert.ok(texts(listen).indexOf('請聆聽句子，然後揀啱嘅翻譯') !== -1);
+  assert.ok(texts(listen).indexOf('請選擇正確答案') === -1);
+}));
+
 tests.push(test('Q20 folds audio and L1 choices onto one graded slide', function () {
   const quiz = quizByObjective('sentence_listen_to_l1');
   const slides = QuizRunner.prepareSlides(quiz);

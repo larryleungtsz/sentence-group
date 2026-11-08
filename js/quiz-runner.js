@@ -824,13 +824,15 @@
           const stem = slide.prompt || slide.context || slide.stem || '';
           if (stem) host.appendChild(el('p', 'prompt', stem));
         }
+        const slideInstruction =
+          typeof slide.instruction === 'string' ? slide.instruction.trim() : '';
         const instruction = cloze
           ? '請選擇空白正確的母語句子'
           : listenL1
             ? (slide.instruction || '請聆聽句子，然後揀啱嘅翻譯')
             : discourse
               ? '請揀最啱上文下理嘅母語句'
-              : '請選擇正確答案';
+              : (slideInstruction || '請選擇正確答案');
         host.appendChild(
           el(
             'p',
