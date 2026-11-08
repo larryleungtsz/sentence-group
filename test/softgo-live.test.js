@@ -168,8 +168,16 @@ test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', fu
   assert.strictEqual(group.chunks[1].already_introduced, true);
   assert.notStrictEqual(group.chunks[1].skip, true);
   const expected = [
-    { quiz_id: 'sounding-koshitsu-yoyaku-1-v1', chunk_id: 1, start_sec: 0 },
-    { quiz_id: 'sounding-koshitsu-yoyaku-17-v1', chunk_id: 17, start_sec: 15.76 },
+    {
+      quiz_id: 'sounding-koshitsu-yoyaku-1-v1',
+      chunk_id: 1,
+      audio: 'data/audio/clips/koshitsu-yoyaku-1.wav',
+    },
+    {
+      quiz_id: 'sounding-koshitsu-yoyaku-17-v1',
+      chunk_id: 17,
+      audio: 'data/audio/clips/koshitsu-yoyaku-17.wav',
+    },
   ];
   expected.forEach(function (item) {
     const row = manifest.quizzes.find((q) => q.quiz_id === item.quiz_id);
@@ -187,12 +195,16 @@ test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', fu
     assert.strictEqual(quiz.chunk.text, group.chunks.find((c) => c.id === item.chunk_id).text);
     const audio = quiz.slides.find((slide) => slide.type === 'audio_chunk');
     assert.ok(audio, item.quiz_id);
-    assert.strictEqual(audio.start_sec, item.start_sec);
+    assert.strictEqual(audio.audio, item.audio);
+    assert.strictEqual(audio.instruction, '請聽這個詞。');
+    assert.strictEqual(audio.rate, 1.0);
+    assert.ok(audio.start_sec == null, item.quiz_id);
+    assert.ok(audio.end_sec == null, item.quiz_id);
+    assert.ok(fs.existsSync(path.join(root, item.audio)), item.audio);
   });
   const quiz17 = JSON.parse(
     fs.readFileSync(path.join(root, 'data/quizzes/sounding-koshitsu-yoyaku-17-v1.json'), 'utf8')
   );
-  assert.notStrictEqual(quiz17.slides[0].start_sec, 15.81);
   assert.ok(quiz17.slides[2].instruction.includes('【潑】爛地\u3000選出'));
   const now = Date.parse('2026-11-09T01:43:00+08:00');
   const admitted = Schedule.admittedChunkIds(
