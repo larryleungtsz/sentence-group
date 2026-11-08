@@ -1,0 +1,70 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 2,
+    "text": "個室って"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-2.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "哥舌豬Dead",
+      "distractors": [
+        "馬打",
+        "哥sit豬蛙",
+        "摸"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【哥】舌豬Dead　選出這一截對應的物件描述。",
+      "correct": "綠色哥布林",
+      "distractors": [
+        "哥布林極長的舌頭",
+        "卡通死豬",
+        "豬的卡通交差眼 + 粉筆圍線"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥【舌】豬Dead　選出這一截對應的物件描述。",
+      "correct": "哥布林極長的舌頭",
+      "distractors": [
+        "卡通死豬",
+        "豬的卡通交差眼 + 粉筆圍線"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥舌【豬】Dead　選出這一截對應的物件描述。",
+      "correct": "卡通死豬",
+      "distractors": [
+        "豬的卡通交差眼 + 粉筆圍線"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥舌豬【Dead】　請點選確認最後一截對應的物件描述。",
+      "correct": "豬的卡通交差眼 + 粉筆圍線",
+      "distractors": [],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

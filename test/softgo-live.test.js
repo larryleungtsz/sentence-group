@@ -150,13 +150,14 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', function () {
+test('koshitsu-yoyaku is a Q6-only shell; chunks 1 and 17 are due at T01; chunk 2 waits on dense', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
   assert.deepStrictEqual(group.sentences, []);
   assert.strictEqual(group.sentence_quizzes_ready, false);
-  assert.strictEqual(group.chunks.length, 2);
+  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2]);
+  assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
   assert.strictEqual(group.chunks[0].text, 'えっと');
   assert.strictEqual(group.chunks[0].quizzes_ready, true);
@@ -167,6 +168,12 @@ test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', fu
   assert.strictEqual(group.chunks[1].quizzes_ready, true);
   assert.strictEqual(group.chunks[1].already_introduced, true);
   assert.notStrictEqual(group.chunks[1].skip, true);
+  assert.strictEqual(group.chunks[2].id, 2);
+  assert.strictEqual(group.chunks[2].text, '個室って');
+  assert.strictEqual(group.chunks[2].quizzes_ready, true);
+  assert.notStrictEqual(group.chunks[2].skip, true);
+  assert.notStrictEqual(group.chunks[2].already_introduced, true);
+  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[2], 'already_introduced'));
   const expected = [
     {
       quiz_id: 'sounding-koshitsu-yoyaku-1-v1',
@@ -214,7 +221,66 @@ test('koshitsu-yoyaku is a Q6-only shell and chunks 1 and 17 are due at T01', fu
   );
   assert.ok(admitted.has(1));
   assert.ok(admitted.has(17));
+  assert.ok(!admitted.has(2));
   assert.strictEqual(admitted.size, 2);
+  const chunk2QuizId = 'sounding-koshitsu-yoyaku-2-v1';
+  const chunk2Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk2QuizId);
+  assert.strictEqual(chunk2Rows.length, 1);
+  const chunk2Row = chunk2Rows[0];
+  assert.strictEqual(chunk2Row.file, 'data/quizzes/' + chunk2QuizId + '.json');
+  assert.strictEqual(chunk2Row.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(chunk2Row.kind, 'chunk');
+  assert.strictEqual(chunk2Row.level, 1);
+  assert.strictEqual(chunk2Row.chunk_id, 2);
+  assert.strictEqual(chunk2Row.sentence, group.sentence);
+  assert.ok(!Object.prototype.hasOwnProperty.call(chunk2Row, 'schedule_stages'));
+  const quiz2 = JSON.parse(fs.readFileSync(path.join(root, chunk2Row.file), 'utf8'));
+  assert.strictEqual(quiz2.quiz_id, chunk2QuizId);
+  assert.strictEqual(quiz2.sentence, group.sentence);
+  assert.strictEqual(quiz2.chunk.id, 2);
+  assert.strictEqual(quiz2.chunk.text, '個室って');
+  const audio2 = quiz2.slides.find((slide) => slide.type === 'audio_chunk');
+  assert.ok(audio2);
+  assert.strictEqual(audio2.audio, 'data/audio/clips/koshitsu-yoyaku-2.wav');
+  assert.strictEqual(audio2.rate, 1.0);
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio2, 'start_sec'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio2, 'end_sec'));
+  const wav2 = fs.readFileSync(path.join(root, audio2.audio));
+  assert.strictEqual(wav2.length, 96216);
+  assert.strictEqual(
+    require('crypto').createHash('sha256').update(wav2).digest('hex'),
+    '72aa2e37082743391edcecad74527f9c73817f4ee4961aeb71592b4b9c8450e7'
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: chunk2Row.objective,
+      kind: chunk2Row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: now,
+      admitted: false,
+      skipped: false,
+    }),
+    []
+  );
+  const unlocked = Schedule.admittedChunkIds(
+    group.chunks,
+    function (id) {
+      if (id === 1) {
+        return {
+          stageIndex: 3,
+          lastCompletedAt: new Date(now - 24 * 60 * 60 * 1000).toISOString(),
+        };
+      }
+      return Schedule.defaultChunkState();
+    },
+    now
+  );
+  assert.ok(unlocked.has(1));
+  assert.ok(unlocked.has(17));
+  assert.ok(unlocked.has(2));
+  assert.strictEqual(unlocked.size, 3);
   expected.forEach(function (item) {
     const row = manifest.quizzes.find((q) => q.quiz_id === item.quiz_id);
     assert.deepStrictEqual(
