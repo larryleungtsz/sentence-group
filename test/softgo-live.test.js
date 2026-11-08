@@ -312,10 +312,10 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01'
   assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'start_sec'));
   assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'end_sec'));
   const wav3 = fs.readFileSync(path.join(root, audio3.audio));
-  assert.strictEqual(wav3.length, 34300);
+  assert.strictEqual(wav3.length, 34918);
   assert.strictEqual(
     require('crypto').createHash('sha256').update(wav3).digest('hex'),
-    '1a4540bf9725f19f8a530eb337a5cdcc23fe1ef305f83376ad5fdda71217e80f'
+    '5183e0736e6eded2d9de2f2911aa437eb0e032b94451aea5ba09ccf212046eff'
   );
   assert.deepStrictEqual(
     Schedule.dueStages({
