@@ -150,16 +150,17 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01', function () {
+test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01; chunk 3 DENSE-waits', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
   assert.deepStrictEqual(group.sentences, []);
   assert.strictEqual(group.sentence_quizzes_ready, false);
-  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2]);
+  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') === -1);
-  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2]') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3]') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('admits [1, 17, 2]') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
   assert.strictEqual(group.chunks[0].text, 'えっと');
   assert.strictEqual(group.chunks[0].quizzes_ready, true);
@@ -176,6 +177,13 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01', f
   assert.notStrictEqual(group.chunks[2].skip, true);
   assert.strictEqual(group.chunks[2].already_introduced, true);
   assert.ok(group.chunks[2].already_introduced_note.indexOf('2026-11-09') !== -1);
+  assert.strictEqual(group.chunks[3].id, 3);
+  assert.strictEqual(group.chunks[3].text, 'まだ');
+  assert.strictEqual(group.chunks[3].quizzes_ready, true);
+  assert.notStrictEqual(group.chunks[3].skip, true);
+  assert.notStrictEqual(group.chunks[3].skipped, true);
+  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[3], 'already_introduced'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[3], 'shared_with_prior_group'));
   const expected = [
     {
       quiz_id: 'sounding-koshitsu-yoyaku-1-v1',
@@ -222,6 +230,7 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01', f
     now
   );
   assert.deepStrictEqual(Array.from(admitted), [1, 17, 2]);
+  assert.ok(!admitted.has(3));
   const chunk2QuizId = 'sounding-koshitsu-yoyaku-2-v1';
   const chunk2Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk2QuizId);
   assert.strictEqual(chunk2Rows.length, 1);
@@ -279,6 +288,107 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, and 2 are due at T01', f
       ['T01']
     );
   });
+  const chunk3QuizId = 'sounding-koshitsu-yoyaku-3-v1';
+  const chunk3Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk3QuizId);
+  assert.strictEqual(chunk3Rows.length, 1);
+  const chunk3Row = chunk3Rows[0];
+  assert.strictEqual(chunk3Row.file, 'data/quizzes/' + chunk3QuizId + '.json');
+  assert.strictEqual(chunk3Row.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(chunk3Row.kind, 'chunk');
+  assert.strictEqual(chunk3Row.level, 1);
+  assert.strictEqual(chunk3Row.chunk_id, 3);
+  assert.strictEqual(chunk3Row.sentence, group.sentence);
+  assert.ok(!Object.prototype.hasOwnProperty.call(chunk3Row, 'schedule_stages'));
+  const quiz3 = JSON.parse(fs.readFileSync(path.join(root, chunk3Row.file), 'utf8'));
+  assert.strictEqual(quiz3.quiz_id, chunk3QuizId);
+  assert.strictEqual(quiz3.sentence, group.sentence);
+  assert.strictEqual(quiz3.chunk.id, 3);
+  assert.strictEqual(quiz3.chunk.text, 'まだ');
+  const audio3 = quiz3.slides.find((slide) => slide.type === 'audio_chunk');
+  assert.ok(audio3);
+  assert.strictEqual(audio3.audio, 'data/audio/clips/koshitsu-yoyaku-3.wav');
+  assert.strictEqual(audio3.rate, 1.0);
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'start_sec'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'end_sec'));
+  const wav3 = fs.readFileSync(path.join(root, audio3.audio));
+  assert.strictEqual(wav3.length, 44620);
+  assert.strictEqual(
+    require('crypto').createHash('sha256').update(wav3).digest('hex'),
+    'd4e485b54e3332e7a62861608cd3320fb3a82205b3461124548bacd59bf1abce'
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: chunk3Row.objective,
+      kind: chunk3Row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: now,
+      admitted: admitted.has(3),
+      skipped: false,
+    }),
+    []
+  );
+
+  const hour = 60 * 60 * 1000;
+  let chunk1 = Schedule.defaultChunkState();
+  function stateAt(id) {
+    return id === 1 ? chunk1 : Schedule.defaultChunkState();
+  }
+  let t = now;
+  chunk1 = { stageIndex: 1, lastCompletedAt: new Date(t).toISOString() };
+  t += hour;
+  assert.strictEqual(Schedule.isChunkStageReady(chunk1, t), true);
+  chunk1 = { stageIndex: 2, lastCompletedAt: new Date(t).toISOString() };
+  t += 3 * hour;
+  assert.strictEqual(Schedule.isChunkStageReady(chunk1, t), true);
+  chunk1 = { stageIndex: 3, lastCompletedAt: new Date(t).toISOString() };
+  assert.strictEqual(Schedule.hasUnlockedThroughT1(chunk1, t), false);
+  assert.deepStrictEqual(
+    Array.from(Schedule.admittedChunkIds(group.chunks, stateAt, t)),
+    [1, 17, 2]
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: chunk3Row.objective,
+      kind: chunk3Row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: t,
+      admitted: Schedule.admittedChunkIds(group.chunks, stateAt, t).has(3),
+      skipped: false,
+    }),
+    []
+  );
+  t += 24 * hour;
+  assert.strictEqual(Schedule.hasUnlockedThroughT1(chunk1, t), true);
+  const admittedAfterT1 = Schedule.admittedChunkIds(group.chunks, stateAt, t);
+  assert.deepStrictEqual(Array.from(admittedAfterT1), [1, 17, 2, 3]);
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: chunk3Row.objective,
+      kind: chunk3Row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: t,
+      admitted: admittedAfterT1.has(3),
+      skipped: false,
+    }),
+    ['T01']
+  );
+  const pastT1 = { stageIndex: 4, lastCompletedAt: new Date(now).toISOString() };
+  assert.strictEqual(Schedule.hasUnlockedThroughT1(pastT1, now), true);
+  assert.ok(
+    Schedule.admittedChunkIds(
+      group.chunks,
+      function (id) {
+        return id === 1 ? pastT1 : Schedule.defaultChunkState();
+      },
+      now
+    ).has(3)
+  );
 });
 
 test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function () {

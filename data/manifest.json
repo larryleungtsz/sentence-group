@@ -31723,6 +31723,15 @@
       "kind": "chunk",
       "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "chunk_id": 2
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-3-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-3-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 3
     }
   ]
 }
