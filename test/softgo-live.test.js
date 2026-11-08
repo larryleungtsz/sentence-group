@@ -150,16 +150,16 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01', function () {
+test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01; chunk 5 DENSE-waits', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
   assert.deepStrictEqual(group.sentences, []);
   assert.strictEqual(group.sentence_quizzes_ready, false);
-  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3]);
+  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3, 5]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') === -1);
-  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3]') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('DENSE-waits') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3, 5]') !== -1);
   assert.ok(group.chunk_order_note.indexOf('admits 1, 17, 2, and 3 at T01') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
   assert.strictEqual(group.chunks[0].text, 'えっと');
@@ -186,6 +186,13 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01'
   assert.ok(group.chunks[3].already_introduced_note.indexOf('2026-11-09') !== -1);
   assert.ok(group.chunks[3].already_introduced_note.indexOf('sounding-koshitsu-yoyaku-3-v1') !== -1);
   assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[3], 'shared_with_prior_group'));
+  assert.strictEqual(group.chunks[4].id, 5);
+  assert.strictEqual(group.chunks[4].text, '個室は');
+  assert.strictEqual(group.chunks[4].quizzes_ready, true);
+  assert.notStrictEqual(group.chunks[4].skip, true);
+  assert.notStrictEqual(group.chunks[4].already_introduced, true);
+  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[4], 'already_introduced'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(group.chunks[4], 'shared_with_prior_group'));
   const expected = [
     {
       quiz_id: 'sounding-koshitsu-yoyaku-1-v1',
@@ -232,6 +239,7 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01'
     now
   );
   assert.deepStrictEqual(Array.from(admitted), [1, 17, 2, 3]);
+  assert.ok(!admitted.has(5));
   const chunk2QuizId = 'sounding-koshitsu-yoyaku-2-v1';
   const chunk2Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk2QuizId);
   assert.strictEqual(chunk2Rows.length, 1);
@@ -329,6 +337,47 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, and 3 are due at T01'
       skipped: false,
     }),
     ['T01']
+  );
+  const chunk5QuizId = 'sounding-koshitsu-yoyaku-5-v1';
+  const chunk5Rows = manifest.quizzes.filter((q) => q.quiz_id === chunk5QuizId);
+  assert.strictEqual(chunk5Rows.length, 1);
+  const chunk5Row = chunk5Rows[0];
+  assert.strictEqual(chunk5Row.file, 'data/quizzes/' + chunk5QuizId + '.json');
+  assert.strictEqual(chunk5Row.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(chunk5Row.kind, 'chunk');
+  assert.strictEqual(chunk5Row.level, 1);
+  assert.strictEqual(chunk5Row.chunk_id, 5);
+  assert.strictEqual(chunk5Row.sentence, group.sentence);
+  assert.ok(!Object.prototype.hasOwnProperty.call(chunk5Row, 'schedule_stages'));
+  const quiz5 = JSON.parse(fs.readFileSync(path.join(root, chunk5Row.file), 'utf8'));
+  assert.strictEqual(quiz5.quiz_id, chunk5QuizId);
+  assert.strictEqual(quiz5.sentence, group.sentence);
+  assert.strictEqual(quiz5.chunk.id, 5);
+  assert.strictEqual(quiz5.chunk.text, '個室は');
+  const audio5 = quiz5.slides.find((slide) => slide.type === 'audio_chunk');
+  assert.ok(audio5);
+  assert.strictEqual(audio5.audio, 'data/audio/clips/koshitsu-yoyaku-5.wav');
+  assert.strictEqual(audio5.rate, 1.0);
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio5, 'start_sec'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(audio5, 'end_sec'));
+  const wav5 = fs.readFileSync(path.join(root, audio5.audio));
+  assert.strictEqual(wav5.length, 86956);
+  assert.strictEqual(
+    require('crypto').createHash('sha256').update(wav5).digest('hex'),
+    '7765a0e89f2554eb2afb7c35e6cb72567b43f5c8b2fad05985979f86833583d8'
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: chunk5Row.objective,
+      kind: chunk5Row.kind,
+      schedule: schedule,
+      chunkState: Schedule.defaultChunkState(),
+      completedStages: [],
+      now: now,
+      admitted: false,
+      skipped: false,
+    }),
+    []
   );
 });
 

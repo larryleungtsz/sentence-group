@@ -2074,7 +2074,7 @@
       "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
-      "chunk_order_note": "Q6-only shell. Chunk order stays [1, 17, 2, 3] (1 えっと, 17 プランで, 2 個室って, 3 まだ), not palace order [1, 2, 3, 17]. Chunks 17, 2, and 3 are already_introduced. A fresh player admits 1, 17, 2, and 3 at T01; only chunk 1 occupies the dense slot. Append-not-insert: do not reorder — leave [1, 17, 2, 3] as-is. Do not invent other palace chunks. Keep palace audio-timestamp ids 1 / 17 / 2 / 3. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
+      "chunk_order_note": "Q6-only shell. Chunk order stays [1, 17, 2, 3, 5] (1 えっと, 17 プランで, 2 個室って, 3 まだ, 5 個室は), not palace order [1, 2, 3, 17]. Chunks 17, 2, and 3 are already_introduced. Chunk 5 is new and DENSE-waits until えっと unlocks through T1. A fresh player admits 1, 17, 2, and 3 at T01; only chunk 1 occupies the dense slot. Append-not-insert: do not reorder — leave [1, 17, 2, 3, 5] as-is. Do not invent other palace chunks. Keep palace audio-timestamp ids 1 / 17 / 2 / 3 / 5. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
       "chunks": [
         {
           "id": 1,
@@ -2110,6 +2110,14 @@
           "chunk_added_at": "2026-11-09T03:16:29+08:00",
           "chunk_added_at_note": "provisional — Soft GO sounding-koshitsu-yoyaku-3-v1 (まだ). Clip data/audio/clips/koshitsu-yoyaku-3.wav 1.95–2.455.",
           "notion_url": "https://app.notion.com/p/4113b2a729568172a96dc3356c92ea4d",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "個室は",
+          "chunk_added_at": "2026-11-09T04:35:00+08:00",
+          "chunk_added_at_note": "provisional — Soft GO sounding-koshitsu-yoyaku-5-v1 (個室は). Clip data/audio/clips/koshitsu-yoyaku-5.wav 4.070–5.055.",
+          "notion_url": "https://app.notion.com/p/4113b2a7295681a1a4b9e09576d28765",
           "quizzes_ready": true
         }
       ],
