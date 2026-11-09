@@ -1,0 +1,24 @@
+{
+  "quiz_id": "sentence-example-listen-gochumon-v1",
+  "objective": "sentence_example_sentences_listening",
+  "kind": "sentence",
+  "level": 1,
+  "variant": 1,
+  "sentence": "ご注文お決まりになりましたらお呼びください",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-example-gochumon.mp3",
+      "rate": 1.3,
+      "self_check": true,
+      "l1": "1. 我攞餐牌畀你；點餐決定好就出聲叫我。\n2. 慢慢睇；決定好就通知附近職員。\n3. 定咗想食咩，隨時吩咐我哋就得。",
+      "gloss": "1. 我攞餐牌畀你；點餐決定好就出聲叫我。\n2. 慢慢睇；決定好就通知附近職員。\n3. 定咗想食咩，隨時吩咐我哋就得。"
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 我攞餐牌畀你；點餐決定好就出聲叫我。\n2. 慢慢睇；決定好就通知附近職員。\n3. 定咗想食咩，隨時吩咐我哋就得。"
+}

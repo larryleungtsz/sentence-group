@@ -584,8 +584,29 @@ tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 obje
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
-    285
+    286
   );
+}));
+
+tests.push(test('gochumon Q25 trial listens at 1.3× with the example gloss', function () {
+  const quiz = readJson('data/quizzes/sentence-example-listen-gochumon-v1.json');
+  const root = runQuiz(quiz);
+  assert.ok(buttonNamed(root, '播放'));
+  assert.ok(buttonNamed(root, '✓ 通過'));
+  assert.ok(buttonNamed(root, '✗ 再試'));
+  assert.ok(!buttonNamed(root, '開始錄音'));
+  assert.strictEqual(audios(root).length, 1);
+  assert.strictEqual(audios(root)[0].playbackRate, 1.3);
+  assert.strictEqual(audios(root)[0].controls, true);
+  assert.strictEqual(audios(root)[0].src, quiz.slides[0].audio);
+  const shown = texts(root).join('\n');
+  assert.ok(shown.indexOf('請聆聽例句。') !== -1);
+  assert.ok(shown.indexOf('我攞餐牌畀你；點餐決定好就出聲叫我。') !== -1);
+  assert.strictEqual(QuizRunner.isSegmentShadow(quiz, 'audio_listen', { rate: 1.3 }), false);
+  const plan = QuizRunner.shadowSlidePlan(quiz, 'audio_listen', { rate: 1.3 });
+  assert.strictEqual(plan.segmentShadow, false);
+  assert.strictEqual(plan.record.enabled, false);
+  assert.strictEqual(plan.rate, 1.3);
 }));
 
 (async function () {

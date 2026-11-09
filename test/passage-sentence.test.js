@@ -96,7 +96,7 @@ test('shipped schedule keeps passage objectives and Q20–Q25 on the sentence la
     assert.ok(!schedule.passage_schedule[key], key);
     assert.deepStrictEqual(schedule.sentence_schedule[key], SENTENCE_STAGES, key);
     const hasQuiz = manifest.quizzes.some(function (q) { return q.objective === key; });
-    assert.strictEqual(hasQuiz, key !== 'sentence_example_sentences_listening', key);
+    assert.strictEqual(hasQuiz, true, key);
   });
   assert.deepStrictEqual(
     Schedule.passageScheduleTable(schedule),
@@ -268,10 +268,17 @@ test('manifest passage kinds keep objectives; sentence rows are live Soft GO', f
     assert.ok(PASSAGE_OBJECTIVES.indexOf(q.objective) !== -1, q.quiz_id);
     assert.ok(q.chunk_id == null, q.quiz_id);
   });
-  assert.strictEqual(sentences.length, 285);
+  assert.strictEqual(sentences.length, 286);
   assert.ok(!sentences.some((q) => q.quiz_id === 'sentence-shell-smoke-yoyaku-shitenai-s1-v1'));
   assert.ok(!sentences.some((q) => q.objective === 'sentence_shell_smoke'));
-  const sentenceObjectives = SENTENCE_OBJECTIVES_WITH_QUIZZES;
+  const q25 = sentences.filter((q) => q.objective === 'sentence_example_sentences_listening');
+  assert.strictEqual(q25.length, 1);
+  assert.strictEqual(q25[0].quiz_id, 'sentence-example-listen-gochumon-v1');
+  assert.strictEqual(q25[0].group_slug, 'gochumon');
+  assert.strictEqual(q25[0].sentence_id, 's1');
+  const sentenceObjectives = SENTENCE_OBJECTIVES_WITH_QUIZZES.concat([
+    'sentence_example_sentences_listening',
+  ]);
   sentences.forEach((q) => {
     assert.ok(sentenceObjectives.indexOf(q.objective) !== -1, q.quiz_id);
     assert.strictEqual(q.shell, false, q.quiz_id);

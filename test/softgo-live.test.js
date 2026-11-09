@@ -52,6 +52,7 @@ const SENTENCE_OBJECTIVES = [
   'sentence_shadowing_125',
   'sentence_shadowing_075',
   'sentence_discourse_mcq',
+  'sentence_example_sentences_listening',
 ];
 const KANA = /[\u3040-\u309F\u30A0-\u30FF\uFF66-\uFF9D]/;
 
@@ -649,7 +650,7 @@ test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function ()
 
 test('manifest sentence quizzes parse, match sentences[], and Q24 choices have no kana', function () {
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
-  assert.strictEqual(sentences.length, 285);
+  assert.strictEqual(sentences.length, 286);
   const counts = {};
   const byGroup = {};
   sentences.forEach((row) => {
@@ -668,7 +669,13 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     assert.strictEqual(quiz.objective, row.objective);
     assert.strictEqual(quiz.kind, 'sentence');
     assert.strictEqual(quiz.sentence, unit.text, row.quiz_id);
-    assert.strictEqual('s' + quiz.sentence_index, row.sentence_id);
+    if (quiz.sentence_index != null) {
+      assert.strictEqual('s' + quiz.sentence_index, row.sentence_id);
+    } else {
+      assert.strictEqual(row.quiz_id, 'sentence-example-listen-gochumon-v1');
+      assert.strictEqual(row.group_slug, 'gochumon');
+      assert.strictEqual(row.sentence_id, 's1');
+    }
     counts[row.objective] = (counts[row.objective] || 0) + 1;
     byGroup[row.group_slug] = byGroup[row.group_slug] || [];
     byGroup[row.group_slug].push(row);
@@ -690,6 +697,7 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     sentence_shadowing_125: 59,
     sentence_shadowing_075: 59,
     sentence_discourse_mcq: 61,
+    sentence_example_sentences_listening: 1,
   });
   groups.groups.forEach((group) => {
     const rows = byGroup[group.slug] || [];
@@ -769,7 +777,12 @@ test('fresh full-suite and Q24-only units are due at T01; empty stages still ste
     }),
     ['T01']
   );
-  assert.ok(!manifest.quizzes.some((q) => q.objective === 'sentence_example_sentences_listening'));
+  const q25 = manifest.quizzes.filter((q) => q.objective === 'sentence_example_sentences_listening');
+  assert.strictEqual(q25.length, 1);
+  assert.strictEqual(q25[0].quiz_id, 'sentence-example-listen-gochumon-v1');
+  assert.strictEqual(q25[0].group_slug, 'gochumon');
+  assert.strictEqual(q25[0].sentence_id, 's1');
+  assert.ok(!annaiQuizzes.some((q) => q.objective === 'sentence_example_sentences_listening'));
   const hour = 60 * 60 * 1000;
   const afterT01 = { stageIndex: 1, lastCompletedAt: new Date(now0).toISOString() };
   assert.deepStrictEqual(
@@ -828,6 +841,62 @@ test('fresh full-suite and Q24-only units are due at T01; empty stages still ste
     }),
     []
   );
+});
+
+test('gochumon s1 Q25 is due at T01 only after its Keep chunks leave dense', function () {
+  const now = Date.parse('2026-11-10T04:30:00+08:00');
+  const group = groupBySlug('gochumon');
+  const s1 = group.sentences.find((s) => s.id === 's1');
+  assert.deepStrictEqual(s1.chunk_ids, [1, 2, 3, 4, 5]);
+  assert.strictEqual(s1.text, 'ご注文お決まりになりましたらお呼びください');
+  const row = manifest.quizzes.find((q) => q.quiz_id === 'sentence-example-listen-gochumon-v1');
+  assert.ok(row);
+  assert.strictEqual(row.kind, 'sentence');
+  assert.strictEqual(row.objective, 'sentence_example_sentences_listening');
+  assert.strictEqual(row.group_slug, 'gochumon');
+  assert.strictEqual(row.sentence_id, 's1');
+  assert.strictEqual(row.sentence, group.sentence);
+  assert.strictEqual(row.shell, false);
+  assert.strictEqual(row.level, null);
+  assert.strictEqual(row.chunk_id, null);
+  const others = manifest.quizzes.filter(
+    (q) => q.objective === 'sentence_example_sentences_listening' && q.quiz_id !== row.quiz_id
+  );
+  assert.strictEqual(others.length, 0);
+  const unit = { stageIndex: 0, lastCompletedAt: null };
+  const fresh = function () { return { stageIndex: 0, lastCompletedAt: null }; };
+  assert.deepStrictEqual(Schedule.dueStages({
+    objective: row.objective,
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: unit,
+    completedStages: [],
+    now: now,
+    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: fresh },
+  }), []);
+  const almost = function (id) {
+    if (id === 5) return { stageIndex: 0, lastCompletedAt: null };
+    return { stageIndex: 4, lastCompletedAt: null };
+  };
+  assert.deepStrictEqual(Schedule.dueStages({
+    objective: row.objective,
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: unit,
+    completedStages: [],
+    now: now,
+    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: almost },
+  }), []);
+  const left = function () { return { stageIndex: 4, lastCompletedAt: null }; };
+  assert.deepStrictEqual(Schedule.dueStages({
+    objective: row.objective,
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: unit,
+    completedStages: [],
+    now: now,
+    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: left },
+  }), ['T01']);
 });
 
 test('practice page and homepage fast-forward empty sentence stages', function () {

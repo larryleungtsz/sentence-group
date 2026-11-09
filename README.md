@@ -22,7 +22,7 @@ js/quiz-runner.js   渲染與評分
 js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
-data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q25；Q25 未有 quiz）
+data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q25；Q25 只得 gochumon s1 一題）
 data/groups.json    Passage Group + chunks（陣列次序＝加入次序）+ optional sentences[]
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
@@ -46,7 +46,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `passage` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；Q25 只係 schedule；要有 `sentence_id`，而且該 group 有 `sentences[]`）
+   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；Q25 只得 gochumon s1；要有 `sentence_id`，而且該 group 有 `sentences[]`）
 3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
@@ -108,7 +108,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 Soft GO 題目喺 `data/quizzes/`。`manifest.json` 用 `kind: "sentence"`。`sentence` 欄係成段 `group.sentence`（練習頁同首頁靠呢個字串對 group）。`sentence_id` 係 `s1`、`s2`…。`group_slug` 係 site slug。`shell` 係 `false`。
 
-`sentence_schedule` 跟 Sheet「Sentence Objective Schedule」。每個 objective 都係 **T01, T02, T03, T1 … T30**（同 chunk 嘅 stage 名，唔係 `T+N`）。Q25 `sentence_example_sentences_listening` 已經喺 schedule，但 manifest 未有 quiz，所以唔會出題。
+`sentence_schedule` 跟 Sheet「Sentence Objective Schedule」。每個 objective 都係 **T01, T02, T03, T1 … T30**（同 chunk 嘅 stage 名，唔係 `T+N`）。Q25 `sentence_example_sentences_listening` 已經喺 schedule。而家只得 gochumon s1 一題 trial（`sentence-example-listen-gochumon-v1`）；其他句子未有 Q25，所以唔會出題。
 
 | Objective | 題 | 題數 | Stages |
 |-----------|----|------|--------|
@@ -117,7 +117,7 @@ Soft GO 題目喺 `data/quizzes/`。`manifest.json` 用 `kind: "sentence"`。`se
 | `sentence_shadowing_125` | Q22 | 59 | 同上 |
 | `sentence_shadowing_075` | Q23 | 59 | 同上 |
 | `sentence_discourse_mcq` | Q24 | 61 | 同上 |
-| `sentence_example_sentences_listening` | Q25 | 0 | 同上（未有 quiz） |
+| `sentence_example_sentences_listening` | Q25 | 1（gochumon s1） | 同上 |
 
 22 個 group、61 句。53 句有齊 Q20–Q24。Q24 多出嘅 8 句只得 Q24。
 
