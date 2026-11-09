@@ -2074,7 +2074,7 @@
       "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
-      "chunk_order_note": "Q6-only shell. Chunk order stays [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] (1 えっと, 17 プランで, 2 個室って, 3 まだ, 5 個室は, 6 もう, 7 空かないですねー, 8 わかりました, 10 テーブル席で, 14 ご案内可能ですよ, 15 2時間半, 16 飲み放題付き, 19 かしこまりました), not palace order [1, 2, 3, 17]. Chunks 17, 2, 3, 5, and 6 remain already_introduced. New chunks 7, 8, 10, 14, 15, 16, and 19 are unflagged. A fresh player admits 1, 17, 2, 3, 5, and 6 at T01; only chunk 1 occupies the dense slot. The new seven DENSE-wait behind えっと (chunk 1) until えっと unlocks through T1, then the next unflagged in ORDER (7) can enter, then 8, 10, 14, 15, 16, and 19. Append-not-insert: do not reorder — leave [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] as-is. Do not invent other palace chunks (skip 空いてますかね / じゃあ / お願いします / はい、お席; プランで is already live as 17). Keep palace audio-timestamp ids 1 / 17 / 2 / 3 / 5 / 6 / 7 / 8 / 10 / 14 / 15 / 16 / 19. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
+      "chunk_order_note": "Q6-only shell. Chunk order stays [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] (1 えっと, 17 プランで, 2 個室って, 3 まだ, 5 個室は, 6 もう, 7 空かないですねー, 8 わかりました, 10 テーブル席で, 14 ご案内可能ですよ, 15 2時間半, 16 飲み放題付き, 19 かしこまりました), not palace order [1, 2, 3, 17]. Chunks 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 are already_introduced. A fresh player admits 1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 at T01; only chunk 1 occupies the dense slot. Append-not-insert: do not reorder — leave [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] as-is. Do not invent other palace chunks (skip 空いてますかね / じゃあ / お願いします / はい、お席; プランで is already live as 17). Keep palace audio-timestamp ids 1 / 17 / 2 / 3 / 5 / 6 / 7 / 8 / 10 / 14 / 15 / 16 / 19. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
       "chunks": [
         {
           "id": 1,
@@ -2135,6 +2135,8 @@
         {
           "id": 7,
           "text": "空かないですねー",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-7-v1 is immediately playable. Flag so chunk 7 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-7-v1 (空かないですねー). Clip data/audio/clips/koshitsu-yoyaku-7.wav 5.570–6.550.",
           "notion_url": "https://app.notion.com/p/4113b2a729568127a7b3dccd6cb41a95",
@@ -2143,6 +2145,8 @@
         {
           "id": 8,
           "text": "わかりました",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-8-v1 is immediately playable. Flag so chunk 8 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-8-v1 (わかりました). Clip data/audio/clips/koshitsu-yoyaku-8.wav 7.060–7.900.",
           "notion_url": "https://app.notion.com/p/4113b2a7295681aba675d772cfa67e4a",
@@ -2151,6 +2155,8 @@
         {
           "id": 10,
           "text": "テーブル席で",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-10-v1 is immediately playable. Flag so chunk 10 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-10-v1 (テーブル席で). Clip data/audio/clips/koshitsu-yoyaku-10.wav 8.875–9.475.",
           "notion_url": "https://app.notion.com/p/4113b2a7295681ad8290d8f97cb358f9",
@@ -2159,6 +2165,8 @@
         {
           "id": 14,
           "text": "ご案内可能ですよ",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-14-v1 is immediately playable. Flag so chunk 14 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-14-v1 (ご案内可能ですよ). Clip data/audio/clips/koshitsu-yoyaku-14.wav 12.170–13.400.",
           "notion_url": "https://app.notion.com/p/4113b2a729568166b9cdf1559684ea03",
@@ -2167,6 +2175,8 @@
         {
           "id": 15,
           "text": "2時間半",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-15-v1 is immediately playable. Flag so chunk 15 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-15-v1 (2時間半). Clip data/audio/clips/koshitsu-yoyaku-15.wav 13.885–14.680.",
           "notion_url": "https://app.notion.com/p/4113b2a72956815d8d80eda37705b23c",
@@ -2175,6 +2185,8 @@
         {
           "id": 16,
           "text": "飲み放題付き",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-16-v1 is immediately playable. Flag so chunk 16 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-16-v1 (飲み放題付き). Clip data/audio/clips/koshitsu-yoyaku-16.wav 14.700–15.740.",
           "notion_url": "https://app.notion.com/p/4113b2a72956818fbafee3cc792e96bf",
@@ -2183,6 +2195,8 @@
         {
           "id": 19,
           "text": "かしこまりました",
+          "already_introduced": true,
+          "already_introduced_note": "Larry authorized this on 2026-11-09 so the new Q6 sounding-koshitsu-yoyaku-19-v1 is immediately playable. Flag so chunk 19 does not occupy or wait on the dense T01–T03 gate (chunk 1 えっと remains the one new dense chunk).",
           "chunk_added_at": "2026-11-09T19:40:00+08:00",
           "chunk_added_at_note": "Soft GO sounding-koshitsu-yoyaku-19-v1 (かしこまりました). Clip data/audio/clips/koshitsu-yoyaku-19.wav 17.480–18.420.",
           "notion_url": "https://app.notion.com/p/4093b2a72956815fb7c9d02e7c4ac059",
