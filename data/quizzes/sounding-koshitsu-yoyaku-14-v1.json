@@ -1,0 +1,121 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-14-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 14,
+    "text": "ご案内可能ですよ"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-14.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "哥按奶can蘿deskYo",
+      "distractors": [
+        "Kneel芝CANHand",
+        "攞米河DIe豬機",
+        "Class哥瑪莉MASTER"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【哥】按奶can蘿deskYo　選出這一截對應的物件描述。",
+      "correct": "年長的哥哥",
+      "distractors": [
+        "大力按實的動作",
+        "奶樽與噴出的白色牛奶",
+        "鋁罐",
+        "諧音字串連結元素",
+        "枱",
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥【按】奶can蘿deskYo　選出這一截對應的物件描述。",
+      "correct": "大力按實的動作",
+      "distractors": [
+        "奶樽與噴出的白色牛奶",
+        "鋁罐",
+        "諧音字串連結元素",
+        "枱",
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥按【奶】can蘿deskYo　選出這一截對應的物件描述。",
+      "correct": "奶樽與噴出的白色牛奶",
+      "distractors": [
+        "鋁罐",
+        "諧音字串連結元素",
+        "枱",
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥按奶【can】蘿deskYo　選出這一截對應的物件描述。",
+      "correct": "鋁罐",
+      "distractors": [
+        "諧音字串連結元素",
+        "枱",
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥按奶can【蘿】deskYo　選出這一截對應的物件描述。",
+      "correct": "諧音字串連結元素",
+      "distractors": [
+        "枱",
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥按奶can蘿【desk】Yo　選出這一截對應的物件描述。",
+      "correct": "枱",
+      "distractors": [
+        "搖搖 (yo-yo)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "哥按奶can蘿desk【Yo】　請點選確認最後一截對應的物件描述。",
+      "correct": "搖搖 (yo-yo)",
+      "distractors": [],
+      "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【哥按奶can蘿deskYo】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T01:47:23+08:00",
+  "generated_at": "2026-11-09T19:40:00+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -31750,6 +31750,69 @@
       "kind": "chunk",
       "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "chunk_id": 6
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-7-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-7-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-8-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-8-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-10-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-10-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-14-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-14-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 14
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-15-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-15-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 15
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-16-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-16-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 16
+    },
+    {
+      "quiz_id": "sounding-koshitsu-yoyaku-19-v1",
+      "file": "data/quizzes/sounding-koshitsu-yoyaku-19-v1.json",
+      "objective": "pronunciation_sounding_select",
+      "level": 1,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 19
     }
   ]
 }

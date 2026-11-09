@@ -1,0 +1,94 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 7,
+    "text": "空かないですねー"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-7.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "壓家奶desk泥",
+      "distractors": [
+        "挖car梨master",
+        "Telblue路錫Key爹",
+        "哥按奶can蘿deskYo"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【壓】家奶desk泥　選出這一截對應的物件描述。",
+      "correct": "被壓扁的狀態",
+      "distractors": [
+        "模型屋企",
+        "一樽奶",
+        "枱",
+        "泥濘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "壓【家】奶desk泥　選出這一截對應的物件描述。",
+      "correct": "模型屋企",
+      "distractors": [
+        "一樽奶",
+        "枱",
+        "泥濘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "壓家【奶】desk泥　選出這一截對應的物件描述。",
+      "correct": "一樽奶",
+      "distractors": [
+        "枱",
+        "泥濘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "壓家奶【desk】泥　選出這一截對應的物件描述。",
+      "correct": "枱",
+      "distractors": [
+        "泥濘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "壓家奶desk【泥】　請點選確認最後一截對應的物件描述。",
+      "correct": "泥濘",
+      "distractors": [],
+      "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【壓家奶desk泥】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
