@@ -32,6 +32,18 @@
       "correct": "觸摸衣服的手掌 + 衣服上的手印",
       "distractors": [],
       "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【摸】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-mou-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

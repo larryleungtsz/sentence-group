@@ -41,6 +41,18 @@
       "correct": "戴著紅拳套出拳的動作",
       "distractors": [],
       "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【馬打】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-mada-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-koshitsu-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-mou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

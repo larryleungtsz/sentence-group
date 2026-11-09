@@ -51,6 +51,18 @@
       "correct": "爛地基底",
       "distractors": [],
       "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【潑爛地】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-etto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-koshitsu-tte-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-mada-combined.jpg"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

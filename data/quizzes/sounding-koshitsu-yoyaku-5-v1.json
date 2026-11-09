@@ -62,6 +62,18 @@
       "correct": "綠色大青蛙",
       "distractors": [],
       "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【哥sit豬蛙】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-koshitsu-wa-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-mou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {
