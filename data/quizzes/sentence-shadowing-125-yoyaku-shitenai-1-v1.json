@@ -6,21 +6,12 @@
   "sentence": "予約してないんですけど、2名って、空いてますか？",
   "slides": [
     {
-      "type": "record_shadow",
+      "type": "audio_shadow",
       "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3",
       "rate": 1.25,
-      "action": "start_record",
-      "sentence_window_hint": {
-        "start_sec": 0.05,
-        "end_sec": 4.22
-      }
-    },
-    {
-      "type": "record_shadow",
-      "instruction": "可重播自己錄音；完成後按完成（錄音唔上雲，完成即丟）。",
-      "action": "review_complete",
-      "storage": "temp_blob_v1"
+      "start_sec": 0.05,
+      "end_sec": 4.22
     }
   ],
   "feedback": {

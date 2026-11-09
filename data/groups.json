@@ -2071,10 +2071,10 @@
       "title": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "sentence_added_at": "2026-11-09T00:00:00+08:00",
-      "sentence_added_at_note": "provisional — Q6-only Soft GO sounding-koshitsu-yoyaku-17-v1 (プランで). Full palace not yet on site (Passage status in-progress; Missing お席). Edit when real add time is known.",
+      "sentence_added_at_note": "provisional — Q6 sounding stays (sounding-koshitsu-yoyaku-*). Soft GO Q22 sentence_shadowing_125 and Q23 sentence_shadowing_075 added 2026-11-09 (Larry ~22:45 HKT) on passage audio sentence-koshitsu-yoyaku.mp3. Edit when real add time is known.",
       "notion_palace_url": "https://app.notion.com/p/40f3b2a729568061a85ed255daf10c4c",
       "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
-      "chunk_order_note": "Q6-only shell. Chunk order stays [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] (1 えっと, 17 プランで, 2 個室って, 3 まだ, 5 個室は, 6 もう, 7 空かないですねー, 8 わかりました, 10 テーブル席で, 14 ご案内可能ですよ, 15 2時間半, 16 飲み放題付き, 19 かしこまりました), not palace order [1, 2, 3, 17]. Chunks 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 are already_introduced. A fresh player admits 1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 at T01; only chunk 1 occupies the dense slot. Append-not-insert: do not reorder — leave [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] as-is. Do not invent other palace chunks (skip 空いてますかね / じゃあ / お願いします / はい、お席; プランで is already live as 17). Keep palace audio-timestamp ids 1 / 17 / 2 / 3 / 5 / 6 / 7 / 8 / 10 / 14 / 15 / 16 / 19. sentences[] still empty. Keep Q6_ONLY_SHELLS exemption.",
+      "chunk_order_note": "Q6 sounding stays, plus Soft GO Q22/Q23 sentences. Chunk order stays [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] (1 えっと, 17 プランで, 2 個室って, 3 まだ, 5 個室は, 6 もう, 7 空かないですねー, 8 わかりました, 10 テーブル席で, 14 ご案内可能ですよ, 15 2時間半, 16 飲み放題付き, 19 かしこまりました), not palace order [1, 2, 3, 17]. Chunks 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 are already_introduced. A fresh player admits 1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 at T01; only chunk 1 occupies the dense slot. Append-not-insert: do not reorder — leave [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19] as-is. Do not invent other palace chunks (skip 空いてますかね / じゃあ / お願いします / はい、お席; プランで is already live as 17). Keep palace audio-timestamp ids 1 / 17 / 2 / 3 / 5 / 6 / 7 / 8 / 10 / 14 / 15 / 16 / 19. sentences[] follows spoken order (chunk 17 stays in s5). Not a Q6-only shell.",
       "chunks": [
         {
           "id": 1,
@@ -2203,9 +2203,40 @@
           "quizzes_ready": true
         }
       ],
-      "sentences_note": "Q6-only shell. sentences[] empty until full palace Soft GO.",
-      "sentences": [],
-      "sentence_quizzes_ready": false
+      "sentences_note": "Soft GO Q22/Q23 live. Q6 sounding quizzes stay as they are. Cut rule is chunk-boundary-wins: each sentence is a contiguous span of Keep chunks (chunks not in this Soft GO stay out of chunk_ids). A chunk.text is never bisected, and chunk ids do not repeat across sentences. Practice order stays append-not-insert, so spoken chunk_ids are not the chunks[] array order (17 プランで is s5).",
+      "sentences": [
+        {
+          "id": "s1",
+          "text": "えっと、個室って、まだ空いてますかね？",
+          "chunk_ids": [1, 2, 3]
+        },
+        {
+          "id": "s2",
+          "text": "個室は、もう空かないですねー。",
+          "chunk_ids": [5, 6, 7]
+        },
+        {
+          "id": "s3",
+          "text": "わかりました。じゃあ、テーブル席でお願いします。",
+          "chunk_ids": [8, 10]
+        },
+        {
+          "id": "s4",
+          "text": "はい、お席ご案内可能ですよ。",
+          "chunk_ids": [14]
+        },
+        {
+          "id": "s5",
+          "text": "2時間半飲み放題付きプランでお願いします。",
+          "chunk_ids": [15, 16, 17]
+        },
+        {
+          "id": "s6",
+          "text": "かしこまりました。",
+          "chunk_ids": [19]
+        }
+      ],
+      "sentence_quizzes_ready": true
     }
   ]
 }

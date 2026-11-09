@@ -79,10 +79,8 @@ const EXPECTED_SENTENCES = {
   'kaikei-onegai': 7,
   'yoyaku-shitenai': 3,
   'orenji-jusu': 5,
+  'koshitsu-yoyaku': 6,
 };
-
-/** Playable chunk quizzes only. Not a sentence-layer Soft GO palace. */
-const Q6_ONLY_SHELLS = new Set(['koshitsu-yoyaku']);
 
 function isSkip(chunk) {
   return !!(chunk && (chunk.skip === true || chunk.skipped === true));
@@ -120,12 +118,10 @@ function groupBySlug(slug) {
 }
 
 test('every group has the Soft GO sentence count and chunk-boundary-wins holds', function () {
-  const sentenceGroups = groups.groups.filter((group) => !Q6_ONLY_SHELLS.has(group.slug));
-  assert.strictEqual(groups.groups.length, sentenceGroups.length + Q6_ONLY_SHELLS.size);
-  assert.strictEqual(sentenceGroups.length, Object.keys(EXPECTED_SENTENCES).length);
+  assert.strictEqual(groups.groups.length, Object.keys(EXPECTED_SENTENCES).length);
   const passages = groups.groups.map((g) => g.sentence);
   assert.strictEqual(new Set(passages).size, passages.length);
-  sentenceGroups.forEach((group) => {
+  groups.groups.forEach((group) => {
     assert.strictEqual(group.sentences.length, EXPECTED_SENTENCES[group.slug], group.slug);
     assert.ok(group.sentences_note && group.sentences_note.indexOf('chunk-boundary-wins') !== -1, group.slug);
     const active = (group.chunks || []).filter((c) => !isSkip(c));
@@ -146,16 +142,45 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
         flat.push(id);
       });
     });
-    assert.deepStrictEqual(flat, active.map((c) => c.id), group.slug);
+    if (group.slug === 'koshitsu-yoyaku') {
+      // Practice order is append-not-insert, so chunk 17 sits early in chunks[]
+      // and in spoken sentence s5. Every Keep chunk is still used once.
+      assert.deepStrictEqual(flat, [1, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 17, 19]);
+      assert.deepStrictEqual(
+        flat.slice().sort((a, b) => a - b),
+        active.map((c) => c.id).slice().sort((a, b) => a - b)
+      );
+    } else {
+      assert.deepStrictEqual(flat, active.map((c) => c.id), group.slug);
+    }
   });
 });
 
-test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 are due at T01', function () {
+test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, and 19 are due at T01', function () {
   const group = groupBySlug('koshitsu-yoyaku');
   assert.ok(group);
-  assert.ok(Q6_ONLY_SHELLS.has(group.slug));
-  assert.deepStrictEqual(group.sentences, []);
-  assert.strictEqual(group.sentence_quizzes_ready, false);
+  assert.strictEqual(group.sentence_quizzes_ready, true);
+  assert.strictEqual(group.sentences.length, 6);
+  assert.deepStrictEqual(
+    group.sentences.map((sentence) => sentence.text),
+    [
+      'えっと、個室って、まだ空いてますかね？',
+      '個室は、もう空かないですねー。',
+      'わかりました。じゃあ、テーブル席でお願いします。',
+      'はい、お席ご案内可能ですよ。',
+      '2時間半飲み放題付きプランでお願いします。',
+      'かしこまりました。',
+    ]
+  );
+  assert.deepStrictEqual(
+    group.sentences.map((sentence) => sentence.chunk_ids),
+    [[1, 2, 3], [5, 6, 7], [8, 10], [14], [15, 16, 17], [19]]
+  );
+  assert.strictEqual(group.sentences.map((sentence) => sentence.text).join(''), group.sentence);
+  assert.ok(group.sentences_note.indexOf('chunk-boundary-wins') !== -1);
+  assert.ok(group.sentences_note.indexOf('Q22') !== -1);
+  assert.ok(group.sentence_added_at_note.indexOf('Q22') !== -1);
+  assert.ok(group.sentence_added_at_note.indexOf('Q23') !== -1);
   assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
   assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19]') !== -1);
@@ -545,6 +570,74 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, 3, 5, 6, 7, 8, 10, 14
   });
 });
 
+test('Q22 and Q23 slides are audio_shadow and plan whole-sentence recording', function () {
+  const QuizRunner = require(path.join(root, 'js/quiz-runner.js'));
+  const quizDir = path.join(root, 'data/quizzes');
+  const files = fs.readdirSync(quizDir).filter((file) => /^sentence-shadowing-(125|075)-.+-v1\.json$/.test(file));
+  assert.strictEqual(files.length, 118);
+  const koshitsuWindows = {
+    1: [0.05, 4.07],
+    2: [4.07, 7.07],
+    3: [7.07, 11.08],
+    4: [11.08, 13.89],
+    5: [13.89, 17.49],
+    6: [17.49, 18.7],
+  };
+  const passageAudio = 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3';
+  files.forEach((file) => {
+    const quiz = JSON.parse(fs.readFileSync(path.join(quizDir, file), 'utf8'));
+    const expectRate = quiz.objective === 'sentence_shadowing_125' ? 1.25 : 0.75;
+    assert.ok(
+      quiz.objective === 'sentence_shadowing_125' || quiz.objective === 'sentence_shadowing_075',
+      quiz.quiz_id
+    );
+    assert.strictEqual(quiz.kind, 'sentence', quiz.quiz_id);
+    assert.strictEqual(quiz.slides.length, 1, quiz.quiz_id);
+    const slide = quiz.slides[0];
+    assert.strictEqual(slide.type, 'audio_shadow', quiz.quiz_id);
+    assert.strictEqual(slide.rate, expectRate, quiz.quiz_id);
+    assert.strictEqual(typeof slide.start_sec, 'number', quiz.quiz_id);
+    assert.strictEqual(typeof slide.end_sec, 'number', quiz.quiz_id);
+    assert.ok(slide.end_sec > slide.start_sec, quiz.quiz_id);
+    assert.strictEqual(typeof slide.audio, 'string', quiz.quiz_id);
+    assert.ok(slide.audio.indexOf('http') === 0, quiz.quiz_id);
+    assert.ok(!Object.prototype.hasOwnProperty.call(slide, 'self_check'), quiz.quiz_id);
+    assert.ok(!Object.prototype.hasOwnProperty.call(slide, 'sentence_window_hint'), quiz.quiz_id);
+    assert.ok(slide.instruction.indexOf(expectRate + '×') !== -1, quiz.quiz_id);
+    const clip = { rate: slide.rate, start_sec: slide.start_sec, end_sec: slide.end_sec };
+    assert.strictEqual(QuizRunner.isSegmentShadow(quiz, slide.type, clip), false, quiz.quiz_id);
+    const plan = QuizRunner.shadowSlidePlan(quiz, slide.type, clip);
+    assert.strictEqual(plan.segmentShadow, false, quiz.quiz_id);
+    assert.strictEqual(plan.rate, expectRate, quiz.quiz_id);
+    assert.strictEqual(plan.rateOptions, null, quiz.quiz_id);
+    assert.deepStrictEqual(plan.record, { enabled: true, persist: false, score: false }, quiz.quiz_id);
+    assert.strictEqual(plan.selfCheck, false, quiz.quiz_id);
+    assert.strictEqual(quiz.feedback.on_complete, 'pass', quiz.quiz_id);
+    const rows = manifest.quizzes.filter((row) => row.quiz_id === quiz.quiz_id);
+    assert.strictEqual(rows.length, 1, quiz.quiz_id);
+    assert.strictEqual(rows[0].objective, quiz.objective, quiz.quiz_id);
+    assert.strictEqual(rows[0].kind, 'sentence', quiz.quiz_id);
+    assert.strictEqual(rows[0].shell, false, quiz.quiz_id);
+    if (quiz.quiz_id.indexOf('koshitsu-yoyaku') !== -1) {
+      const window = koshitsuWindows[quiz.sentence_index];
+      assert.deepStrictEqual([slide.start_sec, slide.end_sec], window, quiz.quiz_id);
+      assert.strictEqual(slide.audio, passageAudio, quiz.quiz_id);
+      assert.strictEqual(rows[0].group_slug, 'koshitsu-yoyaku', quiz.quiz_id);
+      assert.strictEqual(rows[0].sentence_id, 's' + quiz.sentence_index, quiz.quiz_id);
+    }
+  });
+  const koshitsuIds = [];
+  for (let i = 1; i <= 6; i++) {
+    koshitsuIds.push('sentence-shadowing-125-koshitsu-yoyaku-' + i + '-v1');
+    koshitsuIds.push('sentence-shadowing-075-koshitsu-yoyaku-' + i + '-v1');
+  }
+  koshitsuIds.forEach((quizId) => {
+    assert.ok(files.indexOf(quizId + '.json') !== -1, quizId);
+  });
+  assert.ok(!fs.readFileSync(path.join(quizDir, 'mother-lang-goraitei-arigatou-3-v1.json'), 'utf8').includes('record_shadow'));
+  assert.ok(fs.readFileSync(path.join(quizDir, 'mother-lang-goraitei-arigatou-3-v1.json'), 'utf8').includes('record_pronounce'));
+});
+
 test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function () {
   const group = groupBySlug('yokattara-onomi');
   assert.ok(group.sentence.includes('方 、'));
@@ -557,7 +650,7 @@ test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function ()
 
 test('manifest sentence quizzes parse, match sentences[], and Q24 choices have no kana', function () {
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
-  assert.strictEqual(sentences.length, 273);
+  assert.strictEqual(sentences.length, 285);
   const counts = {};
   const byGroup = {};
   sentences.forEach((row) => {
@@ -595,8 +688,8 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
   assert.deepStrictEqual(counts, {
     sentence_listen_to_l1: 53,
     sentence_l1_palace_multi_tap: 53,
-    sentence_shadowing_125: 53,
-    sentence_shadowing_075: 53,
+    sentence_shadowing_125: 59,
+    sentence_shadowing_075: 59,
     sentence_discourse_mcq: 61,
   });
   groups.groups.forEach((group) => {

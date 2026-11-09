@@ -248,7 +248,7 @@ test('manifest passage kinds keep objectives; sentence rows are live Soft GO', f
     assert.ok(PASSAGE_OBJECTIVES.indexOf(q.objective) !== -1, q.quiz_id);
     assert.ok(q.chunk_id == null, q.quiz_id);
   });
-  assert.strictEqual(sentences.length, 273);
+  assert.strictEqual(sentences.length, 285);
   assert.ok(!sentences.some((q) => q.quiz_id === 'sentence-shell-smoke-yoyaku-shitenai-s1-v1'));
   assert.ok(!sentences.some((q) => q.objective === 'sentence_shell_smoke'));
   const sentenceObjectives = Object.keys(SENTENCE_SCHEDULE);

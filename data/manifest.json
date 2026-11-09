@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T19:40:00+08:00",
+  "generated_at": "2026-11-09T22:53:34+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -31813,6 +31813,150 @@
       "kind": "chunk",
       "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
       "chunk_id": 19
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-1-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-1-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-1-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-1-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-2-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-2-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-2-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-2-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-3-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-3-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s3",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-3-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-3-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s3",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-4-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-4-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s4",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-4-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-4-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s4",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-5-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-5-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s5",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-5-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-5-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s5",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-6-v1",
+      "file": "data/quizzes/sentence-shadowing-125-koshitsu-yoyaku-6-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s6",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-6-v1",
+      "file": "data/quizzes/sentence-shadowing-075-koshitsu-yoyaku-6-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s6",
+      "group_slug": "koshitsu-yoyaku",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "shell": false
     }
   ]
 }

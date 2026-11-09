@@ -6,21 +6,12 @@
   "sentence": "以上でよろしいですか？",
   "slides": [
     {
-      "type": "record_shadow",
+      "type": "audio_shadow",
       "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
       "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3",
       "rate": 1.25,
-      "action": "start_record",
-      "sentence_window_hint": {
-        "start_sec": 8.5,
-        "end_sec": 10.7
-      }
-    },
-    {
-      "type": "record_shadow",
-      "instruction": "可重播自己錄音；完成後按完成（錄音唔上雲，完成即丟）。",
-      "action": "review_complete",
-      "storage": "temp_blob_v1"
+      "start_sec": 8.5,
+      "end_sec": 10.7
     }
   ],
   "feedback": {

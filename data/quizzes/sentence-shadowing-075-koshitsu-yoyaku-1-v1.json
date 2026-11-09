@@ -1,0 +1,20 @@
+{
+  "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-1-v1",
+  "objective": "sentence_shadowing_075",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.75× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
+      "rate": 0.75,
+      "start_sec": 0.05,
+      "end_sec": 4.07
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}
