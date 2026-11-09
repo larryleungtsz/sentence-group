@@ -28902,6 +28902,18 @@
       "shell": false
     },
     {
+      "quiz_id": "sentence-example-listen-gochumon-v1",
+      "file": "data/quizzes/sentence-example-listen-gochumon-v1.json",
+      "objective": "sentence_example_sentences_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
       "quiz_id": "sentence-listen-to-l1-gochumon-kakunin-1-v1",
       "file": "data/quizzes/sentence-listen-to-l1-gochumon-kakunin-1-v1.json",
       "objective": "sentence_listen_to_l1",
