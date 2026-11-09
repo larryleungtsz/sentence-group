@@ -54,7 +54,6 @@ const SENTENCE_OBJECTIVES = [
   'sentence_discourse_mcq',
 ];
 const KANA = /[\u3040-\u309F\u30A0-\u30FF\uFF66-\uFF9D]/;
-const DAY = 24 * 60 * 60 * 1000;
 
 const EXPECTED_SENTENCES = {
   'aragoshi-mikanshu': 7,
@@ -707,7 +706,7 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
   assert.ok(!fs.existsSync(path.join(root, 'data/quizzes/sentence-shell-smoke-yoyaku-shitenai-s1-v1.json')));
 });
 
-test('fresh full-suite units due Q20; empty stages step once per day until Q24', function () {
+test('fresh full-suite and Q24-only units are due at T01; empty stages still step on the chunk wait', function () {
   const now0 = Date.parse('2026-11-03T00:00:00.000Z');
   const fresh = { stageIndex: 0, lastCompletedAt: null };
   const orenji = groupBySlug('orenji-jusu');
@@ -733,7 +732,7 @@ test('fresh full-suite units due Q20; empty stages step once per day until Q24',
       completedStages: [],
       now: now0,
     }),
-    ['T+1']
+    ['T01']
   );
   Progress.resetAll();
   Schedule.fastForwardVacuousSentenceUnits({
@@ -757,71 +756,75 @@ test('fresh full-suite units due Q20; empty stages step once per day until Q24',
       state: fresh,
       now: now0,
     }),
+    0
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: 'sentence_discourse_mcq',
+      kind: 'sentence',
+      schedule: schedule,
+      sentenceUnitState: fresh,
+      completedStages: [],
+      now: now0,
+    }),
+    ['T01']
+  );
+  assert.ok(!manifest.quizzes.some((q) => q.objective === 'sentence_example_sentences_listening'));
+  const hour = 60 * 60 * 1000;
+  const afterT01 = { stageIndex: 1, lastCompletedAt: new Date(now0).toISOString() };
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: 'sentence_discourse_mcq',
+      kind: 'sentence',
+      schedule: schedule,
+      sentenceUnitState: afterT01,
+      completedStages: [],
+      now: now0 + hour - 1,
+    }),
+    []
+  );
+  assert.deepStrictEqual(
+    Schedule.dueStages({
+      objective: 'sentence_discourse_mcq',
+      kind: 'sentence',
+      schedule: schedule,
+      sentenceUnitState: afterT01,
+      completedStages: [],
+      now: now0 + hour,
+    }),
+    ['T02']
+  );
+  const onlyLater = {
+    passage_schedule: schedule.passage_schedule,
+    sentence_schedule: { sentence_discourse_mcq: ['T1'] },
+  };
+  assert.strictEqual(
+    Schedule.vacuousSentenceAdvanceCount({
+      schedule: onlyLater,
+      quizzes: annaiQuizzes,
+      sentenceId: 's1',
+      state: fresh,
+      now: now0,
+    }),
     1
   );
-  let now = now0;
-  function tick() {
-    Schedule.fastForwardVacuousSentenceUnits({
-      schedule: schedule,
-      quizzes: annaiQuizzes,
-      sentences: annai.sentences,
-      now: now,
-      getState: (id) => Progress.getSentenceUnit('yoyaku', id),
-      advance: (id) => Progress.advanceSentenceUnit('yoyaku', id, new Date(now).toISOString()),
-    });
-  }
-  tick();
+  Schedule.fastForwardVacuousSentenceUnits({
+    schedule: onlyLater,
+    quizzes: annaiQuizzes,
+    sentences: annai.sentences,
+    now: now0,
+    getState: (id) => Progress.getSentenceUnit('yoyaku', id),
+    advance: (id) => Progress.advanceSentenceUnit('yoyaku', id, new Date(now0).toISOString()),
+  });
   assert.strictEqual(Progress.getSentenceUnit('yoyaku', 's1').stageIndex, 1);
   assert.deepStrictEqual(
     Schedule.dueStages({
       objective: 'sentence_discourse_mcq',
       kind: 'sentence',
-      schedule: schedule,
+      schedule: onlyLater,
       sentenceUnitState: Progress.getSentenceUnit('yoyaku', 's1'),
       completedStages: [],
-      now: now,
-    }),
-    []
-  );
-  for (let i = 0; i < 3; i++) {
-    now += DAY;
-    tick();
-  }
-  assert.strictEqual(Progress.getSentenceUnit('yoyaku', 's1').stageIndex, 4);
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: 'sentence_discourse_mcq',
-      kind: 'sentence',
-      schedule: schedule,
-      sentenceUnitState: Progress.getSentenceUnit('yoyaku', 's1'),
-      completedStages: [],
-      now: now,
-    }),
-    []
-  );
-  now += DAY;
-  tick();
-  const atQ24 = Progress.getSentenceUnit('yoyaku', 's1');
-  assert.strictEqual(atQ24.stageIndex, 4);
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: 'sentence_discourse_mcq',
-      kind: 'sentence',
-      schedule: schedule,
-      sentenceUnitState: atQ24,
-      completedStages: [],
-      now: now,
-    }),
-    ['T+5']
-  );
-  assert.deepStrictEqual(
-    Schedule.dueStages({
-      objective: 'sentence_listen_to_l1',
-      kind: 'sentence',
-      schedule: schedule,
-      sentenceUnitState: atQ24,
-      completedStages: [],
-      now: now,
+      now: now0,
     }),
     []
   );

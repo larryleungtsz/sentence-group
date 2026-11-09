@@ -28,6 +28,8 @@
     const quizzes = (manifest.quizzes || []).filter(
       (q) => q.sentence === group.sentence
     );
+    const keepChunksLeftDense = (sentence) =>
+      Schedule.sentenceKeepChunksLeftDense(sentence, chunks, getChunkState, nowMs);
     Schedule.fastForwardVacuousSentenceUnits({
       schedule,
       quizzes,
@@ -35,6 +37,7 @@
       now: nowMs,
       getState: (id) => Progress.getSentenceUnit(group.slug, id),
       advance: (id) => Progress.advanceSentenceUnit(group.slug, id, nowIso),
+      keepChunksLeftDense,
     });
     let dueCount = 0;
     for (const meta of quizzes) {
@@ -65,6 +68,16 @@
           meta.kind === 'chunk' ? admitted.has(meta.chunk_id) : true,
         skipped: meta.kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
         scheduleStages: meta.schedule_stages || null,
+        underChunkGate:
+          meta.kind === 'sentence'
+            ? {
+                sentence:
+                  (group.sentences || []).find((s) => s && s.id === meta.sentence_id) ||
+                  null,
+                chunks,
+                getChunkState,
+              }
+            : null,
       });
       if (stages.length) dueCount++;
     }

@@ -579,7 +579,8 @@ tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 obje
       completedStages: [],
       now: now,
     });
-    assert.deepStrictEqual(freshDue, planned[0] === 'T+1' ? ['T+1'] : [], quiz.objective);
+    assert.strictEqual(labels[0], 'T01');
+    assert.deepStrictEqual(freshDue, planned[0] === labels[0] ? [labels[0]] : [], quiz.objective);
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
