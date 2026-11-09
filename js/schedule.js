@@ -9,11 +9,20 @@
   /** T1 stage index (after T03). Next chunk may start T01 when previous unlocks T1. */
   const T1_STAGE_INDEX = 3;
 
-  /** Ordered chunk stage labels: T01, T02, T03, T1 … T19. */
-  function chunkStageLabels() {
+  /**
+   * Ordered chunk-style stage labels: T01, T02, T03, T1 … T{last}.
+   * Chunk dues use the default (T19). Sentence units pass 30.
+   */
+  function chunkStageLabels(lastNumbered) {
+    const last = lastNumbered == null ? 19 : lastNumbered | 0;
     const labels = ['T01', 'T02', 'T03'];
-    for (let i = 1; i <= 19; i++) labels.push('T' + i);
+    for (let i = 1; i <= last; i++) labels.push('T' + i);
     return labels;
+  }
+
+  /** T01 / T02 / T03 / T1 … Tn. Passage labels are T+N and do not match. */
+  function isChunkStyleStageLabel(label) {
+    return /^T\d+$/.test(String(label));
   }
 
   /**
@@ -124,6 +133,39 @@
   }
 
   /**
+   * Left dense: SKIP, reuse (already_introduced / shared_with_prior_group),
+   * or unlocked through T1 — the same unlock the chunk layer uses before the
+   * next chunk may start. Still in T01–T03, or at T1 before the 24h wait,
+   * has not left dense. A missing chunk row has not.
+   */
+  function chunkHasLeftDense(chunk, chunkState, now) {
+    if (!chunk) return false;
+    if (ignoresDense(chunk)) return true;
+    return hasUnlockedThroughT1(chunkState, now);
+  }
+
+  /**
+   * Per-sentence under-chunk gate. Every Keep chunk in `sentence.chunk_ids`
+   * must have left dense. Other sentences' chunks are not consulted.
+   * Empty chunk_ids passes. A missing sentence, or a chunk id with no row,
+   * fails closed.
+   */
+  function sentenceKeepChunksLeftDense(sentence, chunks, getChunkState, now) {
+    if (!sentence || !Array.isArray(sentence.chunk_ids)) return false;
+    const byId = new Map();
+    (chunks || []).forEach((chunk) => {
+      if (chunk && chunk.id != null) byId.set(chunk.id, chunk);
+    });
+    for (let i = 0; i < sentence.chunk_ids.length; i++) {
+      const id = sentence.chunk_ids[i];
+      const chunk = byId.get(id);
+      const state = typeof getChunkState === 'function' ? getChunkState(id) : null;
+      if (!chunkHasLeftDense(chunk, state, now)) return false;
+    }
+    return true;
+  }
+
+  /**
    * Chunks array is join order. Two gates:
    * 1) ORDER: chunk i is admitted only after chunk i-1 has been admitted
    *    (entered T01 or later). Applies to new, already_introduced, and skip.
@@ -184,15 +226,16 @@
   }
 
   /**
-   * Middle Sentence layer (Q20–Q24 stages). A stage is due only when a
+   * Middle Sentence layer (Q20–Q25 stages). A stage is due only when a
    * manifest quiz uses that objective; missing quizzes are not invented.
    * If `passage_schedule` is absent, `sentence_schedule` is still the legacy
    * Passage table — do not treat it as Sentence objectives.
    *
    * A ready stage with no quiz for that sentence unit is already complete.
    * `vacuousSentenceAdvanceCount` is 1 in that case so callers can step the
-   * cursor once; the 1-day wait then applies, which is how Q24-only units
-   * reach T+5. Full-suite units still stop on the stage that has a quiz.
+   * cursor once; the chunk wait then applies. Full-suite units stop on the
+   * stage that has a quiz. Showing those quizzes also requires every Keep
+   * chunk under the sentence to have left dense.
    */
   function sentenceScheduleTable(schedule) {
     if (
@@ -234,13 +277,17 @@
   }
 
   /**
-   * Sentence-unit wait matches Passage for the empty shell.
-   * Q20–Q24 can change SENTENCE_UNIT_WAIT_MS without touching Passage.
+   * Flat day wait kept for older callers. Sentence units use chunk waits
+   * (`chunkWaitAfterStage`), not this constant. Passage still uses 1 day.
    */
   const SENTENCE_UNIT_WAIT_MS = SENTENCE_WAIT_MS;
 
+  /**
+   * Sentence-unit waits match chunk: 1h → 3h → 24h → 1.5d → 2.25d → ×1.5.
+   * Passage stays on the 1-day wait.
+   */
   function isSentenceUnitStageReady(unitState, now) {
-    return isTimelineStageReady(unitState, now, SENTENCE_UNIT_WAIT_MS);
+    return isChunkStageReady(unitState || defaultSentenceUnitState(), now);
   }
 
   function passageStageReadyAt(passageState) {
@@ -252,7 +299,7 @@
   }
 
   function sentenceUnitStageReadyAt(unitState) {
-    return timelineStageReadyAt(unitState, SENTENCE_UNIT_WAIT_MS);
+    return chunkStageReadyAt(unitState || defaultSentenceUnitState());
   }
 
   /** Union of a schedule table's stage labels, sorted by T+N. Empty table → T+1..T+30. */
@@ -291,8 +338,21 @@
     return passageStageLabels(schedule);
   }
 
+  /**
+   * Chunk-style sentence tables (T01 / T02 / T03 / T1 …) walk the same
+   * ordered labels as chunks, through T30, so stageIndex lines up with
+   * chunkWaitAfterStage. A table that is still T+N keeps that order.
+   */
   function sentenceUnitStageLabels(schedule) {
-    return orderedStageLabels(sentenceScheduleTable(schedule));
+    const table = sentenceScheduleTable(schedule);
+    const present = [];
+    Object.keys(table).forEach((key) => {
+      (table[key] || []).forEach((label) => {
+        if (label) present.push(label);
+      });
+    });
+    if (present.some(isChunkStyleStageLabel)) return chunkStageLabels(30);
+    return orderedStageLabels(table);
   }
 
   function quizOccupiesSentenceStage(q, schedule, sentenceId, label) {
@@ -339,9 +399,11 @@
     now,
     getState,
     advance,
+    keepChunksLeftDense,
   }) {
     (sentences || []).forEach((s) => {
       if (!s || s.id == null || s.id === '') return;
+      if (typeof keepChunksLeftDense === 'function' && !keepChunksLeftDense(s)) return;
       let guard = 0;
       while (guard++ < 48) {
         const state = getState(s.id);
@@ -383,6 +445,9 @@
    * Due stage labels for one quiz under completion-based unlock.
    * Only the timeline's current stage can be due (once ready and not yet marked on quiz).
    * Pass admitted=false to suppress chunk dues for a chunk not yet admitted.
+   * Pass underChunkGate, or underChunksLeftDense=false, to hide sentence-layer
+   * dues until every Keep chunk under that sentence has left dense.
+   * Passage dues ignore both.
    */
   function dueStages({
     objective,
@@ -397,6 +462,8 @@
     admitted,
     skipped,
     scheduleStages,
+    underChunksLeftDense,
+    underChunkGate,
   }) {
     const done = new Set(completedStages || []);
     if (kind === 'passage') {
@@ -412,6 +479,17 @@
       );
     }
     if (kind === 'sentence') {
+      if (underChunkGate) {
+        const open = sentenceKeepChunksLeftDense(
+          underChunkGate.sentence,
+          underChunkGate.chunks,
+          underChunkGate.getChunkState,
+          now
+        );
+        if (!open) return [];
+      } else if (underChunksLeftDense === false) {
+        return [];
+      }
       const state = sentenceUnitState || defaultSentenceUnitState();
       const planned = (sentenceScheduleTable(schedule) || {})[objective] || [];
       return dueOnTimeline(
@@ -472,6 +550,8 @@
     isAlreadyIntroduced,
     isSkipped,
     ignoresDense,
+    chunkHasLeftDense,
+    sentenceKeepChunksLeftDense,
     hasUnlockedThroughT1,
     isChunkAdmitted,
     admittedChunkIds,

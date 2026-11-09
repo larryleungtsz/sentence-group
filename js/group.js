@@ -95,6 +95,16 @@
       admitted,
       skipped: kind === 'chunk' ? Schedule.isSkipped(chunk) : false,
       scheduleStages: meta.schedule_stages || null,
+      underChunkGate:
+        kind === 'sentence'
+          ? {
+              sentence:
+                (group.sentences || []).find((s) => s && s.id === meta.sentence_id) ||
+                null,
+              chunks,
+              getChunkState,
+            }
+          : null,
     });
   }
 
@@ -239,6 +249,10 @@
     }
     (group.sentences || []).forEach((s) => {
       if (!s || s.id == null || s.id === '') return;
+      if (!Schedule.sentenceKeepChunksLeftDense(s, chunks, getChunkState, nowMs)) {
+        parts.push('sentence ' + s.id + ' 等底下 chunk 離開密集');
+        return;
+      }
       const st = Progress.getSentenceUnit(slug, s.id);
       if (Schedule.isSentenceUnitStageReady(st, nowMs)) return;
       const t = Schedule.sentenceUnitStageReadyAt(st);
@@ -276,6 +290,8 @@
       now: nowMs,
       getState: (id) => Progress.getSentenceUnit(slug, id),
       advance: (id) => Progress.advanceSentenceUnit(slug, id, nowIso),
+      keepChunksLeftDense: (sentence) =>
+        Schedule.sentenceKeepChunksLeftDense(sentence, chunks, getChunkState, nowMs),
     });
   }
   let queue = buildDueQueue();

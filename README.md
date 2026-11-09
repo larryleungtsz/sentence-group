@@ -22,7 +22,7 @@ js/quiz-runner.js   渲染與評分
 js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
-data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q24 live Soft GO）
+data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q25；Q25 未有 quiz）
 data/groups.json    Passage Group + chunks（陣列次序＝加入次序）+ optional sentences[]
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
@@ -46,7 +46,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `passage` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；要有 `sentence_id`，而且該 group 有 `sentences[]`）
+   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；Q25 只係 schedule；要有 `sentence_id`，而且該 group 有 `sentences[]`）
 3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
@@ -101,20 +101,23 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 進度 key：`passages[slug]`。舊嘅 `sentences[slug]` 會喺載入時摺入 `passages`（唔會把 stageIndex 歸零），並寫返做鏡像，等未更新嘅手機／雲端 blob 仍然睇到同一條線。
 
-### Sentence（中間層，Soft GO Q20–Q24）
+### Sentence（中間層，Sheet + under-chunk gate）
 
 每個 Passage Group 都有 `sentences[]`：`{ id, text, chunk_ids, l1? }`。  
 切句規則：**chunk-boundary-wins**。一句係連續嘅 active chunk；唔切開 `chunk.text`；同一個 chunk id 唔可以出現喺兩句。`skip: true` 嘅 chunk 留喺 `chunks[]`，唔入 `chunk_ids`。
 
 Soft GO 題目喺 `data/quizzes/`。`manifest.json` 用 `kind: "sentence"`。`sentence` 欄係成段 `group.sentence`（練習頁同首頁靠呢個字串對 group）。`sentence_id` 係 `s1`、`s2`…。`group_slug` 係 site slug。`shell` 係 `false`。
 
+`sentence_schedule` 跟 Sheet「Sentence Objective Schedule」。每個 objective 都係 **T01, T02, T03, T1 … T30**（同 chunk 嘅 stage 名，唔係 `T+N`）。Q25 `sentence_example_sentences_listening` 已經喺 schedule，但 manifest 未有 quiz，所以唔會出題。
+
 | Objective | 題 | 題數 | Stages |
 |-----------|----|------|--------|
-| `sentence_listen_to_l1` | Q20 | 53 | T+1, T+6, T+11, T+16, T+21, T+26 |
-| `sentence_l1_palace_multi_tap` | Q21 | 53 | T+2, T+7, T+12, T+17, T+22, T+27 |
-| `sentence_shadowing_125` | Q22 | 53 | T+3, T+8, T+13, T+18, T+23, T+28 |
-| `sentence_shadowing_075` | Q23 | 53 | T+4, T+9, T+14, T+19, T+24, T+29 |
-| `sentence_discourse_mcq` | Q24 | 61 | T+5, T+10, T+15, T+20, T+25, T+30 |
+| `sentence_listen_to_l1` | Q20 | 53 | T01–T30（全部） |
+| `sentence_l1_palace_multi_tap` | Q21 | 53 | 同上 |
+| `sentence_shadowing_125` | Q22 | 59 | 同上 |
+| `sentence_shadowing_075` | Q23 | 59 | 同上 |
+| `sentence_discourse_mcq` | Q24 | 61 | 同上 |
+| `sentence_example_sentences_listening` | Q25 | 0 | 同上（未有 quiz） |
 
 22 個 group、61 句。53 句有齊 Q20–Q24。Q24 多出嘅 8 句只得 Q24。
 
@@ -127,9 +130,11 @@ Q24-only（Q20–Q23 唔喺 bundle，冇加假題）：
 
 `yokattara-onomi`：live passage 保留「方 、」（逗號前有空格）；Soft GO s1 係「方、」。slug `onomimono-otoshi` → `yokattara-onomi` 對過 `groups.json`，冇改。s4 嘅 Soft GO 句尾有「。」，passage 字串冇。
 
-新鮮句單位（`stageIndex` 0）即時出 Q20（T+1）。做完該 stage 全部到期題之後等 1 日。如果而家嘅 stage 冇 manifest quiz（Q24-only 句嘅 T+1 至 T+4），打開首頁或者練習頁會將呢個 stage 記為完成並推前一級，然後照樣等 1 日。Q24 喺句單位行到 T+5 先到期。
+句單位要等 **呢句底下每一個 Keep chunk 離開密集** 先出 Q20–Q25。離開密集同 chunk 層一樣：完成密集並 unlock 到 T1（T03 做完再等 24h，T1 ready），或者該 chunk 係 SKIP／reuse（`already_introduced`／`shared_with_prior_group`）。未離開就唔出呢句嘅 sentence quizzes，即使句 stage 已經到期。唔使成段 passage 嘅 chunk 全部做完。`chunk_ids` 空（冇 Keep chunk）唔受呢道閘。
 
-進度 key：`sentenceUnits[slug:sentenceId]`，同 Passage／Chunk 分開。共用一條 `T+1`…`T+30` 時間線（stage 0 = T+1）。
+閘開咗之後先跟句 stage。新鮮句單位（`stageIndex` 0）即時出 T01（有 quiz 嘅 objective，包括 Q24-only）。做完該 stage 全部到期題之後，間隔同 chunk：1h → 3h → 24h → 1.5 日 → 2.25 日 → 之後每次 ×1.5。Passage 仍然係每日 1 日，`passage_schedule` 冇改。如果而家嘅 stage 冇 manifest quiz，打開首頁或者練習頁會將呢個 stage 記為完成並推前一級，然後先開始上面嘅 chunk 間隔；底下 chunk 仲未離開密集就唔會推。
+
+進度 key：`sentenceUnits[slug:sentenceId]`，同 Passage／Chunk 分開。共用一條 `T01`／`T02`／`T03`／`T1`…`T30` 時間線（stage 0 = T01）。
 
 Smoke quiz `sentence-shell-smoke-yoyaku-shitenai-s1-v1` 已刪，避免同 live Soft GO 一齊出現。
 
@@ -161,7 +166,7 @@ Q18 `sentence_segment_shadowing`、Q8、Q11、chunk 題唔經上面嘅 whitelist
 1. 到期 Level 1（按 chunk id／加入次序）
 2. 到期 Level 2（按 chunk id）
 3. 到期 Level 3（按 chunk id）
-4. 到期 Sentence quizzes（有 `sentences[]` 而且 objective 喺 `sentence_schedule` 先會出現）
+4. 到期 Sentence quizzes（有 `sentences[]`、objective 喺 `sentence_schedule`、而且呢句每個 Keep chunk 已離開密集）
 5. 到期 Passage quizzes
 
 ## Passage objective：`sentence_segment_shadowing`（整段分段跟讀）
