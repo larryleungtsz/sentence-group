@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>一次性重置 gochumon 句子層</title>
+  <link rel="stylesheet" href="../css/app.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="nav-back" href="../index.html">← 首頁</a>
+      <h1>一次性重置</h1>
+    </header>
+    <p id="status" class="muted">準備清 gochumon 嘅句子層進度…</p>
+    <p id="detail" class="muted"></p>
+    <ul id="links" hidden>
+      <li><a href="../group.html?slug=gochumon">開 gochumon 練習頁</a></li>
+    </ul>
+  </div>
+  <script src="../js/sync-config.js"></script>
+  <script>
+(function () {
+  var KEY = 'website-manager-progress-v2';
+  var DOC_KEY = 'website-manager-progress-v2';
+  var OWNER_ID = 'larry';
+  var UNIT_PREFIX = 'gochumon:';
+  var SENTENCE_KEY = 'gochumon';
+  // Soft GO sentence layer (Q20–Q25) for gochumon only.
+  // gochumon-kakunin shares the gochumon stem, so it is excluded below.
+  // Passage Q18 (sentence-segment-shadow-*) and chunk example-listen / sounding
+  // do not use these prefixes.
+  var QUIZ_PREFIXES = [
+    'sentence-listen-to-l1-gochumon',
+    'sentence-l1-palace-multi-tap-gochumon',
+    'sentence-shadowing-125-gochumon',
+    'sentence-shadowing-075-gochumon',
+    'sentence-discourse-mcq-gochumon',
+    'sentence-example-listen-gochumon'
+  ];
+  var statusEl = document.getElementById('status');
+  var detailEl = document.getElementById('detail');
+  var linksEl = document.getElementById('links');
+
+  function emptyRoot() {
+    return { quizzes: {}, chunks: {}, passages: {}, sentences: {}, sentenceUnits: {} };
+  }
+
+  function isPlain(o) {
+    return !!o && typeof o === 'object' && !Array.isArray(o);
+  }
+
+  function isGochumonSentenceQuiz(id) {
+    if (typeof id !== 'string') return false;
+    if (id.indexOf('gochumon-kakunin') !== -1) return false;
+    for (var i = 0; i < QUIZ_PREFIXES.length; i++) {
+      if (id.indexOf(QUIZ_PREFIXES[i]) === 0) return true;
+    }
+    return false;
+  }
+
+  function stripSentence(raw) {
+    if (!isPlain(raw)) raw = emptyRoot();
+    var quizzes = isPlain(raw.quizzes) ? raw.quizzes : {};
+    var sentences = isPlain(raw.sentences) ? raw.sentences : {};
+    var sentenceUnits = isPlain(raw.sentenceUnits) ? raw.sentenceUnits : {};
+    var quizIds = [];
+    var unitKeys = [];
+    var removedSentence = false;
+
+    Object.keys(quizzes).forEach(function (id) {
+      if (isGochumonSentenceQuiz(id)) {
+        delete quizzes[id];
+        quizIds.push(id);
+      }
+    });
+    quizIds.sort();
+    if (Object.prototype.hasOwnProperty.call(sentences, SENTENCE_KEY)) {
+      delete sentences[SENTENCE_KEY];
+      removedSentence = true;
+    }
+    Object.keys(sentenceUnits).forEach(function (key) {
+      if (key.indexOf(UNIT_PREFIX) === 0) {
+        delete sentenceUnits[key];
+        unitKeys.push(key);
+      }
+    });
+    unitKeys.sort();
+
+    raw.quizzes = quizzes;
+    raw.sentences = sentences;
+    raw.sentenceUnits = sentenceUnits;
+    return {
+      raw: raw,
+      quizIds: quizIds,
+      unitKeys: unitKeys,
+      removedSentence: removedSentence
+    };
+  }
+
+  function listOrNone(arr) {
+    return arr.length ? arr.join('、') : '無';
+  }
+
+  function summarize(prefix, r) {
+    return prefix +
+      ' sentenceUnits[' + listOrNone(r.unitKeys) + ']' +
+      '、sentences.gochumon' + (r.removedSentence ? '' : '（無）') +
+      '、quiz[' + listOrNone(r.quizIds) + ']。' +
+      '會清：sentenceUnits 以 gochumon: 開頭；sentences.gochumon；quiz_id 前綴 ' +
+      QUIZ_PREFIXES.join('、') +
+      '（含 gochumon-kakunin 唔清）。' +
+      '冇清 chunks、passages、chunk quiz、Q6 sounding、passage quiz（sentence-segment-shadow／whole-listen／sequence）、example-listen-gochumon、already_introduced、schedule.json、計時、其他 group。' +
+      'sentences.gochumon 係 passage 舊鏡像；passages.gochumon 保留，之後開練習頁可能再寫返 sentences.gochumon，passage 進度唔變。';
+  }
+
+  function loadSupabaseJs() {
+    if (window.supabase && typeof window.supabase.createClient === 'function') {
+      return Promise.resolve();
+    }
+    return new Promise(function (resolve, reject) {
+      var s = document.createElement('script');
+      s.src = 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/dist/umd/supabase.js';
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error('載入 Supabase 程式庫失敗')); };
+      document.head.appendChild(s);
+    });
+  }
+
+  function stripCloud() {
+    var cfg = window.SYNC_CONFIG || {};
+    var url = String(cfg.supabaseUrl || '');
+    var key = String(cfg.supabaseAnonKey || '');
+    if (!url || !key || !window.supabase) {
+      return Promise.resolve('未設定雲端，只清咗本機。');
+    }
+    var client = window.supabase.createClient(url, key, {
+      auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: false }
+    });
+    return client.auth.getSession().then(function (res) {
+      var session = res && res.data && res.data.session;
+      if (!session) return '呢部裝置未登入，只清咗本機。若你用另一部已登入裝置練習過，請用嗰部都打開此頁。';
+      return client
+        .from('sync_snapshots')
+        .select('payload, revision')
+        .eq('owner_id', OWNER_ID)
+        .eq('doc_key', DOC_KEY)
+        .maybeSingle()
+        .then(function (fetched) {
+          if (fetched.error) throw fetched.error;
+          if (!fetched.data) return '雲端未有進度檔，無需改雲端。';
+          var payload = fetched.data.payload;
+          if (typeof payload === 'string') payload = JSON.parse(payload);
+          if (!isPlain(payload)) return '雲端進度格式唔啱，未改雲端。';
+          var before = JSON.stringify(payload);
+          var result = stripSentence(payload);
+          if (JSON.stringify(result.raw) === before) {
+            return '雲端本來就無 gochumon 句子層紀錄。' + summarize('（檢查：', result);
+          }
+          var nextRev = (Number(fetched.data.revision) || 1) + 1;
+          return client
+            .from('sync_snapshots')
+            .update({
+              payload: result.raw,
+              revision: nextRev,
+              updated_at: new Date().toISOString()
+            })
+            .eq('owner_id', OWNER_ID)
+            .eq('doc_key', DOC_KEY)
+            .eq('revision', fetched.data.revision)
+            .select('revision')
+            .then(function (upd) {
+              if (upd.error) throw upd.error;
+              if (!upd.data || !upd.data.length) {
+                throw new Error('雲端剛被另一部機更新，請再刷新此頁一次。');
+              }
+              return summarize('已同步清雲端：', result);
+            });
+        });
+    });
+  }
+
+  try {
+    var raw = JSON.parse(localStorage.getItem(KEY) || 'null');
+    var localResult = stripSentence(raw);
+    localStorage.setItem(KEY, JSON.stringify(localResult.raw));
+    statusEl.textContent = '已清本機 gochumon 句子層進度（只清句子層）。chunk 同 passage 冇郁。正在檢查雲端…';
+    detailEl.textContent = summarize('本機清咗', localResult);
+
+    loadSupabaseJs()
+      .then(stripCloud)
+      .then(function (cloudMsg) {
+        statusEl.textContent = '已清 gochumon 嘅句子層進度（只清句子層）。chunk 同 passage 冇郁。';
+        detailEl.textContent = detailEl.textContent + ' ' + cloudMsg +
+          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q25 可以即刻再練。';
+        linksEl.hidden = false;
+      })
+      .catch(function (e) {
+        statusEl.textContent = '本機已重置，但雲端更新失敗：' + (e && e.message ? e.message : String(e));
+        detailEl.textContent = detailEl.textContent +
+          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q25 可以即刻再練。';
+        linksEl.hidden = false;
+      });
+  } catch (e) {
+    statusEl.textContent = '重置失敗：' + (e && e.message ? e.message : String(e));
+  }
+})();
+  </script>
+</body>
+</html>
