@@ -156,9 +156,9 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, 3, 5, and 6 are due a
   assert.ok(Q6_ONLY_SHELLS.has(group.slug));
   assert.deepStrictEqual(group.sentences, []);
   assert.strictEqual(group.sentence_quizzes_ready, false);
-  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3, 5, 6]);
+  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19]);
   assert.ok(group.chunk_order_note.indexOf('Append-not-insert') !== -1);
-  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3, 5, 6]') !== -1);
+  assert.ok(group.chunk_order_note.indexOf('[1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 19]') !== -1);
   assert.ok(group.chunk_order_note.indexOf('DENSE-waits') === -1);
   assert.ok(group.chunk_order_note.indexOf('admits 1, 17, 2, 3, 5, and 6 at T01') !== -1);
   assert.strictEqual(group.chunks[0].id, 1);
@@ -430,6 +430,116 @@ test('koshitsu-yoyaku is a Q6-only shell; chunks 1, 17, 2, 3, 5, and 6 are due a
     }),
     ['T01']
   );
+  const batch7 = [
+    {
+      id: 7,
+      text: '空かないですねー',
+      bytes: 86514,
+      sha256: 'c70eb588e5f27994bf11b9c431d1461d54ec71a5ffc465da81540298d7dcf8af',
+      sounding: '壓家奶desk泥',
+    },
+    {
+      id: 8,
+      text: 'わかりました',
+      bytes: 74166,
+      sha256: '71b591b03e0a69a4301f0d484002c4ae76466babf08a2fc9660a4aa23b4321eb',
+      sounding: '挖car梨master',
+    },
+    {
+      id: 10,
+      text: 'テーブル席で',
+      bytes: 52998,
+      sha256: '618a55fcf743341651d4b5261129cda4c53ed8d0885b7a49724c31d92c7796e6',
+      sounding: 'Telblue路錫Key爹',
+    },
+    {
+      id: 14,
+      text: 'ご案内可能ですよ',
+      bytes: 108564,
+      sha256: '359a5052d027bc2696e2e55bd9e79e3564c504f90136848843a2bc2deee84d8a',
+      sounding: '哥按奶can蘿deskYo',
+    },
+    {
+      id: 15,
+      text: '2時間半',
+      bytes: 70198,
+      sha256: '3b8efcc73d28dccd0843f0e85deb33f5e18c78927b871a5af978a664ad430389',
+      sounding: 'Kneel芝CANHand',
+    },
+    {
+      id: 16,
+      text: '飲み放題付き',
+      bytes: 91806,
+      sha256: 'aed5c4f7c4705bd077ee9e244da565ab1a2a6b6fefad57dda571879d2c290323',
+      sounding: '攞米河DIe豬機',
+    },
+    {
+      id: 19,
+      text: 'かしこまりました',
+      bytes: 82986,
+      sha256: 'cd206f882420ac279cf6174de01ffca8ba01266679aa5e374d9be7f880507647',
+      sounding: 'Class哥瑪莉MASTER',
+    },
+  ];
+  batch7.forEach(function (item) {
+    const chunk = group.chunks.find((c) => c.id === item.id);
+    assert.ok(chunk, 'chunk ' + item.id);
+    assert.strictEqual(chunk.text, item.text);
+    assert.strictEqual(chunk.quizzes_ready, true);
+    assert.notStrictEqual(chunk.skip, true);
+    assert.notStrictEqual(chunk.skipped, true);
+    assert.notStrictEqual(chunk.already_introduced, true);
+    assert.strictEqual(admitted.has(item.id), false);
+    const quizId = 'sounding-koshitsu-yoyaku-' + item.id + '-v1';
+    const rows = manifest.quizzes.filter((q) => q.quiz_id === quizId);
+    assert.strictEqual(rows.length, 1, quizId);
+    const row = rows[0];
+    assert.strictEqual(row.file, 'data/quizzes/' + quizId + '.json');
+    assert.strictEqual(row.objective, 'pronunciation_sounding_select');
+    assert.strictEqual(row.kind, 'chunk');
+    assert.strictEqual(row.level, 1);
+    assert.strictEqual(row.chunk_id, item.id);
+    assert.strictEqual(row.sentence, group.sentence);
+    assert.ok(!Object.prototype.hasOwnProperty.call(row, 'schedule_stages'));
+    const quiz = JSON.parse(fs.readFileSync(path.join(root, row.file), 'utf8'));
+    assert.strictEqual(quiz.quiz_id, quizId);
+    assert.strictEqual(quiz.sentence, group.sentence);
+    assert.strictEqual(quiz.chunk.id, item.id);
+    assert.strictEqual(quiz.chunk.text, item.text);
+    const audio = quiz.slides[0];
+    assert.strictEqual(audio.type, 'audio_chunk');
+    assert.strictEqual(audio.audio, 'data/audio/clips/koshitsu-yoyaku-' + item.id + '.wav');
+    assert.strictEqual(audio.instruction, '請聽這個詞。');
+    assert.strictEqual(audio.rate, 1.0);
+    assert.ok(!Object.prototype.hasOwnProperty.call(audio, 'start_sec'));
+    assert.ok(!Object.prototype.hasOwnProperty.call(audio, 'end_sec'));
+    const image = quiz.slides[quiz.slides.length - 1];
+    assert.strictEqual(image.type, 'select_image');
+    assert.ok(image.instruction.indexOf('【' + item.sounding + '】') !== -1, quizId);
+    if (item.id === 16) {
+      assert.strictEqual(item.sounding.codePointAt(0), 0x651e);
+    }
+    const wav = fs.readFileSync(path.join(root, audio.audio));
+    assert.strictEqual(wav.length, item.bytes, audio.audio);
+    assert.strictEqual(
+      require('crypto').createHash('sha256').update(wav).digest('hex'),
+      item.sha256,
+      audio.audio
+    );
+    assert.deepStrictEqual(
+      Schedule.dueStages({
+        objective: row.objective,
+        kind: row.kind,
+        schedule: schedule,
+        chunkState: Schedule.defaultChunkState(),
+        completedStages: [],
+        now: now,
+        admitted: admitted.has(item.id),
+        skipped: false,
+      }),
+      []
+    );
+  });
 });
 
 test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function () {

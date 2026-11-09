@@ -1,0 +1,106 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-16-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 16,
+    "text": "飲み放題付き"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-16.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "攞米河DIe豬機",
+      "distractors": [
+        "潑爛地",
+        "Class哥瑪莉MASTER"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【攞】米河DIe豬機　選出這一截對應的物件描述。",
+      "correct": "拎住的動作",
+      "distractors": [
+        "生米",
+        "卡通河馬公仔",
+        "倒地姿勢與卡通X眼",
+        "豬的豬形狀",
+        "機械人結構"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "攞【米】河DIe豬機　選出這一截對應的物件描述。",
+      "correct": "生米",
+      "distractors": [
+        "卡通河馬公仔",
+        "倒地姿勢與卡通X眼",
+        "豬的豬形狀",
+        "機械人結構"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "攞米【河】DIe豬機　選出這一截對應的物件描述。",
+      "correct": "卡通河馬公仔",
+      "distractors": [
+        "倒地姿勢與卡通X眼",
+        "豬的豬形狀",
+        "機械人結構"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "攞米河【DIe】豬機　選出這一截對應的物件描述。",
+      "correct": "倒地姿勢與卡通X眼",
+      "distractors": [
+        "豬的豬形狀",
+        "機械人結構"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "攞米河DIe【豬】機　選出這一截對應的物件描述。",
+      "correct": "豬的豬形狀",
+      "distractors": [
+        "機械人結構"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "攞米河DIe豬【機】　請點選確認最後一截對應的物件描述。",
+      "correct": "機械人結構",
+      "distractors": [],
+      "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【攞米河DIe豬機】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

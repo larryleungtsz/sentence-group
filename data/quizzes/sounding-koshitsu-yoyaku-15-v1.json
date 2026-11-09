@@ -1,0 +1,82 @@
+{
+  "quiz_id": "sounding-koshitsu-yoyaku-15-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 15,
+    "text": "2時間半"
+  },
+  "slides": [
+    {
+      "type": "audio_chunk",
+      "instruction": "請聽這個詞。",
+      "audio": "data/audio/clips/koshitsu-yoyaku-15.wav",
+      "rate": 1.0
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的廣東話諧音串。",
+      "correct": "Kneel芝CANHand",
+      "distractors": [
+        "攞米河DIe豬機",
+        "潑爛地",
+        "Class哥瑪莉MASTER"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "【Kneel】芝CANHand　選出這一截對應的物件描述。",
+      "correct": "跪姿造型",
+      "distractors": [
+        "卡通芝士公仔",
+        "鋁罐",
+        "組成的雙手"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "Kneel【芝】CANHand　選出這一截對應的物件描述。",
+      "correct": "卡通芝士公仔",
+      "distractors": [
+        "鋁罐",
+        "組成的雙手"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "Kneel芝【CAN】Hand　選出這一截對應的物件描述。",
+      "correct": "鋁罐",
+      "distractors": [
+        "組成的雙手"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "select_text",
+      "instruction": "Kneel芝CAN【Hand】　請點選確認最後一截對應的物件描述。",
+      "correct": "組成的雙手",
+      "distractors": [],
+      "shuffle": true
+    },
+    {
+      "type": "select_image",
+      "instruction": "【Kneel芝CANHand】同以下邊張圖最啱？",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
