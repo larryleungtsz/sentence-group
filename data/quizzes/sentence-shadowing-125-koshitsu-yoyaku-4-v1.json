@@ -1,0 +1,20 @@
+{
+  "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-4-v1",
+  "objective": "sentence_shadowing_125",
+  "kind": "sentence",
+  "sentence_index": 4,
+  "sentence": "はい、お席ご案内可能ですよ。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
+      "rate": 1.25,
+      "start_sec": 11.08,
+      "end_sec": 13.89
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

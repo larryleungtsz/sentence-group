@@ -1,0 +1,20 @@
+{
+  "quiz_id": "sentence-shadowing-125-koshitsu-yoyaku-6-v1",
+  "objective": "sentence_shadowing_125",
+  "kind": "sentence",
+  "sentence_index": 6,
+  "sentence": "かしこまりました。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
+      "rate": 1.25,
+      "start_sec": 17.49,
+      "end_sec": 18.7
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

@@ -583,7 +583,7 @@ tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 obje
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
-    273
+    285
   );
 }));
 

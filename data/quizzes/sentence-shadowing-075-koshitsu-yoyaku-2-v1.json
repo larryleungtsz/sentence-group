@@ -1,0 +1,20 @@
+{
+  "quiz_id": "sentence-shadowing-075-koshitsu-yoyaku-2-v1",
+  "objective": "sentence_shadowing_075",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "個室は、もう空かないですねー。",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.75× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-koshitsu-yoyaku.mp3",
+      "rate": 0.75,
+      "start_sec": 4.07,
+      "end_sec": 7.07
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}
