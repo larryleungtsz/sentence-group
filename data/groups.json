@@ -212,13 +212,19 @@
           "notion_url": "https://app.notion.com/p/3da3b2a7295681bd8552dd2a0ffbf434"
         }
       ],
-      "sentences_note": "Soft GO Q20–Q24 live. Cut rule is chunk-boundary-wins: each sentence is a contiguous span of active chunks (skip chunks stay out of chunk_ids). A chunk.text is never bisected, and chunk ids do not repeat across sentences. Flat chunks[] stays the practice list.",
+      "sentences_note": "Soft GO Q20–Q26 live on s1 and s2. Cut rule is chunk-boundary-wins: each sentence is a contiguous span of active chunks (skip chunks stay out of chunk_ids). A chunk.text is never bisected, and chunk ids do not repeat across sentences. s1 is chunks 1–3（ご注文／お決まりに／なりましたら）; s2 is chunks 4–5（お呼び／ください）. Flat chunks[] stays the practice list. Group title and sentence stay the full utterance.",
       "sentences": [
         {
           "id": "s1",
-          "text": "ご注文お決まりになりましたらお呼びください",
-          "chunk_ids": [1, 2, 3, 4, 5],
-          "l1": "您的點餐決定好了請叫我。"
+          "text": "ご注文お決まりになりましたら",
+          "chunk_ids": [1, 2, 3],
+          "l1": "您的點餐決定好了的話。"
+        },
+        {
+          "id": "s2",
+          "text": "お呼びください",
+          "chunk_ids": [4, 5],
+          "l1": "請叫我。"
         }
       ],
       "sentence_quizzes_ready": true

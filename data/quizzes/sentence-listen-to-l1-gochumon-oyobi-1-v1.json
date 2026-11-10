@@ -1,0 +1,32 @@
+{
+  "quiz_id": "sentence-listen-to-l1-gochumon-oyobi-1-v1",
+  "objective": "sentence_listen_to_l1",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お呼びください",
+  "l1": "請叫我。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽句子。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "start_sec": 2.1,
+      "end_sec": 3.108571,
+      "rate": 1
+    },
+    {
+      "type": "select_text",
+      "instruction": "揀正確嘅意思。",
+      "correct": "請叫我。",
+      "distractors": [
+        "您的點餐決定好了的話。",
+        "請幫我叫店員。",
+        "請確認您的點餐。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

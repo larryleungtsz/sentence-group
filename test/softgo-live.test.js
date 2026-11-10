@@ -53,12 +53,13 @@ const SENTENCE_OBJECTIVES = [
   'sentence_shadowing_075',
   'sentence_discourse_mcq',
   'sentence_example_sentences_listening',
+  'sentence_usage_feature_judgment',
 ];
 const KANA = /[\u3040-\u309F\u30A0-\u30FF\uFF66-\uFF9D]/;
 
 const EXPECTED_SENTENCES = {
   'aragoshi-mikanshu': 7,
-  gochumon: 1,
+  gochumon: 2,
   'gochumon-kakunin': 2,
   'pepsi-zero-size': 2,
   'amai-chashu': 1,
@@ -573,7 +574,22 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
 test('Q22 and Q23 slides are audio_shadow and plan whole-sentence recording', function () {
   const QuizRunner = require(path.join(root, 'js/quiz-runner.js'));
   const quizDir = path.join(root, 'data/quizzes');
-  const files = fs.readdirSync(quizDir).filter((file) => /^sentence-shadowing-(125|075)-.+-v1\.json$/.test(file));
+  let files = fs.readdirSync(quizDir).filter((file) => /^sentence-shadowing-(125|075)-.+-v1\.json$/.test(file));
+  const retiredUncutShadow = new Set([
+    'sentence-shadowing-125-gochumon-okimari-1-v1.json',
+    'sentence-shadowing-075-gochumon-okimari-1-v1.json',
+  ]);
+  assert.strictEqual(files.length, 120);
+  retiredUncutShadow.forEach((file) => {
+    assert.ok(files.indexOf(file) !== -1, file);
+    const retiredQuiz = JSON.parse(fs.readFileSync(path.join(quizDir, file), 'utf8'));
+    assert.strictEqual(
+      manifest.quizzes.filter((row) => row.quiz_id === retiredQuiz.quiz_id).length,
+      0,
+      retiredQuiz.quiz_id
+    );
+  });
+  files = files.filter((file) => !retiredUncutShadow.has(file));
   assert.strictEqual(files.length, 118);
   const koshitsuWindows = {
     1: [0.05, 4.07],
@@ -650,7 +666,7 @@ test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function ()
 
 test('manifest sentence quizzes parse, match sentences[], and Q24 choices have no kana', function () {
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
-  assert.strictEqual(sentences.length, 286);
+  assert.strictEqual(sentences.length, 296);
   const counts = {};
   const byGroup = {};
   sentences.forEach((row) => {
@@ -672,9 +688,12 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     if (quiz.sentence_index != null) {
       assert.strictEqual('s' + quiz.sentence_index, row.sentence_id);
     } else {
-      assert.strictEqual(row.quiz_id, 'sentence-example-listen-gochumon-v1');
-      assert.strictEqual(row.group_slug, 'gochumon');
-      assert.strictEqual(row.sentence_id, 's1');
+      assert.ok(
+        row.objective === 'sentence_example_sentences_listening' ||
+          row.objective === 'sentence_usage_feature_judgment',
+        row.quiz_id
+      );
+      assert.strictEqual(row.group_slug, 'gochumon', row.quiz_id);
     }
     counts[row.objective] = (counts[row.objective] || 0) + 1;
     byGroup[row.group_slug] = byGroup[row.group_slug] || [];
@@ -692,12 +711,13 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     }
   });
   assert.deepStrictEqual(counts, {
-    sentence_listen_to_l1: 53,
-    sentence_l1_palace_multi_tap: 53,
-    sentence_shadowing_125: 59,
-    sentence_shadowing_075: 59,
-    sentence_discourse_mcq: 61,
-    sentence_example_sentences_listening: 1,
+    sentence_listen_to_l1: 54,
+    sentence_l1_palace_multi_tap: 54,
+    sentence_shadowing_125: 60,
+    sentence_shadowing_075: 60,
+    sentence_discourse_mcq: 64,
+    sentence_example_sentences_listening: 2,
+    sentence_usage_feature_judgment: 2,
   });
   groups.groups.forEach((group) => {
     const rows = byGroup[group.slug] || [];
@@ -778,11 +798,11 @@ test('fresh full-suite and Q24-only units are due at T01; empty stages still ste
     ['T01']
   );
   const q25 = manifest.quizzes.filter((q) => q.objective === 'sentence_example_sentences_listening');
-  assert.strictEqual(q25.length, 1);
-  assert.strictEqual(q25[0].quiz_id, 'sentence-example-listen-gochumon-v1');
-  assert.strictEqual(q25[0].group_slug, 'gochumon');
-  assert.strictEqual(q25[0].sentence_id, 's1');
+  assert.strictEqual(q25.length, 2);
+  assert.ok(q25.every((row) => row.group_slug === 'gochumon'));
+  assert.deepStrictEqual(q25.map((row) => row.sentence_id).sort(), ['s1', 's2']);
   assert.ok(!annaiQuizzes.some((q) => q.objective === 'sentence_example_sentences_listening'));
+  assert.ok(!annaiQuizzes.some((q) => q.objective === 'sentence_usage_feature_judgment'));
   const hour = 60 * 60 * 1000;
   const afterT01 = { stageIndex: 1, lastCompletedAt: new Date(now0).toISOString() };
   assert.deepStrictEqual(
@@ -843,14 +863,40 @@ test('fresh full-suite and Q24-only units are due at T01; empty stages still ste
   );
 });
 
-test('gochumon s1 Q25 is due at T01 only after its Keep chunks leave dense', function () {
+test('gochumon split sentences open Q25 and Q26 only after their own Keep chunks leave dense', function () {
   const now = Date.parse('2026-11-10T04:30:00+08:00');
   const group = groupBySlug('gochumon');
   const s1 = group.sentences.find((s) => s.id === 's1');
-  assert.deepStrictEqual(s1.chunk_ids, [1, 2, 3, 4, 5]);
-  assert.strictEqual(s1.text, 'ご注文お決まりになりましたらお呼びください');
-  const row = manifest.quizzes.find((q) => q.quiz_id === 'sentence-example-listen-gochumon-v1');
-  assert.ok(row);
+  const s2 = group.sentences.find((s) => s.id === 's2');
+  assert.deepStrictEqual(s1.chunk_ids, [1, 2, 3]);
+  assert.strictEqual(s1.text, 'ご注文お決まりになりましたら');
+  assert.strictEqual(s1.l1, '您的點餐決定好了的話。');
+  assert.deepStrictEqual(s2.chunk_ids, [4, 5]);
+  assert.strictEqual(s2.text, 'お呼びください');
+  assert.strictEqual(s2.l1, '請叫我。');
+  assert.strictEqual(group.sentence, 'ご注文お決まりになりましたらお呼びください');
+  assert.strictEqual(group.title, group.sentence);
+  assert.deepStrictEqual(group.chunks.map((c) => c.id), [1, 2, 3, 4, 5]);
+  const retired = [
+    'sentence-listen-to-l1-gochumon-okimari-1-v1',
+    'sentence-l1-palace-multi-tap-gochumon-okimari-1-v1',
+    'sentence-shadowing-125-gochumon-okimari-1-v1',
+    'sentence-shadowing-075-gochumon-okimari-1-v1',
+    'sentence-discourse-mcq-gochumon-okimari-1-prev-v1',
+    'sentence-example-listen-gochumon-v1',
+  ];
+  retired.forEach((id) => {
+    assert.ok(fs.existsSync(path.join(root, 'data/quizzes', id + '.json')), id);
+    assert.ok(!manifest.quizzes.some((q) => q.quiz_id === id), id);
+  });
+  const kakunin = groupBySlug('gochumon-kakunin');
+  assert.strictEqual(kakunin.sentences[0].text, 'ご注文確認させていただきます。');
+  assert.deepStrictEqual(kakunin.sentences[1].chunk_ids, [4, 5]);
+  assert.ok(manifest.quizzes.some((q) => q.quiz_id === 'sentence-listen-to-l1-gochumon-kakunin-1-v1'));
+  assert.ok(manifest.quizzes.some((q) => q.quiz_id === 'sequence-gochumon-okimari-narimashitara-oyobi-kudasai-v1'));
+  const row = manifest.quizzes.find((q) => q.quiz_id === 'sentence-example-listen-gochumon-okimari-v1');
+  const q26 = manifest.quizzes.find((q) => q.quiz_id === 'sentence-usage-feature-gochumon-s1-v2');
+  const s2q26 = manifest.quizzes.find((q) => q.quiz_id === 'sentence-usage-feature-oyobi-kudasai-v1');
   assert.strictEqual(row.kind, 'sentence');
   assert.strictEqual(row.objective, 'sentence_example_sentences_listening');
   assert.strictEqual(row.group_slug, 'gochumon');
@@ -859,44 +905,78 @@ test('gochumon s1 Q25 is due at T01 only after its Keep chunks leave dense', fun
   assert.strictEqual(row.shell, false);
   assert.strictEqual(row.level, null);
   assert.strictEqual(row.chunk_id, null);
-  const others = manifest.quizzes.filter(
-    (q) => q.objective === 'sentence_example_sentences_listening' && q.quiz_id !== row.quiz_id
-  );
-  assert.strictEqual(others.length, 0);
+  assert.strictEqual(q26.sentence_id, 's1');
+  assert.strictEqual(q26.objective, 'sentence_usage_feature_judgment');
+  assert.strictEqual(s2q26.sentence_id, 's2');
+  assert.strictEqual(s2q26.group_slug, 'gochumon');
   const unit = { stageIndex: 0, lastCompletedAt: null };
   const fresh = function () { return { stageIndex: 0, lastCompletedAt: null }; };
-  assert.deepStrictEqual(Schedule.dueStages({
-    objective: row.objective,
-    kind: 'sentence',
-    schedule: schedule,
-    sentenceUnitState: unit,
-    completedStages: [],
-    now: now,
-    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: fresh },
-  }), []);
+  function due(objective, sentence, getChunkState) {
+    return Schedule.dueStages({
+      objective: objective,
+      kind: 'sentence',
+      schedule: schedule,
+      sentenceUnitState: unit,
+      completedStages: [],
+      now: now,
+      underChunkGate: { sentence: sentence, chunks: group.chunks, getChunkState: getChunkState },
+    });
+  }
+  const s1Left = function (id) {
+    if (id === 1 || id === 2 || id === 3) return { stageIndex: 4, lastCompletedAt: null };
+    return fresh();
+  };
+  ['sentence_example_sentences_listening', 'sentence_usage_feature_judgment', 'sentence_listen_to_l1'].forEach(function (objective) {
+    assert.deepStrictEqual(due(objective, s1, fresh), [], objective);
+    assert.deepStrictEqual(due(objective, s1, s1Left), ['T01'], objective);
+    assert.deepStrictEqual(due(objective, s2, s1Left), [], objective + ' s2');
+  });
   const almost = function (id) {
-    if (id === 5) return { stageIndex: 0, lastCompletedAt: null };
+    if (id === 3) return { stageIndex: 0, lastCompletedAt: null };
     return { stageIndex: 4, lastCompletedAt: null };
   };
-  assert.deepStrictEqual(Schedule.dueStages({
-    objective: row.objective,
-    kind: 'sentence',
-    schedule: schedule,
-    sentenceUnitState: unit,
-    completedStages: [],
-    now: now,
-    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: almost },
-  }), []);
+  assert.deepStrictEqual(due(row.objective, s1, almost), []);
   const left = function () { return { stageIndex: 4, lastCompletedAt: null }; };
-  assert.deepStrictEqual(Schedule.dueStages({
-    objective: row.objective,
-    kind: 'sentence',
-    schedule: schedule,
-    sentenceUnitState: unit,
-    completedStages: [],
-    now: now,
-    underChunkGate: { sentence: s1, chunks: group.chunks, getChunkState: left },
-  }), ['T01']);
+  assert.deepStrictEqual(due(q26.objective, s2, left), ['T01']);
+  assert.deepStrictEqual(due('sentence_listen_to_l1', s2, left), ['T01']);
+});
+
+test('20261111 once-reset page clears only gochumon sentence-layer keys', function () {
+  const html = fs.readFileSync(path.join(root, 'tools/once-reset-gochumon-sentence-20261111.html'), 'utf8');
+  const previous = fs.readFileSync(path.join(root, 'tools/once-reset-gochumon-sentence-20261110.html'), 'utf8');
+  assert.ok(previous.indexOf('sentence-usage-feature-oyobi') === -1);
+  assert.ok(html.indexOf("var UNIT_PREFIX = 'gochumon:'") !== -1);
+  assert.ok(html.indexOf("var SENTENCE_KEY = 'gochumon'") !== -1);
+  assert.ok(html.indexOf("var OWNER_ID = 'larry'") !== -1);
+  assert.ok(html.indexOf("var DOC_KEY = 'website-manager-progress-v2'") !== -1);
+  assert.ok(html.indexOf('sync_snapshots') !== -1);
+  assert.ok(html.indexOf('group.html?slug=gochumon') !== -1);
+  const block = html.slice(html.indexOf('var QUIZ_PREFIXES'), html.indexOf('];', html.indexOf('var QUIZ_PREFIXES')));
+  const prefixes = block.match(/'([^']+)'/g).map(function (s) { return s.slice(1, -1); });
+  assert.deepStrictEqual(prefixes, [
+    'sentence-listen-to-l1-gochumon',
+    'sentence-l1-palace-multi-tap-gochumon',
+    'sentence-shadowing-125-gochumon',
+    'sentence-shadowing-075-gochumon',
+    'sentence-discourse-mcq-gochumon',
+    'sentence-example-listen-gochumon',
+    'sentence-usage-feature-gochumon',
+    'sentence-usage-feature-oyobi',
+  ]);
+  function isGochumonSentenceQuiz(id) {
+    if (typeof id !== 'string') return false;
+    if (id.indexOf('gochumon-kakunin') !== -1) return false;
+    return prefixes.some(function (prefix) { return id.indexOf(prefix) === 0; });
+  }
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-example-listen-gochumon-v1'), true);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-usage-feature-oyobi-kudasai-v1'), true);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-usage-feature-gochumon-s1-v2'), true);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-listen-to-l1-gochumon-kakunin-1-v1'), false);
+  assert.strictEqual(isGochumonSentenceQuiz('example-listen-gochumon-1-v2'), false);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-segment-shadow-gochumon-d1-v1'), false);
+  assert.strictEqual('gochumon-kakunin:s1'.indexOf('gochumon:'), -1);
+  assert.strictEqual('gochumon:s1'.indexOf('gochumon:'), 0);
+  assert.strictEqual('gochumon:s2'.indexOf('gochumon:'), 0);
 });
 
 test('practice page and homepage fast-forward empty sentence stages', function () {

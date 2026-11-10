@@ -1,0 +1,24 @@
+{
+  "quiz_id": "sentence-example-listen-gochumon-oyobi-v1",
+  "objective": "sentence_example_sentences_listening",
+  "kind": "sentence",
+  "level": 1,
+  "variant": 1,
+  "sentence": "お呼びください",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽例句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-example-gochumon-oyobi.mp3",
+      "rate": 1.3,
+      "self_check": true,
+      "l1": "1. 如果有咩事就叫我。\n2. 有需要就請叫附近職員。\n3. 如果想再加點，隨時叫我就得。",
+      "gloss": "1. 如果有咩事就叫我。\n2. 有需要就請叫附近職員。\n3. 如果想再加點，隨時叫我就得。"
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  },
+  "example_l1": "1. 如果有咩事就叫我。\n2. 有需要就請叫附近職員。\n3. 如果想再加點，隨時叫我就得。"
+}

@@ -1,0 +1,20 @@
+{
+  "quiz_id": "sentence-shadowing-125-gochumon-okimari-1-v2",
+  "objective": "sentence_shadowing_125",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたら",
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 1.25× 全句示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3",
+      "rate": 1.25,
+      "start_sec": 0.05,
+      "end_sec": 2.1
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

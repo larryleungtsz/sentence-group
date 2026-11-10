@@ -1,0 +1,71 @@
+{
+  "quiz_id": "sentence-l1-palace-multi-tap-gochumon-okimari-1-v2",
+  "objective": "sentence_l1_palace_multi_tap",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたら",
+  "l1": "您的點餐決定好了的話。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "您的點餐決定好了的話。"
+    },
+    {
+      "type": "multi_tap",
+      "instruction": "點齊同呢句相關嘅全部位置（無序；可改）。",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "hotspots": [
+        {
+          "id": 1,
+          "left": 2,
+          "top": 68,
+          "width": 20,
+          "height": 24,
+          "unit": "percent"
+        },
+        {
+          "id": 2,
+          "left": 24,
+          "top": 74,
+          "width": 20,
+          "height": 18,
+          "unit": "percent"
+        },
+        {
+          "id": 3,
+          "left": 44,
+          "top": 18,
+          "width": 12,
+          "height": 16,
+          "unit": "percent"
+        },
+        {
+          "id": 4,
+          "left": 70,
+          "top": 28,
+          "width": 14,
+          "height": 30,
+          "unit": "percent"
+        },
+        {
+          "id": 5,
+          "left": 58,
+          "top": 36,
+          "width": 7,
+          "height": 18,
+          "unit": "percent"
+        }
+      ],
+      "correct_ids": [
+        1,
+        2,
+        3
+      ],
+      "unordered": true,
+      "allow_change": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_boxes"
+  }
+}

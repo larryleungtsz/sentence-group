@@ -30,6 +30,7 @@
     sentence_discourse_mcq: '句子語境選擇',
     sentence_l1_palace_multi_tap: '母語對應宮殿',
     sentence_listen_to_l1: '聽句選翻譯',
+    sentence_usage_feature_judgment: '用法特徵判斷',
     sentence_segment_shadowing: '整段分段跟讀',
     sentence_shadowing_075: '句子跟讀 0.75×',
     sentence_shadowing_125: '句子跟讀 1.25×',
@@ -428,6 +429,17 @@
       targets.push({ id: id, label: label, hotspot: rect });
     }
     if (!targets.length) return { ok: false, reason: 'missing_hotspots', targets: [] };
+    // correct_ids is the set to collect. Extra hotspots on the same palace
+    // stay on the image and grade as misses. Absent correct_ids keeps every
+    // valid hotspot (fixtures and older slides).
+    if (slide && Array.isArray(slide.correct_ids)) {
+      var wanted = new Set(slide.correct_ids.map(function (id) { return String(id); }));
+      if (!wanted.size) return { ok: false, reason: 'missing_hotspots', targets: [] };
+      targets = targets.filter(function (t) { return wanted.has(t.id); });
+      if (targets.length !== wanted.size) {
+        return { ok: false, reason: 'missing_hotspots', targets: [] };
+      }
+    }
     return { ok: true, reason: '', targets: targets };
   }
 
@@ -778,10 +790,111 @@
       body.appendChild(skip);
     }
 
+    function clearFeedback() {
+      feedback.className = 'quiz-feedback';
+      feedback.textContent = '';
+      while (feedback.children && feedback.children.length) feedback.children[0].remove();
+    }
+
+    function choiceEntries(list) {
+      return (list || []).map(function (raw) {
+        return { raw: raw, text: cleanChoiceText(raw) };
+      });
+    }
+
+    function explanationFor(slide, entry) {
+      var map = slide && slide.explanations;
+      if (!map || typeof map !== 'object') return '';
+      if (map[entry.text] != null && map[entry.text] !== '') return String(map[entry.text]);
+      if (entry.raw != null && map[entry.raw] != null && map[entry.raw] !== '') return String(map[entry.raw]);
+      return '';
+    }
+
+    /**
+     * Q26 select_text + multi_select. require_all_correct means the selected
+     * set must equal correct[] (same grade as type multi_select). on_tick
+     * pass advances. on_cross retry stays on the slide. on_wrong
+     * show_only_missed_correct_and_selected_distractor lists explanations
+     * for missed correct choices and selected distractors only.
+     */
+    function showMissedFeatureFeedback(slide, selected, correctEntries, distractorEntries) {
+      clearFeedback();
+      feedback.className = 'quiz-feedback bad';
+      var lines = [];
+      correctEntries.forEach(function (entry) {
+        if (selected.has(entry.text)) return;
+        var why = explanationFor(slide, entry);
+        lines.push(why ? '未揀「' + entry.text + '」' + why : '未揀「' + entry.text + '」');
+      });
+      var correctTexts = new Set(correctEntries.map(function (entry) { return entry.text; }));
+      distractorEntries.forEach(function (entry) {
+        if (!selected.has(entry.text) || correctTexts.has(entry.text)) return;
+        var why = explanationFor(slide, entry);
+        lines.push(why ? '錯揀「' + entry.text + '」' + why : '錯揀「' + entry.text + '」');
+      });
+      if (!lines.length) lines.push('再試一次');
+      lines.forEach(function (line) {
+        feedback.appendChild(el('p', 'hint', line));
+      });
+      if (hooks.onFail) hooks.onFail(quiz);
+    }
+
+    function mountSelectMulti(slide) {
+      var correctEntries = choiceEntries(slide.correct);
+      if (!correctEntries.length) {
+        mountSoftSkip('呢題未有選項，跳過。');
+        return;
+      }
+      var instruction =
+        typeof slide.instruction === 'string' && slide.instruction.trim()
+          ? slide.instruction.trim()
+          : '請揀晒啱嘅';
+      body.appendChild(el('p', 'instruction', instruction));
+      var correctSet = new Set(correctEntries.map(function (entry) { return entry.text; }));
+      var distractorEntries = choiceEntries(slide.distractors);
+      var pool = correctEntries.concat(distractorEntries);
+      var ordered = slide.shuffle === false ? pool : shuffle(pool);
+      var selected = new Set();
+      var list = el('div', 'choices');
+      ordered.forEach(function (entry) {
+        var b = el('button', 'btn choice', entry.text);
+        b.type = 'button';
+        b.addEventListener('click', function () {
+          if (selected.has(entry.text)) {
+            selected.delete(entry.text);
+            b.classList.remove('selected');
+          } else {
+            selected.add(entry.text);
+            b.classList.add('selected');
+          }
+        });
+        list.appendChild(b);
+      });
+      body.appendChild(list);
+      var submit = el('button', 'btn btn-primary', '確認');
+      submit.type = 'button';
+      submit.addEventListener('click', function () {
+        var exact =
+          selected.size === correctSet.size &&
+          Array.from(selected).every(function (item) { return correctSet.has(item); });
+        if (exact) {
+          idx++;
+          renderSlide();
+          return;
+        }
+        var fb = quiz.feedback || {};
+        if (fb.on_wrong === 'show_only_missed_correct_and_selected_distractor') {
+          showMissedFeatureFeedback(slide, selected, correctEntries, distractorEntries);
+          return;
+        }
+        showFail('未全對。正確：' + Array.from(correctSet).join(' / '));
+      });
+      body.appendChild(submit);
+    }
+
     function renderSlide() {
       releaseRecorder();
-      feedback.textContent = '';
-      feedback.className = 'quiz-feedback';
+      clearFeedback();
       body.innerHTML = '';
       if (idx >= slides.length) {
         finishPass();
@@ -807,6 +920,10 @@
       }
 
       if (type === 'select_text') {
+        if (slide.multi_select === true) {
+          mountSelectMulti(slide);
+          return;
+        }
         // Q19 Cloze: chunk and blanked L1 cards on this same slide. Grade is still exact card match.
         const cloze = quiz.objective === 'mother_cloze_usage';
         const listenL1 = !cloze && (quiz.objective === 'sentence_listen_to_l1' || slide.listen_l1);
@@ -1016,12 +1133,29 @@
               feedback.className = 'quiz-feedback ok';
             }
           } else if (result.kind === 'repeat') {
-            feedback.textContent = '呢度已經點過';
-            feedback.className = 'quiz-feedback';
+            if (slide.allow_change) {
+              const at = collected.indexOf(result.id);
+              if (at !== -1) collected.splice(at, 1);
+              const box = selectedBoxes.get(result.id);
+              if (box) {
+                box.remove();
+                selectedBoxes.delete(result.id);
+              }
+              progress.textContent = '已點 ' + collected.length + '/' + targets.length;
+              feedback.textContent = '';
+              feedback.className = 'quiz-feedback';
+            } else {
+              feedback.textContent = '呢度已經點過';
+              feedback.className = 'quiz-feedback';
+            }
           } else {
             showFail('呢個位置唔係呢句（已點 ' + collected.length + '/' + targets.length + '）');
             const fb = quiz.feedback || {};
-            if (fb.on_wrong === 'show_correct_box' || fb.on_wrong === 'show_correct') {
+            if (
+              fb.on_wrong === 'show_correct_box' ||
+              fb.on_wrong === 'show_correct_boxes' ||
+              fb.on_wrong === 'show_correct'
+            ) {
               targets.forEach((target) => {
                 if (collected.indexOf(target.id) !== -1) return;
                 hints.push(paintBox(target.hotspot, 'hotspot-hint'));
@@ -1050,7 +1184,11 @@
             renderSlide();
           } else {
             showFail('位置不對');
-            if ((quiz.feedback || {}).on_wrong === 'show_correct_box' || (quiz.feedback || {}).on_wrong === 'show_correct') {
+            if (
+              (quiz.feedback || {}).on_wrong === 'show_correct_box' ||
+              (quiz.feedback || {}).on_wrong === 'show_correct_boxes' ||
+              (quiz.feedback || {}).on_wrong === 'show_correct'
+            ) {
               overlay = el('div', 'hotspot-hint');
               const hs = slide.hotspot;
               overlay.style.left = hs.left + '%';

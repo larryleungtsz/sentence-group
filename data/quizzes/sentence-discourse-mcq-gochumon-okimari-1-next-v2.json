@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-gochumon-okimari-1-next-v2",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたら",
+  "direction": "next",
+  "usage_note": "「お決まりになりましたら」＝決定後；「お呼びください」＝請叫我；店員暫離前用語",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「ご注文お決まりになりましたら」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好，知道啦。",
+      "distractors": [
+        "唔使諗，而家全要。",
+        "收舖啦，唔使再揀。",
+        "我冇聽過「叫我」呢句。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

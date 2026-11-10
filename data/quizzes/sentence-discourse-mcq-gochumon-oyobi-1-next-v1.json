@@ -1,0 +1,28 @@
+{
+  "quiz_id": "sentence-discourse-mcq-gochumon-oyobi-1-next-v1",
+  "objective": "sentence_discourse_mcq",
+  "kind": "sentence",
+  "sentence_index": 2,
+  "sentence": "お呼びください",
+  "direction": "next",
+  "usage_note": "店員敬語「請叫我」：提供協助，話對方可以隨時召喚自己；唔係客人叫人，亦唔係叫對方等或者即場追問落單。",
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "呢句：「お呼びください」\n請揀合適嘅下文。"
+    },
+    {
+      "type": "select_text",
+      "correct": "好，唔該晒。",
+      "distractors": [
+        "得，我而家嗌你出嚟食宵夜。",
+        "好，我即刻同你對單。",
+        "收到，我去後廚叫廚師。"
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
