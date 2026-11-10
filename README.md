@@ -22,7 +22,7 @@ js/quiz-runner.js   渲染與評分
 js/stats-metrics.js quiz 用時加總、近 7 日、學新詞（node 單測）
 js/app.js / group.js / stats.js
 supabase/schema.sql 雲端表 + RLS
-data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q25；Q25 只得 gochumon s1 一題）
+data/schedule.json  chunk_schedule + passage_schedule + sentence_schedule（Q20–Q26；Q25／Q26 而家只得 gochumon s1、s2）
 data/groups.json    Passage Group + chunks（陣列次序＝加入次序）+ optional sentences[]
 data/manifest.json  可玩 quiz 清單
 data/quizzes/*.json 每題一份 Quiz JSON
@@ -46,7 +46,7 @@ data/quizzes/*.json 每題一份 Quiz JSON
 1. 把乾淨的 Quiz JSON 放到 `data/quizzes/`（檔名建議 `{quiz_id}.json`）。
 2. 在 `data/manifest.json` 的 `quizzes` 陣列加一筆：
    - `quiz_id`, `file`, `objective`, `level`（chunk 題）, `kind`（`chunk` | `passage` | `sentence`）, `chunk_id`（chunk 題）, `sentence`
-   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；Q25 只得 gochumon s1；要有 `sentence_id`，而且該 group 有 `sentences[]`）
+   - `passage` = 成段時間線（Q8 / Q11 / Q18）。`sentence` = 中間句（Q20–Q24 live；Q25／Q26 而家只得 gochumon s1、s2；要有 `sentence_id`，而且該 group 有 `sentences[]`）
 3. 新 Chunk：按句子順序加到 `data/groups.json` → `chunks`（`id` / `text`）；設 `quizzes_ready: true`。
 4. **唔好改** Quiz JSON 入面嘅 hotspot / 座標 / 題意。
 
@@ -108,18 +108,19 @@ data/quizzes/*.json 每題一份 Quiz JSON
 
 Soft GO 題目喺 `data/quizzes/`。`manifest.json` 用 `kind: "sentence"`。`sentence` 欄係成段 `group.sentence`（練習頁同首頁靠呢個字串對 group）。`sentence_id` 係 `s1`、`s2`…。`group_slug` 係 site slug。`shell` 係 `false`。
 
-`sentence_schedule` 跟 Sheet「Sentence Objective Schedule」。每個 objective 都係 **T01, T02, T03, T1 … T30**（同 chunk 嘅 stage 名，唔係 `T+N`）。Q25 `sentence_example_sentences_listening` 已經喺 schedule。而家只得 gochumon s1 一題 trial（`sentence-example-listen-gochumon-v1`）；其他句子未有 Q25，所以唔會出題。
+`sentence_schedule` 跟 Sheet「Sentence Objective Schedule」。每個 objective 都係 **T01, T02, T03, T1 … T30**（同 chunk 嘅 stage 名，唔係 `T+N`）。Q25 `sentence_example_sentences_listening` 同 Q26 `sentence_usage_feature_judgment` 都已經喺 schedule。而家只得 gochumon s1、s2 有 Q25／Q26；其他句子未有呢兩題，所以唔會出。
 
 | Objective | 題 | 題數 | Stages |
 |-----------|----|------|--------|
-| `sentence_listen_to_l1` | Q20 | 53 | T01–T30（全部） |
-| `sentence_l1_palace_multi_tap` | Q21 | 53 | 同上 |
-| `sentence_shadowing_125` | Q22 | 59 | 同上 |
-| `sentence_shadowing_075` | Q23 | 59 | 同上 |
-| `sentence_discourse_mcq` | Q24 | 61 | 同上 |
-| `sentence_example_sentences_listening` | Q25 | 1（gochumon s1） | 同上 |
+| `sentence_listen_to_l1` | Q20 | 54 | T01–T30（全部） |
+| `sentence_l1_palace_multi_tap` | Q21 | 54 | 同上 |
+| `sentence_shadowing_125` | Q22 | 60 | 同上 |
+| `sentence_shadowing_075` | Q23 | 60 | 同上 |
+| `sentence_discourse_mcq` | Q24 | 64 | 同上 |
+| `sentence_example_sentences_listening` | Q25 | 2（gochumon s1、s2） | 同上 |
+| `sentence_usage_feature_judgment` | Q26 | 2（gochumon s1、s2） | 同上 |
 
-22 個 group、61 句。53 句有齊 Q20–Q24。Q24 多出嘅 8 句只得 Q24。
+22 個 group、62 句。54 句有齊 Q20–Q24。Q24 多出嘅 8 句只得 Q24。gochumon 拆成兩句之後，s1、s2 各自有 Q24 上文同下文，所以 Q24 題數多過句數。
 
 Q24-only（Q20–Q23 唔喺 bundle，冇加假題）：
 
@@ -130,7 +131,7 @@ Q24-only（Q20–Q23 唔喺 bundle，冇加假題）：
 
 `yokattara-onomi`：live passage 保留「方 、」（逗號前有空格）；Soft GO s1 係「方、」。slug `onomimono-otoshi` → `yokattara-onomi` 對過 `groups.json`，冇改。s4 嘅 Soft GO 句尾有「。」，passage 字串冇。
 
-句單位要等 **呢句底下每一個 Keep chunk 離開密集** 先出 Q20–Q25。離開密集同 chunk 層一樣：完成密集並 unlock 到 T1（T03 做完再等 24h，T1 ready），或者該 chunk 係 SKIP／reuse（`already_introduced`／`shared_with_prior_group`）。未離開就唔出呢句嘅 sentence quizzes，即使句 stage 已經到期。唔使成段 passage 嘅 chunk 全部做完。`chunk_ids` 空（冇 Keep chunk）唔受呢道閘。
+句單位要等 **呢句底下每一個 Keep chunk 離開密集** 先出 Q20–Q26。離開密集同 chunk 層一樣：完成密集並 unlock 到 T1（T03 做完再等 24h，T1 ready），或者該 chunk 係 SKIP／reuse（`already_introduced`／`shared_with_prior_group`）。未離開就唔出呢句嘅 sentence quizzes，即使句 stage 已經到期。唔使成段 passage 嘅 chunk 全部做完。`chunk_ids` 空（冇 Keep chunk）唔受呢道閘。Q26 用同一道閘，規則冇改。
 
 閘開咗之後先跟句 stage。新鮮句單位（`stageIndex` 0）即時出 T01（有 quiz 嘅 objective，包括 Q24-only）。做完該 stage 全部到期題之後，間隔同 chunk：1h → 3h → 24h → 1.5 日 → 2.25 日 → 之後每次 ×1.5。Passage 仍然係每日 1 日，`passage_schedule` 冇改。如果而家嘅 stage 冇 manifest quiz，打開首頁或者練習頁會將呢個 stage 記為完成並推前一級，然後先開始上面嘅 chunk 間隔；底下 chunk 仲未離開密集就唔會推。
 
@@ -157,9 +158,13 @@ python3 -m http.server 8080
 
 Q22／Q23 錄音係 v1：`MediaRecorder` Blob 只可以喺呢次練習重聽，**唔評分**，亦唔會寫入 progress、timing 或 sync snapshot。撳「完成跟讀」先去下一題（冇 ✓／✗ 自評）。
 
-Q21 熱區可以係平面 `{ id, label, left, top, width, height }`，或者同 `sequence_tap` 一樣包住 `hotspot`。圖唔寫喺 slide 時，會用 Passage Group 嘅 `palace_image_url`。
+Q21 熱區可以係平面 `{ id, label, left, top, width, height }`，或者同 `sequence_tap` 一樣包住 `hotspot`。有 `correct_ids` 時只係要點齊呢啲位置；同一張宮殿圖上面其他 hotspot 撳咗算錯。`allow_change: true` 可以取消一個已點嘅正確位置。`on_wrong: show_correct_boxes` 會標出未點嘅正確框。圖唔寫喺 slide 時，會用 Passage Group 嘅 `palace_image_url`。
 
 Q18 `sentence_segment_shadowing`、Q8、Q11、chunk 題唔經上面嘅 whitelist。`rate === 0.75` 而且有 clip 嘅**其他** objective 仍然係分段跟讀。
+
+### Q26 `sentence_usage_feature_judgment`
+
+`select_text` 而且 `multi_select: true`、`require_all_correct: true`：要揀齊 `correct[]`，唔可以揀中 `distractors[]`。撳「確認」。啱就過呢張 slide（`on_tick: pass`）。錯就留喺同一張再揀（`on_cross: retry`），只顯示未揀中嘅正確項同揀錯嘅干擾項解釋（`on_wrong: show_only_missed_correct_and_selected_distractor`），唔會一次過列出全部正確項。舊嘅 `type: multi_select`（Q6 sounding）仍然係錯咗就列出全部正確項。
 
 ### 出題順序
 

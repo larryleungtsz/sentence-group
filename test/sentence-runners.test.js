@@ -584,7 +584,7 @@ tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 obje
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
-    286
+    296
   );
 }));
 
@@ -607,6 +607,104 @@ tests.push(test('gochumon Q25 trial listens at 1.3× with the example gloss', fu
   assert.strictEqual(plan.segmentShadow, false);
   assert.strictEqual(plan.record.enabled, false);
   assert.strictEqual(plan.rate, 1.3);
+}));
+
+tests.push(test('Q21 correct_ids ignore extra palace hotspots and allow_change undoes a hit', function () {
+  const quiz = {
+    quiz_id: 'fixture-correct-ids',
+    objective: 'sentence_l1_palace_multi_tap',
+    kind: 'sentence',
+    l1: '您的點餐決定好了的話。',
+    feedback: { on_wrong: 'show_correct_boxes' },
+    slides: [{
+      type: 'multi_tap',
+      instruction: '點齊同呢句相關嘅全部位置（無序；可改）。',
+      image: 'https://example.test/palace.png',
+      allow_change: true,
+      hotspots: [
+        { id: 1, left: 0, top: 0, width: 20, height: 20 },
+        { id: 2, left: 50, top: 50, width: 20, height: 20 },
+        { id: 3, left: 80, top: 0, width: 15, height: 15 },
+      ],
+      correct_ids: [1, 3],
+    }],
+  };
+  let passed = 0;
+  const root = runQuiz(quiz, { onPass: function () { passed += 1; } });
+  const img = walk(root, []).find(function (node) { return node.tagName === 'IMG'; });
+  assert.ok(texts(root).indexOf('已點 0/2') !== -1);
+  img.click({ clientX: 55, clientY: 55 });
+  assert.ok(texts(root).some(function (t) { return t.indexOf('呢個位置唔係呢句') === 0; }));
+  assert.strictEqual(byClass(root, 'hotspot-hint').length, 2);
+  assert.strictEqual(passed, 0);
+  img.click({ clientX: 5, clientY: 5 });
+  assert.ok(texts(root).indexOf('已點 1/2') !== -1);
+  img.click({ clientX: 5, clientY: 5 });
+  assert.ok(texts(root).indexOf('已點 0/2') !== -1);
+  assert.ok(texts(root).indexOf('呢度已經點過') === -1);
+  img.click({ clientX: 5, clientY: 5 });
+  img.click({ clientX: 85, clientY: 5 });
+  assert.strictEqual(passed, 1);
+}));
+
+tests.push(test('Q26 multi-select shows only missed-correct and selected-distractor explanations', function () {
+  const quiz = readJson('data/quizzes/sentence-usage-feature-gochumon-s1-v2.json');
+  assert.strictEqual(quiz.objective, 'sentence_usage_feature_judgment');
+  assert.strictEqual(quiz.feedback.on_wrong, 'show_only_missed_correct_and_selected_distractor');
+  assert.strictEqual(quiz.feedback.on_tick, 'pass');
+  assert.strictEqual(quiz.feedback.on_cross, 'retry');
+  quiz.slides.forEach(function (slide) {
+    assert.strictEqual(slide.type, 'select_text');
+    assert.strictEqual(slide.multi_select, true);
+    assert.strictEqual(slide.require_all_correct, true);
+    assert.ok(Array.isArray(slide.correct) && slide.correct.length > 1);
+  });
+  let passed = 0;
+  const root = runQuiz(quiz, { onPass: function () { passed += 1; } });
+  assert.ok(buttonNamed(root, '確認'));
+  assert.ok(!buttonNamed(root, '✓ 通過'));
+  assert.ok(texts(root).some(function (t) { return t.indexOf('說話者必須係店員') !== -1; }));
+  buttonNamed(root, '餐廳店員 → 客人（睇餐牌）。').click();
+  buttonNamed(root, '確認').click();
+  const wrong = texts(root).join('\n');
+  assert.ok(wrong.indexOf('未揀「咖啡店店員 → 客人。」說話者係店員，符合。') !== -1);
+  assert.ok(wrong.indexOf('未揀「居酒屋店員 → 客人。」說話者係店員，符合。') !== -1);
+  assert.ok(wrong.indexOf('完全符合') === -1);
+  assert.ok(wrong.indexOf('角色相反') === -1);
+  assert.ok(wrong.indexOf('語域唔啱') === -1);
+  assert.ok(wrong.indexOf('未全對。正確：') === -1);
+  assert.strictEqual(passed, 0);
+  buttonNamed(root, '客人對店員講。').click();
+  buttonNamed(root, '確認').click();
+  const withDistractor = texts(root).join('\n');
+  assert.ok(withDistractor.indexOf('錯揀「客人對店員講。」角色相反，客人唔會用呢句。') !== -1);
+  assert.ok(withDistractor.indexOf('完全符合') === -1);
+  assert.ok(withDistractor.indexOf('語域唔啱') === -1);
+  assert.ok(withDistractor.indexOf('說話者係客人，唔會用服務業套話。') === -1);
+  buttonNamed(root, '客人對店員講。').click();
+  buttonNamed(root, '咖啡店店員 → 客人。').click();
+  buttonNamed(root, '居酒屋店員 → 客人。').click();
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 0);
+  assert.ok(texts(root).some(function (t) { return t.indexOf('聽話者必須係仲未落單嘅客人') !== -1; }));
+  assert.ok(texts(root).join('\n').indexOf('角色相反') === -1);
+}));
+
+tests.push(test('type multi_select still lists every correct answer on a miss', function () {
+  const quiz = {
+    quiz_id: 'fixture-multi-select-dump',
+    objective: 'pronunciation_sounding_select',
+    slides: [{
+      type: 'multi_select',
+      instruction: '請全選正確項',
+      correct: ['A', 'B'],
+      distractors: ['C'],
+    }],
+  };
+  const root = runQuiz(quiz);
+  buttonNamed(root, 'C').click();
+  buttonNamed(root, '確認').click();
+  assert.ok(texts(root).some(function (t) { return t.indexOf('未全對。正確：') === 0; }));
 }));
 
 (async function () {

@@ -226,7 +226,7 @@
   }
 
   /**
-   * Middle Sentence layer (Q20–Q25 stages). A stage is due only when a
+   * Middle Sentence layer (Q20–Q26 stages). A stage is due only when a
    * manifest quiz uses that objective; missing quizzes are not invented.
    * If `passage_schedule` is absent, `sentence_schedule` is still the legacy
    * Passage table — do not treat it as Sentence objectives.
@@ -447,6 +447,8 @@
    * Pass admitted=false to suppress chunk dues for a chunk not yet admitted.
    * Pass underChunkGate, or underChunksLeftDense=false, to hide sentence-layer
    * dues until every Keep chunk under that sentence has left dense.
+   * That is every objective on sentence_schedule, including Q26
+   * sentence_usage_feature_judgment. The left-dense rule itself is unchanged.
    * Passage dues ignore both.
    */
   function dueStages({

@@ -28842,8 +28842,8 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-listen-to-l1-gochumon-okimari-1-v1",
-      "file": "data/quizzes/sentence-listen-to-l1-gochumon-okimari-1-v1.json",
+      "quiz_id": "sentence-listen-to-l1-gochumon-okimari-1-v2",
+      "file": "data/quizzes/sentence-listen-to-l1-gochumon-okimari-1-v2.json",
       "objective": "sentence_listen_to_l1",
       "level": null,
       "kind": "sentence",
@@ -28854,8 +28854,8 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-l1-palace-multi-tap-gochumon-okimari-1-v1",
-      "file": "data/quizzes/sentence-l1-palace-multi-tap-gochumon-okimari-1-v1.json",
+      "quiz_id": "sentence-l1-palace-multi-tap-gochumon-okimari-1-v2",
+      "file": "data/quizzes/sentence-l1-palace-multi-tap-gochumon-okimari-1-v2.json",
       "objective": "sentence_l1_palace_multi_tap",
       "level": null,
       "kind": "sentence",
@@ -28866,8 +28866,8 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-shadowing-125-gochumon-okimari-1-v1",
-      "file": "data/quizzes/sentence-shadowing-125-gochumon-okimari-1-v1.json",
+      "quiz_id": "sentence-shadowing-125-gochumon-okimari-1-v2",
+      "file": "data/quizzes/sentence-shadowing-125-gochumon-okimari-1-v2.json",
       "objective": "sentence_shadowing_125",
       "level": null,
       "kind": "sentence",
@@ -28878,8 +28878,8 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-shadowing-075-gochumon-okimari-1-v1",
-      "file": "data/quizzes/sentence-shadowing-075-gochumon-okimari-1-v1.json",
+      "quiz_id": "sentence-shadowing-075-gochumon-okimari-1-v2",
+      "file": "data/quizzes/sentence-shadowing-075-gochumon-okimari-1-v2.json",
       "objective": "sentence_shadowing_075",
       "level": null,
       "kind": "sentence",
@@ -28890,8 +28890,8 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-discourse-mcq-gochumon-okimari-1-prev-v1",
-      "file": "data/quizzes/sentence-discourse-mcq-gochumon-okimari-1-prev-v1.json",
+      "quiz_id": "sentence-discourse-mcq-gochumon-okimari-1-prev-v2",
+      "file": "data/quizzes/sentence-discourse-mcq-gochumon-okimari-1-prev-v2.json",
       "objective": "sentence_discourse_mcq",
       "level": null,
       "kind": "sentence",
@@ -28902,13 +28902,133 @@
       "shell": false
     },
     {
-      "quiz_id": "sentence-example-listen-gochumon-v1",
-      "file": "data/quizzes/sentence-example-listen-gochumon-v1.json",
+      "quiz_id": "sentence-discourse-mcq-gochumon-okimari-1-next-v2",
+      "file": "data/quizzes/sentence-discourse-mcq-gochumon-okimari-1-next-v2.json",
+      "objective": "sentence_discourse_mcq",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-example-listen-gochumon-okimari-v1",
+      "file": "data/quizzes/sentence-example-listen-gochumon-okimari-v1.json",
       "objective": "sentence_example_sentences_listening",
       "level": null,
       "kind": "sentence",
       "chunk_id": null,
       "sentence_id": "s1",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-usage-feature-gochumon-s1-v2",
+      "file": "data/quizzes/sentence-usage-feature-gochumon-s1-v2.json",
+      "objective": "sentence_usage_feature_judgment",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-listen-to-l1-gochumon-oyobi-1-v1",
+      "file": "data/quizzes/sentence-listen-to-l1-gochumon-oyobi-1-v1.json",
+      "objective": "sentence_listen_to_l1",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-l1-palace-multi-tap-gochumon-oyobi-1-v1",
+      "file": "data/quizzes/sentence-l1-palace-multi-tap-gochumon-oyobi-1-v1.json",
+      "objective": "sentence_l1_palace_multi_tap",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-125-gochumon-oyobi-1-v1",
+      "file": "data/quizzes/sentence-shadowing-125-gochumon-oyobi-1-v1.json",
+      "objective": "sentence_shadowing_125",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-shadowing-075-gochumon-oyobi-1-v1",
+      "file": "data/quizzes/sentence-shadowing-075-gochumon-oyobi-1-v1.json",
+      "objective": "sentence_shadowing_075",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-discourse-mcq-gochumon-oyobi-1-prev-v1",
+      "file": "data/quizzes/sentence-discourse-mcq-gochumon-oyobi-1-prev-v1.json",
+      "objective": "sentence_discourse_mcq",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-discourse-mcq-gochumon-oyobi-1-next-v1",
+      "file": "data/quizzes/sentence-discourse-mcq-gochumon-oyobi-1-next-v1.json",
+      "objective": "sentence_discourse_mcq",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-example-listen-gochumon-oyobi-v1",
+      "file": "data/quizzes/sentence-example-listen-gochumon-oyobi-v1.json",
+      "objective": "sentence_example_sentences_listening",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-usage-feature-oyobi-kudasai-v1",
+      "file": "data/quizzes/sentence-usage-feature-oyobi-kudasai-v1.json",
+      "objective": "sentence_usage_feature_judgment",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s2",
       "group_slug": "gochumon",
       "sentence": "ご注文お決まりになりましたらお呼びください",
       "shell": false
