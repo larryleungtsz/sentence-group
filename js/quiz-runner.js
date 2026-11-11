@@ -30,6 +30,7 @@
     sentence_discourse_mcq: '句子語境選擇',
     sentence_l1_palace_multi_tap: '母語對應宮殿',
     sentence_listen_to_l1: '聽句選翻譯',
+    sentence_minimal_pair_grouping: '句子近義分組',
     sentence_usage_feature_judgment: '用法特徵判斷',
     sentence_segment_shadowing: '整段分段跟讀',
     sentence_shadowing_075: '句子跟讀 0.75×',
@@ -481,6 +482,56 @@
     return { kind: 'miss', done: false };
   }
 
+  /**
+   * Q27 group_audio. An item is correct only when its current box id equals
+   * item.correct_box. `accepts` is not consulted. Unplaced items are not correct.
+   * @returns {{ placedIds: string[], correctIds: string[], misplacedIds: string[], unplacedIds: string[], allPlaced: boolean, ok: boolean }}
+   */
+  function gradeGroupAudio(items, placement) {
+    var list = Array.isArray(items) ? items : [];
+    var map = placement && typeof placement === 'object' ? placement : {};
+    var placedIds = [];
+    var correctIds = [];
+    var misplacedIds = [];
+    var unplacedIds = [];
+    list.forEach(function (item) {
+      if (!item || item.id == null || item.id === '') return;
+      var id = String(item.id);
+      var box = Object.prototype.hasOwnProperty.call(map, id) ? map[id] : null;
+      if (box == null || box === '') {
+        unplacedIds.push(id);
+        return;
+      }
+      placedIds.push(id);
+      var want = item.correct_box == null ? '' : String(item.correct_box);
+      if (String(box) === want) correctIds.push(id);
+      else misplacedIds.push(id);
+    });
+    var counted = unplacedIds.length + placedIds.length;
+    return {
+      placedIds: placedIds,
+      correctIds: correctIds,
+      misplacedIds: misplacedIds,
+      unplacedIds: unplacedIds,
+      allPlaced: counted > 0 && unplacedIds.length === 0,
+      ok: counted > 0 && unplacedIds.length === 0 && misplacedIds.length === 0,
+    };
+  }
+
+  /** on_wrong return_only_misplaced: correct boxes stay, misplaced keys become null. */
+  function placementAfterReturnMisplaced(placement, grade) {
+    var next = {};
+    var src = placement && typeof placement === 'object' ? placement : {};
+    Object.keys(src).forEach(function (id) {
+      next[id] = src[id];
+    });
+    var misplaced = grade && grade.misplacedIds ? grade.misplacedIds : [];
+    misplaced.forEach(function (id) {
+      next[id] = null;
+    });
+    return next;
+  }
+
   /** Q20: keep the sentence audio on the same slide as the L1 choices. */
   function listenToL1Slides(quiz) {
     var raw = quiz.slides || [];
@@ -538,19 +589,24 @@
   function makeAudio(src, opts) {
     opts = opts || {};
     const segmentShadow = !!opts.segment_shadow;
+    // speaker: compact play control for group_audio tiles. Full-file URL at
+    // opts.rate, no native scrubber and no speed picker. Default callers unchanged.
+    const speaker = !!opts.speaker;
     const wrap = el('div', 'audio-wrap');
     const audio = document.createElement('audio');
     // Segment shadowing: custom 重播 only (no native scrub).
-    audio.controls = !segmentShadow;
+    audio.controls = !segmentShadow && !speaker;
     audio.preload = 'auto';
     audio.src = src;
+    if (speaker) audio.setAttribute('aria-hidden', 'true');
     const fixedRate = segmentShadow ? 0.75 : opts.rate;
     if (fixedRate != null) audio.playbackRate = fixedRate;
     wrap.appendChild(audio);
 
     const btns = el('div', 'audio-btns');
-    const play = el('button', 'btn', segmentShadow ? '重播' : '播放');
+    const play = el('button', speaker ? 'btn group-play' : 'btn', segmentShadow ? '重播' : '播放');
     play.type = 'button';
+    if (speaker) play.setAttribute('aria-label', '播放音檔');
     let clipListener = null;
     play.addEventListener('click', () => {
       if (clipListener) {
@@ -577,8 +633,8 @@
     });
     btns.appendChild(play);
 
-    // No speed picker for sentence_segment_shadowing (fixed 0.75×).
-    if (!segmentShadow && opts.rate_options) {
+    // No speed picker for sentence_segment_shadowing (fixed 0.75×) or speaker tiles.
+    if (!segmentShadow && !speaker && opts.rate_options) {
       opts.rate_options.forEach((r) => {
         const b = el('button', 'btn btn-ghost', r + '×');
         b.type = 'button';
@@ -890,6 +946,293 @@
         showFail('未全對。正確：' + Array.from(correctSet).join(' / '));
       });
       body.appendChild(submit);
+    }
+
+    /**
+     * Q27 group_audio. Stem is slide.instruction. Items are audio-only tiles
+     * (no Japanese, no L1). Tap 播放 to hear the full file at slide.rate
+     * (default 1, no passage window). Tap 揀, then tap a box — or tap 未分類
+     * to send it back. require_all_placed blocks 確認 until every item is in
+     * a box. on_wrong return_only_misplaced puts only misplaced items back in
+     * the pool. on_cross retry stays on this slide and does not complete.
+     */
+    function mountGroupAudio(slide) {
+      function hasClass(node, cls) {
+        if (!node) return false;
+        if (node.classList && node.classList.contains && node.classList.contains(cls)) return true;
+        return String(node.className || '').split(/\s+/).indexOf(cls) !== -1;
+      }
+
+      function eventHitsItem(evt) {
+        var node = evt && evt.target;
+        while (node) {
+          if (hasClass(node, 'group-item') || hasClass(node, 'group-play') || hasClass(node, 'group-select')) {
+            return true;
+          }
+          node = node.parentNode;
+        }
+        return false;
+      }
+
+      // HTMLCollection has no forEach in some browsers. Index loops work for
+      // both a live collection and the array used by the node tests.
+      function eachChild(node, fn) {
+        var list = node && node.children;
+        if (!list || typeof list.length !== 'number') return;
+        for (var i = 0; i < list.length; i++) fn(list[i]);
+      }
+
+      function firstTag(node, tag) {
+        var found = null;
+        (function walk(n) {
+          if (found || !n) return;
+          if (n.tagName === tag) {
+            found = n;
+            return;
+          }
+          eachChild(n, walk);
+        })(node);
+        return found;
+      }
+
+      var rate = slide.rate != null ? slide.rate : 1;
+      var requireAll = slide.require_all_placed === true;
+      var items = [];
+      (slide.items || []).forEach(function (raw) {
+        if (!raw || raw.id == null || raw.id === '') return;
+        items.push({
+          id: String(raw.id),
+          audio: raw.audio || '',
+          correct_box: raw.correct_box == null ? '' : String(raw.correct_box),
+        });
+      });
+      var boxes = [];
+      (slide.boxes || []).forEach(function (raw) {
+        if (!raw || raw.id == null || raw.id === '') return;
+        boxes.push({
+          id: String(raw.id),
+          label: raw.label != null ? String(raw.label) : String(raw.id),
+        });
+      });
+      var ordered = slide.shuffle === false ? items.slice() : shuffle(items);
+      var placement = {};
+      items.forEach(function (item) { placement[item.id] = null; });
+      var selectedId = null;
+      var tileById = {};
+      var selectById = {};
+      var audioById = {};
+      var boxItemsEl = {};
+      var boxWrap = {};
+      var emptyNote = {};
+
+      var instruction =
+        typeof slide.instruction === 'string' && slide.instruction.trim()
+          ? slide.instruction.trim()
+          : '聽每一句，放入對應嘅格';
+      body.appendChild(el('p', 'instruction', instruction));
+      body.appendChild(el('p', 'hint group-hint', '播放 → 揀 → 撳箱。要放返就撳「未分類」。'));
+      var progress = el('p', 'group-progress', '');
+      progress.setAttribute('aria-live', 'polite');
+      body.appendChild(progress);
+
+      var poolWrap = el('div', 'group-pool-wrap');
+      poolWrap.setAttribute('data-drop', 'pool');
+      poolWrap.setAttribute('tabindex', '0');
+      var poolLabel = el('p', 'group-pool-label', '未分類');
+      var poolEl = el('div', 'group-pool');
+      poolWrap.appendChild(poolLabel);
+      poolWrap.appendChild(poolEl);
+      body.appendChild(poolWrap);
+
+      var boxRow = el('div', 'group-boxes');
+      boxes.forEach(function (box) {
+        var wrap = el('div', 'group-box');
+        wrap.setAttribute('data-box-id', box.id);
+        wrap.setAttribute('tabindex', '0');
+        var label = el('p', 'group-box-label', box.label);
+        var itemsEl = el('div', 'group-box-items');
+        itemsEl.setAttribute('data-box-id', box.id);
+        var empty = el('p', 'group-empty', '撳此放入');
+        itemsEl.appendChild(empty);
+        wrap.appendChild(label);
+        wrap.appendChild(itemsEl);
+        wrap.addEventListener('click', function (evt) {
+          if (eventHitsItem(evt)) return;
+          placeSelected(box.id);
+        });
+        wrap.addEventListener('keydown', function (evt) {
+          if (!evt || evt.target !== wrap) return;
+          if (evt.key !== 'Enter' && evt.key !== ' ') return;
+          if (evt.preventDefault) evt.preventDefault();
+          placeSelected(box.id);
+        });
+        boxRow.appendChild(wrap);
+        boxWrap[box.id] = wrap;
+        boxItemsEl[box.id] = itemsEl;
+        emptyNote[box.id] = empty;
+      });
+      body.appendChild(boxRow);
+
+      ordered.forEach(function (item) {
+        var resolved = resolveAudio({ audio: item.audio, rate: rate });
+        var audioOpts = { rate: resolved.opts.rate, speaker: true };
+        var player = makeAudio(resolved.src, audioOpts);
+        var audio = firstTag(player, 'AUDIO');
+        var playBtn = firstTag(player, 'BUTTON');
+        audioById[item.id] = audio;
+        if (playBtn) {
+          playBtn.addEventListener('click', function (evt) {
+            if (evt && evt.stopPropagation) evt.stopPropagation();
+            Object.keys(audioById).forEach(function (otherId) {
+              if (otherId === item.id) return;
+              var other = audioById[otherId];
+              if (other && other.pause) other.pause();
+            });
+          });
+        }
+        var selectBtn = el('button', 'btn group-select', '揀');
+        selectBtn.type = 'button';
+        selectBtn.setAttribute('aria-label', '選取音檔');
+        selectBtn.setAttribute('aria-pressed', 'false');
+        selectBtn.addEventListener('click', function (evt) {
+          if (evt && evt.stopPropagation) evt.stopPropagation();
+          selectedId = selectedId === item.id ? null : item.id;
+          paintSelection();
+        });
+        var tile = el('div', 'group-item');
+        tile.setAttribute('data-item-id', item.id);
+        tile.appendChild(player);
+        tile.appendChild(selectBtn);
+        tileById[item.id] = tile;
+        selectById[item.id] = selectBtn;
+        poolEl.appendChild(tile);
+      });
+
+      poolWrap.addEventListener('click', function (evt) {
+        if (eventHitsItem(evt)) return;
+        placeSelected(null);
+      });
+      poolWrap.addEventListener('keydown', function (evt) {
+        if (!evt || evt.target !== poolWrap) return;
+        if (evt.key !== 'Enter' && evt.key !== ' ') return;
+        if (evt.preventDefault) evt.preventDefault();
+        placeSelected(null);
+      });
+
+      var note = el('p', 'group-note', '');
+      note.setAttribute('aria-live', 'polite');
+      var submit = el('button', 'btn btn-primary group-submit', '確認');
+      submit.type = 'button';
+      submit.addEventListener('click', onSubmit);
+      body.appendChild(note);
+      body.appendChild(submit);
+      paintSelection();
+      syncEmpty();
+      syncSubmit();
+
+      function paintSelection() {
+        items.forEach(function (item) {
+          var on = item.id === selectedId;
+          var tile = tileById[item.id];
+          tile.className = on ? 'group-item selected' : 'group-item';
+          if (tile.classList) {
+            if (on) tile.classList.add('selected');
+            else tile.classList.remove('selected');
+          }
+          var btn = selectById[item.id];
+          btn.textContent = on ? '已揀' : '揀';
+          btn.className = on ? 'btn group-select selected' : 'btn group-select';
+          btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+        });
+        boxes.forEach(function (box) {
+          boxWrap[box.id].className = selectedId ? 'group-box armed' : 'group-box';
+        });
+        poolWrap.className = selectedId ? 'group-pool-wrap armed' : 'group-pool-wrap';
+      }
+
+      function syncEmpty() {
+        boxes.forEach(function (box) {
+          var count = 0;
+          eachChild(boxItemsEl[box.id], function (child) {
+            if (hasClass(child, 'group-item')) count += 1;
+          });
+          emptyNote[box.id].hidden = count > 0;
+        });
+      }
+
+      function syncSubmit() {
+        var grade = gradeGroupAudio(items, placement);
+        var blocked = requireAll && !grade.allPlaced;
+        submit.disabled = blocked;
+        submit.setAttribute('aria-disabled', blocked ? 'true' : 'false');
+        progress.textContent = '已放 ' + grade.placedIds.length + '/' + items.length;
+      }
+
+      function clearGroupNote() {
+        note.textContent = '';
+        note.className = 'group-note';
+      }
+
+      function moveItem(id, boxId) {
+        if (!id || !tileById[id]) return;
+        if (boxId != null && !boxItemsEl[boxId]) return;
+        var same = boxId == null ? placement[id] == null : placement[id] === boxId;
+        if (!same) {
+          placement[id] = boxId;
+          var tile = tileById[id];
+          if (tile.remove) tile.remove();
+          (boxId == null ? poolEl : boxItemsEl[boxId]).appendChild(tile);
+        }
+        selectedId = null;
+        paintSelection();
+        syncEmpty();
+        syncSubmit();
+        clearGroupNote();
+        clearFeedback();
+      }
+
+      function placeSelected(boxId) {
+        if (!selectedId) return;
+        moveItem(selectedId, boxId);
+      }
+
+      function onSubmit() {
+        var grade = gradeGroupAudio(items, placement);
+        if (requireAll && !grade.allPlaced) {
+          note.textContent = '請放晒所有音檔先確認';
+          note.className = 'group-note';
+          clearFeedback();
+          return;
+        }
+        if (grade.ok) {
+          idx++;
+          renderSlide();
+          return;
+        }
+        var fb = quiz.feedback || {};
+        if (fb.on_wrong === 'return_only_misplaced') {
+          var next = placementAfterReturnMisplaced(placement, grade);
+          items.forEach(function (item) {
+            var now = next[item.id] == null || next[item.id] === '' ? null : next[item.id];
+            if ((placement[item.id] == null && now == null) || placement[item.id] === now) return;
+            placement[item.id] = now;
+            var tile = tileById[item.id];
+            if (!tile) return;
+            if (tile.remove) tile.remove();
+            (now == null ? poolEl : boxItemsEl[now]).appendChild(tile);
+          });
+        }
+        selectedId = null;
+        paintSelection();
+        syncEmpty();
+        syncSubmit();
+        note.textContent = '有 ' + grade.correctIds.length + ' 個啱，再試一次';
+        note.className = 'group-note bad';
+        // on_cross retry: stay on this slide. A wrong submit is not a pass.
+        // The note above 確認 is the only copy; showFail would repeat it below the button.
+        clearFeedback();
+        if (hooks.onFail) hooks.onFail(quiz);
+      }
     }
 
     function renderSlide() {
@@ -1445,6 +1788,11 @@
         return;
       }
 
+      if (type === 'group_audio') {
+        mountGroupAudio(slide);
+        return;
+      }
+
       // Unknown slide type: skip with note
       body.appendChild(el('p', 'instruction', '未支援嘅題型：' + type));
       const skip = el('button', 'btn', '跳過');
@@ -1470,6 +1818,8 @@
     multiTapTargets: multiTapTargets,
     multiTapImage: multiTapImage,
     gradeMultiTap: gradeMultiTap,
+    gradeGroupAudio: gradeGroupAudio,
+    placementAfterReturnMisplaced: placementAfterReturnMisplaced,
     hotspotRect: hotspotRect,
   };
 

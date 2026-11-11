@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>試用 Q27 group_audio（未上線）</title>
+  <link rel="stylesheet" href="../css/app.css?v=20261111q27c" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>試用：Q27 分組聽音</h1>
+    </header>
+    <p class="trial-banner" role="status">試用頁，唔係正式練習。呢題未加入練習隊列，亦唔會寫入 SRS、用時或者 gochumon 進度。</p>
+    <p class="muted">quiz_id：sentence-minimal-pair-gochumon-okimari-1-v1 · group_audio · 只供 QD／Larry 試介面</p>
+    <p id="load-error" class="quiz-feedback bad" hidden></p>
+    <div id="runner"></div>
+    <p id="done" class="quiz-feedback ok" hidden>試用完成。呢次冇寫入 SRS、用時或者任何練習進度。</p>
+  </div>
+  <script>
+  (function () {
+    var BLOCKED = {
+      'website-manager-progress-v2': 1,
+      'website-manager-timing-v1': 1
+    };
+    function blockedKey(key) {
+      var k = String(key);
+      if (BLOCKED[k]) return true;
+      if (k.indexOf('gochumon:') === 0) return true;
+      return false;
+    }
+    var raw;
+    try { raw = window.localStorage; } catch (e) { raw = null; }
+    if (!raw || typeof raw.setItem !== 'function') return;
+    var origSet = raw.setItem.bind(raw);
+    var origRemove = raw.removeItem.bind(raw);
+    function guardSet(key, value) {
+      if (blockedKey(key)) throw new Error('trial blocked live progress write: ' + key);
+      return origSet(key, value);
+    }
+    function guardRemove(key) {
+      if (blockedKey(key)) throw new Error('trial blocked live progress delete: ' + key);
+      return origRemove(key);
+    }
+    try {
+      raw.setItem = guardSet;
+      raw.removeItem = guardRemove;
+    } catch (e) {
+      try {
+        Object.defineProperty(window, 'localStorage', {
+          configurable: true,
+          get: function () {
+            return {
+              getItem: function (k) { return raw.getItem(k); },
+              setItem: guardSet,
+              removeItem: guardRemove,
+              clear: function () { throw new Error('trial blocked localStorage.clear'); },
+              key: function (i) { return raw.key(i); },
+              get length() { return raw.length; }
+            };
+          }
+        });
+      } catch (e2) { /* runner does not write progress; this page does not load the progress, timing, or group scripts */ }
+    }
+  })();
+  </script>
+  <script src="../js/quiz-runner.js?v=20261111q27c"></script>
+  <script>
+  (function () {
+    var runner = document.getElementById('runner');
+    var done = document.getElementById('done');
+    var err = document.getElementById('load-error');
+    fetch('q27-sentence-minimal-pair-gochumon-okimari-1-v1.json', { cache: 'no-store' })
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function (quiz) {
+        if (!quiz || quiz.quiz_id !== 'sentence-minimal-pair-gochumon-okimari-1-v1') {
+          throw new Error('unexpected quiz');
+        }
+        if (!window.QuizRunner || typeof QuizRunner.run !== 'function') {
+          throw new Error('runner missing');
+        }
+        try {
+          QuizRunner.run(quiz, runner, {
+            context: {
+              groupTitle: 'Q27 試用（未上線）',
+              groupSlug: 'q27-group-audio-trial',
+              kind: 'sentence',
+              sentenceId: null,
+              sentenceText: '',
+              sentenceL1: ''
+            },
+            onPass: function () {
+              done.hidden = false;
+            }
+          });
+        } catch (runErr) {
+          runner.innerHTML = '';
+          throw runErr;
+        }
+      })
+      .catch(function (e) {
+        err.hidden = false;
+        err.textContent = '載入唔到試用題目。' + (e && e.message ? '（' + e.message + '）' : '');
+      });
+  })();
+  </script>
+</body>
+</html>
