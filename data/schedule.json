@@ -429,7 +429,42 @@
       "T28",
       "T29",
       "T30"
+    ],
+    "sentence_minimal_pair_grouping": [
+      "T01",
+      "T02",
+      "T03",
+      "T1",
+      "T2",
+      "T3",
+      "T4",
+      "T5",
+      "T6",
+      "T7",
+      "T8",
+      "T9",
+      "T10",
+      "T11",
+      "T12",
+      "T13",
+      "T14",
+      "T15",
+      "T16",
+      "T17",
+      "T18",
+      "T19",
+      "T20",
+      "T21",
+      "T22",
+      "T23",
+      "T24",
+      "T25",
+      "T26",
+      "T27",
+      "T28",
+      "T29",
+      "T30"
     ]
   },
-  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk and sentence units: 1h→3h→24h→1.5d→2.25d→×1.5; passage units: always 1d so T+N ≈ day offset). passage_schedule is unchanged (Q8 whole_sentence_listening, Q18 sentence_segment_shadowing, Q11 sequence_training). Legacy key sentence_schedule is still read for Passage only when passage_schedule is absent. Once passage_schedule exists, sentence_schedule is the middle Sentence layer and follows the Sheet Sentence Objective Schedule plus the under-chunk gate. Q20 sentence_listen_to_l1, Q21 sentence_l1_palace_multi_tap, Q22 sentence_shadowing_125, Q23 sentence_shadowing_075, Q24 sentence_discourse_mcq, Q25 sentence_example_sentences_listening, and Q26 sentence_usage_feature_judgment each run on every stage T01, T02, T03, T1…T30. Sentence spacing matches chunk. A sentence unit shows no Q20–Q26 quizzes until every Keep chunk in that sentence's chunk_ids has left dense (unlocked through T1, or SKIP, or reuse); the sentence stage can be due and still stay hidden. Passage admission is not under this gate. A stage does nothing for an objective until a manifest quiz uses it. Chunk admission unchanged: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3. sentence_segment_shadowing site expand: reverse one-clip/day from partition masters (schedule_stages pin each daily quiz to T+N)."
+  "notes": "Completion-based SRS: waits after finishing all due quizzes at a stage (chunk and sentence units: 1h→3h→24h→1.5d→2.25d→×1.5; passage units: always 1d so T+N ≈ day offset). passage_schedule is unchanged (Q8 whole_sentence_listening, Q18 sentence_segment_shadowing, Q11 sequence_training). Legacy key sentence_schedule is still read for Passage only when passage_schedule is absent. Once passage_schedule exists, sentence_schedule is the middle Sentence layer and follows the Sheet Sentence Objective Schedule plus the under-chunk gate. Q20 sentence_listen_to_l1, Q21 sentence_l1_palace_multi_tap, Q22 sentence_shadowing_125, Q23 sentence_shadowing_075, Q24 sentence_discourse_mcq, Q25 sentence_example_sentences_listening, Q26 sentence_usage_feature_judgment, and Q27 sentence_minimal_pair_grouping each run on every stage T01, T02, T03, T1…T30. Sentence spacing matches chunk. A sentence unit shows no Q20–Q27 quizzes until every Keep chunk in that sentence's chunk_ids has left dense (unlocked through T1, or SKIP, or reuse); the sentence stage can be due and still stay hidden. Passage admission is not under this gate. A stage does nothing for an objective until a manifest quiz uses it. Chunk admission unchanged: at most one chunk in dense T01–T03; next chunk starts T01 only when previous unlocks T1. Stage labels here only decide which objectives appear; added_at is unused. sentence_segment_shadowing: every T+1..T+30; whole_sentence_listening + sequence_training: T+3..T+30 step 3. sentence_segment_shadowing site expand: reverse one-clip/day from partition masters (schedule_stages pin each daily quiz to T+N)."
 }

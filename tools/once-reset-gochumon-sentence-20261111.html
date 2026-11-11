@@ -27,10 +27,11 @@
   var OWNER_ID = 'larry';
   var UNIT_PREFIX = 'gochumon:';
   var SENTENCE_KEY = 'gochumon';
-  // Soft GO sentence layer (Q20–Q26) for gochumon only, including the
+  // Soft GO sentence layer (Q20–Q27) for gochumon only, including the
   // retired uncut ids and the 2026-11-11 s1/s2 ids.
   // gochumon-kakunin shares the gochumon stem, so it is excluded below.
   // S2 Q26 is sentence-usage-feature-oyobi-kudasai-v1 (no "gochumon" in the id).
+  // Q27 is sentence-minimal-pair-gochumon-okimari-1-v1.
   // Passage Q18 (sentence-segment-shadow-*) and chunk example-listen / sounding
   // do not use these prefixes.
   var QUIZ_PREFIXES = [
@@ -41,7 +42,8 @@
     'sentence-discourse-mcq-gochumon',
     'sentence-example-listen-gochumon',
     'sentence-usage-feature-gochumon',
-    'sentence-usage-feature-oyobi'
+    'sentence-usage-feature-oyobi',
+    'sentence-minimal-pair-gochumon'
   ];
   var statusEl = document.getElementById('status');
   var detailEl = document.getElementById('detail');
@@ -197,13 +199,13 @@
       .then(function (cloudMsg) {
         statusEl.textContent = '已清 gochumon 嘅句子層進度（只清句子層）。chunk 同 passage 冇郁。';
         detailEl.textContent = detailEl.textContent + ' ' + cloudMsg +
-          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q26 可以即刻再練。';
+          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q27 可以即刻再練。';
         linksEl.hidden = false;
       })
       .catch(function (e) {
         statusEl.textContent = '本機已重置，但雲端更新失敗：' + (e && e.message ? e.message : String(e));
         detailEl.textContent = detailEl.textContent +
-          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q26 可以即刻再練。';
+          ' 請關閉其他練習分頁，再開下面連結（可以硬重新整理）。Q20–Q27 可以即刻再練。';
         linksEl.hidden = false;
       });
   } catch (e) {

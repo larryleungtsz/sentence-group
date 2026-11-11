@@ -72,6 +72,7 @@ const SENTENCE_SCHEDULE = {
   sentence_discourse_mcq: SENTENCE_STAGES,
   sentence_example_sentences_listening: SENTENCE_STAGES,
   sentence_usage_feature_judgment: SENTENCE_STAGES,
+  sentence_minimal_pair_grouping: SENTENCE_STAGES,
 };
 const SENTENCE_OBJECTIVES_WITH_QUIZZES = [
   'sentence_listen_to_l1',
@@ -81,7 +82,7 @@ const SENTENCE_OBJECTIVES_WITH_QUIZZES = [
   'sentence_discourse_mcq',
 ];
 
-test('shipped schedule keeps passage objectives and Q20–Q26 on the sentence layer', function () {
+test('shipped schedule keeps passage objectives and Q20–Q27 on the sentence layer', function () {
   assert.deepStrictEqual(Object.keys(schedule.passage_schedule).sort(), PASSAGE_OBJECTIVES.slice().sort());
   assert.deepStrictEqual(schedule.sentence_schedule, SENTENCE_SCHEDULE);
   assert.deepStrictEqual(schedule.chunk_schedule.loci_description_tap, ['T01', 'T02', 'T03', 'T1', 'T3', 'T6', 'T9']);
@@ -269,7 +270,7 @@ test('manifest passage kinds keep objectives; sentence rows are live Soft GO', f
     assert.ok(PASSAGE_OBJECTIVES.indexOf(q.objective) !== -1, q.quiz_id);
     assert.ok(q.chunk_id == null, q.quiz_id);
   });
-  assert.strictEqual(sentences.length, 296);
+  assert.strictEqual(sentences.length, 297);
   assert.ok(!sentences.some((q) => q.quiz_id === 'sentence-shell-smoke-yoyaku-shitenai-s1-v1'));
   assert.ok(!sentences.some((q) => q.objective === 'sentence_shell_smoke'));
   const q25 = sentences.filter((q) => q.objective === 'sentence_example_sentences_listening');
@@ -286,9 +287,20 @@ test('manifest passage kinds keep objectives; sentence rows are live Soft GO', f
       'sentence-usage-feature-oyobi-kudasai-v1@s2',
     ]
   );
+  const q27 = sentences.filter((q) => q.objective === 'sentence_minimal_pair_grouping');
+  assert.deepStrictEqual(
+    q27.map((q) => q.quiz_id + '@' + q.group_slug + '@' + q.sentence_id),
+    ['sentence-minimal-pair-gochumon-okimari-1-v1@gochumon@s1']
+  );
+  assert.strictEqual(q27[0].file, 'data/quizzes/sentence-minimal-pair-gochumon-okimari-1-v1.json');
+  assert.strictEqual(q27[0].sentence, 'ご注文お決まりになりましたらお呼びください');
+  assert.strictEqual(q27[0].level, null);
+  assert.strictEqual(q27[0].chunk_id, null);
+  assert.strictEqual(q27[0].shell, false);
   const sentenceObjectives = SENTENCE_OBJECTIVES_WITH_QUIZZES.concat([
     'sentence_example_sentences_listening',
     'sentence_usage_feature_judgment',
+    'sentence_minimal_pair_grouping',
   ]);
   sentences.forEach((q) => {
     assert.ok(sentenceObjectives.indexOf(q.objective) !== -1, q.quiz_id);
@@ -586,7 +598,7 @@ test('sentence layer admits after every Keep chunk has left dense', function () 
   };
   assert.strictEqual(Schedule.sentenceKeepChunksLeftDense(s1, group.chunks, pastT1, now), true);
   const unit = { stageIndex: 0, lastCompletedAt: null };
-  ['sentence_listen_to_l1', 'sentence_l1_palace_multi_tap', 'sentence_shadowing_125', 'sentence_shadowing_075', 'sentence_discourse_mcq', 'sentence_example_sentences_listening', 'sentence_usage_feature_judgment'].forEach(function (objective) {
+  ['sentence_listen_to_l1', 'sentence_l1_palace_multi_tap', 'sentence_shadowing_125', 'sentence_shadowing_075', 'sentence_discourse_mcq', 'sentence_example_sentences_listening', 'sentence_usage_feature_judgment', 'sentence_minimal_pair_grouping'].forEach(function (objective) {
     assert.deepStrictEqual(Schedule.dueStages({
       objective: objective,
       kind: 'sentence',

@@ -1,5 +1,5 @@
 /**
- * Q20–Q26 quiz runners, plus the Q27 group_audio trial.
+ * Q20–Q26 quiz runners, plus the live Q27 group_audio quiz.
  *   node test/sentence-runners.test.js
  */
 'use strict';
@@ -584,7 +584,7 @@ tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 obje
   });
   assert.strictEqual(
     manifest.quizzes.filter(function (quiz) { return quiz.kind === 'sentence'; }).length,
-    296
+    297
   );
 }));
 
@@ -979,27 +979,54 @@ tests.push(test('Q27 group_audio without require_all_placed still retries a part
   assert.strictEqual(passed, 1);
 }));
 
-tests.push(test('unknown slide types still skip, and Q27 stays off the live queue', function () {
+tests.push(test('unknown slide types still skip, and Q27 is on the live queue', function () {
   const view = runQuiz({ objective: 'nope', slides: [{ type: 'not_a_slide' }] });
   assert.ok(texts(view).indexOf('未支援嘅題型：not_a_slide') !== -1);
   assert.ok(buttonNamed(view, '跳過'));
-  assert.ok(!manifest.quizzes.some(function (quiz) {
-    return quiz.quiz_id === 'sentence-minimal-pair-gochumon-okimari-1-v1';
-  }));
-  assert.ok(!fs.existsSync(path.join(root, 'data/quizzes/sentence-minimal-pair-gochumon-okimari-1-v1.json')));
+  const quizId = 'sentence-minimal-pair-gochumon-okimari-1-v1';
+  const livePath = path.join(root, 'data/quizzes', quizId + '.json');
+  const trialPath = path.join(root, 'tools/q27-' + quizId + '.json');
+  assert.ok(fs.readFileSync(livePath).equals(fs.readFileSync(trialPath)));
+  const row = manifest.quizzes.find(function (quiz) { return quiz.quiz_id === quizId; });
+  assert.deepStrictEqual(row, {
+    quiz_id: quizId,
+    file: 'data/quizzes/' + quizId + '.json',
+    objective: 'sentence_minimal_pair_grouping',
+    level: null,
+    kind: 'sentence',
+    chunk_id: null,
+    sentence_id: 's1',
+    group_slug: 'gochumon',
+    sentence: 'ご注文お決まりになりましたらお呼びください',
+    shell: false,
+  });
   assert.strictEqual(
-    fs.readFileSync(path.join(root, 'data/manifest.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
+    manifest.quizzes.filter(function (quiz) {
+      return quiz.objective === 'sentence_minimal_pair_grouping';
+    }).length,
+    1
+  );
+  assert.deepStrictEqual(
+    schedule.sentence_schedule.sentence_minimal_pair_grouping,
+    schedule.sentence_schedule.sentence_usage_feature_judgment
+  );
+  const freshDue = Schedule.dueStages({
+    objective: 'sentence_minimal_pair_grouping',
+    kind: 'sentence',
+    schedule: schedule,
+    sentenceUnitState: { stageIndex: 0, lastCompletedAt: null },
+    completedStages: [],
+    now: Date.parse('2026-11-11T00:00:00.000Z'),
+  });
+  assert.deepStrictEqual(freshDue, ['T01']);
+  assert.strictEqual(
+    fs.readFileSync(path.join(root, 'data/schedule.json'), 'utf8').indexOf(quizId),
     -1
   );
   assert.strictEqual(
-    fs.readFileSync(path.join(root, 'data/schedule.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
+    fs.readFileSync(path.join(root, 'data/groups.json'), 'utf8').indexOf(quizId),
     -1
   );
-  assert.strictEqual(
-    fs.readFileSync(path.join(root, 'data/groups.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
-    -1
-  );
-  assert.ok(!Object.prototype.hasOwnProperty.call(schedule.sentence_schedule, 'sentence_minimal_pair_grouping'));
   const page = fs.readFileSync(path.join(root, 'tools/try-group-audio-q27-20261111.html'), 'utf8');
   assert.ok(page.indexOf('../js/quiz-runner.js') !== -1);
   assert.ok(page.indexOf('../css/app.css') !== -1);

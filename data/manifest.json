@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-09T22:53:34+08:00",
+  "generated_at": "2026-11-11T23:38:07+08:00",
   "quizzes": [
     {
       "quiz_id": "example-listen-2jikan-food75-1-v1",
@@ -28929,6 +28929,18 @@
       "quiz_id": "sentence-usage-feature-gochumon-s1-v2",
       "file": "data/quizzes/sentence-usage-feature-gochumon-s1-v2.json",
       "objective": "sentence_usage_feature_judgment",
+      "level": null,
+      "kind": "sentence",
+      "chunk_id": null,
+      "sentence_id": "s1",
+      "group_slug": "gochumon",
+      "sentence": "ご注文お決まりになりましたらお呼びください",
+      "shell": false
+    },
+    {
+      "quiz_id": "sentence-minimal-pair-gochumon-okimari-1-v1",
+      "file": "data/quizzes/sentence-minimal-pair-gochumon-okimari-1-v1.json",
+      "objective": "sentence_minimal_pair_grouping",
       "level": null,
       "kind": "sentence",
       "chunk_id": null,
