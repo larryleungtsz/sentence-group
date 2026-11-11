@@ -1,0 +1,65 @@
+{
+  "quiz_id": "sentence-minimal-pair-gochumon-okimari-1-v1",
+  "objective": "sentence_minimal_pair_grouping",
+  "kind": "sentence",
+  "sentence_index": 1,
+  "sentence": "ご注文お決まりになりましたら",
+  "l1": "您的點餐決定好了的話。",
+  "slides": [
+    {
+      "type": "group_audio",
+      "instruction": "以下邊啲句子嘅意思係「您的點餐決定好了的話。」？",
+      "rate": 1,
+      "require_all_placed": true,
+      "boxes": [
+        {
+          "id": "correct",
+          "label": "您的點餐決定好了的話。",
+          "accepts": ["t1", "t2"]
+        },
+        {
+          "id": "wrong",
+          "label": "錯",
+          "accepts": ["p1", "p2", "p3", "p4"]
+        }
+      ],
+      "items": [
+        {
+          "id": "t1",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-t1.mp3",
+          "correct_box": "correct"
+        },
+        {
+          "id": "t2",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-t2.mp3",
+          "correct_box": "correct"
+        },
+        {
+          "id": "p1",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-p1.mp3",
+          "correct_box": "wrong"
+        },
+        {
+          "id": "p2",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-p2.mp3",
+          "correct_box": "wrong"
+        },
+        {
+          "id": "p3",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-p3.mp3",
+          "correct_box": "wrong"
+        },
+        {
+          "id": "p4",
+          "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mp-gochumon-okimari-p4.mp3",
+          "correct_box": "wrong"
+        }
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "return_only_misplaced",
+    "on_cross": "retry"
+  }
+}

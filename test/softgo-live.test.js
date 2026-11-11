@@ -54,6 +54,7 @@ const SENTENCE_OBJECTIVES = [
   'sentence_discourse_mcq',
   'sentence_example_sentences_listening',
   'sentence_usage_feature_judgment',
+  'sentence_minimal_pair_grouping',
 ];
 const KANA = /[\u3040-\u309F\u30A0-\u30FF\uFF66-\uFF9D]/;
 
@@ -666,7 +667,7 @@ test('yokattara-onomi keeps the passage space; Soft GO s1 does not', function ()
 
 test('manifest sentence quizzes parse, match sentences[], and Q24 choices have no kana', function () {
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
-  assert.strictEqual(sentences.length, 296);
+  assert.strictEqual(sentences.length, 297);
   const counts = {};
   const byGroup = {};
   sentences.forEach((row) => {
@@ -718,6 +719,7 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     sentence_discourse_mcq: 64,
     sentence_example_sentences_listening: 2,
     sentence_usage_feature_judgment: 2,
+    sentence_minimal_pair_grouping: 1,
   });
   groups.groups.forEach((group) => {
     const rows = byGroup[group.slug] || [];
@@ -926,7 +928,21 @@ test('gochumon split sentences open Q25 and Q26 only after their own Keep chunks
     if (id === 1 || id === 2 || id === 3) return { stageIndex: 4, lastCompletedAt: null };
     return fresh();
   };
-  ['sentence_example_sentences_listening', 'sentence_usage_feature_judgment', 'sentence_listen_to_l1'].forEach(function (objective) {
+  const q27 = manifest.quizzes.find((q) => q.quiz_id === 'sentence-minimal-pair-gochumon-okimari-1-v1');
+  assert.strictEqual(q27.objective, 'sentence_minimal_pair_grouping');
+  assert.strictEqual(q27.kind, 'sentence');
+  assert.strictEqual(q27.group_slug, 'gochumon');
+  assert.strictEqual(q27.sentence_id, 's1');
+  assert.strictEqual(q27.sentence, group.sentence);
+  assert.strictEqual(q27.shell, false);
+  assert.strictEqual(q27.level, null);
+  assert.strictEqual(q27.chunk_id, null);
+  const q27Body = JSON.parse(fs.readFileSync(path.join(root, q27.file), 'utf8'));
+  assert.strictEqual(q27Body.quiz_id, q27.quiz_id);
+  assert.strictEqual(q27Body.sentence, s1.text);
+  assert.strictEqual(q27Body.sentence_index, 1);
+  assert.ok(!manifest.quizzes.some((q) => q.objective === 'sentence_minimal_pair_grouping' && (q.sentence_id !== 's1' || q.group_slug !== 'gochumon')));
+  ['sentence_example_sentences_listening', 'sentence_usage_feature_judgment', 'sentence_minimal_pair_grouping', 'sentence_listen_to_l1'].forEach(function (objective) {
     assert.deepStrictEqual(due(objective, s1, fresh), [], objective);
     assert.deepStrictEqual(due(objective, s1, s1Left), ['T01'], objective);
     assert.deepStrictEqual(due(objective, s2, s1Left), [], objective + ' s2');
@@ -945,6 +961,7 @@ test('20261111 once-reset page clears only gochumon sentence-layer keys', functi
   const html = fs.readFileSync(path.join(root, 'tools/once-reset-gochumon-sentence-20261111.html'), 'utf8');
   const previous = fs.readFileSync(path.join(root, 'tools/once-reset-gochumon-sentence-20261110.html'), 'utf8');
   assert.ok(previous.indexOf('sentence-usage-feature-oyobi') === -1);
+  assert.ok(previous.indexOf('sentence-minimal-pair-gochumon') === -1);
   assert.ok(html.indexOf("var UNIT_PREFIX = 'gochumon:'") !== -1);
   assert.ok(html.indexOf("var SENTENCE_KEY = 'gochumon'") !== -1);
   assert.ok(html.indexOf("var OWNER_ID = 'larry'") !== -1);
@@ -962,6 +979,7 @@ test('20261111 once-reset page clears only gochumon sentence-layer keys', functi
     'sentence-example-listen-gochumon',
     'sentence-usage-feature-gochumon',
     'sentence-usage-feature-oyobi',
+    'sentence-minimal-pair-gochumon',
   ]);
   function isGochumonSentenceQuiz(id) {
     if (typeof id !== 'string') return false;
@@ -971,6 +989,8 @@ test('20261111 once-reset page clears only gochumon sentence-layer keys', functi
   assert.strictEqual(isGochumonSentenceQuiz('sentence-example-listen-gochumon-v1'), true);
   assert.strictEqual(isGochumonSentenceQuiz('sentence-usage-feature-oyobi-kudasai-v1'), true);
   assert.strictEqual(isGochumonSentenceQuiz('sentence-usage-feature-gochumon-s1-v2'), true);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-minimal-pair-gochumon-okimari-1-v1'), true);
+  assert.strictEqual(isGochumonSentenceQuiz('sentence-minimal-pair-gochumon-kakunin-1-v1'), false);
   assert.strictEqual(isGochumonSentenceQuiz('sentence-listen-to-l1-gochumon-kakunin-1-v1'), false);
   assert.strictEqual(isGochumonSentenceQuiz('example-listen-gochumon-1-v2'), false);
   assert.strictEqual(isGochumonSentenceQuiz('sentence-segment-shadow-gochumon-d1-v1'), false);
