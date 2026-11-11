@@ -1226,7 +1226,7 @@
         paintSelection();
         syncEmpty();
         syncSubmit();
-        note.textContent = '再試一次';
+        note.textContent = '有 ' + grade.correctIds.length + ' 個啱，再試一次';
         note.className = 'group-note bad';
         // on_cross retry: stay on this slide. A wrong submit is not a pass.
         // The note above 確認 is the only copy; showFail would repeat it below the button.

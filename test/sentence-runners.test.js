@@ -854,7 +854,8 @@ tests.push(test('Q27 group_audio require_all_placed, return_only_misplaced, and 
   assert.strictEqual(passed, 0);
   assert.strictEqual(failed, 1);
   assert.ok(texts(root).indexOf(quiz.slides[0].instruction) !== -1);
-  assert.ok(texts(root).indexOf('再試一次') !== -1);
+  assert.ok(texts(root).indexOf('有 4 個啱，再試一次') !== -1);
+  assert.strictEqual(texts(root).indexOf('再試一次'), -1);
   assert.ok(texts(root).indexOf('正確！') === -1);
   assert.ok(texts(byClass(root, 'quiz-body')[0]).join('\n').indexOf('ご注文') === -1);
   assert.strictEqual(groupTile(root, 't2').parentNode.getAttribute('data-box-id'), 'correct');
@@ -961,8 +962,15 @@ tests.push(test('Q27 group_audio without require_all_placed still retries a part
   assert.strictEqual(passed, 0);
   assert.strictEqual(failed, 1);
   assert.ok(texts(root).indexOf('第二題') === -1);
-  assert.ok(texts(root).indexOf('再試一次') !== -1);
+  assert.ok(texts(root).indexOf('有 0 個啱，再試一次') !== -1);
   placeGroupItem(root, 'a', 'correct');
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 0);
+  assert.strictEqual(failed, 2);
+  assert.ok(texts(root).indexOf('第二題') === -1);
+  assert.ok(texts(root).indexOf('有 1 個啱，再試一次') !== -1);
+  assert.strictEqual(groupTile(root, 'a').parentNode.getAttribute('data-box-id'), 'correct');
+  assert.ok(String(groupTile(root, 'b').parentNode.className).indexOf('group-pool') !== -1);
   placeGroupItem(root, 'b', 'wrong');
   buttonNamed(root, '確認').click();
   assert.strictEqual(passed, 0);
