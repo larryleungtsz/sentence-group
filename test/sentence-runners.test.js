@@ -1,5 +1,5 @@
 /**
- * Q20–Q24 quiz runners.
+ * Q20–Q26 quiz runners, plus the Q27 group_audio trial.
  *   node test/sentence-runners.test.js
  */
 'use strict';
@@ -705,6 +705,306 @@ tests.push(test('type multi_select still lists every correct answer on a miss', 
   buttonNamed(root, 'C').click();
   buttonNamed(root, '確認').click();
   assert.ok(texts(root).some(function (t) { return t.indexOf('未全對。正確：') === 0; }));
+}));
+
+function groupTile(root, id) {
+  return walk(root, []).find(function (node) {
+    return node.getAttribute && node.getAttribute('data-item-id') === id;
+  });
+}
+
+function childButton(tile, cls) {
+  return walk(tile, []).find(function (node) {
+    return node.tagName === 'BUTTON' && String(node.className || '').split(/\s+/).indexOf(cls) !== -1;
+  });
+}
+
+function placeGroupItem(root, id, boxId) {
+  const tile = groupTile(root, id);
+  assert.ok(tile, id);
+  const select = childButton(tile, 'group-select');
+  if (select.textContent !== '已揀') select.click();
+  assert.strictEqual(childButton(groupTile(root, id), 'group-select').textContent, '已揀');
+  const box = byClass(root, 'group-box').find(function (node) {
+    return node.getAttribute('data-box-id') === boxId;
+  });
+  assert.ok(box, boxId);
+  box.click();
+  assert.strictEqual(groupTile(root, id).parentNode.getAttribute('data-box-id'), boxId);
+}
+
+tests.push(test('Q27 group_audio grades by correct_box and returns only misplaced', function () {
+  const items = [
+    { id: 't1', correct_box: 'correct' },
+    { id: 't2', correct_box: 'correct' },
+    { id: 'p1', correct_box: 'wrong' },
+  ];
+  const partial = QuizRunner.gradeGroupAudio(items, { t1: 'correct', t2: null, p1: null });
+  assert.strictEqual(partial.allPlaced, false);
+  assert.strictEqual(partial.ok, false);
+  assert.deepStrictEqual(partial.unplacedIds, ['t2', 'p1']);
+  assert.deepStrictEqual(partial.correctIds, ['t1']);
+
+  const mixed = { t1: 'correct', t2: 'wrong', p1: 'correct' };
+  const graded = QuizRunner.gradeGroupAudio(items, mixed);
+  assert.strictEqual(graded.allPlaced, true);
+  assert.strictEqual(graded.ok, false);
+  assert.deepStrictEqual(graded.correctIds, ['t1']);
+  assert.deepStrictEqual(graded.misplacedIds, ['t2', 'p1']);
+  const kept = QuizRunner.placementAfterReturnMisplaced(mixed, graded);
+  assert.strictEqual(kept.t1, 'correct');
+  assert.strictEqual(kept.t2, null);
+  assert.strictEqual(kept.p1, null);
+
+  const good = { t1: 'correct', t2: 'correct', p1: 'wrong' };
+  assert.strictEqual(QuizRunner.gradeGroupAudio(items, good).ok, true);
+  // accepts is not an input. A box id that is not correct_box is misplaced.
+  assert.deepStrictEqual(
+    QuizRunner.gradeGroupAudio([{ id: 't1', correct_box: 'correct' }], { t1: 'wrong' }).misplacedIds,
+    ['t1']
+  );
+}));
+
+tests.push(test('Q27 group_audio require_all_placed, return_only_misplaced, and retry', function () {
+  const quiz = readJson('tools/q27-sentence-minimal-pair-gochumon-okimari-1-v1.json');
+  assert.strictEqual(quiz.quiz_id, 'sentence-minimal-pair-gochumon-okimari-1-v1');
+  assert.strictEqual(quiz.slides.length, 1);
+  assert.strictEqual(quiz.slides[0].type, 'group_audio');
+  assert.strictEqual(quiz.slides[0].rate, 1);
+  assert.strictEqual(quiz.slides[0].require_all_placed, true);
+  assert.strictEqual(quiz.slides[0].shuffle, true);
+  assert.strictEqual(quiz.feedback.on_wrong, 'return_only_misplaced');
+  assert.strictEqual(quiz.feedback.on_cross, 'retry');
+  assert.ok(quiz.feedback.explanation == null);
+  assert.strictEqual(quiz.slides[0].boxes[0].label, '您的點餐決定好了的話。');
+  assert.deepStrictEqual(quiz.slides[0].boxes[0].accepts, ['t1', 't2']);
+  assert.strictEqual(quiz.slides[0].boxes[1].label, '錯');
+  assert.deepStrictEqual(quiz.slides[0].boxes[1].accepts, ['p1', 'p2', 'p3', 'p4']);
+  quiz.slides[0].items.forEach(function (item) {
+    assert.strictEqual(item.start_sec, undefined);
+    assert.strictEqual(item.end_sec, undefined);
+    assert.ok(item.text == null);
+    assert.ok(item.l1 == null);
+    assert.ok(String(item.audio).indexOf('https://raw.githubusercontent.com/') === 0);
+  });
+
+  let passed = 0;
+  let failed = 0;
+  const beforeWrites = writes.length;
+  const root = runQuiz(quiz, {
+    onPass: function () { passed += 1; },
+    onFail: function () { failed += 1; },
+  });
+  const shown = texts(root).join('\n');
+  const bodyText = texts(byClass(root, 'quiz-body')[0]).join('\n');
+  assert.ok(shown.indexOf('未支援嘅題型：group_audio') === -1);
+  assert.ok(shown.indexOf(quiz.slides[0].instruction) !== -1);
+  assert.ok(bodyText.indexOf('您的點餐決定好了的話。') !== -1);
+  assert.ok(bodyText.indexOf('錯') !== -1);
+  assert.ok(bodyText.indexOf('ご注文') === -1);
+  assert.ok(shown.indexOf('已放 0/6') !== -1);
+  ['t1', 't2', 'p1', 'p2', 'p3', 'p4'].forEach(function (id) {
+    assert.strictEqual(texts(root).indexOf(id), -1, id);
+    var tileText = texts(groupTile(root, id)).join('\n');
+    assert.ok(tileText.indexOf('ご注文') === -1, id);
+    assert.ok(tileText.indexOf('您的點餐') === -1, id);
+    assert.ok(tileText.indexOf('播放') !== -1, id);
+    assert.ok(tileText.indexOf('揀') !== -1, id);
+  });
+  const clips = audios(root);
+  assert.strictEqual(clips.length, 6);
+  const srcs = clips.map(function (node) { return node.src; }).sort();
+  const expected = quiz.slides[0].items.map(function (item) { return item.audio; }).sort();
+  assert.deepStrictEqual(srcs, expected);
+  clips.forEach(function (clip) {
+    assert.strictEqual(clip.playbackRate, 1);
+    assert.strictEqual(clip.controls, false);
+  });
+  const t1 = groupTile(root, 't1');
+  const t1Audio = walk(t1, []).find(function (node) { return node.tagName === 'AUDIO'; });
+  t1Audio.currentTime = 4;
+  childButton(t1, 'group-play').click();
+  assert.strictEqual(t1Audio.playing, true);
+  assert.strictEqual(t1Audio.playbackRate, 1);
+  assert.strictEqual(t1Audio.currentTime, 4);
+  assert.ok(!t1Audio.listeners.timeupdate || t1Audio.listeners.timeupdate.length === 0);
+  assert.strictEqual(childButton(t1, 'group-select').textContent, '揀');
+  const t2Audio = walk(groupTile(root, 't2'), []).find(function (node) { return node.tagName === 'AUDIO'; });
+  childButton(groupTile(root, 't2'), 'group-play').click();
+  assert.strictEqual(t1Audio.playing, false);
+  assert.strictEqual(t2Audio.playing, true);
+
+  const submit = buttonNamed(root, '確認');
+  assert.strictEqual(submit.disabled, true);
+  submit.click();
+  assert.strictEqual(passed, 0);
+  assert.strictEqual(failed, 0);
+  assert.ok(texts(root).indexOf('請放晒所有音檔先確認') !== -1);
+  assert.ok(texts(root).indexOf('正確！') === -1);
+
+  placeGroupItem(root, 't1', 'wrong');
+  placeGroupItem(root, 't2', 'correct');
+  placeGroupItem(root, 'p1', 'correct');
+  placeGroupItem(root, 'p2', 'wrong');
+  placeGroupItem(root, 'p3', 'wrong');
+  placeGroupItem(root, 'p4', 'wrong');
+  assert.strictEqual(buttonNamed(root, '確認').disabled, false);
+  assert.ok(texts(root).indexOf('已放 6/6') !== -1);
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 0);
+  assert.strictEqual(failed, 1);
+  assert.ok(texts(root).indexOf(quiz.slides[0].instruction) !== -1);
+  assert.ok(texts(root).indexOf('再試一次') !== -1);
+  assert.ok(texts(root).indexOf('正確！') === -1);
+  assert.ok(texts(byClass(root, 'quiz-body')[0]).join('\n').indexOf('ご注文') === -1);
+  assert.strictEqual(groupTile(root, 't2').parentNode.getAttribute('data-box-id'), 'correct');
+  assert.strictEqual(groupTile(root, 'p2').parentNode.getAttribute('data-box-id'), 'wrong');
+  assert.strictEqual(groupTile(root, 'p3').parentNode.getAttribute('data-box-id'), 'wrong');
+  assert.strictEqual(groupTile(root, 'p4').parentNode.getAttribute('data-box-id'), 'wrong');
+  assert.ok(String(groupTile(root, 't1').parentNode.className).indexOf('group-pool') !== -1);
+  assert.ok(String(groupTile(root, 'p1').parentNode.className).indexOf('group-pool') !== -1);
+  assert.strictEqual(buttonNamed(root, '確認').disabled, true);
+  assert.ok(texts(root).indexOf('已放 4/6') !== -1);
+
+  placeGroupItem(root, 't1', 'correct');
+  placeGroupItem(root, 'p1', 'wrong');
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 1);
+  assert.strictEqual(failed, 1);
+  assert.ok(texts(root).indexOf('正確！') !== -1);
+  assert.strictEqual(writes.length, beforeWrites);
+}));
+
+tests.push(test('Q27 group_audio shuffles unless shuffle is false, and can move back to the pool', function () {
+  function fixture(shuffleItems) {
+    return {
+      quiz_id: 'fixture-group-audio',
+      objective: 'sentence_minimal_pair_grouping',
+      feedback: { on_wrong: 'return_only_misplaced', on_cross: 'retry' },
+      slides: [{
+        type: 'group_audio',
+        instruction: '分組',
+        rate: 1,
+        require_all_placed: true,
+        shuffle: shuffleItems,
+        boxes: [
+          { id: 'correct', label: '啱', accepts: ['a'] },
+          { id: 'wrong', label: '錯', accepts: ['b', 'c'] },
+        ],
+        items: [
+          { id: 'a', audio: 'https://example.test/a.mp3', correct_box: 'correct' },
+          { id: 'b', audio: 'https://example.test/b.mp3', correct_box: 'wrong' },
+          { id: 'c', audio: 'https://example.test/c.mp3', correct_box: 'wrong' },
+        ],
+      }],
+    };
+  }
+
+  function poolIds(root) {
+    return byClass(root, 'group-pool')[0].children.map(function (node) {
+      return node.getAttribute('data-item-id');
+    });
+  }
+
+  const ordered = runQuiz(fixture(false));
+  assert.deepStrictEqual(poolIds(ordered), ['a', 'b', 'c']);
+  placeGroupItem(ordered, 'a', 'wrong');
+  placeGroupItem(ordered, 'a', 'correct');
+  assert.strictEqual(groupTile(ordered, 'a').parentNode.getAttribute('data-box-id'), 'correct');
+  childButton(groupTile(ordered, 'a'), 'group-select').click();
+  byClass(ordered, 'group-pool-wrap')[0].click();
+  assert.ok(String(groupTile(ordered, 'a').parentNode.className).indexOf('group-pool') !== -1);
+  assert.strictEqual(buttonNamed(ordered, '確認').disabled, true);
+
+  const random = Math.random;
+  Math.random = function () { return 0; };
+  try {
+    const shuffled = runQuiz(fixture(true));
+    assert.deepStrictEqual(poolIds(shuffled), ['b', 'c', 'a']);
+  } finally {
+    Math.random = random;
+  }
+}));
+
+tests.push(test('Q27 group_audio without require_all_placed still retries a partial submit', function () {
+  let passed = 0;
+  let failed = 0;
+  const root = runQuiz({
+    quiz_id: 'fixture-group-audio-partial',
+    objective: 'sentence_minimal_pair_grouping',
+    feedback: { on_wrong: 'return_only_misplaced', on_cross: 'retry' },
+    slides: [
+      {
+        type: 'group_audio',
+        instruction: '分組',
+        rate: 1.25,
+        require_all_placed: false,
+        shuffle: false,
+        boxes: [
+          { id: 'correct', label: '啱', accepts: ['a'] },
+          { id: 'wrong', label: '錯', accepts: ['b'] },
+        ],
+        items: [
+          { id: 'a', audio: 'https://example.test/a.mp3', correct_box: 'correct' },
+          { id: 'b', audio: 'https://example.test/b.mp3', correct_box: 'wrong' },
+        ],
+      },
+      { type: 'prompt', text: '第二題' },
+    ],
+  }, {
+    onPass: function () { passed += 1; },
+    onFail: function () { failed += 1; },
+  });
+  assert.strictEqual(audios(root)[0].playbackRate, 1.25);
+  assert.strictEqual(buttonNamed(root, '確認').disabled, false);
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 0);
+  assert.strictEqual(failed, 1);
+  assert.ok(texts(root).indexOf('第二題') === -1);
+  assert.ok(texts(root).indexOf('再試一次') !== -1);
+  placeGroupItem(root, 'a', 'correct');
+  placeGroupItem(root, 'b', 'wrong');
+  buttonNamed(root, '確認').click();
+  assert.strictEqual(passed, 0);
+  assert.ok(texts(root).indexOf('第二題') !== -1);
+  buttonNamed(root, '下一題').click();
+  assert.strictEqual(passed, 1);
+}));
+
+tests.push(test('unknown slide types still skip, and Q27 stays off the live queue', function () {
+  const view = runQuiz({ objective: 'nope', slides: [{ type: 'not_a_slide' }] });
+  assert.ok(texts(view).indexOf('未支援嘅題型：not_a_slide') !== -1);
+  assert.ok(buttonNamed(view, '跳過'));
+  assert.ok(!manifest.quizzes.some(function (quiz) {
+    return quiz.quiz_id === 'sentence-minimal-pair-gochumon-okimari-1-v1';
+  }));
+  assert.ok(!fs.existsSync(path.join(root, 'data/quizzes/sentence-minimal-pair-gochumon-okimari-1-v1.json')));
+  assert.strictEqual(
+    fs.readFileSync(path.join(root, 'data/manifest.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
+    -1
+  );
+  assert.strictEqual(
+    fs.readFileSync(path.join(root, 'data/schedule.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
+    -1
+  );
+  assert.strictEqual(
+    fs.readFileSync(path.join(root, 'data/groups.json'), 'utf8').indexOf('sentence-minimal-pair-gochumon-okimari-1-v1'),
+    -1
+  );
+  assert.ok(!Object.prototype.hasOwnProperty.call(schedule.sentence_schedule, 'sentence_minimal_pair_grouping'));
+  const page = fs.readFileSync(path.join(root, 'tools/try-group-audio-q27-20261111.html'), 'utf8');
+  assert.ok(page.indexOf('../js/quiz-runner.js') !== -1);
+  assert.ok(page.indexOf('../css/app.css') !== -1);
+  assert.ok(page.indexOf('q27-sentence-minimal-pair-gochumon-okimari-1-v1.json') !== -1);
+  assert.ok(page.indexOf('試用頁，唔係正式練習') !== -1);
+  assert.ok(page.indexOf('src="../js/progress.js') === -1);
+  assert.ok(page.indexOf('src="../js/group.js') === -1);
+  assert.ok(page.indexOf('src="../js/timing.js') === -1);
+  assert.ok(page.indexOf('src="../js/sync.js') === -1);
+  assert.ok(page.indexOf('manifest.json') === -1);
+  assert.ok(page.indexOf('schedule.json') === -1);
+  assert.ok(page.indexOf('website-manager-progress-v2') !== -1);
+  assert.ok(page.indexOf('trial blocked live progress write') !== -1);
 }));
 
 (async function () {
