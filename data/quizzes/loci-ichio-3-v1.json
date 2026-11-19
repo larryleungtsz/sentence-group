@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-ichio-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 3,
+    "text": "ほかの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "ほかの"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ichio.png",
+      "hotspot": {
+        "left": 0,
+        "top": 60,
+        "width": 31,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

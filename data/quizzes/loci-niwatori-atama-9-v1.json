@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-niwatori-atama-9-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 9,
+    "text": "だけに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "だけに"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-niwatori-atama.png",
+      "hotspot": {
+        "left": 50,
+        "top": 53,
+        "width": 10,
+        "height": 5,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-kanban-menu-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 5,
+    "text": "開けた"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "開けた"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanban-menu.png",
+      "hotspot": {
+        "left": 57,
+        "top": 46,
+        "width": 17,
+        "height": 19,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

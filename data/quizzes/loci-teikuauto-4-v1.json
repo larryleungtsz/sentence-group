@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-teikuauto-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 4,
+    "text": "普段より"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "普段より"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-teikuauto.png",
+      "hotspot": {
+        "left": 46,
+        "top": 43,
+        "width": 13,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

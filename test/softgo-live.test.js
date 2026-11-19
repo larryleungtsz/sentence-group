@@ -82,6 +82,20 @@ const EXPECTED_SENTENCES = {
   'yoyaku-shitenai': 3,
   'orenji-jusu': 5,
   'koshitsu-yoyaku': 6,
+  'kodomo-omoide': 0,
+  teikuauto: 0,
+  rayu: 0,
+  roji: 0,
+  'konna-basho': 0,
+  'kanban-menu': 0,
+  'kanki-maa-maa': 0,
+  odenwa: 0,
+  'kyou-no-6jihan': 0,
+  ichio: 0,
+  'sore-wa': 0,
+  oseki: 0,
+  'niwatori-atama': 0,
+  'kaori-ga-ari': 0,
 };
 
 function isSkip(chunk) {
@@ -125,6 +139,10 @@ test('every group has the Soft GO sentence count and chunk-boundary-wins holds',
   assert.strictEqual(new Set(passages).size, passages.length);
   groups.groups.forEach((group) => {
     assert.strictEqual(group.sentences.length, EXPECTED_SENTENCES[group.slug], group.slug);
+    if (group.sentences.length === 0) {
+      assert.strictEqual(group.sentence_quizzes_ready, false, group.slug);
+      return;
+    }
     assert.ok(group.sentences_note && group.sentences_note.indexOf('chunk-boundary-wins') !== -1, group.slug);
     const active = (group.chunks || []).filter((c) => !isSkip(c));
     const activeTexts = active.map((c) => c.text);
@@ -722,6 +740,7 @@ test('manifest sentence quizzes parse, match sentences[], and Q24 choices have n
     sentence_minimal_pair_grouping: 1,
   });
   groups.groups.forEach((group) => {
+    if (group.sentence_quizzes_ready === false) return;
     const rows = byGroup[group.slug] || [];
     group.sentences.forEach((sentence) => {
       assert.ok(

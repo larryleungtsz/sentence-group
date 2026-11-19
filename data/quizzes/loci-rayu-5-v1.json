@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-rayu-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 5,
+    "text": "たっぷり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "たっぷり"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-rayu.png",
+      "hotspot": {
+        "left": 43,
+        "top": 58,
+        "width": 29,
+        "height": 33,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
