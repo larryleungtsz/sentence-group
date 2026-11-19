@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-kanki-maa-maa-8-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 8,
+    "text": "お店だ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "お店だ"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanki-maa-maa.png",
+      "hotspot": {
+        "left": 86,
+        "top": 20,
+        "width": 14,
+        "height": 29,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

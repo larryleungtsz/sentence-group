@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-odenwa-4-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 4,
+    "text": "お願いしたいんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "お願いしたいんですけど"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-odenwa.png",
+      "hotspot": {
+        "left": 84,
+        "top": 35,
+        "width": 16,
+        "height": 39,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

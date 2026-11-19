@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-kodomo-omoide-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 3,
+    "text": "今日"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "今日"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kodomo-omoide.png",
+      "hotspot": {
+        "left": 3,
+        "top": 20,
+        "width": 14,
+        "height": 37,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

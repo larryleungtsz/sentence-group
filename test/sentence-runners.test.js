@@ -1051,7 +1051,7 @@ tests.push(test('live Q1 opening prompt is the target chunk, then the palace tap
   const rows = manifest.quizzes.filter(function (quiz) {
     return quiz.objective === 'loci_description_tap';
   });
-  assert.strictEqual(rows.length, 169);
+  assert.strictEqual(rows.length, 280);
   const koshitsuHotspots = {
     1: { left: 21, top: 2, width: 18, height: 20, unit: 'percent' },
     17: { left: 65, top: 56, width: 12, height: 36, unit: 'percent' },

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-sore-wa-2-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 2,
+    "text": "全然"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "全然"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-sore-wa.png",
+      "hotspot": {
+        "left": 34,
+        "top": 39,
+        "width": 18,
+        "height": 29,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

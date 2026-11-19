@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-konna-basho-3-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 3,
+    "text": "大したことないだろうと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "大したことないだろうと"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-konna-basho.png",
+      "hotspot": {
+        "left": 41,
+        "top": 21,
+        "width": 12,
+        "height": 37,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

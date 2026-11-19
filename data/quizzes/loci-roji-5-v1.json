@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-roji-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 5,
+    "text": "ひっそりと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "ひっそりと"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-roji.png",
+      "hotspot": {
+        "left": 34,
+        "top": 42,
+        "width": 8,
+        "height": 24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

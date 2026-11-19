@@ -2243,6 +2243,991 @@
         }
       ],
       "sentence_quizzes_ready": true
+    },
+    {
+      "slug": "ichio",
+      "title": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ichio.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "一応",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "空いてるんですけれども",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "ほかの",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "団体様が",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "もしいらっしゃった場合は",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "カウンターにご移動いただく",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "形になるんですが",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a729568029a5a9c997471c1936"
+    },
+    {
+      "slug": "kanban-menu",
+      "title": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanban-menu.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "看板メニューの",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "スパイシーな",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "鶏鍋は",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "蓋を",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "開けた",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "瞬間から",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "香りが良い",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "鶏肉は",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "滑らかで",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "具も",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 11,
+          "text": "入っていて",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a7295680658b55f30c5004bcb6"
+    },
+    {
+      "slug": "kanki-maa-maa",
+      "title": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanki-maa-maa.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "換気は",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "まあまあで",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "食べ終わると",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "服に",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "匂いがついてしまうけど",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "それでもまた",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "来たくなる",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "お店だ",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a7295680fa9c52eba5d2ab545c"
+    },
+    {
+      "slug": "kaori-ga-ari",
+      "title": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaori-ga-ari.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "香りがあり",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "辛味が",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "痺れる感じも",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "これらが",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "うまく",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "溶け合って",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "想像以上の",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "美味しさを",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "生み出している",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false
+    },
+    {
+      "slug": "kodomo-omoide",
+      "title": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kodomo-omoide.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "子供の頃の",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "思い出",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "今日",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "通りかかって",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "焼売を",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "食べちゃった",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "値段は",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "本当に",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "高い",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a729568097a10ad96f52ef422b"
+    },
+    {
+      "slug": "konna-basho",
+      "title": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-konna-basho.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "こんな",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "場所に",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "大したことないだろうと",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "決めつけてしまうと",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "お店を",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "見逃してしまう",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "ことになる",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a729568093b6f9ca6a96b0b863"
+    },
+    {
+      "slug": "kyou-no-6jihan",
+      "title": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kyou-no-6jihan.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "今日の",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "6時半から",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "2人で",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "席って",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "18時半から",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a7295680839857d203943ef708"
+    },
+    {
+      "slug": "niwatori-atama",
+      "title": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-niwatori-atama.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "鶏の頭や",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "尻尾",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "などの",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "切れ端",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ばかり",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "ということはない",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "シェフは",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "スパイシーな鶏鍋",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "だけに",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "集中しているので",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 11,
+          "text": "スープが",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false
+    },
+    {
+      "slug": "odenwa",
+      "title": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-odenwa.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "お電話",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "居酒屋",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "もしもし",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "お願いしたいんですけど",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a7295680ffb5bae151829285e1"
+    },
+    {
+      "slug": "oseki",
+      "title": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oseki.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "お席のみの",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "ご予約っていうことで",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "おまちがいないですかね",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "お待ちしております",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "失礼いたしまーす",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a7295680478303d5532be72d72"
+    },
+    {
+      "slug": "rayu",
+      "title": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-rayu.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "それに",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "ラー油も",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "すごく",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "良くて",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "たっぷり",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "かけてくれた",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a7295680409807c76300ae5948"
+    },
+    {
+      "slug": "roji",
+      "title": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-roji.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "極く",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "狭い",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "路地の",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "奥に",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "ひっそりと",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "ある",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "店で",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "少しでも",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "気を抜くと",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "見落としてしまう",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a729568087ba1ef0a1e3c0cb99"
+    },
+    {
+      "slug": "sore-wa",
+      "title": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-sore-wa.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "それは",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "全然",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "では",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "お名前と",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "お電話番号",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "よろしいですか",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "電話番号",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "852",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "9467",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 10,
+          "text": "3545",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40f3b2a7295680899169cfe015834add"
+    },
+    {
+      "slug": "teikuauto",
+      "title": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "sentence_added_at": "2026-11-18T00:00:00+08:00",
+      "sentence_added_at_note": "provisional — Q1 loci_description_tap from the 2026-11-18 materials pack",
+      "palace_image_url": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-teikuauto.png",
+      "chunk_order_note": "Keep chunks that already have a palace image and Area box. Join order is Area id, which is spoken order.",
+      "chunks": [
+        {
+          "id": 1,
+          "text": "テイクアウトで",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 2,
+          "text": "20香港ドル",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 3,
+          "text": "4個",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 4,
+          "text": "普段より",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 5,
+          "text": "50％",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 6,
+          "text": "大きくて",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 7,
+          "text": "魚の",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 8,
+          "text": "濃くて",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        },
+        {
+          "id": 9,
+          "text": "美味しい",
+          "chunk_added_at": "2026-11-18T00:00:00+08:00",
+          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
+          "quizzes_ready": true
+        }
+      ],
+      "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
+      "sentences": [],
+      "sentence_quizzes_ready": false,
+      "notion_palace_url": "https://app.notion.com/p/40e3b2a7295680e6b4e7de8f73a68974"
     }
   ]
 }
