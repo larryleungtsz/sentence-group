@@ -1,0 +1,31 @@
+{
+  "quiz_id": "loci-koshitsu-yoyaku-5-v1",
+  "objective": "loci_description_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 5,
+    "text": "個室は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "個室は"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
+      "hotspot": {
+        "left": 56,
+        "top": 40,
+        "width": 18,
+        "height": 10,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

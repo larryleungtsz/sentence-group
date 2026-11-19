@@ -526,7 +526,12 @@ tests.push(test('Q18 segment shadow, Q8 listening, Q4 word shadow, Q19 cloze, an
   assert.ok(texts(clozeRoot).indexOf('ご予約いただいてますか') !== -1);
 
   const tap = runQuiz(loci);
+  assert.strictEqual(loci.objective, 'loci_description_tap');
+  assert.strictEqual(loci.slides[0].text, loci.chunk.text);
+  assert.ok(texts(tap).indexOf(loci.chunk.text) !== -1);
+  assert.ok(texts(tap).join('\n').indexOf('請在圖中') === -1);
   buttonNamed(tap, '下一題').click();
+  assert.ok(texts(tap).indexOf('請點擊正確位置') !== -1);
   const img = walk(tap, []).find(function (node) { return node.tagName === 'IMG'; });
   let passed = 0;
   const tapRoot = runQuiz(loci, { onPass: function () { passed += 1; } });
@@ -1040,6 +1045,59 @@ tests.push(test('unknown slide types still skip, and Q27 is on the live queue', 
   assert.ok(page.indexOf('schedule.json') === -1);
   assert.ok(page.indexOf('website-manager-progress-v2') !== -1);
   assert.ok(page.indexOf('trial blocked live progress write') !== -1);
+}));
+
+tests.push(test('live Q1 opening prompt is the target chunk, then the palace tap', function () {
+  const rows = manifest.quizzes.filter(function (quiz) {
+    return quiz.objective === 'loci_description_tap';
+  });
+  assert.strictEqual(rows.length, 169);
+  const koshitsuHotspots = {
+    1: { left: 21, top: 2, width: 18, height: 20, unit: 'percent' },
+    17: { left: 65, top: 56, width: 12, height: 36, unit: 'percent' },
+    2: { left: 31, top: 25, width: 11, height: 18, unit: 'percent' },
+    3: { left: 43, top: 26, width: 7, height: 24, unit: 'percent' },
+    5: { left: 56, top: 40, width: 18, height: 10, unit: 'percent' },
+    6: { left: 50, top: 48, width: 12, height: 18, unit: 'percent' },
+    7: { left: 79, top: 5, width: 19, height: 28, unit: 'percent' },
+    8: { left: 15, top: 28, width: 16, height: 25, unit: 'percent' },
+    10: { left: 24, top: 59, width: 29, height: 33, unit: 'percent' },
+    14: { left: 85, top: 45, width: 15, height: 44, unit: 'percent' },
+    15: { left: 77, top: 54, width: 8, height: 21, unit: 'percent' },
+    16: { left: 0, top: 44, width: 20, height: 55, unit: 'percent' },
+    19: { left: 51, top: 75, width: 18, height: 25, unit: 'percent' },
+  };
+  rows.forEach(function (row) {
+    const quiz = readJson(row.file);
+    assert.strictEqual(quiz.quiz_id, row.quiz_id);
+    assert.strictEqual(quiz.objective, 'loci_description_tap');
+    assert.strictEqual(quiz.slides[0].type, 'prompt');
+    assert.strictEqual(quiz.slides[0].text, quiz.chunk.text, row.quiz_id);
+    assert.ok(quiz.slides[0].text.indexOf('請在圖中') === -1, row.quiz_id);
+    assert.strictEqual(quiz.slides[1].type, 'tap');
+    assert.ok(quiz.slides[1].hotspot, row.quiz_id);
+    assert.strictEqual(quiz.slides[1].hotspot.unit, 'percent', row.quiz_id);
+    const shown = runQuiz(quiz);
+    assert.ok(texts(shown).indexOf(quiz.chunk.text) !== -1, row.quiz_id);
+    assert.ok(texts(shown).join('\n').indexOf('請在圖中') === -1, row.quiz_id);
+    assert.ok(buttonNamed(shown, '下一題'), row.quiz_id);
+  });
+  const koshitsu = rows.filter(function (row) {
+    return row.quiz_id.indexOf('loci-koshitsu-yoyaku-') === 0;
+  });
+  assert.strictEqual(koshitsu.length, 13);
+  koshitsu.forEach(function (row) {
+    const quiz = readJson(row.file);
+    assert.strictEqual(row.chunk_id, quiz.chunk.id);
+    assert.deepStrictEqual(quiz.slides[1].hotspot, koshitsuHotspots[quiz.chunk.id], row.quiz_id);
+    assert.strictEqual(
+      quiz.slides[1].image,
+      'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png'
+    );
+  });
+  assert.ok(!rows.some(function (row) { return row.quiz_id === 'loci-koshitsu-yoyaku-4-v1'; }));
+  assert.ok(!rows.some(function (row) { return row.quiz_id === 'loci-koshitsu-yoyaku-9-v1'; }));
+  assert.ok(!rows.some(function (row) { return row.quiz_id === 'loci-koshitsu-yoyaku-13-v1'; }));
 }));
 
 (async function () {

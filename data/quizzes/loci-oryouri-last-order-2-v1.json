@@ -11,7 +11,7 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "客桌 LAST 小牌有剛豎起的 LAST 注文牌停住。請在圖中點這 LAST 小牌所在的位置。"
+      "text": "ラストオーダーの"
     },
     {
       "type": "tap",

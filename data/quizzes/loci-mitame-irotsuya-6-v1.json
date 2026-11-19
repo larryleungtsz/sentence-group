@@ -11,7 +11,7 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "身前有手持／按住名牌「MY」。請在圖中點這塊 MY 牌所在的位置。"
+      "text": "自分の"
     },
     {
       "type": "tap",

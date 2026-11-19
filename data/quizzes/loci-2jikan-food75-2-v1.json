@@ -11,7 +11,7 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "桌面菜單上 FOOD 大字有食指剛按在「FOOD」上停住。請在圖中點這 FOOD／食指所在的位置。"
+      "text": "フードが"
     },
     {
       "type": "tap",
