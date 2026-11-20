@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kanban-menu-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 1,
+    "text": "看板メニューの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "招牌菜的。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanban-menu.png",
+      "hotspot": {
+        "left": 5,
+        "top": 55,
+        "width": 14,
+        "height": 38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

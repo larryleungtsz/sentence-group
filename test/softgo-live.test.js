@@ -5,6 +5,7 @@
 'use strict';
 
 const assert = require('assert');
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -1016,6 +1017,179 @@ test('20261111 once-reset page clears only gochumon sentence-layer keys', functi
   assert.strictEqual('gochumon-kakunin:s1'.indexOf('gochumon:'), -1);
   assert.strictEqual('gochumon:s1'.indexOf('gochumon:'), 0);
   assert.strictEqual('gochumon:s2'.indexOf('gochumon:'), 0);
+});
+
+test('existing live Q2 files stay byte-identical to main parent 77f4aefe', function () {
+  const parent = '77f4aefe2c3d750eb6483743eb43bfd4330bcbae';
+  const listed = execFileSync('git', ['ls-tree', '-r', '--name-only', parent, 'data/quizzes'], {
+    cwd: root,
+    encoding: 'utf8',
+  })
+    .trim()
+    .split('\n')
+    .filter((file) => /\/gloss-palace-.*\.json$/.test(file));
+  assert.strictEqual(listed.length, 156);
+  listed.forEach((file) => {
+    const before = execFileSync('git', ['show', parent + ':' + file], { cwd: root });
+    const after = fs.readFileSync(path.join(root, file));
+    assert.ok(before.equals(after), file);
+  });
+  const quizStatus = execFileSync('git', ['diff', '--name-status', parent, '--', 'data/quizzes'], {
+    cwd: root,
+    encoding: 'utf8',
+  }).trim();
+  const allowedNew = /^data\/quizzes\/gloss-palace-(ichio|kanban-menu|kanki-maa-maa|kaori-ga-ari|kodomo-omoide|konna-basho|koshitsu-yoyaku|kyou-no-6jihan|niwatori-atama|odenwa|oseki|rayu|roji|sore-wa|teikuauto)-\d+-v1\.json$/;
+  (quizStatus ? quizStatus.split('\n') : []).forEach((line) => {
+    const tab = line.indexOf('\t');
+    const status = line.slice(0, tab);
+    const file = line.slice(tab + 1);
+    assert.strictEqual(status, 'A', line);
+    assert.ok(allowedNew.test(file), file);
+  });
+  const untouched = execFileSync(
+    'git',
+    ['diff', '--name-only', parent, '--', 'data/schedule.json', 'data/groups.json', 'js', 'css', 'index.html', 'group.html', 'stats.html', 'export.html'],
+    { cwd: root, encoding: 'utf8' }
+  );
+  assert.strictEqual(untouched, '');
+});
+
+test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and live chunk ids', function () {
+  const suffix = '。請點選與這個詞相關的物件同區域。';
+  const slugs = [
+    'ichio',
+    'kanban-menu',
+    'kanki-maa-maa',
+    'kaori-ga-ari',
+    'kodomo-omoide',
+    'konna-basho',
+    'koshitsu-yoyaku',
+    'kyou-no-6jihan',
+    'niwatori-atama',
+    'odenwa',
+    'oseki',
+    'rayu',
+    'roji',
+    'sore-wa',
+    'teikuauto',
+  ];
+  const expectedCounts = {
+    ichio: 7,
+    'kanban-menu': 11,
+    'kanki-maa-maa': 8,
+    'kaori-ga-ari': 9,
+    'kodomo-omoide': 9,
+    'konna-basho': 7,
+    'koshitsu-yoyaku': 12,
+    'kyou-no-6jihan': 5,
+    'niwatori-atama': 11,
+    odenwa: 4,
+    oseki: 5,
+    rayu: 6,
+    roji: 9,
+    'sore-wa': 10,
+    teikuauto: 9,
+  };
+  const gaps = [
+    { slug: 'roji', chunk_id: 6, text: 'ある' },
+    { slug: 'koshitsu-yoyaku', chunk_id: 19, text: 'かしこまりました' },
+  ];
+  const absent = [
+    'gloss-palace-goraikou-2-v1',
+    'gloss-palace-koshitsu-yoyaku-4-v1',
+    'gloss-palace-koshitsu-yoyaku-9-v1',
+    'gloss-palace-koshitsu-yoyaku-11-v1',
+    'gloss-palace-koshitsu-yoyaku-12-v1',
+    'gloss-palace-koshitsu-yoyaku-13-v1',
+    'gloss-palace-koshitsu-yoyaku-19-v1',
+    'gloss-palace-roji-6-v1',
+  ];
+  const skipTexts = ['めっちゃ', 'ありがとうございます', 'お願いします', '空いてますかね'];
+  const liveKoshitsu = [1, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 17];
+
+  function isGap(slug, chunkId) {
+    return gaps.some((gap) => gap.slug === slug && gap.chunk_id === chunkId);
+  }
+
+  const rows = manifest.quizzes.filter((quiz) => {
+    return slugs.some((slug) => quiz.quiz_id.indexOf('gloss-palace-' + slug + '-') === 0);
+  });
+  assert.strictEqual(rows.length, 122);
+  const counts = {};
+  const seenHotspots = {};
+  slugs.forEach((slug) => {
+    const group = groupBySlug(slug);
+    const keep = (group.chunks || []).filter((chunk) => !isSkip(chunk));
+    keep.forEach((chunk) => {
+      const quizId = 'gloss-palace-' + slug + '-' + chunk.id + '-v1';
+      const row = rows.find((quiz) => quiz.quiz_id === quizId);
+      if (isGap(slug, chunk.id)) {
+        assert.ok(!row, quizId);
+        assert.ok(!fs.existsSync(path.join(root, 'data/quizzes', quizId + '.json')), quizId);
+        return;
+      }
+      assert.ok(row, quizId);
+      assert.strictEqual(row.objective, 'gloss_to_palace_tap', quizId);
+      assert.strictEqual(row.level, 2, quizId);
+      assert.strictEqual(row.kind, 'chunk', quizId);
+      assert.strictEqual(row.chunk_id, chunk.id, quizId);
+      assert.strictEqual(row.sentence, group.sentence, quizId);
+      assert.strictEqual(row.file, 'data/quizzes/' + quizId + '.json', quizId);
+      const quiz = JSON.parse(fs.readFileSync(path.join(root, row.file), 'utf8'));
+      assert.strictEqual(quiz.quiz_id, quizId);
+      assert.strictEqual(quiz.objective, 'gloss_to_palace_tap');
+      assert.strictEqual(quiz.level, 2);
+      assert.strictEqual(quiz.variant, 1);
+      assert.strictEqual(quiz.sentence, group.sentence);
+      assert.deepStrictEqual(quiz.chunk, { id: chunk.id, text: chunk.text });
+      assert.strictEqual(quiz.feedback.on_wrong, 'show_correct_box');
+      assert.strictEqual(quiz.slides[0].type, 'prompt');
+      assert.ok(quiz.slides[0].text.endsWith(suffix), quizId);
+      assert.ok(quiz.slides[0].text.length > suffix.length, quizId);
+      assert.ok(skipTexts.indexOf(quiz.chunk.text) === -1, quizId);
+      assert.strictEqual(quiz.slides[1].type, 'tap');
+      assert.strictEqual(
+        quiz.slides[1].image,
+        'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-' + slug + '.png',
+        quizId
+      );
+      assert.strictEqual(quiz.slides[1].hotspot.unit, 'percent', quizId);
+      ['left', 'top', 'width', 'height'].forEach((key) => {
+        assert.strictEqual(typeof quiz.slides[1].hotspot[key], 'number', quizId + ' ' + key);
+      });
+      assert.ok(quiz.slides[1].hotspot.width > 0 && quiz.slides[1].hotspot.height > 0, quizId);
+      const q1 = manifest.quizzes.find((item) => {
+        return item.objective === 'loci_description_tap' && item.sentence === group.sentence && item.chunk_id === chunk.id;
+      });
+      assert.ok(q1, 'live Q1 for ' + quizId);
+      const q1Body = JSON.parse(fs.readFileSync(path.join(root, q1.file), 'utf8'));
+      assert.deepStrictEqual(quiz.slides[1].hotspot, q1Body.slides[1].hotspot, quizId);
+      assert.strictEqual(quiz.slides[1].image, q1Body.slides[1].image, quizId);
+      const box = JSON.stringify(quiz.slides[1].hotspot);
+      seenHotspots[slug] = seenHotspots[slug] || {};
+      assert.ok(!seenHotspots[slug][box], quizId + ' shares an Area with another Keep chunk');
+      seenHotspots[slug][box] = quizId;
+      counts[slug] = (counts[slug] || 0) + 1;
+    });
+  });
+  assert.deepStrictEqual(counts, expectedCounts);
+  const koshitsuIds = rows
+    .filter((row) => row.quiz_id.indexOf('gloss-palace-koshitsu-yoyaku-') === 0)
+    .map((row) => row.chunk_id)
+    .sort((a, b) => a - b);
+  assert.deepStrictEqual(koshitsuIds, liveKoshitsu);
+  absent.forEach((quizId) => {
+    assert.ok(!manifest.quizzes.some((quiz) => quiz.quiz_id === quizId), quizId);
+    assert.ok(!fs.existsSync(path.join(root, 'data/quizzes', quizId + '.json')), quizId);
+  });
+  assert.ok(!fs.existsSync(path.join(root, 'data/quizzes/gloss-palace-goraikou-2-v1.json')));
+  const example = rows.find((row) => row.quiz_id === 'gloss-palace-ichio-1-v1');
+  const exampleQuiz = JSON.parse(fs.readFileSync(path.join(root, example.file), 'utf8'));
+  assert.strictEqual(exampleQuiz.slides[0].text, '姑且。請點選與這個詞相關的物件同區域。');
+  const table = JSON.parse(fs.readFileSync(path.join(root, 'data/quizzes/gloss-palace-koshitsu-yoyaku-10-v1.json'), 'utf8'));
+  assert.strictEqual(table.chunk.id, 10);
+  assert.strictEqual(table.chunk.text, 'テーブル席で');
+  assert.strictEqual(table.quiz_id, 'gloss-palace-koshitsu-yoyaku-10-v1');
 });
 
 test('practice page and homepage fast-forward empty sentence stages', function () {

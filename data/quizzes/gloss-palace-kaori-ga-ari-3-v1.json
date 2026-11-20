@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kaori-ga-ari-3-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 3,
+    "text": "痺れる感じも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "麻感也。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaori-ga-ari.png",
+      "hotspot": {
+        "left": 31,
+        "top": 17,
+        "width": 10,
+        "height": 21,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

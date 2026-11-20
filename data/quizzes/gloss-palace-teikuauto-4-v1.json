@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-teikuauto-4-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 4,
+    "text": "普段より"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "比平時。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-teikuauto.png",
+      "hotspot": {
+        "left": 46,
+        "top": 43,
+        "width": 13,
+        "height": 20,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

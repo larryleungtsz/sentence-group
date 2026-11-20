@@ -33217,6 +33217,1104 @@
       "kind": "chunk",
       "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
       "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-1-v1",
+      "file": "data/quizzes/gloss-palace-ichio-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-2-v1",
+      "file": "data/quizzes/gloss-palace-ichio-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-3-v1",
+      "file": "data/quizzes/gloss-palace-ichio-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-4-v1",
+      "file": "data/quizzes/gloss-palace-ichio-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-5-v1",
+      "file": "data/quizzes/gloss-palace-ichio-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-6-v1",
+      "file": "data/quizzes/gloss-palace-ichio-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-ichio-7-v1",
+      "file": "data/quizzes/gloss-palace-ichio-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-1-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-2-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-3-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-4-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-5-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-6-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-7-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-8-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-9-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-10-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-10-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "gloss-palace-kanban-menu-11-v1",
+      "file": "data/quizzes/gloss-palace-kanban-menu-11-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+      "chunk_id": 11
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-1-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-2-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-3-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-4-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-5-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-6-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-7-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-kanki-maa-maa-8-v1",
+      "file": "data/quizzes/gloss-palace-kanki-maa-maa-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-1-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-2-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-3-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-4-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-5-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-6-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-7-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-8-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-kaori-ga-ari-9-v1",
+      "file": "data/quizzes/gloss-palace-kaori-ga-ari-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-1-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-2-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-3-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-4-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-5-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-6-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-7-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-8-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-kodomo-omoide-9-v1",
+      "file": "data/quizzes/gloss-palace-kodomo-omoide-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-1-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-2-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-3-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-4-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-5-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-6-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-konna-basho-7-v1",
+      "file": "data/quizzes/gloss-palace-konna-basho-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-1-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-2-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-3-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-5-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-6-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-7-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-8-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-10-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-10-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-14-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-14-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 14
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-15-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-15-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 15
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-16-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-16-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 16
+    },
+    {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-17-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-17-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 17
+    },
+    {
+      "quiz_id": "gloss-palace-kyou-no-6jihan-1-v1",
+      "file": "data/quizzes/gloss-palace-kyou-no-6jihan-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-kyou-no-6jihan-2-v1",
+      "file": "data/quizzes/gloss-palace-kyou-no-6jihan-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-kyou-no-6jihan-3-v1",
+      "file": "data/quizzes/gloss-palace-kyou-no-6jihan-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-kyou-no-6jihan-4-v1",
+      "file": "data/quizzes/gloss-palace-kyou-no-6jihan-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-kyou-no-6jihan-5-v1",
+      "file": "data/quizzes/gloss-palace-kyou-no-6jihan-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-1-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-2-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-3-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-4-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-5-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-6-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-7-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-8-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-9-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-10-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-10-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "gloss-palace-niwatori-atama-11-v1",
+      "file": "data/quizzes/gloss-palace-niwatori-atama-11-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+      "chunk_id": 11
+    },
+    {
+      "quiz_id": "gloss-palace-odenwa-1-v1",
+      "file": "data/quizzes/gloss-palace-odenwa-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-odenwa-2-v1",
+      "file": "data/quizzes/gloss-palace-odenwa-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-odenwa-3-v1",
+      "file": "data/quizzes/gloss-palace-odenwa-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-odenwa-4-v1",
+      "file": "data/quizzes/gloss-palace-odenwa-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-oseki-1-v1",
+      "file": "data/quizzes/gloss-palace-oseki-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-oseki-2-v1",
+      "file": "data/quizzes/gloss-palace-oseki-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-oseki-3-v1",
+      "file": "data/quizzes/gloss-palace-oseki-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-oseki-4-v1",
+      "file": "data/quizzes/gloss-palace-oseki-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-oseki-5-v1",
+      "file": "data/quizzes/gloss-palace-oseki-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-1-v1",
+      "file": "data/quizzes/gloss-palace-rayu-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-2-v1",
+      "file": "data/quizzes/gloss-palace-rayu-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-3-v1",
+      "file": "data/quizzes/gloss-palace-rayu-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-4-v1",
+      "file": "data/quizzes/gloss-palace-rayu-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-5-v1",
+      "file": "data/quizzes/gloss-palace-rayu-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-rayu-6-v1",
+      "file": "data/quizzes/gloss-palace-rayu-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-roji-1-v1",
+      "file": "data/quizzes/gloss-palace-roji-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-roji-2-v1",
+      "file": "data/quizzes/gloss-palace-roji-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-roji-3-v1",
+      "file": "data/quizzes/gloss-palace-roji-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-roji-4-v1",
+      "file": "data/quizzes/gloss-palace-roji-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-roji-5-v1",
+      "file": "data/quizzes/gloss-palace-roji-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-roji-7-v1",
+      "file": "data/quizzes/gloss-palace-roji-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-roji-8-v1",
+      "file": "data/quizzes/gloss-palace-roji-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-roji-9-v1",
+      "file": "data/quizzes/gloss-palace-roji-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-roji-10-v1",
+      "file": "data/quizzes/gloss-palace-roji-10-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-1-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-2-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-3-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-4-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-5-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-6-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-7-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-8-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-9-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 9
+    },
+    {
+      "quiz_id": "gloss-palace-sore-wa-10-v1",
+      "file": "data/quizzes/gloss-palace-sore-wa-10-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+      "chunk_id": 10
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-1-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-1-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 1
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-2-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-2-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 2
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-3-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-3-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 3
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-4-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-4-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 4
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-5-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-5-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-6-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 6
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-7-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-7-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 7
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-8-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-8-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 8
+    },
+    {
+      "quiz_id": "gloss-palace-teikuauto-9-v1",
+      "file": "data/quizzes/gloss-palace-teikuauto-9-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+      "chunk_id": 9
     }
   ]
 }

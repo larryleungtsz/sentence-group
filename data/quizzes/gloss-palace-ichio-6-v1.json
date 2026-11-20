@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-ichio-6-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 6,
+    "text": "カウンターにご移動いただく"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "請移到吧台。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ichio.png",
+      "hotspot": {
+        "left": 6,
+        "top": 5,
+        "width": 29,
+        "height": 79,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

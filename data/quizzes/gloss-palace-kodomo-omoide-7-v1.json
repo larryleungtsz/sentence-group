@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kodomo-omoide-7-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 7,
+    "text": "値段は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "價格／價錢。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kodomo-omoide.png",
+      "hotspot": {
+        "left": 80,
+        "top": 37,
+        "width": 17,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

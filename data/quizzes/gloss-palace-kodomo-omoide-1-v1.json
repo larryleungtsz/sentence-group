@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kodomo-omoide-1-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 1,
+    "text": "子供の頃の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "童年的／小時候的。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kodomo-omoide.png",
+      "hotspot": {
+        "left": 19,
+        "top": 8,
+        "width": 22,
+        "height": 28,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

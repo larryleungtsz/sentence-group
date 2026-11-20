@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-roji-7-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 7,
+    "text": "店で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "在店裡。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-roji.png",
+      "hotspot": {
+        "left": 53,
+        "top": 12,
+        "width": 22,
+        "height": 32,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

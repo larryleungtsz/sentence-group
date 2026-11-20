@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kyou-no-6jihan-3-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 3,
+    "text": "2人で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "兩個人。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kyou-no-6jihan.png",
+      "hotspot": {
+        "left": 49,
+        "top": 61,
+        "width": 9,
+        "height": 25,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
