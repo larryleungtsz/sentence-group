@@ -33786,6 +33786,15 @@
       "chunk_id": 17
     },
     {
+      "quiz_id": "gloss-palace-koshitsu-yoyaku-19-v1",
+      "file": "data/quizzes/gloss-palace-koshitsu-yoyaku-19-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+      "chunk_id": 19
+    },
+    {
       "quiz_id": "gloss-palace-kyou-no-6jihan-1-v1",
       "file": "data/quizzes/gloss-palace-kyou-no-6jihan-1-v1.json",
       "objective": "gloss_to_palace_tap",
@@ -34108,6 +34117,15 @@
       "kind": "chunk",
       "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
       "chunk_id": 5
+    },
+    {
+      "quiz_id": "gloss-palace-roji-6-v1",
+      "file": "data/quizzes/gloss-palace-roji-6-v1.json",
+      "objective": "gloss_to_palace_tap",
+      "level": 2,
+      "kind": "chunk",
+      "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+      "chunk_id": 6
     },
     {
       "quiz_id": "gloss-palace-roji-7-v1",
