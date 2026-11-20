@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-koshitsu-yoyaku-16-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 16,
+    "text": "飲み放題付き"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "含暢飲。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-koshitsu-yoyaku.png",
+      "hotspot": {
+        "left": 0,
+        "top": 44,
+        "width": 20,
+        "height": 55,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-ichio-2-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 2,
+    "text": "空いてるんですけれども"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "是有空位不過。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ichio.png",
+      "hotspot": {
+        "left": 78,
+        "top": 62,
+        "width": 11,
+        "height": 29,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

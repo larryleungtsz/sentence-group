@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-konna-basho-7-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 7,
+    "text": "ことになる"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "結果就會。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-konna-basho.png",
+      "hotspot": {
+        "left": 72,
+        "top": 61,
+        "width": 27,
+        "height": 30,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

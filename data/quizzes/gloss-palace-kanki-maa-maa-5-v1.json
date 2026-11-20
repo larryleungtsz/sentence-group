@@ -1,0 +1,31 @@
+{
+  "quiz_id": "gloss-palace-kanki-maa-maa-5-v1",
+  "objective": "gloss_to_palace_tap",
+  "level": 2,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 5,
+    "text": "匂いがついてしまうけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "會沾上味道不過。請點選與這個詞相關的物件同區域。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kanki-maa-maa.png",
+      "hotspot": {
+        "left": 79,
+        "top": 58,
+        "width": 19,
+        "height": 39,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
