@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kyou-no-6jihan-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 4,
+    "text": "席って"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一張深棕色實木靠背餐椅，椅面上放著一塊正方形米白色亞麻坐墊，代表供人入座的座位。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/seki-tte-combined-v1.jpeg",
+      "hotspot": {
+        "left": 6.35,
+        "top": 6.12,
+        "width": 36.13,
+        "height": 90.03,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

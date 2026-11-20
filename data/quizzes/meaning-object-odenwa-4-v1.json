@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-odenwa-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 4,
+    "text": "お願いしたいんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一雙在胸前垂直合十的白色石膏雙手雕塑，指尖微向前傾並配有一張空白米色便條紙夾在掌心之間，代表有事相求的禮貌請求。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/onegai-shitai-n-desu-kedo-combined-v1.jpeg",
+      "hotspot": {
+        "left": 71.22,
+        "top": 6.51,
+        "width": 28.52,
+        "height": 83.33,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

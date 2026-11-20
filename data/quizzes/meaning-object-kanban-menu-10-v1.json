@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-10-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 10,
+    "text": "具も"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個小巧的木盤，裡面綜合盛放著切段的大蔥、香菇與豆腐塊（不含雞肉），木盤邊緣額外貼著一張寫著「也（ALSO）」的黃色貼紙。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/gu-mo-combined-v1.jpeg",
+      "hotspot": {
+        "left": 15.7,
+        "top": 39.84,
+        "width": 33.43,
+        "height": 40.36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

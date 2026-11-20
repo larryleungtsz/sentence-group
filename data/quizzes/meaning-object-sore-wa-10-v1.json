@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-10-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 10,
+    "text": "3545"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一塊綠色長方形復古公路里程鐵牌，白色凸起金屬字體清晰壓印著「3545」，代表數字三五四五。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/3545-combined-v1.jpeg",
+      "hotspot": {
+        "left": 4.88,
+        "top": 12.24,
+        "width": 35.16,
+        "height": 69.93,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

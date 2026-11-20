@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 2,
+    "text": "スパイシーな"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一根亮紅色、表面帶有火焰紋路的辣椒實體模型，辣椒頂端還綁著一個帶有「SPICY」字樣的黃色警示標籤。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/supaishii-na-combined-v1.jpeg",
+      "hotspot": {
+        "left": 24.42,
+        "top": 18.23,
+        "width": 26.74,
+        "height": 63.54,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

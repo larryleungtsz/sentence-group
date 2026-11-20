@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 5,
+    "text": "匂いがついてしまうけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一團半透明灰白色的棉花煙霧雕塑，像章魚觸手般緊緊纏繞在布料纖維上，一旁插著一塊寫有白色「BUT」字樣的紅色三角警告小立牌，代表氣味附著在身上但語氣轉折。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/nioi-ga-tsuite-shimau-kedo-combined-v3.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 41.67,
+        "width": 69.77,
+        "height": 58.33,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

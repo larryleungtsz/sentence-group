@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 4,
+    "text": "これらが"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個透明的四方形玻璃收納盒，裡面同時裝著一顆紅辣椒、一朵紫花與一個閃電標誌，將前面的元素全數聚在一起代表「這些」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/korera-ga-combined-v1.jpeg",
+      "hotspot": {
+        "left": 43.02,
+        "top": 30.21,
+        "width": 20.64,
+        "height": 51.04,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

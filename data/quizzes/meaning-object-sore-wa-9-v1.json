@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 9,
+    "text": "9467"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一具四位數黃銅機械密碼鎖，四個銀色金屬滾輪齊齊對準紅線並清晰顯示「9-4-6-7」，代表數字九四六七。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/9467-combined-v1.jpeg",
+      "hotspot": {
+        "left": 4.88,
+        "top": 54.2,
+        "width": 35.16,
+        "height": 42.83,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

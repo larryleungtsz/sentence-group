@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見鈔票疊剛推到櫃台邊、前端剛碰到收款托盤沿停住＝「用這個麻煩您」；見這幕→想起用這個麻煩您。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg?v=20261030combined"
-      ]
+      "text": "鈔票疊／收款托盤沿"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-kore-de-onegai-shimasu-combined.jpg",
       "hotspot": {
-        "left": 22,
-        "top": 52,
-        "width": 14,
-        "height": 16,
+        "left": 30.47,
+        "top": 43.75,
+        "width": 43.75,
+        "height": 30.47,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

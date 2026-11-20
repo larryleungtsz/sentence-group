@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見計數器滾輪剛停在最終數字停住＝「係／變成」；見這幕→想起係／變成。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ni-narimasu-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-kore-de-onegai-shimasu-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg?v=20261030combined"
-      ]
+      "text": "計數器滾輪"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-ni-narimasu-combined.jpg",
       "hotspot": {
-        "left": 62,
-        "top": 38,
-        "width": 16,
-        "height": 16,
+        "left": 16.41,
+        "top": 36.72,
+        "width": 56.25,
+        "height": 29.69,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

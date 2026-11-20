@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見空桌兩椅剛拉開、桌面乾淨無盤停住＝「有空位嗎」；見這幕→想起有空位嗎。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-o-seki-kakunin-shite-mairimasu-node-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg?v=20261030combined"
-      ]
+      "text": "空桌兩椅剛拉開、桌面乾淨無盤停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-aite-masu-ka-combined.jpg",
       "hotspot": {
-        "left": 48,
-        "top": 48,
-        "width": 16,
-        "height": 24,
+        "left": 37.89,
+        "top": 50.39,
+        "width": 62.11,
+        "height": 49.61,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

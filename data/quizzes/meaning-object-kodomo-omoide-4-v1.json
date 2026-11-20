@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 4,
+    "text": "通りかかって"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "金屬路標（腳印箭頭穿街）"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/toorikakatte-combined-v1.jpeg",
+      "hotspot": {
+        "left": 13.95,
+        "top": 2.6,
+        "width": 43.31,
+        "height": 85.42,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

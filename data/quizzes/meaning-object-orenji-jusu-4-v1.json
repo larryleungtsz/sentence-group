@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見燒鳥串盤剛多推上一旁、問號牌同時豎起停住＝「還有，燒鳥也可以嗎」；見這幕→想起還有，燒鳥也可以嗎。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg?v=20261031orenjicombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukimi-tsukune-combined.jpg?v=20261031orenjicombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-combined.jpg?v=20261031orenjicombined"
-      ]
+      "text": "燒鳥串盤＋問號牌"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg",
       "hotspot": {
-        "left": 38,
-        "top": 55,
-        "width": 20,
-        "height": 35,
+        "left": 12.5,
+        "top": 65.23,
+        "width": 73.44,
+        "height": 29.69,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

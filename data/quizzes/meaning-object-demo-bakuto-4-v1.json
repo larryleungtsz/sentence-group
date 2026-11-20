@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——指尖停在胸口正中。視線釘在指尖與胸口；指自己＝我自己。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukidakedo-combined.jpg"
-      ]
+      "text": "食指剛按在自己胸口"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/jibunwa-combined.jpg",
       "hotspot": {
-        "left": 56,
-        "top": 38,
-        "width": 12,
-        "height": 16,
+        "left": 31.25,
+        "top": 73.05,
+        "width": 36.72,
+        "height": 19.14,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

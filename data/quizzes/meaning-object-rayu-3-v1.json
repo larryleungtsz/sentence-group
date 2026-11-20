@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-rayu-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 3,
+    "text": "すごく"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個塗滿極端亮黃色警示漆的巨型箭頭指示牌，箭頭垂直向上誇張地伸長，邊緣刻著大大的「1000%」極限刻度，代表程度誇張地拉滿。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/sugoku-combined-v1.jpeg",
+      "hotspot": {
+        "left": 41.86,
+        "top": 1.56,
+        "width": 51.16,
+        "height": 98.44,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

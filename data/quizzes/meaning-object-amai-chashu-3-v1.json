@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——掌沿停在半空高位、兩側空無。視線釘在掌沿；標出的高度＝那麼／那麼地。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sonnani-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuga-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sukijanai-combined.jpg"
-      ]
+      "text": "掌沿橫切停在半空高位，像標出「那麼高」一截"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sonnani-combined.jpg",
       "hotspot": {
-        "left": 26,
-        "top": 26,
-        "width": 24,
-        "height": 30,
+        "left": 23.05,
+        "top": 9.38,
+        "width": 28.52,
+        "height": 17.58,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

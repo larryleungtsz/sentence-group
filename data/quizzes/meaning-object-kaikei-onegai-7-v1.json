@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見收款托盤剛拉回櫃台內、現金同時入盤停住＝「收您」；見這幕→想起收您。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg?v=20261030combined"
-      ]
+      "text": "收款托盤"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-o-azukari-shimasu-combined.jpg",
       "hotspot": {
-        "left": 56,
-        "top": 70,
-        "width": 14,
-        "height": 14,
+        "left": 5.47,
+        "top": 49.22,
+        "width": 87.5,
+        "height": 50.78,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

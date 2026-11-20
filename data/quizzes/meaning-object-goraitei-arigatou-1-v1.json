@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——客人腳剛跨過店門檻落地停住。視線釘在門檻與腳的交接；踏進店＝光臨。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goraiken-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yokattara-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/arimasunode-combined.jpg"
-      ]
+      "text": "客人腳剛跨過店門檻落地"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/goraiken-combined.jpg",
       "hotspot": {
-        "left": 18,
-        "top": 58,
-        "width": 24,
-        "height": 40,
+        "left": 0.0,
+        "top": 21.09,
+        "width": 45.31,
+        "height": 68.36,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

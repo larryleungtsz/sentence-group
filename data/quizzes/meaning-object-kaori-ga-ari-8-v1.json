@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 8,
+    "text": "美味しさを"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個潔白的陶瓷餐盤，中央放著一顆通體發出耀眼金色光芒、帶有金箔微光的圓形黃金飯糰。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/oishisa-o-combined-v1.jpeg",
+      "hotspot": {
+        "left": 35.47,
+        "top": 51.04,
+        "width": 32.56,
+        "height": 31.25,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

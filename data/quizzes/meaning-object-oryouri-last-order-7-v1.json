@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見空掌攤開眉微揚的店員＝「沒有嗎」；見這幕→想起還有沒有。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg"
-      ]
+      "text": "空掌攤開眉微揚的店員"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-gozaimasenka-combined.jpg",
       "hotspot": {
-        "left": 66,
-        "top": 20,
-        "width": 16,
-        "height": 64,
+        "left": 0.0,
+        "top": 37.11,
+        "width": 54.69,
+        "height": 62.89,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 2,
+    "text": "辛味が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一根鮮紅欲滴且表面發亮、頂端還吐著一小團鮮紅色靜態火焰形狀裝飾的尖頭大紅辣椒。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/karami-ga-combined-v1.jpeg",
+      "hotspot": {
+        "left": 53.49,
+        "top": 0.52,
+        "width": 35.47,
+        "height": 90.62,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

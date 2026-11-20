@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-konna-basho-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 4,
+    "text": "決めつけてしまうと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一把巨大的金屬烙鐵，正深深砸在一塊木板上，木板被烙印出不可塗改的巨大紅色「STAMP/定論」印痕，烙鐵上還纏繞著一條封死動彈不得的鐵鍊。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/kimetsukete-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 52.33,
+        "height": 100.0,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

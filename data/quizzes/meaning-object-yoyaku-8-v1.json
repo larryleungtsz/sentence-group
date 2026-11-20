@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見側身＋前伸引導手＝「幫您帶位」；見這幕→想起帶你去坐。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg"
-      ]
+      "text": "店員身側轉、掌心剛向前伸停住引導"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/goannai-shimasune-combined.jpg",
       "hotspot": {
-        "left": 74,
-        "top": 28,
-        "width": 22,
-        "height": 44,
+        "left": 50.0,
+        "top": 0.78,
+        "width": 50.0,
+        "height": 99.22,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

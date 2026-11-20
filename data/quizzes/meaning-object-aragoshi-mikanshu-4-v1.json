@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見空杯舉起＋第二杯入鏡＝「再來一杯」；見這幕→想起再要一杯。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-okawari-de-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-ijou-de-yoroshii-desuka-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-boku-wa-combined.jpg"
-      ]
+      "text": "空杯剛舉起、第二杯滿杯同時入鏡停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-okawari-de-combined.jpg",
       "hotspot": {
-        "left": 86,
-        "top": 55,
-        "width": 14,
-        "height": 38,
+        "left": 21.09,
+        "top": 9.38,
+        "width": 73.83,
+        "height": 28.91,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見長條白身鱧魚鋪滿盤面＝「海鰻的」；見這幕→想起海鰻的。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-hamo-no-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kochira-kara-desu-ne-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-nanbanzuke-desu-combined.jpg"
-      ]
+      "text": "長條白身鱧魚鋪滿盤面"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-hamo-no-combined.jpg",
       "hotspot": {
-        "left": 10,
-        "top": 54,
-        "width": 36,
-        "height": 40,
+        "left": 7.81,
+        "top": 24.22,
+        "width": 76.95,
+        "height": 55.08,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "ZERO 黑銀百事罐＝百事零，因為罐身大印 ZERO；見到 ZERO 標就想起「百事零」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
-      ]
+      "text": "罐身大印 ZERO 的黑銀百事罐"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/pepushi-zero-wa-combined.jpg",
       "hotspot": {
-        "left": 48,
-        "top": 52,
-        "width": 12,
-        "height": 36,
+        "left": 83.98,
+        "top": 72.66,
+        "width": 14.06,
+        "height": 20.31,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

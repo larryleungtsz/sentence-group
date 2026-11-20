@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見掌沿橫切撥轉話頭＝「那麼」；見這幕→想起那麼。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-jaa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-oukagai-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-futatsu-combined.jpg"
-      ]
+      "text": "掌沿橫切撥轉話頭"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-jaa-combined.jpg",
       "hotspot": {
-        "left": 34,
-        "top": 68,
-        "width": 12,
-        "height": 14,
+        "left": 0.0,
+        "top": 22.66,
+        "width": 71.88,
+        "height": 36.72,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

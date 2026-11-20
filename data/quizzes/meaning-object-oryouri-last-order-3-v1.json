@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見鐘面指針停在整點＝「時間」；見這幕→想起時間到了。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg"
-      ]
+      "text": "鐘面指針停在整點"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-ojikan-combined.jpg",
       "hotspot": {
-        "left": 62,
-        "top": 5,
-        "width": 11,
-        "height": 18,
+        "left": 4.69,
+        "top": 1.56,
+        "width": 40.62,
+        "height": 39.45,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

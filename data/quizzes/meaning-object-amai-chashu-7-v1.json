@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——空碗底對住鏡頭、雙肩微聳、掌心向上未放下。視線釘在見底的碗；未飽＋或許＝可能不夠滿足。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/monotarinai-kamo-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chotto-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/amai-combined.jpg"
-      ]
+      "text": "碗已見底，人雙肩微聳、掌心向上停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-amai-chashu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/monotarinai-kamo-combined.jpg",
       "hotspot": {
-        "left": 66,
-        "top": 70,
-        "width": 22,
-        "height": 28,
+        "left": 0.0,
+        "top": 5.47,
+        "width": 83.59,
+        "height": 88.28,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

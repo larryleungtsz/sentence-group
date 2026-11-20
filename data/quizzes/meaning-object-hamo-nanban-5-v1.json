@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見兩條銀亮沙甸魚＋中間「と」＝「沙甸魚和」；見這幕→想起沙甸魚和。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-iwashi-to-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-honjitsu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-myoga-no-combined.jpg"
-      ]
+      "text": "兩條銀亮沙甸魚＋中間「と」"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-hamo-nanban.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-iwashi-to-combined.jpg",
       "hotspot": {
-        "left": 52,
-        "top": 60,
-        "width": 22,
-        "height": 20,
+        "left": 0.0,
+        "top": 62.11,
+        "width": 100.0,
+        "height": 23.83,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

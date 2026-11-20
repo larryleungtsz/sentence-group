@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 3,
+    "text": "路地の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一塊復古的金屬路牌，上面描繪著兩側高樓夾著細長小巷的圖案，下方懸掛著一個鎖頭連結環（代表「的」的屬性連結）。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/roji-no-combined-v2.jpeg",
+      "hotspot": {
+        "left": 65.12,
+        "top": 6.25,
+        "width": 34.3,
+        "height": 93.23,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

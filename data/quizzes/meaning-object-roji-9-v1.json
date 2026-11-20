@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 9,
+    "text": "気を抜くと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一根張得極緊、卻在中間出現裂痕並開始有些鬆弛鬆脫的粗麻繩，旁邊立著一個全身肌肉放鬆、垂頭喪氣的鬆懈草人雕像。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ki-o-nuku-to-combined-v2.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 12.5,
+        "width": 53.49,
+        "height": 76.04,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

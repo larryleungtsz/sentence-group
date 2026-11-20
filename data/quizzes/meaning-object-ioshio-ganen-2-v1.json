@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見說明卡「吃法」頁翻開正面＝「作為食用方法」；見這幕→想起作為食用方法。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-omeshiagari-kata-to-shite-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oishii-n-desu-keredomo-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ioshio-tte-iu-combined.jpg"
-      ]
+      "text": "說明卡「吃法」頁翻開正面"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-omeshiagari-kata-to-shite-combined.jpg",
       "hotspot": {
-        "left": 20,
-        "top": 58,
-        "width": 26,
-        "height": 38,
+        "left": 57.03,
+        "top": 33.59,
+        "width": 42.97,
+        "height": 55.08,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

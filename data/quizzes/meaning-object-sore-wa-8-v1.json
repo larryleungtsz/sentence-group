@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 8,
+    "text": "852"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一組三顆連成一排的紅白相間航空安全救生圈迷你模型，圈身分別印著粗黑字體「8」、「5」、「2」，代表數字八五二。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/852-combined-v1.jpeg",
+      "hotspot": {
+        "left": 4.88,
+        "top": 29.72,
+        "width": 54.69,
+        "height": 47.2,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

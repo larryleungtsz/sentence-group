@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-7-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 7,
+    "text": "想像以上の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一本厚重的魔法書，書本敞開的頁面中央豎立著一個大型立體彈跳卡片，構造高聳且大大突破了書本本身的邊界。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/sozo-ijo-no-combined-v2.jpeg",
+      "hotspot": {
+        "left": 5.23,
+        "top": 0.0,
+        "width": 67.15,
+        "height": 88.54,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

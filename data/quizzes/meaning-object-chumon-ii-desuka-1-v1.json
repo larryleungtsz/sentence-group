@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見攤開菜單＋指點訂單欄望店員＝「可以點餐嗎」；見這幕→想起客人在問可否點餐。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg"
-      ]
+      "text": "攤開菜單＋指點訂單欄望店員"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-chumon-ii-desuka-combined.jpg",
       "hotspot": {
-        "left": 11,
-        "top": 54,
-        "width": 28,
-        "height": 24,
+        "left": 0.0,
+        "top": 11.33,
+        "width": 54.3,
+        "height": 72.66,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

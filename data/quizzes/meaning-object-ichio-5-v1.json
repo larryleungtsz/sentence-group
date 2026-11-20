@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-ichio-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 5,
+    "text": "もしいらっしゃった場合は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一塊印有金色腳印圖案的深綠色歡迎地墊，地墊前方立著一枚巨大的亮黃色立體問號「？」塑膠牌，代表假設客人踏進門的情況。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshi-irasshatta-baai-wa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 9.08,
+        "top": 48.83,
+        "width": 50.87,
+        "height": 51.17,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-odenwa-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 2,
+    "text": "居酒屋"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一盞橢圓形大紅紙燈籠，上下為黑色木框，燈籠正面以粗黑毛筆字寫著直排「居酒屋」三字，代表日式酒館。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/izakaya-combined-v1.jpeg",
+      "hotspot": {
+        "left": 10.17,
+        "top": 3.58,
+        "width": 21.8,
+        "height": 74.54,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

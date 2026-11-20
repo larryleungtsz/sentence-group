@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-rayu-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 4,
+    "text": "良くて"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一顆金光閃閃的大型「五角星」雕像，星形右側伸出一條像接力棒一樣的金屬連環，精準代表「品質非常好（五星好評）」並且「順著接環拉向下一個描述」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/yokute-combined-v1.jpeg",
+      "hotspot": {
+        "left": 4.36,
+        "top": 1.82,
+        "width": 88.66,
+        "height": 87.24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

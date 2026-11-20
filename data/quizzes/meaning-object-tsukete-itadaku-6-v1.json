@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見店員試吃勺伸到面前、頭微低＝「請試試」；見這幕→想起請試試。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-otameshi-kudasai-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-zehi-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-ieei-combined.jpg"
-      ]
+      "text": "店員試吃勺伸到面前、頭微低"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-otameshi-kudasai-combined.jpg",
       "hotspot": {
-        "left": 28,
-        "top": 70,
-        "width": 18,
-        "height": 26,
+        "left": 0.0,
+        "top": 48.44,
+        "width": 66.41,
+        "height": 51.56,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

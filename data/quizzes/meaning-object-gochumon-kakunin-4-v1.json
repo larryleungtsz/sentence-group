@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——紅圈剛合攏、叉剛落下。視線釘在紅圈與叉；錯項被標出＝弄錯。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
-      ]
+      "text": "帳單上被紅筆圈住、旁邊剛畫叉的錯項"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/omachigai-combined.jpg",
       "hotspot": {
-        "left": 66,
-        "top": 52,
-        "width": 16,
-        "height": 32,
+        "left": 65.23,
+        "top": 59.57,
+        "width": 28.91,
+        "height": 15.43,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

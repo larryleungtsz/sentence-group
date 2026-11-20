@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 2,
+    "text": "まあまあで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻戴著白手套的右手，五指張開掌心向下水平擺放，手腕微傾呈現不偏不倚的靜態平衡手勢，代表程度中等、還算過得去。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/maa-maa-de-combined-v3.jpeg",
+      "hotspot": {
+        "left": 13.95,
+        "top": 16.67,
+        "width": 32.85,
+        "height": 44.27,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——液面高出刻度、停住。視線釘在高出的那截；偏過＝偏多。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunwa-combined.jpg"
-      ]
+      "text": "量杯液面剛越過刻度線一截"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ome-combined.jpg",
       "hotspot": {
-        "left": 32,
-        "top": 52,
-        "width": 12,
-        "height": 28,
+        "left": 6.25,
+        "top": 44.53,
+        "width": 33.59,
+        "height": 32.81,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

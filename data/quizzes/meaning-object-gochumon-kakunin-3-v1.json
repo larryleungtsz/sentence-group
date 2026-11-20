@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——上身微傾、雙手捧單停胸前、目光向上看你。視線落在捧單的雙手；請准動手勢＝請讓我…"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
-      ]
+      "text": "微鞠躬、雙手捧單停在胸前的店員"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon-kakunin.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sasete-itadakimasu-combined.jpg",
       "hotspot": {
-        "left": 30,
-        "top": 8,
-        "width": 26,
-        "height": 48,
+        "left": 59.38,
+        "top": 0.0,
+        "width": 26.95,
+        "height": 35.94,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

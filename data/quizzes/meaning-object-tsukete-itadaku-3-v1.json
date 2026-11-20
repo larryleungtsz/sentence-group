@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見醬色滲入食物、表面變深一層＝「會變成那種味道所以」；見這幕→想起會變成那種味道所以。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-oaji-ni-naru-node-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-tamago-ppoi-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-osusume-shiteru-node-combined.jpg"
-      ]
+      "text": "醬色滲入食物、表面變深一層"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-oaji-ni-naru-node-combined.jpg",
       "hotspot": {
-        "left": 32,
-        "top": 50,
-        "width": 20,
-        "height": 22,
+        "left": 6.25,
+        "top": 78.12,
+        "width": 90.23,
+        "height": 16.41,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

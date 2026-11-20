@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見掌心側向、剛指向旁邊那碟停住＝「旁邊是」；見這幕→想起旁邊是。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg?v=20261031ebiakacombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg?v=20261031ebiakacombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg?v=20261031ebiakacombined"
-      ]
+      "text": "掌心側向、剛指向旁邊那碟停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-o-tonari-ga-combined.jpg",
       "hotspot": {
-        "left": 20,
-        "top": 36,
-        "width": 14,
-        "height": 14,
+        "left": 55.47,
+        "top": 52.34,
+        "width": 44.53,
+        "height": 14.84,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

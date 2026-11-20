@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 6,
+    "text": "それでもまた"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一顆鮮紅色的光滑橡膠彈力球，正被一塊透明壓克力板向下壓扁一半卻依然向上頂住，代表即便有阻礙仍然反彈回來的執著。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/soredemo-mata-combined-v1.jpeg",
+      "hotspot": {
+        "left": 6.4,
+        "top": 50.52,
+        "width": 36.92,
+        "height": 39.06,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

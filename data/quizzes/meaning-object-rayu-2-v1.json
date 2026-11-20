@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-rayu-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 2,
+    "text": "ラー油も"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個透著鮮豔紅光的透明玻璃辣油瓶，瓶身上貼著印有「辣油」字樣與辣椒圖案的標籤，瓶底還沉澱著滿滿的沉木紅辣椒渣。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/rayu-mo-combined-v1.jpeg",
+      "hotspot": {
+        "left": 21.8,
+        "top": 2.86,
+        "width": 23.69,
+        "height": 90.89,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

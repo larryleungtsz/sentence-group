@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-niwatori-atama-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 1,
+    "text": "鶏の頭や"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "陶瓷雞頭雕像"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/niwatori-no-atama-ya-combined-v1.jpeg",
+      "hotspot": {
+        "left": 23.26,
+        "top": 6.25,
+        "width": 25.58,
+        "height": 64.58,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

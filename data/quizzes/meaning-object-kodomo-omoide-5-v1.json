@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 5,
+    "text": "焼売を"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "竹蒸籠裡蟹籽黃皮燒賣"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shuumai-wo-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 47.09,
+        "height": 96.35,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

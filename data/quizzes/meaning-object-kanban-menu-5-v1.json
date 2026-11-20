@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 5,
+    "text": "開けた"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個已經被完全卸下、呈傾斜45度定格擱置在旁邊的金屬盒蓋，旁邊立著一個畫有綠色勾勾（✔）與「OPENED（已開）」字樣的標誌牌。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aketa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 45.06,
+        "top": 11.98,
+        "width": 54.65,
+        "height": 75.0,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

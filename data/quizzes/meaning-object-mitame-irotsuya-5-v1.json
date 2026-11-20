@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——筷尖停在半空未夾、旁邊勾同時亮起停住。視線釘在未動的筷尖與勾；不吃卻仍＝即使不吃也。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg"
-      ]
+      "text": "筷子停在半空未夾、旁邊勾同時亮起"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/tabenakutemo-combined.jpg",
       "hotspot": {
-        "left": 42,
-        "top": 30,
-        "width": 34,
-        "height": 12,
+        "left": 58.59,
+        "top": 1.56,
+        "width": 35.94,
+        "height": 25.78,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

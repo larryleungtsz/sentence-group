@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見指向收銀台的掌＝「請到收銀台那邊」；見這幕→想起請到收銀台。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg"
-      ]
+      "text": "指向收銀台的掌"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/10-reji-no-hou-made-combined.jpg",
       "hotspot": {
-        "left": 82,
-        "top": 36,
-        "width": 16,
-        "height": 30,
+        "left": 3.91,
+        "top": 25.39,
+        "width": 48.83,
+        "height": 23.44,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

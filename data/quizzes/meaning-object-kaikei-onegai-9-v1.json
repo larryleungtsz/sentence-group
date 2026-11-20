@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見「要／不要」雙選卡剛翻開正面停住＝「需要嗎」；見這幕→想起需要嗎。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-riyou-ni-nararemasuka-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-o-kaikei-wa-combined.jpg?v=20261030combined"
-      ]
+      "text": "「要／不要」雙選卡"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/09-go-riyou-ni-nararemasuka-combined.jpg",
       "hotspot": {
-        "left": 87,
-        "top": 46,
-        "width": 11,
-        "height": 34,
+        "left": 37.5,
+        "top": 44.53,
+        "width": 33.59,
+        "height": 45.31,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

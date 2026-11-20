@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 1,
+    "text": "換気は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一具不鏽鋼方框排風扇，黑色扇葉靜止並配有一條緊緊繫在金屬防護網上的白絲帶，絲帶被氣流吹得水平筆直向外飄揚，代表室內外空氣流通換氣。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kanki-wa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 53.12,
+        "top": 7.22,
+        "width": 46.56,
+        "height": 60.0,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

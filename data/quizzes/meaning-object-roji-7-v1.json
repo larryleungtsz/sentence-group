@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-7-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 7,
+    "text": "店で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一座帶有紅白相間遮陽棚的古典小店鋪模型，門口掛著一塊厚重的圓形「LOCATION / 在此處」地標定位針立牌。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/mise-de-combined-v2.jpeg",
+      "hotspot": {
+        "left": 53.49,
+        "top": 0.0,
+        "width": 46.51,
+        "height": 96.88,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

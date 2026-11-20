@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kyou-no-6jihan-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 5,
+    "text": "18時半から"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一台黑色長方形翻頁式電子數字鐘，白色翻頁牌清晰顯示「18:30」，鐘體左側卡著一顆橙色發光右箭頭按鈕，代表從十八點半開始。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/juhachiji-han-kara-combined-v1.jpeg",
+      "hotspot": {
+        "left": 3.42,
+        "top": 23.6,
+        "width": 34.18,
+        "height": 62.06,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

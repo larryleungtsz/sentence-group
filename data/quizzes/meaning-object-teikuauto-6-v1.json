@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-teikuauto-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 6,
+    "text": "大きくて"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "金屬皮尺裹住的巨無霸燒賣"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/okikute-combined-v1.jpeg",
+      "hotspot": {
+        "left": 10.9,
+        "top": 23.44,
+        "width": 41.13,
+        "height": 55.73,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

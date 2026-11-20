@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-teikuauto-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 5,
+    "text": "50％"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "對半切的餅圖模型（中央「50%」）"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/goju-pasento-combined-v2.jpeg",
+      "hotspot": {
+        "left": 6.54,
+        "top": 5.21,
+        "width": 46.51,
+        "height": 87.76,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

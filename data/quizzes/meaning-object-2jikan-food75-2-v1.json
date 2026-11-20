@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見指按住 FOOD＝「餐點（主題）」；見這幕→想起話頭在講餐點。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/fuudo-ga-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nanajugo-fun-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-jikan-sei-de-combined.jpg"
-      ]
+      "text": "食指剛按在菜單大字「FOOD」上停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/fuudo-ga-combined.jpg",
       "hotspot": {
-        "left": 16,
-        "top": 55,
-        "width": 28,
-        "height": 40,
+        "left": 32.81,
+        "top": 50.0,
+        "width": 67.19,
+        "height": 50.0,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

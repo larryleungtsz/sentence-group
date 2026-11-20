@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-7-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 7,
+    "text": "値段は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "衣物上大紅標價簽「PRICE / 値段」"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/3e8473313eb0b115339874390271a28bf25dd101/images/nedanha-combined-v1.jpeg",
+      "hotspot": {
+        "left": 36.05,
+        "top": 21.88,
+        "width": 50.0,
+        "height": 59.38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

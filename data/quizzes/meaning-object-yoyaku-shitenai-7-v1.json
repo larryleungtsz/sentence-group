@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見通道門剛推開、地上箭頭指向深處停住＝「請往前」；見這幕→想起請往前。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg?v=20261030combined"
-      ]
+      "text": "通道門剛推開、地上箭頭指向深處停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-o-susumi-kudasai-combined.jpg",
       "hotspot": {
-        "left": 82,
-        "top": 28,
-        "width": 16,
-        "height": 58,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 41.41,
+        "height": 82.03,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

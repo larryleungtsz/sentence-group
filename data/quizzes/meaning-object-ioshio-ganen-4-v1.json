@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見粗晶岩鹽塊放在掌心＝「是岩鹽」；見這幕→想起是岩鹽。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ganen-desu-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ioshio-tte-iu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oishii-n-desu-keredomo-combined.jpg"
-      ]
+      "text": "粗晶岩鹽塊放在掌心"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ioshio-ganen.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-ganen-desu-combined.jpg",
       "hotspot": {
-        "left": 58,
-        "top": 50,
-        "width": 22,
-        "height": 30,
+        "left": 0.0,
+        "top": 58.59,
+        "width": 52.34,
+        "height": 41.41,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

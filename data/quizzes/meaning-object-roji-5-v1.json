@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 5,
+    "text": "ひっそりと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個戴著黑色口罩的石膏人頭雕像，唇前豎著一根白皙的手指，正做出標準的「噓——（靜音）」靜態手勢。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/hissori-to-combined-v2.jpeg",
+      "hotspot": {
+        "left": 8.72,
+        "top": 6.25,
+        "width": 19.19,
+        "height": 65.62,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

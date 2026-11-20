@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-konna-basho-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 6,
+    "text": "見逃してしまう"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個裝有明亮尾燈的公車車尾模型，正離去留下一道固態煙霧，公車尾巴旁邊立著一個伸手想招車卻只抓到空氣的白色手套雕像，代表「與目標擦身而過、錯失掉了」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/minogashite-combined-v2.jpeg",
+      "hotspot": {
+        "left": 47.09,
+        "top": 2.08,
+        "width": 52.91,
+        "height": 81.25,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

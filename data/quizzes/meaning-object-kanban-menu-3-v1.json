@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 3,
+    "text": "鶏鍋は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一口深棕色的傳統日式土鍋（土鍋），鍋裡盛滿了熱氣騰騰的完整雞湯與雞肉塊，鍋子本體安放在黑色鐵架上。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/torinabe-wa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 47.67,
+        "top": 19.79,
+        "width": 46.22,
+        "height": 69.79,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

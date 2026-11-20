@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見剛放到面前的長條帳單＝「是帳單所以」；見這幕→想起這是帳單。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-denpyou-tonarimasunode-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-gozaimasenka-combined.jpg"
-      ]
+      "text": "剛放到面前的長條帳單"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/09-denpyou-tonarimasunode-combined.jpg",
       "hotspot": {
-        "left": 34,
-        "top": 82,
-        "width": 22,
-        "height": 14,
+        "left": 1.56,
+        "top": 72.27,
+        "width": 97.66,
+        "height": 27.73,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見大冰塊剛倒進杯底、棱角同時亮起停住＝「加冰」；見這幕→想起加冰。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-rokku-de-combined.jpg?v=20261031orenjicombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg?v=20261031orenjicombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukimi-tsukune-combined.jpg?v=20261031orenjicombined"
-      ]
+      "text": "大冰塊／杯"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-rokku-de-combined.jpg",
       "hotspot": {
-        "left": 22,
-        "top": 70,
-        "width": 10,
-        "height": 22,
+        "left": 25.0,
+        "top": 48.44,
+        "width": 53.52,
+        "height": 46.09,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

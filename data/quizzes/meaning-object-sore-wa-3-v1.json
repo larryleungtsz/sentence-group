@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 3,
+    "text": "では"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一塊黑色電影場記板，頂部黑白斜紋拍板呈張開準備合上的靜態角度，代表轉換話題、準備進入下一階段。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dewa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 3.91,
+        "top": 15.73,
+        "width": 42.97,
+        "height": 81.29,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

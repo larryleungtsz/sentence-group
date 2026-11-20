@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 6,
+    "text": "よろしいですか"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻陶瓷白色右手雕塑，四指握拳、大拇指朝上比出讚許手勢，拇指指尖上方懸停著一枚迷你銀色問號，代表徵詢對方是否同意。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/yoroshii-desu-ka-combined-v1.jpeg",
+      "hotspot": {
+        "left": 7.32,
+        "top": 6.12,
+        "width": 33.2,
+        "height": 87.41,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

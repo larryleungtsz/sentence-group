@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——空掌托住小物、門縫剛被推開停住。視線釘在托物與門縫；有此物才開路＝有⋯所以。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/arimasunode-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goraiken-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kago-combined.jpg"
-      ]
+      "text": "空掌剛托住小物、同時一扇門被推開一縫"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-goraikou.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/arimasunode-combined.jpg",
       "hotspot": {
-        "left": 76,
-        "top": 6,
-        "width": 22,
-        "height": 52,
+        "left": 0.0,
+        "top": 0.0,
+        "width": 45.31,
+        "height": 100.0,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

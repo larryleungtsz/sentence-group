@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 1,
+    "text": "それは"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻戴著白手套的左手食指，筆直指向前方不遠處的一個紅色圓形標靶中心，代表明確指代前面提到的那件事。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/sore-wa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 5.37,
+        "top": 18.36,
+        "width": 41.02,
+        "height": 48.95,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

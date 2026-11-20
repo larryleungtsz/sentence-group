@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 8,
+    "text": "鶏肉は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一塊表面帶有漂亮油光、紋理分明的新鮮生雞胸肉，放在一塊圓形木砧板上。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/toriniku-wa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 60.9,
+        "top": 46.61,
+        "width": 23.55,
+        "height": 19.53,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-ichio-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 1,
+    "text": "一応"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一枚用細細的透明魚線吊在支架上的銀色迴紋針，輕輕勾住一張白色小卡片的一角，呈現暫時掛著、不算完全固定的狀態，代表暫且、姑且如此。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ichiou-combined-v1.jpeg",
+      "hotspot": {
+        "left": 2.18,
+        "top": 5.21,
+        "width": 34.88,
+        "height": 87.24,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

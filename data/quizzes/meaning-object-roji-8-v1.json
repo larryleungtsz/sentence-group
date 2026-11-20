@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 8,
+    "text": "少しでも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一柄金屬精密滴管，管口正懸掛著一滴小到幾乎看不見、極其微小的晶瑩水珠，滴管旁還刻著「0.001 ml」的微量標記。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/sukoshi-demo-combined-v2.jpeg",
+      "hotspot": {
+        "left": 10.9,
+        "top": 0.0,
+        "width": 35.61,
+        "height": 63.8,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見小牌「暫」剛豎在訂單角停住＝「暫時／先」；見這幕→想起暫時／先。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-combined.jpg?v=20261031orenjicombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg?v=20261031orenjicombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kore-no-okawari-combined.jpg?v=20261031orenjicombined"
-      ]
+      "text": "小牌「暫」"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-toriaezu-combined.jpg",
       "hotspot": {
-        "left": 82,
-        "top": 62,
-        "width": 10,
-        "height": 28,
+        "left": 31.64,
+        "top": 59.38,
+        "width": 32.81,
+        "height": 25.78,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見大幅點頭＋雙眼正對你＝「可以嗎」；見這幕→想起店員在確認可否。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg"
-      ]
+      "text": "店員整顆頭剛大幅點下又抬起停住、雙眼正對你確認"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/yoroshikatta-desuka-combined.jpg",
       "hotspot": {
-        "left": 46,
-        "top": 12,
-        "width": 14,
-        "height": 26,
+        "left": 68.75,
+        "top": 18.75,
+        "width": 31.25,
+        "height": 29.69,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }
