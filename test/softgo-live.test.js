@@ -1080,20 +1080,17 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
     'kaori-ga-ari': 9,
     'kodomo-omoide': 9,
     'konna-basho': 7,
-    'koshitsu-yoyaku': 12,
+    'koshitsu-yoyaku': 13,
     'kyou-no-6jihan': 5,
     'niwatori-atama': 11,
     odenwa: 4,
     oseki: 5,
     rayu: 6,
-    roji: 9,
+    roji: 10,
     'sore-wa': 10,
     teikuauto: 9,
   };
-  const gaps = [
-    { slug: 'roji', chunk_id: 6, text: 'ある' },
-    { slug: 'koshitsu-yoyaku', chunk_id: 19, text: 'かしこまりました' },
-  ];
+  const gaps = [];
   const absent = [
     'gloss-palace-goraikou-2-v1',
     'gloss-palace-koshitsu-yoyaku-4-v1',
@@ -1101,11 +1098,9 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
     'gloss-palace-koshitsu-yoyaku-11-v1',
     'gloss-palace-koshitsu-yoyaku-12-v1',
     'gloss-palace-koshitsu-yoyaku-13-v1',
-    'gloss-palace-koshitsu-yoyaku-19-v1',
-    'gloss-palace-roji-6-v1',
   ];
   const skipTexts = ['めっちゃ', 'ありがとうございます', 'お願いします', '空いてますかね'];
-  const liveKoshitsu = [1, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 17];
+  const liveKoshitsu = [1, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16, 17, 19];
 
   function isGap(slug, chunkId) {
     return gaps.some((gap) => gap.slug === slug && gap.chunk_id === chunkId);
@@ -1114,7 +1109,7 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
   const rows = manifest.quizzes.filter((quiz) => {
     return slugs.some((slug) => quiz.quiz_id.indexOf('gloss-palace-' + slug + '-') === 0);
   });
-  assert.strictEqual(rows.length, 122);
+  assert.strictEqual(rows.length, 124);
   const counts = {};
   const seenHotspots = {};
   slugs.forEach((slug) => {
@@ -1190,6 +1185,14 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
   assert.strictEqual(table.chunk.id, 10);
   assert.strictEqual(table.chunk.text, 'テーブル席で');
   assert.strictEqual(table.quiz_id, 'gloss-palace-koshitsu-yoyaku-10-v1');
+  const aru = JSON.parse(fs.readFileSync(path.join(root, 'data/quizzes/gloss-palace-roji-6-v1.json'), 'utf8'));
+  assert.strictEqual(aru.quiz_id, 'gloss-palace-roji-6-v1');
+  assert.strictEqual(aru.chunk.text, 'ある');
+  assert.strictEqual(aru.slides[0].text, '有。請點選與這個詞相關的物件同區域。');
+  const kashiko = JSON.parse(fs.readFileSync(path.join(root, 'data/quizzes/gloss-palace-koshitsu-yoyaku-19-v1.json'), 'utf8'));
+  assert.strictEqual(kashiko.quiz_id, 'gloss-palace-koshitsu-yoyaku-19-v1');
+  assert.strictEqual(kashiko.chunk.text, 'かしこまりました');
+  assert.strictEqual(kashiko.slides[0].text, '明白了／遵命。請點選與這個詞相關的物件同區域。');
 });
 
 test('practice page and homepage fast-forward empty sentence stages', function () {
