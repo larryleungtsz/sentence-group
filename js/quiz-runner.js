@@ -307,14 +307,49 @@
   }
 
   /**
+   * Q4 word_shadowing_025 and Q7 tone_shadowing_05 reuse the Q22/Q23
+   * ephemeral recorder. Rate stays the quiz JSON value. They are not Q18
+   * segment chrome, even at 0.75× with a clip window.
+   */
+  function isChunkEphemeralShadow(objective) {
+    return objective === 'word_shadowing_025' || objective === 'tone_shadowing_05';
+  }
+
+  /**
+   * Audio ✓/✗.
+   * Other objectives still treat an omitted self_check as on (`!== false`).
+   * Q4/Q7 never evaluate that default: the field is ignored when it is
+   * omitted, false, or true, so they cannot show correct / wrong.
+   */
+  function showsAudioSelfCheck(quiz, slide) {
+    if (isChunkEphemeralShadow(quiz && quiz.objective)) return false;
+    return slide.self_check !== false;
+  }
+
+  /**
+   * Q9 opening only. Later slides, and every other objective, keep 「下一題」.
+   */
+  function youglishOpeningContinue(quiz, slide, type, idx) {
+    return !!(
+      quiz &&
+      quiz.objective === 'youglish_listen' &&
+      idx === 0 &&
+      type === 'audio_listen' &&
+      slide &&
+      slide.self_check === false
+    );
+  }
+
+  /**
    * Q18 segment chrome (hidden scrubber, 「重播」, forced 0.75×).
    * Passage quizzes keep the old rule, including `rate === 0.75 && hasClip`.
-   * Q20–Q24 never enter that branch.
+   * Q20–Q24 never enter that branch. Q4/Q7 do not either.
    */
   function isSegmentShadow(quiz, type, audioOpts) {
     audioOpts = audioOpts || {};
     var objective = quiz && quiz.objective;
     if (wholeSentenceShadowRate(objective) != null) return false;
+    if (isChunkEphemeralShadow(objective)) return false;
     if (
       objective === 'sentence_listen_to_l1' ||
       objective === 'sentence_l1_palace_multi_tap' ||
@@ -333,16 +368,28 @@
   /**
    * Playback plan for an audio slide.
    * Q22/Q23: fixed whole-sentence rate, ephemeral recorder, no self-check score.
+   * Q4/Q7: the same recorder. Rate is the quiz JSON rate (not a fixed override).
+   * Absent start_sec / end_sec are left unset so playback is the whole file.
    * The recording plan is `{ enabled, persist: false, score: false }` — the
    * Blob stays in the slide closure and is never written to progress, timing,
    * or sync snapshots.
    */
   function shadowSlidePlan(quiz, type, audioOpts) {
-    var fixed = wholeSentenceShadowRate(quiz && quiz.objective);
+    var objective = quiz && quiz.objective;
+    var fixed = wholeSentenceShadowRate(objective);
     if (fixed != null) {
       return {
         segmentShadow: false,
         rate: fixed,
+        rateOptions: null,
+        record: { enabled: true, persist: false, score: false },
+        selfCheck: false,
+      };
+    }
+    if (isChunkEphemeralShadow(objective)) {
+      return {
+        segmentShadow: false,
+        rate: audioOpts && audioOpts.rate,
         rateOptions: null,
         record: { enabled: true, persist: false, score: false },
         selfCheck: false,
@@ -1673,6 +1720,8 @@
         const audioOpts = resolved.opts;
         // Q18 (and any non-whitelisted 0.75× clip) keeps segment chrome.
         // Q22/Q23 force their whole-sentence rate and never set segment_shadow.
+        // Q4/Q7 reuse that recorder; their rate stays the JSON value, and an
+        // omitted self_check does not fall through to `!== false`.
         const plan = shadowSlidePlan(quiz, type, audioOpts);
         if (plan.segmentShadow) {
           audioOpts.segment_shadow = true;
@@ -1702,6 +1751,8 @@
         }
         body.appendChild(makeAudio(audioSrc, audioOpts));
         if (plan.record.enabled) {
+          // Same temporary take as Q22/Q23. Not uploaded, not scored.
+          // self_check is not read here, omitted or otherwise.
           disposeRecorder = mountEphemeralRecorder(body);
           const done = el('button', 'btn btn-primary', '完成跟讀');
           done.type = 'button';
@@ -1712,7 +1763,9 @@
           body.appendChild(done);
           return;
         }
-        if (slide.self_check !== false) {
+        // Q4/Q7 are already returned above. showsAudioSelfCheck refuses them
+        // again so this `!== false` default cannot show ✓/✗ if recording is off.
+        if (showsAudioSelfCheck(quiz, slide)) {
           body.appendChild(
             selfCheckBar(
               () => {
@@ -1726,7 +1779,8 @@
             )
           );
         } else {
-          const next = el('button', 'btn btn-primary', '下一題');
+          const nextLabel = youglishOpeningContinue(quiz, slide, type, idx) ? '繼續' : '下一題';
+          const next = el('button', 'btn btn-primary', nextLabel);
           next.type = 'button';
           next.addEventListener('click', () => {
             idx++;

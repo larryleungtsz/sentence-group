@@ -1075,7 +1075,9 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
     ['diff', '--name-only', parent, '--', 'data/schedule.json', 'data/groups.json', 'js', 'css', 'index.html', 'group.html', 'stats.html', 'export.html'],
     { cwd: root, encoding: 'utf8' }
   );
-  assert.strictEqual(untouched, '');
+  // Q4/Q7 ephemeral shadow and the Q9 opening 「繼續」 label live in the runner.
+  // Schedule, groups, CSS, pages, and every other JS file stay at this parent.
+  assert.strictEqual(untouched, 'js/quiz-runner.js\n');
 });
 
 test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and live chunk ids', function () {
@@ -1310,7 +1312,8 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     ['diff', '--name-only', base, '--', 'data/schedule.json', 'data/groups.json', 'js', 'css', 'index.html', 'group.html', 'stats.html', 'export.html'],
     { cwd: root, encoding: 'utf8' }
   );
-  assert.strictEqual(untouched, '');
+  // Same runner-only exception as the Q2 freeze above.
+  assert.strictEqual(untouched, 'js/quiz-runner.js\n');
 
   const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
   assert.strictEqual(q3.length, 278);

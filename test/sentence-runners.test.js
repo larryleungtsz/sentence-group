@@ -187,6 +187,7 @@ const manifest = readJson('data/manifest.json');
 const q18 = readJson('data/quizzes/sentence-segment-shadow-yoyaku-shitenai-1s-v1.json');
 const q8 = readJson('data/quizzes/whole-listen-yoyaku-shitenai-v1.json');
 const q4 = readJson('data/quizzes/shadow-025-kaikei-onegai-4-v1.json');
+const q7 = readJson('data/quizzes/shadow-05-mitame-irotsuya-2-v1.json');
 const cloze = readJson('data/quizzes/mother-cloze-usage-smoke-v1.json');
 const loci = readJson('data/quizzes/loci-yoyaku-shitenai-1-v1.json');
 
@@ -223,6 +224,14 @@ tests.push(test('Q22/Q23 stay whole-sentence; Q18 and the 0.75 clip quirk stay s
   );
   assert.strictEqual(
     QuizRunner.isSegmentShadow({ objective: 'word_shadowing_025' }, 'audio_shadow', clip),
+    false
+  );
+  assert.strictEqual(
+    QuizRunner.isSegmentShadow({ objective: 'tone_shadowing_05' }, 'audio_shadow', clip),
+    false
+  );
+  assert.strictEqual(
+    QuizRunner.isSegmentShadow({ objective: 'whole_sentence_listening' }, 'audio_shadow', clip),
     true
   );
   assert.strictEqual(
@@ -253,6 +262,34 @@ tests.push(test('Q22/Q23 stay whole-sentence; Q18 and the 0.75 clip quirk stay s
   assert.strictEqual(segment.rate, 0.75);
   assert.strictEqual(segment.record.enabled, false);
   assert.strictEqual(segment.selfCheck, true);
+  const q4plan = QuizRunner.shadowSlidePlan(
+    { objective: 'word_shadowing_025' },
+    'audio_shadow',
+    { rate: 0.25 }
+  );
+  assert.strictEqual(q4plan.segmentShadow, false);
+  assert.strictEqual(q4plan.rate, 0.25);
+  assert.strictEqual(q4plan.rateOptions, null);
+  assert.deepStrictEqual(q4plan.record, { enabled: true, persist: false, score: false });
+  assert.strictEqual(q4plan.selfCheck, false);
+  const q4quirk = QuizRunner.shadowSlidePlan(
+    { objective: 'word_shadowing_025' },
+    'audio_shadow',
+    clip
+  );
+  assert.strictEqual(q4quirk.segmentShadow, false);
+  assert.strictEqual(q4quirk.rate, 0.75);
+  assert.strictEqual(q4quirk.record.enabled, true);
+  assert.strictEqual(q4quirk.selfCheck, false);
+  const q7plan = QuizRunner.shadowSlidePlan(
+    { objective: 'tone_shadowing_05' },
+    'audio_shadow',
+    { rate: 0.5, start_sec: 1, end_sec: 2 }
+  );
+  assert.strictEqual(q7plan.segmentShadow, false);
+  assert.strictEqual(q7plan.rate, 0.5);
+  assert.deepStrictEqual(q7plan.record, { enabled: true, persist: false, score: false });
+  assert.strictEqual(q7plan.selfCheck, false);
 }));
 
 tests.push(test('Q21 parses flat and nested hotspots and grades a set in any order', function () {
@@ -496,7 +533,7 @@ tests.push(test('Q22 and Q23 play the whole sentence, record ephemerally, and do
   assert.strictEqual(JSON.stringify(q23), JSON.stringify(quizByObjective('sentence_shadowing_075')));
 }));
 
-tests.push(test('Q18 segment shadow, Q8 listening, Q4 word shadow, Q19 cloze, and single tap stay put', function () {
+tests.push(test('Q18 segment shadow, Q8 listening, Q19 cloze, and single tap stay put', function () {
   const segment = runQuiz(q18);
   assert.ok(buttonNamed(segment, '重播'));
   assert.ok(!buttonNamed(segment, '播放'));
@@ -511,14 +548,6 @@ tests.push(test('Q18 segment shadow, Q8 listening, Q4 word shadow, Q19 cloze, an
   assert.ok(buttonNamed(listen, '✓ 通過'));
   assert.ok(!buttonNamed(listen, '開始錄音'));
   assert.strictEqual(audios(listen)[0].controls, true);
-
-  const word = runQuiz(q4);
-  assert.ok(buttonNamed(word, '播放'));
-  assert.ok(!buttonNamed(word, '重播'));
-  assert.ok(!buttonNamed(word, '開始錄音'));
-  assert.ok(buttonNamed(word, '✓ 通過'));
-  assert.strictEqual(audios(word)[0].playbackRate, 0.25);
-  assert.strictEqual(audios(word)[0].controls, true);
 
   const clozeRoot = runQuiz(cloze);
   assert.ok(texts(clozeRoot).indexOf('請選擇空白正確的母語句子') !== -1);
@@ -542,6 +571,191 @@ tests.push(test('Q18 segment shadow, Q8 listening, Q4 word shadow, Q19 cloze, an
   img2.click({ clientX: 28, clientY: 50 });
   assert.strictEqual(passed, 1);
   assert.ok(img);
+}));
+
+tests.push(test('Q4 and Q7 reuse the ephemeral shadow recorder and ignore omitted self_check', function () {
+  function ephemeralQuiz(objective, slide, feedback) {
+    return {
+      objective: objective,
+      feedback: feedback || { on_complete: 'pass' },
+      slides: [Object.assign({
+        type: 'audio_shadow',
+        instruction: '請跟讀。',
+        audio: 'https://example.test/whole.mp3',
+      }, slide)],
+    };
+  }
+
+  function assertShadowChrome(root, rate) {
+    assert.ok(buttonNamed(root, '播放'));
+    assert.ok(!buttonNamed(root, '重播'));
+    assert.ok(!buttonNamed(root, '✓ 通過'));
+    assert.ok(!buttonNamed(root, '✗ 再試'));
+    assert.ok(!buttonNamed(root, '繼續'));
+    assert.ok(!buttonNamed(root, '下一題'));
+    assert.ok(buttonNamed(root, '開始錄音'));
+    assert.ok(buttonNamed(root, '完成跟讀'));
+    assert.ok(texts(root).some(function (t) {
+      return t.indexOf('唔會儲存') !== -1 && t.indexOf('唔會評分') !== -1;
+    }));
+    const model = audios(root)[0];
+    assert.strictEqual(model.controls, true);
+    assert.strictEqual(model.playbackRate, rate);
+    return model;
+  }
+
+  const omitted = ephemeralQuiz('word_shadowing_025', { rate: 0.25 });
+  assert.ok(!Object.prototype.hasOwnProperty.call(omitted.slides[0], 'self_check'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(omitted.slides[0], 'start_sec'));
+  assert.ok(!Object.prototype.hasOwnProperty.call(omitted.slides[0], 'end_sec'));
+  const omittedPlan = QuizRunner.shadowSlidePlan(omitted, 'audio_shadow', { rate: 0.25 });
+  assert.strictEqual(omittedPlan.selfCheck, false);
+  assert.deepStrictEqual(omittedPlan.record, { enabled: true, persist: false, score: false });
+  const omittedRoot = runQuiz(omitted);
+  const whole = assertShadowChrome(omittedRoot, 0.25);
+  assert.strictEqual(whole.currentTime, 0);
+  buttonNamed(omittedRoot, '播放').click();
+  assert.strictEqual(whole.playing, true);
+  assert.strictEqual(whole.currentTime, 0);
+  assert.ok(!whole.listeners.timeupdate);
+  const before = writes.length;
+  let passed = 0;
+  const passRoot = runQuiz(omitted, { onPass: function () { passed += 1; } });
+  buttonNamed(passRoot, '完成跟讀').click();
+  assert.strictEqual(passed, 1);
+  assert.strictEqual(writes.length, before);
+
+  const explicit = runQuiz(ephemeralQuiz('word_shadowing_025', { rate: 0.25, self_check: true }));
+  assertShadowChrome(explicit, 0.25);
+
+  const tone = ephemeralQuiz('tone_shadowing_05', { rate: 0.5 });
+  assert.ok(!Object.prototype.hasOwnProperty.call(tone.slides[0], 'self_check'));
+  const toneRoot = runQuiz(tone, { onPass: function () { passed += 1; } });
+  assertShadowChrome(toneRoot, 0.5);
+  buttonNamed(toneRoot, '完成跟讀').click();
+  assert.strictEqual(passed, 2);
+
+  assert.strictEqual(q4.slides[0].self_check, true);
+  assert.strictEqual(q4.slides[0].rate, 0.25);
+  assert.strictEqual(q4.feedback.on_complete, undefined);
+  const word = runQuiz(q4);
+  const clipped = assertShadowChrome(word, 0.25);
+  clipped.currentTime = 0;
+  buttonNamed(word, '播放').click();
+  assert.strictEqual(clipped.currentTime, q4.slides[0].start_sec);
+  assert.ok(clipped.listeners.timeupdate && clipped.listeners.timeupdate.length === 1);
+  clipped.currentTime = q4.slides[0].end_sec;
+  clipped.listeners.timeupdate[0]();
+  assert.strictEqual(clipped.playing, false);
+
+  assert.strictEqual(q7.slides[0].self_check, true);
+  assert.strictEqual(q7.slides[0].rate, 0.5);
+  const toneLive = runQuiz(q7);
+  assertShadowChrome(toneLive, 0.5);
+  const toneAudio = audios(toneLive)[0];
+  buttonNamed(toneLive, '播放').click();
+  assert.strictEqual(toneAudio.currentTime, q7.slides[0].start_sec);
+}));
+
+tests.push(test('Q9 opening audio_listen with self_check false continues without a self-check', function () {
+  const quiz = {
+    objective: 'youglish_listen',
+    slides: [
+      {
+        type: 'audio_listen',
+        self_check: false,
+        instruction: '請先聽。',
+        audio: 'https://example.test/youglish-open.mp3',
+      },
+      {
+        type: 'audio_listen',
+        self_check: false,
+        instruction: '再聽一句。',
+        audio: 'https://example.test/youglish-later.mp3',
+      },
+      {
+        type: 'youglish',
+        instruction: '請聆聽。',
+        video_id: 'abc',
+        start_sec: 3,
+        self_check: true,
+      },
+    ],
+  };
+  let passed = 0;
+  const root = runQuiz(quiz, { onPass: function () { passed += 1; } });
+  assert.ok(texts(root).indexOf('請先聽。') !== -1);
+  assert.ok(buttonNamed(root, '播放'));
+  assert.ok(buttonNamed(root, '繼續'));
+  assert.ok(!buttonNamed(root, '下一題'));
+  assert.ok(!buttonNamed(root, '✓ 通過'));
+  assert.ok(!buttonNamed(root, '✗ 再試'));
+  assert.ok(!buttonNamed(root, '開始錄音'));
+  assert.strictEqual(audios(root).length, 1);
+  buttonNamed(root, '繼續').click();
+  assert.strictEqual(passed, 0);
+  assert.ok(texts(root).indexOf('再聽一句。') !== -1);
+  assert.ok(buttonNamed(root, '下一題'));
+  assert.ok(!buttonNamed(root, '繼續'));
+  assert.ok(!buttonNamed(root, '✓ 通過'));
+  assert.ok(!buttonNamed(root, '開始錄音'));
+  buttonNamed(root, '下一題').click();
+  assert.ok(buttonNamed(root, '✓ 通過'));
+  assert.ok(buttonNamed(root, '✗ 再試'));
+  assert.ok(!buttonNamed(root, '繼續'));
+  assert.ok(!buttonNamed(root, '開始錄音'));
+  assert.strictEqual(passed, 0);
+
+  const other = runQuiz({
+    objective: 'whole_sentence_listening',
+    slides: [{
+      type: 'audio_listen',
+      self_check: false,
+      audio: 'https://example.test/listen.mp3',
+      rate: 1,
+    }],
+  });
+  assert.ok(buttonNamed(other, '下一題'));
+  assert.ok(!buttonNamed(other, '繼續'));
+  assert.ok(!buttonNamed(other, '✓ 通過'));
+  assert.ok(!buttonNamed(other, '開始錄音'));
+
+  const omitted = runQuiz({
+    objective: 'youglish_listen',
+    slides: [{
+      type: 'audio_listen',
+      audio: 'https://example.test/omitted.mp3',
+    }],
+  });
+  assert.ok(buttonNamed(omitted, '✓ 通過'));
+  assert.ok(!buttonNamed(omitted, '繼續'));
+  assert.ok(!buttonNamed(omitted, '開始錄音'));
+
+  const checkSlide = runQuiz({
+    objective: 'youglish_listen',
+    slides: [{
+      type: 'audio_check',
+      self_check: false,
+      audio: 'https://example.test/check.mp3',
+    }],
+  });
+  assert.ok(buttonNamed(checkSlide, '下一題'));
+  assert.ok(!buttonNamed(checkSlide, '繼續'));
+
+  const live = readJson('data/quizzes/youglish-yoyaku-7-v1.json');
+  assert.strictEqual(live.slides[0].type, 'audio_check');
+  assert.strictEqual(live.slides[0].self_check, true);
+  const liveRoot = runQuiz(live);
+  assert.ok(buttonNamed(liveRoot, '播放'));
+  assert.ok(buttonNamed(liveRoot, '✓ 通過'));
+  assert.ok(buttonNamed(liveRoot, '✗ 再試'));
+  assert.ok(!buttonNamed(liveRoot, '繼續'));
+  assert.ok(!buttonNamed(liveRoot, '開始錄音'));
+  buttonNamed(liveRoot, '✓ 通過').click();
+  assert.strictEqual(live.slides[1].type, 'youglish');
+  assert.ok(buttonNamed(liveRoot, '✓ 通過'));
+  assert.ok(!buttonNamed(liveRoot, '繼續'));
+  assert.ok(!buttonNamed(liveRoot, '開始錄音'));
 }));
 
 tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 objectives are in it', function () {
