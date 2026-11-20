@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 2,
+    "text": "狭い"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "兩面極度靠近、夾縫寬度僅能容下一個掌心的垂直混凝土牆壁，牆中間塞著一把被壓得扁扁的量尺。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/semai-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 49.71,
+        "height": 88.54,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

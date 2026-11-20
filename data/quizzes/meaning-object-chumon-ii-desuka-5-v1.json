@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見並排兩串雞肉丸＝「雞肉丸兩串」；見這幕→想起雞肉丸兩串。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsukune-nihon-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-karaage-hitosara-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-potesara-combined.jpg"
-      ]
+      "text": "並排兩串雞肉丸"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-tsukune-nihon-combined.jpg",
       "hotspot": {
-        "left": 58,
-        "top": 76,
-        "width": 22,
-        "height": 18,
+        "left": 19.14,
+        "top": 14.06,
+        "width": 62.11,
+        "height": 78.12,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

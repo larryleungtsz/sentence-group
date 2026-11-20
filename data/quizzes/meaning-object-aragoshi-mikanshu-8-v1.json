@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見指向近處桌面的手＝「這邊」；見這幕→想起近處這一邊。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kochira-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-osage-shimasune-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-omochi-shimasune-combined.jpg"
-      ]
+      "text": "掌心側向、剛指向近處桌面停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/08-kochira-combined.jpg",
       "hotspot": {
-        "left": 84,
-        "top": 78,
-        "width": 16,
-        "height": 20,
+        "left": 0.0,
+        "top": 41.8,
+        "width": 49.61,
+        "height": 39.84,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

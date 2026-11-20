@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見盤邊半熟蛋黃裂開一縫＝「像蛋的」；見這幕→想起像蛋的。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-tamago-ppoi-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-tsukete-itadaku-to-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-oaji-ni-naru-node-combined.jpg"
-      ]
+      "text": "盤邊半熟蛋黃裂開一縫"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-tamago-ppoi-combined.jpg",
       "hotspot": {
-        "left": 16,
-        "top": 62,
-        "width": 14,
-        "height": 30,
+        "left": 0.0,
+        "top": 30.86,
+        "width": 47.66,
+        "height": 62.5,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

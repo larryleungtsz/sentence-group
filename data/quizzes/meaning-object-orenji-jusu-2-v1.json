@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見透明燒酒瓶剛豎在桌心、標籤正面停住＝「燒酒（賓語）」；見這幕→想起燒酒（賓語）。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-shochu-o-combined.jpg?v=20261031orenjicombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-rokku-de-combined.jpg?v=20261031orenjicombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-ato-yakitori-mo-ii-desu-ka-combined.jpg?v=20261031orenjicombined"
-      ]
+      "text": "透明燒酒瓶"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-shochu-o-combined.jpg",
       "hotspot": {
-        "left": 29,
-        "top": 32,
-        "width": 8,
-        "height": 48,
+        "left": 37.89,
+        "top": 2.73,
+        "width": 25.39,
+        "height": 82.03,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

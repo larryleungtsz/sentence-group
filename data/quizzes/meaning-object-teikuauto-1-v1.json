@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-teikuauto-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 1,
+    "text": "テイクアウトで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "印著餐廳 Logo、印有雙提把的牛皮紙外帶手提袋"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/teikuauto-de-combined-v1.jpeg",
+      "hotspot": {
+        "left": 7.27,
+        "top": 5.47,
+        "width": 30.52,
+        "height": 78.65,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-ichio-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 6,
+    "text": "カウンターにご移動いただく"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一張高腳原木吧台圓凳，凳面上放置一塊印有白色彎曲轉向箭頭的木牌，箭頭前端直指一塊拋光檜木吧台板邊緣，代表請移動換座至吧台區。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kauntaa-ni-go-idou-itadaku-combined-v1.jpeg",
+      "hotspot": {
+        "left": 1.45,
+        "top": 33.85,
+        "width": 41.42,
+        "height": 65.1,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

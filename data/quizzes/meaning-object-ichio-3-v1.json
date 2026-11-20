@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-ichio-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 3,
+    "text": "ほかの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "三個排成一排的白色瓷杯旁邊，單獨隔開擺放著一只寶藍色玻璃杯，代表其餘另外的對象。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/hoka-no-combined-v1.jpeg",
+      "hotspot": {
+        "left": 21.08,
+        "top": 57.29,
+        "width": 32.7,
+        "height": 22.14,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "杯壁刻度貼紙＝尺寸，因為貼紙標明大細級距；見到 S／M／L 就想起「尺寸」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png"
-      ]
+      "text": "杯壁 S／M／L 刻度貼紙"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/saizu-combined.png",
       "hotspot": {
-        "left": 75,
-        "top": 32,
-        "width": 22,
-        "height": 46,
+        "left": 76.74,
+        "top": 41.67,
+        "width": 8.33,
+        "height": 27.31,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

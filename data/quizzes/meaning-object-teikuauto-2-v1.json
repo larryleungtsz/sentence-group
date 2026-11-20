@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-teikuauto-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 2,
+    "text": "20香港ドル"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "巨型硬幣雕像（正面「20」、背面「HKD / 香港ドル」與紫荊花）"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/niju-honkon-doru-combined-v1.jpeg",
+      "hotspot": {
+        "left": 3.78,
+        "top": 7.55,
+        "width": 41.57,
+        "height": 90.89,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

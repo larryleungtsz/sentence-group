@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 9,
+    "text": "高い"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "金幣與長串0的金屬天平（價格端沉底）"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/takai-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 12.59,
+        "width": 62.5,
+        "height": 65.73,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

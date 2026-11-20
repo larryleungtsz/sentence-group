@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見合上菜單＋掌心微推＝「先這樣就好」；見這幕→想起先到此為止就夠。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-ijou-de-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-omochi-shimasune-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-ijou-de-yoroshii-desuka-combined.jpg"
-      ]
+      "text": "雙手剛合上菜單、掌心微推向前停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-toriaezu-ijou-de-combined.jpg",
       "hotspot": {
-        "left": 68,
-        "top": 28,
-        "width": 14,
-        "height": 18,
+        "left": 0.0,
+        "top": 49.61,
+        "width": 100.0,
+        "height": 35.16,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

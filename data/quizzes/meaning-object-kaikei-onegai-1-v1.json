@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見綠色「承知」印章剛蓋在訂單上停住＝「明白了／遵命」；見這幕→想起明白了／遵命。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-o-kaikei-wa-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-4210-en-combined.jpg?v=20261030combined"
-      ]
+      "text": "綠色「承知」印章"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-kashikomarimashita-combined.jpg",
       "hotspot": {
-        "left": 16,
-        "top": 70,
-        "width": 22,
-        "height": 28,
+        "left": 31.25,
+        "top": 49.22,
+        "width": 26.56,
+        "height": 37.89,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

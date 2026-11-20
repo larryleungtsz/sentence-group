@@ -1,5 +1,5 @@
 /**
- * Live Soft GO Q20–Q24: manifest rows, sentences[], chunk-boundary-wins, Q24 L1.
+ * Live Soft GO Q20–Q24, the Q2 gloss ship, and the Q3 meaning-object ship.
  *   node test/softgo-live.test.js
  */
 'use strict';
@@ -1039,12 +1039,36 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
     encoding: 'utf8',
   }).trim();
   const allowedNew = /^data\/quizzes\/gloss-palace-(ichio|kanban-menu|kanki-maa-maa|kaori-ga-ari|kodomo-omoide|konna-basho|koshitsu-yoyaku|kyou-no-6jihan|niwatori-atama|odenwa|oseki|rayu|roji|sore-wa|teikuauto)-\d+-v1\.json$/;
+  // Q3 rewrites meaning-object files in place and adds unpublished Keep files.
+  // Gloss-palace bytes above stay pinned to this parent. Other quiz types still cannot change.
+  const q3Base = '2e2dcbe25ccc06b985ff3e2eeb9ab788c50a265e';
+  const meaningAtQ3Base = new Set(
+    execFileSync('git', ['ls-tree', '-r', '--name-only', q3Base, 'data/quizzes'], {
+      cwd: root,
+      encoding: 'utf8',
+    })
+      .trim()
+      .split('\n')
+      .filter((file) => /\/meaning-object-.*\.json$/.test(file))
+  );
+  assert.strictEqual(meaningAtQ3Base.size, 156);
+  const forbiddenMeaning = new Set([
+    'data/quizzes/meaning-object-mitame-irotsuya-3-v1.json',
+    'data/quizzes/meaning-object-roji-6-v1.json',
+    'data/quizzes/meaning-object-koshitsu-yoyaku-19-v1.json',
+  ]);
   (quizStatus ? quizStatus.split('\n') : []).forEach((line) => {
     const tab = line.indexOf('\t');
     const status = line.slice(0, tab);
     const file = line.slice(tab + 1);
-    assert.strictEqual(status, 'A', line);
-    assert.ok(allowedNew.test(file), file);
+    if (allowedNew.test(file)) {
+      assert.strictEqual(status, 'A', line);
+      return;
+    }
+    assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
+    assert.ok(!forbiddenMeaning.has(file), file);
+    if (meaningAtQ3Base.has(file)) assert.strictEqual(status, 'M', line);
+    else assert.strictEqual(status, 'A', line);
   });
   const untouched = execFileSync(
     'git',
@@ -1193,6 +1217,358 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
   assert.strictEqual(kashiko.quiz_id, 'gloss-palace-koshitsu-yoyaku-19-v1');
   assert.strictEqual(kashiko.chunk.text, 'かしこまりました');
   assert.strictEqual(kashiko.slides[0].text, '明白了／遵命。請點選與這個詞相關的物件同區域。');
+});
+
+test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft Skips', function () {
+  const base = '2e2dcbe25ccc06b985ff3e2eeb9ab788c50a265e';
+  const shaImage = /^https:\/\/raw\.githubusercontent\.com\/larryleungtsz\/flashcard-app\/[0-9a-f]{40}\/images\/[^/]*combined[^/]*\.(?:jpg|jpeg|png)$/i;
+  const quizDir = path.join(root, 'data/quizzes');
+  const files = fs.readdirSync(quizDir).filter((file) => /^meaning-object-.*\.json$/.test(file)).sort();
+  assert.strictEqual(files.length, 276);
+  const atBase = new Set(
+    execFileSync('git', ['ls-tree', '-r', '--name-only', base, 'data/quizzes'], {
+      cwd: root,
+      encoding: 'utf8',
+    })
+      .trim()
+      .split('\n')
+      .filter((file) => /\/meaning-object-.*\.json$/.test(file))
+  );
+  assert.strictEqual(atBase.size, 156);
+  const added = files.filter((file) => !atBase.has('data/quizzes/' + file));
+  assert.strictEqual(added.length, 120);
+  atBase.forEach((file) => {
+    assert.ok(files.indexOf(path.basename(file)) !== -1, 'dropped ' + file);
+  });
+  const forbidden = [
+    'meaning-object-mitame-irotsuya-3-v1',
+    'meaning-object-roji-6-v1',
+    'meaning-object-koshitsu-yoyaku-19-v1',
+  ];
+  forbidden.forEach((quizId) => {
+    assert.ok(files.indexOf(quizId + '.json') === -1, quizId);
+    assert.ok(!fs.existsSync(path.join(quizDir, quizId + '.json')), quizId);
+    assert.ok(!manifest.quizzes.some((row) => row.quiz_id === quizId), quizId);
+  });
+
+  const diff = execFileSync('git', ['diff', '--name-status', base, '--', 'data/quizzes'], {
+    cwd: root,
+    encoding: 'utf8',
+  }).trim();
+  const changed = new Map();
+  (diff ? diff.split('\n') : []).forEach((line) => {
+    const tab = line.indexOf('\t');
+    const status = line.slice(0, tab);
+    const file = line.slice(tab + 1);
+    assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
+    assert.ok(forbidden.indexOf(path.basename(file, '.json')) === -1, file);
+    if (atBase.has(file)) assert.strictEqual(status, 'M', line);
+    else assert.strictEqual(status, 'A', line);
+    changed.set(file, status);
+  });
+  atBase.forEach((file) => assert.strictEqual(changed.get(file), 'M', 'not rewritten ' + file));
+  added.forEach((file) => {
+    const rel = 'data/quizzes/' + file;
+    if (changed.has(rel)) assert.strictEqual(changed.get(rel), 'A', rel);
+  });
+
+  const expectedCounts = {
+    example_sentences_listening: 154,
+    loci_description_tap: 280,
+    meaning_object_select_and_tap: 278,
+    pronunciation_sounding_select: 169,
+    story_select_image: 155,
+    tone_shadowing_05: 156,
+    word_shadowing_025: 156,
+    writing_shadowing: 155,
+    youglish_listen: 152,
+    gloss_to_palace_tap: 280,
+    target_to_mnemonic_image: 156,
+    mother_language_pronounce: 155,
+    mother_to_target_language: 156,
+    mother_cloze_usage: 1,
+    sentence_segment_shadowing: 660,
+    sequence_training: 22,
+    whole_sentence_listening: 22,
+    sentence_listen_to_l1: 54,
+    sentence_l1_palace_multi_tap: 54,
+    sentence_shadowing_125: 60,
+    sentence_shadowing_075: 60,
+    sentence_discourse_mcq: 64,
+    sentence_example_sentences_listening: 2,
+    sentence_usage_feature_judgment: 2,
+    sentence_minimal_pair_grouping: 1,
+  };
+  const counts = {};
+  manifest.quizzes.forEach((row) => {
+    counts[row.objective] = (counts[row.objective] || 0) + 1;
+  });
+  assert.deepStrictEqual(counts, expectedCounts);
+  assert.strictEqual(manifest.quizzes.length, 3404);
+  const untouched = execFileSync(
+    'git',
+    ['diff', '--name-only', base, '--', 'data/schedule.json', 'data/groups.json', 'js', 'css', 'index.html', 'group.html', 'stats.html', 'export.html'],
+    { cwd: root, encoding: 'utf8' }
+  );
+  assert.strictEqual(untouched, '');
+
+  const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
+  assert.strictEqual(q3.length, 278);
+  const ids = new Set(q3.map((row) => row.quiz_id));
+  assert.strictEqual(ids.size, 276);
+  const groupBySentence = new Map(groups.groups.map((group) => [group.sentence, group]));
+  const bodies = new Map();
+  files.forEach((file) => {
+    const quiz = JSON.parse(fs.readFileSync(path.join(quizDir, file), 'utf8'));
+    bodies.set(quiz.quiz_id, quiz);
+    assert.strictEqual(quiz.quiz_id, file.replace(/\.json$/, ''), file);
+    assert.strictEqual(quiz.objective, 'meaning_object_select_and_tap', quiz.quiz_id);
+    assert.strictEqual(quiz.level, 1, quiz.quiz_id);
+    assert.strictEqual(quiz.variant, 1, quiz.quiz_id);
+    assert.deepStrictEqual((quiz.slides || []).map((slide) => slide.type), ['prompt', 'tap'], quiz.quiz_id);
+    assert.ok(!quiz.slides.some((slide) => slide.type === 'select_image'), quiz.quiz_id);
+    assert.strictEqual(typeof quiz.slides[0].text, 'string', quiz.quiz_id);
+    assert.ok(quiz.slides[0].text.length > 0, quiz.quiz_id);
+    assert.ok(shaImage.test(quiz.slides[1].image), quiz.quiz_id + ' ' + quiz.slides[1].image);
+    assert.ok(!/\/main\//.test(quiz.slides[1].image), quiz.quiz_id);
+    assert.ok(!/palace/i.test(quiz.slides[1].image), quiz.quiz_id);
+    const hotspot = quiz.slides[1].hotspot;
+    assert.strictEqual(hotspot.unit, 'percent', quiz.quiz_id);
+    ['left', 'top', 'width', 'height'].forEach((key) => {
+      assert.strictEqual(typeof hotspot[key], 'number', quiz.quiz_id + ' ' + key);
+    });
+    assert.ok(hotspot.width > 0 && hotspot.height > 0, quiz.quiz_id);
+    assert.strictEqual(quiz.feedback.on_wrong, 'show_correct_box', quiz.quiz_id);
+    const group = groupBySentence.get(quiz.sentence);
+    assert.ok(group, quiz.quiz_id);
+    const chunk = (group.chunks || []).find((item) => item.id === quiz.chunk.id);
+    assert.ok(chunk, quiz.quiz_id);
+    assert.strictEqual(chunk.text, quiz.chunk.text, quiz.quiz_id);
+    assert.notStrictEqual(chunk.skip, true, quiz.quiz_id);
+    assert.notStrictEqual(chunk.skipped, true, quiz.quiz_id);
+    const primary = q3.filter((row) => {
+      return row.quiz_id === quiz.quiz_id && row.sentence === quiz.sentence && row.chunk_id === quiz.chunk.id;
+    });
+    assert.strictEqual(primary.length, 1, quiz.quiz_id);
+    assert.strictEqual(primary[0].file, 'data/quizzes/' + quiz.quiz_id + '.json', quiz.quiz_id);
+    assert.strictEqual(primary[0].level, 1, quiz.quiz_id);
+    assert.strictEqual(primary[0].kind, 'chunk', quiz.quiz_id);
+    assert.ok(ids.has(quiz.quiz_id), quiz.quiz_id);
+  });
+  ids.forEach((quizId) => assert.ok(bodies.has(quizId), 'hang without file ' + quizId));
+
+  function hungChunk(quizId, text, chunkId) {
+    const quiz = bodies.get(quizId);
+    assert.strictEqual(quiz.chunk.text, text, quizId);
+    assert.strictEqual(quiz.chunk.id, chunkId, quizId);
+    const row = q3.find((item) => item.quiz_id === quizId && item.sentence === quiz.sentence);
+    assert.ok(row, quizId);
+    assert.strictEqual(row.chunk_id, chunkId, quizId);
+  }
+  hungChunk('meaning-object-oryouri-last-order-9-v1', 'レジの方まで', 11);
+  hungChunk('meaning-object-yokattara-onomi-8-v1', 'お通しです', 10);
+  hungChunk('meaning-object-aragoshi-mikanshu-8-v1', 'こちら', 13);
+
+  [
+    ['よかったら', ['meaning-object-yokattara-onomi-1-v1', 'meaning-object-goraitei-arigatou-3-v1']],
+    ['めっちゃ', ['meaning-object-tsukete-itadaku-8-v1', 'meaning-object-chashu-shittori-2-v1']],
+    ['ご注文', ['meaning-object-gochumon-1-v1', 'meaning-object-gochumon-kakunin-1-v1']],
+    ['ちょっと', ['meaning-object-amai-chashu-6-v1', 'meaning-object-chashu-shittori-6-v1']],
+  ].forEach((pair) => {
+    const text = pair[0];
+    const quizIds = pair[1];
+    const sentences = new Set();
+    quizIds.forEach((quizId) => {
+      const quiz = bodies.get(quizId);
+      assert.strictEqual(quiz.chunk.text, text, quizId);
+      sentences.add(quiz.sentence);
+      const row = q3.find((item) => {
+        return item.quiz_id === quizId && item.sentence === quiz.sentence && item.chunk_id === quiz.chunk.id;
+      });
+      assert.ok(row, quizId);
+    });
+    assert.strictEqual(sentences.size, 2, text);
+  });
+
+  const phone = bodies.get('meaning-object-sore-wa-5-v1');
+  assert.strictEqual(phone.chunk.text, 'お電話番号');
+  assert.strictEqual(phone.chunk.id, 5);
+
+  function assertNoQ3(slug, chunkId, text) {
+    const group = groupBySlug(slug);
+    const chunk = group.chunks.find((item) => item.id === chunkId);
+    assert.strictEqual(chunk.text, text, slug);
+    assert.notStrictEqual(chunk.skip, true, slug);
+    const hung = q3.filter((row) => row.sentence === group.sentence && row.chunk_id === chunkId);
+    assert.strictEqual(hung.length, 0, slug + ' ' + text);
+    bodies.forEach((quiz) => {
+      assert.ok(!(quiz.sentence === group.sentence && quiz.chunk.id === chunkId), quiz.quiz_id);
+    });
+  }
+  assertNoQ3('sore-wa', 7, '電話番号');
+  assertNoQ3('teikuauto', 9, '美味しい');
+
+  const roji = groupBySlug('roji');
+  const rojiRows = q3.filter((row) => row.sentence === roji.sentence && row.chunk_id === 6);
+  assert.deepStrictEqual(rojiRows.map((row) => row.quiz_id), ['meaning-object-chashu-shittori-8-v1']);
+  const aru = bodies.get('meaning-object-chashu-shittori-8-v1');
+  assert.strictEqual(aru.sentence, groupBySlug('chashu-shittori').sentence);
+  assert.strictEqual(aru.chunk.id, 8);
+  assert.strictEqual(aru.chunk.text, 'ある');
+  assert.notStrictEqual(aru.sentence, roji.sentence);
+  const chashuHang = q3.find((row) => row.quiz_id === aru.quiz_id && row.sentence === aru.sentence);
+  assert.strictEqual(chashuHang.chunk_id, 8);
+
+  const koshitsu = groupBySlug('koshitsu-yoyaku');
+  const kashikoRows = q3.filter((row) => row.sentence === koshitsu.sentence && row.chunk_id === 19);
+  assert.deepStrictEqual(kashikoRows.map((row) => row.quiz_id), ['meaning-object-kaikei-onegai-1-v1']);
+  const kashiko = bodies.get('meaning-object-kaikei-onegai-1-v1');
+  assert.strictEqual(kashiko.sentence, groupBySlug('kaikei-onegai').sentence);
+  assert.strictEqual(kashiko.chunk.id, 1);
+  assert.strictEqual(kashiko.chunk.text, 'かしこまりました');
+  assert.notStrictEqual(kashiko.sentence, koshitsu.sentence);
+
+  const mitame = groupBySlug('mitame-irotsuya');
+  const skippedMeccha = mitame.chunks.find((chunk) => chunk.text === 'めっちゃ');
+  assert.strictEqual(skippedMeccha.skip, true);
+  assert.strictEqual(
+    q3.filter((row) => row.sentence === mitame.sentence && row.chunk_id === skippedMeccha.id).length,
+    0
+  );
+
+  const soft = new Set(['sore-wa:7', 'teikuauto:9']);
+  let covered = 0;
+  groups.groups.forEach((group) => {
+    (group.chunks || []).forEach((chunk) => {
+      const n = q3.filter((row) => row.sentence === group.sentence && row.chunk_id === chunk.id).length;
+      if (isSkip(chunk)) {
+        assert.strictEqual(n, 0, group.slug + ' skip ' + chunk.id);
+        return;
+      }
+      const key = group.slug + ':' + chunk.id;
+      if (soft.has(key)) {
+        assert.strictEqual(n, 0, key);
+        return;
+      }
+      assert.strictEqual(n, 1, key + ' ' + chunk.text);
+      covered += 1;
+    });
+  });
+  assert.strictEqual(covered, 278);
+});
+
+test('Q3 runner plays the prompt then the Combined-image tap', function () {
+  function createEl(tag) {
+    const node = {
+      tagName: String(tag).toUpperCase(),
+      className: '',
+      textContent: '',
+      children: [],
+      parentNode: null,
+      style: {},
+      hidden: false,
+      id: '',
+      type: '',
+      src: '',
+      alt: '',
+      value: '',
+      listeners: {},
+      attributes: {},
+      appendChild(child) {
+        child.parentNode = node;
+        node.children.push(child);
+        return child;
+      },
+      remove() {
+        const parent = this.parentNode;
+        if (!parent) return;
+        const at = parent.children.indexOf(this);
+        if (at >= 0) parent.children.splice(at, 1);
+        this.parentNode = null;
+      },
+      addEventListener(type, fn) {
+        (this.listeners[type] || (this.listeners[type] = [])).push(fn);
+      },
+      setAttribute(name, value) {
+        this.attributes[name] = String(value);
+      },
+      getAttribute(name) {
+        return this.attributes[name];
+      },
+      focus() {},
+      select() {},
+      setSelectionRange() {},
+      getBoundingClientRect() {
+        return { left: 0, top: 0, width: 100, height: 100, right: 100, bottom: 100 };
+      },
+    };
+    Object.defineProperty(node, 'innerHTML', {
+      get() { return ''; },
+      set(value) {
+        if (value === '') node.children.length = 0;
+      },
+    });
+    return node;
+  }
+  function walk(node, acc) {
+    acc.push(node);
+    (node.children || []).forEach((child) => walk(child, acc));
+    return acc;
+  }
+  global.document = {
+    createElement: createEl,
+    createTextNode(text) {
+      const node = createEl('#text');
+      node.textContent = String(text);
+      return node;
+    },
+    body: createEl('body'),
+    execCommand() { return false; },
+  };
+  const QuizRunner = require(path.join(root, 'js/quiz-runner.js'));
+  const quiz = JSON.parse(fs.readFileSync(path.join(root, 'data/quizzes/meaning-object-chashu-shittori-8-v1.json'), 'utf8'));
+  assert.deepStrictEqual(QuizRunner.prepareSlides(quiz).map((slide) => slide.type), ['prompt', 'tap']);
+  const host = createEl('div');
+  const palace = 'https://example.invalid/palace-chashu-shittori.png';
+  let passed = 0;
+  QuizRunner.run(quiz, host, {
+    context: { palaceImageUrl: palace },
+    onPass() { passed += 1; },
+  });
+  const nodes = () => walk(host, []);
+  assert.ok(nodes().some((node) => node.textContent === quiz.slides[0].text));
+  assert.ok(!nodes().some((node) => node.className === 'img-grid' || node.className === 'img-choice'));
+  const next = nodes().find((node) => node.tagName === 'BUTTON' && node.textContent === '下一題');
+  assert.ok(next);
+  next.listeners.click.forEach((fn) => fn());
+  const img = nodes().find((node) => node.tagName === 'IMG' && node.className === 'tap-img');
+  assert.ok(img);
+  assert.strictEqual(img.src, quiz.slides[1].image);
+  assert.ok(img.src.indexOf(palace) === -1);
+  assert.ok(!nodes().some((node) => String(node.src || '').indexOf('palace') !== -1));
+  img.listeners.click.forEach((fn) => fn({ clientX: 0, clientY: 0 }));
+  const hint = nodes().find((node) => node.className === 'hotspot-hint');
+  assert.ok(hint);
+  const hotspot = quiz.slides[1].hotspot;
+  assert.strictEqual(hint.style.left, hotspot.left + '%');
+  assert.strictEqual(hint.style.top, hotspot.top + '%');
+  assert.strictEqual(hint.style.width, hotspot.width + '%');
+  assert.strictEqual(hint.style.height, hotspot.height + '%');
+  assert.ok(nodes().some((node) => node.textContent === '位置不對'));
+  const realSetTimeout = global.setTimeout;
+  global.setTimeout = function (fn) {
+    fn();
+    return 0;
+  };
+  try {
+    const centerX = hotspot.left + hotspot.width / 2;
+    const centerY = hotspot.top + hotspot.height / 2;
+    img.listeners.click.forEach((fn) => fn({ clientX: centerX, clientY: centerY }));
+  } finally {
+    global.setTimeout = realSetTimeout;
+  }
+  assert.strictEqual(passed, 1);
+  assert.ok(nodes().some((node) => node.textContent === '正確！'));
 });
 
 test('practice page and homepage fast-forward empty sentence stages', function () {

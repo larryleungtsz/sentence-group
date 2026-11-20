@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 3,
+    "text": "食べ終わると"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一只沾有少許醬汁痕跡的白色圓形空瓷盤，一雙木筷整齊地橫放在盤緣正上方，代表用餐完畢的狀態。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/tabeowaru-to-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.94,
+        "top": 55.0,
+        "width": 42.5,
+        "height": 42.22,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

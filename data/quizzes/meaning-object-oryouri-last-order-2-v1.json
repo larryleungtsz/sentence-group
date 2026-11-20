@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見菜單旁剛豎起的LAST小牌＝「最後點餐的」；見這幕→想起最後點餐。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg"
-      ]
+      "text": "菜單旁剛豎起的 LAST 小牌"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-rasuto-oodaa-no-combined.jpg",
       "hotspot": {
-        "left": 28,
-        "top": 58,
-        "width": 12,
-        "height": 18,
+        "left": 62.11,
+        "top": 43.36,
+        "width": 37.5,
+        "height": 41.41,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

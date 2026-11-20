@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 1,
+    "text": "看板メニューの"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一座立在小型三腳架上的金屬黑板招牌，上面用鮮艷的彩色粉筆畫著一顆大皇冠與「NO.1 SIGNATURE」字樣，招牌右側頂部伸出一個金屬屬性連結環（代表「的」的修飾關係）。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kanban-menyuu-no-combined-v1.jpeg",
+      "hotspot": {
+        "left": 51.45,
+        "top": 4.69,
+        "width": 36.63,
+        "height": 90.1,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

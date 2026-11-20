@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見雙手捧空杯離桌＝「幫您收走」；見這幕→想起店員收走空杯。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-osage-shimasune-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-aragoshi-mikanshu-no-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kochira-combined.jpg"
-      ]
+      "text": "店員雙手剛捧起空杯離桌停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/09-osage-shimasune-combined.jpg",
       "hotspot": {
-        "left": 66,
-        "top": 55,
-        "width": 20,
-        "height": 24,
+        "left": 18.75,
+        "top": 1.56,
+        "width": 56.25,
+        "height": 76.56,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見雙眼釘在盤面油光、嘴角上揚＝「看起來好吃」；見這幕→想起看起來好吃。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-oishisou-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-tabemashou-combined.jpg"
-      ]
+      "text": "雙眼釘在盤面油光、嘴角上揚"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/09-oishisou-combined.jpg",
       "hotspot": {
-        "left": 62,
-        "top": 76,
-        "width": 16,
-        "height": 22,
+        "left": 1.17,
+        "top": 38.28,
+        "width": 98.44,
+        "height": 61.72,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

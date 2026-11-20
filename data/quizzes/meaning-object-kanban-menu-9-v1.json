@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 9,
+    "text": "滑らかで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一顆表面極度光滑、泛著絲綢般光澤的玉石橄欖，右側順暢地銜接著一條金色的鐵鍊環節（Connect Chain），代表「質感滑嫩」並且「順著接下去」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/nameraka-de-combined-v1.jpeg",
+      "hotspot": {
+        "left": 62.79,
+        "top": 30.99,
+        "width": 37.21,
+        "height": 45.05,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

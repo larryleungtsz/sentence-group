@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——嘴唇剛貼合食物輪廓、旁邊引號同時亮起停住。視線釘在貼合處與引號；合口味＋說＝合口味（說）。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kuchiniautte-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/jibunno-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/wakaru-combined.jpg"
-      ]
+      "text": "嘴唇剛貼合食物輪廓、旁邊引號同時亮起"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kuchiniautte-combined.jpg",
       "hotspot": {
-        "left": 8,
-        "top": 2,
-        "width": 28,
-        "height": 32,
+        "left": 4.69,
+        "top": 50.78,
+        "width": 87.11,
+        "height": 33.59,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "掌心向上等答的店員＝要怎樣呢，因為姿勢在請你決定；見到請選手勢就想起「要怎樣呢」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
-      ]
+      "text": "掌心向上、微傾頭等你答的店員"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-pepsi-zero-size.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ikaga-saremasu-ka-combined.png",
       "hotspot": {
-        "left": 32,
-        "top": 12,
-        "width": 28,
-        "height": 48,
+        "left": 60.42,
+        "top": 28.7,
+        "width": 36.46,
+        "height": 71.3,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

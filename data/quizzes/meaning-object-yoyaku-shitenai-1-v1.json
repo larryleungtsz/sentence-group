@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見預約簿空白頁剛翻開、欄位全空停住＝「雖然冇預約」；見這幕→想起雖然冇預約。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ni-mei-tte-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-aite-masu-ka-combined.jpg?v=20261030combined"
-      ]
+      "text": "預約簿空白頁剛翻開、欄位全空停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-yoyaku-shite-nai-n-desu-kedo-combined.jpg",
       "hotspot": {
-        "left": 21,
-        "top": 40,
-        "width": 14,
-        "height": 20,
+        "left": 1.17,
+        "top": 55.47,
+        "width": 90.62,
+        "height": 40.62,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見掌心向上向前推＝「請」；見這幕→想起店員請客人點。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-douzo-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-chumon-ii-desuka-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-edamame-combined.jpg"
-      ]
+      "text": "掌心向上向前推"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chumon-ii-desuka.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-douzo-combined.jpg",
       "hotspot": {
-        "left": 43,
-        "top": 38,
-        "width": 13,
-        "height": 16,
+        "left": 0.0,
+        "top": 30.08,
+        "width": 55.86,
+        "height": 53.52,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

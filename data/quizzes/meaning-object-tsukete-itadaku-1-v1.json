@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見筷尖蘸進醬碟、一滴醬汁垂住＝「如果蘸著／請您加上的話」；見這幕→想起如果蘸著／請您加上的話。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-tsukete-itadaku-to-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-tabemashou-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-tamago-ppoi-combined.jpg"
-      ]
+      "text": "筷尖蘸進醬碟、一滴醬汁垂住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-tsukete-itadaku-to-combined.jpg",
       "hotspot": {
-        "left": 1,
-        "top": 58,
-        "width": 17,
-        "height": 36,
+        "left": 0.0,
+        "top": 16.8,
+        "width": 46.48,
+        "height": 80.08,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

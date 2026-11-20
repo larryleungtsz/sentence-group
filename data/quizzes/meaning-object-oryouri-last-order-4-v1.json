@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見計時器歸零紅燈＝「到了」；見這幕→想起正式到了。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-ojikan-combined.jpg"
-      ]
+      "text": "計時器歸零紅燈"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-tonarimasu-combined.jpg",
       "hotspot": {
-        "left": 30,
-        "top": 10,
-        "width": 8,
-        "height": 10,
+        "left": 3.91,
+        "top": 36.33,
+        "width": 24.22,
+        "height": 30.86,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

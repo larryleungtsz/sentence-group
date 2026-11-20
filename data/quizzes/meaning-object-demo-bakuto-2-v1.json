@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——糖漿絲剛垂下、標籤清楚。視線釘在那絲糖漿；糖漿本體＝麥芽糖。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/bakugato-ga-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/demo-demo-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ome-combined.jpg"
-      ]
+      "text": "琥珀色糖漿從勺尖垂下一絲，罐標「麦芽糖」入鏡"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-demo-bakuto.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/bakugato-ga-combined.jpg",
       "hotspot": {
-        "left": 14,
-        "top": 26,
-        "width": 18,
-        "height": 48,
+        "left": 62.11,
+        "top": 1.95,
+        "width": 37.89,
+        "height": 82.42,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

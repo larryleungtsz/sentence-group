@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 4,
+    "text": "お名前と"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一枚長方形胡桃木胸牌，正面嵌著黃銅邊框並留有空白寫字槽，胸牌右側邊緣連著一條金色小掛鉤，代表姓氏名字並連接下一項資訊。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/o-namae-to-combined-v1.jpeg",
+      "hotspot": {
+        "left": 7.32,
+        "top": 51.57,
+        "width": 36.13,
+        "height": 36.71,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

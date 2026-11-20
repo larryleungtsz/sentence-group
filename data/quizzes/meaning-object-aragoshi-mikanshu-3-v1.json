@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見拇指指自己胸口＝「我呢」；見這幕→想起話頭轉到自己。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-boku-wa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-okawari-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-soda-wari-combined.jpg"
-      ]
+      "text": "拇指剛指向自己胸口停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-boku-wa-combined.jpg",
       "hotspot": {
-        "left": 30,
-        "top": 18,
-        "width": 20,
-        "height": 62,
+        "left": 43.75,
+        "top": 35.94,
+        "width": 28.12,
+        "height": 21.09,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

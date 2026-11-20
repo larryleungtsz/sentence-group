@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見指向空桌的手＝「座位這邊」；見這幕→想起座位方向。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oseki-no-ho-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg"
-      ]
+      "text": "掌心側向、剛指向空桌那一側停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/oseki-no-ho-combined.jpg",
       "hotspot": {
-        "left": 64,
-        "top": 48,
-        "width": 22,
-        "height": 36,
+        "left": 61.72,
+        "top": 21.88,
+        "width": 38.28,
+        "height": 20.31,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

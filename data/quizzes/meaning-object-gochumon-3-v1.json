@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "燈號由黃轉綠的一瞬間 = 成為了的話，因為燈色已變成綠，狀態從「未成」切到「已成」。看見剛轉綠就想起「成為了／條件達成」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png"
-      ]
+      "text": "燈號由黃轉綠的一瞬間"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/narimashitara-combined.png",
       "hotspot": {
-        "left": 44,
-        "top": 18,
-        "width": 12,
-        "height": 16,
+        "left": 70.66,
+        "top": 6.02,
+        "width": 23.78,
+        "height": 34.26,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

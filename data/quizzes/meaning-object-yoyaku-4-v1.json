@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見前臂抬到胸前正中＋頭大幅側轉＝「是⋯呢／不過」；見這幕→想起語氣緩衝、轉接下一句。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nan-desu-kedo-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoyaku-shiteta-combined.jpg"
-      ]
+      "text": "整隻前臂剛抬到胸前正中停住、頭大幅側轉望你"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/nan-desu-kedo-combined.jpg",
       "hotspot": {
-        "left": 48,
-        "top": 42,
-        "width": 14,
-        "height": 18,
+        "left": 57.81,
+        "top": 10.94,
+        "width": 42.19,
+        "height": 60.94,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

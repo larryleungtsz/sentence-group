@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 5,
+    "text": "うまく"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻雕刻精細的金屬機關手，手指正精準且完美地將一塊齒輪嵌入古董鐘錶的內部機構中。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/umaku-combined-v1.jpeg",
+      "hotspot": {
+        "left": 45.93,
+        "top": 28.12,
+        "width": 17.44,
+        "height": 27.08,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

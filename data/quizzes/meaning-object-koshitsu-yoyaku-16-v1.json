@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-koshitsu-yoyaku-16-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 16,
+    "text": "飲み放題付き"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個金光閃閃的大型飲料自助機（Dispenser），機身上掛著一個寫有「FREE / 暢飲」的金色大綁帶標籤。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/11-nomihodai-tsuki-combined.jpg",
+      "hotspot": {
+        "left": 46.59,
+        "top": 0.0,
+        "width": 50.0,
+        "height": 100.0,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

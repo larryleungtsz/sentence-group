@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 9,
+    "text": "生み出している"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一座精緻的木雕母雞雕像，底座前方安放著一顆剛剛誕生、殼上還貼著半透明薄膜的亮黃色雞蛋。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/umidashite-iru-combined-v1.jpeg",
+      "hotspot": {
+        "left": 12.21,
+        "top": 9.38,
+        "width": 47.67,
+        "height": 81.77,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

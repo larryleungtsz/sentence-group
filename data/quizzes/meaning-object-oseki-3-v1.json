@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-oseki-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+  "chunk": {
+    "id": 3,
+    "text": "おまちがいないですかね"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一把紅白雙色塑膠大號「✓」勾號尺規，尺身前端頂著一個帶有小問號的圓形放大鏡，代表再次核對確認無誤。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omachigai-nai-desu-ka-ne-combined-v1.jpeg",
+      "hotspot": {
+        "left": 5.23,
+        "top": 2.34,
+        "width": 37.14,
+        "height": 68.36,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

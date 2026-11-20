@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見 LAST 牌舉起＝「最後點餐」；見這幕→想起最後點餐。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/rasuto-oodaa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/torasete-itadakimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nanajugo-fun-combined.jpg"
-      ]
+      "text": "店員剛舉起寫著 LAST 的牌子停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-2jikan-food75.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/rasuto-oodaa-combined.jpg",
       "hotspot": {
-        "left": 4,
-        "top": 4,
-        "width": 24,
-        "height": 52,
+        "left": 62.5,
+        "top": 3.12,
+        "width": 37.5,
+        "height": 70.31,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

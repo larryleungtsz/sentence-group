@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "鞠躬請求的服務員 = 請，因為深鞠躬＋前伸的手是明確在請求對方。看見這鞠躬請求姿就想起「請」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png"
-      ]
+      "text": "鞠躬請求的服務員"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kudasai-combined.png",
       "hotspot": {
-        "left": 58,
-        "top": 36,
-        "width": 7,
-        "height": 18,
+        "left": 54.34,
+        "top": 17.36,
+        "width": 43.58,
+        "height": 62.04,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

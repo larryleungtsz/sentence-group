@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見原盤旁剛多出的一碟＝「追加的」；見這幕→想起追加。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-tsuika-no-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-gochuumon-wa-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-tonarimasu-combined.jpg"
-      ]
+      "text": "原盤旁剛多出的一碟"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-tsuika-no-combined.jpg",
       "hotspot": {
-        "left": 50,
-        "top": 70,
-        "width": 12,
-        "height": 14,
+        "left": 51.56,
+        "top": 66.41,
+        "width": 47.27,
+        "height": 23.05,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

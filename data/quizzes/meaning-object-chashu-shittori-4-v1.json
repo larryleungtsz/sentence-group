@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——舌尖剛沾到醬、旁邊第二個勾同時畫上停住。視線釘在那第二個勾；味道＋也＝味道也。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ajimo-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shittori-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/noko-combined.jpg"
-      ]
+      "text": "舌尖剛沾到醬汁、旁邊第二個勾同時畫上"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ajimo-combined.jpg",
       "hotspot": {
-        "left": 2,
-        "top": 6,
-        "width": 24,
-        "height": 40,
+        "left": 35.16,
+        "top": 40.62,
+        "width": 64.84,
+        "height": 49.22,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

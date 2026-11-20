@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-2-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 2,
+    "text": "思い出"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "透明水晶球（舊照與金雪花）"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omoide-combined-v1.jpeg",
+      "hotspot": {
+        "left": 16.57,
+        "top": 20.31,
+        "width": 26.74,
+        "height": 69.27,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

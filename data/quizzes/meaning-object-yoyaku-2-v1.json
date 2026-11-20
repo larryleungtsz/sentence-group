@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見指按住 7＝「從七點」；見這幕→想起時間從七點起。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shichiji-kara-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoyaku-shiteta-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg"
-      ]
+      "text": "食指剛按在鐘面數字 7 上停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/shichiji-kara-combined.jpg",
       "hotspot": {
-        "left": 1,
-        "top": 2,
-        "width": 20,
-        "height": 28,
+        "left": 0.0,
+        "top": 21.88,
+        "width": 27.34,
+        "height": 64.06,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

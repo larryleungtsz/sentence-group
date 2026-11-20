@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-sore-wa-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 5,
+    "text": "お電話番号"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一張燙金邊框的象牙白高級飯店留言卡，卡片正中央印有一排深藍色立體凸起數字鍵格「012-3456-7890」，代表客人的聯絡電話號碼。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/o-denwa-bangou-combined-v1.jpeg",
+      "hotspot": {
+        "left": 9.77,
+        "top": 26.22,
+        "width": 34.67,
+        "height": 48.95,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

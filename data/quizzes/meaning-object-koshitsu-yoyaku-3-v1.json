@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-koshitsu-yoyaku-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 3,
+    "text": "まだ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個靜止在砂漏中間的巨型沙漏（細沙剛好卡住流到一半，代表時間或狀態「依然、還在」持續中）。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-mada-combined.jpg",
+      "hotspot": {
+        "left": 11.93,
+        "top": 0.0,
+        "width": 32.39,
+        "height": 98.96,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

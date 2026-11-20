@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見兩指豎起＝「兩位」；見這幕→想起兩個人。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ni-mei-sama-de-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/yoroshikatta-desuka-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nan-desu-kedo-combined.jpg"
-      ]
+      "text": "食指與中指剛豎起停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ni-mei-sama-de-combined.jpg",
       "hotspot": {
-        "left": 40,
-        "top": 28,
-        "width": 12,
-        "height": 20,
+        "left": 82.81,
+        "top": 40.62,
+        "width": 17.19,
+        "height": 22.66,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見拳頭重重點在紅字「必」＝「務必／一定要」；見這幕→想起務必／一定要。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-zehi-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-osusume-shiteru-node-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-otameshi-kudasai-combined.jpg"
-      ]
+      "text": "拳頭重重點在紅字「必」"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-tsukete-itadaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-zehi-combined.jpg",
       "hotspot": {
-        "left": 52,
-        "top": 38,
-        "width": 14,
-        "height": 40,
+        "left": 11.72,
+        "top": 38.28,
+        "width": 88.28,
+        "height": 61.72,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

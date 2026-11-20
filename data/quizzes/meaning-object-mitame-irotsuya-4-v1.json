@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——大拇指剛豎起、旁邊箭頭同時指向下一幕停住。視線釘在拇指與箭頭；好＋因此＝好所以。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/iikara-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tabenakutemo-combined.jpg"
-      ]
+      "text": "大拇指剛豎起、旁邊箭頭同時指向下一幕"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-mitame-irotsuya.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/iikara-combined.jpg",
       "hotspot": {
-        "left": 82,
-        "top": 34,
-        "width": 16,
-        "height": 46,
+        "left": 41.41,
+        "top": 9.77,
+        "width": 58.59,
+        "height": 55.86,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

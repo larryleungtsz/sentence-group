@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-rayu-5-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 5,
+    "text": "たっぷり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個裝得極度誇張、液體/配料已經高高隆起形成弧形張力的金屬大湯碗，裡面的東西滿到快要溢出來，代表極度「充足、量給得超大方」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/tappuri-combined-v1.jpeg",
+      "hotspot": {
+        "left": 1.16,
+        "top": 8.85,
+        "width": 46.8,
+        "height": 83.33,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

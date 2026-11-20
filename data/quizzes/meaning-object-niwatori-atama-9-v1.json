@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-niwatori-atama-9-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 9,
+    "text": "だけに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "望遠焦鏡頭"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dake-ni-combined-v1.jpeg",
+      "hotspot": {
+        "left": 7.27,
+        "top": 31.25,
+        "width": 54.07,
+        "height": 51.56,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

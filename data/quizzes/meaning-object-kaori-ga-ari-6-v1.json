@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 6,
+    "text": "溶け合って"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個雙色液體沙漏，上層黃色與藍色的濃稠液體正沉入中央狹窄的通道，交融成一抹亮綠色並向下流淌。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/tokeatte-combined-v1.jpeg",
+      "hotspot": {
+        "left": 15.7,
+        "top": 1.04,
+        "width": 44.48,
+        "height": 88.54,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

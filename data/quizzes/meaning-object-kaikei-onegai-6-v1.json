@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見天平兩邊砝碼剛齊平停住＝「剛好」；見這幕→想起剛好。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-choudo-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-azukari-shimasu-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-ryoushuusho-wa-combined.jpg?v=20261030combined"
-      ]
+      "text": "天平"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-kaikei-onegai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-choudo-combined.jpg",
       "hotspot": {
-        "left": 40,
-        "top": 44,
-        "width": 14,
-        "height": 28,
+        "left": 15.62,
+        "top": 3.52,
+        "width": 75.0,
+        "height": 84.77,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-odenwa-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 3,
+    "text": "もしもし"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻白色陶瓷右手雕塑，手掌張開成「C」字形貼在一只立體粉色大耳朵模型的耳廓後方，呈現傾聽與開口搭話的靜態姿態，代表接通電話時的招呼。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshimoshi-combined-v1.jpeg",
+      "hotspot": {
+        "left": 7.63,
+        "top": 9.11,
+        "width": 34.52,
+        "height": 65.1,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見翠綠青瓜斜片剛排成一列停住＝「青瓜的」；見這幕→想起青瓜的。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-kyuri-no-combined.jpg?v=20261031ebiakacombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-o-tonari-ga-combined.jpg?v=20261031ebiakacombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-ebi-to-combined.jpg?v=20261031ebiakacombined"
-      ]
+      "text": "翠綠青瓜斜片剛排成一列停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-ebi-sumiso.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-kyuri-no-combined.jpg",
       "hotspot": {
-        "left": 26,
-        "top": 64,
-        "width": 16,
-        "height": 20,
+        "left": 3.91,
+        "top": 60.94,
+        "width": 67.19,
+        "height": 27.34,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見豎起的食指與中指＝「兩個／兩份」；見這幕→想起兩個／兩份。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-futatsu-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-jaa-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-shitsurei-shimasu-combined.jpg"
-      ]
+      "text": "豎起的食指與中指"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yokattara-onomi.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-futatsu-combined.jpg",
       "hotspot": {
-        "left": 47,
-        "top": 43,
-        "width": 11,
-        "height": 18,
+        "left": 21.88,
+        "top": 50.78,
+        "width": 57.81,
+        "height": 49.22,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

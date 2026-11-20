@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 1,
+    "text": "香りがあり"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一朵盛開的巨大紫色薰衣草，花瓣四周飄浮著幾條半透明、像絲帶般盤旋上升的紫色蒸氣流，直觀代表飄散的香氣。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kaori-ga-ari-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 0.0,
+        "width": 55.4,
+        "height": 97.4,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

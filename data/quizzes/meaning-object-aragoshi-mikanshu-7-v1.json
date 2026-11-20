@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見捧托盤向前伸＝「幫您送上」；見這幕→想起店員要送上來。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-omochi-shimasune-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kochira-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-toriaezu-ijou-de-combined.jpg"
-      ]
+      "text": "店員雙手捧托盤剛向前伸停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-aragoshi-mikanshu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-omochi-shimasune-combined.jpg",
       "hotspot": {
-        "left": 48,
-        "top": 12,
-        "width": 14,
-        "height": 65,
+        "left": 49.22,
+        "top": 12.5,
+        "width": 50.78,
+        "height": 58.59,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

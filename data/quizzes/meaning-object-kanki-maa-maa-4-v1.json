@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 4,
+    "text": "服に"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一件掛在原木衣架上的深灰色棉質連帽衛衣，布料垂墜立體、胸前口袋平整，代表日常穿著的衣物。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/fuku-ni-combined-v1.jpeg",
+      "hotspot": {
+        "left": 0.31,
+        "top": 0.0,
+        "width": 41.56,
+        "height": 94.44,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見沙漏剛翻轉、沙開始漏停住＝「請稍等」；見這幕→想起請稍等。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-shoushou-o-machi-kudasai-combined.jpg?v=20261030combined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-go-annai-sasete-itadakimasu-combined.jpg?v=20261030combined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-o-susumi-kudasai-combined.jpg?v=20261030combined"
-      ]
+      "text": "沙漏剛翻轉、沙開始漏停住"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku-shitenai.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-shoushou-o-machi-kudasai-combined.jpg",
       "hotspot": {
-        "left": 56,
-        "top": 68,
-        "width": 12,
-        "height": 24,
+        "left": 41.41,
+        "top": 0.39,
+        "width": 35.16,
+        "height": 44.14,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

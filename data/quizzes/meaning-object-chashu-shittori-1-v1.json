@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "定格——食指剛停在盤中那片叉燒上。視線釘在指尖與肉面交接處；被指住的那樣＝主題叉燒。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chashuwa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/meccha-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/aru-combined.jpg"
-      ]
+      "text": "食指剛停在盤中紅潤叉燒切片上"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-chashu-shittori.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chashuwa-combined.jpg",
       "hotspot": {
-        "left": 28,
-        "top": 38,
-        "width": 36,
-        "height": 42,
+        "left": 15.62,
+        "top": 28.12,
+        "width": 84.38,
+        "height": 60.94,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

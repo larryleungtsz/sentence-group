@@ -11,26 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "打開的點餐單（寫着注文）= 您的點餐，因為單上已寫着「注文」及客人落下的菜。看見寫滿／標着注文的單就想起「您的點餐」。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-      "distractors": []
+      "text": "打開的點餐單（寫着注文）"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-gochumon.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
       "hotspot": {
-        "left": 2,
-        "top": 68,
-        "width": 20,
-        "height": 24,
+        "left": 30.94,
+        "top": 59.72,
+        "width": 49.69,
+        "height": 38.61,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見剛翻開的預約簿＋眉微揚望你＝「有預約嗎」；見這幕→想起店員在問有冇預約。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goyoyaku-itadaitemasuka-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/shichiji-kara-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/goannai-shimasune-combined.jpg"
-      ]
+      "text": "店員雙手剛翻開預約簿、眉微揚望你"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-yoyaku.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/goyoyaku-itadaitemasuka-combined.jpg",
       "hotspot": {
-        "left": 10,
-        "top": 16,
-        "width": 26,
-        "height": 52,
+        "left": 0.0,
+        "top": 5.47,
+        "width": 44.53,
+        "height": 46.09,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

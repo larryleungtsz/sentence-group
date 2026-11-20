@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-konna-basho-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 1,
+    "text": "こんな"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一隻金屬手雕像，食指垂直向下誇張地指著腳下的一塊特定地磚，地磚上畫著一個極具強調感、閃閃發光的黃色圈圈標記，代表「就是這種類型/這種樣貌」。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/konna-combined-v1.jpeg",
+      "hotspot": {
+        "left": 45.45,
+        "top": 16.15,
+        "width": 43.18,
+        "height": 78.65,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

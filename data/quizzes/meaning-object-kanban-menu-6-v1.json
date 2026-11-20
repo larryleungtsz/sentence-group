@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanban-menu-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 6,
+    "text": "瞬間から"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個精緻的金屬快門按紐模型，按下的一煞那定格出一道放射狀的光芒，後方連接著一條延伸向前的金色起點射線標誌。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shunkan-kara-combined-v2.jpeg",
+      "hotspot": {
+        "left": 0.0,
+        "top": 9.38,
+        "width": 60.47,
+        "height": 79.17,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

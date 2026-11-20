@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-6-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 6,
+    "text": "食べちゃった"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "咬缺空盤與掩嘴雕像"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/tabechatta-combined-v1.jpeg",
+      "hotspot": {
+        "left": 9.88,
+        "top": 0.0,
+        "width": 84.59,
+        "height": 94.79,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

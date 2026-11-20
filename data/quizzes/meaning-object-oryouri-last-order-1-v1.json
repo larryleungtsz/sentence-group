@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見托盤上剛擺齊的熱菜＝「料理」；見這幕→想起料理。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-oryouri-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-rasuto-oodaa-no-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-reji-no-hou-made-combined.jpg"
-      ]
+      "text": "托盤上剛擺齊的熱菜"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-oryouri-last-order.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-oryouri-combined.jpg",
       "hotspot": {
-        "left": 2,
-        "top": 38,
-        "width": 22,
-        "height": 34,
+        "left": 18.75,
+        "top": 47.66,
+        "width": 80.86,
+        "height": 42.97,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

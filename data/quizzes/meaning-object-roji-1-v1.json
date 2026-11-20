@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-roji-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 1,
+    "text": "極く"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一根巨大的溫度計雕像，裡面的紅色液柱頂穿了頂部的玻璃，瘋狂向上噴出一個寫著「MAX」的紅色小旗子，代表程度達到極限。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/goku-combined-v1.jpeg",
+      "hotspot": {
+        "left": 23.84,
+        "top": 0.0,
+        "width": 28.2,
+        "height": 84.9,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

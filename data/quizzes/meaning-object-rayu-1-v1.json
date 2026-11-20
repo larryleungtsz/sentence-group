@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-rayu-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 1,
+    "text": "それに"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一根亮金色的巨型「＋」（加號）金屬積木，積木頂部與底部都有相應的榫頭，精準呈現「在原本基礎上再加一塊、遞進接下去」的實體連結感。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/sore-ni-combined-v1.jpeg",
+      "hotspot": {
+        "left": 41.28,
+        "top": 5.21,
+        "width": 19.33,
+        "height": 67.97,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

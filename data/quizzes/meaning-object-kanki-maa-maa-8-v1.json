@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kanki-maa-maa-8-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 8,
+    "text": "お店だ"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一座一比二十比例的木造日式街角小店鋪模型，屋頂鋪著深灰瓦片、門口掛著一塊寫有黑色「商」字的木牌，代表實體店面。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omise-da-combined-v1.jpeg",
+      "hotspot": {
+        "left": 5.52,
+        "top": 9.38,
+        "width": 46.22,
+        "height": 76.56,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

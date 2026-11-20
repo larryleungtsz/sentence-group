@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kodomo-omoide-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 1,
+    "text": "子供の頃の"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "鮮色彩繪木製搖搖木馬"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/kodomo-no-koro-no-combined-v1.jpeg",
+      "hotspot": {
+        "left": 5.52,
+        "top": 9.9,
+        "width": 48.55,
+        "height": 76.56,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

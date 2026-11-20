@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-ichio-4-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 4,
+    "text": "団体様が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一串六個扣在同一枚黃銅大鑰匙圈上的彩色木頭人偶吊飾，所有人都戴著同款紅色小領結，代表成群結隊的多位賓客。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dantai-sama-ga-combined-v1.jpeg",
+      "hotspot": {
+        "left": 54.87,
+        "top": 46.88,
+        "width": 44.69,
+        "height": 52.08,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

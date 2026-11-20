@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kaori-ga-ari-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 3,
+    "text": "痺れる感じも"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個帶有亮黃黑相間警示條紋的圓形黃色金屬標誌，表面鑲著一道亮白色的靜態鋸齒狀閃電符號，代表觸電般的麻木感。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shibireru-kanji-mo-combined-v1.jpeg",
+      "hotspot": {
+        "left": 52.91,
+        "top": 5.21,
+        "width": 45.64,
+        "height": 84.38,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

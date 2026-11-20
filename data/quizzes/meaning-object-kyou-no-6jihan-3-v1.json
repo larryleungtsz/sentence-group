@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-kyou-no-6jihan-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 3,
+    "text": "2人で"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一對並肩站立的木質關節小人偶，左邊人偶塗成天藍色、右邊塗成暖黃色，兩人肩膀緊靠站在同一塊圓木底座上，代表兩位同行者。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/futari-de-combined-v1.jpeg",
+      "hotspot": {
+        "left": 10.74,
+        "top": 15.38,
+        "width": 30.76,
+        "height": 80.77,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

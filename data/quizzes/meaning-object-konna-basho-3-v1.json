@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-konna-basho-3-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 3,
+    "text": "大したことないだろうと"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一個雕刻著撇嘴、聳肩、眼神往下看的石膏胸像，石膏像上方懸掛著一枚寫有「小事／沒什麼（NOTHING）」字樣的打折貼紙，展現極度輕視與不以為意的定格態度。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/taishita-combined-v1.jpeg",
+      "hotspot": {
+        "left": 1.14,
+        "top": 4.17,
+        "width": 48.3,
+        "height": 93.75,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}

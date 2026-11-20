@@ -11,29 +11,21 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "見多餘項目剛劃掉、只留那幾格亮起停住＝「只要那些就好」；見這幕→想起只要那些就好。"
-    },
-    {
-      "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-sore-dake-de-ii-desu-combined.jpg?v=20261031orenjicombined",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-kore-no-okawari-combined.jpg?v=20261031orenjicombined",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-orenji-jusu-to-combined.jpg?v=20261031orenjicombined"
-      ]
+      "text": "訂單格／劃掉線"
     },
     {
       "type": "tap",
-      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/palace-orenji-jusu.png",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-sore-dake-de-ii-desu-combined.jpg",
       "hotspot": {
-        "left": 89,
-        "top": 38,
-        "width": 10,
-        "height": 52,
+        "left": 3.91,
+        "top": 33.98,
+        "width": 92.58,
+        "height": 64.84,
         "unit": "percent"
       }
     }
   ],
   "feedback": {
-    "on_wrong": "show_correct"
+    "on_wrong": "show_correct_box"
   }
 }

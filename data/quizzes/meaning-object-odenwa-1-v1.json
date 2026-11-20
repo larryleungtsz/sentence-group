@@ -1,0 +1,31 @@
+{
+  "quiz_id": "meaning-object-odenwa-1-v1",
+  "objective": "meaning_object_select_and_tap",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 1,
+    "text": "お電話"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "一台經典復古酒紅色轉盤式座機電話，聽筒安穩架在銀色叉簧上，捲曲的電話線整齊盤在底座旁，代表電話機具本身。"
+    },
+    {
+      "type": "tap",
+      "image": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/odenwa-combined-v1.jpeg",
+      "hotspot": {
+        "left": 53.78,
+        "top": 19.53,
+        "width": 44.69,
+        "height": 76.82,
+        "unit": "percent"
+      }
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct_box"
+  }
+}
