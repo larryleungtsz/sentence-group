@@ -593,6 +593,7 @@ tests.push(test('Q4 and Q7 reuse the ephemeral shadow recorder and ignore omitte
     assert.ok(!buttonNamed(root, '✗ 再試'));
     assert.ok(!buttonNamed(root, '繼續'));
     assert.ok(!buttonNamed(root, '下一題'));
+    assert.ok(!buttonNamed(root, '記住咗'));
     assert.ok(buttonNamed(root, '開始錄音'));
     assert.ok(buttonNamed(root, '完成跟讀'));
     assert.ok(texts(root).some(function (t) {
@@ -703,6 +704,7 @@ tests.push(test('Q9 opening audio_listen with self_check false continues without
   assert.ok(buttonNamed(root, '播放'));
   assert.ok(buttonNamed(root, '繼續'));
   assert.ok(!buttonNamed(root, '下一題'));
+  assert.ok(!buttonNamed(root, '記住咗'));
   assert.ok(!buttonNamed(root, '✓ 通過'));
   assert.ok(!buttonNamed(root, '✗ 再試'));
   assert.ok(!buttonNamed(root, '開始錄音'));
@@ -732,6 +734,7 @@ tests.push(test('Q9 opening audio_listen with self_check false continues without
   });
   assert.ok(buttonNamed(other, '下一題'));
   assert.ok(!buttonNamed(other, '繼續'));
+  assert.ok(!buttonNamed(other, '記住咗'));
   assert.ok(!buttonNamed(other, '✓ 通過'));
   assert.ok(!buttonNamed(other, '開始錄音'));
 
@@ -765,12 +768,356 @@ tests.push(test('Q9 opening audio_listen with self_check false continues without
   assert.ok(buttonNamed(liveRoot, '✓ 通過'));
   assert.ok(buttonNamed(liveRoot, '✗ 再試'));
   assert.ok(!buttonNamed(liveRoot, '繼續'));
+  assert.ok(!buttonNamed(liveRoot, '記住咗'));
   assert.ok(!buttonNamed(liveRoot, '開始錄音'));
   buttonNamed(liveRoot, '✓ 通過').click();
   assert.strictEqual(live.slides[1].type, 'youglish');
   assert.ok(buttonNamed(liveRoot, '✓ 通過'));
   assert.ok(!buttonNamed(liveRoot, '繼續'));
   assert.ok(!buttonNamed(liveRoot, '開始錄音'));
+}));
+
+function orderRole(root, role) {
+  const box = walk(root, []).find(function (node) {
+    return node.getAttribute && node.getAttribute('data-order-role') === role;
+  });
+  assert.ok(box, role);
+  return (box.children || []).filter(function (node) { return node.tagName === 'BUTTON'; });
+}
+
+function placeOrderIndexes(root, indexes) {
+  indexes.forEach(function (index) {
+    const btn = orderRole(root, 'pool').find(function (node) {
+      return node.getAttribute('data-order-index') === String(index);
+    });
+    assert.ok(btn, 'pool index ' + index);
+    btn.click();
+  });
+}
+
+tests.push(test('Q6 opening audio_listen shows 記住咗 and leaves the other advance labels', function () {
+  const remembered = '記住咗';
+  assert.strictEqual(remembered.charCodeAt(2), 0x5497);
+  assert.strictEqual(remembered.indexOf('哉'), -1);
+  const runnerSrc = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
+  assert.ok(runnerSrc.indexOf(remembered) !== -1);
+  assert.strictEqual(runnerSrc.indexOf('記住哉'), -1);
+
+  function label(objective, type, selfCheck, idx) {
+    const slide = { type: type, audio: 'https://example.test/q6.mp3', rate: 1, button: '繼續' };
+    if (selfCheck !== 'omit') slide.self_check = selfCheck;
+    return QuizRunner.audioListenAdvanceLabel({ objective: objective }, slide, type, idx);
+  }
+  assert.strictEqual(label('pronunciation_sounding_select', 'audio_listen', false, 0), remembered);
+  assert.strictEqual(label('pronunciation_sounding_select', 'audio_listen', false, 1), '下一題');
+  assert.strictEqual(label('youglish_listen', 'audio_listen', false, 0), '繼續');
+  assert.strictEqual(label('whole_sentence_listening', 'audio_listen', false, 0), '下一題');
+  assert.strictEqual(label('pronunciation_sounding_select', 'audio_check', false, 0), '下一題');
+  assert.strictEqual(label('story_select_image', 'audio_listen', false, 0), '下一題');
+  // Omitted self_check is not the Q6 opening. The runner shows ✓/✗ before this label.
+  assert.strictEqual(label('pronunciation_sounding_select', 'audio_listen', 'omit', 0), '下一題');
+
+  let passed = 0;
+  const quiz = {
+    objective: 'pronunciation_sounding_select',
+    feedback: { on_wrong: 'show_correct' },
+    slides: [
+      {
+        type: 'audio_listen',
+        instruction: '請聆聽。',
+        audio: 'https://example.test/chunk.mp3',
+        rate: 1,
+        self_check: false,
+        button: '繼續',
+      },
+      {
+        type: 'audio_listen',
+        instruction: '再聽一截。',
+        audio: 'https://example.test/chunk-2.mp3',
+        rate: 1,
+        self_check: false,
+      },
+    ],
+  };
+  const host = runQuiz(quiz, { onPass: function () { passed += 1; } });
+  assert.ok(texts(host).indexOf('請聆聽。') !== -1);
+  assert.ok(buttonNamed(host, remembered));
+  assert.ok(!buttonNamed(host, '繼續'));
+  assert.ok(!buttonNamed(host, '下一題'));
+  assert.ok(!buttonNamed(host, '下一步'));
+  assert.ok(!buttonNamed(host, '✓ 通過'));
+  assert.ok(!buttonNamed(host, '✗ 再試'));
+  assert.ok(!buttonNamed(host, '開始錄音'));
+  assert.ok(!buttonNamed(host, '完成跟讀'));
+  assert.ok(!buttonNamed(host, '重播'));
+  const audio = audios(host)[0];
+  assert.strictEqual(audio.playbackRate, 1);
+  assert.strictEqual(audio.controls, true);
+  assert.strictEqual(audio.src, 'https://example.test/chunk.mp3');
+  audio.currentTime = 0;
+  buttonNamed(host, '播放').click();
+  assert.strictEqual(audio.currentTime, 0);
+  assert.ok(!audio.listeners.timeupdate);
+  buttonNamed(host, remembered).click();
+  assert.strictEqual(passed, 0);
+  assert.ok(texts(host).indexOf('再聽一截。') !== -1);
+  assert.ok(buttonNamed(host, '下一題'));
+  assert.ok(!buttonNamed(host, remembered));
+  assert.ok(!buttonNamed(host, '繼續'));
+  buttonNamed(host, '下一題').click();
+  assert.strictEqual(passed, 1);
+
+  function opening(slide) {
+    return runQuiz({
+      objective: 'pronunciation_sounding_select',
+      slides: [Object.assign({
+        type: 'audio_listen',
+        audio: 'https://example.test/q6-open.mp3',
+        rate: 1,
+      }, slide)],
+    });
+  }
+  const checked = opening({ self_check: true });
+  assert.ok(buttonNamed(checked, '✓ 通過'));
+  assert.ok(!buttonNamed(checked, remembered));
+  assert.ok(!buttonNamed(checked, '繼續'));
+  const omittedSlide = {
+    type: 'audio_listen',
+    audio: 'https://example.test/q6-open.mp3',
+    rate: 1,
+  };
+  assert.ok(!Object.prototype.hasOwnProperty.call(omittedSlide, 'self_check'));
+  const omitted = runQuiz({
+    objective: 'pronunciation_sounding_select',
+    slides: [omittedSlide],
+  });
+  assert.ok(buttonNamed(omitted, '✓ 通過'));
+  assert.ok(!buttonNamed(omitted, remembered));
+  const chunk = opening({ type: 'audio_check', self_check: false });
+  assert.ok(buttonNamed(chunk, '下一題'));
+  assert.ok(!buttonNamed(chunk, remembered));
+  assert.ok(!buttonNamed(chunk, '繼續'));
+
+  const liveOld = readJson('data/quizzes/sounding-yoyaku-shitenai-1-v1.json');
+  assert.strictEqual(liveOld.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(liveOld.slides[0].type, 'audio_chunk');
+  assert.ok(!Object.prototype.hasOwnProperty.call(liveOld.slides[0], 'self_check'));
+  const liveRoot = runQuiz(liveOld);
+  assert.ok(buttonNamed(liveRoot, '✓ 通過'));
+  assert.ok(!buttonNamed(liveRoot, remembered));
+  assert.ok(!buttonNamed(liveRoot, '繼續'));
+  assert.ok(!buttonNamed(liveRoot, '完成跟讀'));
+}));
+
+tests.push(test('Q5 first prompt still says 下一步', function () {
+  const quiz = readJson('data/quizzes/story-ajimo-4-v1.json');
+  assert.strictEqual(quiz.objective, 'story_select_image');
+  assert.strictEqual(quiz.slides[0].type, 'prompt');
+  const root = runQuiz(quiz);
+  assert.ok(buttonNamed(root, '下一步'));
+  assert.ok(!buttonNamed(root, '記住咗'));
+  assert.ok(!buttonNamed(root, '下一題'));
+  assert.ok(!buttonNamed(root, '繼續'));
+  buttonNamed(root, '下一步').click();
+  assert.ok(!buttonNamed(root, '下一步'));
+  assert.ok(walk(root, []).some(function (node) {
+    return node.className === 'img-grid' || node.className === 'img-choice';
+  }));
+}));
+
+tests.push(test('order_text grades correct_order, shuffles, and skips a one-item or absent slide', function () {
+  assert.strictEqual(QuizRunner.gradeOrderText([0, 1], [0, 1]), true);
+  assert.strictEqual(QuizRunner.gradeOrderText([2, 0, 1], [2, 0, 1]), true);
+  assert.strictEqual(QuizRunner.gradeOrderText([0, 1], [1, 0]), false);
+  assert.strictEqual(QuizRunner.gradeOrderText([0, 1], [0]), false);
+  assert.strictEqual(QuizRunner.gradeOrderText([], []), false);
+  assert.strictEqual(QuizRunner.gradeOrderText(null, [0, 1]), false);
+  assert.strictEqual(QuizRunner.orderTextSlideShown({ type: 'order_text', options: ['只有一截'] }), false);
+  assert.strictEqual(QuizRunner.orderTextSlideShown({ type: 'order_text', options: [] }), false);
+  assert.strictEqual(QuizRunner.orderTextSlideShown({ type: 'order_text' }), false);
+  assert.strictEqual(QuizRunner.orderTextSlideShown({ type: 'order_text', options: ['甲', '乙'] }), true);
+  assert.strictEqual(QuizRunner.orderTextSlideShown({ type: 'select_text', options: ['甲'] }), true);
+
+  const absent = {
+    objective: 'pronunciation_sounding_select',
+    feedback: { on_wrong: 'show_correct' },
+    slides: [
+      {
+        type: 'audio_listen',
+        instruction: '請聆聽。',
+        audio: 'https://example.test/one-segment.mp3',
+        rate: 1,
+        self_check: false,
+      },
+      {
+        type: 'select_text',
+        instruction: '選出正確的諧音串。',
+        correct: '甲',
+        distractors: ['乙', '丙'],
+        shuffle: true,
+      },
+    ],
+  };
+  assert.deepStrictEqual(QuizRunner.prepareSlides(absent).map(function (slide) { return slide.type; }), [
+    'audio_listen',
+    'select_text',
+  ]);
+  let passed = 0;
+  const absentRoot = runQuiz(absent, { onPass: function () { passed += 1; } });
+  buttonNamed(absentRoot, '記住咗').click();
+  assert.ok(texts(absentRoot).indexOf('選出正確的諧音串。') !== -1);
+  assert.ok(!buttonNamed(absentRoot, '確認'));
+  assert.ok(texts(absentRoot).indexOf('將各截諧音排成正確次序。') === -1);
+  buttonNamed(absentRoot, '甲').click();
+  assert.strictEqual(passed, 1);
+
+  const skipped = {
+    objective: 'pronunciation_sounding_select',
+    slides: [
+      { type: 'prompt', text: '先' },
+      {
+        type: 'order_text',
+        instruction: '將各截諧音排成正確次序。',
+        options: ['只有一截'],
+        correct_order: [0],
+        shuffle: true,
+      },
+      { type: 'prompt', text: '後' },
+    ],
+  };
+  assert.deepStrictEqual(QuizRunner.prepareSlides(skipped).map(function (slide) { return slide.type; }), [
+    'prompt',
+    'prompt',
+  ]);
+  const skippedRoot = runQuiz(skipped, { onPass: function () { passed += 1; } });
+  assert.ok(texts(skippedRoot).indexOf('先') !== -1);
+  assert.ok(texts(skippedRoot).indexOf('將各截諧音排成正確次序。') === -1);
+  assert.ok(!buttonNamed(skippedRoot, '確認'));
+  buttonNamed(skippedRoot, '下一題').click();
+  assert.ok(texts(skippedRoot).indexOf('後') !== -1);
+  buttonNamed(skippedRoot, '下一題').click();
+  assert.strictEqual(passed, 2);
+
+  const only = runQuiz({
+    objective: 'pronunciation_sounding_select',
+    slides: [{ type: 'order_text', options: ['只有一截'], correct_order: [0], shuffle: true }],
+  }, { onPass: function () { passed += 1; } });
+  assert.strictEqual(passed, 3);
+  assert.ok(!buttonNamed(only, '確認'));
+  assert.ok(texts(only).indexOf('正確！') !== -1);
+
+  const lines = ['甲 = 一', '乙 = 二', '丙 = 三'];
+  let failed = 0;
+  const ordered = runQuiz({
+    objective: 'pronunciation_sounding_select',
+    feedback: { on_wrong: 'show_correct' },
+    slides: [
+      {
+        type: 'order_text',
+        instruction: '將各截諧音排成正確次序。',
+        options: lines,
+        correct_order: [2, 0, 1],
+        shuffle: false,
+      },
+      { type: 'prompt', text: '下一張' },
+    ],
+  }, {
+    onPass: function () { passed += 1; },
+    onFail: function () { failed += 1; },
+  });
+  assert.deepStrictEqual(orderRole(ordered, 'pool').map(function (node) { return node.textContent; }), lines);
+  assert.strictEqual(buttonNamed(ordered, '確認').disabled, true);
+  placeOrderIndexes(ordered, [0]);
+  assert.strictEqual(orderRole(ordered, 'built')[0].textContent, '1. 甲 = 一');
+  orderRole(ordered, 'built')[0].click();
+  assert.strictEqual(orderRole(ordered, 'pool').length, 3);
+  assert.strictEqual(buttonNamed(ordered, '確認').disabled, true);
+  placeOrderIndexes(ordered, [0, 1, 2]);
+  assert.strictEqual(buttonNamed(ordered, '確認').disabled, false);
+  buttonNamed(ordered, '確認').click();
+  assert.strictEqual(failed, 1);
+  assert.strictEqual(passed, 3);
+  assert.ok(texts(ordered).indexOf('正確次序：') !== -1);
+  assert.ok(texts(ordered).indexOf('1. 丙 = 三') !== -1);
+  assert.ok(texts(ordered).indexOf('2. 甲 = 一') !== -1);
+  assert.ok(texts(ordered).indexOf('3. 乙 = 二') !== -1);
+  assert.ok(texts(ordered).indexOf('下一張') === -1);
+  buttonNamed(ordered, '下一題').click();
+  assert.ok(texts(ordered).indexOf('下一張') !== -1);
+  buttonNamed(ordered, '下一題').click();
+  assert.strictEqual(passed, 4);
+
+  const boxed = runQuiz({
+    objective: 'pronunciation_sounding_select',
+    feedback: { on_wrong: 'show_correct_box' },
+    slides: [{
+      type: 'order_text',
+      options: ['甲', '乙'],
+      correct_order: [0, 1],
+      shuffle: false,
+    }],
+  }, { onFail: function () { failed += 1; } });
+  placeOrderIndexes(boxed, [1, 0]);
+  buttonNamed(boxed, '確認').click();
+  assert.strictEqual(failed, 2);
+  assert.ok(texts(boxed).indexOf('1. 甲') !== -1);
+  assert.ok(texts(boxed).indexOf('2. 乙') !== -1);
+  assert.ok(buttonNamed(boxed, '下一題'));
+
+  const retry = runQuiz({
+    objective: 'pronunciation_sounding_select',
+    feedback: { on_wrong: 'retry' },
+    slides: [{
+      type: 'order_text',
+      options: ['甲', '乙'],
+      correct_order: [0, 1],
+      shuffle: false,
+    }],
+  }, {
+    onPass: function () { passed += 1; },
+    onFail: function () { failed += 1; },
+  });
+  placeOrderIndexes(retry, [1, 0]);
+  buttonNamed(retry, '確認').click();
+  assert.strictEqual(failed, 3);
+  assert.ok(texts(retry).indexOf('次序不對') !== -1);
+  assert.ok(!buttonNamed(retry, '下一題'));
+  assert.strictEqual(passed, 4);
+  orderRole(retry, 'built')[0].click();
+  orderRole(retry, 'built')[0].click();
+  placeOrderIndexes(retry, [0, 1]);
+  buttonNamed(retry, '確認').click();
+  assert.strictEqual(passed, 5);
+
+  const random = Math.random;
+  Math.random = function () { return 0; };
+  try {
+    const shuffled = runQuiz({
+      objective: 'pronunciation_sounding_select',
+      feedback: { on_wrong: 'show_correct' },
+      slides: [{
+        type: 'order_text',
+        instruction: '將各截諧音排成正確次序。',
+        options: [
+          'tall垃錫地 = 高大垃圾怪錫住地板',
+          '熱打打奇馬 = 戴太陽眼鏡火球雙拳打古怪馬',
+        ],
+        correct_order: [0, 1],
+        shuffle: true,
+      }],
+    }, { onPass: function () { passed += 1; } });
+    assert.deepStrictEqual(orderRole(shuffled, 'pool').map(function (node) { return node.textContent; }), [
+      '熱打打奇馬 = 戴太陽眼鏡火球雙拳打古怪馬',
+      'tall垃錫地 = 高大垃圾怪錫住地板',
+    ]);
+    placeOrderIndexes(shuffled, [0, 1]);
+    buttonNamed(shuffled, '確認').click();
+    assert.strictEqual(passed, 6);
+    assert.ok(texts(shuffled).indexOf('正確次序：') === -1);
+    assert.ok(texts(shuffled).indexOf('正確！') !== -1);
+  } finally {
+    Math.random = random;
+  }
 }));
 
 tests.push(test('fixture quiz ids stay outside the manifest; live Q20–Q24 objectives are in it', function () {
