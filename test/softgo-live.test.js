@@ -176,6 +176,91 @@ function assertAllowedStoryChange(file, status, knownAtBase) {
   else assert.strictEqual(status, 'A', file);
 }
 
+/**
+ * PR #48 runner pin, plus the authorized Q6 delta only:
+ * opening label 「記住咗」 (咗 = U+5497) and order_text.
+ * Any other byte in js/quiz-runner.js still has to match runnerHead.
+ */
+function assertRunnerIsQ4PinPlusQ6Delta(runnerHead) {
+  let text = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
+  function once(source, needle, replacement, label) {
+    const at = source.indexOf(needle);
+    assert.ok(at !== -1, label);
+    assert.strictEqual(source.indexOf(needle, at + needle.length), -1, label);
+    return source.slice(0, at) + replacement + source.slice(at + needle.length);
+  }
+  text = once(
+    text,
+    '   * Q9 opening only. Later youglish slides keep 「下一題」.\n   * Q6 opening is audioListenAdvanceLabel, not this predicate.\n',
+    '   * Q9 opening only. Later slides, and every other objective, keep 「下一題」.\n',
+    'q6 comment'
+  );
+  const advance = text.indexOf('  /**\n   * Advance label when an audio slide has no');
+  const q18 = text.indexOf('  /**\n   * Q18 segment chrome');
+  assert.ok(advance !== -1 && q18 > advance, 'q6 label fn');
+  text = text.slice(0, advance) + text.slice(q18);
+  const grade = text.indexOf('  /**\n   * order_text is correct when chosen indexes equal correct_order.\n');
+  const makeAudio = text.indexOf('  function makeAudio(src, opts) {\n');
+  assert.ok(grade !== -1 && makeAudio > grade, 'order_text grade');
+  text = text.slice(0, grade) + [
+    '  function prepareSlides(quiz) {',
+    '    if (!quiz) return [];',
+    "    if (quiz.objective === 'mother_cloze_usage') return clozeSlides(quiz);",
+    "    if (quiz.objective === 'sentence_listen_to_l1') return listenToL1Slides(quiz);",
+    '    return quiz.slides || [];',
+    '  }',
+    '',
+    '',
+  ].join('\n') + text.slice(makeAudio);
+  const mount = text.indexOf('    /**\n     * order_text: put every option into correct_order');
+  const render = text.indexOf('    function renderSlide() {\n');
+  assert.ok(mount !== -1 && render > mount, 'order_text mount');
+  text = text.slice(0, mount) + text.slice(render);
+  text = once(
+    text,
+    '          // Q6 opening 「記住咗」. Q9 opening 「繼續」. Otherwise 「下一題」.\n          // slide.button is not read.\n          const nextLabel = audioListenAdvanceLabel(quiz, slide, type, idx);\n',
+    "          const nextLabel = youglishOpeningContinue(quiz, slide, type, idx) ? '繼續' : '下一題';\n",
+    'q6 label call'
+  );
+  text = once(
+    text,
+    [
+      "      if (type === 'order_text') {",
+      '        var orderCount = Array.isArray(slide.options) ? slide.options.length : 0;',
+      '        if (orderCount <= 1) {',
+      '          idx++;',
+      '          renderSlide();',
+      '          return;',
+      '        }',
+      '        mountOrderText(slide);',
+      '        return;',
+      '      }',
+      '',
+      '',
+    ].join('\n'),
+    '',
+    'order_text branch'
+  );
+  text = once(
+    text,
+    [
+      '    hotspotRect: hotspotRect,',
+      '    audioListenAdvanceLabel: audioListenAdvanceLabel,',
+      '    gradeOrderText: gradeOrderText,',
+      '    orderTextSlideShown: orderTextSlideShown,',
+      '',
+    ].join('\n'),
+    '    hotspotRect: hotspotRect,\n',
+    'q6 exports'
+  );
+  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
+    cwd: root,
+    maxBuffer: 2 * 1024 * 1024,
+  });
+  assert.ok(Buffer.from(text).equals(pinnedRunner), 'runner drifted from ' + runnerHead + ' beyond the Q6 delta');
+  assert.strictEqual('記住咗'.charCodeAt(2), 0x5497);
+}
+
 function surfaceSince(sha) {
   return execFileSync(
     'git',
@@ -1743,12 +1828,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     }),
     ''
   );
-  const runner = fs.readFileSync(path.join(root, 'js/quiz-runner.js'));
-  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
-    cwd: root,
-    maxBuffer: 2 * 1024 * 1024,
-  });
-  assert.ok(runner.equals(pinnedRunner));
+  assertRunnerIsQ4PinPlusQ6Delta(runnerHead);
   const htmlBefore = execFileSync('git', ['show', start + ':group.html'], { cwd: root, encoding: 'utf8' });
   const htmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
   assert.strictEqual(
@@ -1943,13 +2023,16 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
     execFileSync('git', ['hash-object', 'data/schedule.json'], { cwd: root, encoding: 'utf8' }).trim(),
     'e68b55cc12d3bd5c805ed3aa0aa251f74bfaf8bc'
   );
+  // groups.json, schedule.json, and group.html stay at the Q5 base.
+  // js/quiz-runner.js is only the authorized Q6 delta on the same PR #48 blob.
   assert.strictEqual(
-    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'js/quiz-runner.js', 'group.html'], {
+    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'group.html'], {
       cwd: root,
       encoding: 'utf8',
     }),
     ''
   );
+  assertRunnerIsQ4PinPlusQ6Delta('86aeeb0a6529db30c70034a25df07c6a904b2513');
 
   const groupBySentence = new Map(groups.groups.map((group) => [group.sentence, group]));
   const bodies = new Map();
