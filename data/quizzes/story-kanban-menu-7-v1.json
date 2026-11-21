@@ -1,0 +1,36 @@
+{
+  "quiz_id": "story-kanban-menu-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 7,
+    "text": "香りが良い"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "架車（car）喺後面痾緊一條扣喺車尾拖鉤嘅鏈（痾鏈），條鏈連住坐喺木搖搖板上嘅 baby（家YO兒）——剛撞落三條用固態透明樹脂雕刻出來的螺旋狀粉彩色蒸汽煙霧，煙霧頂部開出朵朵小花，懸浮在半空中——正正係「很香」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kaori-ga-yoi-combined-v2.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kanban-menyuu-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/supaishii-na-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/torinabe-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/futa-o-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aketa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shunkan-kara-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/toriniku-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/nameraka-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/gu-mo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/haitte-ite-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

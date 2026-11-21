@@ -1,0 +1,36 @@
+{
+  "quiz_id": "story-kanban-menu-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 5,
+    "text": "開けた"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "機械牙（由齒輪、鏈條同活塞組成、咬住 egg tart 嘅一副機械牙）（牙機），同egg tart（被機械牙咬住嘅一個 egg tart），一齊撞落一個已經被完全卸下、呈傾斜45度定格擱置在旁邊的金屬盒蓋，旁邊立著一個畫有綠色勾勾（✔）與「OPENED（已開）」字樣的標誌牌——正正係「打開了」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aketa-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kanban-menyuu-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/supaishii-na-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/torinabe-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/futa-o-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shunkan-kara-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kaori-ga-yoi-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/toriniku-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/nameraka-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/gu-mo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/haitte-ite-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

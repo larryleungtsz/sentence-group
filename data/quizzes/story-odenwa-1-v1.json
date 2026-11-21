@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-odenwa-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 1,
+    "text": "お電話"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "表情兇狠、舉住錘子的白色大鵝、白鵝舉起的羊角錘同插在青蛙背上及木板上的銀色鐵釘，同被按在木板上、驚恐張嘴的綠色青蛙，一齊撞落一台經典復古酒紅色轉盤式座機電話，聽筒安穩架在銀色叉簧上，捲曲的電話線整齊盤在底座旁——正正係「電話」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/odenwa-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/izakaya-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshimoshi-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/onegai-shitai-n-desu-kedo-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

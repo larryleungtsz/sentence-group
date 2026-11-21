@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-odenwa-3-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 3,
+    "text": "もしもし"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木桌上的黃銅電報發報機同點劃紙帶（摩氏），同牆上同桌面中央的「Morse Code」密碼對照表（摩氏），一齊撞落一隻白色陶瓷右手雕塑，手掌張開成「C」字形貼在一只立體粉色大耳朵模型的耳廓後方，呈現傾聽與開口搭話的靜態姿態——正正係「喂」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshimoshi-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/odenwa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/izakaya-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/onegai-shitai-n-desu-kedo-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

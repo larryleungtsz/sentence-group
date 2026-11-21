@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-kanki-maa-maa-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 2,
+    "text": "まあまあで"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木板上、偏左那隻被鐵釘釘住的馬毛公仔、木板上、偏右那隻被鐵釘釘住的馬毛公仔，同把兩隻馬毛公仔釘在木板上的多枚鐵釘，一齊撞落一隻戴著白手套的右手，五指張開掌心向下水平擺放，手腕微傾呈現不偏不倚的靜態平衡手勢——正正係「還可以」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/maa-maa-de-combined-v3.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kanki-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/tabeowaru-to-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/fuku-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/nioi-ga-tsuite-shimau-kedo-combined-v3.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/soredemo-mata-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kitaku-naru-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omise-da-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

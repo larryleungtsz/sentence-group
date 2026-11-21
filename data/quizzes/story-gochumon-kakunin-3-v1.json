@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一條受傷嘅蛇眼畫交叉躺住，尾上穩穩托住兩隻可愛蛋。一把鎖匙喺旁專心抹走地上血紅油漆，紅痕慢慢變淡。抹乾淨後抬眼——對面女店員微鞠躬，雙手捧單停喺胸前等你准許——正正係「請讓我…」。"
+      "text": "櫃檯對面燈光偏柔，空氣靜得有點繃。一條受傷嘅蛇眼畫交叉躺住，尾上穩穩托住兩隻可愛蛋；一把鑰匙在旁專心抹走地上血紅油漆，一抹一抹，紅痕慢慢變淡。抹乾淨後，鑰匙抬眼——對面女店員微鞠躬，雙手捧單停在胸前，等你准許——請讓我…"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sasete-itadakimasu-combined.jpg",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/omachigai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/nai-deshouka-combined.jpg"
       ]
     }
   ],

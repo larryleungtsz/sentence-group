@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-konna-basho-7-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 7,
+    "text": "ことになる"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "用鐮刀割開的動作、布偶公仔（doll）、鎖鏈（lin），同佈滿液體的馬路（嗱路），一齊撞落一道金色的多米諾骨牌連動模型，最後倒下的一塊骨牌觸發並推落了一面印有「FINAL RESULT（最終結果）」的立體終點旗幟——正正係「結果就會」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/koto-ni-naru-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/konna-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/basho-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/taishita-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/kimetsukete-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/omise-o-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/minogashite-combined-v2.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

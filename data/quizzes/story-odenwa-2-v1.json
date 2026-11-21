@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-odenwa-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 2,
+    "text": "居酒屋"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "飄散並纏住多士的灰白色煙霧、由煙霧變成、十字交叉索住多士的帶齒索帶（扎），同盤子裡夾住黃色咖央醬的烤多士（加央），一齊撞落一盞橢圓形大紅紙燈籠，上下為黑色木框，燈籠正面以粗黑毛筆字寫著直排「居酒屋」三字——正正係「居酒屋」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/izakaya-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/odenwa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshimoshi-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/onegai-shitai-n-desu-kedo-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

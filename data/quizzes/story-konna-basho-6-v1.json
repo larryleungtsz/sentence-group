@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-konna-basho-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 6,
+    "text": "見逃してしまう"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "貓咪、職員將貓拿下來（落架）、貓咪舌頭上的金屬釘（舌釘），同整座獅子雕像連基座（獅馬），一齊撞落一個裝有明亮尾燈的公車車尾模型，正離去留下一道固態煙霧，公車尾巴旁邊立著一個伸手想招車卻只抓到空氣的白色手套雕像——正正係「會錯過」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/minogashite-combined-v2.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/konna-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/basho-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/taishita-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/kimetsukete-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/omise-o-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/koto-ni-naru-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

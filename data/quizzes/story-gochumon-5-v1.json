@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "天氣忽然 Cool 得發抖。一個人形太陽（曬）被人柔道式一撻摔低，趴喺地。旁邊服務員深深鞠躬、雙手前伸——呢個請求姿，正正係「請」。"
+      "text": "天氣忽然 Cool 得發抖。人形太陽（曬）被人柔道式一撻摔低。旁邊服務員深鞠躬、雙手前伸——請求你：請。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kudasai-combined.png",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/okimari-ni-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/narimashitara-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/oyobi-combined.png"
       ]
     }
   ],

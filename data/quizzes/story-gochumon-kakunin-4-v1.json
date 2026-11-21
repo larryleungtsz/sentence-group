@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一隻鵝專心蹲低，用翼一下一下抹走街上豎起嘅尖刺；刺尖刮過紙邊，碰响帳單上剛被紅筆圈住、旁邊畫叉嘅錯項。鵝停住，目光釘喺紅圈同叉——正正係「弄錯」。"
+      "text": "收銀機旁燈光偏硬，帳單攤開在檯面。一隻鵝專心蹲低，用翼一下一下抹走街上豎起嘅尖刺；刺尖刮過紙邊，碰响帳單上剛被紅筆圈住、旁邊畫叉的錯項。鵝停住，目光釘在紅圈同叉——弄錯。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/omachigai-combined.jpg",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/nai-deshouka-combined.jpg"
       ]
     }
   ],

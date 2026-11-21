@@ -11,17 +11,17 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一面沙造嘅硬盾穩穩立住。一隻少少燶咗嘅馬毛公仔被人推過，焦味淡淡，撞埋盾面之後滾向檯邊。公仔停喺一隻啱啱放下、杯沿仲燙手嘅空杯旁——餘溫仲喺度，正正係「剛才的」。"
+      "text": "櫃檯燈光偏黃，空氣裡還留著剛放下的熱氣。一面沙造嘅硬盾穩穩立住，旁邊一隻少少燶咗嘅馬毛公仔被人輕輕推過；焦味淡淡，毛尖有點蜷。公仔撞上盾面後滾向檯邊，停在一隻剛放下、杯沿仲燙手嘅空杯旁。餘溫還在，人輕輕呼一口氣——剛才的。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sakki-no-combined.png",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/tanpin-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/pepushi-zero-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/emu-saizu-de-combined.png"
       ]
     }
   ],

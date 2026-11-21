@@ -1,0 +1,33 @@
+{
+  "quiz_id": "story-teikuauto-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 6,
+    "text": "大きくて"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "同一個裝修工場裡、那個裝修男臉上那副運動太陽眼鏡（oakley）、那個裝修男握緊、正在打釘的拳頭，同那個裝修男另一隻手按在直立木柱上的金屬長釘，一齊撞落金屬皮尺裹住的巨無霸燒賣——正正係「大而」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/okikute-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/teikuauto-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/niju-honkon-doru-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/yotsuko-4ko-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/fudan-yori-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/goju-pasento-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/sakana-no-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kokute-combined-v2.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

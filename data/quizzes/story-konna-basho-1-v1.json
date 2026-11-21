@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-konna-basho-1-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 1,
+    "text": "こんな"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "足場上的角球踢球動作 (corner kick)，剛撞落一隻金屬手雕像，食指垂直向下誇張地指著腳下的一塊特定地磚，地磚上畫著一個極具強調感、閃閃發光的黃色圈圈標記——正正係「這種」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/konna-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/basho-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/taishita-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/kimetsukete-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/omise-o-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/minogashite-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/koto-ni-naru-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

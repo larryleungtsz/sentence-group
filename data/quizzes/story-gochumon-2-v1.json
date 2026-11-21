@@ -11,13 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "文件靜放喺度，中央一個大紅「決定済」印。一把面相好惡嘅鎖匙尾端扣住條鏈，鏈另一頭拖住一條馬脷。鎖匙一甩，馬脷啪一聲砸落紅印上面，好似再蓋多一記印。紅印唔褪色，文件定死喺度——呢度正正係「決定的話」。"
+      "text": "靜置一份文件，中央印住一個大紅「決定済」印。一把面相好惡、好mean嘅鎖匙自己跳出來，尾端扣住一條鏈。鎖匙用條鏈拖住一條馬脷，啪一聲甩落文件中央，馬脷拍落「決定済」紅印上面，好似再蓋多一記。文件唔變形，紅印仲喺度——已經定咗，係「決定的話」。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/okimari-ni-combined.png",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/narimashitara-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/oyobi-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kudasai-combined.png"
       ]
     }
   ],

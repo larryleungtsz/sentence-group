@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-oseki-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+  "chunk": {
+    "id": 5,
+    "text": "失礼いたしまーす"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "豬伸出來嘅好長粉紅色脷（舌）、站住、雙腳企喺舞台上嘅粉紅色豬、豬右手舉住嘅讚好手勢（叻）、豬左手舉高嘅一隻滾燙雞蛋（熱蛋）、豬頭上戴住嘅獅子面具嘅獅面同鬃毛，同豬頭上戴住嘅獅子面具（mask），一齊撞落一隻戴著白手套的右手平貼在胸前、搭配一頂微微向前傾垂45度角的黑色禮帽雕塑，呈現優雅鞠躬道別的靜態姿態——正正係「失禮了」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/shitsurei-itashimasu-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/oseki-nomi-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/goyoyaku-tte-iu-koto-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omachigai-nai-desu-ka-ne-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/omachi-shite-orimasu-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

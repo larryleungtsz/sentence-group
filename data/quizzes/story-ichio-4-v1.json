@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-ichio-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 4,
+    "text": "団体様が"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "橫躺在碎石地面上的巨型白色雞蛋、巨蛋表面畫住的黑色交叉眼睛同昏死表情（die）、全身由黃沙塑成、正跌緊沙的駿馬（沙馬），同沙馬前身穿住黑西裝、戴住墨鏡同耳麥的保鑣造型（guard），一齊撞落一串六個扣在同一枚黃銅大鑰匙圈上的彩色木頭人偶吊飾，所有人都戴著同款紅色小領結——正正係「團體客人」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dantai-sama-ga-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ichiou-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aiteru-n-desu-keredomo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/hoka-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshi-irasshatta-baai-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kauntaa-ni-go-idou-itadaku-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/katachi-ni-naru-n-desu-ga-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

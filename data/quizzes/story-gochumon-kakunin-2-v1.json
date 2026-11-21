@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一張卡頭頂穩穩戴住皇冠，頸上纏住一條鏈。卡慢慢靠近，鏈輕輕碰過店員剛停喺一行字旁嘅食指。視線釘喺指尖同嗰行字——正正係「確認」。"
+      "text": "櫃檯燈光偏亮，訂單紙攤開在托盤上。一張卡頭頂穩穩戴住皇冠，頸上纏住一條鏈；佢慢慢靠近，鏈輕輕碰過店員剛停在一行字旁的食指。視線釘在指尖同那行字——確認。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kakunin-combined.jpg",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/omachigai-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/nai-deshouka-combined.jpg"
       ]
     }
   ],

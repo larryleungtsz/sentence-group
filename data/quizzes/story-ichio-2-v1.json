@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-ichio-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 2,
+    "text": "空いてるんですけれども"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "身體斜靠住巨型鐵釘的男子（挨）、斜插在地面的巨型生鏽鐵釘、木枱整張向下彎曲變形的狀態（攣）、那張向下彎曲、離地傾側的木枱（desk）、半空中帶齒輪同雙翼的機械人、機械人在半空中飛緊的姿態（lev），同機械人全身覆蓋住的濃密深棕色長毛（多毛），一齊撞落一塊雙面翻轉木牌，朝外一面為綠底白字「VACANT」，牌子底部卻卡在一道半掩的黃銅小門閂上——正正係「是有空位不過」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aiteru-n-desu-keredomo-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ichiou-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/hoka-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dantai-sama-ga-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshi-irasshatta-baai-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kauntaa-ni-go-idou-itadaku-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/katachi-ni-naru-n-desu-ga-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

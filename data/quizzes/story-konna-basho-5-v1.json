@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-konna-basho-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 5,
+    "text": "お店を"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "發射火箭炮的鵝、牛生牛扒（meat）、火箭炮的發射部分（槍口、火燄、箭翎與箭桿）；畫面中射向商店模型，並非另一隻鵝（射鵝），同鵝（身體被左緣裁切），一齊撞落一棟精緻的復古雙層木造商店模型，屋頂掛著寫有「SHOP」的木雕招牌，門口伸出一隻手正捧著這個小店模型（代表受詞「將店舖…」的被動作對象）——正正係「店舖」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/omise-o-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/konna-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/basho-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/taishita-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/kimetsukete-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/minogashite-combined-v2.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/5d166ac4aef52f31ed14a298a4188690978db207/images/koto-ni-naru-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

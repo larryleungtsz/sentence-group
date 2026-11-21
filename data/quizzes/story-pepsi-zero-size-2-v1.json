@@ -11,17 +11,17 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一粒仙丹從托盤邊滾出，其中一邊已經輕微燶黑，慢慢停喺碟心，邊緣仲有焦味。人望住嗰碟——旁邊空空，冇套餐拼盤，淨係孤零零一碟。正正係「單點的」。"
+      "text": "餐廳檯面燈光偏暖，空氣靜得只聽到杯碟輕碰。一粒仙丹從托盤邊滾出，其中一邊已輕微燶黑；它慢慢停在碟心，邊緣還帶一點焦味。人屏住呼吸看著那碟——旁邊空空，沒有套餐拼盤，只剩孤零零一碟。單點的。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/tanpin-no-combined.png",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/tanpin-no-combined.png",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sakki-no-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/pepushi-zero-wa-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/saizu-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/ikaga-saremasu-ka-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/emu-saizu-de-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sakki-no-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/pepushi-zero-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/saizu-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/ikaga-saremasu-ka-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/emu-saizu-de-combined.png"
       ]
     }
   ],

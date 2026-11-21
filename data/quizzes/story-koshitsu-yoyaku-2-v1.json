@@ -1,0 +1,38 @@
+{
+  "quiz_id": "story-koshitsu-yoyaku-2-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 2,
+    "text": "個室って"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "石窟入面，粗糙岩壁同青苔石台靜靜企住。左邊有扇微開嘅迷你木製包廂門，門上掛住放大鏡，鏡底門牌「個室」被放大得清清楚楚，好似有人探頭確認咁。跟住右邊綠色哥布林（哥）瞪大眼企好，由口伸出一條好長好紅嘅脷（舌），神情專注向前伸，舌尖直撞落包廂門板。腳邊粉紅卡通豬（豬）四腳朝天，X 眼交差、粉筆圍線圍住（Dead），粉筆灰散喺地。哥嘅長脷連住死豬一齊撞落呢扇放大鏡包廂門——正正係「包廂呀」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/02-koshitsu-tte-combined.jpg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-etto-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/12-puran-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/03-mada-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/04-koshitsu-wa-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/05-mou-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/06-akanai-desu-nee-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/07-wakarimashita-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/08-teburu-seki-de-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/09-go-annai-kano-desu-yo-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/10-nijikan-han-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/11-nomihodai-tsuki-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/01-kashikomarimashita-combined.jpg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

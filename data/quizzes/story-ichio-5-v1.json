@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-ichio-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 5,
+    "text": "もしいらっしゃった場合は"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "中門階梯上醫生伸手撫摸坐在車廂平台上的獅子（摸獅）、中門階梯上戴住手術帽同聽診器的男醫生、中醫生身上套住的黑色大垃圾袋、巴士後排車窗內望住前方的紅色惡魔（撒旦），同停在站台、兩邊有大耳仔同車身有青蛙圖案的巴士（巴耳蛙），一齊撞落一塊印有金色腳印圖案的深綠色歡迎地墊，地墊前方立著一枚巨大的亮黃色立體問號「？」塑膠牌——正正係「如果來了的話」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshi-irasshatta-baai-wa-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ichiou-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aiteru-n-desu-keredomo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/hoka-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dantai-sama-ga-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kauntaa-ni-go-idou-itadaku-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/katachi-ni-naru-n-desu-ga-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
