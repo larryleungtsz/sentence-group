@@ -3120,9 +3120,10 @@
         {
           "id": 7,
           "text": "電話番号",
+          "skip": true,
           "chunk_added_at": "2026-11-18T00:00:00+08:00",
-          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
-          "quizzes_ready": true
+          "chunk_added_at_note": "skip — already learned as a duplicate; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
         },
         {
           "id": 8,
@@ -3219,9 +3220,10 @@
         {
           "id": 9,
           "text": "美味しい",
+          "skip": true,
           "chunk_added_at": "2026-11-18T00:00:00+08:00",
-          "chunk_added_at_note": "provisional — Q1 from the 2026-11-18 materials pack; Area box already on this palace",
-          "quizzes_ready": true
+          "chunk_added_at_note": "skip — already learned as a duplicate; admitted for sentence order only; no quiz dues; does not occupy dense",
+          "quizzes_ready": false
         }
       ],
       "sentences_note": "Q1 only. No sentence quizzes yet, so sentences[] is empty.",
