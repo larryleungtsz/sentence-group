@@ -11,16 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 12.9,
-      "rate": 0.25,
-      "self_check": true,
-      "end_sec": 14.5
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omochishimasune.mp3",
+      "rate": 0.25
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }

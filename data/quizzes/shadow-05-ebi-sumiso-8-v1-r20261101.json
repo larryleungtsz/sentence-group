@@ -11,16 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
-      "start_sec": 6.2,
-      "end_sec": 7.366531,
-      "rate": 0.5,
-      "self_check": true
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-takiawasedesu.mp3",
+      "rate": 0.5
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }

@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-05-kanki-maa-maa-6-v1",
+  "objective": "tone_shadowing_05",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 6,
+    "text": "それでもまた"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-soredemomata.mp3",
+      "rate": 0.5
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

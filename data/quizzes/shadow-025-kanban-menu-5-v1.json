@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-025-kanban-menu-5-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 5,
+    "text": "開けた"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-aketa.mp3",
+      "rate": 0.25
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

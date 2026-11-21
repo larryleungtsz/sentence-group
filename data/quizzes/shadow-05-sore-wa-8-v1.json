@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-05-sore-wa-8-v1",
+  "objective": "tone_shadowing_05",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 8,
+    "text": "852"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-852.mp3",
+      "rate": 0.5
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

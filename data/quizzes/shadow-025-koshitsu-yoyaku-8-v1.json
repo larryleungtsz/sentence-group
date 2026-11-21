@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-025-koshitsu-yoyaku-8-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "えっと、個室って、まだ空いてますかね？個室は、もう空かないですねー。わかりました。じゃあ、テーブル席でお願いします。はい、お席ご案内可能ですよ。2時間半飲み放題付きプランでお願いします。かしこまりました。",
+  "chunk": {
+    "id": 8,
+    "text": "わかりました"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-wakarimashita.mp3",
+      "rate": 0.25
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

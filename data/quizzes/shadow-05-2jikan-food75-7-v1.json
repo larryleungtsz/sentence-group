@@ -11,16 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 6.8,
-      "end_sec": 8.0,
-      "rate": 0.5,
-      "self_check": true
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-onabenochuumondake.mp3",
+      "rate": 0.5
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }

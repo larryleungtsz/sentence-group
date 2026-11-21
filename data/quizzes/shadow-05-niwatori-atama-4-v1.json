@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-05-niwatori-atama-4-v1",
+  "objective": "tone_shadowing_05",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 4,
+    "text": "切れ端"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kirehashi.mp3",
+      "rate": 0.5
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

@@ -1,26 +1,22 @@
 {
   "quiz_id": "shadow-05-yoyaku-8-v1",
   "objective": "tone_shadowing_05",
-  "variant": 1,
-  "slides": [
-    {
-      "type": "audio_shadow",
-      "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "self_check": true,
-      "feedback": {
-        "on_tick": "pass",
-        "on_cross": "retry"
-      },
-      "start_sec": 9.0,
-      "end_sec": 10.6,
-      "rate": 0.5
-    }
-  ],
-  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
   "level": 1,
+  "variant": 1,
+  "sentence": "いらっしゃいませ～、ご予約いただいてますか？7時から予約してたラリーなんですけど2名様でよろしかったですか？はい、お席の方ご案内しますね。",
   "chunk": {
     "id": 8,
     "text": "よろしかったですか"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-yoroshikattadesuka.mp3",
+      "rate": 0.5
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
   }
 }

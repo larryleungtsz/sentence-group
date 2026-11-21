@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-05-kyou-no-6jihan-1-v1",
+  "objective": "tone_shadowing_05",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 1,
+    "text": "今日の"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kyouno.mp3",
+      "rate": 0.5
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

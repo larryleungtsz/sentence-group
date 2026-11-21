@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-025-kaori-ga-ari-5-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "香りがあり、辛味があり、痺れる感じもある。これらがうまく溶け合って、想像以上の美味しさを生み出している。",
+  "chunk": {
+    "id": 5,
+    "text": "うまく"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-umaku.mp3",
+      "rate": 0.25
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

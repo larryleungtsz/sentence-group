@@ -11,15 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
-      "start_sec": 2.58,
-      "rate": 0.25,
-      "self_check": true
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-omachigai.mp3",
+      "rate": 0.25
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }

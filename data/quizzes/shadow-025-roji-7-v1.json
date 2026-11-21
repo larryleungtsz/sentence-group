@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-025-roji-7-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 7,
+    "text": "店で"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-misede.mp3",
+      "rate": 0.25
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}

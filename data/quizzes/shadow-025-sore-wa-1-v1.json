@@ -1,0 +1,22 @@
+{
+  "quiz_id": "shadow-025-sore-wa-1-v1",
+  "objective": "word_shadowing_025",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 1,
+    "text": "それは"
+  },
+  "slides": [
+    {
+      "type": "audio_shadow",
+      "instruction": "請聽 0.25× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-sorewa.mp3",
+      "rate": 0.25
+    }
+  ],
+  "feedback": {
+    "on_complete": "pass"
+  }
+}
