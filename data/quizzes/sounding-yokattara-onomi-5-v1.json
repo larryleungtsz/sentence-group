@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 4.2,
-      "end_sec": 5.4,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-jaa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "jā→炸／炸彈",
-        "一句串：一枚 炸彈(炸／炸彈) 定格喺掌沿旁。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "炸炸彈",
       "distractors": [
-        "o-ukagai-shite-okimasu-ne→4鱷／舌刺／Oakley／口罩",
-        "一句串：卡通屋前馬路企住 4 隻鱷魚(4鱷)，脷有 piercings(舌刺)、戴 Oakley(Oakley)、頭頂掛醫用 口罩(口罩)。"
-      ]
+        "闊撻豬",
+        "舌紫lev施馬",
+        "鱷多士的士"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "炸 = 炸",
+        "炸彈 = 炸彈"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

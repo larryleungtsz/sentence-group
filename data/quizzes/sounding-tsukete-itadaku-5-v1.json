@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 4.5,
-      "end_sec": 4.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-zehi.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "zehi→遮／heating",
-        "一句串：一把 遮(遮) 着火 噴火(heating)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "遮heating",
       "distractors": [
-        "osusume-shiteru-node→痾殊殊／咩／舌釘／路落釘",
-        "一句串：咩(咩) 邊 痾殊殊(痾殊殊) 邊把舌頭 釘(舌釘) 死地下；天上 路落釘(路落釘)。"
-      ]
+        "樂打咩",
+        "耳air",
+        "matcha"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "遮 = 遮／umbrella",
+        "heating = 着火／噴火"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

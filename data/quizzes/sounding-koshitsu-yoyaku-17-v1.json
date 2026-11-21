@@ -10,57 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-17.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-purande.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "潑爛地",
       "distractors": [
-        "Kneel芝CANHand",
-        "攞米河DIe豬機",
-        "Class哥瑪莉MASTER"
+        "哥舌豬Dead",
+        "馬打",
+        "哥sit豬蛙"
       ],
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【潑】爛地　選出這一截對應的物件描述。",
-      "correct": "撥水的動態與水花",
-      "distractors": [
-        "破爛毀壞的地表碎片",
-        "爛地基底"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "潑 = 撥水的動態與水花",
+        "爛 = 破爛毀壞的地表碎片",
+        "地 = 爛地基底"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "潑【爛】地　選出這一截對應的物件描述。",
-      "correct": "破爛毀壞的地表碎片",
-      "distractors": [
-        "爛地基底"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "潑爛【地】　請點選確認最後一截對應的物件描述。",
-      "correct": "爛地基底",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【潑爛地】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-etto-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-koshitsu-tte-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-mada-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2
       ],
       "shuffle": true
     }

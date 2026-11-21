@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kyou-no-6jihan-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 4,
+    "text": "席って"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-sekitte.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "蛇蝎dead",
+      "distractors": [
+        "蕉嚇廁紙hand加辣",
+        "闊蛋脷爹",
+        "落菇芝hand咖辣"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "蛇 = 同一畫面木地板上瞓咗、身體蜿蜒、雙眼打交叉嘅花斑蛇",
+        "蝎 = 同一畫面花斑蛇旁邊瞓咗、雙眼打交叉嘅深棕色蠍子",
+        "dead = 同一畫面蛇頭同蠍子頭上雙眼打交叉嘅白色交叉符號"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

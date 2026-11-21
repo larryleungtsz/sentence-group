@@ -1063,13 +1063,16 @@ tests.push(test('Q6 opening audio_listen shows 記住咗 and leaves the other ad
   assert.ok(!buttonNamed(chunk, remembered));
   assert.ok(!buttonNamed(chunk, '繼續'));
 
-  const liveOld = readJson('data/quizzes/sounding-yoyaku-shitenai-1-v1.json');
-  assert.strictEqual(liveOld.objective, 'pronunciation_sounding_select');
-  assert.strictEqual(liveOld.slides[0].type, 'audio_chunk');
-  assert.ok(!Object.prototype.hasOwnProperty.call(liveOld.slides[0], 'self_check'));
-  const liveRoot = runQuiz(liveOld);
-  assert.ok(buttonNamed(liveRoot, '✓ 通過'));
-  assert.ok(!buttonNamed(liveRoot, remembered));
+  const live = readJson('data/quizzes/sounding-yoyaku-shitenai-1-v1.json');
+  assert.strictEqual(live.objective, 'pronunciation_sounding_select');
+  assert.strictEqual(live.slides[0].type, 'audio_listen');
+  assert.strictEqual(live.slides[0].self_check, false);
+  assert.strictEqual(live.slides[0].instruction, '請聆聽。');
+  const liveRoot = runQuiz(live);
+  assert.ok(buttonNamed(liveRoot, remembered));
+  assert.strictEqual(remembered.charCodeAt(2), 0x5497);
+  assert.ok(!buttonNamed(liveRoot, '✓ 通過'));
+  assert.ok(!buttonNamed(liveRoot, '✗ 再試'));
   assert.ok(!buttonNamed(liveRoot, '繼續'));
   assert.ok(!buttonNamed(liveRoot, '完成跟讀'));
 }));

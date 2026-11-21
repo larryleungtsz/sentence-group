@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kanki-maa-maa-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 8,
+    "text": "お店だ"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omiseda.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝meat腥蛋",
+      "distractors": [
+        "蝎打拳嗱路",
+        "鎖lev爹磨馬達",
+        "梨痾油格豬熱爹絲馬烏極多"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 同一畫面右邊餐盤上的燒鵝",
+        "meat = 同一畫面右邊餐盤上的煎牛扒",
+        "腥 = 同一畫面右邊餐盤上的整條煎魚",
+        "蛋 = 同一畫面右邊餐盤上的兩隻太陽蛋"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

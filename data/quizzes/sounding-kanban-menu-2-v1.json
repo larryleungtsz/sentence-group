@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kanban-menu-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 2,
+    "text": "スパイシーな"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-supaishiina.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "soupBi(cycle)獅勒",
+      "distractors": [
+        "鴕鳥拿bear蛙",
+        "foot他鵝",
+        "牙機tart"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "soup = 碗湯（單車上放左嘅一碗淺黃湯）",
+        "Bi(cycle) = 單車（獅子踩住嘅單車）",
+        "獅勒 = 獅子用繩勒住自己（前爪喺喉嚨位揸住頸上嘅繩）"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,26 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
-      "start_sec": 2.58,
-      "end_sec": 3.17,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-omachigai.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "お間違い→鵝抹刺街",
-        "一句串：鵝抹刺街。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝抹刺街",
       "distractors": [
-        "させて→殺蛇Dead",
-        "いただ→2蛋蛋",
-        "きます→key抹",
-        "一句串：殺蛇Dead尾上放2蛋蛋，key抹地上血紅油漆。"
-      ]
+        "奶爹索car",
+        "殺蛇Dead2蛋蛋key抹",
+        "card冠鏈"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

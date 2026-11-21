@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-teikuauto-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 7,
+    "text": "魚の"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-sakanano.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "櫻花時鐘nano",
+      "distractors": [
+        "咯拳爹",
+        "oakley拳釘",
+        "哥啜bar腥陀"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "櫻花 = 畫面右邊那張木桌上，銅鐘周圍同桌面上那些粉紅色櫻花同落花",
+        "時鐘 = 畫面右邊那張木桌上，被粉紅色櫻花圍住的那座銅色圓形座鐘",
+        "nano = 同一張木桌、座鐘下方那部薄身、彩虹機身、有轉盤的 ipod nano"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

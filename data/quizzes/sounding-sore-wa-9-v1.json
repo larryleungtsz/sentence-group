@@ -1,0 +1,53 @@
+{
+  "quiz_id": "sounding-sore-wa-9-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 9,
+    "text": "9467"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-9467.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Killyawn落菇啦啦",
+      "distractors": [
+        "山果羊果",
+        "乞嗤哥鍊",
+        "油螺絲deskcar"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Kill = 同一畫面右邊台階上坐下、身穿黃黑運動服同握住武士刀嘅金髮女殺手",
+        "yawn = 同一畫面右邊女殺手掩住嘴打緊嘅哈欠",
+        "落 = 同一畫面陰雲天空正向下掉落蘑菇同啦啦球",
+        "菇 = 同一畫面天空同地面上嘅紅白斑點蘑菇",
+        "啦啦 = 同一畫面天空同地面上嘅紅、黃、藍色啦啦隊彩球"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

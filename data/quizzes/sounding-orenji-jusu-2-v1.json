@@ -10,32 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-orenji-jusu.mp3?v=20261031orenji",
-      "start_sec": 1.15,
-      "end_sec": 1.89,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shouchuuo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜shō≈鎖；chū≈豬；o≈鵝｜chain：鎖(手扣)／豬／鵝(燒鵝)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鎖豬鵝",
+      "distractors": [
+        "落cool釘",
+        "阿童yakkeytall梨摸煙deskcar",
+        "啜kim咪啜罐梨"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "鎖 = 手扣",
         "豬 = 豬",
-        "鵝 = 燒鵝",
-        "一句串：被手扣鎖住嘅豬被果喺燒鵝入面"
+        "鵝 = 燒鵝"
       ],
-      "distractors": [
-        "SOR：reading→objects｜ro≈落；kku≈cool；de≈釘｜chain：落／cool／釘(冰造嘅釘)",
-        "落 = 一鎚落落去",
-        "cool = 好 cool",
-        "釘 = 冰造嘅釘",
-        "落cool釘 - 工人一鎚落落去，鎚緊粒冰造好 cool 嘅釘",
-        "SOR：reading→objects｜orenji≈餓／𡃁雞；jūsu≈啜；to≈樹doll｜chain：餓／𡃁雞(腰極幼嘅細雞)／啜／樹doll(樹形公仔)",
-        "餓𡃁雞 = 腰極幼嘅細雞"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

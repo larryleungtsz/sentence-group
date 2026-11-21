@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 0.9,
-      "end_sec": 1.5,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-saishoni.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "saisho-ni→sai／鎖鏈",
-        "一句串：鏽爛廢棄嘅 鎖鏈(鎖鏈) 掛住標籤 sai(sai)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "sai鎖鏈",
       "distractors": [
-        "yokattara→yogurt打爛",
-        "一句串：卡通 yogurt 打爛咗個花樽"
-      ]
+        "鵝攞米摸蘿攞可",
+        "4鱷舌刺Oakley口罩",
+        "炸炸彈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "sai = sai 標籤",
+        "鎖鏈 = 鏽爛廢棄鎖鏈"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

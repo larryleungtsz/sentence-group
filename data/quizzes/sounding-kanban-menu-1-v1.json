@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kanban-menu-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 1,
+    "text": "看板メニューの"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kanbanmenyuuno.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "看板man鳥蘿",
+      "distractors": [
+        "soupBi(cycle)獅勒",
+        "鴕鳥拿bear蛙",
+        "foot他鵝"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "看板 = 木板（男鳥人捧住嘅木板）",
+        "man = 男（圖上未見清楚男性特徵）",
+        "鳥 = 鳥人（一隻雀形鳥人，捧住木板，未清楚望住木板）",
+        "蘿 = 卡通蘿白（畫喺嗰塊木板上）"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

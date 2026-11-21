@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
-      "start_sec": 0.4,
-      "end_sec": 1.1,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-bakugatouga.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "bakugatō-ga→Bag／Head bangle／格糖家",
-        "一句串：卡通屋企（格糖家）拎住 Bag、戴住 Head bangle（保護罩），阻隔糖攻擊。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "BagHeadbangle格糖家",
       "distractors": [
-        "demo→爹磨",
-        "一句串：中年華人男人（爹）用石磨磨豆。"
-      ]
+        "痾咩",
+        "字搬蛙",
+        "skiidarkgaydog"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Bag = Bag",
+        "Headbangle = 頭上保護罩",
+        "格糖家 = 卡通屋企"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 2,
+    "text": "思い出"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-omoide.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "按摩椅滴",
+      "distractors": [
+        "call",
+        "駝鳥卡卡釘",
+        "簫賣藥"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "按摩椅 = 同一個客廳、畫面右邊那張黑色皮革電動按摩椅",
+        "滴 = 同一個客廳、畫面右邊那張按摩椅坐墊上那粒完整、扁圓低穹頂形的巨型透明水滴"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

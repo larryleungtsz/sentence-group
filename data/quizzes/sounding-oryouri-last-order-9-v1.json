@@ -10,24 +10,43 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 7.8,
-      "end_sec": 9.3,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-denpyoutonarimasunode.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "denpyō-to-narimasu-node→釘／鋪／拖／嗱脷／馬／落地",
-        "一句串：釘鋪(釘／鋪) 拖(拖) 住帶 嗱脷(嗱脷) 嘅 馬(馬) 由空中 落地(落地)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "釘鋪拖嗱脷馬落地",
       "distractors": [
-        "gozaimasen-ka→割／齋／醫／馬／腥／Car",
-        "一句串：醫生(醫) 雙腳踩住兩匹馬(馬)，馬踩喺四轆腥魚(腥／Car) 上，醫生低頭 割(割) 緊齋草藥(齋)。"
-      ]
+        "lev字攞hall抹地",
+        "割齋醫馬腥Car",
+        "割豬Mon"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "釘 = 釘",
+        "鋪 = 鋪頭",
+        "拖 = 拖",
+        "嗱脷 = 酸性脷",
+        "馬 = 馬",
+        "落地 = 落地"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

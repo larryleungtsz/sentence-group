@@ -10,34 +10,41 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
-      "start_sec": 3.2,
-      "end_sec": 4.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-taiteorimasu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜tai≈thai；te≈dad；ori≈鵝／梨；masu≈馬｜chain：thai／dad／鵝／梨／馬",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "thaidad鵝梨馬",
+      "distractors": [
+        "鎖law馬馬",
+        "鱷messi壓car脷熱蛋die爹磨",
+        "鵝dark屍desk"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "thai = 泰式打扮",
         "dad = 中年爹",
         "鵝 = 鵝",
         "梨 = 梨",
-        "馬 = 馬",
-        "一句串：泰式中年爹雙手按肚拎鵝梨搶住馬，一齊掃過微滾湯面"
+        "馬 = 馬"
       ],
-      "distractors": [
-        "SOR：reading→objects｜sono≈鎖／law；mama≈馬／馬｜chain：鎖／law(法官大人)／馬／馬(左右各一)",
-        "鎖law = 法官大人",
-        "馬 = 馬（左）",
-        "馬 = 馬（右）",
-        "鎖law馬馬 - 左右兩馬神情認真鎖住法官大人，壓過原封不動菜盤",
-        "SOR：reading→objects｜o≈鵝；dashi≈dark／屍；de≈desk｜chain：鵝／dark(全黑燒焦)／屍(zombie)／desk(枱)",
-        "dark = 全黑燒焦"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

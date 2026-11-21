@@ -10,24 +10,41 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 7.1,
-      "end_sec": 8.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shitsureishimasu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "shitsurei-shimasu→舌／紫／lev／施／馬",
-        "一句串：魔術師用懸浮紫色 脷(舌／紫／lev) 對一匹被打中嘅 馬(馬) 施(施) 法。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "舌紫lev施馬",
       "distractors": [
-        "futatsu→闊／撻／豬",
-        "一句串：一隻醜 豬(豬) 坐喺極 闊、唔高嘅 蛋撻(闊／撻) 上。"
-      ]
+        "鱷多士的士",
+        "闊撻豬",
+        "炸炸彈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "舌 = 脷",
+        "紫 = 紫色",
+        "lev = 懸浮",
+        "施 = 施法",
+        "馬 = 被打中嘅馬"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

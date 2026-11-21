@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "start_sec": 8.3,
-      "end_sec": 9.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-2meisamade.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "ni-mei-sama-de→knee咩沙馬dead",
-        "一句串：跪低嘅羊；沙造嘅馬躺地、眼睛打交叉。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "knee咩沙馬dead",
       "distractors": [
-        "nan-desu-kedo→攔deak ghetto",
-        "一句串：一臉ghetto gangster樣嘅人正爬過一張desk。"
-      ]
+        "油螺絲guard打desk架",
+        "鵝錫key攞hall",
+        "菇按奶獅mask"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

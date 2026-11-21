@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "start_sec": 11.2,
-      "end_sec": 12.5,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-osekinohou.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-seki-no-hō→鵝錫key攞hall",
-        "一句串：鵝錫緊一把key，翼同時攞住學校hall。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝錫key攞hall",
       "distractors": [
-        "yoroshikatta-desu-ka→油螺絲guard打desk架",
-        "一句串：總統護衛樣、人身油螺絲嘅guard；正打滿desk嘅層架。"
-      ]
+        "菇按奶獅mask",
+        "油螺絲guard打desk架",
+        "knee咩沙馬dead"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

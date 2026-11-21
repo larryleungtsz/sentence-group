@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3?v=20261030hamo",
-      "start_sec": 1.7,
-      "end_sec": 2.4,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-hamono.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "hamo-no→蝦／毛／蘿",
-        "一句串：一隻 蝦(蝦) 喺自己個 蘿屁股(蘿) 上面生 毛(毛)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "蝦毛蘿",
       "distractors": [
-        "kochira-kara-desu-ne→割／刺／啦／color／desk",
-        "一句串：啦啦隊喺張勁 color desk(color／desk) 上面 割(割) 緊啲 刺(刺)，邊割邊喊啦(啦)。"
-      ]
+        "爛斑豬基",
+        "韓蜘蛛",
+        "椅wash駝"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "蝦 = 蝦",
+        "毛 = 毛",
+        "蘿 = 蘿屁股"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

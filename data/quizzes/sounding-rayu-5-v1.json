@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-rayu-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 5,
+    "text": "たっぷり"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-tappuri.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "達bul梨",
+      "distractors": [
+        "carcatdead菇叻蛋",
+        "Yolk箍爹",
+        "樹歌拳"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "達 = 畫面右幅桌面右側那座高大的高達機器人模型",
+        "bul = 桌面上的褐色公牛公仔：一隻前蹄躍起、高達的左手搭在它背上，另外兩隻低頭撞向梨模型",
+        "梨 = 散落在桌面、被公牛撞向的綠色和黃色細小梨模型，其中一隻懸在桌緣外"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

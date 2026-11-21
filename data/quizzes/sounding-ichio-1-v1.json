@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-ichio-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 1,
+    "text": "一応"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-ichiou.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "熱刺鵝",
+      "distractors": [
+        "挨釘攣desk機lev多毛",
+        "學家燶",
+        "蛋die沙馬guard"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "熱 = 同一畫面右邊荊棘枝前端燒紅發亮、冒住火焰同煙霧的熱端",
+        "刺 = 同一畫面右邊白鵝拎住、佈滿尖刺的長條荊棘枝",
+        "鵝 = 同一畫面右邊展翅立在桌面、銜住同夾住荊棘枝的白色大鵝"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

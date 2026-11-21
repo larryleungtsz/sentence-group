@@ -10,24 +10,43 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 4.5,
-      "end_sec": 7.2,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-gozaimasenka.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "gozaimasen-ka→割／齋／醫／馬／腥／Car",
-        "一句串：醫生(醫) 雙腳踩住兩匹馬(馬)，馬踩喺四轆腥魚(腥／Car) 上，醫生低頭 割(割) 緊齋草藥(齋)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "割齋醫馬腥Car",
       "distractors": [
-        "go-chūmon-wa→割／豬／Mon",
-        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
-      ]
+        "釘鋪拖嗱脷馬落地",
+        "lev字攞hall抹地",
+        "割豬Mon"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "割 = 割草藥",
+        "齋 = 齋／草藥",
+        "醫 = 醫生",
+        "馬 = 兩匹馬",
+        "腥 = 四轆魚",
+        "Car = 車感"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

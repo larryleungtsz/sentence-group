@@ -10,14 +10,15 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-5.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-koshitsuha.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "哥sit豬蛙",
       "distractors": [
         "摸",
@@ -27,51 +28,19 @@
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【哥】sit豬蛙　選出這一截對應的物件描述。",
-      "correct": "綠色哥布林",
-      "distractors": [
-        "坐姿",
-        "粉紅色豬服裝 (costume)",
-        "綠色大青蛙"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "哥 = 綠色哥布林",
+        "sit = 哥布林的坐姿",
+        "豬 = 粉紅色豬服裝 (costume)",
+        "蛙 = 綠色大青蛙"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "哥【sit】豬蛙　選出這一截對應的物件描述。",
-      "correct": "坐姿",
-      "distractors": [
-        "粉紅色豬服裝 (costume)",
-        "綠色大青蛙"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "哥sit【豬】蛙　選出這一截對應的物件描述。",
-      "correct": "粉紅色豬服裝 (costume)",
-      "distractors": [
-        "綠色大青蛙"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "哥sit豬【蛙】　請點選確認最後一截對應的物件描述。",
-      "correct": "綠色大青蛙",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【哥sit豬蛙】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-koshitsu-wa-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-mou-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
       ],
       "shuffle": true
     }

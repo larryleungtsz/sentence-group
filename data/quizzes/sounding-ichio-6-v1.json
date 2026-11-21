@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-ichio-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 6,
+    "text": "カウンターにご移動いただく"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-kauntaanigoidouitadaku.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "carwoundtart梨哥2豆熱蛋蛋cool",
+      "distractors": [
+        "Kata刺嗱路desk牙",
+        "摸獅醫垃圾撒旦巴耳蛙",
+        "蛋die沙馬guard"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "car = 同一畫面中上方停住的青灰色迷你房車",
+        "wound = 同一畫面房車車身滲住並流到地板上的鮮血傷痕",
+        "tart = 同一畫面房車前方托盤上的圓形烤批",
+        "梨 = 同一畫面那塊烤批上面鋪住的切片梨",
+        "哥2豆 = 同一畫面右下方捧住兩顆巨人豆豆的綠色哥布林",
+        "熱蛋蛋cool = 同一畫面哥布林腳邊一顆燒熱的紅蛋同另一邊一顆結冰的藍蛋"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

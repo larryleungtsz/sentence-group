@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
-      "start_sec": 4.2,
-      "end_sec": 4.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-jibunno.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "jibun-no→字搬裸",
-        "一句串：裸肌男搬緊一塊巨型「字」。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "字搬裸",
       "distractors": [
-        "tabenakute-mo→thai bear lock 爹磨",
-        "一句串：著泰旗衫嘅熊鎖住磨緊豆嘅中年男人。"
-      ]
+        "拳刺裂握爹",
+        "滑家路",
+        "thaibearlock爹磨"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,14 +10,15 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-7.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-akanaidesunee.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "壓家奶desk泥",
       "distractors": [
         "挖car梨master",
@@ -27,63 +28,21 @@
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【壓】家奶desk泥　選出這一截對應的物件描述。",
-      "correct": "被壓扁的狀態",
-      "distractors": [
-        "模型屋企",
-        "一樽奶",
-        "枱",
-        "泥濘"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "壓 = 被壓扁的模型屋企狀態",
+        "家 = 模型屋企",
+        "奶 = 一樽奶",
+        "desk = 枱",
+        "泥 = 枱面的泥濘"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "壓【家】奶desk泥　選出這一截對應的物件描述。",
-      "correct": "模型屋企",
-      "distractors": [
-        "一樽奶",
-        "枱",
-        "泥濘"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "壓家【奶】desk泥　選出這一截對應的物件描述。",
-      "correct": "一樽奶",
-      "distractors": [
-        "枱",
-        "泥濘"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "壓家奶【desk】泥　選出這一截對應的物件描述。",
-      "correct": "枱",
-      "distractors": [
-        "泥濘"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "壓家奶desk【泥】　請點選確認最後一截對應的物件描述。",
-      "correct": "泥濘",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【壓家奶desk泥】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/06-akanai-desu-nee-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/07-wakarimashita-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
       ],
       "shuffle": true
     }

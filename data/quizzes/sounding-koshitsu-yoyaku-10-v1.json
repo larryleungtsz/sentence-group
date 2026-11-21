@@ -10,14 +10,15 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-10.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-teeburusekide.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "Telblue路錫Key爹",
       "distractors": [
         "哥按奶can蘿deskYo",
@@ -27,76 +28,23 @@
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【Tel】blue路錫Key爹　選出這一截對應的物件描述。",
-      "correct": "傳統有線電話",
-      "distractors": [
-        "藍色外殼",
-        "諧音字串連結元素",
-        "親吻動作",
-        "巨型金屬鎖匙",
-        "中年大叔"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Tel = 傳統有線電話",
+        "blue = 藍色電話外殼",
+        "路 = （諧音字串連結元素）",
+        "錫 = 親吻動作 (kiss)",
+        "Key = 巨型金屬鎖匙",
+        "爹 = 中年大叔"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Tel【blue】路錫Key爹　選出這一截對應的物件描述。",
-      "correct": "藍色外殼",
-      "distractors": [
-        "諧音字串連結元素",
-        "親吻動作",
-        "巨型金屬鎖匙",
-        "中年大叔"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Telblue【路】錫Key爹　選出這一截對應的物件描述。",
-      "correct": "諧音字串連結元素",
-      "distractors": [
-        "親吻動作",
-        "巨型金屬鎖匙",
-        "中年大叔"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Telblue路【錫】Key爹　選出這一截對應的物件描述。",
-      "correct": "親吻動作",
-      "distractors": [
-        "巨型金屬鎖匙",
-        "中年大叔"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Telblue路錫【Key】爹　選出這一截對應的物件描述。",
-      "correct": "巨型金屬鎖匙",
-      "distractors": [
-        "中年大叔"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Telblue路錫Key【爹】　請點選確認最後一截對應的物件描述。",
-      "correct": "中年大叔",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【Telblue路錫Key爹】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "shuffle": true
     }

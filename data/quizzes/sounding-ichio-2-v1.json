@@ -1,0 +1,57 @@
+{
+  "quiz_id": "sounding-ichio-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 2,
+    "text": "空いてるんですけれども"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-aiterundesukeredomo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "挨釘攣desk機lev多毛",
+      "distractors": [
+        "學家燶",
+        "蛋die沙馬guard",
+        "摸獅醫垃圾撒旦巴耳蛙"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "挨 = 同一畫面右下方身體斜靠住巨型鐵釘的男子",
+        "釘 = 同一畫面右邊斜插在地面的巨型生鏽鐵釘",
+        "攣 = 同一畫面中央木枱整張向下彎曲變形的狀態",
+        "desk = 同一畫面中央那張向下彎曲、離地傾側的木枱",
+        "機 = 同一畫面中上方半空中帶齒輪同雙翼的機械人",
+        "lev = 同一畫面中上方機械人在半空中飛緊的姿態",
+        "多毛 = 同一畫面中上方機械人全身覆蓋住的濃密深棕色長毛"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

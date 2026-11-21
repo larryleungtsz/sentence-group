@@ -10,28 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
-      "start_sec": 0.7,
-      "end_sec": 1.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-okimarini.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "好惡嘅鎖匙(惡Key) ≈ o-ki",
-        "馬脷(馬脷) ≈ mari",
-        "鏈(鏈) ≈ ni",
-        "一句串：好惡嘅鎖匙(惡Key) 用條鏈(鏈) 拖住隻馬嘅脷(馬脷)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "惡Key馬脷鏈",
       "distractors": [
-        "割(割) ≈ go",
-        "豬(豬) ≈ chū",
-        "電腦屏幕(Mon) ≈ mon",
-        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
-      ]
+        "嗱脷mask打罅",
+        "鵝油B",
+        "Cool撻曬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "惡Key = 好惡嘅鎖匙",
+        "馬脷 = 馬嘅脷",
+        "鏈 = 鏈"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,27 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
-      "start_sec": 2.0,
-      "end_sec": 2.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-oyobi.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "鵝(goose) ≈ o",
-        "油膩嬰兒(油B) ≈ yobi",
-        "一句串：油膩嬰兒(油B) 食緊鵝(goose)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝油B",
       "distractors": [
-        "酸脷(嗱脷) ≈ nari",
-        "面膜(mask) ≈ mashi",
-        "打罅(打罅) ≈ tara",
-        "一句串：戴面膜(mask)嘅人 用嗱脷(嗱脷) 打罅(打罅)。"
-      ]
+        "Cool撻曬",
+        "嗱脷mask打罅",
+        "惡Key馬脷鏈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "油B = 油膩嬰兒"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

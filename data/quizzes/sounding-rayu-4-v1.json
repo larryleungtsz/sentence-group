@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-rayu-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 4,
+    "text": "良くて"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-yokute.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Yolk箍爹",
+      "distractors": [
+        "達bul梨",
+        "carcatdead菇叻蛋",
+        "樹歌拳"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Yolk = 畫面右邊那個圓滾滾、有大眼睛和細長雙腳的卡通蛋黃人",
+        "箍 = 蛋黃人伸出兩隻手臂，環抱住中年老爹",
+        "爹 = 戴眼鏡、穿格紋襯衫、微禿帶鬍渣的中年老爹"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

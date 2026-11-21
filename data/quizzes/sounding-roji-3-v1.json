@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-roji-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 3,
+    "text": "路地の"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-rojino.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "攞氈螺",
+      "distractors": [
+        "鱷拳梨",
+        "Heat鎖裂駝",
+        "壓路"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "攞 = 正好 1隻卡通螺伸手去高櫃，手碰到櫃頂向外垂下的一張有流蘇的氈",
+        "氈 = 高櫃頂向外垂下的一張有流蘇的氈",
+        "螺 = 正好 1隻卡通螺，站在高櫃旁邊，面向上方"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

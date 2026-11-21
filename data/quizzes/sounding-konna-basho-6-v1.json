@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-konna-basho-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 6,
+    "text": "見逃してしまう"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-minogashiteshimau.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "咪落架舌釘獅馬",
+      "distractors": [
+        "割dolllin嗱路",
+        "鵝meat射鵝另一隻鵝",
+        "騎咩豬基dadsmart To(mato)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "咪 = 貓咪",
+        "落架 = 職員將貓拿下來",
+        "舌釘 = 貓咪舌頭上的金屬釘",
+        "獅馬 = 獅面馬身像"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

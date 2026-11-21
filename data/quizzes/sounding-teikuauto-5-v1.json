@@ -1,0 +1,53 @@
+{
+  "quiz_id": "sounding-teikuauto-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 5,
+    "text": "50％"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-gojuupaasento.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "哥啜bar腥陀",
+      "distractors": [
+        "oakley拳釘",
+        "櫻花時鐘nano",
+        "咯拳爹"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "哥 = 同一個木質工作台上、畫面右邊那隻綠色哥布林",
+        "啜 = 哥布林用口啜緊朱古力bar的動作",
+        "bar = 哥布林口中那條長條狀深褐色朱古力bar",
+        "腥 = 哥布林腳下那隻魚形陀螺的魚形外觀",
+        "陀 = 那隻魚形陀螺最下方的尖銳旋轉錐"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

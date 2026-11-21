@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kanki-maa-maa-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 2,
+    "text": "まあまあで"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-maamaade.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "馬馬釘",
+      "distractors": [
+        "thaibear鵝蛙路拖",
+        "呼coo梨",
+        "梨痾油格豬熱爹絲馬烏極多"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "馬 = 同一畫面右邊木板上、偏左那隻被鐵釘釘住的馬毛公仔",
+        "馬 = 同一畫面右邊木板上、偏右那隻被鐵釘釘住的馬毛公仔",
+        "釘 = 同一畫面右邊、把兩隻馬毛公仔釘在木板上的多枚鐵釘"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

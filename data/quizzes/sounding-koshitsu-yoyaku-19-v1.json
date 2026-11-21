@@ -10,68 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-19.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-kashikomarimashita.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "Class哥瑪莉MASTER",
       "distractors": [
-        "潑爛地",
         "攞米河DIe豬機",
-        "Kneel芝CANHand"
+        "Kneel芝CANHand",
+        "哥按奶can蘿deskYo"
       ],
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【Class】哥瑪莉MASTER　選出這一截對應的物件描述。",
-      "correct": "亞洲學校課室",
-      "distractors": [
-        "哥布林",
-        "似Mario嘅男人",
-        "功夫大師"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Class = 亞洲學校課室",
+        "哥 = 哥布林",
+        "瑪莉 = 似Mario嘅男人",
+        "MASTER = 功夫大師"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Class【哥】瑪莉MASTER　選出這一截對應的物件描述。",
-      "correct": "哥布林",
-      "distractors": [
-        "似Mario嘅男人",
-        "功夫大師"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Class哥【瑪莉】MASTER　選出這一截對應的物件描述。",
-      "correct": "似Mario嘅男人",
-      "distractors": [
-        "功夫大師"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Class哥瑪莉【MASTER】　請點選確認最後一截對應的物件描述。",
-      "correct": "功夫大師",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【Class哥瑪莉MASTER】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
       ],
       "shuffle": true
     }

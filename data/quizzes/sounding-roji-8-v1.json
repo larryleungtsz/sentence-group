@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-roji-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 8,
+    "text": "少しでも"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-sukoshidemo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "squat獅釘磨",
+      "distractors": [
+        "企鵝碌cool丼",
+        "米鵝dog舌釘獅馬烏",
+        "meat蛇掟"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "squat = 正好一隻正在squat嘅 獅子，蹲在豆腐磨機上面",
+        "獅 = 正好一隻獅子",
+        "釘 = 一粒釘，豎在豆腐磨機上，正被打緊",
+        "磨 = 一部豆腐磨機，石磨放在木座上"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

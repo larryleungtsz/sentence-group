@@ -10,34 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
-      "start_sec": 1.0,
-      "end_sec": 2.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-akakonnyaku.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜aka≈壓價；kon≈江；nya≈梨；ku≈yak／拳｜chain：壓價(壓住價錢牌)／江(江水道)／梨(卡通梨)／yak／拳(食自己拳頭)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "壓價江梨yak拳",
+      "distractors": [
+        "鵝dark屍desk",
+        "thaidad鵝梨馬",
+        "鎖law馬馬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "壓價 = 壓住價錢牌",
         "江 = 江水道",
         "梨 = 卡通梨人",
-        "yak拳 = 猛食自己拳頭",
-        "一句串：江上卡通梨人壓住價錢牌，同時猛食自己拳頭"
+        "yak拳 = 猛食自己拳頭"
       ],
-      "distractors": [
-        "SOR：reading→objects｜o≈鵝；dashi≈dark／屍；de≈desk｜chain：鵝／dark(全黑燒焦)／屍(zombie)／desk(枱)",
-        "鵝 = 鵝",
-        "dark = 全黑燒焦",
-        "屍 = 僵屍",
-        "desk = 枱",
-        "鵝dark屍desk - 枱上停住一隻全黑燒焦嘅鵝屍僵屍",
-        "SOR：reading→objects｜sono≈鎖／law；shita≈start｜chain：鎖／law(法官大人)／start(start 掣)",
-        "鎖law = 被鎖住嘅法官大人"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

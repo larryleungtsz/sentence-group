@@ -10,24 +10,41 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 1.0,
-      "end_sec": 1.8,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-rasutooudaano.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "rasuto-ōdā-no→辣／薯／tall／打／蘿",
-        "一句串：頭戴辣椒(辣) 嘅 tall 高薯(薯／tall) 用手 打(打) 自己個 蘿屁股(蘿)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "辣薯tall打蘿",
       "distractors": [
-        "o-ryōri→鵝／蘿莉",
-        "一句串：鵝(鵝) 穿着 蘿莉裝(蘿莉)。"
-      ]
+        "痾字鋼",
+        "陀辣舌馬S",
+        "豬醫家"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "辣 = 頭上辣椒",
+        "薯 = 薯仔",
+        "tall = 好高",
+        "打 = 用手打",
+        "蘿 = 蘿屁股"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

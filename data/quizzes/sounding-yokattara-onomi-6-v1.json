@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 5.4,
-      "end_sec": 7.1,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-futatsu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "futatsu→闊／撻／豬",
-        "一句串：一隻醜 豬(豬) 坐喺極 闊、唔高嘅 蛋撻(闊／撻) 上。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "闊撻豬",
       "distractors": [
-        "jā→炸／炸彈",
-        "一句串：一枚 炸彈(炸／炸彈) 定格喺掌沿旁。"
-      ]
+        "舌紫lev施馬",
+        "鱷多士的士",
+        "炸炸彈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "闊 = 極闊唔高",
+        "撻 = 蛋撻",
+        "豬 = 醜豬"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-odenwa-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 1,
+    "text": "お電話"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-odenwa.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝釘蛙",
+      "distractors": [
+        "煙扎加央",
+        "摩氏摩氏",
+        "鵝lev街die煙deskcatdog"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 同一畫面左邊表情兇狠、舉住錘子的白色大鵝",
+        "釘 = 同一畫面左邊白鵝舉起的羊角錘同插在青蛙背上及木板上的銀色鐵釘",
+        "蛙 = 同一畫面左邊被按在木板上、驚恐張嘴的綠色青蛙"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 2.6,
-      "end_sec": 4.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-sodawari.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "sōda-wari→鎖蛋／rally",
-        "一句串：越野賽車入面有隻被鎖住嘅蛋"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鎖蛋rally",
       "distractors": [
-        "aragoshi-mikan-shu-no→spider／獅面鋼／樹／蘿柚",
-        "一句串：Spider 望住用屁股坐喺棵樹上、面係鋼造嘅獅子"
-      ]
+        "扑鼓蛙",
+        "鱷家挖梨地",
+        "耳坐釘油螺絲desk car"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鎖蛋 = 被鎖住嘅蛋",
+        "rally = 越野賽車"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {
