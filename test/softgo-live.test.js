@@ -176,6 +176,145 @@ function assertAllowedStoryChange(file, status, knownAtBase) {
   else assert.strictEqual(status, 'A', file);
 }
 
+function isWholeListenQuizPath(file) {
+  return /^data\/quizzes\/whole-listen-.*\.json$/.test(file);
+}
+
+/**
+ * Working-tree Q8 file with the authorized delta removed must byte-match baseSha.
+ * Delta is only: drop rate_options, set self_check false, add "rate": 2.
+ * quiz_id, sentence, audio URL, instruction, and feedback stay in the bytes.
+ */
+function assertWholeListenRewrite(file, status, baseSha) {
+  assert.strictEqual(status, 'M', file);
+  assert.ok(isWholeListenQuizPath(file), file);
+  const before = execFileSync('git', ['show', baseSha + ':' + file], { cwd: root });
+  const afterText = fs.readFileSync(path.join(root, file), 'utf8');
+  const block = before.toString('utf8').match(
+    /      "rate_options": \[\n(?:        [0-9.]+,?\n)+      \],\n      "self_check": true\n/
+  );
+  assert.ok(block, file + ' pinned rate_options');
+  const needle = '      "rate": 2,\n      "self_check": false\n';
+  const at = afterText.indexOf(needle);
+  assert.ok(at !== -1, file);
+  assert.strictEqual(afterText.indexOf(needle, at + needle.length), -1, file);
+  const restored = afterText.slice(0, at) + block[0] + afterText.slice(at + needle.length);
+  assert.ok(Buffer.from(restored).equals(before), file);
+}
+
+/**
+ * PR #48 runner pin, plus the authorized Q8 delta only.
+ * Any other byte in js/quiz-runner.js still has to match runnerHead.
+ */
+function assertRunnerIsQ4PinPlusQ8Delta(runnerHead) {
+  let text = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
+  function once(source, needle, replacement, label) {
+    const at = source.indexOf(needle);
+    assert.ok(at !== -1, label);
+    assert.strictEqual(source.indexOf(needle, at + needle.length), -1, label);
+    return source.slice(0, at) + replacement + source.slice(at + needle.length);
+  }
+  const q8fns = text.indexOf('  /**\n   * Q8 passage whole listening. One 「播放」 restarts at 0s and plays the\n');
+  const audioCheck = text.indexOf('  /**\n   * Audio ✓/✗.\n');
+  assert.ok(q8fns !== -1 && audioCheck > q8fns, 'q8 helpers');
+  text = text.slice(0, q8fns) + text.slice(audioCheck);
+  text = once(
+    text,
+    '    const speaker = !!opts.speaker;\n    // Q8: one 播放, no native scrubber, no speed picker. Other callers omit this.\n    const wholeListen = !!opts.whole_listen;\n',
+    '    const speaker = !!opts.speaker;\n',
+    'q8 wholeListen flag'
+  );
+  text = once(
+    text,
+    '    // Segment shadowing and Q8: custom button only (no native scrub).\n    audio.controls = !segmentShadow && !speaker && !wholeListen;\n',
+    '    // Segment shadowing: custom 重播 only (no native scrub).\n    audio.controls = !segmentShadow && !speaker;\n',
+    'q8 controls'
+  );
+  text = once(
+    text,
+    '      const start = wholeListen ? 0 : (opts.start_sec != null ? opts.start_sec : 0);\n      if (wholeListen || opts.start_sec != null || segmentShadow) audio.currentTime = start;\n',
+    '      const start = opts.start_sec != null ? opts.start_sec : 0;\n      if (opts.start_sec != null || segmentShadow) audio.currentTime = start;\n',
+    'q8 restart'
+  );
+  text = once(
+    text,
+    '      if (!wholeListen && opts.end_sec != null) {\n',
+    '      if (opts.end_sec != null) {\n',
+    'q8 clip'
+  );
+  text = once(
+    text,
+    '    // No speed picker for Q18 (fixed 0.75×), Q8 (fixed 2.0×), or speaker tiles.\n    if (!segmentShadow && !speaker && !wholeListen && opts.rate_options) {\n',
+    '    // No speed picker for sentence_segment_shadowing (fixed 0.75×) or speaker tiles.\n    if (!segmentShadow && !speaker && opts.rate_options) {\n',
+    'q8 rates'
+  );
+  text = once(
+    text,
+    [
+      '          audioOpts.rate_options = null;',
+      '        } else if (isWholeSentenceListening(quiz)) {',
+      '          // Q8: whole file from 0s at 2.0×. Clip windows and speed buttons stay off.',
+      '          audioOpts.whole_listen = true;',
+      '          audioOpts.segment_shadow = false;',
+      '          audioOpts.rate = wholeSentenceListenRate(audioOpts);',
+      '          audioOpts.rate_options = null;',
+      '          audioOpts.start_sec = null;',
+      '          audioOpts.end_sec = null;',
+      '        }',
+    ].join('\n'),
+    [
+      '          audioOpts.rate_options = null;',
+      '        }',
+    ].join('\n'),
+    'q8 plan'
+  );
+  text = once(
+    text,
+    [
+      '          return;',
+      '        }',
+      '        // Q8 passes with 「繼續」. The button is on the slide immediately;',
+      '        // playback does not have to finish. No ✓/✗ bar.',
+      '        if (isWholeSentenceListening(quiz) && audioOpts.whole_listen) {',
+      "          const cont = el('button', 'btn btn-primary', '繼續');",
+      "          cont.type = 'button';",
+      '          cont.addEventListener(\'click\', () => {',
+      '            idx++;',
+      '            renderSlide();',
+      '          });',
+      '          body.appendChild(cont);',
+      '          return;',
+      '        }',
+      '        // Q4/Q7 are already returned above.',
+    ].join('\n'),
+    [
+      '          return;',
+      '        }',
+      '        // Q4/Q7 are already returned above.',
+    ].join('\n'),
+    'q8 continue'
+  );
+  text = once(
+    text,
+    [
+      '    wholeSentenceShadowRate: wholeSentenceShadowRate,',
+      '    isWholeSentenceListening: isWholeSentenceListening,',
+      '    wholeSentenceListenRate: wholeSentenceListenRate,',
+      '    multiTapTargets: multiTapTargets,',
+    ].join('\n'),
+    [
+      '    wholeSentenceShadowRate: wholeSentenceShadowRate,',
+      '    multiTapTargets: multiTapTargets,',
+    ].join('\n'),
+    'q8 exports'
+  );
+  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
+    cwd: root,
+    maxBuffer: 2 * 1024 * 1024,
+  });
+  assert.ok(Buffer.from(text).equals(pinnedRunner), 'runner drifted from ' + runnerHead + ' beyond the Q8 delta');
+}
+
 function surfaceSince(sha) {
   return execFileSync(
     'git',
@@ -1138,6 +1277,10 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
       assertAllowedStoryChange(file, status, storyAtParent);
       return;
     }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, parent);
+      return;
+    }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
     assert.ok(!forbiddenMeaning.has(file), file);
     if (meaningAtQ3Base.has(file)) assert.strictEqual(status, 'M', line);
@@ -1347,6 +1490,10 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     }
     if (isStoryQuizPath(file)) {
       assertAllowedStoryChange(file, status, storyAtQ3Base);
+      return;
+    }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, base);
       return;
     }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
@@ -1705,6 +1852,10 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
       assertAllowedStoryChange(file, status, storyAtStart);
       return;
     }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, start);
+      return;
+    }
     assert.ok(isShadowQuizPath(file), 'unexpected quiz file change: ' + line);
     assert.ok(FORBIDDEN_SHADOW_IDS.indexOf(path.basename(file, '.json')) === -1, file);
     changed.set(file, status);
@@ -1743,12 +1894,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     }),
     ''
   );
-  const runner = fs.readFileSync(path.join(root, 'js/quiz-runner.js'));
-  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
-    cwd: root,
-    maxBuffer: 2 * 1024 * 1024,
-  });
-  assert.ok(runner.equals(pinnedRunner));
+  assertRunnerIsQ4PinPlusQ8Delta(runnerHead);
   const htmlBefore = execFileSync('git', ['show', start + ':group.html'], { cwd: root, encoding: 'utf8' });
   const htmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
   assert.strictEqual(
@@ -1943,13 +2089,16 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
     execFileSync('git', ['hash-object', 'data/schedule.json'], { cwd: root, encoding: 'utf8' }).trim(),
     'e68b55cc12d3bd5c805ed3aa0aa251f74bfaf8bc'
   );
+  // groups.json, schedule.json, and group.html stay at the Q5 base.
+  // js/quiz-runner.js is only the authorized Q8 delta on the same PR #48 blob.
   assert.strictEqual(
-    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'js/quiz-runner.js', 'group.html'], {
+    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'group.html'], {
       cwd: root,
       encoding: 'utf8',
     }),
     ''
   );
+  assertRunnerIsQ4PinPlusQ8Delta('86aeeb0a6529db30c70034a25df07c6a904b2513');
 
   const groupBySentence = new Map(groups.groups.map((group) => [group.sentence, group]));
   const bodies = new Map();

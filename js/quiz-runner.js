@@ -316,6 +316,21 @@
   }
 
   /**
+   * Q8 passage whole listening. One 「播放」 restarts at 0s and plays the
+   * whole file at 2.0×. No native controls, no speed picker, no ✓/✗.
+   * 「繼續」 is on the slide immediately and passes. A slide rate of 2 is
+   * the fixed rate; any other or missing rate is still 2.0.
+   */
+  function isWholeSentenceListening(quiz) {
+    return !!(quiz && quiz.objective === 'whole_sentence_listening');
+  }
+
+  function wholeSentenceListenRate(audioOpts) {
+    if (audioOpts && Number(audioOpts.rate) === 2) return 2;
+    return 2;
+  }
+
+  /**
    * Audio ✓/✗.
    * Other objectives still treat an omitted self_check as on (`!== false`).
    * Q4/Q7 never evaluate that default: the field is ignored when it is
@@ -639,10 +654,12 @@
     // speaker: compact play control for group_audio tiles. Full-file URL at
     // opts.rate, no native scrubber and no speed picker. Default callers unchanged.
     const speaker = !!opts.speaker;
+    // Q8: one 播放, no native scrubber, no speed picker. Other callers omit this.
+    const wholeListen = !!opts.whole_listen;
     const wrap = el('div', 'audio-wrap');
     const audio = document.createElement('audio');
-    // Segment shadowing: custom 重播 only (no native scrub).
-    audio.controls = !segmentShadow && !speaker;
+    // Segment shadowing and Q8: custom button only (no native scrub).
+    audio.controls = !segmentShadow && !speaker && !wholeListen;
     audio.preload = 'auto';
     audio.src = src;
     if (speaker) audio.setAttribute('aria-hidden', 'true');
@@ -660,12 +677,12 @@
         audio.removeEventListener('timeupdate', clipListener);
         clipListener = null;
       }
-      const start = opts.start_sec != null ? opts.start_sec : 0;
-      if (opts.start_sec != null || segmentShadow) audio.currentTime = start;
+      const start = wholeListen ? 0 : (opts.start_sec != null ? opts.start_sec : 0);
+      if (wholeListen || opts.start_sec != null || segmentShadow) audio.currentTime = start;
       const useRate = segmentShadow ? 0.75 : opts.rate;
       if (useRate != null) audio.playbackRate = useRate;
       audio.play();
-      if (opts.end_sec != null) {
+      if (!wholeListen && opts.end_sec != null) {
         clipListener = () => {
           if (audio.currentTime >= opts.end_sec) {
             audio.pause();
@@ -680,8 +697,8 @@
     });
     btns.appendChild(play);
 
-    // No speed picker for sentence_segment_shadowing (fixed 0.75×) or speaker tiles.
-    if (!segmentShadow && !speaker && opts.rate_options) {
+    // No speed picker for Q18 (fixed 0.75×), Q8 (fixed 2.0×), or speaker tiles.
+    if (!segmentShadow && !speaker && !wholeListen && opts.rate_options) {
       opts.rate_options.forEach((r) => {
         const b = el('button', 'btn btn-ghost', r + '×');
         b.type = 'button';
@@ -1731,6 +1748,14 @@
           audioOpts.segment_shadow = false;
           audioOpts.rate = plan.rate;
           audioOpts.rate_options = null;
+        } else if (isWholeSentenceListening(quiz)) {
+          // Q8: whole file from 0s at 2.0×. Clip windows and speed buttons stay off.
+          audioOpts.whole_listen = true;
+          audioOpts.segment_shadow = false;
+          audioOpts.rate = wholeSentenceListenRate(audioOpts);
+          audioOpts.rate_options = null;
+          audioOpts.start_sec = null;
+          audioOpts.end_sec = null;
         }
         const instruction = plan.record.enabled
           ? (slide.instruction || ('請跟讀成句（' + plan.rate + '×）'))
@@ -1761,6 +1786,18 @@
             renderSlide();
           });
           body.appendChild(done);
+          return;
+        }
+        // Q8 passes with 「繼續」. The button is on the slide immediately;
+        // playback does not have to finish. No ✓/✗ bar.
+        if (isWholeSentenceListening(quiz) && audioOpts.whole_listen) {
+          const cont = el('button', 'btn btn-primary', '繼續');
+          cont.type = 'button';
+          cont.addEventListener('click', () => {
+            idx++;
+            renderSlide();
+          });
+          body.appendChild(cont);
           return;
         }
         // Q4/Q7 are already returned above. showsAudioSelfCheck refuses them
@@ -1869,6 +1906,8 @@
     isSegmentShadow: isSegmentShadow,
     shadowSlidePlan: shadowSlidePlan,
     wholeSentenceShadowRate: wholeSentenceShadowRate,
+    isWholeSentenceListening: isWholeSentenceListening,
+    wholeSentenceListenRate: wholeSentenceListenRate,
     multiTapTargets: multiTapTargets,
     multiTapImage: multiTapImage,
     gradeMultiTap: gradeMultiTap,
