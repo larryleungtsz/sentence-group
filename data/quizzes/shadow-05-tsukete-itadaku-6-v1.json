@@ -11,16 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 4.9,
-      "end_sec": 6.3,
-      "rate": 0.5,
-      "self_check": true
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-otameshikudasai.mp3",
+      "rate": 0.5
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }

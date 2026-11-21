@@ -11,16 +11,12 @@
   "slides": [
     {
       "type": "audio_shadow",
-      "instruction": "請跟讀語調。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
-      "start_sec": 2.4,
-      "end_sec": 3.6,
-      "rate": 0.5,
-      "self_check": true
+      "instruction": "請聽 0.5× 詞塊示範，然後開始錄音跟讀。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-yonsennihyakujuuen.mp3",
+      "rate": 0.5
     }
   ],
   "feedback": {
-    "on_tick": "pass",
-    "on_cross": "retry"
+    "on_complete": "pass"
   }
 }
