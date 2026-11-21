@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 8.0,
-      "end_sec": 9.5,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-dekimasennode.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "dekimasen-node→掟key馬腥落地",
-        "一句串：口含魚嘅馬正掟一把key落地；佢行緊落樓梯、踏到最後一級落地"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "掟key馬腥落地",
       "distractors": [
-        "o-nabe-no-chūmon-dake→鵝拿bear／囉豬芒dark茄",
-        "一句串：BB鵝攞住泰迪熊底部；人身芒果豬鼻正食一粒好黑嘅番茄"
-      ]
+        "哥攞梳菇打曬",
+        "鵝拿bear囉豬芒dark茄",
+        "tall垃錫地熱打打奇馬"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

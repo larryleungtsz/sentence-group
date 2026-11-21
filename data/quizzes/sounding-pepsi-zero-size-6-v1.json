@@ -10,27 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
-      "start_sec": 4.95,
-      "end_sec": 7.15,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-emusaizude.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "衛生巾(M巾) ≈ emu",
-        "晒到暈低嘅豬(曬豬dead) ≈ saizu-de",
-        "一句串：M巾(M巾) → 曬豬dead(曬豬dead)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "M巾曬豬dead",
       "distractors": [
-        "流汗、衣著誇張嘅歌手(熱gaga) ≈ ikaga",
-        "沙塵暴式懸浮沙(沙Lev) ≈ sare",
-        "戴住口罩嘅車(mask car) ≈ masu-ka",
-        "一句串：熱gaga(熱gaga) 企喺 mask car(mask car) 上唱，周圍沙Lev(沙Lev)。"
-      ]
+        "熱gaga沙Levmaskcar",
+        "曬豬",
+        "pet絲傘蘿蛙"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "M巾 = 衛生巾",
+        "曬豬dead = 晒到暈低嘅豬"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

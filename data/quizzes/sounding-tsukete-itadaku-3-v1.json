@@ -10,24 +10,43 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 2.2,
-      "end_sec": 3.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-oajininarunode.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-aji-ni-naru-node→鵝／牙／芝／鏈／啦路／落嗲",
-        "一句串：鵝(鵝) 牙上黏 芝(牙／芝)、掛 鏈(鏈)，企喺 啦路(啦路) 中央；天上 落嗲(落嗲)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝牙芝鏈啦路落嗲",
       "distractors": [
-        "tamago-ppoi→他媽／咯／波椅",
-        "一句串：他媽(他媽) 咯(咯) 一聲坐落張 波椅(波椅)。"
-      ]
+        "痾殊殊咩舌釘路落釘",
+        "遮heating",
+        "樂打咩"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "牙 = 牙",
+        "芝 = 芝士碎",
+        "鏈 = 金鏈",
+        "啦路 = 啦啦球路",
+        "落嗲 = 沙嗲面落下"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

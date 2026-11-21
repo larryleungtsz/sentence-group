@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-teikuauto-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 2,
+    "text": "20香港ドル"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-nijuuhonkondoru.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "knee豬焊礦doll路",
+      "distractors": [
+        "羊角",
+        "blue丹yel(low)脷",
+        "哥啜bar腥陀"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "knee = 畫面右幅那隻小豬單膝跪在路上的姿勢",
+        "豬 = 畫面右幅石礦裡那隻粉紅色小豬",
+        "焊 = 小豬握住、噴出火花的焊槍",
+        "礦 = 畫面右幅四周佈滿岩石和碎石的石礦場",
+        "doll = 畫面右幅路兩邊擺滿的各式毛公仔",
+        "路 = 畫面右幅貫穿中央、鋪住一條鐵軌的碎石路"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

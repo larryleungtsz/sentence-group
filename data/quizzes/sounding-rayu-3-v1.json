@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-rayu-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 3,
+    "text": "すごく"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-sugoku.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "樹歌拳",
+      "distractors": [
+        "Yolk箍爹",
+        "達bul梨",
+        "carcatdead菇叻蛋"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "樹 = 畫面左邊那隻頭頂長滿綠葉、身上纏著綠藤的樹精",
+        "歌 = 樹精握著的銀色復古麥克風，以及對著咪張大的嘴巴",
+        "拳 = 樹精高高舉起並緊握的那隻非常大的木質拳頭"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

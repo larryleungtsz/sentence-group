@@ -10,24 +10,43 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 1.5,
-      "end_sec": 2.6,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-onomimononohou.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-nomimono-no-hō→鵝／攞／米／摸／蘿／攞可",
-        "一句串：鵝(鵝) 攞(攞) 住生 米(米) 同 可樂(攞可)，雙腳 摸(摸)／擦住自己個 蘿屁股(蘿)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝攞米摸蘿攞可",
       "distractors": [
-        "saisho-ni→sai／鎖鏈",
-        "一句串：鏽爛廢棄嘅 鎖鏈(鎖鏈) 掛住標籤 sai(sai)。"
-      ]
+        "4鱷舌刺Oakley口罩",
+        "炸炸彈",
+        "闊撻豬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "攞 = 攞",
+        "米 = 生米",
+        "摸 = 摸",
+        "蘿 = 蘿屁股",
+        "攞可 = 可樂"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

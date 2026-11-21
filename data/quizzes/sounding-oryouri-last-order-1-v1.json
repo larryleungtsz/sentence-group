@@ -10,21 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 0.05,
-      "end_sec": 1.0,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-oryouri.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-ryōri→鵝／蘿莉",
-        "一句串：鵝(鵝) 穿着 蘿莉裝(蘿莉)。"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝蘿莉",
+      "distractors": [
+        "辣薯tall打蘿",
+        "痾字鋼",
+        "陀辣舌馬S"
       ],
-      "distractors": []
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "蘿莉 = 蘿莉裝"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

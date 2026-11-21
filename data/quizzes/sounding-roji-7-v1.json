@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-roji-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 7,
+    "text": "店で"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-misede.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "meat蛇掟",
+      "distractors": [
+        "squat獅釘磨",
+        "企鵝碌cool丼",
+        "米鵝dog舌釘獅馬烏"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "meat = 一塊被掟走、停在半空的舊生牛扒",
+        "蛇 = 正好一條大隻蛇，盤在石路上，張口面向舊生牛扒",
+        "掟 = 大隻蛇將舊生牛扒掟走，牛扒停在半空、介乎蛇同店鋪之間"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

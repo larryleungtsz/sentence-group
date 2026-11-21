@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 4.7,
-      "end_sec": 5.6,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-bokuwa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "boku-wa→扑鼓蛙",
-        "一句串：青蛙拎住木槌扑緊現代鼓"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "扑鼓蛙",
       "distractors": [
-        "sōda-wari→鎖蛋／rally",
-        "一句串：越野賽車入面有隻被鎖住嘅蛋"
-      ]
+        "鱷家挖梨地",
+        "耳坐釘油螺絲desk car",
+        "駝鳥牙air阻耳坐釘"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

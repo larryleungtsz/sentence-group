@@ -10,28 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
-      "start_sec": 1.3,
-      "end_sec": 2.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-narimashitara.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "酸脷(嗱脷) ≈ nari",
-        "面膜(mask) ≈ mashi",
-        "打罅(打罅) ≈ tara",
-        "一句串：戴面膜(mask)嘅人 用嗱脷(嗱脷) 打罅(打罅)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "嗱脷mask打罅",
       "distractors": [
-        "好惡嘅鎖匙(惡Key) ≈ o-ki",
-        "馬脷(馬脷) ≈ mari",
-        "鏈(鏈) ≈ ni",
-        "一句串：好惡嘅鎖匙(惡Key) 用條鏈(鏈) 拖住隻馬嘅脷(馬脷)。"
-      ]
+        "鵝油B",
+        "Cool撻曬",
+        "惡Key馬脷鏈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "嗱脷 = 酸性脷",
+        "mask = 面膜",
+        "打罅 = 打石罅"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

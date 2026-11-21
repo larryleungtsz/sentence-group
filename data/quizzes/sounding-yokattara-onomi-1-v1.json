@@ -10,21 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 0.05,
-      "end_sec": 0.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-yokattara.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "yokattara→yogurt打爛",
-        "一句串：卡通 yogurt 打爛咗個花樽"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "yogurt打爛",
+      "distractors": [
+        "sai鎖鏈",
+        "鵝攞米摸蘿攞可",
+        "4鱷舌刺Oakley口罩"
       ],
-      "distractors": []
+      "shuffle": true
     }
   ],
   "feedback": {

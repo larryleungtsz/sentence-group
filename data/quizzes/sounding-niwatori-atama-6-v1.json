@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-niwatori-atama-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 6,
+    "text": "ということはない"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-toiukotowanai.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "doll魚葛多蛙奶",
+      "distractors": [
+        "sad褲蛙",
+        "豉跛獅躝挖拖梨拿Bear",
+        "dark茄鏈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "doll魚 = 魚公仔",
+        "葛多 = 着住類似哈利波特葛萊分多分校制服",
+        "蛙奶 = 青蛙飲緊奶"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

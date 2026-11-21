@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-sore-wa-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 4,
+    "text": "お名前と"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-onamaeto.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "on-line賣air駝",
+      "distractors": [
+        "鵝釘蛙板果",
+        "油螺絲deskcar",
+        "乞嗤哥鍊"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "on-line = 同一畫面中上方橫拉、駱駝踩住行嘅高空鋼索",
+        "賣 = 同一畫面駱駝身上掛住嘅提籃、秤盤同標價牌等販賣擺設",
+        "air = 同一畫面竹籃、繩索同駱駝身側吊住嘅透明玻璃瓶同氣球",
+        "駝 = 同一畫面中右上方踩喺鋼索上行走嘅雙峰駱駝"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

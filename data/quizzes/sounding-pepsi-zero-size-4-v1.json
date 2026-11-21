@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
-      "start_sec": 3.2,
-      "end_sec": 3.55,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-saizu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "正在晒太陽嘅豬(曬豬) ≈ saizu",
-        "一句串：曬豬(曬豬)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "曬豬",
       "distractors": [
-        "pepushi-zero-wa→pet絲傘蘿蛙",
-        "一句串：着黑絲拎傘女人抱住寵物狗，施捨錢俾拎木制筲箕嘅青蛙。"
-      ]
+        "熱gaga沙Levmaskcar",
+        "M巾曬豬dead",
+        "pet絲傘蘿蛙"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

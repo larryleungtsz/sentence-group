@@ -1,0 +1,53 @@
+{
+  "quiz_id": "sounding-teikuauto-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 1,
+    "text": "テイクアウトで"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-teikuautode.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "tick鼓勾駝滴",
+      "distractors": [
+        "knee豬焊礦doll路",
+        "羊角",
+        "blue丹yel(low)脷"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "tick = 畫面右幅白色鼓面正中央那個巨大的黑色剔號，外形像 nike 標誌",
+        "鼓 = 畫面右幅木桌上那面紅身藍邊的圓形大鼓",
+        "勾 = 駱駝舉起的前肢上那支好似鐵勾船長的金屬彎鈎",
+        "駝 = 畫面右幅坐在紅白藍圓凳上的駱駝公仔",
+        "滴 = 駱駝身後金屬架上、連住輸液管和藥水瓶的醫用點滴"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

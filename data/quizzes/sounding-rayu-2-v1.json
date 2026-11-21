@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-rayu-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 2,
+    "text": "ラー油も"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-raayumo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "啦魚摸",
+      "distractors": [
+        "樹歌拳",
+        "Yolk箍爹",
+        "達bul梨"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "啦 = 畫面右側那隻人形彩色毛線啦啦球（有大眼睛和彩虹扭紋毛線手臂的絨球生物）",
+        "魚 = 米色橢圓盤上的整條銀色大魚",
+        "摸 = 啦啦球一隻「手」按在魚的吻部，另一隻按在魚背上，正在觸摸那條大魚"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

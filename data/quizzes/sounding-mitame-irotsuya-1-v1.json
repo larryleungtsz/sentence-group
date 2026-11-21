@@ -10,21 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
-      "start_sec": 0.05,
-      "end_sec": 1.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-mitameno.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "mitame-no→摵蛋咩欏",
-        "一句串：小男孩摵住卡通蛋嘅面，背脊揹住木制筲箕。"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "摵蛋咩欏",
+      "distractors": [
+        "二long豬吔家",
+        "椅芥辣",
+        "thaibearlock爹磨"
       ],
-      "distractors": []
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 7.8,
-      "end_sec": 9.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-oishisou.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "oishisō→鵝／eat／scissors",
-        "一句串：鵝(鵝) 喺丼飯上面 eat(eat) 緊一把 scissors(scissors)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝eatscissors",
       "distractors": [
-        "meccha→matcha",
-        "一句串：一盅綠茶／matcha。"
-      ]
+        "thai bear馬sor",
+        "matcha",
+        "耳air"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "eat = 食",
+        "scissors = 剪刀"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

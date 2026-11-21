@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
-      "start_sec": 5.6,
-      "end_sec": 6.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-wakaru.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "wakaru→滑家路",
-        "一句串：有人喺由屋伸出嘅路上做足球鏟地滑。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "滑家路",
       "distractors": [
-        "kuchi-ni-au-tte→拳刺裂握爹",
-        "一句串：中年男人握住女人有刺、微裂嘅拳頭。"
-      ]
+        "拳刺裂握爹",
+        "字搬裸",
+        "thaibearlock爹磨"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

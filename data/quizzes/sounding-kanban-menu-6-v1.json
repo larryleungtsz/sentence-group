@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-kanban-menu-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 6,
+    "text": "瞬間から"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shunkankara.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "蒜奸color",
+      "distractors": [
+        "car痾鏈家YO兒",
+        "Tall鏈𨋢Cool蛙",
+        "嗱咩垃家釘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "蒜奸 = 個garlic 笑得好奸（笑得好奸嘅一顆 garlic）",
+        "color = 好多唔同顏色既塗鴉背景（背景嘅好多唔同顏色既塗鴉）"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

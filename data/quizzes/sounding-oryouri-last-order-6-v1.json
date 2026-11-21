@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 3.8,
-      "end_sec": 4.5,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-gochuumonwa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "go-chūmon-wa→割／豬／Mon",
-        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "割豬Mon",
       "distractors": [
-        "tsuika-no→豬／醫／家",
-        "一句串：醫生豬(豬／醫) 用聽診器喺 human-like 屋(家) 度診症。"
-      ]
+        "割齋醫馬腥Car",
+        "釘鋪拖嗱脷馬落地",
+        "lev字攞hall抹地"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "割 = 割",
+        "豬 = 豬",
+        "Mon = 電腦屏幕"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

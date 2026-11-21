@@ -10,30 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 6.3,
-      "end_sec": 7.2,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-ieei.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜iē／ie≈耳；ēi／ei≈air｜chain：耳／air(空氣衝擊波)",
-        "耳 = 耳",
-        "air = 空氣衝擊波",
-        "一句串：耳仔旁邊湧出空氣衝擊波"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "耳air",
       "distractors": [
-        "SOR：meccha→matcha｜chain：一盅綠茶／matcha",
-        "matcha = 一盅綠茶／matcha",
-        "matcha - 一盅綠茶／matcha",
-        "SOR：reading→objects｜otameshi≈樂／打／咩；kudasai＝（未覆蓋 — 見 Flag）｜chain：樂(音符人)／打／咩(山羊)",
-        "樂 = 音符人",
-        "打 = 打"
-      ]
+        "matcha",
+        "鵝eatscissors",
+        "thai bear馬sor"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "耳 = 耳",
+        "air = 空氣衝擊波"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

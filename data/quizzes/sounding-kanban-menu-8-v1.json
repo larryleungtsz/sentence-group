@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kanban-menu-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 8,
+    "text": "鶏肉は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-torinikuha.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Tall鏈𨋢Cool蛙",
+      "distractors": [
+        "嗱咩垃家釘",
+        "菇摸",
+        "HI爹熱爹"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Tall = 高長身",
+        "鏈 = 戴住金鏈",
+        "𨋢Cool = 結冰既Lift",
+        "蛙 = 青蛙"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-goraitei-arigatou.mp3",
-      "start_sec": 2.2,
-      "end_sec": 2.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-yokattara.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "yokattara→yogurt打爛",
-        "一句串：卡通 yogurt 打爛咗個花樽。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "yogurt打爛",
       "distractors": [
-        "go-raiten→歌奶釘",
-        "一句串：釘滿釘嘅奶樽 gangster 對住咪唱歌。"
-      ]
+        "牙蟬motor",
+        "oni剝豬",
+        "car歌"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,34 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
-      "start_sec": 5.7,
-      "end_sec": 6.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-ioushiotteiu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜iō≈2痾；shio≈shit；tte≈痾爹；iu≈油｜chain：2痾(兩個年輕人屙啡色粒)／shit／痾爹(中年爹屙)／油",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "2痾shit痾爹油",
+      "distractors": [
+        "缸airdesk",
+        "臥messi壓car鏈卡蛋dog舌爹",
+        "鵝熱鮮desk機lev多毛"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "2痾 = 兩個年輕人屙啡色粒",
         "shit = 啡色粒",
         "痾爹 = 中年爹屙",
-        "油 = 油",
-        "一句串：兩個年輕人屙啡色粒；中年爹同步屙油"
+        "油 = 油"
       ],
-      "distractors": [
-        "SOR：reading→objects｜gan≈缸；en≈air；desu≈desk｜chain：缸(魚缸)／air(困住嘅空氣)／desk(枱)",
-        "缸 = 魚缸",
-        "air = 困住嘅空氣",
-        "desk = 枱",
-        "缸airdesk - 魚缸困住空氣放喺枱上",
-        "SOR：reading→objects｜o≈臥；meshi≈messi；agari≈壓；kata≈car；to≈鏈／卡蛋；shite≈dog／舌爹｜chain：臥／messi／壓／car／鏈／卡蛋(蛋卡喺轆)／dog(中年狗)／舌爹(長舌伸出)",
-        "臥 = 臥",
-        "messi = Messi 球衣人"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

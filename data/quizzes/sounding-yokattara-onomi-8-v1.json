@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 8.3,
-      "end_sec": 9.04,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-otoshidesu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-tōshi-desu→鱷／多士／的士",
-        "一句串：鱷魚(鱷) 坐住紅色 的士(的士)，一邊食漏芝士嘅 多士(多士)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鱷多士的士",
       "distractors": [
-        "shitsurei-shimasu→舌／紫／lev／施／馬",
-        "一句串：魔術師用懸浮紫色 脷(舌／紫／lev) 對一匹被打中嘅 馬(馬) 施(施) 法。"
-      ]
+        "舌紫lev施馬",
+        "闊撻豬",
+        "炸炸彈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鱷 = 鱷魚",
+        "多士 = 漏芝士嘅芝士多士",
+        "的士 = 紅色的士"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

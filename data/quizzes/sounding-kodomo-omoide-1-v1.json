@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 1,
+    "text": "子供の頃の"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kodomonokorono.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "call多Mon攞callroro",
+      "distractors": [
+        "按摩椅滴",
+        "call",
+        "駝鳥卡卡釘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "call = 同一個遊戲室、畫面右邊那台 Monitor 右手舉起的米色無線電話",
+        "多 = 同一台 Monitor 頭頂那瓶好似益力多的白瓶紅蓋飾物",
+        "Mon = 同一個遊戲室、畫面右邊淺木桌子上，螢幕有綠色像素笑臉的擬人 CRT Monitor",
+        "攞 = 官方場景要呢台 Monitor 拎住好似軍曹keroro嘅公仔，但圖上公仔是獨立站在同一張桌子右邊，Monitor 沒有拎住它",
+        "call = 同一隻綠色公仔側頭舉起的藍色手提電話",
+        "roro = 同一張桌子上，獨立站在 Monitor 旁邊、頭戴頭盔的綠色好似軍曹keroro公仔"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

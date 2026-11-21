@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kanban-menu-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 7,
+    "text": "香りが良い"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kaorigayoi.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "car痾鏈家YO兒",
+      "distractors": [
+        "Tall鏈𨋢Cool蛙",
+        "嗱咩垃家釘",
+        "菇摸"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "car = 架車",
+        "痾鏈 = 架車喺後面痾緊一條鏈（圖上係一條扣喺車尾拖鉤嘅鏈）",
+        "家YO兒 = 條鏈連住左個baby搖搖（圖上個 baby 坐喺木搖搖板上）"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

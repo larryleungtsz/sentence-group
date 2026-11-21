@@ -10,32 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
-      "start_sec": 4.9,
-      "end_sec": 5.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shiitaketo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜shii≈獅；take≈撻／茄；to≈tall｜chain：獅(着柔道衫)／撻／茄／tall(長條蕃茄)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "獅撻茄tall",
+      "distractors": [
+        "壓沙脷落",
+        "tartkey鴉蛙射desk",
+        "傻佬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "獅 = 獅子",
         "撻 = 獅子撻低左隻長條蕃茄",
-        "茄tall = 長高的蕃茄",
-        "一句串：獅子着柔道衫撻低左隻長條蕃茄"
+        "茄tall = 長高的蕃茄"
       ],
-      "distractors": [
-        "SOR：reading→objects｜a≈壓；sa≈沙；ri≈脷；no≈落｜chain：壓／沙／脷(大舌頭卡通)／落(滑梯滑落)",
-        "壓 = 壓住一把沙",
-        "沙 = 一把沙",
-        "脷 = 大舌頭卡通",
-        "落 = 滑梯滑落",
-        "壓沙脷落 - 大舌頭卡通壓住一把沙一齊喺滑梯滑落",
-        "SOR：reading→objects｜sono o-tonari ga≈傻佬｜chain：傻佬(呆樣人，雙手拎住白紙卡)；後半 tonari 已喺 #1"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

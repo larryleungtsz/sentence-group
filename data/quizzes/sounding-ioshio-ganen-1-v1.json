@@ -10,21 +10,43 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
-      "start_sec": 0.05,
-      "end_sec": 2.4,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-oishiindesukeredomo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "oishii-n-desu-keredomo→鵝／熱鮮／desk／機／lev／多毛",
-        "一句串：一頭着火 鵝(鵝／熱鮮) 咬住鮮魚企喺 desk(desk) 上；空中一部全身 多毛(lev／多毛) 嘅 機(機) 人緩緩壓低。"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝熱鮮desk機lev多毛",
+      "distractors": [
+        "臥messi壓car鏈卡蛋dog舌爹",
+        "2痾shit痾爹油",
+        "缸airdesk"
       ],
-      "distractors": []
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 鵝",
+        "熱鮮 = 頭上着火＋咬住鮮魚",
+        "desk = 枱",
+        "機 = 機械人",
+        "lev = 懸浮",
+        "多毛 = 全身長滿毛"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -1,0 +1,59 @@
+{
+  "quiz_id": "sounding-odenwa-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 4,
+    "text": "お願いしたいんですけど"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-onegaishitaindesukedo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝lev街die煙deskcatdog",
+      "distractors": [
+        "摩氏摩氏",
+        "煙扎加央",
+        "鵝釘蛙"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 同一畫面左邊雙眼泛白光、頭頂有魔法光暈的白色大鵝",
+        "lev = 同一畫面中上方半空中懸浮住的微型街道模型",
+        "街 = 同一畫面中上方懸浮模型上的柏油馬路同兩排樓房",
+        "die = 同一畫面中央桌面上、白色粉筆圈內仰躺住的灰色小人模型",
+        "煙 = 同一畫面中央粉筆圈旁邊正在冒煙的煙頭",
+        "desk = 同一畫面承載所有物件的深棕色木書桌",
+        "cat = 同一畫面中偏右趴在桌上的虎斑貓",
+        "dog = 同一畫面右邊貓旁邊趴住的黃白小狗"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 3.4,
-      "end_sec": 3.8,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-tsuikano.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "tsuika-no→豬／醫／家",
-        "一句串：醫生豬(豬／醫) 用聽診器喺 human-like 屋(家) 度診症。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "豬醫家",
       "distractors": [
-        "to-narimasu→陀／辣舌／馬／S",
-        "一句串：圍住紅色辣舌(辣舌) 嘅 陀螺(陀) 攻擊 馬(馬)，再閃出 S(S)。"
-      ]
+        "割豬Mon",
+        "割齋醫馬腥Car",
+        "釘鋪拖嗱脷馬落地"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "豬 = 醫生豬",
+        "醫 = 聽診器／醫生",
+        "家 = human-like 屋"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

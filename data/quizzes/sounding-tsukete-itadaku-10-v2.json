@@ -10,32 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 9.0,
-      "end_sec": 10.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-tabemashou.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜tabe≈thai bear；ma≈馬；shō≈sor｜chain：thai bear(泰旗 Tee 肌肉熊)／馬／sor(道歉)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "thai bear馬sor",
+      "distractors": [
+        "鵝eatscissors",
+        "matcha",
+        "耳air"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "thaibear = 泰旗 Tee 肌肉熊",
         "馬 = 馬",
-        "sor = 道歉",
-        "一句串：馬向着泰旗 Tee 肌肉熊道歉"
+        "sor = 道歉"
       ],
-      "distractors": [
-        "SOR：reading→objects｜tsukete≈雪機／踢；itadaku≈熱蛋／dark；to≈駝｜chain：雪機(剷雪機器人)／踢／熱蛋／dark(黑皮膚)／駝(駱駝)",
-        "雪機 = 剷雪機器人",
-        "踢 = 踢",
-        "熱蛋 = 着火蛋",
-        "dark = 黑皮膚",
-        "駝 = 駱駝",
-        "雪機踢熱蛋dark駝 - 剷雪機器人踢向熱蛋，旁有黑皮膚駱駝"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,24 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yokattara-otoshi.mp3",
-      "start_sec": 2.6,
-      "end_sec": 4.2,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-oukagaishiteokimasune.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-ukagai-shite-okimasu-ne→4鱷／舌刺／Oakley／口罩",
-        "一句串：卡通屋前馬路企住 4 隻鱷魚(4鱷)，脷有 piercings(舌刺)、戴 Oakley(Oakley)、頭頂掛醫用 口罩(口罩)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "4鱷舌刺Oakley口罩",
       "distractors": [
-        "o-nomimono-no-hō→鵝／攞／米／摸／蘿／攞可",
-        "一句串：鵝(鵝) 攞(攞) 住生 米(米) 同 可樂(攞可)，雙腳 摸(摸)／擦住自己個 蘿屁股(蘿)。"
-      ]
+        "炸炸彈",
+        "闊撻豬",
+        "舌紫lev施馬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "4鱷 = 四隻鱷魚",
+        "舌刺 = 舌頭 piercings",
+        "Oakley = Oakley 太陽眼鏡",
+        "口罩 = 頭上醫用口罩"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

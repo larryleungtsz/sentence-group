@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-bakuga-tome.mp3",
-      "start_sec": 2.1,
-      "end_sec": 2.6,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-jibunwa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "jibun-wa→字搬蛙",
-        "一句串：青蛙搬住一個巨大漢字方塊。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "字搬蛙",
       "distractors": [
-        "ōme→痾咩",
-        "一句串：馬桶入面有隻羊（痾咩）。"
-      ]
+        "skiidarkgaydog",
+        "痾咩",
+        "BagHeadbangle格糖家"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

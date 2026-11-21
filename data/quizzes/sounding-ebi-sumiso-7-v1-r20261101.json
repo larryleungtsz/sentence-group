@@ -10,34 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
-      "start_sec": 5.7,
-      "end_sec": 6.2,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-asarino.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜a≈壓；sa≈沙；ri≈脷；no≈落｜chain：壓／沙／脷(大舌頭卡通)／落(滑梯滑落)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "壓沙脷落",
+      "distractors": [
+        "tartkey鴉蛙射desk",
+        "獅撻茄tall",
+        "傻佬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "壓 = 壓住一把沙",
         "沙 = 一把沙",
         "脷 = 大舌頭卡通",
-        "落 = 滑梯滑落",
-        "一句串：大舌頭卡通壓住一把沙一齊喺滑梯滑落"
+        "落 = 滑梯滑落"
       ],
-      "distractors": [
-        "SOR：reading→objects｜taki≈tart／key；awa≈鴉／蛙；se≈射；desu≈desk｜chain：tart／key(腳 tart 着炮車鎖匙位)／鴉／蛙／射／desk(枱)",
-        "tartkey = 腳 tart 住炮車嘅鎖匙位",
-        "鴉 = 烏鴉",
-        "蛙 = 青蛙",
-        "射 = 開火射擊",
-        "desk = 枱",
-        "tartkey鴉蛙射desk - 烏鴉用腳 tart 住炮車鎖匙位，隔離青蛙大炮開火，炮彈射到枱上",
-        "SOR：reading→objects｜shii≈獅；take≈撻／茄；to≈tall｜chain：獅(着柔道衫)／撻／茄／tall(長條蕃茄)"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

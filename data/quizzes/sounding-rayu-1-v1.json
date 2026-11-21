@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-rayu-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 1,
+    "text": "それに"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-soreni.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鎖Lev鏈",
+      "distractors": [
+        "啦魚摸",
+        "樹歌拳",
+        "Yolk箍爹"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鎖 = 圖上看不到鎖；空中漂浮的是三塊疊起的亮金色「＋」金屬積木",
+        "Lev = 圖上看不到獨立的 Lev 物件",
+        "鏈 = 圖上看不到鏈；拉住積木的是一條扭紋繩，地面一端穿過路面上的金色金屬環"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

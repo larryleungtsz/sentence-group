@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 10.7,
-      "end_sec": 12.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-toriaezuijoude.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "toriaezu-ijō-de→駝鳥／牙air阻／耳坐釘",
-        "一句串：卡通牙仔用口吹風牆擋住周圍跑嘅駝鳥；隔離卡通耳仔坐喺釘上"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "駝鳥牙air阻耳坐釘",
       "distractors": [
-        "ijō-de-yoroshii-desu-ka→耳坐釘／油螺絲／desk car",
-        "一句串：卡通耳仔坐喺釘上；手摸住一條好油嘅螺絲；隔離有部用枱砌成嘅車"
-      ]
+        "按摩池絲mask泥",
+        "哥刺拉",
+        "惡沙基撕馬薯"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "駝鳥 = 駝鳥",
+        "牙air阻 = 卡通牙仔吹風牆擋駝鳥",
+        "耳坐釘 = 卡通耳仔坐喺釘上"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

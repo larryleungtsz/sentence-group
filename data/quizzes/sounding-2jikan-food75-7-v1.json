@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 6.8,
-      "end_sec": 8.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-onabenochuumondake.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-nabe-no-chūmon-dake→鵝拿bear／囉豬芒dark茄",
-        "一句串：BB鵝攞住泰迪熊底部；人身芒果豬鼻正食一粒好黑嘅番茄"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝拿bear囉豬芒dark茄",
       "distractors": [
-        "torasete-itadakimasu→tall垃錫地／熱打打奇馬",
-        "一句串：高大垃圾怪正錫住地板；戴太陽眼鏡嘅火球用雙拳打一隻古怪醜怪想像馬"
-      ]
+        "掟key馬腥落地",
+        "哥攞梳菇打曬",
+        "tall垃錫地熱打打奇馬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝拿bear = BB鵝攞住泰迪熊底部",
+        "囉豬芒dark茄 = 人身芒果豬鼻食好黑番茄"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
-      "start_sec": 3.1,
-      "end_sec": 4.2,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-tabenakutemo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "tabenakute-mo→thai bear lock 爹磨",
-        "一句串：著泰旗衫嘅熊鎖住磨緊豆嘅中年男人。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "thaibearlock爹磨",
       "distractors": [
-        "ii-kara→椅芥辣",
-        "一句串：一張用黃芥末砌成嘅椅。"
-      ]
+        "字搬裸",
+        "拳刺裂握爹",
+        "滑家路"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "thaibear = 著泰旗衫嘅熊",
+        "lock = 鎖住",
+        "爹磨 = 磨緊豆嘅中年男人"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

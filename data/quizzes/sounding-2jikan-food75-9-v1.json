@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 9.5,
-      "end_sec": 10.89,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-goryoushoukudasai.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "go-ryōshō-kudasai→哥攞梳菇打曬",
-        "一句串：哥布林攞住一把菇型梳，正打向太陽"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "哥攞梳菇打曬",
       "distractors": [
-        "dekimasen-node→掟key馬腥落地",
-        "一句串：口含魚嘅馬正掟一把key落地；佢行緊落樓梯、踏到最後一級落地"
-      ]
+        "掟key馬腥落地",
+        "鵝拿bear囉豬芒dark茄",
+        "tall垃錫地熱打打奇馬"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

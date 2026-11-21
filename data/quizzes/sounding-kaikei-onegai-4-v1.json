@@ -10,38 +10,41 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
-      "start_sec": 3.6,
-      "end_sec": 4.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-ninarimasu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜ni≈鯉；na≈嗱；ri≈脷；ma≈抹；su≈書｜chain：鯉／嗱／脷(acidic綠色脷)／抹／書",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鯉嗱脷抹書",
+      "distractors": [
+        "CallLego爹onLev家撕mask",
+        "錯doll",
+        "鵝押注咖喱smart薯"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "鯉 = 鯉魚",
         "嗱 = 可以嗱到人",
         "脷 = acidic綠色脷",
         "抹 = 抹",
-        "書 = 書",
-        "一句串：鯉魚伸出可以嗱到人嘅acidic綠色脷，攞毛巾抹住一本書"
+        "書 = 書"
       ],
-      "distractors": [
-        "SOR：reading→objects｜kore≈Call；de≈Lego／爹；o≈on；ne≈Lev；gai≈家；shi≈撕；masu≈mask｜chain：Call(打電話)／Lego／爹(中年Lego man有鬍鬚愴桑)／on／Lev(levitating)／家／撕／mask",
-        "Call = 打電話",
-        "Lego爹 = 中年有鬍鬚愴桑嘅Lego man",
-        "on = on",
-        "Lev = 浮起",
-        "家 = 屋企",
-        "撕 = 撕開",
-        "mask = 面具",
-        "CallLego爹onLev家撕mask - 浮起屋企入面，中年Lego爹打電話同時撕開表層面具",
-        "SOR：reading→objects｜yon≈Yawn；sen≈腥；ni≈knee；hyaku≈Heart；jū≈拳；en≈豬／Yen｜chain：Yawn(伸懶腰)／腥(咬住條魚)／knee(跪)／Heart(跪低人形心公仔)／拳(巨大化拳)／豬／Yen(身上YEN紋)",
-        "Yawn = 伸懶腰"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

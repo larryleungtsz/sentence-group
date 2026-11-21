@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "start_sec": 12.5,
-      "end_sec": 14.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-goannaishimasune.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "go-annai-shimasu-ne→菇按奶獅mask",
-        "一句串：卡通蘑菇戴住中國舞獅面罩，正按住奶樽。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "菇按奶獅mask",
       "distractors": [
-        "o-seki-no-hō→鵝錫key攞hall",
-        "一句串：鵝錫緊一把key，翼同時攞住學校hall。"
-      ]
+        "鵝錫key攞hall",
+        "油螺絲guard打desk架",
+        "knee咩沙馬dead"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

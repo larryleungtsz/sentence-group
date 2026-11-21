@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kanki-maa-maa-1-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 1,
+    "text": "換気は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kankiwa.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "看（普通話）key蛙",
+      "distractors": [
+        "馬馬釘",
+        "thaibear鵝蛙路拖",
+        "呼coo梨"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "看（普通話） = 同一畫面左邊窗台上、用手放額頭遠看鎖匙的綠色青蛙做出的遠看動作",
+        "key = 同一畫面中間、青蛙前方那把閃亮亮的鎖匙",
+        "蛙 = 同一畫面左邊窗台上、用手放額頭遠看鎖匙的綠色青蛙"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

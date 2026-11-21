@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-sore-wa-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 8,
+    "text": "852"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-852.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "乞嗤哥鍊",
+      "distractors": [
+        "Killyawn落菇啦啦",
+        "山果羊果",
+        "油螺絲deskcar"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "乞嗤 = 同一畫面右邊哥布林打緊噴嚏噴出嚟嘅飛沫同火星",
+        "哥 = 同一畫面右邊石板地上站住、身上有鐵鎖鏈鎖住嘅綠色尖耳哥布林",
+        "鍊 = 同一畫面綑住哥布林並連去石柱嘅粗重鐵鎖鏈"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

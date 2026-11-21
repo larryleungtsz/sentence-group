@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 2.5,
-      "end_sec": 2.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-fuudoga.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "fūdo-ga→呼door guard",
-        "一句串：bodyguard 正用力吹一扇門"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "呼door guard",
       "distractors": [
-        "ni-jikan-sei-de→knee芝鋼射地",
-        "一句串：跪低嘅芝士正用鋼槍射向地板"
-      ]
+        "lala蕉 golf phone",
+        "勒薯拖蛋",
+        "tall垃錫地熱打打奇馬"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

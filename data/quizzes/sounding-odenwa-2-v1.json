@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-odenwa-2-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 2,
+    "text": "居酒屋"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-izakaya.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "煙扎加央",
+      "distractors": [
+        "摩氏摩氏",
+        "鵝lev街die煙deskcatdog",
+        "鵝釘蛙"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "煙 = 同一畫面右邊飄散並纏住多士的灰白色煙霧",
+        "扎 = 同一畫面右邊由煙霧變成、十字交叉索住多士的帶齒索帶",
+        "加央 = 同一畫面右邊盤子裡夾住黃色咖央醬的烤多士"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

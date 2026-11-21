@@ -10,24 +10,45 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ioshio-ganen.mp3?v=20261030ioshio",
-      "start_sec": 2.4,
-      "end_sec": 5.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omeshiagarikatatoshite.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-meshiagari-kata-to-shite→臥／messi／壓／car／鏈／卡蛋／dog／舌爹",
-        "一句串：messi(messi) 臥(臥) 喺架被 壓(壓) 扁嘅 car(car) 上；轆鎖 鏈(鏈)、卡住 蛋(卡蛋)；旁邊 狗(dog) 伸長 舌爹(舌爹)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "臥messi壓car鏈卡蛋dog舌爹",
       "distractors": [
-        "oishii-n-desu-keredomo→鵝／熱鮮／desk／機／lev／多毛",
-        "一句串：一頭着火 鵝(鵝／熱鮮) 咬住鮮魚企喺 desk(desk) 上；空中一部全身 多毛(lev／多毛) 嘅 機(機) 人緩緩壓低。"
-      ]
+        "2痾shit痾爹油",
+        "缸airdesk",
+        "鵝熱鮮desk機lev多毛"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "臥 = 臥",
+        "messi = Messi 球衣人",
+        "壓car = 壓扁嘅車",
+        "鏈 = 鐵鏈",
+        "卡蛋 = 蛋卡喺轆",
+        "dog = 中年狗",
+        "舌爹 = 長舌伸出"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

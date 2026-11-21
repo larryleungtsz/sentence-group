@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
-      "start_sec": 1.31,
-      "end_sec": 3.2,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-pepushizerowa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "pepushi-zero-wa→pet絲傘蘿蛙",
-        "一句串：着黑絲拎傘女人抱住寵物狗，施捨錢俾拎木制筲箕嘅青蛙。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "pet絲傘蘿蛙",
       "distractors": [
-        "tanpin-no→丹邊燶",
-        "一句串：丹邊燶。"
-      ]
+        "曬豬",
+        "熱gaga沙Levmaskcar",
+        "M巾曬豬dead"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

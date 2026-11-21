@@ -10,38 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
-      "start_sec": 8.4,
-      "end_sec": 9.4,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-ryoushuushoha.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜ryō≈攞；shū≈書；sho≈鎖；wa≈蛙｜chain：攞／書／鎖／蛙",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "攞書鎖蛙",
+      "distractors": [
+        "哥kneeYO鏈啦啦Levmaskcar",
+        "鵝押注咖喱smart薯",
+        "錯doll"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "攞 = 攞住",
         "書 = 書",
         "鎖 = 鎖實",
-        "蛙 = 青蛙",
-        "一句串：攞住一本書，用書包住青蛙再鎖實"
+        "蛙 = 青蛙"
       ],
-      "distractors": [
-        "SOR：reading→objects｜go≈哥；ri≈knee；yō≈YO；ni≈鏈；nara≈啦啦；re≈Lev；masu≈mask；ka≈car｜chain：哥(跪喺道哥布林)／knee／YO(巨型YOYO)／鏈／啦啦(浮起啦啦球)／Lev(浮起)／mask／car(戴mask嘅車)",
-        "哥 = 跪喺道哥布林",
-        "knee = 跪",
-        "YO = 巨型YOYO",
-        "鏈 = 鏈",
-        "啦啦 = 浮起啦啦球",
-        "Lev = 浮起",
-        "mask = mask",
-        "car = 戴mask嘅車",
-        "哥kneeYO鏈啦啦Levmaskcar - 跪喺道哥布林背巨型YOYO拎鏈，連住浮起啦啦球同戴mask嘅車",
-        "SOR：reading→objects｜o≈鵝；azu≈押注；kari≈咖喱；shima≈smart；su≈薯｜chain：鵝／押注(賭枱推籌碼)／咖喱／smart(戴眼鏡)／薯(卡通薯仔)",
-        "鵝 = 鵝"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

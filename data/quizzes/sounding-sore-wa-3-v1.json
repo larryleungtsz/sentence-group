@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-sore-wa-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: わかりました。それは、全然大丈夫です。\nB:「大丈夫ですか。」「では、お名前と、」「お電話番号よろしいですか？」\nA: Larryです。\nB:Larry 様で。\nA: 電話番号が、852-9467-3545",
+  "chunk": {
+    "id": 3,
+    "text": "では"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-dewa.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "釘蛙",
+      "distractors": [
+        "on-line賣air駝",
+        "鵝釘蛙板果",
+        "油螺絲deskcar"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "釘 = 同一畫面右邊舊木板上垂直釘入、圍住青蛙身軀嘅生鏽鐵釘",
+        "蛙 = 同一畫面右邊舊木板上被鐵釘釘住嘅深綠色斑點青蛙"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

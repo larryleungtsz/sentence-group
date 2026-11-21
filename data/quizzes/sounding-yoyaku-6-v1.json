@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "start_sec": 7.3,
-      "end_sec": 8.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-nandesukedo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "nan-desu-kedo→攔deak ghetto",
-        "一句串：一臉ghetto gangster樣嘅人正爬過一張desk。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "攔deak ghetto",
       "distractors": [
-        "yoyaku-shiteta→藥pill咬拳舌爹dark",
-        "一句串：卡通藥粒正咬自己拳頭；全黑暗色中年阿爹正舔住嗰粒藥。"
-      ]
+        "knee咩沙馬dead",
+        "油螺絲guard打desk架",
+        "鵝錫key攞hall"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

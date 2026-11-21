@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 5.0,
-      "end_sec": 6.8,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-toraseteitadakimasu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "torasete-itadakimasu→tall垃錫地／熱打打奇馬",
-        "一句串：高大垃圾怪正錫住地板；戴太陽眼鏡嘅火球用雙拳打一隻古怪醜怪想像馬"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "tall垃錫地熱打打奇馬",
       "distractors": [
-        "rasuto-ōdā→勒薯拖蛋",
-        "一句串：薯仔勒住拖車；拖車拖住一隻蛋"
-      ]
+        "鵝拿bear囉豬芒dark茄",
+        "掟key馬腥落地",
+        "哥攞梳菇打曬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "tall垃錫地 = 高大垃圾怪錫住地板",
+        "熱打打奇馬 = 戴太陽眼鏡火球雙拳打古怪馬"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

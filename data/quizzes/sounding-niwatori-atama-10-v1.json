@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-niwatori-atama-10-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 10,
+    "text": "集中しているので"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shuuchuushiteirunode.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "小超舌釘2路落地",
+      "distractors": [
+        "soupblue家",
+        "dark茄鏈",
+        "豉跛獅躝挖拖梨拿Bear"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "小超舌釘 = 正好一個微型超人，站在盲眼罩右側隔籬",
+        "2路落地 = 喺佢隔籬有兩條金屬路軌插咗落開裂的混凝土地面，近端豎起"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

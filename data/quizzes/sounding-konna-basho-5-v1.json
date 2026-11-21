@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-konna-basho-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 5,
+    "text": "お店を"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omisewo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝meat射鵝另一隻鵝",
+      "distractors": [
+        "咪落架舌釘獅馬",
+        "割dolllin嗱路",
+        "騎咩豬基dadsmart To(mato)"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 發射火箭炮的鵝",
+        "meat = 牛生牛扒",
+        "射鵝 = 火箭炮射向另一隻鵝",
+        "另一隻鵝 = 畫面右側的鵝"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,25 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
-      "start_sec": 2.3,
-      "end_sec": 3.0,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-hitoniwa.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "hito-ni-wa→hit多knee 蛙",
-        "一句串：青蛙用膝頭哥踢益力多樽。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "hit多knee蛙",
       "distractors": [
-        "suki→ski",
-        "ja-nai→炸奶",
-        "一句串：卡通人形奶樽圍住炸彈滑雪。"
-      ]
+        "座多",
+        "Mon攞蛋脷奶家毛",
+        "ski炸奶"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "hit多 = 踢益力多",
+        "knee = 膝頭",
+        "蛙 = 青蛙"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {
