@@ -1,0 +1,31 @@
+{
+  "quiz_id": "story-rayu-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 4,
+    "text": "良くて"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "那個圓滾滾、有大眼睛和細長雙腳的卡通蛋黃人（Yolk）、蛋黃人伸出兩隻手臂，環抱住中年老爹（箍），同戴眼鏡、穿格紋襯衫、微禿帶鬍渣的中年老爹，一齊撞落一顆金光閃閃的大型「五角星」雕像，星形右側伸出一條像接力棒一樣的金屬連環，精準代表「品質非常好（五星好評）」並且「順著接環拉向下一個描述」——正正係「好而」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/yokute-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/sore-ni-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/rayu-mo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/sugoku-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/62f8708a725cee0907e15bef7fdf75b3e807f4e9/images/tappuri-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kakete-kureta-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

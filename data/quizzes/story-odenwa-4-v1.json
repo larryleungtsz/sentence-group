@@ -1,0 +1,29 @@
+{
+  "quiz_id": "story-odenwa-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:「お電話ありがとうございます」   「居酒屋・まとぺ です」   B:あ、もしもし。   えっと、予約をお願いしたいんですけど",
+  "chunk": {
+    "id": 4,
+    "text": "お願いしたいんですけど"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "雙眼泛白光、頭頂有魔法光暈的白色大鵝、半空中懸浮住的微型街道模型（lev）、懸浮模型上的柏油馬路同兩排樓房（街）、桌面上、白色粉筆圈內仰躺住的灰色小人模型（die）、粉筆圈旁邊正在冒煙的煙頭、承載所有物件的深棕色木書桌（desk）、中偏右趴在桌上的虎斑貓（cat），同貓旁邊趴住的黃白小狗（dog），一齊撞落一雙在胸前垂直合十的白色石膏雙手雕塑，指尖微向前傾並配有一張空白米色便條紙夾在掌心之間——正正係「想拜託」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/onegai-shitai-n-desu-kedo-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/odenwa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/izakaya-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshimoshi-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

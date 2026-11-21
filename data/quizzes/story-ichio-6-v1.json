@@ -1,0 +1,32 @@
+{
+  "quiz_id": "story-ichio-6-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 6,
+    "text": "カウンターにご移動いただく"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "停住的青灰色迷你房車（car）、房車車身滲住並流到地板上的鮮血傷痕（wound）、房車前方托盤上的圓形烤批（tart）、那塊烤批上面鋪住的切片梨、捧住兩顆巨人豆豆的綠色哥布林（哥2豆），同哥布林腳邊一顆燒熱的紅蛋同另一邊一顆結冰的藍蛋（熱蛋蛋cool），一齊撞落一張高腳原木吧台圓凳，凳面上放置一塊印有白色彎曲轉向箭頭的木牌，箭頭前端直指一塊拋光檜木吧台板邊緣——正正係「請移到吧台」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kauntaa-ni-go-idou-itadaku-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/ichiou-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/aiteru-n-desu-keredomo-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/hoka-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/dantai-sama-ga-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/moshi-irasshatta-baai-wa-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/katachi-ni-naru-n-desu-ga-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

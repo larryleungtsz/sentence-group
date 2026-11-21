@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-kyou-no-6jihan-5-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 5,
+    "text": "18時半から"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "檯燈下企住、穿住萬聖節裝束去嚇卡通廁紙嘅黃色香蕉、香蕉穿住萬聖節裝束、伸出手去嚇卡通廁紙嘅動作、香蕉右邊、被嚇到同紙帶攤落桌面嘅卡通卷筒廁紙、伸出、正把辣椒撒落廁紙嘅人手（hand），同人手撒落卡通廁紙紙帶上嘅紅色辣椒同辣椒碎（加辣），一齊撞落一台黑色長方形翻頁式電子數字鐘，白色翻頁牌清晰顯示「18:30」，鐘體左側卡著一顆橙色發光右箭頭按鈕——正正係「從十八點半起」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/juhachiji-han-kara-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kyou-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/rokuji-han-kara-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/futari-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/seki-tte-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

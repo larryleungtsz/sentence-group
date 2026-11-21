@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一個油膩嬰兒正咬住一隻鵝大口啃，鵝毛粘滿油手。突然側身舉起油漉漉嘅手用力招呼——店員仲喺視線外，但呢隻手正正就係「呼叫」。"
+      "text": "油膩嬰兒正咬住一隻鵝大口啃。突然側身舉起油手招呼——店員還在視線外，那隻手就是在呼叫。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/oyobi-combined.png",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/oyobi-combined.png",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/okimari-ni-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/narimashitara-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kudasai-combined.png"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/okimari-ni-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/narimashitara-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kudasai-combined.png"
       ]
     }
   ],

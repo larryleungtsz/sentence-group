@@ -1,0 +1,30 @@
+{
+  "quiz_id": "story-kyou-no-6jihan-4-v1",
+  "objective": "story_select_image",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 4,
+    "text": "席って"
+  },
+  "slides": [
+    {
+      "type": "prompt",
+      "text": "木地板上瞓咗、身體蜿蜒、雙眼打交叉嘅花斑蛇、花斑蛇旁邊瞓咗、雙眼打交叉嘅深棕色蠍子（蝎），同蛇頭同蠍子頭上雙眼打交叉嘅白色交叉符號（dead），一齊撞落一張深棕色實木靠背餐椅，椅面上放著一塊正方形米白色亞麻坐墊——正正係「位子」。"
+    },
+    {
+      "type": "select_image",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/seki-tte-combined-v1.jpeg",
+      "distractors": [
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/kyou-no-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/rokuji-han-kara-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/futari-de-combined-v1.jpeg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/images/juhachiji-han-kara-combined-v1.jpeg"
+      ]
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

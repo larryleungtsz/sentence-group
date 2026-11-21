@@ -11,16 +11,16 @@
   "slides": [
     {
       "type": "prompt",
-      "text": "一個中年奶爹蹲低，專心舔自己隻腳，另一邊鼻尖湊近一架髒車慢慢嗅。舔完一輪抬眼——對面男店員空掌向上攤開、眉微揚停住望你。掌心空空——正正係「沒有…吧」。"
+      "text": "櫃角燈光偏暗，空氣帶點車味。一個中年奶爹蹲低，專心舔自己隻腳，另一邊鼻尖湊近一架髒車慢慢嗅；舔完一輪，佢抬眼——對面男店員空掌向上攤開、眉微揚停住望你。掌心空空——沒有…吧。"
     },
     {
       "type": "select_image",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/nai-deshouka-combined.jpg",
+      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/nai-deshouka-combined.jpg",
       "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/chunk1-gochumon-combined.png",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/kakunin-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/sasete-itadakimasu-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/omachigai-combined.jpg"
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/chunk1-gochumon-combined.png",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/kakunin-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/sasete-itadakimasu-combined.jpg",
+        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/2547574ef92cd0cb0258e42a6d2847a147ab81c5/images/omachigai-combined.jpg"
       ]
     }
   ],

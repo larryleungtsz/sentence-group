@@ -1,6 +1,6 @@
 /**
  * Live Soft GO Q20–Q24, the Q2 gloss ship, the Q3 meaning-object ship,
- * and the official new-design Q4/Q7 ship.
+ * the official new-design Q4/Q7 ship, and the official Q5 story_select_image ship.
  *   node test/softgo-live.test.js
  */
 'use strict';
@@ -150,8 +150,30 @@ const FORBIDDEN_SHADOW_IDS = [
   'shadow-05-koshitsu-yoyaku-19-v1',
 ];
 
+const FORBIDDEN_STORY_IDS = [
+  'story-meccha-mitame-3-v1',
+  'story-gochumon-kakunin-1-v1',
+  'story-koshitsu-yoyaku-19-v1',
+  'story-roji-6-v1',
+];
+
 function isShadowQuizPath(file) {
   return /^data\/quizzes\/shadow-025-.*\.json$/.test(file) || /^data\/quizzes\/shadow-05-.*\.json$/.test(file);
+}
+
+function isStoryQuizPath(file) {
+  return /^data\/quizzes\/story-.*\.json$/.test(file);
+}
+
+function assertAllowedStoryChange(file, status, knownAtBase) {
+  assert.ok(isStoryQuizPath(file), file);
+  const quizId = path.basename(file, '.json');
+  assert.ok(FORBIDDEN_STORY_IDS.indexOf(quizId) === -1, file);
+  assert.ok(quizId.indexOf('story-koshitu-') !== 0, file);
+  assert.ok(!/^story-aka-konnyaku-\d+-v1$/.test(quizId), file);
+  assert.ok(!/^story-ebi-sumiso-\d+-v1$/.test(quizId), file);
+  if (knownAtBase.has(file)) assert.strictEqual(status, 'M', file);
+  else assert.strictEqual(status, 'A', file);
 }
 
 function surfaceSince(sha) {
@@ -1072,17 +1094,17 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
   const allowedNew = /^data\/quizzes\/gloss-palace-(ichio|kanban-menu|kanki-maa-maa|kaori-ga-ari|kodomo-omoide|konna-basho|koshitsu-yoyaku|kyou-no-6jihan|niwatori-atama|odenwa|oseki|rayu|roji|sore-wa|teikuauto)-\d+-v1\.json$/;
   // Q3 rewrites meaning-object files in place and adds unpublished Keep files.
   // Q4/Q7 rewrite the live shadow files and add unpublished Keep files.
+  // Q5 rewrites live story_select_image files and adds unpublished Keep files.
   // Gloss-palace bytes above stay pinned to this parent. Other quiz types still cannot change.
   const q3Base = '2e2dcbe25ccc06b985ff3e2eeb9ab788c50a265e';
-  const shadowAtParent = new Set(
-    execFileSync('git', ['ls-tree', '-r', '--name-only', parent, 'data/quizzes'], {
-      cwd: root,
-      encoding: 'utf8',
-    })
-      .trim()
-      .split('\n')
-      .filter((file) => isShadowQuizPath(file))
-  );
+  const parentQuizPaths = execFileSync('git', ['ls-tree', '-r', '--name-only', parent, 'data/quizzes'], {
+    cwd: root,
+    encoding: 'utf8',
+  })
+    .trim()
+    .split('\n');
+  const shadowAtParent = new Set(parentQuizPaths.filter((file) => isShadowQuizPath(file)));
+  const storyAtParent = new Set(parentQuizPaths.filter((file) => isStoryQuizPath(file)));
   const meaningAtQ3Base = new Set(
     execFileSync('git', ['ls-tree', '-r', '--name-only', q3Base, 'data/quizzes'], {
       cwd: root,
@@ -1110,6 +1132,10 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
       assert.ok(FORBIDDEN_SHADOW_IDS.indexOf(path.basename(file, '.json')) === -1, file);
       if (shadowAtParent.has(file)) assert.strictEqual(status, 'M', line);
       else assert.strictEqual(status, 'A', line);
+      return;
+    }
+    if (isStoryQuizPath(file)) {
+      assertAllowedStoryChange(file, status, storyAtParent);
       return;
     }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
@@ -1300,15 +1326,14 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     cwd: root,
     encoding: 'utf8',
   }).trim();
-  const shadowAtQ3Base = new Set(
-    execFileSync('git', ['ls-tree', '-r', '--name-only', base, 'data/quizzes'], {
-      cwd: root,
-      encoding: 'utf8',
-    })
-      .trim()
-      .split('\n')
-      .filter((file) => isShadowQuizPath(file))
-  );
+  const q3BaseQuizPaths = execFileSync('git', ['ls-tree', '-r', '--name-only', base, 'data/quizzes'], {
+    cwd: root,
+    encoding: 'utf8',
+  })
+    .trim()
+    .split('\n');
+  const shadowAtQ3Base = new Set(q3BaseQuizPaths.filter((file) => isShadowQuizPath(file)));
+  const storyAtQ3Base = new Set(q3BaseQuizPaths.filter((file) => isStoryQuizPath(file)));
   const changed = new Map();
   (diff ? diff.split('\n') : []).forEach((line) => {
     const tab = line.indexOf('\t');
@@ -1318,6 +1343,10 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
       assert.ok(FORBIDDEN_SHADOW_IDS.indexOf(path.basename(file, '.json')) === -1, file);
       if (shadowAtQ3Base.has(file)) assert.strictEqual(status, 'M', line);
       else assert.strictEqual(status, 'A', line);
+      return;
+    }
+    if (isStoryQuizPath(file)) {
+      assertAllowedStoryChange(file, status, storyAtQ3Base);
       return;
     }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
@@ -1337,7 +1366,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     loci_description_tap: 280,
     meaning_object_select_and_tap: 278,
     pronunciation_sounding_select: 169,
-    story_select_image: 155,
+    story_select_image: 278,
     tone_shadowing_05: 278,
     word_shadowing_025: 278,
     writing_shadowing: 155,
@@ -1364,7 +1393,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     counts[row.objective] = (counts[row.objective] || 0) + 1;
   });
   assert.deepStrictEqual(counts, expectedCounts);
-  assert.strictEqual(manifest.quizzes.length, 3648);
+  assert.strictEqual(manifest.quizzes.length, 3771);
   assert.deepStrictEqual(surfaceSince(base), ['data/groups.json', 'group.html', 'js/quiz-runner.js']);
 
   const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
@@ -1659,6 +1688,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     .split('\n');
   const q4AtStart = atStart.filter((file) => /\/shadow-025-.*\.json$/.test(file));
   const q7AtStart = atStart.filter((file) => /\/shadow-05-.*\.json$/.test(file));
+  const storyAtStart = new Set(atStart.filter((file) => isStoryQuizPath(file)));
   assert.strictEqual(q4AtStart.length, 156);
   assert.strictEqual(q7AtStart.length, 156);
   const diff = execFileSync('git', ['diff', '--name-status', start, '--', 'data/quizzes'], {
@@ -1671,6 +1701,10 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     const tab = line.indexOf('\t');
     const status = line.slice(0, tab);
     const file = line.slice(tab + 1);
+    if (isStoryQuizPath(file)) {
+      assertAllowedStoryChange(file, status, storyAtStart);
+      return;
+    }
     assert.ok(isShadowQuizPath(file), 'unexpected quiz file change: ' + line);
     assert.ok(FORBIDDEN_SHADOW_IDS.indexOf(path.basename(file, '.json')) === -1, file);
     changed.set(file, status);
@@ -1699,7 +1733,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   manifestDiff.split('\n').forEach((line) => {
     if (line.indexOf('+      "quiz_id": ') !== 0) return;
     const quizId = line.slice(line.indexOf('"quiz_id": ') + 11).replace(/",$/, '').replace(/^"/, '');
-    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId), line);
+    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId) || /^story-/.test(quizId), line);
   });
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
   assert.strictEqual(
@@ -1736,7 +1770,8 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   assert.strictEqual(rows('loci_description_tap').length, 280);
   assert.strictEqual(rows('gloss_to_palace_tap').length, 280);
   assert.strictEqual(rows('meaning_object_select_and_tap').length, 278);
-  assert.strictEqual(manifest.quizzes.length, 3648);
+  assert.strictEqual(rows('story_select_image').length, 278);
+  assert.strictEqual(manifest.quizzes.length, 3771);
 
   const specs = [
     { files: q4Files, objective: 'word_shadowing_025', rate: 0.25, instruction: '請聽 0.25× 詞塊示範，然後開始錄音跟讀。', hangs: q4 },
@@ -1864,6 +1899,219 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   assert.strictEqual(groupBySlug('teikuauto').chunks.find((chunk) => chunk.id === 9).text, '美味しい');
   assert.strictEqual(groupBySlug('sore-wa').chunks.find((chunk) => chunk.id === 7).skip, true);
   assert.strictEqual(groupBySlug('teikuauto').chunks.find((chunk) => chunk.id === 9).skip, true);
+});
+
+test('official Q5 story_select_image is 275 files and 278 hangs with three shared Keep rows', function () {
+  const base = '95db0e27d623edac29b7c489bc9250a52a745aa8';
+  const shaImage = /^https:\/\/raw\.githubusercontent\.com\/larryleungtsz\/flashcard-app\/[0-9a-f]{40}\/images\/[^/]*combined[^/]*\.(?:jpg|jpeg|png)$/i;
+  const quizDir = path.join(root, 'data/quizzes');
+  const files = fs.readdirSync(quizDir).filter((file) => /^story-.*\.json$/.test(file)).sort();
+  assert.strictEqual(files.length, 275);
+  FORBIDDEN_STORY_IDS.forEach((quizId) => {
+    assert.ok(files.indexOf(quizId + '.json') === -1, quizId);
+    assert.ok(!fs.existsSync(path.join(quizDir, quizId + '.json')), quizId);
+    assert.ok(!manifest.quizzes.some((row) => row.quiz_id === quizId), quizId);
+  });
+  const typo = fs.readdirSync(quizDir).filter((file) => /^story-koshitu-/.test(file));
+  assert.deepStrictEqual(typo, []);
+  files.forEach((file) => {
+    assert.ok(!/^story-aka-konnyaku-\d+-v1\.json$/.test(file), file);
+    assert.ok(!/^story-ebi-sumiso-\d+-v1\.json$/.test(file), file);
+  });
+
+  const q5 = manifest.quizzes.filter((row) => row.objective === 'story_select_image');
+  assert.strictEqual(q5.length, 278);
+  const ids = new Set(q5.map((row) => row.quiz_id));
+  assert.strictEqual(ids.size, 275);
+  assert.strictEqual(manifest.quizzes.length, 3771);
+  assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
+
+  function rows(objective) {
+    return manifest.quizzes.filter((row) => row.objective === objective);
+  }
+  assert.strictEqual(rows('loci_description_tap').length, 280);
+  assert.strictEqual(rows('gloss_to_palace_tap').length, 280);
+  assert.strictEqual(rows('meaning_object_select_and_tap').length, 278);
+  assert.strictEqual(rows('word_shadowing_025').length, 278);
+  assert.strictEqual(rows('tone_shadowing_05').length, 278);
+  assert.strictEqual(rows('writing_shadowing').length, 155);
+
+  const crypto = require('crypto');
+  const groupsHash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'data/groups.json'))).digest('hex');
+  assert.strictEqual(groupsHash, 'a5baa57fdf3a00934649962d592a444a88cf17d142b07125092d3afdbeb9def2');
+  assert.strictEqual(
+    execFileSync('git', ['hash-object', 'data/schedule.json'], { cwd: root, encoding: 'utf8' }).trim(),
+    'e68b55cc12d3bd5c805ed3aa0aa251f74bfaf8bc'
+  );
+  assert.strictEqual(
+    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'js/quiz-runner.js', 'group.html'], {
+      cwd: root,
+      encoding: 'utf8',
+    }),
+    ''
+  );
+
+  const groupBySentence = new Map(groups.groups.map((group) => [group.sentence, group]));
+  const bodies = new Map();
+  let trailingMismatch = 0;
+  files.forEach((file) => {
+    const quiz = JSON.parse(fs.readFileSync(path.join(quizDir, file), 'utf8'));
+    bodies.set(quiz.quiz_id, quiz);
+    assert.strictEqual(quiz.quiz_id, file.replace(/\.json$/, ''), file);
+    assert.strictEqual(quiz.objective, 'story_select_image', quiz.quiz_id);
+    assert.strictEqual(quiz.level, 1, quiz.quiz_id);
+    assert.strictEqual(quiz.variant, 1, quiz.quiz_id);
+    assert.deepStrictEqual((quiz.slides || []).map((slide) => slide.type), ['prompt', 'select_image'], quiz.quiz_id);
+    assert.strictEqual(typeof quiz.slides[0].text, 'string', quiz.quiz_id);
+    assert.ok(quiz.slides[0].text.length > 0, quiz.quiz_id);
+    const slide = quiz.slides[1];
+    assert.ok(Array.isArray(slide.distractors) && slide.distractors.length > 0, quiz.quiz_id);
+    [slide.correct].concat(slide.distractors).forEach((url) => {
+      assert.ok(shaImage.test(url), quiz.quiz_id + ' ' + url);
+      assert.ok(!/\/main\//.test(url), quiz.quiz_id);
+    });
+    assert.strictEqual(quiz.feedback.on_wrong, 'show_correct', quiz.quiz_id);
+    const group = groupBySentence.get(quiz.sentence);
+    assert.ok(group, quiz.quiz_id);
+    const chunk = (group.chunks || []).find((item) => item.id === quiz.chunk.id);
+    assert.ok(chunk, quiz.quiz_id);
+    assert.strictEqual(chunk.text, quiz.chunk.text, quiz.quiz_id);
+    assert.notStrictEqual(chunk.skip, true, quiz.quiz_id);
+    assert.notStrictEqual(chunk.skipped, true, quiz.quiz_id);
+    const primary = q5.filter((row) => {
+      return row.quiz_id === quiz.quiz_id && row.sentence === quiz.sentence && row.chunk_id === quiz.chunk.id;
+    });
+    assert.strictEqual(primary.length, 1, quiz.quiz_id);
+    assert.strictEqual(primary[0].file, 'data/quizzes/' + quiz.quiz_id + '.json', quiz.quiz_id);
+    assert.strictEqual(primary[0].objective, 'story_select_image', quiz.quiz_id);
+    assert.strictEqual(primary[0].level, 1, quiz.quiz_id);
+    assert.strictEqual(primary[0].kind, 'chunk', quiz.quiz_id);
+    const trailing = quiz.quiz_id.match(/-(\d+)-v\d+(?:-r20261101)?$/);
+    assert.ok(trailing, quiz.quiz_id);
+    if (Number(trailing[1]) !== quiz.chunk.id) trailingMismatch += 1;
+    assert.strictEqual(primary[0].chunk_id, quiz.chunk.id, quiz.quiz_id);
+  });
+  assert.strictEqual(trailingMismatch, 40);
+  ids.forEach((quizId) => assert.ok(bodies.has(quizId), 'hang without file ' + quizId));
+
+  [
+    ['ちょっと', ['story-chotto-6-v1', 'story-chotto-chashu-6-v1']],
+    ['めっちゃ', ['story-meccha-2-v1', 'story-meccha-tsukete-itadaku-8-v1']],
+    ['よかったら', ['story-yokattara-3-v1', 'story-yokattara-1-v1']],
+  ].forEach((pair) => {
+    const text = pair[0];
+    const sentences = new Set();
+    pair[1].forEach((quizId) => {
+      const quiz = bodies.get(quizId);
+      assert.ok(quiz, quizId);
+      assert.strictEqual(quiz.chunk.text, text, quizId);
+      sentences.add(quiz.sentence);
+      const row = q5.find((item) => {
+        return item.quiz_id === quizId && item.sentence === quiz.sentence && item.chunk_id === quiz.chunk.id;
+      });
+      assert.ok(row, quizId);
+    });
+    assert.strictEqual(sentences.size, 2, text);
+  });
+
+  const phone = bodies.get('story-sore-wa-5-v1');
+  const sore = groupBySlug('sore-wa');
+  assert.strictEqual(phone.chunk.text, 'お電話番号');
+  assert.strictEqual(phone.chunk.id, 5);
+  assert.strictEqual(phone.sentence, sore.sentence);
+  assert.deepStrictEqual(q5.filter((row) => row.quiz_id === 'story-sore-wa-5-v1'), [{
+    quiz_id: 'story-sore-wa-5-v1',
+    file: 'data/quizzes/story-sore-wa-5-v1.json',
+    objective: 'story_select_image',
+    level: 1,
+    kind: 'chunk',
+    sentence: sore.sentence,
+    chunk_id: 5,
+  }]);
+
+  function assertNoQ5(slug, chunkId, text) {
+    const group = groupBySlug(slug);
+    const chunk = group.chunks.find((item) => item.id === chunkId);
+    assert.strictEqual(chunk.text, text, slug);
+    assert.strictEqual(chunk.skip, true, slug);
+    assert.strictEqual(
+      q5.filter((row) => row.sentence === group.sentence && row.chunk_id === chunkId).length,
+      0,
+      slug + ' ' + text
+    );
+    bodies.forEach((quiz) => {
+      assert.ok(!(quiz.sentence === group.sentence && quiz.chunk.id === chunkId), quiz.quiz_id);
+      assert.notStrictEqual(quiz.chunk.text, text, quiz.quiz_id);
+    });
+  }
+  assertNoQ5('sore-wa', 7, '電話番号');
+  assertNoQ5('teikuauto', 9, '美味しい');
+  assertNoQ5('yokattara-onomi', 8, 'お願いします');
+  assertNoQ5('goraitei-arigatou', 2, 'ありがとうございます');
+  assert.ok(!groups.groups.some((group) => (group.chunks || []).some((chunk) => chunk.text === '空いてますかね')));
+  bodies.forEach((quiz) => assert.notStrictEqual(quiz.chunk.text, '空いてますかね', quiz.quiz_id));
+  assert.strictEqual(bodies.get('story-yoyaku-shitenai-3-v1').chunk.text, '空いてますか');
+
+  function sharedHang(quizId, slug, chunkId, text) {
+    const group = groupBySlug(slug);
+    const chunk = group.chunks.find((item) => item.id === chunkId);
+    assert.strictEqual(chunk.text, text, slug);
+    assert.notStrictEqual(chunk.skip, true, slug);
+    const hangs = q5.filter((row) => row.sentence === group.sentence && row.chunk_id === chunkId);
+    assert.deepStrictEqual(hangs, [{
+      quiz_id: quizId,
+      file: 'data/quizzes/' + quizId + '.json',
+      objective: 'story_select_image',
+      level: 1,
+      kind: 'chunk',
+      sentence: group.sentence,
+      chunk_id: chunkId,
+    }]);
+    const quiz = bodies.get(quizId);
+    assert.strictEqual(quiz.chunk.text, text, quizId);
+    assert.notStrictEqual(quiz.sentence, group.sentence, quizId);
+    if (slug !== 'gochumon-kakunin') assert.notStrictEqual(quiz.chunk.id, chunkId, quizId);
+  }
+  sharedHang('story-gochumon-1-v1', 'gochumon-kakunin', 1, 'ご注文');
+  sharedHang('story-kaikei-onegai-1-v1', 'koshitsu-yoyaku', 19, 'かしこまりました');
+  sharedHang('story-aru-8-v1', 'roji', 6, 'ある');
+
+  const gochu = bodies.get('story-gochumon-1-v1');
+  assert.strictEqual(gochu.sentence, groupBySlug('gochumon').sentence);
+  assert.strictEqual(gochu.chunk.id, 1);
+  assert.strictEqual(gochu.chunk.text, 'ご注文');
+  const kaikei = bodies.get('story-kaikei-onegai-1-v1');
+  assert.strictEqual(kaikei.sentence, groupBySlug('kaikei-onegai').sentence);
+  assert.strictEqual(kaikei.chunk.id, 1);
+  assert.strictEqual(kaikei.chunk.text, 'かしこまりました');
+  const aru = bodies.get('story-aru-8-v1');
+  assert.strictEqual(aru.sentence, groupBySlug('chashu-shittori').sentence);
+  assert.strictEqual(aru.chunk.id, 8);
+  assert.strictEqual(aru.chunk.text, 'ある');
+
+  [1, 17, 2, 3, 5, 6, 7, 8, 10, 14, 15, 16].forEach((id) => {
+    const quizId = 'story-koshitsu-yoyaku-' + id + '-v1';
+    const quiz = bodies.get(quizId);
+    assert.ok(quiz, quizId);
+    const group = groupBySlug('koshitsu-yoyaku');
+    const row = q5.find((item) => item.quiz_id === quizId && item.sentence === group.sentence);
+    assert.ok(row, quizId);
+    assert.strictEqual(row.chunk_id, quiz.chunk.id, quizId);
+  });
+
+  let covered = 0;
+  groups.groups.forEach((group) => {
+    (group.chunks || []).forEach((chunk) => {
+      const n = q5.filter((row) => row.sentence === group.sentence && row.chunk_id === chunk.id).length;
+      if (isSkip(chunk)) {
+        assert.strictEqual(n, 0, group.slug + ' skip ' + chunk.id + ' ' + chunk.text);
+        return;
+      }
+      assert.strictEqual(n, 1, group.slug + ':' + chunk.id + ' ' + chunk.text);
+      covered += 1;
+    });
+  });
+  assert.strictEqual(covered, 278);
 });
 
 if (failed.length) {
