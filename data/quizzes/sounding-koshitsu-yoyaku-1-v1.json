@@ -10,47 +10,33 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-1.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-etto.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "Air拖",
       "distractors": [
+        "潑爛地",
         "哥舌豬Dead",
-        "馬打",
-        "哥sit豬蛙"
+        "馬打"
       ],
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【Air】拖　選出這一截對應的物件描述。",
-      "correct": "漂浮在空中 / 雲霧狀空氣流",
-      "distractors": [
-        "手拖曳繩子 / 拉扯痕跡"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Air = 漂浮在空中 / 雲霧狀空氣流",
+        "拖 = 手拖曳繩子 / 拉扯痕跡"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Air【拖】　請點選確認最後一截對應的物件描述。",
-      "correct": "手拖曳繩子 / 拉扯痕跡",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【Air拖】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-etto-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/02-koshitsu-tte-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/03-mada-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/04-koshitsu-wa-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/05-mou-combined.jpg"
+      "correct_order": [
+        0,
+        1
       ],
       "shuffle": true
     }

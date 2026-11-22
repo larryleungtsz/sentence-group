@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-konna-basho-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "でも「こんな場所にあるから大したことないだろうと」決めつけてしまうと、本当に良いお店を見逃してしまうことになる。",
+  "chunk": {
+    "id": 3,
+    "text": "大したことないだろうと"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-taishitakotonaidarouto.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "dice打角駝奶打駱駝",
+      "distractors": [
+        "騎咩豬基dadsmart To(mato)",
+        "鵝meat射鵝另一隻鵝",
+        "咪落架舌釘獅馬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "dice = 骰仔",
+        "打角駝 = 骰子擊中有角的駱駝",
+        "奶 = 奶樽",
+        "打駱駝 = 奶樽打另一隻駱駝"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

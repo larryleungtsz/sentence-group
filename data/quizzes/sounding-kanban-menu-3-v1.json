@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kanban-menu-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "chunk": {
+    "id": 3,
+    "text": "鶏鍋は"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-torinabeha.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鴕鳥拿bear蛙",
+      "distractors": [
+        "foot他鵝",
+        "牙機tart",
+        "蒜奸color"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鴕鳥 = 舵鳥（圖上係一隻普通鴕鳥，未見舵嘅特徵）",
+        "拿 = 拿住（一隻腳揸住卡通bear；另一隻腳嘅卡通蛙係踎喺腳爪上，未見清楚緊握）",
+        "bear = 卡通bear（棕色毛公仔熊）",
+        "蛙 = 卡通蛙（綠色卡通青蛙）"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

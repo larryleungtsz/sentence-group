@@ -176,6 +176,243 @@ function assertAllowedStoryChange(file, status, knownAtBase) {
   else assert.strictEqual(status, 'A', file);
 }
 
+function isWholeListenQuizPath(file) {
+  return /^data\/quizzes\/whole-listen-.*\.json$/.test(file);
+}
+
+function isSoundingQuizPath(file) {
+  return /^data\/quizzes\/sounding-.*\.json$/.test(file);
+}
+
+function assertAllowedSoundingChange(file, status, knownAtBase) {
+  assert.ok(isSoundingQuizPath(file), file);
+  const quizId = path.basename(file, '.json');
+  assert.notStrictEqual(quizId, 'sounding-mitame-irotsuya-3-v1', file);
+  if (knownAtBase.has(file)) assert.strictEqual(status, 'M', file);
+  else assert.strictEqual(status, 'A', file);
+  const quiz = JSON.parse(fs.readFileSync(path.join(root, file), 'utf8'));
+  assert.strictEqual(quiz.quiz_id, quizId, file);
+  assert.strictEqual(quiz.objective, 'pronunciation_sounding_select', file);
+  assert.strictEqual(quiz.slides[0].type, 'audio_listen', file);
+  assert.strictEqual(quiz.slides[0].instruction, '請聆聽。', file);
+  assert.strictEqual(quiz.slides[0].self_check, false, file);
+}
+
+/**
+ * Working-tree Q8 file with the authorized delta removed must byte-match baseSha.
+ * Delta is only: drop rate_options, set self_check false, add "rate": 2.
+ * quiz_id, sentence, audio URL, instruction, and feedback stay in the bytes.
+ */
+function assertWholeListenRewrite(file, status, baseSha) {
+  assert.strictEqual(status, 'M', file);
+  assert.ok(isWholeListenQuizPath(file), file);
+  const before = execFileSync('git', ['show', baseSha + ':' + file], { cwd: root });
+  const afterText = fs.readFileSync(path.join(root, file), 'utf8');
+  const block = before.toString('utf8').match(
+    /      "rate_options": \[\n(?:        [0-9.]+,?\n)+      \],\n      "self_check": true\n/
+  );
+  assert.ok(block, file + ' pinned rate_options');
+  const needle = '      "rate": 2,\n      "self_check": false\n';
+  const at = afterText.indexOf(needle);
+  assert.ok(at !== -1, file);
+  assert.strictEqual(afterText.indexOf(needle, at + needle.length), -1, file);
+  const restored = afterText.slice(0, at) + block[0] + afterText.slice(at + needle.length);
+  assert.ok(Buffer.from(restored).equals(before), file);
+}
+
+function stripQ8RunnerDelta(text) {
+  function once(source, needle, replacement, label) {
+    const at = source.indexOf(needle);
+    assert.ok(at !== -1, label);
+    assert.strictEqual(source.indexOf(needle, at + needle.length), -1, label);
+    return source.slice(0, at) + replacement + source.slice(at + needle.length);
+  }
+  const q8fns = text.indexOf('  /**\n   * Q8 passage whole listening. One 「播放」 restarts at 0s and plays the\n');
+  const audioCheck = text.indexOf('  /**\n   * Audio ✓/✗.\n');
+  assert.ok(q8fns !== -1 && audioCheck > q8fns, 'q8 helpers');
+  text = text.slice(0, q8fns) + text.slice(audioCheck);
+  text = once(
+    text,
+    '    const speaker = !!opts.speaker;\n    // Q8: one 播放, no native scrubber, no speed picker. Other callers omit this.\n    const wholeListen = !!opts.whole_listen;\n',
+    '    const speaker = !!opts.speaker;\n',
+    'q8 wholeListen flag'
+  );
+  text = once(
+    text,
+    '    // Segment shadowing and Q8: custom button only (no native scrub).\n    audio.controls = !segmentShadow && !speaker && !wholeListen;\n',
+    '    // Segment shadowing: custom 重播 only (no native scrub).\n    audio.controls = !segmentShadow && !speaker;\n',
+    'q8 controls'
+  );
+  text = once(
+    text,
+    '      const start = wholeListen ? 0 : (opts.start_sec != null ? opts.start_sec : 0);\n      if (wholeListen || opts.start_sec != null || segmentShadow) audio.currentTime = start;\n',
+    '      const start = opts.start_sec != null ? opts.start_sec : 0;\n      if (opts.start_sec != null || segmentShadow) audio.currentTime = start;\n',
+    'q8 restart'
+  );
+  text = once(
+    text,
+    '      if (!wholeListen && opts.end_sec != null) {\n',
+    '      if (opts.end_sec != null) {\n',
+    'q8 clip'
+  );
+  text = once(
+    text,
+    '    // No speed picker for Q18 (fixed 0.75×), Q8 (fixed 2.0×), or speaker tiles.\n    if (!segmentShadow && !speaker && !wholeListen && opts.rate_options) {\n',
+    '    // No speed picker for sentence_segment_shadowing (fixed 0.75×) or speaker tiles.\n    if (!segmentShadow && !speaker && opts.rate_options) {\n',
+    'q8 rates'
+  );
+  text = once(
+    text,
+    [
+      '          audioOpts.rate_options = null;',
+      '        } else if (isWholeSentenceListening(quiz)) {',
+      '          // Q8: whole file from 0s at 2.0×. Clip windows and speed buttons stay off.',
+      '          audioOpts.whole_listen = true;',
+      '          audioOpts.segment_shadow = false;',
+      '          audioOpts.rate = wholeSentenceListenRate(audioOpts);',
+      '          audioOpts.rate_options = null;',
+      '          audioOpts.start_sec = null;',
+      '          audioOpts.end_sec = null;',
+      '        }',
+    ].join('\n'),
+    [
+      '          audioOpts.rate_options = null;',
+      '        }',
+    ].join('\n'),
+    'q8 plan'
+  );
+  text = once(
+    text,
+    [
+      '          return;',
+      '        }',
+      '        // Q8 passes with 「繼續」. The button is on the slide immediately;',
+      '        // playback does not have to finish. No ✓/✗ bar.',
+      '        if (isWholeSentenceListening(quiz) && audioOpts.whole_listen) {',
+      "          const cont = el('button', 'btn btn-primary', '繼續');",
+      "          cont.type = 'button';",
+      '          cont.addEventListener(\'click\', () => {',
+      '            idx++;',
+      '            renderSlide();',
+      '          });',
+      '          body.appendChild(cont);',
+      '          return;',
+      '        }',
+      '        // Q4/Q7 are already returned above.',
+    ].join('\n'),
+    [
+      '          return;',
+      '        }',
+      '        // Q4/Q7 are already returned above.',
+    ].join('\n'),
+    'q8 continue'
+  );
+  text = once(
+    text,
+    [
+      '    wholeSentenceShadowRate: wholeSentenceShadowRate,',
+      '    isWholeSentenceListening: isWholeSentenceListening,',
+      '    wholeSentenceListenRate: wholeSentenceListenRate,',
+      '    multiTapTargets: multiTapTargets,',
+    ].join('\n'),
+    [
+      '    wholeSentenceShadowRate: wholeSentenceShadowRate,',
+      '    multiTapTargets: multiTapTargets,',
+    ].join('\n'),
+    'q8 exports'
+  );
+  return text;
+}
+
+
+function stripQ6RunnerDelta(text) {
+  function once(source, needle, replacement, label) {
+    const at = source.indexOf(needle);
+    assert.ok(at !== -1, label);
+    assert.strictEqual(source.indexOf(needle, at + needle.length), -1, label);
+    return source.slice(0, at) + replacement + source.slice(at + needle.length);
+  }
+  text = once(
+    text,
+    '   * Q9 opening only. Later youglish slides keep 「下一題」.\n   * Q6 opening is audioListenAdvanceLabel, not this predicate.\n',
+    '   * Q9 opening only. Later slides, and every other objective, keep 「下一題」.\n',
+    'q6 comment'
+  );
+  const advance = text.indexOf('  /**\n   * Advance label when an audio slide has no');
+  const q18 = text.indexOf('  /**\n   * Q18 segment chrome');
+  assert.ok(advance !== -1 && q18 > advance, 'q6 label fn');
+  text = text.slice(0, advance) + text.slice(q18);
+  const grade = text.indexOf('  /**\n   * order_text is correct when chosen indexes equal correct_order.\n');
+  const makeAudio = text.indexOf('  function makeAudio(src, opts) {\n');
+  assert.ok(grade !== -1 && makeAudio > grade, 'order_text grade');
+  text = text.slice(0, grade) + [
+    '  function prepareSlides(quiz) {',
+    '    if (!quiz) return [];',
+    "    if (quiz.objective === 'mother_cloze_usage') return clozeSlides(quiz);",
+    "    if (quiz.objective === 'sentence_listen_to_l1') return listenToL1Slides(quiz);",
+    '    return quiz.slides || [];',
+    '  }',
+    '',
+    '',
+  ].join('\n') + text.slice(makeAudio);
+  const mount = text.indexOf('    /**\n     * order_text: put every option into correct_order');
+  const render = text.indexOf('    function renderSlide() {\n');
+  assert.ok(mount !== -1 && render > mount, 'order_text mount');
+  text = text.slice(0, mount) + text.slice(render);
+  text = once(
+    text,
+    '          // Q6 opening 「記住咗」. Q9 opening 「繼續」. Otherwise 「下一題」.\n          // slide.button is not read.\n          const nextLabel = audioListenAdvanceLabel(quiz, slide, type, idx);\n',
+    "          const nextLabel = youglishOpeningContinue(quiz, slide, type, idx) ? '繼續' : '下一題';\n",
+    'q6 label call'
+  );
+  text = once(
+    text,
+    [
+      "      if (type === 'order_text') {",
+      '        var orderCount = Array.isArray(slide.options) ? slide.options.length : 0;',
+      '        if (orderCount <= 1) {',
+      '          idx++;',
+      '          renderSlide();',
+      '          return;',
+      '        }',
+      '        mountOrderText(slide);',
+      '        return;',
+      '      }',
+      '',
+      '',
+    ].join('\n'),
+    '',
+    'order_text branch'
+  );
+  text = once(
+    text,
+    [
+      '    hotspotRect: hotspotRect,',
+      '    audioListenAdvanceLabel: audioListenAdvanceLabel,',
+      '    gradeOrderText: gradeOrderText,',
+      '    orderTextSlideShown: orderTextSlideShown,',
+      '',
+    ].join('\n'),
+    '    hotspotRect: hotspotRect,\n',
+    'q6 exports'
+  );
+  return text;
+}
+
+
+function assertRunnerIsQ4PinPlusQ6AndQ8Delta(runnerHead) {
+  let text = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
+  text = stripQ8RunnerDelta(text);
+  text = stripQ6RunnerDelta(text);
+  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
+    cwd: root,
+    maxBuffer: 2 * 1024 * 1024,
+  });
+  assert.ok(Buffer.from(text).equals(pinnedRunner), 'runner drifted from ' + runnerHead + ' beyond the Q6 and Q8 deltas');
+  assert.strictEqual('記住咗'.charCodeAt(2), 0x5497);
+}
+
+
 function surfaceSince(sha) {
   return execFileSync(
     'git',
@@ -307,12 +544,16 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
     {
       quiz_id: 'sounding-koshitsu-yoyaku-1-v1',
       chunk_id: 1,
-      audio: 'data/audio/clips/koshitsu-yoyaku-1.wav',
+      audio: 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-etto.mp3',
+      correct: 'Air拖',
+      wav: 'data/audio/clips/koshitsu-yoyaku-1.wav',
     },
     {
       quiz_id: 'sounding-koshitsu-yoyaku-17-v1',
       chunk_id: 17,
-      audio: 'data/audio/clips/koshitsu-yoyaku-17.wav',
+      audio: 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-purande.mp3',
+      correct: '潑爛地',
+      wav: 'data/audio/clips/koshitsu-yoyaku-17.wav',
     },
   ];
   expected.forEach(function (item) {
@@ -329,19 +570,21 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
     assert.strictEqual(quiz.sentence, group.sentence);
     assert.strictEqual(quiz.chunk.id, item.chunk_id);
     assert.strictEqual(quiz.chunk.text, group.chunks.find((c) => c.id === item.chunk_id).text);
-    const audio = quiz.slides.find((slide) => slide.type === 'audio_chunk');
-    assert.ok(audio, item.quiz_id);
-    assert.strictEqual(audio.audio, item.audio);
-    assert.strictEqual(audio.instruction, '請聽這個詞。');
-    assert.strictEqual(audio.rate, 1.0);
-    assert.ok(audio.start_sec == null, item.quiz_id);
-    assert.ok(audio.end_sec == null, item.quiz_id);
-    assert.ok(fs.existsSync(path.join(root, item.audio)), item.audio);
+    const audio = quiz.slides[0];
+    assert.strictEqual(audio.type, 'audio_listen', item.quiz_id);
+    assert.strictEqual(audio.audio, item.audio, item.quiz_id);
+    assert.strictEqual(audio.instruction, '請聆聽。', item.quiz_id);
+    assert.strictEqual(audio.self_check, false, item.quiz_id);
+    assert.strictEqual(audio.rate, 1, item.quiz_id);
+    assert.strictEqual(quiz.slides[1].type, 'select_text', item.quiz_id);
+    assert.strictEqual(quiz.slides[1].correct, item.correct, item.quiz_id);
+    assert.ok(fs.existsSync(path.join(root, item.wav)), item.wav);
   });
   const quiz17 = JSON.parse(
     fs.readFileSync(path.join(root, 'data/quizzes/sounding-koshitsu-yoyaku-17-v1.json'), 'utf8')
   );
-  assert.ok(quiz17.slides[2].instruction.includes('【潑】爛地\u3000選出'));
+  assert.strictEqual(quiz17.slides[1].correct, '潑爛地');
+  assert.strictEqual(quiz17.slides[2].type, 'order_text');
   const now = Date.parse('2026-11-09T01:43:00+08:00');
   const admitted = Schedule.admittedChunkIds(
     group.chunks,
@@ -365,13 +608,14 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
   assert.strictEqual(quiz2.sentence, group.sentence);
   assert.strictEqual(quiz2.chunk.id, 2);
   assert.strictEqual(quiz2.chunk.text, '個室って');
-  const audio2 = quiz2.slides.find((slide) => slide.type === 'audio_chunk');
-  assert.ok(audio2);
-  assert.strictEqual(audio2.audio, 'data/audio/clips/koshitsu-yoyaku-2.wav');
-  assert.strictEqual(audio2.rate, 1.0);
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio2, 'start_sec'));
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio2, 'end_sec'));
-  const wav2 = fs.readFileSync(path.join(root, audio2.audio));
+  const audio2 = quiz2.slides[0];
+  assert.strictEqual(audio2.type, 'audio_listen');
+  assert.strictEqual(audio2.instruction, '請聆聽。');
+  assert.strictEqual(audio2.self_check, false);
+  assert.strictEqual(audio2.rate, 1);
+  assert.strictEqual(audio2.audio, 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-koshitsutte.mp3');
+  assert.strictEqual(quiz2.slides[1].correct, '哥舌豬Dead');
+  const wav2 = fs.readFileSync(path.join(root, 'data/audio/clips/koshitsu-yoyaku-2.wav'));
   assert.strictEqual(wav2.length, 96216);
   assert.strictEqual(
     require('crypto').createHash('sha256').update(wav2).digest('hex'),
@@ -422,13 +666,14 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
   assert.strictEqual(quiz3.sentence, group.sentence);
   assert.strictEqual(quiz3.chunk.id, 3);
   assert.strictEqual(quiz3.chunk.text, 'まだ');
-  const audio3 = quiz3.slides.find((slide) => slide.type === 'audio_chunk');
-  assert.ok(audio3);
-  assert.strictEqual(audio3.audio, 'data/audio/clips/koshitsu-yoyaku-3.wav');
-  assert.strictEqual(audio3.rate, 1.0);
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'start_sec'));
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio3, 'end_sec'));
-  const wav3 = fs.readFileSync(path.join(root, audio3.audio));
+  const audio3 = quiz3.slides[0];
+  assert.strictEqual(audio3.type, 'audio_listen');
+  assert.strictEqual(audio3.instruction, '請聆聽。');
+  assert.strictEqual(audio3.self_check, false);
+  assert.strictEqual(audio3.rate, 1);
+  assert.strictEqual(audio3.audio, 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-mada.mp3');
+  assert.strictEqual(quiz3.slides[1].correct, '馬打');
+  const wav3 = fs.readFileSync(path.join(root, 'data/audio/clips/koshitsu-yoyaku-3.wav'));
   assert.strictEqual(wav3.length, 34918);
   assert.strictEqual(
     require('crypto').createHash('sha256').update(wav3).digest('hex'),
@@ -463,13 +708,14 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
   assert.strictEqual(quiz5.sentence, group.sentence);
   assert.strictEqual(quiz5.chunk.id, 5);
   assert.strictEqual(quiz5.chunk.text, '個室は');
-  const audio5 = quiz5.slides.find((slide) => slide.type === 'audio_chunk');
-  assert.ok(audio5);
-  assert.strictEqual(audio5.audio, 'data/audio/clips/koshitsu-yoyaku-5.wav');
-  assert.strictEqual(audio5.rate, 1.0);
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio5, 'start_sec'));
-  assert.ok(!Object.prototype.hasOwnProperty.call(audio5, 'end_sec'));
-  const wav5 = fs.readFileSync(path.join(root, audio5.audio));
+  const audio5 = quiz5.slides[0];
+  assert.strictEqual(audio5.type, 'audio_listen');
+  assert.strictEqual(audio5.instruction, '請聆聽。');
+  assert.strictEqual(audio5.self_check, false);
+  assert.strictEqual(audio5.rate, 1);
+  assert.strictEqual(audio5.audio, 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-koshitsuha.mp3');
+  assert.strictEqual(quiz5.slides[1].correct, '哥sit豬蛙');
+  const wav5 = fs.readFileSync(path.join(root, 'data/audio/clips/koshitsu-yoyaku-5.wav'));
   assert.strictEqual(wav5.length, 86956);
   assert.strictEqual(
     require('crypto').createHash('sha256').update(wav5).digest('hex'),
@@ -504,13 +750,14 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
   assert.strictEqual(quiz6.sentence, group.sentence);
   assert.strictEqual(quiz6.chunk.id, 6);
   assert.strictEqual(quiz6.chunk.text, 'もう');
-  assert.strictEqual(quiz6.slides[0].type, 'audio_chunk');
-  assert.strictEqual(quiz6.slides[0].audio, 'data/audio/clips/koshitsu-yoyaku-6.wav');
-  assert.strictEqual(quiz6.slides[0].instruction, '請聽這個詞。');
-  assert.strictEqual(quiz6.slides[0].rate, 1.0);
-  assert.ok(!Object.prototype.hasOwnProperty.call(quiz6.slides[0], 'start_sec'));
-  assert.ok(!Object.prototype.hasOwnProperty.call(quiz6.slides[0], 'end_sec'));
-  const wav6 = fs.readFileSync(path.join(root, quiz6.slides[0].audio));
+  assert.strictEqual(quiz6.slides[0].type, 'audio_listen');
+  assert.strictEqual(quiz6.slides[0].audio, 'https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-mou.mp3');
+  assert.strictEqual(quiz6.slides[0].instruction, '請聆聽。');
+  assert.strictEqual(quiz6.slides[0].self_check, false);
+  assert.strictEqual(quiz6.slides[0].rate, 1);
+  assert.strictEqual(quiz6.slides.length, 2);
+  assert.strictEqual(quiz6.slides[1].correct, '摸');
+  const wav6 = fs.readFileSync(path.join(root, 'data/audio/clips/koshitsu-yoyaku-6.wav'));
   assert.strictEqual(wav6.length, 23892);
   assert.strictEqual(
     require('crypto').createHash('sha256').update(wav6).digest('hex'),
@@ -609,19 +856,18 @@ test('koshitsu-yoyaku has Soft GO Q22/Q23 sentences; chunks 1, 17, 2, 3, 5, 6, 7
     assert.strictEqual(quiz.chunk.id, item.id);
     assert.strictEqual(quiz.chunk.text, item.text);
     const audio = quiz.slides[0];
-    assert.strictEqual(audio.type, 'audio_chunk');
-    assert.strictEqual(audio.audio, 'data/audio/clips/koshitsu-yoyaku-' + item.id + '.wav');
-    assert.strictEqual(audio.instruction, '請聽這個詞。');
-    assert.strictEqual(audio.rate, 1.0);
+    assert.strictEqual(audio.type, 'audio_listen');
+    assert.strictEqual(audio.instruction, '請聆聽。');
+    assert.strictEqual(audio.self_check, false);
+    assert.strictEqual(audio.rate, 1);
     assert.ok(!Object.prototype.hasOwnProperty.call(audio, 'start_sec'));
     assert.ok(!Object.prototype.hasOwnProperty.call(audio, 'end_sec'));
-    const image = quiz.slides[quiz.slides.length - 1];
-    assert.strictEqual(image.type, 'select_image');
-    assert.ok(image.instruction.indexOf('【' + item.sounding + '】') !== -1, quizId);
+    const choice = quiz.slides.find((slide) => slide.type === 'select_text');
+    assert.strictEqual(choice.correct, item.sounding, quizId);
     if (item.id === 16) {
       assert.strictEqual(item.sounding.codePointAt(0), 0x651e);
     }
-    const wav = fs.readFileSync(path.join(root, audio.audio));
+    const wav = fs.readFileSync(path.join(root, 'data/audio/clips/koshitsu-yoyaku-' + item.id + '.wav'));
     assert.strictEqual(wav.length, item.bytes, audio.audio);
     assert.strictEqual(
       require('crypto').createHash('sha256').update(wav).digest('hex'),
@@ -1105,6 +1351,7 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
     .split('\n');
   const shadowAtParent = new Set(parentQuizPaths.filter((file) => isShadowQuizPath(file)));
   const storyAtParent = new Set(parentQuizPaths.filter((file) => isStoryQuizPath(file)));
+  const soundingAtParent = new Set(parentQuizPaths.filter((file) => isSoundingQuizPath(file)));
   const meaningAtQ3Base = new Set(
     execFileSync('git', ['ls-tree', '-r', '--name-only', q3Base, 'data/quizzes'], {
       cwd: root,
@@ -1136,6 +1383,14 @@ test('existing live Q2 files stay byte-identical to main parent 77f4aefe', funct
     }
     if (isStoryQuizPath(file)) {
       assertAllowedStoryChange(file, status, storyAtParent);
+      return;
+    }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, parent);
+      return;
+    }
+    if (isSoundingQuizPath(file)) {
+      assertAllowedSoundingChange(file, status, soundingAtParent);
       return;
     }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
@@ -1334,6 +1589,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     .split('\n');
   const shadowAtQ3Base = new Set(q3BaseQuizPaths.filter((file) => isShadowQuizPath(file)));
   const storyAtQ3Base = new Set(q3BaseQuizPaths.filter((file) => isStoryQuizPath(file)));
+  const soundingAtQ3Base = new Set(q3BaseQuizPaths.filter((file) => isSoundingQuizPath(file)));
   const changed = new Map();
   (diff ? diff.split('\n') : []).forEach((line) => {
     const tab = line.indexOf('\t');
@@ -1347,6 +1603,14 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     }
     if (isStoryQuizPath(file)) {
       assertAllowedStoryChange(file, status, storyAtQ3Base);
+      return;
+    }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, base);
+      return;
+    }
+    if (isSoundingQuizPath(file)) {
+      assertAllowedSoundingChange(file, status, soundingAtQ3Base);
       return;
     }
     assert.ok(/^data\/quizzes\/meaning-object-.*\.json$/.test(file), 'unexpected quiz file change: ' + line);
@@ -1365,7 +1629,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     example_sentences_listening: 154,
     loci_description_tap: 280,
     meaning_object_select_and_tap: 278,
-    pronunciation_sounding_select: 169,
+    pronunciation_sounding_select: 277,
     story_select_image: 278,
     tone_shadowing_05: 278,
     word_shadowing_025: 278,
@@ -1393,7 +1657,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     counts[row.objective] = (counts[row.objective] || 0) + 1;
   });
   assert.deepStrictEqual(counts, expectedCounts);
-  assert.strictEqual(manifest.quizzes.length, 3771);
+  assert.strictEqual(manifest.quizzes.length, 3879);
   assert.deepStrictEqual(surfaceSince(base), ['data/groups.json', 'group.html', 'js/quiz-runner.js']);
 
   const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
@@ -1689,6 +1953,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   const q4AtStart = atStart.filter((file) => /\/shadow-025-.*\.json$/.test(file));
   const q7AtStart = atStart.filter((file) => /\/shadow-05-.*\.json$/.test(file));
   const storyAtStart = new Set(atStart.filter((file) => isStoryQuizPath(file)));
+  const soundingAtStart = new Set(atStart.filter((file) => isSoundingQuizPath(file)));
   assert.strictEqual(q4AtStart.length, 156);
   assert.strictEqual(q7AtStart.length, 156);
   const diff = execFileSync('git', ['diff', '--name-status', start, '--', 'data/quizzes'], {
@@ -1703,6 +1968,14 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     const file = line.slice(tab + 1);
     if (isStoryQuizPath(file)) {
       assertAllowedStoryChange(file, status, storyAtStart);
+      return;
+    }
+    if (isWholeListenQuizPath(file)) {
+      assertWholeListenRewrite(file, status, start);
+      return;
+    }
+    if (isSoundingQuizPath(file)) {
+      assertAllowedSoundingChange(file, status, soundingAtStart);
       return;
     }
     assert.ok(isShadowQuizPath(file), 'unexpected quiz file change: ' + line);
@@ -1733,7 +2006,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   manifestDiff.split('\n').forEach((line) => {
     if (line.indexOf('+      "quiz_id": ') !== 0) return;
     const quizId = line.slice(line.indexOf('"quiz_id": ') + 11).replace(/",$/, '').replace(/^"/, '');
-    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId) || /^story-/.test(quizId), line);
+    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId) || /^story-/.test(quizId) || /^sounding-/.test(quizId), line);
   });
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
   assert.strictEqual(
@@ -1743,20 +2016,17 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     }),
     ''
   );
-  const runner = fs.readFileSync(path.join(root, 'js/quiz-runner.js'));
-  const pinnedRunner = execFileSync('git', ['show', runnerHead + ':js/quiz-runner.js'], {
-    cwd: root,
-    maxBuffer: 2 * 1024 * 1024,
-  });
-  assert.ok(runner.equals(pinnedRunner));
+  assertRunnerIsQ4PinPlusQ6AndQ8Delta(runnerHead);
   const htmlBefore = execFileSync('git', ['show', start + ':group.html'], { cwd: root, encoding: 'utf8' });
   const htmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
   assert.strictEqual(
-    htmlBefore.replace('js/quiz-runner.js?v=20261111q27', 'js/quiz-runner.js?v=20261121q4q7'),
+    htmlBefore.replace('js/quiz-runner.js?v=20261111q27', 'js/quiz-runner.js?v=20261122q6q8'),
     htmlAfter
   );
-  assert.ok(htmlAfter.indexOf('js/quiz-runner.js?v=20261121q4q7') !== -1);
+  assert.ok(htmlAfter.indexOf('js/quiz-runner.js?v=20261122q6q8') !== -1);
+  assert.ok(htmlAfter.indexOf('js/quiz-runner.js?v=20261121q4q7') === -1);
   assert.ok(htmlAfter.indexOf('js/quiz-runner.js?v=20261111q27') === -1);
+  assert.ok(htmlAfter.indexOf('css/app.css?v=20261111q27') !== -1);
 
   function rows(objective) {
     return manifest.quizzes.filter((row) => row.objective === objective);
@@ -1771,7 +2041,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   assert.strictEqual(rows('gloss_to_palace_tap').length, 280);
   assert.strictEqual(rows('meaning_object_select_and_tap').length, 278);
   assert.strictEqual(rows('story_select_image').length, 278);
-  assert.strictEqual(manifest.quizzes.length, 3771);
+  assert.strictEqual(manifest.quizzes.length, 3879);
 
   const specs = [
     { files: q4Files, objective: 'word_shadowing_025', rate: 0.25, instruction: '請聽 0.25× 詞塊示範，然後開始錄音跟讀。', hangs: q4 },
@@ -1923,7 +2193,7 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
   assert.strictEqual(q5.length, 278);
   const ids = new Set(q5.map((row) => row.quiz_id));
   assert.strictEqual(ids.size, 275);
-  assert.strictEqual(manifest.quizzes.length, 3771);
+  assert.strictEqual(manifest.quizzes.length, 3879);
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
 
   function rows(objective) {
@@ -1943,13 +2213,23 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
     execFileSync('git', ['hash-object', 'data/schedule.json'], { cwd: root, encoding: 'utf8' }).trim(),
     'e68b55cc12d3bd5c805ed3aa0aa251f74bfaf8bc'
   );
+  // groups.json and schedule.json stay at the Q5 base.
+  // group.html changes only the quiz-runner cache query. CSS query stays.
+  // js/quiz-runner.js is only the authorized Q6 and Q8 deltas on the same PR #48 blob.
   assert.strictEqual(
-    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json', 'js/quiz-runner.js', 'group.html'], {
+    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json'], {
       cwd: root,
       encoding: 'utf8',
     }),
     ''
   );
+  const q5HtmlBefore = execFileSync('git', ['show', base + ':group.html'], { cwd: root, encoding: 'utf8' });
+  const q5HtmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
+  assert.strictEqual(
+    q5HtmlBefore.replace('js/quiz-runner.js?v=20261121q4q7', 'js/quiz-runner.js?v=20261122q6q8'),
+    q5HtmlAfter
+  );
+  assertRunnerIsQ4PinPlusQ6AndQ8Delta('86aeeb0a6529db30c70034a25df07c6a904b2513');
 
   const groupBySentence = new Map(groups.groups.map((group) => [group.sentence, group]));
   const bodies = new Map();
@@ -2112,6 +2392,104 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
     });
   });
   assert.strictEqual(covered, 278);
+});
+
+test('official Q6 ship is 291 new-design files and 108 appended hangs', function () {
+  const crypto = require('crypto');
+  const quizDir = path.join(root, 'data/quizzes');
+  const files = fs.readdirSync(quizDir).filter((file) => /^sounding-.*\.json$/.test(file)).sort();
+  assert.strictEqual(files.length, 291);
+  assert.ok(files.indexOf('sounding-mitame-irotsuya-3-v1.json') === -1);
+  const digest = crypto.createHash('sha256');
+  files.forEach((file) => {
+    digest.update(file);
+    digest.update('\0');
+    digest.update(fs.readFileSync(path.join(quizDir, file)));
+    digest.update('\0');
+  });
+  assert.strictEqual(digest.digest('hex'), '16e7e8fa4638648d4c275ccb240776c92a2384691eab254bdd2a8219e554b00b');
+
+  const baseSha = 'c973862646028214903efcdf98077731f8966c90';
+  const baseManifest = JSON.parse(execFileSync('git', ['show', baseSha + ':data/manifest.json'], {
+    cwd: root,
+    encoding: 'utf8',
+    maxBuffer: 8 * 1024 * 1024,
+  }));
+  assert.strictEqual(baseManifest.quizzes.length, 3771);
+  assert.strictEqual(manifest.generated_at, baseManifest.generated_at);
+  assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
+  assert.strictEqual(manifest.quizzes.length, 3879);
+  assert.deepStrictEqual(manifest.quizzes.slice(0, 3771), baseManifest.quizzes);
+  assert.strictEqual(manifest.quizzes[3770].quiz_id, 'story-aru-8-v1');
+  const added = manifest.quizzes.slice(3771);
+  assert.strictEqual(added.length, 108);
+  const skipSlots = new Set();
+  groups.groups.forEach((group) => {
+    (group.chunks || []).forEach((chunk) => {
+      if (chunk.skip === true) skipSlots.add(group.sentence + '\0' + chunk.id);
+    });
+  });
+  added.forEach((row) => {
+    assert.strictEqual(row.objective, 'pronunciation_sounding_select', row.quiz_id);
+    assert.strictEqual(row.level, 1, row.quiz_id);
+    assert.strictEqual(row.kind, 'chunk', row.quiz_id);
+    assert.strictEqual(row.file, 'data/quizzes/' + row.quiz_id + '.json', row.quiz_id);
+    assert.ok(files.indexOf(row.quiz_id + '.json') !== -1, row.quiz_id);
+    assert.ok(!skipSlots.has(row.sentence + '\0' + row.chunk_id), row.quiz_id);
+    assert.ok(!Object.prototype.hasOwnProperty.call(row, 'markdown_fixed'), row.quiz_id);
+    assert.ok(!Object.prototype.hasOwnProperty.call(row, 'notion_url'), row.quiz_id);
+  });
+  const unhung = [
+    'sounding-ioshio-ganen-1-v1',
+    'sounding-ioshio-ganen-2-v1',
+    'sounding-ioshio-ganen-3-v1',
+    'sounding-ioshio-ganen-4-v1',
+  ];
+  for (let i = 1; i <= 10; i++) unhung.push('sounding-tsukete-itadaku-' + i + '-v1');
+  assert.strictEqual(unhung.length, 14);
+  const hungIds = new Set(manifest.quizzes.map((row) => row.quiz_id));
+  unhung.forEach((quizId) => {
+    assert.ok(files.indexOf(quizId + '.json') !== -1, quizId);
+    assert.ok(!hungIds.has(quizId), quizId);
+    assert.ok(hungIds.has(quizId.replace('-v1', '-v2')), quizId);
+  });
+  [
+    'sounding-aragoshi-mikanshu-1-v1',
+    'sounding-aragoshi-mikanshu-4-v1',
+    'sounding-aragoshi-mikanshu-5-v1',
+    'sounding-aragoshi-mikanshu-7-v1',
+    'sounding-chumon-ii-desuka-1-v1',
+    'sounding-chumon-ii-desuka-3-v1',
+    'sounding-chumon-ii-desuka-6-v1',
+    'sounding-hamo-nanban-4-v1',
+    'sounding-oryouri-last-order-9-v1',
+    'sounding-yokattara-onomi-6-v1',
+    'sounding-yokattara-onomi-8-v1',
+  ].forEach((quizId) => {
+    assert.ok(hungIds.has(quizId), quizId);
+    assert.ok(!added.some((row) => row.quiz_id === quizId), quizId);
+  });
+  assert.strictEqual(groupBySlug('sore-wa').chunks.find((chunk) => chunk.id === 7).skip, true);
+  assert.strictEqual(groupBySlug('teikuauto').chunks.find((chunk) => chunk.id === 9).skip, true);
+  assert.ok(!hungIds.has('sounding-sore-wa-7-v1'));
+  assert.ok(!hungIds.has('sounding-teikuauto-9-v1'));
+  assert.ok(!hungIds.has('sounding-roji-6-v1'));
+  assert.ok(!fs.existsSync(path.join(quizDir, 'sounding-mitame-irotsuya-3-v1.json')));
+  assert.strictEqual(
+    manifest.quizzes.filter((row) => row.objective === 'pronunciation_sounding_select').length,
+    277
+  );
+  ['data/groups.json', 'data/schedule.json', 'css/app.css'].forEach((file) => {
+    const before = execFileSync('git', ['show', baseSha + ':' + file], { cwd: root });
+    const after = fs.readFileSync(path.join(root, file));
+    assert.ok(before.equals(after), file);
+  });
+  const runner = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
+  const remembered = '記住咗';
+  assert.strictEqual(remembered.charCodeAt(2), 0x5497);
+  assert.ok(runner.indexOf(remembered) !== -1);
+  assert.ok(runner.indexOf("quiz.objective === 'whole_sentence_listening'") !== -1);
+  assert.ok(runner.indexOf("el('button', 'btn btn-primary', '繼續')") !== -1);
 });
 
 if (failed.length) {

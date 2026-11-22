@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oseki-2jikansei.mp3",
-      "start_sec": 1.2,
-      "end_sec": 2.5,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-nijikanseide.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "ni-jikan-sei-de→knee芝鋼射地",
-        "一句串：跪低嘅芝士正用鋼槍射向地板"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "knee芝鋼射地",
       "distractors": [
-        "fūdo-ga→呼door guard",
-        "一句串：bodyguard 正用力吹一扇門"
-      ]
+        "呼door guard",
+        "lala蕉 golf phone",
+        "勒薯拖蛋"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

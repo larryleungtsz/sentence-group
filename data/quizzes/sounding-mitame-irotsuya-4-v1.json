@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-mitame-irotsuya.mp3",
-      "start_sec": 2.2,
-      "end_sec": 3.1,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-iikara.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "ii-kara→椅芥辣",
-        "一句串：一張用黃芥末砌成嘅椅。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "椅芥辣",
       "distractors": [
-        "meccha→matcha",
-        "一句串：一盅綠茶／matcha。"
-      ]
+        "thaibearlock爹磨",
+        "字搬裸",
+        "拳刺裂握爹"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-niwatori-atama-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "鶏の頭や尻尾などの切れ端ばかりということはない。シェフはスパイシーな鶏鍋だけに集中しているので、スープがとても美味しい",
+  "chunk": {
+    "id": 8,
+    "text": "スパイシーな鶏鍋"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-supaishiinatorinabe.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "豉跛獅躝挖拖梨拿Bear",
+      "distractors": [
+        "dark茄鏈",
+        "小超舌釘2路落地",
+        "soupblue家"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "豉跛獅躝挖拖 = 一隻口咬住支豉油、跛咗一隻腳嘅獅子趴喺地下，地下有粉筆線同地拖",
+        "梨拿Bear = 隔離有個梨攞住咗個熊啤啤"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

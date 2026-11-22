@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-roji-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 5,
+    "text": "ひっそりと"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-hissorito.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Heat鎖裂駝",
+      "distractors": [
+        "壓路",
+        "meat蛇掟",
+        "squat獅釘磨"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Heat鎖 = 正好一個人形蹲在開着左有火嘅gas爐旁，手上用鎖鏈綁住裂左嘅駱駝",
+        "裂駝 = 一隻裂左嘅駱駝，頸上套住鎖鏈，站在爐旁邊"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

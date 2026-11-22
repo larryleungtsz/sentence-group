@@ -10,25 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-chashu-shittori.mp3",
-      "start_sec": 3.0,
-      "end_sec": 4.1,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-noukou.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "nōkō→𦣇call",
-        "一句串：人夾住電話喺大脾內側。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "𦣇call",
       "distractors": [
-        "aji-mo→a cheese",
-        "tooth",
-        "一句串：牙齒形芝士掂住自己嘅牙。"
-      ]
+        "座多",
+        "call機咩毛",
+        "壓路"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

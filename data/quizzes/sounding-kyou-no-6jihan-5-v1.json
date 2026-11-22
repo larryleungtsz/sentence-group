@@ -1,0 +1,53 @@
+{
+  "quiz_id": "sounding-kyou-no-6jihan-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 5,
+    "text": "18時半から"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-juhachijihankara.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "蕉嚇廁紙hand加辣",
+      "distractors": [
+        "蛇蝎dead",
+        "闊蛋脷爹",
+        "落菇芝hand咖辣"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "蕉 = 同一畫面檯燈下企住、穿住萬聖節裝束去嚇卡通廁紙嘅黃色香蕉",
+        "嚇 = 同一畫面香蕉穿住萬聖節裝束、伸出手去嚇卡通廁紙嘅動作",
+        "廁紙 = 同一畫面香蕉右邊、被嚇到同紙帶攤落桌面嘅卡通卷筒廁紙",
+        "hand = 同一畫面右上方伸出、正把辣椒撒落廁紙嘅人手",
+        "加辣 = 同一畫面人手撒落卡通廁紙紙帶上嘅紅色辣椒同辣椒碎"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

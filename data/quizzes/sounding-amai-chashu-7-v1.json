@@ -10,25 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
-      "start_sec": 3.5,
-      "end_sec": 4.86,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-monotarinaikamo.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "monotari→Mon攞蛋脷",
-        "nai-kamo→奶家毛",
-        "一句串：Monitor攞住蛋脷；舔毛屋表面（奶家毛）。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Mon攞蛋脷奶家毛",
       "distractors": [
-        "chotto→座多",
-        "一句串：好多張椅（座多）。"
-      ]
+        "座多",
+        "hit多knee蛙",
+        "ski炸奶"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Mon攞蛋脷 = Monitor 攞住蛋脷",
+        "奶家毛 = 舔毛屋表面"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

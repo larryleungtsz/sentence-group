@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-ichio-7-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "「一応テーブル席が」「空いてるんですけれども」「えっとー、ほかの、団体様が」「もしいらっしゃった場合は、」「カウンターにご移動いただく」「形になるんですが、」",
+  "chunk": {
+    "id": 7,
+    "text": "形になるんですが"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-katachininarundesuga.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Kata刺嗱路desk牙",
+      "distractors": [
+        "carwoundtart梨哥2豆熱蛋蛋cool",
+        "摸獅醫垃圾撒旦巴耳蛙",
+        "蛋die沙馬guard"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Kata = 同一畫面右上方斜放在木枱上的武士刀",
+        "刺 = 同一畫面刀身同刀背上密布的綠色毒刺",
+        "嗱 = 同一畫面刀上毒液把木枱熔出的冒煙破洞",
+        "路 = 官方場景同呢張圖都無獨立的道路",
+        "desk = 同一畫面承住所有物件的木工作枱",
+        "牙 = 同一畫面木枱上被毒液熔壞的牙齒"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

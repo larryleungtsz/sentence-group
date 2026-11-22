@@ -10,41 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-yoyaku-shitenai.mp3?v=20261030yoyaku",
-      "start_sec": 3.15,
-      "end_sec": 4.22,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-aitemasuka.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜a≈挨；ite≈釘；masu≈抹；ka≈car｜chain：挨／釘(大釘)／抹／car(車)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "挨釘抹car",
+      "distractors": [
+        "鱷錫KeyCard冠鏈舌地賣air鏈mask落地",
+        "梳梳鵝抹刺",
+        "哥按奶殺蛇Dead2蛋蛋key抹"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "挨 = 挨住",
         "釘 = 大釘",
         "抹 = 抹",
-        "car = 車",
-        "一句串：男人一邊挨住大釘一邊抹車"
+        "car = 車"
       ],
-      "distractors": [
-        "SOR：reading→objects｜o≈鱷；seki≈錫／Key；kaku≈Card／冠；nin≈鏈；shite≈舌地；mai≈賣；ri≈air；masu≈鏈／mask；node≈落地｜chain：鱷(吻錫／Key)／錫／Key／Card(poker card 戴冠＋鐵金鏈)／冠／鏈／舌地(脷掂地)／賣／air／鏈(空氣鏈)／mask／落地",
-        "鱷 = 鱷魚",
-        "錫Key = 鎖匙",
-        "Card = poker card",
-        "冠 = 皇冠",
-        "鏈 = 鐵金鏈",
-        "舌地 = 脷掂地",
-        "賣 = 開檔賣",
-        "air = 空氣",
-        "鏈 = 空氣鏈",
-        "mask = 口罩",
-        "落地 = 落地",
-        "鱷錫KeyCard冠鏈舌地賣air鏈mask落地 - 鱷魚kiss鎖匙；poker card戴冠鐵金鏈脷掂地；男人賣空氣鏈，口罩飄落地",
-        "SOR：reading→objects｜ni≈knee；mei≈mac；tte≈釘｜chain：knee(跪)／mac(MacBook)／釘(脷上 pierces)",
-        "knee = 跪"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

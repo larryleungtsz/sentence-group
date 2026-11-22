@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 6,
+    "text": "食べちゃった"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-tabechatta.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "thaibear喳蛋",
+      "distractors": [
+        "泥蛋蛙",
+        "航doll脷",
+        "tart家兒"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "thai = 同一張餐枱後方、跳在半空那隻淺棕色毛公仔熊身上的紅白藍橫間泰國國旗衫",
+        "bear = 同一張餐枱後方、穿紅白藍橫間衫、跳在半空的淺棕色毛公仔熊",
+        "喳蛋 = 官方場景「着住泰國國旗衫嘅熊好似摔角跳咁喳落隻蛋 」，但圖上熊只是跳在半空，枱上有一隻完整的棕色蛋，熊同蛋沒有接觸"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

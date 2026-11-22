@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kanki-maa-maa-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "換気はまあまあで、食べ終わると服に匂いがついてしまうけど、それでもまた来たくなるお店だ。",
+  "chunk": {
+    "id": 5,
+    "text": "匂いがついてしまうけど"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-nioigatsuiteshimaukedo.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "梨痾油格豬熱爹絲馬烏極多",
+      "distractors": [
+        "鎖lev爹磨馬達",
+        "蝎打拳嗱路",
+        "鵝meat腥蛋"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "梨痾油 = 同一畫面右下角、從屁肌噴出黃色油狀液體的擬人化梨",
+        "格豬熱爹 = 同一畫面左邊、頭上有火並格檔拳擊豬拳腳的中年老爹",
+        "絲馬烏 = 同一畫面右邊、用黑色絲襪做成的馬",
+        "極多 = 同一畫面中年老爹手臂同膊頭上密密麻麻的「極多」紋身"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

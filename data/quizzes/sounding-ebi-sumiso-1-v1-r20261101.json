@@ -10,32 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
-      "start_sec": 0.05,
-      "end_sec": 1.1,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-otonariga.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜o≈鱷；tona≈tall／那裏；ri ga≈家｜chain：鱷(超高鱷魚)／tall／那裏／家(屋喺背脊後)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鱷tall那裏家",
+      "distractors": [
+        "airBtall",
+        "kill梨落",
+        "樹咪梳card機desk"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "鱷tall = 超高鱷魚",
         "那裏 = 係嗰隻鱷魚搵屋企 心裏在問「那裏」",
-        "家 = 屋喺背脊後",
-        "一句串：超高鱷魚搵屋企心裏在問「那裏」，屋其實喺背脊後"
+        "家 = 屋喺背脊後"
       ],
-      "distractors": [
-        "SOR：reading→objects｜e≈air；bi≈B；to≈tall｜chain：air／B／tall(空氣造出嘅長條B形寶寶)",
-        "air = 空氣",
-        "B = B形寶寶",
-        "tall = 拉得好長",
-        "airBtall - 用空氣砌成、拉得好長嘅B形寶寶",
-        "SOR：reading→objects｜taki≈tart／key；awa≈鴉／蛙；se≈射；desu≈desk｜chain：tart／key(腳 tart 着炮車鎖匙位)／鴉／蛙／射／desk(枱)",
-        "tartkey = 腳 tart 住炮車嘅鎖匙位"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

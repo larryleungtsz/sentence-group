@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-teikuauto-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 8,
+    "text": "濃くて"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9bb9cbac845d0da464e3e275835569e4dcc6cc10/audio/chunk-kokute.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "咯拳爹",
+      "distractors": [
+        "櫻花時鐘nano",
+        "oakley拳釘",
+        "哥啜bar腥陀"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "咯 = 同一個室內、畫面右邊那個中年男人拳頭周圍散發出的白色同心弧形聲波波紋",
+        "拳 = 同一個室內、畫面右邊那個中年男人正在敲門的拳頭",
+        "爹 = 同一個室內、畫面右邊那個站在木門前、身穿深色外套、正在敲門的中年男人"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

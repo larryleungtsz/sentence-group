@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-roji-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "chunk": {
+    "id": 4,
+    "text": "奥に"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-okuni.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鱷拳梨",
+      "distractors": [
+        "Heat鎖裂駝",
+        "壓路",
+        "meat蛇掟"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鱷 = 正好一條鱷魚，站在走廊模型旁邊",
+        "拳 = 鱷魚一隻戴住拳套、握實的拳頭，打到卡通梨",
+        "梨 = 一顆被拳頭打到的卡通梨，面部暈眩、身體後傾，腳幾乎離地"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

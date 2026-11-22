@@ -10,92 +10,41 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-16.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-nomihoudaitsuki.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "攞米河DIe豬機",
       "distractors": [
-        "潑爛地",
-        "Class哥瑪莉MASTER"
+        "Class哥瑪莉MASTER",
+        "Kneel芝CANHand",
+        "哥按奶can蘿deskYo"
       ],
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【攞】米河DIe豬機　選出這一截對應的物件描述。",
-      "correct": "拎住的動作",
-      "distractors": [
-        "生米",
-        "卡通河馬公仔",
-        "倒地姿勢與卡通X眼",
-        "豬的豬形狀",
-        "機械人結構"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "攞 = 河馬拎住生米的動作",
+        "米 = 生米",
+        "河 = 卡通河馬公仔",
+        "DIe = 倒地姿勢與卡通X眼",
+        "豬 = 機械人豬的豬形狀",
+        "機 = 機械人結構"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "攞【米】河DIe豬機　選出這一截對應的物件描述。",
-      "correct": "生米",
-      "distractors": [
-        "卡通河馬公仔",
-        "倒地姿勢與卡通X眼",
-        "豬的豬形狀",
-        "機械人結構"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "攞米【河】DIe豬機　選出這一截對應的物件描述。",
-      "correct": "卡通河馬公仔",
-      "distractors": [
-        "倒地姿勢與卡通X眼",
-        "豬的豬形狀",
-        "機械人結構"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "攞米河【DIe】豬機　選出這一截對應的物件描述。",
-      "correct": "倒地姿勢與卡通X眼",
-      "distractors": [
-        "豬的豬形狀",
-        "機械人結構"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "攞米河DIe【豬】機　選出這一截對應的物件描述。",
-      "correct": "豬的豬形狀",
-      "distractors": [
-        "機械人結構"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "攞米河DIe豬【機】　請點選確認最後一截對應的物件描述。",
-      "correct": "機械人結構",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【攞米河DIe豬機】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/09-go-annai-kano-desu-yo-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
       ],
       "shuffle": true
     }

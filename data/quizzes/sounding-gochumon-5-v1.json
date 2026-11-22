@@ -10,26 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon.mp3?v=20261030gochumon",
-      "start_sec": 2.3,
-      "end_sec": 3.11,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-kudasai.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "天氣涼快(Cool) ≈ ku",
-        "人形太陽被人撻低(撻曬) ≈ dasai",
-        "一句串：天氣 Cool(Cool)，撻低個曬(撻曬)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "Cool撻曬",
       "distractors": [
-        "鵝(goose) ≈ o",
-        "油膩嬰兒(油B) ≈ yobi",
-        "一句串：油膩嬰兒(油B) 食緊鵝(goose)。"
-      ]
+        "鵝油B",
+        "嗱脷mask打罅",
+        "惡Key馬脷鏈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Cool = 天氣涼快",
+        "撻曬 = 人形太陽被人柔道式撻低"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

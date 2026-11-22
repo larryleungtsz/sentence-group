@@ -316,6 +316,21 @@
   }
 
   /**
+   * Q8 passage whole listening. One 「播放」 restarts at 0s and plays the
+   * whole file at 2.0×. No native controls, no speed picker, no ✓/✗.
+   * 「繼續」 is on the slide immediately and passes. A slide rate of 2 is
+   * the fixed rate; any other or missing rate is still 2.0.
+   */
+  function isWholeSentenceListening(quiz) {
+    return !!(quiz && quiz.objective === 'whole_sentence_listening');
+  }
+
+  function wholeSentenceListenRate(audioOpts) {
+    if (audioOpts && Number(audioOpts.rate) === 2) return 2;
+    return 2;
+  }
+
+  /**
    * Audio ✓/✗.
    * Other objectives still treat an omitted self_check as on (`!== false`).
    * Q4/Q7 never evaluate that default: the field is ignored when it is
@@ -327,7 +342,8 @@
   }
 
   /**
-   * Q9 opening only. Later slides, and every other objective, keep 「下一題」.
+   * Q9 opening only. Later youglish slides keep 「下一題」.
+   * Q6 opening is audioListenAdvanceLabel, not this predicate.
    */
   function youglishOpeningContinue(quiz, slide, type, idx) {
     return !!(
@@ -338,6 +354,26 @@
       slide &&
       slide.self_check === false
     );
+  }
+
+  /**
+   * Advance label when an audio slide has no ✓/✗ bar.
+   * Q6 opening only: pronunciation_sounding_select, idx 0, audio_listen,
+   * self_check === false → 「記住咗」 (咗 = U+5497). slide.button is ignored.
+   * Q9 opening stays 「繼續」. Every other case stays 「下一題」.
+   */
+  function audioListenAdvanceLabel(quiz, slide, type, idx) {
+    if (
+      quiz &&
+      quiz.objective === 'pronunciation_sounding_select' &&
+      idx === 0 &&
+      type === 'audio_listen' &&
+      slide &&
+      slide.self_check === false
+    ) {
+      return '記住咗';
+    }
+    return youglishOpeningContinue(quiz, slide, type, idx) ? '繼續' : '下一題';
   }
 
   /**
@@ -626,11 +662,36 @@
     }];
   }
 
+  /**
+   * order_text is correct when chosen indexes equal correct_order.
+   * Indexes refer to slide.options, not the shuffled display.
+   */
+  function gradeOrderText(correctOrder, chosenIndexes) {
+    if (!Array.isArray(correctOrder) || !Array.isArray(chosenIndexes)) return false;
+    if (correctOrder.length === 0 || correctOrder.length !== chosenIndexes.length) return false;
+    for (var i = 0; i < correctOrder.length; i++) {
+      if (Number(correctOrder[i]) !== Number(chosenIndexes[i])) return false;
+    }
+    return true;
+  }
+
+  /** A one-item (or empty) order_text slide is already complete. Do not show it. */
+  function orderTextSlideShown(slide) {
+    if (!slide || slide.type !== 'order_text') return true;
+    return Array.isArray(slide.options) && slide.options.length > 1;
+  }
+
   function prepareSlides(quiz) {
     if (!quiz) return [];
-    if (quiz.objective === 'mother_cloze_usage') return clozeSlides(quiz);
-    if (quiz.objective === 'sentence_listen_to_l1') return listenToL1Slides(quiz);
-    return quiz.slides || [];
+    var slides;
+    if (quiz.objective === 'mother_cloze_usage') slides = clozeSlides(quiz);
+    else if (quiz.objective === 'sentence_listen_to_l1') slides = listenToL1Slides(quiz);
+    else slides = quiz.slides || [];
+    var shown = [];
+    for (var i = 0; i < slides.length; i++) {
+      if (orderTextSlideShown(slides[i])) shown.push(slides[i]);
+    }
+    return shown;
   }
 
   function makeAudio(src, opts) {
@@ -639,10 +700,12 @@
     // speaker: compact play control for group_audio tiles. Full-file URL at
     // opts.rate, no native scrubber and no speed picker. Default callers unchanged.
     const speaker = !!opts.speaker;
+    // Q8: one 播放, no native scrubber, no speed picker. Other callers omit this.
+    const wholeListen = !!opts.whole_listen;
     const wrap = el('div', 'audio-wrap');
     const audio = document.createElement('audio');
-    // Segment shadowing: custom 重播 only (no native scrub).
-    audio.controls = !segmentShadow && !speaker;
+    // Segment shadowing and Q8: custom button only (no native scrub).
+    audio.controls = !segmentShadow && !speaker && !wholeListen;
     audio.preload = 'auto';
     audio.src = src;
     if (speaker) audio.setAttribute('aria-hidden', 'true');
@@ -660,12 +723,12 @@
         audio.removeEventListener('timeupdate', clipListener);
         clipListener = null;
       }
-      const start = opts.start_sec != null ? opts.start_sec : 0;
-      if (opts.start_sec != null || segmentShadow) audio.currentTime = start;
+      const start = wholeListen ? 0 : (opts.start_sec != null ? opts.start_sec : 0);
+      if (wholeListen || opts.start_sec != null || segmentShadow) audio.currentTime = start;
       const useRate = segmentShadow ? 0.75 : opts.rate;
       if (useRate != null) audio.playbackRate = useRate;
       audio.play();
-      if (opts.end_sec != null) {
+      if (!wholeListen && opts.end_sec != null) {
         clipListener = () => {
           if (audio.currentTime >= opts.end_sec) {
             audio.pause();
@@ -680,8 +743,8 @@
     });
     btns.appendChild(play);
 
-    // No speed picker for sentence_segment_shadowing (fixed 0.75×) or speaker tiles.
-    if (!segmentShadow && !speaker && opts.rate_options) {
+    // No speed picker for Q18 (fixed 0.75×), Q8 (fixed 2.0×), or speaker tiles.
+    if (!segmentShadow && !speaker && !wholeListen && opts.rate_options) {
       opts.rate_options.forEach((r) => {
         const b = el('button', 'btn btn-ghost', r + '×');
         b.type = 'button';
@@ -1282,6 +1345,127 @@
       }
     }
 
+    /**
+     * order_text: put every option into correct_order (indexes into options).
+     * No extra distractors. shuffle false keeps options order; otherwise shuffle.
+     * on_wrong show_correct / show_correct_box / show_correct_sequence reveals
+     * the official lines, then 「下一題」 continues. A one-item slide is not
+     * mounted; prepareSlides already drops it.
+     */
+    function mountOrderText(slide) {
+      var options = Array.isArray(slide.options) ? slide.options : [];
+      var items = [];
+      for (var i = 0; i < options.length; i++) {
+        var raw = options[i] == null ? '' : String(options[i]);
+        items.push({ index: i, text: String(cleanChoiceText(raw)) });
+      }
+      var pool = slide.shuffle === false ? items.slice() : shuffle(items);
+      var placed = [];
+      var continueBtn = null;
+      var instruction =
+        typeof slide.instruction === 'string' && slide.instruction.trim()
+          ? slide.instruction.trim()
+          : '將各截諧音排成正確次序。';
+      body.appendChild(el('p', 'instruction', instruction));
+      var progress = el('p', 'multi-tap-progress', '');
+      body.appendChild(progress);
+      var built = el('div', 'choices');
+      built.setAttribute('data-order-role', 'built');
+      body.appendChild(built);
+      body.appendChild(el('p', 'muted', '未排'));
+      var poolEl = el('div', 'choices');
+      poolEl.setAttribute('data-order-role', 'pool');
+      body.appendChild(poolEl);
+      var submit = el('button', 'btn btn-primary', '確認');
+      submit.type = 'button';
+      body.appendChild(submit);
+
+      function correctLines() {
+        var order = Array.isArray(slide.correct_order) ? slide.correct_order : [];
+        var lines = [];
+        for (var n = 0; n < order.length; n++) {
+          var at = Number(order[n]);
+          var text = '';
+          for (var j = 0; j < items.length; j++) {
+            if (items[j].index === at) text = items[j].text;
+          }
+          lines.push(text);
+        }
+        return lines;
+      }
+
+      function paint() {
+        built.innerHTML = '';
+        poolEl.innerHTML = '';
+        placed.forEach(function (item, i) {
+          var b = el('button', 'btn choice selected', (i + 1) + '. ' + item.text);
+          b.type = 'button';
+          b.setAttribute('data-order-index', String(item.index));
+          b.addEventListener('click', function () {
+            var at = placed.indexOf(item);
+            if (at !== -1) placed.splice(at, 1);
+            paint();
+          });
+          built.appendChild(b);
+        });
+        pool.forEach(function (item) {
+          if (placed.indexOf(item) !== -1) return;
+          var b = el('button', 'btn choice', item.text);
+          b.type = 'button';
+          b.setAttribute('data-order-index', String(item.index));
+          b.addEventListener('click', function () {
+            placed.push(item);
+            paint();
+          });
+          poolEl.appendChild(b);
+        });
+        progress.textContent = '已排 ' + placed.length + '/' + items.length;
+        var ready = placed.length === items.length && items.length > 1;
+        submit.disabled = !ready;
+        submit.setAttribute('aria-disabled', ready ? 'false' : 'true');
+      }
+
+      function revealCorrectOrder() {
+        clearFeedback();
+        feedback.className = 'quiz-feedback bad';
+        feedback.appendChild(el('p', 'hint', '正確次序：'));
+        correctLines().forEach(function (line, i) {
+          feedback.appendChild(el('p', 'hint', (i + 1) + '. ' + line));
+        });
+        if (!continueBtn) {
+          continueBtn = el('button', 'btn btn-primary', '下一題');
+          continueBtn.type = 'button';
+          continueBtn.addEventListener('click', function () {
+            idx++;
+            renderSlide();
+          });
+          body.appendChild(continueBtn);
+        }
+        if (hooks.onFail) hooks.onFail(quiz);
+      }
+
+      submit.addEventListener('click', function () {
+        if (placed.length !== items.length || items.length <= 1) return;
+        var chosen = placed.map(function (item) { return item.index; });
+        if (gradeOrderText(slide.correct_order, chosen)) {
+          idx++;
+          renderSlide();
+          return;
+        }
+        var fb = quiz.feedback || {};
+        if (
+          fb.on_wrong === 'show_correct' ||
+          fb.on_wrong === 'show_correct_box' ||
+          fb.on_wrong === 'show_correct_sequence'
+        ) {
+          revealCorrectOrder();
+          return;
+        }
+        showFail('次序不對');
+      });
+      paint();
+    }
+
     function renderSlide() {
       releaseRecorder();
       clearFeedback();
@@ -1731,6 +1915,14 @@
           audioOpts.segment_shadow = false;
           audioOpts.rate = plan.rate;
           audioOpts.rate_options = null;
+        } else if (isWholeSentenceListening(quiz)) {
+          // Q8: whole file from 0s at 2.0×. Clip windows and speed buttons stay off.
+          audioOpts.whole_listen = true;
+          audioOpts.segment_shadow = false;
+          audioOpts.rate = wholeSentenceListenRate(audioOpts);
+          audioOpts.rate_options = null;
+          audioOpts.start_sec = null;
+          audioOpts.end_sec = null;
         }
         const instruction = plan.record.enabled
           ? (slide.instruction || ('請跟讀成句（' + plan.rate + '×）'))
@@ -1763,6 +1955,18 @@
           body.appendChild(done);
           return;
         }
+        // Q8 passes with 「繼續」. The button is on the slide immediately;
+        // playback does not have to finish. No ✓/✗ bar.
+        if (isWholeSentenceListening(quiz) && audioOpts.whole_listen) {
+          const cont = el('button', 'btn btn-primary', '繼續');
+          cont.type = 'button';
+          cont.addEventListener('click', () => {
+            idx++;
+            renderSlide();
+          });
+          body.appendChild(cont);
+          return;
+        }
         // Q4/Q7 are already returned above. showsAudioSelfCheck refuses them
         // again so this `!== false` default cannot show ✓/✗ if recording is off.
         if (showsAudioSelfCheck(quiz, slide)) {
@@ -1779,7 +1983,9 @@
             )
           );
         } else {
-          const nextLabel = youglishOpeningContinue(quiz, slide, type, idx) ? '繼續' : '下一題';
+          // Q6 opening 「記住咗」. Q9 opening 「繼續」. Otherwise 「下一題」.
+          // slide.button is not read.
+          const nextLabel = audioListenAdvanceLabel(quiz, slide, type, idx);
           const next = el('button', 'btn btn-primary', nextLabel);
           next.type = 'button';
           next.addEventListener('click', () => {
@@ -1847,6 +2053,17 @@
         return;
       }
 
+      if (type === 'order_text') {
+        var orderCount = Array.isArray(slide.options) ? slide.options.length : 0;
+        if (orderCount <= 1) {
+          idx++;
+          renderSlide();
+          return;
+        }
+        mountOrderText(slide);
+        return;
+      }
+
       // Unknown slide type: skip with note
       body.appendChild(el('p', 'instruction', '未支援嘅題型：' + type));
       const skip = el('button', 'btn', '跳過');
@@ -1869,12 +2086,17 @@
     isSegmentShadow: isSegmentShadow,
     shadowSlidePlan: shadowSlidePlan,
     wholeSentenceShadowRate: wholeSentenceShadowRate,
+    isWholeSentenceListening: isWholeSentenceListening,
+    wholeSentenceListenRate: wholeSentenceListenRate,
     multiTapTargets: multiTapTargets,
     multiTapImage: multiTapImage,
     gradeMultiTap: gradeMultiTap,
     gradeGroupAudio: gradeGroupAudio,
     placementAfterReturnMisplaced: placementAfterReturnMisplaced,
     hotspotRect: hotspotRect,
+    audioListenAdvanceLabel: audioListenAdvanceLabel,
+    gradeOrderText: gradeOrderText,
+    orderTextSlideShown: orderTextSlideShown,
   };
 
   if (typeof module === 'object' && module.exports) {

@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 15.1,
-      "end_sec": 16.09,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-osageshimasune.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-sage-shimasu-ne→惡沙基／撕馬薯",
-        "一句串：面目猙獰、着彩虹Tee嘅人形沙人正撕開馬手上嘅薯條"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "惡沙基撕馬薯",
       "distractors": [
-        "kochira→哥刺拉",
-        "一句串：全身長滿刺嘅哥斯拉"
-      ]
+        "哥刺拉",
+        "按摩池絲mask泥",
+        "駝鳥牙air阻耳坐釘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "惡沙基 = 面目猙獰着彩虹Tee嘅人形沙人",
+        "撕馬薯 = 撕開馬手上嘅薯條"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

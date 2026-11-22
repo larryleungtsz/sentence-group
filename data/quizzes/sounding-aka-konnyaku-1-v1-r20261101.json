@@ -10,30 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-aka-konnyaku.mp3?v=20261030aka",
-      "start_sec": 0.05,
-      "end_sec": 1.0,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-sonoshita.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜sono≈鎖／law；shita≈start｜chain：鎖／law(法官大人)／start(start 掣)",
-        "鎖law = 被鎖住嘅法官大人",
-        "start = start 掣",
-        "一句串：被鎖住嘅法官大人按下 start 掣"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鎖lawstart",
       "distractors": [
-        "SOR：reading→objects｜aka≈壓價；kon≈江；nya≈梨；ku≈yak／拳｜chain：壓價(壓住價錢牌)／江(江水道)／梨(卡通梨)／yak／拳(食自己拳頭)",
-        "壓價 = 壓住價錢牌",
-        "江 = 江水道",
-        "梨 = 卡通梨人",
-        "yak拳 = 猛食自己拳頭",
-        "壓價江梨yak拳 - 江上卡通梨人壓住價錢牌，同時猛食自己拳頭"
-      ]
+        "壓價江梨yak拳",
+        "鵝dark屍desk",
+        "thaidad鵝梨馬"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鎖law = 被鎖住嘅法官大人",
+        "start = start 掣"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

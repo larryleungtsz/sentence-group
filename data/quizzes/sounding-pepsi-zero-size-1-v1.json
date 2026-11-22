@@ -10,22 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-pepsi-zero-size.mp3",
-      "start_sec": 0.05,
-      "end_sec": 0.68,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-sakkino.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "沙造嘅硬盾(沙堅) ≈ sakki",
-        "少少燒焦嘅馬毛公仔(Horse Doll燶) ≈ no",
-        "一句串：沙造嘅硬盾(沙堅) → 少少燒焦嘅馬毛公仔(Horse Doll燶)。"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "沙堅HorseDoll燶",
+      "distractors": [
+        "丹邊燶",
+        "pet絲傘蘿蛙",
+        "曬豬"
       ],
-      "distractors": []
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "沙堅 = 沙造嘅硬盾",
+        "HorseDoll燶 = 少少燒焦嘅馬毛公仔"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

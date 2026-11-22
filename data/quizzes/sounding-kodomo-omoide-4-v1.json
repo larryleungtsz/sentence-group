@@ -1,0 +1,51 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 4,
+    "text": "通りかかって"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-toorikakatte.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "駝鳥卡卡釘",
+      "distractors": [
+        "簫賣藥",
+        "thaibear喳蛋",
+        "泥蛋蛙"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "駝鳥 = 同一條路邊草地、畫面右邊那隻站立的灰褐色真實駝鳥",
+        "卡 = 同一隻駝鳥頭部、靠近畫面左邊那隻眼睛位置的那張紅心A撲克牌",
+        "卡 = 同一隻駝鳥頭部、靠近畫面右邊那隻眼睛位置的那張黑桃A撲克牌",
+        "釘 = 同一隻駝鳥喙尖斜向上突出的那根銀色金屬釘"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

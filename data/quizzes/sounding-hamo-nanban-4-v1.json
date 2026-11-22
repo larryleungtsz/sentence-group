@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-hamo-nanban.mp3?v=20261030hamo",
-      "start_sec": 4.3,
-      "end_sec": 5.3,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-honjitsu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "honjitsu→韓／蜘蛛",
-        "一句串：一隻着住 韓國旗 tee(韓) 嘅 蜘蛛(蜘蛛)。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "韓蜘蛛",
       "distractors": [
-        "nanban-zuke-desu→爛／斑／豬／基",
-        "一句串：全身長 斑馬紋(斑) 嘅 豬(豬) 着住件 爛(爛) 彩虹 tee(基)。"
-      ]
+        "椅wash駝",
+        "鋼鐵底手放底",
+        "豬攞Mon攞desk"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "韓 = 韓國旗 tee",
+        "蜘蛛 = 蜘蛛"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

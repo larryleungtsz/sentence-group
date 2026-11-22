@@ -10,28 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
-      "start_sec": 0.57,
-      "end_sec": 0.91,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-kakunin.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "Ka→card",
-        "kun→冠（皇冠）",
-        "Nin→鏈",
-        "一句串：card頭頂戴皇冠，頸上纏鏈。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "card冠鏈",
       "distractors": [
-        "割(割) ≈ go",
-        "豬(豬) ≈ chū",
-        "電腦屏幕(Mon) ≈ mon",
-        "一句串：豬(豬) 用鐮刀 割(割) 電腦屏幕(Mon)。"
-      ]
+        "殺蛇Dead2蛋蛋key抹",
+        "鵝抹刺街",
+        "奶爹索car"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "card = 卡",
+        "冠 = 皇冠",
+        "鏈 = 鏈"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

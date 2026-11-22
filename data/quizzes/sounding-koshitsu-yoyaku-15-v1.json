@@ -10,68 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "data/audio/clips/koshitsu-yoyaku-15.wav",
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-nijikanhan.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
       "type": "select_text",
-      "instruction": "選出正確的廣東話諧音串。",
+      "instruction": "選出正確的諧音串。",
       "correct": "Kneel芝CANHand",
       "distractors": [
         "攞米河DIe豬機",
-        "潑爛地",
-        "Class哥瑪莉MASTER"
+        "Class哥瑪莉MASTER",
+        "哥按奶can蘿deskYo"
       ],
       "shuffle": true
     },
     {
-      "type": "select_text",
-      "instruction": "【Kneel】芝CANHand　選出這一截對應的物件描述。",
-      "correct": "跪姿造型",
-      "distractors": [
-        "卡通芝士公仔",
-        "鋁罐",
-        "組成的雙手"
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "Kneel = 跪姿造型",
+        "芝 = 卡通芝士公仔",
+        "CAN = 鋁罐",
+        "Hand = 鋁罐組成的雙手"
       ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Kneel【芝】CANHand　選出這一截對應的物件描述。",
-      "correct": "卡通芝士公仔",
-      "distractors": [
-        "鋁罐",
-        "組成的雙手"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Kneel芝【CAN】Hand　選出這一截對應的物件描述。",
-      "correct": "鋁罐",
-      "distractors": [
-        "組成的雙手"
-      ],
-      "shuffle": true
-    },
-    {
-      "type": "select_text",
-      "instruction": "Kneel芝CAN【Hand】　請點選確認最後一截對應的物件描述。",
-      "correct": "組成的雙手",
-      "distractors": [],
-      "shuffle": true
-    },
-    {
-      "type": "select_image",
-      "instruction": "【Kneel芝CANHand】同以下邊張圖最啱？",
-      "correct": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/10-nijikan-han-combined.jpg",
-      "distractors": [
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/08-teburu-seki-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/11-nomihodai-tsuki-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/12-puran-de-combined.jpg",
-        "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/images/01-kashikomarimashita-combined.jpg"
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
       ],
       "shuffle": true
     }

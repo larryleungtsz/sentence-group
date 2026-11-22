@@ -1,0 +1,47 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-9-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 9,
+    "text": "高い"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-takai.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "tart家兒",
+      "distractors": [
+        "航doll脷",
+        "泥蛋蛙",
+        "thaibear喳蛋"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "tart = 同一畫面穿住黑白間條小偷衫嘅嬰兒把房屋模型偷走嗰一下",
+        "家兒 = 同一畫面右邊抱住房屋模型、穿住黑白間條小偷衫嘅金髮嬰兒"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

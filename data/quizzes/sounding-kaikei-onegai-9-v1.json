@@ -10,18 +10,27 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-kaikei-onegai.mp3?v=20261030kaikei",
-      "start_sec": 9.4,
-      "end_sec": 10.814694,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-goriyouninararemasuka.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜go≈哥；ri≈knee；yō≈YO；ni≈鏈；nara≈啦啦；re≈Lev；masu≈mask；ka≈car｜chain：哥(跪喺道哥布林)／knee／YO(巨型YOYO)／鏈／啦啦(浮起啦啦球)／Lev(浮起)／mask／car(戴mask嘅車)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "哥kneeYO鏈啦啦Levmaskcar",
+      "distractors": [
+        "攞書鎖蛙",
+        "鵝押注咖喱smart薯",
+        "錯doll"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "哥 = 跪喺道哥布林",
         "knee = 跪",
         "YO = 巨型YOYO",
@@ -29,19 +38,19 @@
         "啦啦 = 浮起啦啦球",
         "Lev = 浮起",
         "mask = mask",
-        "car = 戴mask嘅車",
-        "一句串：跪喺道哥布林背巨型YOYO拎鏈，連住浮起啦啦球同戴mask嘅車"
+        "car = 戴mask嘅車"
       ],
-      "distractors": [
-        "SOR：reading→objects｜ka≈Class；shi≈哥；koma≈瑪莉；rimashita≈MASTER｜chain：Class(亞洲學校學生椅枱／課室)／哥(哥布林)／瑪莉(似Mario嘅男人)／MASTER(功夫大師)",
-        "Class = 亞洲學校課室",
-        "哥 = 哥布林",
-        "瑪莉 = 似Mario嘅男人",
-        "MASTER = 功夫大師",
-        "Class哥瑪莉MASTER - 亞洲學校課室入面，哥布林坐喺學生椅枱，被似Mario嘅瑪莉同功夫大師責備",
-        "SOR：reading→objects｜ryō≈攞；shū≈書；sho≈鎖；wa≈蛙｜chain：攞／書／鎖／蛙",
-        "攞 = 攞住"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

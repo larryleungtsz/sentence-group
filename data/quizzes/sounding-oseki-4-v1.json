@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-oseki-4-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+  "chunk": {
+    "id": 4,
+    "text": "お待ちしております"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omachishiteorimasu.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "鵝抹刺舌釘痾尿馬",
+      "distractors": [
+        "舌豬叻熱蛋獅mask",
+        "鵝抹刺街奶deskcar",
+        "哥Yoyakgood魚割多地"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "鵝 = 同一畫面庭院泥地上低頭的白色大鵝",
+        "抹 = 同一畫面鵝用抹布抹住地上嘅刺嗰一下",
+        "刺 = 同一畫面泥地上散落、正被抹住的帶刺枝條",
+        "舌釘 = 同一畫面鵝脷上戴住的銀色金屬釘",
+        "痾尿 = 同一畫面馬失禁瀨出的一灘尿",
+        "馬 = 同一畫面右方站住的深棕色馬"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

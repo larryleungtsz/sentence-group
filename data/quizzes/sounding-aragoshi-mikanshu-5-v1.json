@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 8.5,
-      "end_sec": 10.7,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-ijodeyoroshiidesuka.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "ijō-de-yoroshii-desu-ka→耳坐釘／油螺絲／desk car",
-        "一句串：卡通耳仔坐喺釘上；手摸住一條好油嘅螺絲；隔離有部用枱砌成嘅車"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "耳坐釘油螺絲desk car",
       "distractors": [
-        "okawari-de→鱷家／挖梨地",
-        "一句串：卡通鱷魚喺掛滿鱷魚家庭照嘅屋企挖梨花紋地板"
-      ]
+        "駝鳥牙air阻耳坐釘",
+        "按摩池絲mask泥",
+        "哥刺拉"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "耳坐釘 = 卡通耳仔坐喺釘上",
+        "油螺絲 = 好油嘅螺絲",
+        "deskcar = 用枱砌成嘅車"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

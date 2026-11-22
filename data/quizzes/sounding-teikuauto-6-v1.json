@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-teikuauto-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "chunk": {
+    "id": 6,
+    "text": "大きくて"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-ookikute.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "oakley拳釘",
+      "distractors": [
+        "櫻花時鐘nano",
+        "咯拳爹",
+        "哥啜bar腥陀"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "oakley = 同一個裝修工場裡、畫面右邊那個裝修男臉上那副運動太陽眼鏡",
+        "拳 = 那個裝修男握緊、正在打釘的拳頭",
+        "釘 = 那個裝修男另一隻手按在直立木柱上的金屬長釘"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

@@ -10,30 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-tsukete-itadaku.mp3?v=20261030tsukete",
-      "start_sec": 4.5,
-      "end_sec": 4.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-zehi.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜ze≈遮；hi≈heating｜chain：遮(umbrella)／heating(着火／噴火)",
-        "遮 = 遮／umbrella",
-        "heating = 着火／噴火",
-        "一句串：遮着火噴火"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "遮heating",
       "distractors": [
-        "SOR：reading→objects｜otameshi≈樂／打／咩；kudasai＝（未覆蓋 — 見 Flag）｜chain：樂(音符人)／打／咩(山羊)",
-        "樂 = 音符人",
-        "打 = 打",
-        "咩 = 山羊",
-        "樂打咩 - 音符人抬手打向山羊",
-        "SOR：reading→objects｜osusume≈痾殊殊／咩；shiteru≈舌釘；node≈路落釘｜chain：痾殊殊(羊撒尿)／咩(羊)／舌釘／路落釘(天落釘)"
-      ]
+        "樂打咩",
+        "耳air",
+        "matcha"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "遮 = 遮／umbrella",
+        "heating = 着火／噴火"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

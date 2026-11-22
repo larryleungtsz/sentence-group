@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-oseki-5-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A:お席のみのご予約っていうことで」「おまちがいないですかね。」B: はい、大丈夫でーす。「はい、18時半 2名様」「キムラ様のお名前で」「ご予約お待ちしております。」A:はい。お願いしまーす。B: 「失礼いたしまーす」",
+  "chunk": {
+    "id": 5,
+    "text": "失礼いたしまーす"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-shitsurei.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "舌豬叻熱蛋獅mask",
+      "distractors": [
+        "鵝抹刺舌釘痾尿馬",
+        "鵝抹刺街奶deskcar",
+        "哥Yoyakgood魚割多地"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "舌 = 同一畫面豬伸出來嘅好長粉紅色脷",
+        "豬 = 同一畫面右邊站住、雙腳企喺舞台上嘅粉紅色豬",
+        "叻 = 同一畫面豬右手舉住嘅讚好手勢",
+        "熱蛋 = 同一畫面豬左手舉高嘅一隻滾燙雞蛋",
+        "獅 = 同一畫面豬頭上戴住嘅獅子面具嘅獅面同鬃毛",
+        "mask = 同一畫面豬頭上戴住嘅獅子面具"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

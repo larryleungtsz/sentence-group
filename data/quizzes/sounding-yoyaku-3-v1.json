@@ -10,24 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-irasshaimase-yoyaku.mp3?v=20261026yoyaku",
-      "start_sec": 4.1,
-      "end_sec": 4.9,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-7jikara.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "shichi-ji-kara→舌刺芝加辣",
-        "一句串：舌頭長刺、刺上插住芝士嘅人；加緊額外辣落辣鍋。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "舌刺芝加辣",
       "distractors": [
-        "go-yoyaku-itadaitemasu-ka→歌吔拳熱蛋蛋熱爹masked car",
-        "一句串：頭戴卡通藥嘅怪正咬自己拳頭；鑊上兩隻着火蛋；着火中年發火阿爹坐住masked car一邊炒蛋。"
-      ]
+        "藥pill咬拳舌爹dark",
+        "攔deak ghetto",
+        "knee咩沙馬dead"
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

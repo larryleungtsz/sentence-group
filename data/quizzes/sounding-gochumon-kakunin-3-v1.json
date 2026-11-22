@@ -10,28 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-gochumon-kakunin.mp3",
-      "start_sec": 0.91,
-      "end_sec": 2.58,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-saseteitadakimasu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "させて→殺蛇Dead",
-        "いただ→2蛋蛋",
-        "きます→key抹",
-        "一句串：殺蛇Dead尾上放2蛋蛋，key抹地上血紅油漆。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "殺蛇Dead2蛋蛋key抹",
       "distractors": [
-        "Ka→card",
-        "kun→冠（皇冠）",
-        "Nin→鏈",
-        "一句串：card頭頂戴皇冠，頸上纏鏈。"
-      ]
+        "鵝抹刺街",
+        "奶爹索car",
+        "card冠鏈"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "殺蛇Dead = 受傷蛇眼畫交叉",
+        "2蛋蛋 = 尾上兩隻蛋",
+        "key抹 = 鎖匙抹地上血紅油漆"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

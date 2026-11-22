@@ -10,24 +10,37 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-oryori-last-order.mp3?v=20261028sent",
-      "start_sec": 1.8,
-      "end_sec": 2.2,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-ojikan.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-jikan→痾／字／鋼",
-        "一句串：鋼鐵人(鋼) 兩邊屁股跌出 字(字)，伴隨 痾(痾) 聲。"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "痾字鋼",
       "distractors": [
-        "rasuto-ōdā-no→辣／薯／tall／打／蘿",
-        "一句串：頭戴辣椒(辣) 嘅 tall 高薯(薯／tall) 用手 打(打) 自己個 蘿屁股(蘿)。"
-      ]
+        "陀辣舌馬S",
+        "豬醫家",
+        "割豬Mon"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "痾 = 痾聲",
+        "字 = 字",
+        "鋼 = 鋼鐵人"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

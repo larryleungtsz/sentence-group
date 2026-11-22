@@ -10,34 +10,39 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-ebi-sumiso.mp3?v=20261030ebi",
-      "start_sec": 2.0,
-      "end_sec": 3.6,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/03207c8ba3aaf48c0dc161abdc69d9c595a8fae0/audio/chunk-sumisogakedesu.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音（成句＋細項）。",
-      "correct": [
-        "SOR：reading→objects｜su≈樹；miso≈咪梳；gake≈card機；desu≈desk｜chain：樹／咪梳(樹上貓咪梳頭)／card機(洗啤牌機)／desk(枱)",
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "樹咪梳card機desk",
+      "distractors": [
+        "傻佬",
+        "獅撻茄tall",
+        "壓沙脷落"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
         "樹 = 樹",
         "咪梳 = 樹上貓咪梳頭",
         "card機 = 洗啤牌機",
-        "desk = 枱",
-        "一句串：枱上長住一棵樹，樹上貓咪梳頭，隔離一部洗啤牌機"
+        "desk = 枱"
       ],
-      "distractors": [
-        "SOR：reading→objects｜sono o-tonari ga≈傻佬｜chain：傻佬(呆樣人，雙手拎住白紙卡)；後半 tonari 已喺 #1",
-        "傻佬 = 呆樣人，雙手拎住白紙卡",
-        "傻佬 - 呆呆哋嘅傻佬雙手拎住白紙卡企喺度",
-        "SOR：reading→objects｜kyū≈kill；ri≈梨；no≈落｜chain：kill(凶神惡煞殺手＋武士刀)／梨／落(切開落下)",
-        "kill = 凶神惡煞殺手＋武士刀",
-        "梨 = 梨",
-        "落 = 切開落下",
-        "kill梨落 - 凶神惡煞殺手用武士刀切開梨，切開嘅半邊落下"
-      ]
+      "correct_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

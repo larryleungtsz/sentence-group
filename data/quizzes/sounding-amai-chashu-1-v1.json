@@ -10,21 +10,22 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-amai-chashu.mp3?v=20261029amai",
-      "start_sec": 0.05,
-      "end_sec": 0.4,
-      "rate": 1
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-amai.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "amai→牙賣",
-        "一句串：卡通人形牙齒開小販檔（牙賣）。"
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "牙賣",
+      "distractors": [
+        "叉梳嫁",
+        "Song那裡",
+        "ski炸奶"
       ],
-      "distractors": []
+      "shuffle": true
     }
   ],
   "feedback": {

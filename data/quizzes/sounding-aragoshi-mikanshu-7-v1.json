@@ -10,24 +10,35 @@
   },
   "slides": [
     {
-      "type": "audio_chunk",
-      "instruction": "請聽這個詞。",
-      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/sentence-nomimono-aragoshi-mikan.mp3?v=20261029aragoshi",
-      "start_sec": 12.9,
-      "end_sec": 14.5,
-      "rate": 1.0
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/219fecb275fd7fd8ee31cd80e577f607a9a7189e/audio/chunk-omochishimasune.mp3",
+      "rate": 1,
+      "self_check": false
     },
     {
-      "type": "multi_select",
-      "instruction": "選出與剛才讀音相關的諧音。",
-      "correct": [
-        "o-mochi-shimasu-ne→按摩池／絲mask泥",
-        "一句串：泳池入面好多按摩噴射裝置；泥怪戴住蛛絲面具"
-      ],
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "按摩池絲mask泥",
       "distractors": [
-        "toriaezu-ijō-de→駝鳥／牙air阻／耳坐釘",
-        "一句串：卡通牙仔用口吹風牆擋住周圍跑嘅駝鳥；隔離卡通耳仔坐喺釘上"
-      ]
+        "哥刺拉",
+        "惡沙基撕馬薯",
+        "駝鳥牙air阻耳坐釘"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "按摩池 = 泳池入面好多按摩噴射裝置",
+        "絲mask泥 = 泥怪戴住蛛絲面具"
+      ],
+      "correct_order": [
+        0,
+        1
+      ],
+      "shuffle": true
     }
   ],
   "feedback": {

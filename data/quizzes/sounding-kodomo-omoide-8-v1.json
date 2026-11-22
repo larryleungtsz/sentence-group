@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kodomo-omoide-8-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "子供の頃の思い出。今日通りかかって焼売を食べちゃった！値段は本当に高い。",
+  "chunk": {
+    "id": 8,
+    "text": "本当に"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/9b8e91d9b23b0359dc712ad86d88251de9e89d73/audio/chunk-hontouni.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "航doll脷",
+      "distractors": [
+        "tart家兒",
+        "泥蛋蛙",
+        "thaibear喳蛋"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "航 = 同一張木書枱右邊、伸出脷的淺灰色飛機毛公仔的飛機外形，包括機翼同輪子",
+        "doll = 同一張木書枱右邊那隻淺灰色飛機毛公仔",
+        "脷 = 同一隻飛機毛公仔伸出的粉紅色脷"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

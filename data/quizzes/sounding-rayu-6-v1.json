@@ -1,0 +1,55 @@
+{
+  "quiz_id": "sounding-rayu-6-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "chunk": {
+    "id": 6,
+    "text": "かけてくれた"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/4bc4cf9c58f31df39548b5b584c66c11145a3578/audio/chunk-kaketekureta.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "carcatdead菇叻蛋",
+      "distractors": [
+        "達bul梨",
+        "Yolk箍爹",
+        "樹歌拳"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "car = 畫面右幅那隻車形貓身體上的車窗和車輪等車輛特徵",
+        "cat = 畫面右幅木板上那隻有貓耳、鬍鬚和尾巴的車形貓",
+        "dead = 那隻車形貓雙眼打交差、吐舌、訓低的姿態",
+        "菇 = 畫面右幅木板上站在車形貓旁邊的卡通菇公仔",
+        "叻 = 那隻卡通菇舉起的手指公",
+        "蛋 = 戴在卡通菇頭上、邊緣像破蛋殼的米白色蛋造型㡌"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}

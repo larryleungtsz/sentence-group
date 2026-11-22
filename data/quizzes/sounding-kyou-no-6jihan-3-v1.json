@@ -1,0 +1,49 @@
+{
+  "quiz_id": "sounding-kyou-no-6jihan-3-v1",
+  "objective": "pronunciation_sounding_select",
+  "level": 1,
+  "variant": 1,
+  "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」",
+  "chunk": {
+    "id": 3,
+    "text": "2人で"
+  },
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/131f65042daec5ddc382a2004645f9be78c4fffd/audio/chunk-futaride.mp3",
+      "rate": 1,
+      "self_check": false
+    },
+    {
+      "type": "select_text",
+      "instruction": "選出正確的諧音串。",
+      "correct": "闊蛋脷爹",
+      "distractors": [
+        "蛇蝎dead",
+        "蕉嚇廁紙hand加辣",
+        "落菇芝hand咖辣"
+      ],
+      "shuffle": true
+    },
+    {
+      "type": "order_text",
+      "instruction": "將各截諧音排成正確次序。",
+      "options": [
+        "闊蛋 = 同一畫面右邊泥地上橫放嘅超級闊嘅斑點巨蛋",
+        "脷 = 同一畫面中年老爹伸出、正舐住巨蛋頂部嘅好長粉紅色脷",
+        "爹 = 同一畫面右邊彎腰伸出長脷去舐巨蛋嘅中年老爹"
+      ],
+      "correct_order": [
+        0,
+        1,
+        2
+      ],
+      "shuffle": true
+    }
+  ],
+  "feedback": {
+    "on_wrong": "show_correct"
+  }
+}
