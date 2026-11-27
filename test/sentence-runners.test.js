@@ -576,7 +576,7 @@ tests.push(test('Q8 whole_sentence_listening restarts at 2.0× from one 播放 a
   const files = fs.readdirSync(path.join(root, 'data/quizzes')).filter(function (file) {
     return /^whole-listen-.*\.json$/.test(file);
   }).sort();
-  assert.strictEqual(files.length, 22);
+  assert.strictEqual(files.length, 30);
   files.forEach(function (file) {
     const quiz = readJson('data/quizzes/' + file);
     assert.strictEqual(quiz.objective, 'whole_sentence_listening', quiz.quiz_id);
