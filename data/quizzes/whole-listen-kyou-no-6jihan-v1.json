@@ -1,0 +1,18 @@
+{
+  "quiz_id": "whole-listen-kyou-no-6jihan-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "今日の6時半から2人で，まだ席って空いてますか？18時半から2名様ですね。少々お待ちください。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/ff914f148c2e9b849c80bb40ce21feaab88c7495/audio/sentence-kyou-no-6jihan.mp3",
+      "rate": 2,
+      "self_check": false
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

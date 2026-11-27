@@ -265,7 +265,7 @@ test('live passage quizzes are due on kind passage and the smoke shell is not', 
 test('manifest passage kinds keep objectives; sentence rows are live Soft GO', function () {
   const passages = manifest.quizzes.filter((q) => q.kind === 'passage');
   const sentences = manifest.quizzes.filter((q) => q.kind === 'sentence');
-  assert.strictEqual(passages.length, 712);
+  assert.strictEqual(passages.length, 713);
   passages.forEach((q) => {
     assert.ok(PASSAGE_OBJECTIVES.indexOf(q.objective) !== -1, q.quiz_id);
     assert.ok(q.chunk_id == null, q.quiz_id);

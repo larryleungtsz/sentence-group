@@ -39770,6 +39770,14 @@
       "level": null,
       "kind": "passage",
       "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。"
+    },
+    {
+      "quiz_id": "whole-listen-kyou-no-6jihan-v1",
+      "file": "data/quizzes/whole-listen-kyou-no-6jihan-v1.json",
+      "objective": "whole_sentence_listening",
+      "level": null,
+      "kind": "passage",
+      "sentence": "A: 今日の6時半から2人で   ，まだ席って空いてますか？\nB: 「18時半から」    「2名様ですね」「少々お待ちください」"
     }
   ]
 }
