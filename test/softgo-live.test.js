@@ -193,6 +193,7 @@ const NEW_WHOLE_LISTEN = [
   'data/quizzes/whole-listen-rayu-v1.json',
   'data/quizzes/whole-listen-roji-v1.json',
   'data/quizzes/whole-listen-teikuauto-v1.json',
+  'data/quizzes/whole-listen-kyou-no-6jihan-v1.json',
 ];
 
 function correctedPassageSentence(sentence) {
@@ -1683,7 +1684,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     mother_cloze_usage: 1,
     sentence_segment_shadowing: 660,
     sequence_training: 22,
-    whole_sentence_listening: 30,
+    whole_sentence_listening: 31,
     sentence_listen_to_l1: 54,
     sentence_l1_palace_multi_tap: 54,
     sentence_shadowing_125: 60,
@@ -1698,7 +1699,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     counts[row.objective] = (counts[row.objective] || 0) + 1;
   });
   assert.deepStrictEqual(counts, expectedCounts);
-  assert.strictEqual(manifest.quizzes.length, 3887);
+  assert.strictEqual(manifest.quizzes.length, 3888);
   assert.deepStrictEqual(surfaceSince(base), ['data/groups.json', 'group.html', 'js/quiz-runner.js']);
 
   const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
@@ -2084,7 +2085,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   assert.strictEqual(rows('gloss_to_palace_tap').length, 280);
   assert.strictEqual(rows('meaning_object_select_and_tap').length, 278);
   assert.strictEqual(rows('story_select_image').length, 278);
-  assert.strictEqual(manifest.quizzes.length, 3887);
+  assert.strictEqual(manifest.quizzes.length, 3888);
 
   const specs = [
     { files: q4Files, objective: 'word_shadowing_025', rate: 0.25, instruction: '請聽 0.25× 詞塊示範，然後開始錄音跟讀。', hangs: q4 },
@@ -2236,7 +2237,7 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
   assert.strictEqual(q5.length, 278);
   const ids = new Set(q5.map((row) => row.quiz_id));
   assert.strictEqual(ids.size, 275);
-  assert.strictEqual(manifest.quizzes.length, 3887);
+  assert.strictEqual(manifest.quizzes.length, 3888);
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
 
   function rows(objective) {
@@ -2462,11 +2463,11 @@ test('official Q6 ship is 291 new-design files and 108 appended hangs', function
   assert.strictEqual(baseManifest.quizzes.length, 3771);
   assert.strictEqual(manifest.generated_at, baseManifest.generated_at);
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
-  assert.strictEqual(manifest.quizzes.length, 3887);
+  assert.strictEqual(manifest.quizzes.length, 3888);
   assert.deepStrictEqual(manifest.quizzes.slice(0, 3771).map(restoreKonnaHang), baseManifest.quizzes);
   assert.strictEqual(manifest.quizzes[3770].quiz_id, 'story-aru-8-v1');
   const added = manifest.quizzes.slice(3771);
-  assert.strictEqual(added.length, 116);
+  assert.strictEqual(added.length, 117);
   const soundingAdded = added.slice(0, 108);
   const wholeListenAdded = added.slice(108);
   const skipSlots = new Set();
@@ -2494,6 +2495,7 @@ test('official Q6 ship is 291 new-design files and 108 appended hangs', function
     'whole-listen-rayu-v1',
     'whole-listen-roji-v1',
     'whole-listen-teikuauto-v1',
+    'whole-listen-kyou-no-6jihan-v1',
   ]);
   wholeListenAdded.forEach((row) => {
     assert.strictEqual(row.objective, 'whole_sentence_listening', row.quiz_id);
