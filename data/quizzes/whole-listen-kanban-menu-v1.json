@@ -1,0 +1,18 @@
+{
+  "quiz_id": "whole-listen-kanban-menu-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "看板メニューのスパイシーな鶏鍋は、蓋を開けた瞬間から香りが良い。鶏肉は滑らかで、具もたっぷり入っていて",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/passage-kanban-menu.mp3",
+      "rate": 2,
+      "self_check": false
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

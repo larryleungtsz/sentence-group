@@ -1,0 +1,18 @@
+{
+  "quiz_id": "whole-listen-teikuauto-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "テイクアウトで20香港ドル4個。でも焼売のサイズが普段より50％大きくて。魚の味も濃くて美味しい。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/passage-teikuauto.mp3",
+      "rate": 2,
+      "self_check": false
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

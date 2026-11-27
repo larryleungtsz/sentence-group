@@ -1,0 +1,18 @@
+{
+  "quiz_id": "whole-listen-roji-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "極く狭い路地の奥にひっそりとある店で、少しでも気を抜くと見落としてしまう。",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/passage-roji.mp3",
+      "rate": 2,
+      "self_check": false
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

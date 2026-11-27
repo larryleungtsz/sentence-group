@@ -1,0 +1,18 @@
+{
+  "quiz_id": "whole-listen-rayu-v1",
+  "objective": "whole_sentence_listening",
+  "sentence": "それにラー油もすごく良くて、たっぷりかけてくれた！",
+  "slides": [
+    {
+      "type": "audio_listen",
+      "instruction": "請聆聽整句。",
+      "audio": "https://raw.githubusercontent.com/larryleungtsz/flashcard-app/main/audio/passage-rayu.mp3",
+      "rate": 2,
+      "self_check": false
+    }
+  ],
+  "feedback": {
+    "on_tick": "pass",
+    "on_cross": "retry"
+  }
+}

@@ -180,6 +180,43 @@ function isWholeListenQuizPath(file) {
   return /^data\/quizzes\/whole-listen-.*\.json$/.test(file);
 }
 
+// konna-basho passage text: the closing quote moves to before と.
+// Groups and manifest hangs use the corrected sentence. Quiz files keep the old one.
+const KONNA_QUOTE_OLD = 'だろうと」';
+const KONNA_QUOTE_NEW = 'だろう」と';
+const NEW_WHOLE_LISTEN = [
+  'data/quizzes/whole-listen-kanban-menu-v1.json',
+  'data/quizzes/whole-listen-kodomo-omoide-v1.json',
+  'data/quizzes/whole-listen-konna-basho-v1.json',
+  'data/quizzes/whole-listen-koshitsu-yoyaku-v1.json',
+  'data/quizzes/whole-listen-odenwa-v1.json',
+  'data/quizzes/whole-listen-rayu-v1.json',
+  'data/quizzes/whole-listen-roji-v1.json',
+  'data/quizzes/whole-listen-teikuauto-v1.json',
+];
+
+function correctedPassageSentence(sentence) {
+  if (typeof sentence !== 'string' || sentence.indexOf(KONNA_QUOTE_OLD) === -1) return sentence;
+  return sentence.split(KONNA_QUOTE_OLD).join(KONNA_QUOTE_NEW);
+}
+
+function restoreKonnaHang(row) {
+  if (!row || typeof row.sentence !== 'string' || row.sentence.indexOf(KONNA_QUOTE_NEW) === -1) return row;
+  return Object.assign({}, row, {
+    sentence: row.sentence.split(KONNA_QUOTE_NEW).join(KONNA_QUOTE_OLD),
+  });
+}
+
+function assertGroupsTypoOnly(baseSha) {
+  const before = execFileSync('git', ['show', baseSha + ':data/groups.json'], { cwd: root });
+  const after = fs.readFileSync(path.join(root, 'data/groups.json'));
+  const text = after.toString('utf8');
+  assert.strictEqual(text.split(KONNA_QUOTE_NEW).length - 1, 2, baseSha);
+  assert.strictEqual(text.indexOf(KONNA_QUOTE_OLD), -1, baseSha);
+  const restored = Buffer.from(text.split(KONNA_QUOTE_NEW).join(KONNA_QUOTE_OLD), 'utf8');
+  assert.ok(restored.equals(before), 'groups.json vs ' + baseSha);
+}
+
 function isSoundingQuizPath(file) {
   return /^data\/quizzes\/sounding-.*\.json$/.test(file);
 }
@@ -204,6 +241,10 @@ function assertAllowedSoundingChange(file, status, knownAtBase) {
  * quiz_id, sentence, audio URL, instruction, and feedback stay in the bytes.
  */
 function assertWholeListenRewrite(file, status, baseSha) {
+  if (status === 'A') {
+    assert.ok(NEW_WHOLE_LISTEN.indexOf(file) !== -1, file);
+    return;
+  }
   assert.strictEqual(status, 'M', file);
   assert.ok(isWholeListenQuizPath(file), file);
   const before = execFileSync('git', ['show', baseSha + ':' + file], { cwd: root });
@@ -1485,7 +1526,7 @@ test('unpublished Keep Q2 quizzes hang on the manifest with Gloss prompts and li
       assert.strictEqual(quiz.objective, 'gloss_to_palace_tap');
       assert.strictEqual(quiz.level, 2);
       assert.strictEqual(quiz.variant, 1);
-      assert.strictEqual(quiz.sentence, group.sentence);
+      assert.strictEqual(correctedPassageSentence(quiz.sentence), group.sentence);
       assert.deepStrictEqual(quiz.chunk, { id: chunk.id, text: chunk.text });
       assert.strictEqual(quiz.feedback.on_wrong, 'show_correct_box');
       assert.strictEqual(quiz.slides[0].type, 'prompt');
@@ -1642,7 +1683,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     mother_cloze_usage: 1,
     sentence_segment_shadowing: 660,
     sequence_training: 22,
-    whole_sentence_listening: 22,
+    whole_sentence_listening: 30,
     sentence_listen_to_l1: 54,
     sentence_l1_palace_multi_tap: 54,
     sentence_shadowing_125: 60,
@@ -1657,7 +1698,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     counts[row.objective] = (counts[row.objective] || 0) + 1;
   });
   assert.deepStrictEqual(counts, expectedCounts);
-  assert.strictEqual(manifest.quizzes.length, 3879);
+  assert.strictEqual(manifest.quizzes.length, 3887);
   assert.deepStrictEqual(surfaceSince(base), ['data/groups.json', 'group.html', 'js/quiz-runner.js']);
 
   const q3 = manifest.quizzes.filter((row) => row.objective === 'meaning_object_select_and_tap');
@@ -1687,7 +1728,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     });
     assert.ok(hotspot.width > 0 && hotspot.height > 0, quiz.quiz_id);
     assert.strictEqual(quiz.feedback.on_wrong, 'show_correct_box', quiz.quiz_id);
-    const group = groupBySentence.get(quiz.sentence);
+    const group = groupBySentence.get(correctedPassageSentence(quiz.sentence));
     assert.ok(group, quiz.quiz_id);
     const chunk = (group.chunks || []).find((item) => item.id === quiz.chunk.id);
     assert.ok(chunk, quiz.quiz_id);
@@ -1695,7 +1736,7 @@ test('official Q3 files are 2-step and 278 hangs cover live Keep except two Soft
     assert.notStrictEqual(chunk.skip, true, quiz.quiz_id);
     assert.notStrictEqual(chunk.skipped, true, quiz.quiz_id);
     const primary = q3.filter((row) => {
-      return row.quiz_id === quiz.quiz_id && row.sentence === quiz.sentence && row.chunk_id === quiz.chunk.id;
+      return row.quiz_id === quiz.quiz_id && row.sentence === correctedPassageSentence(quiz.sentence) && row.chunk_id === quiz.chunk.id;
     });
     assert.strictEqual(primary.length, 1, quiz.quiz_id);
     assert.strictEqual(primary[0].file, 'data/quizzes/' + quiz.quiz_id + '.json', quiz.quiz_id);
@@ -1997,7 +2038,8 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
     cwd: root,
     encoding: 'utf8',
   }).trim().split('\t');
-  assert.strictEqual(manifestStat[1], '0');
+  // 21 deletions are konna-basho sentence lines that already existed at this base.
+  assert.strictEqual(manifestStat[1], '21');
   const manifestDiff = execFileSync('git', ['diff', '-U0', start, '--', 'data/manifest.json'], {
     cwd: root,
     encoding: 'utf8',
@@ -2006,16 +2048,17 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   manifestDiff.split('\n').forEach((line) => {
     if (line.indexOf('+      "quiz_id": ') !== 0) return;
     const quizId = line.slice(line.indexOf('"quiz_id": ') + 11).replace(/",$/, '').replace(/^"/, '');
-    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId) || /^story-/.test(quizId) || /^sounding-/.test(quizId), line);
+    assert.ok(/^shadow-025-/.test(quizId) || /^shadow-05-/.test(quizId) || /^story-/.test(quizId) || /^sounding-/.test(quizId) || /^whole-listen-/.test(quizId), line);
   });
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
   assert.strictEqual(
-    execFileSync('git', ['diff', '--name-only', start, '--', 'data/schedule.json', 'data/groups.json'], {
+    execFileSync('git', ['diff', '--name-only', start, '--', 'data/schedule.json'], {
       cwd: root,
       encoding: 'utf8',
-    }),
+    }).trim(),
     ''
   );
+  assertGroupsTypoOnly(start);
   assertRunnerIsQ4PinPlusQ6AndQ8Delta(runnerHead);
   const htmlBefore = execFileSync('git', ['show', start + ':group.html'], { cwd: root, encoding: 'utf8' });
   const htmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
@@ -2041,7 +2084,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
   assert.strictEqual(rows('gloss_to_palace_tap').length, 280);
   assert.strictEqual(rows('meaning_object_select_and_tap').length, 278);
   assert.strictEqual(rows('story_select_image').length, 278);
-  assert.strictEqual(manifest.quizzes.length, 3879);
+  assert.strictEqual(manifest.quizzes.length, 3887);
 
   const specs = [
     { files: q4Files, objective: 'word_shadowing_025', rate: 0.25, instruction: '請聽 0.25× 詞塊示範，然後開始錄音跟讀。', hangs: q4 },
@@ -2067,7 +2110,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
       assert.ok(!Object.prototype.hasOwnProperty.call(slide, 'end_sec'), quiz.quiz_id);
       assert.deepStrictEqual(quiz.feedback, { on_complete: 'pass' }, quiz.quiz_id);
       assert.notStrictEqual(quiz.chunk.text, '空いてますかね', quiz.quiz_id);
-      const group = groups.groups.find((item) => item.sentence === quiz.sentence);
+      const group = groups.groups.find((item) => item.sentence === correctedPassageSentence(quiz.sentence));
       assert.ok(group, quiz.quiz_id);
       const chunk = (group.chunks || []).find((item) => item.id === quiz.chunk.id);
       assert.ok(chunk, quiz.quiz_id);
@@ -2075,7 +2118,7 @@ test('official Q4 and Q7 are new-design audio_shadow with 278 hangs and the shar
       assert.notStrictEqual(chunk.skip, true, quiz.quiz_id);
       assert.notStrictEqual(chunk.skipped, true, quiz.quiz_id);
       const primary = spec.hangs.filter((row) => {
-        return row.quiz_id === quiz.quiz_id && row.sentence === quiz.sentence && row.chunk_id === quiz.chunk.id;
+        return row.quiz_id === quiz.quiz_id && row.sentence === correctedPassageSentence(quiz.sentence) && row.chunk_id === quiz.chunk.id;
       });
       assert.strictEqual(primary.length, 1, quiz.quiz_id);
       assert.strictEqual(primary[0].file, 'data/quizzes/' + quiz.quiz_id + '.json', quiz.quiz_id);
@@ -2193,7 +2236,7 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
   assert.strictEqual(q5.length, 278);
   const ids = new Set(q5.map((row) => row.quiz_id));
   assert.strictEqual(ids.size, 275);
-  assert.strictEqual(manifest.quizzes.length, 3879);
+  assert.strictEqual(manifest.quizzes.length, 3887);
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
 
   function rows(objective) {
@@ -2208,21 +2251,22 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
 
   const crypto = require('crypto');
   const groupsHash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, 'data/groups.json'))).digest('hex');
-  assert.strictEqual(groupsHash, 'a5baa57fdf3a00934649962d592a444a88cf17d142b07125092d3afdbeb9def2');
+  assert.strictEqual(groupsHash, '2c05008484ce18799ba087033847daa4fee9adf536bd2548f5b5062a51577a73');
   assert.strictEqual(
     execFileSync('git', ['hash-object', 'data/schedule.json'], { cwd: root, encoding: 'utf8' }).trim(),
     'e68b55cc12d3bd5c805ed3aa0aa251f74bfaf8bc'
   );
-  // groups.json and schedule.json stay at the Q5 base.
+  // schedule.json stays at the Q5 base. groups.json differs only by the konna-basho quote fix.
   // group.html changes only the quiz-runner cache query. CSS query stays.
   // js/quiz-runner.js is only the authorized Q6 and Q8 deltas on the same PR #48 blob.
   assert.strictEqual(
-    execFileSync('git', ['diff', '--name-only', base, '--', 'data/groups.json', 'data/schedule.json'], {
+    execFileSync('git', ['diff', '--name-only', base, '--', 'data/schedule.json'], {
       cwd: root,
       encoding: 'utf8',
-    }),
+    }).trim(),
     ''
   );
+  assertGroupsTypoOnly(base);
   const q5HtmlBefore = execFileSync('git', ['show', base + ':group.html'], { cwd: root, encoding: 'utf8' });
   const q5HtmlAfter = fs.readFileSync(path.join(root, 'group.html'), 'utf8');
   assert.strictEqual(
@@ -2251,7 +2295,7 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
       assert.ok(!/\/main\//.test(url), quiz.quiz_id);
     });
     assert.strictEqual(quiz.feedback.on_wrong, 'show_correct', quiz.quiz_id);
-    const group = groupBySentence.get(quiz.sentence);
+    const group = groupBySentence.get(correctedPassageSentence(quiz.sentence));
     assert.ok(group, quiz.quiz_id);
     const chunk = (group.chunks || []).find((item) => item.id === quiz.chunk.id);
     assert.ok(chunk, quiz.quiz_id);
@@ -2259,7 +2303,7 @@ test('official Q5 story_select_image is 275 files and 278 hangs with three share
     assert.notStrictEqual(chunk.skip, true, quiz.quiz_id);
     assert.notStrictEqual(chunk.skipped, true, quiz.quiz_id);
     const primary = q5.filter((row) => {
-      return row.quiz_id === quiz.quiz_id && row.sentence === quiz.sentence && row.chunk_id === quiz.chunk.id;
+      return row.quiz_id === quiz.quiz_id && row.sentence === correctedPassageSentence(quiz.sentence) && row.chunk_id === quiz.chunk.id;
     });
     assert.strictEqual(primary.length, 1, quiz.quiz_id);
     assert.strictEqual(primary[0].file, 'data/quizzes/' + quiz.quiz_id + '.json', quiz.quiz_id);
@@ -2418,18 +2462,20 @@ test('official Q6 ship is 291 new-design files and 108 appended hangs', function
   assert.strictEqual(baseManifest.quizzes.length, 3771);
   assert.strictEqual(manifest.generated_at, baseManifest.generated_at);
   assert.strictEqual(manifest.generated_at, '2026-11-11T23:38:07+08:00');
-  assert.strictEqual(manifest.quizzes.length, 3879);
-  assert.deepStrictEqual(manifest.quizzes.slice(0, 3771), baseManifest.quizzes);
+  assert.strictEqual(manifest.quizzes.length, 3887);
+  assert.deepStrictEqual(manifest.quizzes.slice(0, 3771).map(restoreKonnaHang), baseManifest.quizzes);
   assert.strictEqual(manifest.quizzes[3770].quiz_id, 'story-aru-8-v1');
   const added = manifest.quizzes.slice(3771);
-  assert.strictEqual(added.length, 108);
+  assert.strictEqual(added.length, 116);
+  const soundingAdded = added.slice(0, 108);
+  const wholeListenAdded = added.slice(108);
   const skipSlots = new Set();
   groups.groups.forEach((group) => {
     (group.chunks || []).forEach((chunk) => {
       if (chunk.skip === true) skipSlots.add(group.sentence + '\0' + chunk.id);
     });
   });
-  added.forEach((row) => {
+  soundingAdded.forEach((row) => {
     assert.strictEqual(row.objective, 'pronunciation_sounding_select', row.quiz_id);
     assert.strictEqual(row.level, 1, row.quiz_id);
     assert.strictEqual(row.kind, 'chunk', row.quiz_id);
@@ -2438,6 +2484,24 @@ test('official Q6 ship is 291 new-design files and 108 appended hangs', function
     assert.ok(!skipSlots.has(row.sentence + '\0' + row.chunk_id), row.quiz_id);
     assert.ok(!Object.prototype.hasOwnProperty.call(row, 'markdown_fixed'), row.quiz_id);
     assert.ok(!Object.prototype.hasOwnProperty.call(row, 'notion_url'), row.quiz_id);
+  });
+  assert.deepStrictEqual(wholeListenAdded.map((row) => row.quiz_id), [
+    'whole-listen-kanban-menu-v1',
+    'whole-listen-kodomo-omoide-v1',
+    'whole-listen-konna-basho-v1',
+    'whole-listen-koshitsu-yoyaku-v1',
+    'whole-listen-odenwa-v1',
+    'whole-listen-rayu-v1',
+    'whole-listen-roji-v1',
+    'whole-listen-teikuauto-v1',
+  ]);
+  wholeListenAdded.forEach((row) => {
+    assert.strictEqual(row.objective, 'whole_sentence_listening', row.quiz_id);
+    assert.strictEqual(row.level, null, row.quiz_id);
+    assert.strictEqual(row.kind, 'passage', row.quiz_id);
+    assert.strictEqual(row.file, 'data/quizzes/' + row.quiz_id + '.json', row.quiz_id);
+    const group = groups.groups.find((item) => item.sentence === row.sentence);
+    assert.ok(group, row.quiz_id);
   });
   const unhung = [
     'sounding-ioshio-ganen-1-v1',
@@ -2479,11 +2543,12 @@ test('official Q6 ship is 291 new-design files and 108 appended hangs', function
     manifest.quizzes.filter((row) => row.objective === 'pronunciation_sounding_select').length,
     277
   );
-  ['data/groups.json', 'data/schedule.json', 'css/app.css'].forEach((file) => {
+  ['data/schedule.json', 'css/app.css'].forEach((file) => {
     const before = execFileSync('git', ['show', baseSha + ':' + file], { cwd: root });
     const after = fs.readFileSync(path.join(root, file));
     assert.ok(before.equals(after), file);
   });
+  assertGroupsTypoOnly(baseSha);
   const runner = fs.readFileSync(path.join(root, 'js/quiz-runner.js'), 'utf8');
   const remembered = '記住咗';
   assert.strictEqual(remembered.charCodeAt(2), 0x5497);
